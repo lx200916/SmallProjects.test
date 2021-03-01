@@ -1,0 +1,39 @@
+.toolbar {
+	font-family: cursive;
+	float: left;	
+	margin-left: 6px;
+	margin-right: 0px;
+	
+}
+
+.toolbar table {
+	border-bottom: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+
+.toolbar td {
+	/*width: 102px;*/
+	text-align: left;
+	cursor: default;
+}
+
+
+.toolbar_icon {
+	cursor: pointer;
+}
+
+
+.toolbar_divider {
+	/*background-color: #ff0000;*/
+	width: 2px;
+	height: 19px;
+	margin-right: 6px;
+	cursor: default;
+}
+

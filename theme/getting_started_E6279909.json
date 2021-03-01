@@ -1,0 +1,105 @@
+[
+
+{objectId: "3.2329841703462285E-305", title: "入门", url: "core.base_rup/customcategories/getting_started_E6279909.html", nodeDocType: "3ebda39d", 
+children: [
+
+{objectId: "_uRs44C8CEdqfj_h52-wqcw", title: "RUP 简介", url: "core.base_rup/guidances/supportingmaterials/introduction_to_rup_36B63436.html", nodeDocType: "3ebda39d"},
+{objectId: "_0_ltcDqYEdqvoMTMKvbIlA", title: "由业务推动的开发的主要原则", url: "core.base_rup/customcategories/key_business_driven_development_principles_B4EF3701.html", nodeDocType: "209bc5e", 
+children: [
+
+{objectId: "_6QGA8DqcEdqvoMTMKvbIlA", title: "调整流程", url: "core.base_rup/guidances/concepts/adapt_process_366FDFD4.html", nodeDocType: "209bc5e"},
+{objectId: "_wcE8oDqxEdqvoMTMKvbIlA", title: "平衡竞争项目干系人优先权", url: "core.base_rup/guidances/concepts/balance_competing_stakeholder priorities_D13BB4BC.html", nodeDocType: "209bc5e"},
+{objectId: "__eBcYDqyEdqvoMTMKvbIlA", title: "跨团队协作", url: "core.base_rup/guidances/concepts/collaborate_across_teams_97EF04BB.html", nodeDocType: "209bc5e"},
+{objectId: "_jMlxoDqzEdqvoMTMKvbIlA", title: "迭代地演示价值", url: "core.base_rup/guidances/concepts/demonstrate_value_iteratively_4F430ECE.html", nodeDocType: "209bc5e"},
+{objectId: "_5thn8DqzEdqvoMTMKvbIlA", title: "提升抽象级别", url: "core.base_rup/guidances/concepts/elevate_level_abstraction_7E5A12DB.html", nodeDocType: "209bc5e"},
+{objectId: "_pRxKsDq0EdqvoMTMKvbIlA", title: "持续关注质量", url: "core.base_rup/guidances/concepts/focus_continuously_quality_82DFE946.html", nodeDocType: "209bc5e"}]},
+{objectId: "5.95251660891756E-306", title: "流程要素", url: "core.base_rup/guidances/supportingmaterials/process_essentials_C18A2AB2.html", nodeDocType: "e9d4dce8"},
+{objectId: "_uDU1oASEEdq61bDkWg1SXw", title: "方法体系结构基础", url: "core.base_concepts/customcategories/method_architecture_fundamentals_5F73467B.html", nodeDocType: "1bed0b76", 
+children: [
+
+{objectId: "_94_eoO8LEdmKSqa_gSYthg", title: "Unified Method Architecture（UMA）主要功能", url: "core.base_concepts/guidances/concepts/introduction_to_uma_931F5B93.html", nodeDocType: "699c271e"},
+{objectId: "_SZDtIEdjEdqBmOmOgjH2IQ", title: "UMA 与 RUP 2003 元模型", url: "core.base_concepts/guidances/concepts/uma_vs_rup_45521141.html", nodeDocType: "699c271e"},
+{objectId: "_WfL28BTMEdqrUt4zetC1gg", title: "方法内容概念", url: "core.base_concepts/customcategories/method_concepts_179C5639.html", nodeDocType: "1bed0b76", 
+children: [
+
+{objectId: "_0ErBYBUJEdqrUt4zetC1gg", title: "工作产品", url: "core.base_concepts/customcategories/work_product_60FEF5A4.html", nodeDocType: "1bed0b76", 
+children: [
+
+{objectId: "_fdRfkBUJEdqrUt4zetC1gg", title: "工件", url: "core.base_concepts/guidances/concepts/artifact_11B6E73F.html", nodeDocType: "699c271e"},
+{objectId: "_lBgkMBUJEdqrUt4zetC1gg", title: "可交付件", url: "core.base_concepts/guidances/concepts/deliverable_880AAAC5.html", nodeDocType: "699c271e"},
+{objectId: "_pROF4BUJEdqrUt4zetC1gg", title: "成果", url: "core.base_concepts/guidances/concepts/outcome_C8A59E7D.html", nodeDocType: "699c271e"}]},
+{objectId: "1.1609745730665898E-304", title: "角色", url: "core.base_concepts/guidances/concepts/role_BBD6A3E6.html", nodeDocType: "699c271e"},
+{objectId: "7.624729048911575E-305", title: "任务             ", url: "core.base_concepts/guidances/concepts/task_86A4917F.html", nodeDocType: "699c271e"},
+{objectId: "_yqwU0BTMEdqrUt4zetC1gg", title: "类别和视图", url: "core.base_concepts/customcategories/categories_61DCFA42.html", nodeDocType: "1bed0b76", 
+children: [
+
+{objectId: "3.409251897849429E-305", title: "规程", url: "core.base_concepts/guidances/concepts/discipline_4BB18108.html", nodeDocType: "699c271e"},
+{objectId: "_xuO10BUGEdqrUt4zetC1gg", title: "定制类别", url: "core.base_concepts/guidances/concepts/custom_category_B6E93804.html", nodeDocType: "699c271e"},
+{objectId: "_Dh4TEBUGEdqrUt4zetC1gg", title: "域", url: "core.base_concepts/guidances/concepts/domain_902C2614.html", nodeDocType: "699c271e"},
+{objectId: "_u3t7sBUGEdqrUt4zetC1gg", title: "角色集", url: "core.base_concepts/guidances/concepts/role_set_A2793143.html", nodeDocType: "699c271e"},
+{objectId: "_66Jy0BUGEdqrUt4zetC1gg", title: "工具", url: "core.base_concepts/guidances/concepts/tool_408CFEB4.html", nodeDocType: "699c271e"},
+{objectId: "_uMKSsBUFEdqrUt4zetC1gg", title: "视图", url: "core.base_concepts/guidances/concepts/view_F5DE1201.html", nodeDocType: "699c271e"},
+{objectId: "_VRhkoBUGEdqrUt4zetC1gg", title: "工作产品种类", url: "core.base_concepts/guidances/concepts/work_product_kind_B78B98E5.html", nodeDocType: "699c271e"}]}]},
+{objectId: "_xy2SAAIsEdqEutyfYo0quQ", title: "指导信息", url: "core.base_concepts/customcategories/guidance_BE65A47D.html", nodeDocType: "1bed0b76", 
+children: [
+
+{objectId: "_2vVuUBT9EdqrUt4zetC1gg", title: "核对表 ", url: "core.base_concepts/guidances/concepts/checklist_8F23FAF6.html", nodeDocType: "699c271e"},
+{objectId: "_8wobABUAEdqrUt4zetC1gg", title: "概念 ", url: "core.base_concepts/guidances/concepts/concept_730F83A0.html", nodeDocType: "699c271e"},
+{objectId: "_dCG-UBUBEdqrUt4zetC1gg", title: "示例", url: "core.base_concepts/guidances/concepts/example_F2AB11A0.html", nodeDocType: "699c271e"},
+{objectId: "_IAwkEBUEEdqrUt4zetC1gg", title: "指南 ", url: "core.base_concepts/guidances/concepts/guideline_AB6E733A.html", nodeDocType: "699c271e"},
+{objectId: "_szl6EBUBEdqrUt4zetC1gg", title: "实践", url: "core.base_concepts/guidances/concepts/practice_F5A1093C.html", nodeDocType: "699c271e"},
+{objectId: "_x2sAgBUBEdqrUt4zetC1gg", title: "报告 ", url: "core.base_concepts/guidances/concepts/report_5257BA11.html", nodeDocType: "699c271e"},
+{objectId: "_20bs4BUBEdqrUt4zetC1gg", title: "可重用资产 ", url: "core.base_concepts/guidances/concepts/reusable_asset_110C96CB.html", nodeDocType: "699c271e"},
+{objectId: "_JCQbIBnXEdqYreeU3jqaDQ", title: "路线图", url: "core.base_concepts/guidances/concepts/roadmap_CBF52CCA.html", nodeDocType: "699c271e"},
+{objectId: "_80XPABUBEdqrUt4zetC1gg", title: "支持材料", url: "core.base_concepts/guidances/concepts/supporting_material_8F9B4FF.html", nodeDocType: "699c271e"},
+{objectId: "_G_UnIBUCEdqrUt4zetC1gg", title: "模板", url: "core.base_concepts/guidances/concepts/template_1C6123B9.html", nodeDocType: "699c271e"},
+{objectId: "_Z45fwBUDEdqrUt4zetC1gg", title: "术语定义", url: "core.base_concepts/guidances/concepts/term_definition_4520F2C6.html", nodeDocType: "699c271e"},
+{objectId: "1.0762105093945226E-304", title: "工具向导", url: "core.base_concepts/guidances/concepts/tool_mentor_10D3617F.html", nodeDocType: "699c271e"},
+{objectId: "_id9REBUDEdqrUt4zetC1gg", title: "白皮书", url: "core.base_concepts/guidances/concepts/white_paper_AC5E76A1.html", nodeDocType: "699c271e"}]},
+{objectId: "_AtM0gBTQEdqrUt4zetC1gg", title: "流程概念", url: "core.base_concepts/customcategories/process_concepts_2FEF92F.html", nodeDocType: "1bed0b76", 
+children: [
+
+{objectId: "3.132140065969088E-305", title: "活动", url: "core.base_concepts/guidances/concepts/activity_417F8F65.html", nodeDocType: "699c271e"},
+{objectId: "1.7072348895114264E-305", title: "能力模式", url: "core.base_concepts/guidances/concepts/capability_pattern_ECA78A86.html", nodeDocType: "699c271e"},
+{objectId: "_EhgqwO8MEdmKSqa_gSYthg", title: "交付流程", url: "core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html", nodeDocType: "699c271e"},
+{objectId: "_5V9HEBUEEdqrUt4zetC1gg", title: "描述符", url: "core.base_concepts/guidances/concepts/descriptor_FA0AB9FE.html", nodeDocType: "699c271e"}]},
+{objectId: "_Tp3S0BTQEdqrUt4zetC1gg", title: "组织概念", url: "core.base_concepts/customcategories/organizational_concepts_290C000C.html", nodeDocType: "1bed0b76", 
+children: [
+
+{objectId: "_m8lGkBUFEdqrUt4zetC1gg", title: "方法库", url: "core.base_concepts/guidances/concepts/method_library_CC7515AF.html", nodeDocType: "699c271e"},
+{objectId: "_0KeEMBUFEdqrUt4zetC1gg", title: "方法插件", url: "core.base_concepts/guidances/concepts/method_plugin_B417B6A2.html", nodeDocType: "699c271e"},
+{objectId: "_d698IBUFEdqrUt4zetC1gg", title: "方法配置", url: "core.base_concepts/guidances/concepts/configuration_AAF623BC.html", nodeDocType: "699c271e"},
+{objectId: "_R5Vk4BtpEdqSLrJ4Ij2LVA", title: "方法包", url: "core.base_concepts/customcategories/method_package_CD28C7B8.html", nodeDocType: "1bed0b76", 
+children: [
+
+{objectId: "_MT6U8BneEdqYreeU3jqaDQ", title: "流程包", url: "core.base_concepts/guidances/concepts/process_package_D86A78A4.html", nodeDocType: "699c271e"},
+{objectId: "_49a10BUFEdqrUt4zetC1gg", title: "内容包", url: "core.base_concepts/guidances/concepts/content_package_F70FC3F9.html", nodeDocType: "699c271e"}]}]}]},
+{objectId: "1.8262162566452063E-305", title: "概念路线图", url: "core.base_rup/customcategories/conceptual_road_maps_2DE84E99.html", nodeDocType: "a05ed82e", 
+children: [
+
+{objectId: "1.8809435842664573E-305", title: "制定组件解决方案", url: "core.base_rup/guidances/concepts/developing_component_solutions_B14102ED.html", nodeDocType: "a05ed82e"},
+{objectId: "1.9000483920535104E-305", title: "制定电子商务解决方案", url: "core.base_rup/guidances/concepts/developing_e-business_solutions_53A93456.html", nodeDocType: "a05ed82e"},
+{objectId: "2.354668950481405E-305", title: "可用性设计", url: "core.base_rup/guidances/concepts/usability_engineering_1037E52.html", nodeDocType: "a05ed82e"},
+{objectId: "6.991505672198195E-305", title: "定制 RUP", url: "core.base_rup/guidances/concepts/tailoring_rup_F8F0EB23.html", nodeDocType: "a05ed82e"},
+{objectId: "2.721222001330515E-305", title: "为小型项目定制流程", url: "core.base_rup/guidances/concepts/tailoring_a_process_for_a_small_project_21481E2E.html", nodeDocType: "a05ed82e"},
+{objectId: "2.4535616775795524E-305", title: "灵活做法和 RUP", url: "core.base_rup/guidances/concepts/agile_practices_and_rup_A0E7A9D3.html", nodeDocType: "a05ed82e"}]},
+{objectId: "3.825193364226223E-305", title: "使用工具支持流程", url: "core.base_rup/customcategories/supporting_process_with_tools_13EBC28D.html", nodeDocType: "25cf96dd", 
+children: [
+
+{objectId: "1.1096478523026133E-304", title: "特定于工具的指导信息", url: "core.base_rup/guidances/supportingmaterials/tool_specific_guidance_89209D18.html", nodeDocType: "25cf96dd"},
+{objectId: "2.65719655976642E-305", title: "可配置流程", url: "core.base_rup/guidances/supportingmaterials/configurable_process_34A7BAC2.html", nodeDocType: "25cf96dd"}]},
+{objectId: "1.9677894927771484E-305", title: "UML 基础", url: "core.base_rup/customcategories/uml_basics_FDBD2A0C.html", nodeDocType: "ed41b3aa", 
+children: [
+
+{objectId: "4.792914878943572E-306", title: "UML 1.x 和 UML 2.0 之间的区别", url: "core.base_rup/guidances/supportingmaterials/differences_between_uml_1_x_and_uml_2_0_CA70F2E6.html", nodeDocType: "ed41b3aa"}]},
+{objectId: "7.755968586980351E-308", title: "参考", url: "core.base_rup/customcategories/references_56F06DFD.html", nodeDocType: "4093afe9", 
+children: [
+
+{objectId: "_gQBlsDtqEdqdFcqmPOQKxA", title: "关于引用的说明", url: "core.base_rup/guidances/supportingmaterials/references_notes_6580A72E.html", nodeDocType: "4093afe9"}]},
+{objectId: "5.2110322426453943E-306", title: "附加资源", url: "core.base_rup/customcategories/additional_resources_E6845C6F.html", nodeDocType: "173bf443", 
+children: [
+
+{objectId: "1.4764011899219245E-304", title: "developerWorks 上的 RUP", url: "core.base_rup/guidances/supportingmaterials/rup_on_developerworks_FCF9A310.html", nodeDocType: "d693a9f2"},
+{objectId: "1.3612642469528346E-305", title: "Rational 大学的培训", url: "core.base_rup/guidances/supportingmaterials/training_with_rational_university_931C47F2.html", nodeDocType: "d693a9f2"}]}]}
+]
+

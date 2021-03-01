@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 分层</title>
+<meta content="Guideline" name="uma.type">
+<meta content="layering" name="uma.name">
+<meta content="分层" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.458864982057142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.458864982057142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.458864982057142E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.458864982057142E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.458864982057142E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：分层</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南介绍将系统分层的策略。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_layering__guidelines" name="XE_layering__guidelines"></a> 
+<h3>
+    <a id="LayeringGuidelines" name="LayeringGuidelines">分层指南</a>
+</h3>
+<p>
+    分层根据关于各层之间可如何形成关系的某些规则，对子系统进行逻辑划分，分为几个集合。分层提供了一种限制子系统间依赖关系的方式，导致系统结合更松散，因此更容易维护。
+</p>
+<p>
+    子系统的分组标准遵循以下一些模式：
+</p>
+<ul>
+    <li>
+        <b>可视性</b>。子系统可能仅依赖同一层和相邻下一层中的子系统。
+    </li>
+    <li>
+        <b>变动性</b>。 
+        <ul>
+            <li>
+                <b>在最高的几层中</b>，放置随着用户需求变化而变化的元素。
+            </li>
+            <li>
+                <b>在最低的几层中</b>，放置随实施平台（硬件、语言、操作系统、数据库等）变化而变化的元素。
+            </li>
+            <li>
+                在中间层中，加入在多种系统和实施环境中普遍适用的元素。
+            </li>
+            <li>
+                当这些广义类别内的附加划分有助于组织该模型时，则添加层。
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>普遍性</b>。抽象模型元素倾向于放置在模型中较低的位置。如果不是特定于实施的，则它们倾向于向中间层移动。
+    </li>
+    <li>
+        <b>层数</b>。对于小型系统，三层就足够了。对于复杂的系统，通常 5-7 层就足够了。对于任何程度的复杂性，超过 10 层以上，层数越多，就应以更为质疑的态度进行查看。下面提出一些经验法则：
+    </li>
+</ul>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th width="40%">
+                    <p align="center" scope="col">
+                        <b>类数</b>
+                    </p>
+                </th>
+                <th width="60%">
+                    <p align="center" scope="col">
+                        <b>层数</b>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="40%">
+                    <p align="center">
+                        0-10
+                    </p>
+                </td>
+                <td width="60%">
+                    不需要分层
+                </td>
+            </tr>
+            <tr>
+                <td width="40%">
+                    <p align="center">
+                        10-50
+                    </p>
+                </td>
+                <td width="60%">
+                    2 层
+                </td>
+            </tr>
+            <tr>
+                <td width="40%">
+                    <p align="center">
+                        25-150
+                    </p>
+                </td>
+                <td width="60%">
+                    3 层
+                </td>
+            </tr>
+            <tr>
+                <td width="40%">
+                    <p align="center">
+                        100-1000
+                    </p>
+                </td>
+                <td width="60%">
+                    4 层
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    特定层内的子系统和软件包应只依赖于同一层和相邻下一层内的子系统。如果不以这种方式限制依赖关系，会导致结构性下降，而且会使系统脆弱和难以维护。
+</p>
+<p>
+    例外情况包括子系统需要直接访问较低层服务的情况：应对如何处理整个系统中需要的基本服务（如打印、发送消息等）做出清醒的决策。如果解决方案是在中间过渡层中有效地实施呼叫连通，那么将消息限制在较低层是没什么价值的。
+</p>
+<h3>
+    <a id="PartitioningPatterns" name="PartitioningPatterns">划分模式</a>
+</h3>
+<p>
+    在系统的几个顶层中，附加划分可能有助于组织该模型。以下划分指南提供了要考虑的不同问题：
+</p>
+<ul>
+    <li>
+        <b>用户组织</b>。子系统可以按照反映业务机构中职能组织的界线来组织（例如，按照部门界线进行划分）。这种划分通常在设计早期进行，因为现有的企业模型具有严格按组织进行划分的结构。这种组织模式通常仅影响应用特定服务的前几层，并通常随着设计发展而消失。
+        
+        <ul>
+            <li>
+                按用户组织界线进行划分可能是模型的一个良好起点。
+            </li>
+            <li>
+                用户组织的结构在很长一段时间内不稳定（由于业务重组），因此不是系统划分的良好长期基础。系统的内部组织应使系统能独立于其支持的企业的组织而发展和得到维护。
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>能力和／或技能区域</b>。可对子系统进行组织，以在开发组织的不同小组之间划分模型各部分的职责。通常，这种情况出现在系统的中低层，并反映了开发和支持复杂基础体系结构技术期间对专门技能的需要。此类技术的示例包括网络和分发管理、数据库管理、通信管理和流程控制等。也可能在高层中按照能力界线进行划分，其中理解和支持主要业务职能需要有该问题域中的特殊能力；示例包括电信呼叫管理、证券贸易、保险索赔处理和空中交通控制等。
+    </li>
+    <li>
+        <b>系统分发</b>。在系统的任何层中，这些层可能会进一步“横向”划分，以反映职能的实际分布。 
+        <ul>
+            <li>
+                通过划分反映分发，这有助于显现系统执行时将进行的网络通信。
+            </li>
+            <li>
+                但是，如果部署模型发生重大变更，通过划分反映分发可能会使系统更难更改。
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li>
+        <b>保密区域</b>。有些应用程序（尤其是那些要求有特殊安全许可来开发和／或支持的那些应用程序）要求按照安全访问特权界线进行附加划分。控制保密区域访问的软件必须由具有适当许可的人员开发和维护。如果该项目中具有此背景的人数有限，则要求有特殊许可的功能必须划分为将独立于其他子系统而开发的子系统，使保密区域的接口成为其他子系统的唯一可见部分。
+    </li>
+    <li>
+        <b>可变性区域</b>。有可能可选、并因此仅在系统的某些变体中交付的功能，应组织到独立于必需系统功能而开发和交付的独立子系统中。
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 实施中的导入依赖关系</title>
+<meta content="Guideline" name="uma.type">
+<meta content="import_dependency_in_implementation" name="uma.name">
+<meta content="实施中的导入依赖关系" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_M6RHkN7IEdm8G6yT7-Wdqw", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "2.390918925290993E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_M6RHkN7IEdm8G6yT7-Wdqw", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "2.390918925290993E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{157E9B67-C619-410D-A927-F2CD217BF8FE}", "2.390918925290993E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.390918925290993E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.390918925290993E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：实施中的导入依赖关系</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">处理子系统之间的依赖关系是构造实施模型的一个重要方面。 本指南描述如何着手此工作。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">实施模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_layering__guidelines_for_layering_in_implementation" name="XE_layering__guidelines_for_layering_in_implementation"></a><a id="XE_import-dependency_in_implementation__guidelines_for" name="XE_import-dependency_in_implementation__guidelines_for" class="index" key="实施中的导入依赖关系（import-dependency in implementation）" text="指南"></a><a id="XE_implementation_subsystem__handling_import_dependencies_between" name="XE_implementation_subsystem__handling_import_dependencies_between"></a> 
+<h3>
+    <a id="Explanation" name="Explanation"></a>说明
+</h3>
+<p>
+    处理子系统之间的依赖关系是构造实施模型的一个重要方面。 如果客户端子系统导入提供端子系统，那么客户端子系统中的元素只能针对提供端子系统中的元素进行编译。
+    要表达这样的依赖关系，则使用从一个子系统到另一个子系统的导入依赖关系，指出存在依赖关系的子系统。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    以下组件图说明实施子系统之间的导入依赖关系。
+</p>
+<p class="picturecenter" align="center">
+    <img height="203" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_impi2.gif" width="217" />
+</p>
+<p class="picturetext">
+    子系统“电话银行”具有对子系统“贸易服务”的导入依赖关系，这样就允许“电话银行”中的元素针对“贸易服务”中的公共（可视）元素进行编译。
+</p>
+<h3>
+    <a id="Use" name="Use"></a>使用
+</h3>
+<h4>
+    <a id="XE_architectural_control__guidelines_for_import-dependency_in_implementation" name="XE_architectural_control__guidelines_for_import-dependency_in_implementation" class="index" key="体系结构控制（architectural control）" text="实施中的导入依赖关系的指南"></a>
+</h4>
+<p>
+    导入依赖关系的一个重要用途是控制子系统之间的可视性，并对实施者强制使用体系结构。 当在开发早期软件设计人员定义导入依赖关系时，只允许实施者让他们的实施元素引用（编译）所导入子系统中的公共元素。
+    控制导入有助于维护软件体系结构并避免不需要的依赖关系。
+</p>
+<h4>
+    子系统可以按层来组织。
+</h4>
+<p>
+    实施模型通常按层来组织。层数不是固定的，而是因情况而异的。下面是具有四层的一个典型体系结构：
+</p>
+<ul>
+    <li>
+        顶层，即<b>应用程序层</b>，包含应用程序专用的服务。
+    </li>
+    <li>
+        第二层，即<b>业务专用层</b>，它包括在若干应用程序中使用的业务专用组件。
+    </li>
+    <li>
+        <b>中间件层</b>，包含诸如 GUI 构建程序、到数据库管理系统的接口、独立于平台的操作系统服务等组件以及诸如电子表格和图编辑器等的 OLE 组件。
+    </li>
+    <li>
+        底层，即<b>系统软件层</b>，包含诸如操作系统、与特定硬件的接口等的组件。
+    </li>
+</ul>
+<p class="picturecenter" align="center">
+    <img height="367" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_impi3.gif" width="454" />
+</p>
+<p class="picturetext">
+    用于银行系统的分层实施模型的示例。箭头显示子系统之间的导入依赖关系。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

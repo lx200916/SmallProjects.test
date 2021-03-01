@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 正向设计关系数据库</title>
+<meta content="Guideline" name="uma.type">
+<meta content="forward-engineering_relational_databases" name="uma.name">
+<meta content="正向设计关系数据库" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "5.250868507423771E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "5.250868507423771E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "5.250868507423771E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "5.250868507423771E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="5.250868507423771E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：正向设计关系数据库</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南描述用于将设计模型中的永久设计类映射为数据模型中的表的方法。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">数据库设计</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="Guidelines: Forward-Engineering Relational Databases" name="Guidelines: Forward-Engineering Relational Databases"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>简介
+</h3>
+<p>
+    本指南描述用于将<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>中的永久<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>映射为<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>中的表的方法。&nbsp;
+</p>
+<h3>
+    <a id="Transform Design Model Elements to Data Model Elements" name="Transform Design Model Elements to Data Model Elements"></a>将设计模型元素转换为数据模型元素
+</h3>
+<p>
+    设计模型中的永久类可以转换为数据模型中的表。下表显示了设计模型元素和数据模型元素之间的映射的摘要。
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <p class="Text">
+                        <b>设计模型元素</b>
+                    </p>
+                </th>
+                <th scope="col" width="50%">
+                    <p class="Text">
+                        <b>对应的数据模型元素</b>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    类
+                </td>
+                <td width="50%">
+                    表
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    属性
+                </td>
+                <td width="50%">
+                    列
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        关联
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        非标识关系
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        关联类
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        交叉表
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        组装关系
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        标识关系
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        多对多关联
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        交叉表
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        多重性
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        基数
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        限定关联
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        交叉表
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    泛化关系（继承）
+                </td>
+                <td width="50%">
+                    独立表
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h4>
+    <a id="Mapping Persistent Classes to Tables" name="Mapping Persistent Classes to Tables"></a>将永久类映射为表
+</h4>
+<p>
+    设计模型中的永久类代表系统必须存储的信息。从概念上说，这些类可能类似一个关系设计。（例如，设计模型中的类可能以某种方式反映为关系模式中的实体。）当一个项目从精化阶段移到构造阶段时，设计模型和关系数据模型的目标就偏离了。发生这种偏离是因为关系数据库开发的目标是规范化数据，而设计模型的目标是概括日益复杂的行为。这两方面（数据和行为）的偏离导致需要在这两个模型的相关元素之间映射。
+</p>
+<p>
+    在以第三标准格式编写的关系数据库中，表中的每行（每个“元组”）都被视为一个对象。
+    表中的列相当于类的永久属性。（请记住，永久类可能有瞬态属性。）因此，在与其他类没有任何关联的简单情况下，这两个世界之间的映射是简单的。该属性的数据类型对应于列所允许的数据类型之一。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    以下类 Customer：
+</p>
+<p align="center">
+    <img height="87" alt="Customer 类" src="./../../../core.base_rup/guidances/guidelines/resources/md_rdb1.gif" width="130" />
+</p>
+<p class="example">
+    当在 RDBMS 中建模时，将转换为称为 Customer 的表，并具有 Customer_ID、Name 和 Address 这几列。
+</p>
+<p>
+    此表的一个实例可以显现为：
+</p>
+<p align="center">
+    <img height="118" alt="本图显示新客户对象表的一部分" src="./../../../core.base_rup/guidances/guidelines/resources/md_rdb2.gif" width="428" />
+</p>
+<h4>
+    <a id="Persistent Attributes and Keys" name="Persistent Attributes and Keys">永久属性和键</a>
+</h4>
+<p>
+    对于每个永久属性，必须询问一些问题才能得出将在关系数据模型中用于相应地对持久对象建模的附加信息。例如：
+</p>
+<ul>
+    <li>
+        这个永久属性是否会充当键或键的一部分？示例：“属性 X 与属性 Z 一起唯一地标识该对象。”在 Customer 表中，Customer_ID 代表一个主键。
+    </li>
+    <li>
+        该属性的最小值和最大值是什么？
+    </li>
+    <li>
+        是否可能使用此属性作为键进行搜索？例如，它可能是 Select 语句中过滤器的一部分，例如“搜索 Y &gt; 1000 的所有实例是很常见的。”
+    </li>
+    <li>
+        该属性是否有诸如“属性 X 是每 100 000 个传送字符中重新传送的数目”之类的描述？
+    </li>
+    <li>
+        该属性是否有可能的数值以及所需的不同数值间转换？
+    </li>
+    <li>
+        允许谁更新该属性？示例：“T 仅可由权限类为 nn 的人更改。”
+    </li>
+    <li>
+        允许谁读取该属性？示例：“P 可由权限类为 yy 和 zz 的人读取”或“P 包括在视图 Vi 和 Vj 中。”
+    </li>
+    <li>
+        是否有关于数量和频率的足够信息？示例：“最多出现了 50 000 个 A”或“平均每天更改 2000 个 A。”
+    </li>
+    <li>
+        该属性是否是唯一的？例如，一个驱动程序许可证号只能让一个人使用。
+    </li>
+</ul>
+<h4>
+    <a id="Mapping Associations between Persistent Objects to the Data Model" name="Mapping Associations between Persistent Objects to the Data Model">将持久对象之间的关联映射为数据模型</a>
+</h4>
+<p>
+    两个持久对象之间的关联是作为相关联对象的外键来实现的。外键是一个表中的一列，包含相关联对象的主键值。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    假设 Order 与 Customer 之间有以下关联：
+</p>
+<p align="center">
+    <img height="211" alt="显示 Order 与 Customer 之间的关联的 UML 图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_rdb4.gif" width="135" />
+</p>
+<p class="example">
+    当这映射为关系表时，就生成一个 Order 表和一个 Customer 表。Order 表包含了多个列，分别表示不同的属性，另外有一列叫做 Customer_ID，是对 Customer 表中相关行的主键的外键引用。对于给定的
+    Order，Customer_ID 列包含该 Order 相关联的 Customer 的标识。外键使 RDBMS 能够将相关的信息连接在一起。
+</p>
+<h4>
+    <a id="Mapping Aggregation Associations to the Data Model" name="Mapping Aggregation Associations to the Data Model">将聚集关联映射为数据模型</a>
+</h4>
+<p>
+    聚集也使用外键关系来建模。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    假设 Order 与 Line Item 之间有以下关联：
+</p>
+<p align="center">
+    <img height="74" alt="Order 类和 Line Item 类" src="./../../../core.base_rup/guidances/guidelines/resources/md_rdb3.gif" width="343" />
+</p>
+<p class="example">
+    当这映射为关系表时，就生成一个 Order 表和一个 Line_Item 表。Line_Item 表列出属性的列，以及一个名为 Order_ID 的附加列，它包含一个外键，该外键引用 Order 表中相关联的行。对于给定的 Line
+    Item，Order_ID 列包含该 Line Item 相关联的 Order 表的 Order_ID。外键允许 RDBMS 优化连接操作。
+</p>
+<p>
+    此外，实施在数据模型中提供引用完整性的级联删除约束是很重要的。一旦完成了该操作，只要删除 Order，它们的所有 Line Item 也会被删除。
+</p>
+<h4>
+    在数据模型中<a id="Modeling Inheritance" name="Modeling Inheritance">对泛化关系建模</a>
+</h4>
+<p>
+    标准的关系数据模型不直接支持对继承关系建模。可以使用多个策略来对继承关系建模。它们可归纳如下：
+</p>
+<ul>
+    <li>
+        使用单独的表来代表超类和子类。子类表必须包含一个引用超类表的外键。为了实例化子类对象，这两个表必须连接在一起。这种方法在概念上比较容易，也便于更改模型，但是通常由于工作量过大而执行效果不佳。
+    </li>
+    <li>
+        将所有继承的属性和关联复制为子类表中的单独列。这类似于标准关系数据模型中的反向规范化。
+    </li>
+</ul>
+<h4>
+    在数据模型中<a id="Modeling Many-to-Many Associations" name="Modeling Many-to-Many Associations">对多对多关联建模</a>
+</h4>
+<p>
+    关系建模中的一项标准技术是使用交叉实体来表示多对多关联。 这里可以应用同一方法：交叉表用于代表该关联。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    如果 Supplier 可以提供许多 Product，并且一个 Product 可以由许多 Supplier 提供，则解决方案就是创建一个 Supplier/Product 表。此表将仅包含 Supplier 表和 Product
+    表的主键，并用于链接 Supplier 及其相关的 Product。对象模型中没有类似于此表的东西；它限用于代表关系数据模型中的关联。
+</p>
+<h3>
+    <a id="Refine the Data Model" name="Refine the Data Model"></a>优化数据模型
+</h3>
+<p>
+    一旦这些设计类转换为数据模型中的表和相应的关系，则按需要优化该模型以实施引用完整性，并通过视图和存储过程优化数据访问。关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">指南：数据模型</a>。
+</p>
+<h3>
+    <b><a id="Forward-Engineering the Data Model" name="Forward-Engineering the Data Model">正向设计数据模型</a></b>
+</h3>
+<p>
+    多数应用设计工具都支持从数据模型生成数据定义语言（DDL）脚本和／或从数据模型生成数据库。数据库的正向设计需要作为整体应用程序开发和集成任务的一部分进行计划。从数据模型正向设计数据库的计时和频率取决于具体的项目情况。对于创建新数据库的新应用程序开发项目，初始正向设计可能需要在精化阶段结束时作为实施该应用程序的稳定体系结构版本的一部分工作来完成。在其他情况下，初始正向设计可以在构造阶段的早期迭代中完成。&nbsp;
+</p>
+<p>
+    数据模型中可以正向设计的模型元素的类型因该项目中使用的具体设计工具和 RDBMS 而异。一般来说，数据模型的主要结构元素（包括表、视图、存储过程、触发器和索引）可以正向设计到数据库中。
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Applied Information Sciences 图标"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>此内容的全部或部分由 <a href="http://www.appliedis.com" target="_blank">Applied
+                Information Sciences</a> 开发。</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

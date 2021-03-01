@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational Robot 创建自动化性能测试脚本</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="create_perf_test_scripts" name="uma.name">
+<meta content="使用 Rational Robot 创建自动化性能测试脚本" name="uma.presentationName">
+<meta content="Tool:rup_robot:Rational Robot" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Robot" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{DEBC41D9-6B28-40CE-BD55-4888609A46FA}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{DEBC41D9-6B28-40CE-BD55-4888609A46FA}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{DEBC41D9-6B28-40CE-BD55-4888609A46FA}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{DEBC41D9-6B28-40CE-BD55-4888609A46FA}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational Robot 创建自动化性能测试脚本</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational Robot 记录性能测试的自动化性能测试脚本。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_robot_26C85D92.html" guid="{1A26E508-8140-4241-865E-0A2A5BCAEFFF}">Rational Robot</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p class="MsoNormal">
+    对于性能测试，通常是通过将脚本记录到 Robot 来创建脚本的。当您记录虚拟用户脚本时，您与被测试的应用程序之间的交互将导致客户端和服务器之间产生特定于协议的通信。Robot 记录该通信，并在会话记录完成之后将该通信抽取为 VU
+    语言测试脚本。
+</p>
+<p class="MsoNormal">
+    然后，TestManager 中的性能测试套件将执行该脚本的多个实例，以便将装入应用到被测试的系统。
+</p>
+<p class="MsoNormal">
+    此工具向导适用于 Windows 98/ME/XP/2000 和 NT 4.0 平台。
+</p>
+<h4>
+    工具步骤
+</h4>
+<p>
+    要使用 Robot 记录虚拟用户脚本：&nbsp;&nbsp;&nbsp;
+</p>
+<ol type="1">
+    <li>
+        <a href="#Start recording the virtual user script">开始记录虚拟用户脚本</a>
+    </li>
+    <li>
+        <a href="#Insert timers, blocks, comments, and synchronization points">插入计时器、块、注释和同步点</a>
+    </li>
+    <li>
+        <a href="#Split script or end session recording">分割脚本或结束会话记录</a>
+    </li>
+    <li>
+        <a href="#Edit the virtual user test script, if necessary">编辑虚拟用户测试脚本（如果需要）</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="Start recording the virtual user script" name="Start recording the virtual user script">开始记录虚拟用户脚本</a>
+</h3>
+<p>
+    当您记录虚拟用户脚本时，您与被测试的应用程序之间的交互将导致客户端和服务器之间产生特定于协议的通信。Robot 记录该通信，并在您结束了记录会话之后将该通信用于生成脚本。
+</p>
+<ol>
+    <li>
+        通过设置虚拟用户记录选项准备测试环境。请参阅手册 <i>Rational Robot User's Guide</i> 中的“Setting Recording Options”。
+    </li>
+    <li>
+        单击 Robot 工具栏上的<b>记录 VU 脚本</b>按钮。&nbsp;
+    </li>
+    <li>
+        输入会话名称（最多 40 个字符）。
+    </li>
+    <li>
+        请单击<b>确定</b>以开始记录。
+    </li>
+    <li>
+        然后，Robot 将最小化（缺省行为），并且将显示悬浮的<b>会话记录</b>工具栏。该工具栏可用于停止记录或分割脚本和重新显示
+        Robot。而<b>会话插入</b>工具栏则可用于将计时器、块、注释或同步点之类的功能插入脚本中。并且还可用于启动应用程序。&nbsp;
+    </li>
+    <li>
+        在“启动应用程序”对话框中，指定要启动的可执行文件。此可执行文件应为客户机应用程序的可执行文件。对于 Web 应用程序，请使用浏览器访问 Web 站点。
+    </li>
+    <li>
+        单击<b>确定</b>以启动客户机应用程序。
+    </li>
+    <li>
+        按照测试用例所指定，开始与被测试的应用程序交互。将记录客户机与服务器之间的协议流量。
+    </li>
+</ol>
+<h3>
+    2. <a id="Insert timers, blocks, comments, and synchronization points" name="Insert timers, blocks, comments, and synchronization points">插入计时器、块、注释和同步点</a>
+</h3>
+<p>
+    记录虚拟用户会话时，可以插入计时器、块、注释或同步点。请单击<b>会话记录</b>工具栏上的<b>显示会话插入</b>工具栏按钮，然后单击以下按钮<b><i>之一</i></b>：
+</p>
+<ul>
+    <li>
+        <b>启动计时器</b>：将显示“启动计时器”对话框，并提示您输入要启动的计时器的名称。请输入名称并单击<b>确定</b>或使用<b>取消</b>按钮来退出对话框。<br />
+    </li>
+    <li>
+        <b>停止计时器</b>：将显示“停止计时器”对话框，并提示您输入要停止的计时器的名称。请输入名称并单击<b>确定</b>或使用<b>取消</b>按钮来退出对话框。&nbsp;
+    </li>
+</ul>
+<blockquote>
+    <p>
+        计时器是将一组客户机／服务器交互括起的“括号”。在 TestManager 中执行了性能测试套件之后，执行各计时器所需的时间将在“性能”和“响应”报告中显示。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        <b>注释</b>：将显示“注释”对话框，并提示您输入要添加到脚本的注释。请输入注释并单击<b>确定</b>或使用<b>取消</b>按钮来退出对话框。注释是脚本中的文本。
+        它们帮助脚本读者理解脚本，但不会影响脚本的执行。<br />
+    </li>
+    <li>
+        <b>同步点</b>：将显示“同步点”对话框，并提示您输入要添加到脚本的同步点的名称。请输入名称并单击<b>确定</b>或使用<b>取消</b>按钮来退出对话框。同步点是一种脚本功能，可用于在执行脚本期间协调多个虚拟测试员之间的操作。<br />
+    </li>
+    <li>
+        <b>启动块</b>：将显示“启动块”对话框，并提示您输入在脚本中要启动的块。请输入名称并单击<b>确定</b>或使用<b>取消</b>按钮来退出对话框。<br />
+    </li>
+    <li>
+        <b>停止块</b>：将显示“停止块”对话框，并显示当前块的名称。&nbsp;<br />
+         单击<b>确定</b>或使用<b>取消</b>按钮可退出该对话框。
+    </li>
+</ul>
+<blockquote>
+    <p>
+        与计时器类似，块也是将一组客户机／服务器交互括起的“括号”。但与计时器不同的是，块中不包含初始用户思考时间。 此外，块中的所有命令标识均以块名为前缀（而在计时器中，所有命令标识均以脚本的名称为前缀）。
+    </p>
+</blockquote>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参阅 Robot 联机帮助中的以下主题：&nbsp;
+</p>
+<ul>
+    <li>
+        <i>Creating a new Suite</i>
+    </li>
+    <li>
+        <i>Inserting Comments into a Script</i>
+    </li>
+    <li>
+        <i>Inserting a Block into a Script</i>
+    </li>
+    <li>
+        <i>Inserting a Timer During Virtual User Recording</i>
+    </li>
+    <li>
+        <i>Inserting a Synchronization Point During Recording</i>
+    </li>
+</ul>（所有用于将功能插入虚拟用户脚本的对话框均包含一个用于启动 Robot 联机帮助的“帮助”按钮。） 
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;&nbsp; 请参阅 <i>Rational Robot User's
+    Guide</i> 中标题为 <i>Adding Features to Scripts</i> 的主题。&nbsp;
+</p>
+<h3>
+    3. <a id="Split script or end session recording" name="Split script or end session recording">分割脚本或结束会话记录</a>
+</h3>
+<p>
+    完成执行测试用例或用户活动的逻辑单元之后，可以分割脚本或结束会话记录。&nbsp;
+</p>
+<p>
+    分割会话表明上次会话分割（或会话的开始）以来记录的所有内容都代表一个逻辑单元（如登录到数据库或修改特定记录）；例如，在客户关系管理应用程序中更新客户的信息。
+</p>
+<ol>
+    <li>
+        要分割脚本：
+    </li>
+</ol>
+<ul>
+    <li>
+        <p>
+            单击<b>会话记录</b>工具栏上的<b>分割脚本</b>按钮。&nbsp;
+        </p>
+    </li>
+    <li>
+        <p>
+            为刚记录的活动输入虚拟用户脚本名称（最多 40 个字符）。
+        </p>
+    </li>
+</ul>
+<ol start="2">
+    <li>
+        要停止会话记录：
+    </li>
+</ol>
+<ul>
+    <li>
+        单击<b>会话记录</b>工具栏上的<b>停止会话</b>按钮。&nbsp;
+    </li>
+    <li>
+        输入虚拟用户脚本名称（最多 40 个字符）。
+    </li>
+    <li>
+        要更改记录选项，请单击<b>选项</b>。结束后，请单击<b>确定</b>。
+    </li>
+    <li>
+        根据您以前对虚拟用户记录的设置，生成器将生成脚本（自动过滤），或提示您选择应当用于生成虚拟用户脚本的客户机服务器通信和协议（手动过滤）。
+    </li>
+</ul>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;&nbsp; 请参阅 <i>Rational Robot User's
+    Guide</i> 中标题为 <i>Recording Sessions - Choosing the Protocols to Include in a Script</i> 的章节。
+</p>
+<h3>
+    4. <a id="Edit the virtual user test script, if necessary" name="Edit the virtual user test script, if necessary">编辑虚拟用户测试脚本（如果需要）</a>
+</h3>
+<p>
+    可通过按照如下方式手动更改脚本的文本来编辑现有脚本：
+</p>
+<ul type="disc">
+    <li>
+        编辑脚本的文本（删除行、移动文本等）。
+    </li>
+    <li>
+        向现有脚本添加新的用户操作（添加共享变量或函数）。
+    </li>
+    <li>
+        向现有脚本添加新的功能（添加计时器、块、注释等）。
+    </li>
+</ul>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参阅 Robot 联机帮助中标题为 <i>VU
+    Language Reference</i> 的主题。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

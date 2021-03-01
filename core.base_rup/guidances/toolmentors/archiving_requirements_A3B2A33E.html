@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational RequisitePro 归档需求</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="archiving_requirements" name="uma.name">
+<meta content="使用 Rational RequisitePro 归档需求" name="uma.presentationName">
+<meta content="Tool:rup_requisite_pro:Rational RequisitePro" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational RequisitePro" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{1AA3B210-5979-4E05-8A08-A436B38997B0}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{1AA3B210-5979-4E05-8A08-A436B38997B0}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{1AA3B210-5979-4E05-8A08-A436B38997B0}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{1AA3B210-5979-4E05-8A08-A436B38997B0}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational RequisitePro 归档需求</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational RequisitePro 归档命令来归档需求。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_requisite_pro_593FD397.html" guid="{887DBA0C-5761-494D-862D-5956F1C51BF7}">Rational RequisitePro</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/setup_cm_environment_78ABEDF9.html" guid="{FC91D0C9-759E-4D3D-86D8-22D7B26AA0F6}">建立配置管理（CM）环境</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/support_development_1443EF07.html" guid="{35936CF9-4B04-402A-9482-07E5CFB45D99}">支持开发</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    为进行备份，应该在各个里程碑处捕获项目需求。RequisitePro 允许您创建需求项目的快照，并将其存储在 Rational ClearCase&reg; 中，或仅作为 RequisitePro 归档将项目工作产品的副本置于归档目录中。
+</p>
+<p>
+    您可以使用各种各样的配置管理工具（例如 Intersolv PVCS&reg; 或 Microsoft&reg; Visual SourceSafe）来归档 RequisitePro 项目。如果项目使用的是 Microsoft&reg; Access
+    数据库，则请先用 RequisitePro Archive
+    命令创建一个归档文件；然后用您的配置管理工具将该文件归档。请确保在归档中包含所有项目文档。当您归档的项目使用跨项目的可跟踪性时，请确保同时归档所有关联的项目，从而使您归档的项目是完整的。
+</p>
+<p>
+    RequisitePro 项目由一个 Rational 需求项目以及一组含有需求的文档组成。 可以直接在项目视图中创建需求，也可以在 RequisitePro 的 Microsoft&reg; Word
+    文档中创建。所有包含需求的文档都会在维护这些需求的关联 RequisitePro 项目中进行引用。 RequisitePro 项目归档中包含此 Rational 需求项目以及所有含有需求的文档。
+</p>
+<p>
+    <b>注意：</b>有关创建 RequisitePro 项目基线的信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/baseline_requirements_C387B42A.html" guid="{CC4BC013-6917-468D-A3DC-0E696FB9DB7A}">工具向导：创建 Rational RequisitePro 项目的基线</a>。
+</p>
+<h3>
+    工具步骤
+</h3>
+<p>
+    要使用 RequisitePro 归档项目，请选择下面的一个选项：
+</p>
+<ol>
+    <li>
+        <a href="#Archive a RequisitePro project as a RequisitePro archive">将 RequisitePro 项目归档为 RequisitePro
+        归档</a>
+    </li>
+    <li>
+        <a href="#Archive a RequisitePro project in ClearCase">在 ClearCase 中归档 RequisitePro 项目</a>
+    </li>
+    <li>
+        <a href="#VSS">使用企业数据库归档 RequisitePro 项目</a>
+    </li>
+</ol>
+<h4>
+    1. <a id="Archive a RequisitePro project as a RequisitePro archive" name="Archive a RequisitePro project as a RequisitePro archive">将 RequisitePro 项目归档为 RequisitePro 归档</a>
+</h4>
+<p>
+    在将 RequisitePro 项目归档为 RequisitePro 归档时，您只须在用户定义的目录中创建所有项目文件的副本。使用此选项，您可以通过 RequisitePro 不直接支持的配置管理系统来归档 RequisitePro
+    项目。
+</p>
+<p>
+    要将 RequisitePro 项目归档为 RequisitePro 归档，请按下列步骤操作：
+</p>
+<ol>
+    <li>
+        单击<b>文件 &gt; 项目管理 &gt; 归档 &gt; RequisitePro 归档</b>。此时会显示“归档项目”对话框。
+    </li>
+    <li>
+        选择您想存储备份副本的目录。单击<b>浏览</b>以打开“浏览至文件夹”对话框。浏览至目录，选择文件夹，并单击<b>确定</b>以返回至“归档项目”对话框。
+    </li>
+    <li>
+        要向现有目录路径添加新的子目录，请单击<b>目录</b>字段的最后，并输入一个反斜杠和一个新的子目录名称。
+    </li>
+    <li>
+        要对需求文档应用修订号，请选择<b>传播给所有文档</b>复选框。<br />
+         <b>注意</b>：如果安全性已启用，您必须具有项目结构许可权来传播修订版号。 您还必须独占性地打开该项目。
+    </li>
+    <li>
+        可选步骤：为项目输入新的修订号，然后在<b>版本标签</b>框中输入已归档版本的名称，并在<b>变更描述</b>框中输入已归档版本的描述。
+    </li>
+    <li>
+        单击<b>确定</b>。
+    </li>
+</ol>
+<p>
+    要在以后访问此归档，只须将已归档的项目添加至 RequisitePro 项目列表中：
+</p>
+<ol>
+    <li>
+        单击<b>文件 &gt; 打开项目</b>。此时会显示“打开项目”对话框。
+    </li>
+    <li>
+        单击<b>添加</b>。在指定的归档目录中浏览至已归档的项目并选择它。
+    </li>
+    <li>
+        单击<b>打开</b>和<b>确定</b>。现在就可以在 RequisitePro 中访问已归档的项目。
+    </li>
+</ol>
+<h4>
+    有关更多信息
+</h4>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" /></b> 请参阅 RequisitePro 联机帮助中的主题 <i>Archiving
+    projects with the RequisitePro Archive command</i>（索引：archiving &gt; using the Archive command）。
+</p>
+<h4>
+    2. <a id="Archive a RequisitePro project in ClearCase" name="Archive a RequisitePro project in ClearCase">在 ClearCase
+    中归档 RequisitePro 项目</a>
+</h4>
+<p>
+    要在 Rational ClearCase 中归档 Rational RequisitePro 项目，请按下列步骤操作：
+</p>
+<ol>
+    <li>
+        单击<b>工具</b> &gt; <b>选项</b>。
+    </li>
+    <li>
+        在 <b>ClearCase 视图</b>框中，输入目标版本化对象库（VOB）的位置（驱动器、视图名称、VOB
+        名称、目录）。路径的开头必须是盘符。对于共享驱动器，请使用符合“通用命名约定”的名称。这一步用来定义在归档项目时将要复制 RequisitePro 数据库和文档的视图。
+    </li>
+    <li>
+        单击<b>确定</b>以保存您的输入，然后关闭“选项”对话框。
+    </li>
+    <li>
+        单击<b>文件 &gt; 项目管理 &gt; 归档 &gt; Rational ClearCase</b>。此时会显示“使用 ClearCase 归档”对话框。
+    </li>
+    <li>
+        选择您想存储备份副本的目录。单击<b>浏览</b>以打开“浏览至文件夹”对话框。浏览至目录，选择文件夹，并单击<b>确定</b>。此时将返回至“使用 ClearCase 归档”对话框。
+    </li>
+    <li>
+        要向现有目录路径添加新的子目录，请单击<b>目录</b>字段的最后，并输入一个反斜杠和一个新的子目录名称。
+    </li>
+    <li>
+        以下步骤是可选的： 
+        <ul>
+            <li>
+                为项目输入新的修订号。
+            </li>
+            <li>
+                通过选择<b>传播给所有文档</b>复选框，将修订号应用给需求文档。<b>注意</b>：如果安全性已启用，您必须具有项目结构许可权来传播修订版号。 您还必须独占性地打开该项目。
+            </li>
+            <li>
+                在<b>版本标签</b>文本框中输入已归档版本的名称，并在<b>变更描述</b>文本框中输入已归档版本的描述。
+            </li>
+        </ul>
+    </li>
+</ol>
+<h4>
+    有关更多信息
+</h4>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" /> 请参阅 RequisitePro 联机帮助中的主题 <i>Archiving
+    projects with Rational ClearCase</i>（索引：archiving &gt; using ClearCase）。
+</p>
+<h4>
+    3. <a id="VSS" name="VSS">使用企业数据库归档 RequisitePro 项目</a>
+</h4>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" /> 关于归档使用 Oracle 或 Microsoft SQL Server 数据库的
+    RequisitePro 项目的详尽指南，请参阅 RequisitePro 联机帮助中的主题 <i>Archiving an enterprise database project</i>（索引：archiving &gt;
+    enterprise databases）。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

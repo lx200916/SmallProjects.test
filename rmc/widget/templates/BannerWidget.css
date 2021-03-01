@@ -1,0 +1,12 @@
+.bannerDiv {
+	background-color: #15759F;
+}
+
+.bannerImg {
+	display: block;
+	background-repeat: no-repeat;
+	color: #ffffff;
+	min-height: 63px !important;
+	height: auto !important;
+	overflow: auto;  !important;
+}

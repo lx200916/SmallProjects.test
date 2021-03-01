@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 软件体系结构文档</title>
+<meta content="Guideline" name="uma.type">
+<meta content="software_architecture_document" name="uma.name">
+<meta content="软件体系结构文档" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_hsuoEDIFEdqwaNnSEheSAg", "{35BAFA92-EAF9-41E8-8BDE-AB9B61A68E04}", "2.9494785550310917E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "2.9494785550310917E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "2.9494785550310917E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "2.9494785550310917E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.9494785550310917E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.9494785550310917E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：软件体系结构文档</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南提供了软件体系结构文档内容的概述。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/review_the_architecture_D27975CC.html" guid="{35BAFA92-EAF9-41E8-8BDE-AB9B61A68E04}">复审体系结构</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">软件体系结构文档</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_logical_view__guidelines_for" name="XE_logical_view__guidelines_for"></a> 
+<h3>
+    <a id="References" name="References">引用</a>
+</h3>
+<p>
+    引用部分提出的外部文档提供对于理解系统体系结构很重要的背景信息。如果有大量的引用，请将该部分组织为几小部分：
+</p>
+<ol>
+    <li>
+        外部文档
+    </li>
+    <li>
+        内部文档
+    </li>
+    <li>
+        政府文档
+    </li>
+    <li>
+        非政府文档
+    </li>
+    <li>
+        等等
+    </li>
+</ol>
+<h3>
+    <a id="Architectural Goals and Constraints" name="Architectural Goals and Constraints">体系结构目标和约束</a>
+</h3>
+<p>
+    形成体系结构时将考虑以下各项：
+</p>
+<ul>
+    <li>
+        功能需求（包括在用例模型中）
+    </li>
+    <li>
+        非功能需求（包括在补充规范中）
+    </li>
+</ul>
+<p>
+    但是，改变体系结构形式的影响因素不仅仅是这些：将会有软件操作环境所施加的约束；重用现有资产的需要所施加的约束；强制实施各种标准所施加的约束；与现有系统兼容的需要所施加的约束等等。也可能有一组预先存在的<b>体系结构准则和策略</b>，它们将指导开发，并需要针对项目进行精化和验证。“软件体系结构”文档的这一部分用于描述这些目标和约束，以及由此生成的任何
+    <b>体系结构决策</b>（它们类似需求，无法在其他地方生成）。
+</p>
+<p>
+    创建本文档时，一项重要的输入就是指定实施环境。应指定的事项的示例有目标平台（硬件、操作系统）、视窗系统、开发工具（语言、GUI
+    构建器）、数据库管理系统和组件库。指定允许和不允许使用哪些用户界面技术也是很有价值的。许多系统选择不使用某些表现技术（JavaScript、Applets、Frames、XML
+    等），以使更多客户机系统能够使用该应用程序，或使该应用程序更易于开发。此处的决策记录在软件体系结构文档中，而关于如何使用和应用所选技术的详细信息则记录在<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">工作产品：特定于项目的指南</a>中。
+</p>
+<p>
+    这些决策的实施是通过形成一组<b>体系结构评估条件</b>来实现的，这些评估条件将用作迭代评估的一部分。
+</p>
+<p>
+    评估条件还可能来自<b>变更案例</b>，变更案例记录了将来可能在以下方面发生的变更：
+</p>
+<ul>
+    <li>
+        系统的功能和属性
+    </li>
+    <li>
+        使用系统的方式
+    </li>
+    <li>
+        系统的操作环境和支持环境
+    </li>
+</ul>
+<p>
+    变更案例将阐明那些用各种主观性短语描述的系统属性，这些短语包括：“易于移植”、“易于携带”、“易于维护”、“有很强的变更接受能力”和“开发速度很快”等。变更用例专注于重要的事项，而可能不只是可能的事项。
+</p>
+<p>
+    变更用例尝试预测变更：此类预测最后很少会真正实现。
+</p>
+<p>
+    系统的属性是由用户、负责人、供应商、开发人员和其他项目干系人确定的。变更可能有许多来源，例如：
+</p>
+<ul>
+    <li>
+        业务驱动因素：新的和修改过的业务流程和目标
+    </li>
+    <li>
+        技术驱动因素：改编系统以适应新的平台，与新的组件集成
+    </li>
+    <li>
+        普通用户概要信息的变更
+    </li>
+    <li>
+        与其他系统集成的需要的变更
+    </li>
+    <li>
+        由于从外部系统迁移功能而产生的范围变更
+    </li>
+</ul>
+<h3>
+    <a id="The Use-Case View" name="The Use-Case View">用例视图</a>
+</h3>
+<p>
+    用例视图是<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">工作产品：用例模型</a>的一部分，它展示在体系结构方面具有重要意义的系统用例。它描述了代表某一重要的中心功能的一组场景和／或用例。它还描述了一组具有实际体系结构覆盖（用到许多体系结构元素）或者强调或说明特定、微妙的体系结构点的场景和／或用例。
+</p>
+<p>
+    如果模型较大，它通常将组织为几个包；为了易于理解，用例视图应类似地组织为几个包（如果它们被打包封装）。对于每个重要的用例，都在一个子节中包括以下信息：
+</p>
+<ol>
+    <li>
+        用例的名称。
+    </li>
+    <li>
+        用例的简短描述。
+    </li>
+    <li>
+        对用例<b>事件流</b>的重要描述。它可以是<b>事件流</b>的完整描述，也可以是一部分描述，只描述用例的重要流程或场景。
+    </li>
+    <li>
+        涉及用例的关系的有效描述，例如包含关系、扩展关系或通信关联。
+    </li>
+    <li>
+        枚举与用例相关的重要用例图。
+    </li>
+    <li>
+        对用例的<b>特殊需求</b>的重要描述。它可以是<b>特殊需求</b>的完整描述，也可以是一部分描述，只描述重要的需求。
+    </li>
+    <li>
+        用于阐明用例的重要<b>用户界面图片</b>。
+    </li>
+    <li>
+        这些用例的实现应在逻辑视图中可以找到。
+    </li>
+</ol>
+<h3>
+    <a id="Contents" name="Contents">逻辑视图</a>
+</h3>
+<p>
+    逻辑视图是<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">工作产品：设计模型</a>的一部分，它展示在体系结构方面具有重要意义的设计元素。它描述最重要的类、它们的包和子系统组织以及将这些包和子系统组织为层。
+    它还描述最重要的用例实现，例如，体系结构的动态方面。
+</p>
+<p>
+    复杂的系统可能需要许多章节来描述逻辑视图：
+</p>
+<ol>
+    <li>
+        <b>概述</b> 
+        <p>
+            这一子节根据设计模型的包层次结构和层来描述设计模型的整体分解结构。如果系统的包有好几级，您应先描述顶级的重要包。包括显示重要顶级包以及它们互相依赖性和分层的任何图。然后表现其中任何重要的包，依此类推，直到层次结构底部的重要包。
+        </p>
+    </li>
+    <li>
+        <b>具有重要体系结构意义的设计包</b> 
+        <p>
+            对于每个重要的包，都在一个子节中包括以下信息
+        </p>
+        <ol>
+            <li>
+                其名称。
+            </li>
+            <li>
+                简短描述。
+            </li>
+            <li>
+                一个图，具有该包内包含的所有重要类和包。为了更好地理解，此图可以在必要时显示其他包的一些类。
+            </li>
+            <li>
+                对于包中每个重要的类，请包括其名称、简短描述，以及（可选地）对其一些主要职责、操作和属性的描述。必要时还描述其重要关系，以理解所包括的图。
+            </li>
+        </ol>
+    </li>
+    <li>
+        <b>用例实现</b> 
+        <p>
+            此节通过给出一些选定的用例（或场景）实现来阐述软件如何工作，并说明各个设计模型元素对其功能的作用。选择此处给出的这些实现，是因为它们代表了最终系统的一些重要的、中心功能；或是因为它们的体系结构覆盖（它们实践了许多体系结构元素），或强调或说明特定的、微妙的体系结构点。这些实现的相应用例和场景应在用例视图中可以找到。
+        </p>
+        <p>
+            对于每个重要的用例实现，都在一个子节中包括以下信息
+        </p>
+        <ol>
+            <li>
+                所实现用例的名称。
+            </li>
+            <li>
+                所实现用例的简短描述。
+            </li>
+            <li>
+                对用例实现的<b>事件流 － 设计</b>的重要描述。 它可以是<b>事件流 － 设计</b>的完整描述，也可以是一部分描述，只描述用例的重要流程或场景的实现。
+            </li>
+            <li>
+                枚举与用例实现相关的重要交互或类图。
+            </li>
+            <li>
+                对用例实现的<b>派生需求</b>的重要描述。它可以是<b>派生需求</b>的完整描述，也可以是一部分描述，只描述重要的需求。
+            </li>
+        </ol>
+    </li>
+</ol>
+<h4>
+    具有重要体系结构意义的设计元素
+</h4>
+<p>
+    为了协助确定什么是具有重要体系结构意义的，这里提出了一些检验元素是否合格及其特征的示例：
+</p>
+<ul>
+    <li>
+        包括了问题域主要抽象内容的模型元素，例如： 
+        <ul>
+            <li>
+                空中交通控制系统中的飞行计划。
+            </li>
+            <li>
+                薪资系统中的雇员。
+            </li>
+            <li>
+                电话系统中的订户。
+            </li>
+        </ul>
+    </li>
+</ul>
+<div style="MARGIN-LEFT: 2em">
+    <p>
+        没有必要包括以上元素的子类型，例如，将 <b>ICAO 标准航班计划</b>与<b>美国国内航班计划</b>区分开并不重要，因为它们都是航班计划，并且共享大量属性和操作。
+    </p>
+    <p>
+        区分具有数据线路或具有语音线路的订户无关紧要，只要呼叫处理工作方式大致相同即可。
+    </p>
+</div>
+<ul>
+    <li>
+        由许多其他模型元素使用的模型元素。
+    </li>
+    <li>
+        封装了系统主要机制（服务）的模型元素
+    </li>
+    <li>
+        设计机制 
+        <ul>
+            <li>
+                持续机制（资料库、数据库、内存管理）。
+            </li>
+            <li>
+                通信机制（RPC、广播、代理服务）。
+            </li>
+            <li>
+                错误处理或恢复机制。
+            </li>
+            <li>
+                显示机制和其他公共界面（窗口显示、数据捕获、信号调节等）。
+            </li>
+            <li>
+                参数化机制。
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>
+    总的来说，任何机制都可能要在许多不同的包中使用（相对于完全在包内使用），以及最好在整个系统中单一实施，或至少有一个接口隐藏几个替代的实施。
+</p>
+<ul>
+    <li>
+        参与系统与诸如以下各项的主要对接的模型元素： 
+        <ul>
+            <li>
+                操作系统。
+            </li>
+            <li>
+                成品产品（窗口显示系统、RDBMS、地理信息系统）。
+            </li>
+            <li>
+                实施或支持体系结构模式（例如分解模型元素的模式，包括模型视图控制器模式或代理模式）的类。
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li>
+        本地可见、但可能对系统整体性能有某种重大影响的模型元素，例如： 
+        <ul>
+            <li>
+                用以高速扫描传感器的轮询机制。
+            </li>
+            <li>
+                用于故障诊断的跟踪机制。
+            </li>
+            <li>
+                高可用性系统的检查点设置机制（检查点和重新启动）。
+            </li>
+            <li>
+                启动顺序。
+            </li>
+            <li>
+                在线更新代码。
+            </li>
+            <li>
+                一种类，它包括了一种新颖而具有技术风险的算法或在安全性方面很关键的某种算法，例如计算辐射程度、在拥挤的领空中避免飞机相撞的条件、密码加密。
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>
+    关于什么具有重要体系结构意义的标准将在项目的早期迭代中发展，此时您发现了技术难点并开始更好地理解系统。不过，您通常应该将最多 10%
+    的模型元素标记为“<b>在体系结构方面具有重要意义</b>”。否则，您会面临淡化体系结构概念的风险，陷入“所有一切都是体系结构”的误区。
+</p>
+<p>
+    当您定义具有重要体系结构意义的模型元素并将其包括在逻辑视图中时，还应考虑以下方面
+</p>
+<ul>
+    <li>
+        确定公用和重用的可能性。哪些类可以是某个公共类的子类或同一参数化类的实例？
+    </li>
+    <li>
+        确定参数化的可能性。通过使用静态参数和运行时参数（例如表格驱动的行为或启动时装入的资源数据），可使设计的哪一部分重用性更好或更灵活？
+    </li>
+    <li>
+        确定使用成品产品的可能性。
+    </li>
+</ul>
+<h3>
+    <a id="The Process View" name="The Process View">流程视图</a>
+</h3>
+<p>
+    流程视图描述系统的进程结构。由于进程结构有重大的体系结构影响，故应表现所有进程。在进程内，只需表现具有重要体系结构意义的轻量级线程。流程视图描述系统执行中涉及的任务（进程和线程），它们的交互和配置，以及将对象和类分配给任务。
+</p>
+<p>
+    对于每个进程网络，都在一个子节中包括以下信息：
+</p>
+<ol>
+    <li>
+        其名称。
+    </li>
+    <li>
+        涉及的进程。
+    </li>
+    <li>
+        进程之间的交互（形式为通信图），其中的对象是包括其自身控制线程的实际进程。对于每个进程，简短描述其行为、生命期和通信特征。
+    </li>
+</ol>
+<h3>
+    <a id="The Deployment View" name="The Deployment View">部署视图</a>
+</h3>
+<p>
+    此节描述部署和运行软件所采用的一个或多个实际网络（硬件）配置。它还描述将任务（从<b>流程视图</b>）分配给实际节点。对于每个实际网络配置，都在一个子节中包括以下信息：
+</p>
+<ol>
+    <li>
+        其名称。
+    </li>
+    <li>
+        部署图，举例说明配置以及将进程映射到每个处理器。
+    </li>
+    <li>
+        如果有许多可能的实际配置，则只描述一个典型的实际配置，然后说明在定义其他配置时要遵循的一般映射规则。在多数情况下，您还应包括对执行软件测试和仿真的网络配置的描述。
+    </li>
+</ol>
+<p>
+    该视图从<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_deployment_model_57DF1DF5.html" guid="{5981B6BE-2FD1-4984-AA94-2F7428439BA6}">工作产品：部署模型</a>中生成。
+</p>
+<h3>
+    <a id="The Implementation View" name="The Implementation View">实施视图</a>
+</h3>
+<p>
+    此节描述在实施模型中将软件分解为多个层和实施子系统。它还概述了将设计元素（从逻辑视图）分配到实施。它包含两个子节：
+</p>
+<ol>
+    <li>
+        <b>概述</b> 
+        <p>
+            此子节命名和定义各个层及其内容、控制给定层所包含内容的规则以及层的边界。它包括一个显示层间关系的组件图。
+        </p>
+    </li>
+    <li>
+        <b>层</b> 
+        <p>
+            对于每一层，都在一个子节中包括以下信息：
+        </p>
+        <ol>
+            <li>
+                其名称。
+            </li>
+            <li>
+                显示实施子系统及其重要依赖性的组件图。
+            </li>
+            <li>
+                该层与逻辑视图或流程视图中元素关系的适当概括。
+            </li>
+            <li>
+                枚举该层内的实施子系统。对每个实施子系统：
+            </li>
+            <li style="LIST-STYLE-TYPE: none">
+                <ul>
+                    <li>
+                        给出其名称、缩写或昵称、简短描述及其存在的理由；
+                    </li>
+                    <li>
+                        适当地指出实施子系统与逻辑视图或流程视图中元素之间的关系。在许多情况下，实施子系统将实施逻辑视图中的一个或多个设计子系统。
+                    </li>
+                    <li>
+                        如果实施子系统包含具有重要体系结构意义的实施子系统和／或<br />
+                         目录，则考虑在子节层次结构中反映这种情况。<br />
+                    </li>
+                    <li>
+                        如果实施子系统不与实施目录一对一映射，则包括一项说明，即如何根据实施目录和／或文件定义实施子系统。
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </li>
+</ol>
+<h3>
+    <a id="The Data View" name="The Data View">数据视图</a>
+</h3>
+<p>
+    该视图只与涉及支持持久元素的数据库的系统有关。它描述数据模型中在体系结构方面具有重要意义的永久元素。它根据用于向系统提供持久性的表、视图、索引、触发器和存储过程来描述数据模型的概述及其组织。它还描述永久类（从逻辑视图）映射到数据库的数据结构
+</p>
+<p>
+    它通常包括：
+</p>
+<ul>
+    <li>
+        从关键永久设计类的映射，尤其是在映射不可忽视时。
+    </li>
+    <li>
+        已在数据库中实施的、具有重要体系结构意义的系统部件，采用存储过程和触发器的形式。
+    </li>
+    <li>
+        其他视图中影响数据的重要决策，例如选择事务策略、分发、并行、容错。
+        例如，选择使用基于数据库的事务管理（依靠数据库提交或放弃事务），则要求体系结构中使用的错误处理机制包括一个策略，用于通过在应用程序中刷新内存中高速缓存的持久对象的状态而从失败事务中恢复。
+    </li>
+</ul>
+<p>
+    您应该表现具有重要体系结构意义的数据模型元素，描述它们的职责，以及一些非常重要的关系和行为（触发器、存储过程等）。
+</p>
+<h3>
+    <a id="Size and Performance" name="Size and Performance">大小和性能</a>
+</h3>
+<p>
+    此节描述在体系结构方面具有确定性的系统容量和响应性特征。所提供的信息可能包括：
+</p>
+<ul>
+    <li>
+        系统将必须处理的主要元素的数量，例如空中交通控制系统中并发班机的数量、电信交换机中并发电话呼叫的数量、航班预订系统中并发在线用户的数量等。
+    </li>
+    <li>
+        系统的主要性能指标，如主要事件的平均响应时间；平均吞吐率、最大吞吐率和最小吞吐率等。
+    </li>
+    <li>
+        可执行文件所占用的空间（在磁盘和内存方面），如果系统是必须在极端严格的约束条件下运行的嵌入式系统，这将是必不可少的信息。
+    </li>
+</ul>
+<p>
+    这些质量中有多数都是作为需求包括在内的；此处表现它们是因为它们以多种方式形成体系结构并保证了特殊焦点。针对每个需求，讨论体系结构如何支持该需求。
+</p>
+<h3>
+    <a id="Quality" name="Quality">质量</a>
+</h3>
+<p>
+    在此节中，列出系统中形成体系结构的主要质量维度。所提供的信息可能包括：
+</p>
+<ul>
+    <li>
+        操作性能需求，例如<b>故障平均间隔时间</b>（MTBF）。
+    </li>
+    <li>
+        质量目标，例如“没有未计划到的停机时间”
+    </li>
+    <li>
+        可扩展性目标，如“软件将可以在系统运行过程中进行升级”。
+    </li>
+    <li>
+        可移植性目标，例如硬件平台、操作系统、语言。
+    </li>
+</ul>
+<p>
+    针对每一维，讨论组件如何支持该需求。您可以按照不同视图（逻辑、实施等等）或按质量组织该节。当系统中的特定特征（例如安全、安全性或隐私性）很重要时，应在此节中仔细描绘对它们的体系结构支持。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

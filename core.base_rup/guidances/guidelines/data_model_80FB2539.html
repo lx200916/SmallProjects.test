@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 数据模型</title>
+<meta content="Guideline" name="uma.type">
+<meta content="data_model" name="uma.name">
+<meta content="数据模型" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "3.4196799396281445E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "3.4196799396281445E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "3.4196799396281445E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.4196799396281445E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.4196799396281445E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：数据模型</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">数据模型记录由系统使用持久数据存储的设计。本指南介绍数据建模及其在 RUP 中的用法。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">数据库设计</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Overview" name="Overview"></a><a id="XE_persistence__relational_databases_and_object_orientation" name="XE_persistence__relational_databases_and_object_orientation" class="index" key="持久性（persistence）" text="关系数据库和对象方向"></a><a id="Relational Databases and Object Orientation" name="Relational Databases and Object Orientation">概述</a>
+</h3>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>用于设计系统使用的持久数据存储的结构。用于数据库设计的统一建模语言（UML）概要文件为数据库设计员提供了一组建模元素，可以使用这些元素开发数据库中的表的详细设计，并对数据库的物理存储布局建模。UML
+    数据库概要文件还提供了用于对引用完整性建模的构造（约束和触发器），以及用于管理数据库访问的存储过程。
+</p>
+<p>
+    可以在企业、部门或个别应用程序级别构造数据模型。可以将企业和部门级别数据模型用于提供关键业务实体（例如客户和员工）的标准定义，企业或业务单位中的所有应用程序都将使用这些实体。还可以将这些类型的数据模型用于定义企业中的哪个系统是特定业务实体的数据的“所有者”，以及其他的哪些系统是该数据的用户（订户）。
+</p>
+<p>
+    本指南描述用于构造关系数据库数据模型的数据库建模的 UML 概要文件模型元素。因为有大量关于一般数据库理论的现有出版物，所以它并没有涵盖此区域。关于关系数据模型和对象模型的背景信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/relational_databases_and_object_orientation_1C67069E.html" guid="3.2166604011257303E-305">概念：关系数据库和面向对象</a>。
+</p>
+<p>
+    注意：本指南中包含的数据建模表示法是基于 UML 1.3。在开发本指南时，尚未提供 UML 1.4 数据建模概要文件。
+</p>
+<h3>
+    <a id="Stages of Data Modeling" name="Stages of Data Modeling"></a><a id="Persistence Frameworks" name="Persistence Frameworks">数据建模阶段</a>
+</h3>
+<p>
+    如 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#NBG01" guid="7.755968586980351E-308">NBG01</a>] 中所述，在数据模型开发中有三个一般阶段：概念、逻辑和物理。这些数据建模阶段反映了应用程序的持久数据存储和检索机制的设计中的不同详细程度。 在<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/conceptual_data_modeling_5CF78A88.html" guid="7.217811033438091E-305">概念</a><a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/conceptual_data_modeling_5CF78A88.html" guid="7.217811033438091E-305">概念性数据建模</a>中提供了对概念性数据建模的讨论。在本指南的下两节中提供了逻辑和物理数据建模的摘要。
+</p>
+<h4>
+    <a id="Logical data modeling" name="Logical data modeling">逻辑</a>数据建模
+</h4>
+<p>
+    在逻辑数据建模中，<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">数据库设计员</a>关注关键实体和关系的识别，这些实体和关系获取应用程序需要存储在数据库中的关键信息。在执行<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">用例分析</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">用例设计</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">类设计</a>任务的过程中，<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">数据库设计员</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>必须一起工作，确保应用程序分析和设计类的演进设计将足以支持数据库的开发。在执行<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">类设计</a>任务的过程中，数据库设计员和设计人员必须确定设计模型中将需要在数据库中存储数据的一组类。
+</p>
+<p>
+    设计模型中的该组持久类提供了设计模型视图，虽然与传统的逻辑数据模型不同，但满足许多相同需求。设计模型中使用的持久类其工作方式与逻辑数据模型中的传统实体相同。 这些设计类准确地反映了必须存储的数据，包括所有必须存储的数据列（属性）和键关系。
+    这使这些设计类成为物理数据库设计的非常好的起点。
+</p>
+<p>
+    创建单独的逻辑数据模型是可选项。但在最佳情况中，它结束捕获不同形式的相同信息。在最坏的情况中，它将不会这样做，因此在最后可能不符合应用程序的业务需求。特别地，如果计划让数据库仅为单个应用程序服务，则应用程序的数据视图可能是最好的起点。数据库设计员从该组持久设计类创建表以形成初始物理数据模型。
+</p>
+<p>
+    仍可能存在需要数据库设计员创建独立于应用程序设计的理想化数据库设计的情况。在这种情况下，以独立的逻辑数据模型表示逻辑数据库设计，该模型是整体<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">工作产品：数据模型</a>的一部分。该逻辑数据模型描述关键逻辑实体及其关系，这些实体及其关系是满足存储与应用程序整体体系结构一致的数据的系统需求所必需的。可以使用本指南的以下部分中描述的数据库设计的
+    UML 概要文件的建模元素构造逻辑数据模型。对于使用此方法的项目，应用程序设计者和数据库设计员之间的紧密协作，对于成功完成数据库设计的开发是至关重要的。
+</p>
+<p>
+    在演进逻辑数据模型元素来创建数据库的物理设计之前，可以通过应用<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/normalization_47199FE9.html" guid="3.183357382287462E-306">概念：规范化</a>中定义的标准规范化规则来优化逻辑数据模型。
+</p>
+<p>
+    下图描述了使用设计模型类作为创建初始物理数据模型的逻辑数据库设计信息源的主要方法。它还说明了使用单独的逻辑数据模型的备用方法。&nbsp;&nbsp;
+</p>
+<p align="center">
+    <img height="500" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd25.gif" width="706" border="0" />
+</p>
+<p align="center">
+    逻辑数据建模方法
+</p>
+<h4>
+    <a id="Physical Data Modeling" name="Physical Data Modeling">物理</a>数据建模
+</h4>
+<p>
+    物理数据建模是数据库设计中最后的开发阶段。物理数据模型由详细的数据库表设计以及它们的关系组成，这些设计和关系最初是从持久设计类及其关系创建的。在<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/forward-engineering_relational_databases_53C0441E.html" guid="5.250868507423771E-305">指南：正向设计关系数据库</a>中讨论了执行从设计模型类到表的转换的机制。物理数据模型是<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>的一部分；它不是单独的工件。
+</p>
+<p>
+    物理数据模型中的表有良好定义的列，还需要键和索引。这些表可能还定义了必要的触发器，以支持系统的数据库功能和引用完整性。除了表，还创建、记录了存储过程并将之与存储过程将驻留的数据库相关联。
+</p>
+<p>
+    下图显示物理数据模型的某些元素的示例。该示例模型是一个虚构的在线拍卖应用程序的物理数据模型的一部分。 它描述了四个表（Auction、Bid、Item 和
+    AuctionCategory）还有一个存储过程（sp_Auction）及其容器类（AuctionManagement）。该图还描述了每个表的列、主键和外键约束以及为各表定义的索引。&nbsp;
+</p>
+<p align="center">
+    <img height="656" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd18.gif" width="748" border="0" />
+</p>
+<p align="center">
+    示例（物理）数据模型元素
+</p>
+<p>
+    物理数据模型还包含这些表到数据库中的物理存储单元（表空间）的映射。下图显示了该映射的示例。在该示例中，表 Auction 和 OrderStatus 被映射到名为 PRIMARY 的表空间。
+    该图还说明了将这些表至数据库的实现建模（在此示例中名为 PearlCircle）。
+</p>
+<p align="center">
+    <img height="668" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd19.gif" width="695" border="0" />
+</p>
+<p align="center">
+    示例数据存储模型元素
+</p>
+<p>
+    在数据库已存在的项目中，数据库设计员可以对现有数据库进行反向工程，以填充物理数据模型。关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/reverse-engineering_relational_databases_902803B8.html" guid="1.338740134620651E-305">指南：反向设计关系数据库</a>。
+</p>
+<h3>
+    <a id="Data Model Elements" name="Data Model Elements">数据模型元素</a>
+</h3>
+<p>
+    本节描述根据数据库建模的 UML 概要文件，每种主要数据模型元素的一般建模指南。每个模型元素的简要描述后面都有 UML 模型元素的示例说明。该指南的<a href="#Relationship">关系</a>这一节包括对模型元素用法的描述。
+</p>
+<h4>
+    <a id="Package" name="Package">包</a>
+</h4>
+<p>
+    使用标准 UML
+    包分组和组织数据模型元素。例如，可以定义包将数据模型组织成单独的逻辑和物理数据模型。还可以使用包确定数据模型中逻辑上相关的几组表，这几组表组成对在开发的应用程序的业务领域非常重要的主数据“主题区域”。下图显示了两个主题区域包（Auction
+    Management 和 UserAccount Management）的示例，这两个包用于组织数据模型中的视图和表。
+</p>
+<p align="center">
+    <img height="254" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd02.gif" width="250" border="0" />
+</p>
+<p align="center">
+    主题区域包示例
+</p>
+<h4>
+    <a id="Table" name="Table">表</a>
+</h4>
+<p>
+    在数据库建模的 UML 概要文件中，将表建模为一个类，其构造型为 &lt;&lt;table&gt;&gt;。将该表中的列建模为属性，其构造型为 &lt;&lt;column&gt;&gt;。
+    可以将一列或多列指定为主键以提供表中的唯一行条目。 还可以将列指定为外键。主键和外键具有相关联的约束，分别建模为构造型的操作 &lt;&lt;Primary Key&gt;&gt; 和 &lt;&lt;Foreign
+    Key&gt;&gt;。下图描述了示例表中的结构，该表用于管理一个虚构的在线拍卖系统中竞拍商品的信息。&nbsp;
+</p>
+<p align="center">
+    <img height="214" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd03.gif" width="294" border="0" />
+</p>
+<p align="center">
+    表示例
+</p>
+<p>
+    表可通过以下类型的关系与其他表相关：
+</p>
+<ul>
+    <li>
+        标识（组装关系）
+    </li>
+    <li>
+        非标识（关联）
+    </li>
+</ul>
+<p>
+    本指南的<a href="#Relationship">关系</a>部分提供如何使用这些关系的示例。在<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/reverse-engineering_relational_databases_902803B8.html" guid="1.338740134620651E-305">指南：反向设计关系数据库</a>中提供了关于可如何将这些类型的关系映射到设计模型元素的信息。
+</p>
+<h4>
+    <a id="Trigger" name="Trigger">触发器</a>
+</h4>
+<p>
+    触发器是一个过程函数，设计用于作为对该触发器所驻留的表执行某些操作的结果而运行。将触发器定义为在表中插入、更新或删除行时执行。另外，可以将触发器指定为在执行表命令之前或之后执行。触发器定义为表中的操作。这些操作被定型为
+    &lt;&lt;Trigger&gt;&gt;。&nbsp;
+</p>
+<p align="center">
+    <img height="218" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd13.gif" width="316" border="0" />
+</p>
+<p align="center">
+    触发器示例
+</p>
+<h4>
+    <a id="Index" name="Index">索引</a>
+</h4>
+<p>
+    当使用特定列搜索表时，索引用作使用户能够更快地访问信息的机制。索引被建模为表中的操作，其构造型为 &lt;&lt;index&gt;&gt;。可以将索引指定为唯一的，也可以指定为群集的或未群集的。
+    群集索引用于强制表中数据行的顺序与索引值的顺序一致。 下图中显示了一个索引操作（IX_auctioncategory）示例。
+</p>
+<p align="center">
+    <img height="150" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd14.gif" width="346" border="0" />
+</p>
+<p align="center">
+    索引示例
+</p>
+<h4>
+    <a id="View" name="View">视图</a>
+</h4>
+<p>
+    视图是无独立持久存储的一个虚拟表。视图具有表的特征和行为，并访问视图与其定义关系的表的列中的数据。视图用于为一个或多个表中的信息提供更有效的访问，并可以用于执行业务规则以限制对表中数据的访问。 在下面的示例中，AuctionView
+    定义为本指南的物理数据建模一节中显示的 Auction 表中信息的“视图”。
+</p>
+<p>
+    视图被建模为构造型为 &lt;&lt;view&gt;&gt; 的类。视图类的属性是该视图引用的表中的列。视图中的列的数据类型从与该视图定义了依赖关系的表中继承。
+</p>
+<p align="center">
+    &nbsp;<img height="244" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd21.gif" width="451" border="0" />
+</p>
+<p align="center">
+    视图示例
+</p>
+<h4>
+    <a id="Domain" name="Domain">域</a>
+</h4>
+<p>
+    域是一种用于创建用户定义的数据类型的机制，可以将该数据类型应用到多个表之间的列上。域被建模为类，其构造型为 &lt;&lt;Domain&gt;&gt;。在下面的示例中，已为“zip + 4”邮政编码定义了域。&nbsp;
+</p>
+<p align="center">
+    <img height="98" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd20.gif" width="225" border="0" />
+</p>
+<p align="center">
+    域示例
+</p>
+<h4>
+    <a id="Stored Procedure Container" name="Stored Procedure Container">存储过程容器</a>
+</h4>
+<p>
+    存储过程容器是数据模型中的一组存储过程。将存储过程容器创建为 UML 类，其构造型为 &lt;&lt;SP 容器&gt;&gt;。可以在一个数据库设计中创建多个存储过程容器。每个存储过程容器必须至少有一个存储过程。
+</p>
+<h5>
+    <a id="Stored Procedure" name="Stored Procedure">存储过程</a>
+</h5>
+<p>
+    存储过程是一个独立的过程，通常驻留在数据库服务器上。将存储过程记录为操作，该操作被分组到构造型为 &lt;&lt;SP Container&gt;&gt; 的类中。这些操作被定型为
+    &lt;&lt;SP&gt;&gt;。下面的示例显示了名为 AuctionManagement 的容器类中的单个存储过程操作（SP_Auction）。当设计存储过程时，数据库设计员必须知道特定 RDBMS
+    所使用的所有命名约定。&nbsp;
+</p>
+<p align="center">
+    <img height="88" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd12.gif" width="165" border="0" />
+</p>
+<p align="center">
+    存储过程容器和存储过程示例
+</p>
+<h4>
+    <a id="Tablespace" name="Tablespace">表空间</a>
+</h4>
+<p>
+    表空间代表要分配给诸如表、存储过程和索引之类的项的存储空间量。表空间通过依赖关系链接到特定数据库。表空间数以及如何将单个表映射到表空间依赖于数据模型的复杂度。可能要将需要经常访问的表分成多个表空间。
+    将未包含大量经常访问的数据的表分组到单个表空间。
+</p>
+<p>
+    为每个表空间定义表空间容器。表空间容器是表空间的物理存储设备。虽然对于单个表空间可以存在多个表空间容器，仍建议只将一个表空间容器指定给单个表空间。表空间容器定义为表空间的属性；不能显式地对它们建模。
+</p>
+<p align="center">
+    <img height="69" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd15.gif" width="132" border="0" />
+</p>
+<p align="center">
+    表空间示例
+</p>
+<h4>
+    <a id="Schema" name="Schema">模式</a> <a href="#Top"><img height="20" alt="回到页首" src="./../../../core.base_rup/resources/top.gif"     width="26" border="0" /></a>
+</h4>
+<p>
+    模式记录了数据库的组织或结构。将模式表示为包，定型为 &lt;&lt;模式&gt;&gt;。将模式定义为包时，组成该包的表应包含在该模式中。将创建数据库和模式之间的依赖关系以记录数据库和模式之间的关系。&nbsp;
+</p>
+<p align="center">
+    <img height="86" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd17.gif" width="105" border="0" />
+</p>
+<p align="center">
+    模式示例
+</p>
+<h4>
+    <a id="Database" name="Database">数据库</a> <a href="#Top"><img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    数据库是数据的集合，数据库的组织方式使用户能够访问和管理其中的信息。通过使用商业数据库管理系统（DBMS）执行数据库中信息的管理和访问。在数据模型中将数据库表示为组件，定型为 &lt;&lt;Database&gt;&gt;。
+</p>
+<p align="center">
+    <img height="69" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd16.gif" width="125" border="0" />
+</p>
+<p align="center">
+    数据库示例
+</p>
+<h4>
+    <a id="Relationship" name="Relationship">关系</a> <a href="#Top"><img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    数据库建模的 UML 概要文件定义了数据模型的主要元素之间的有效关系。以下部分提供了不同关系类型的示例。&nbsp;
+</p>
+<h5>
+    未标识
+</h5>
+<p>
+    未标识关系是数据库中独立地存在的两个表之间的关系。使用表之间的关联记录未标识关系。该关联被定型为 &lt;&lt;未标识&gt;&gt;。以下示例描述了 Item 表和 AuctionCategory 表之间的未标识关系。
+</p>
+<p align="center">
+    <img height="398" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd05.gif" width="735" border="0" />
+</p>
+<p align="center">
+    未标识关系示例
+</p>
+<h5>
+    标识
+</h5>
+<p>
+    标识关系是子表必须与父表共存的两个表之间的关系。使用两个表之间的组装关系记录标识关系。组装关系被定型为
+    &lt;&lt;标识&gt;&gt;。下图是标识关系的示例。该示例显示子表（CreditCard）的实例在父表（UserAccount）中必须有一个关联条目。
+</p>
+<p align="center">
+    <img height="443" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd06.gif" width="747" border="0" />
+</p>
+<p align="center">
+    标识关系示例
+</p>
+<p>
+    对于关联和组装关系，应定义多重性以记录该关系中的行数。在上面的示例中，对于 UserAccount 表中的每行，在 CreditCard 表中可以有 0 或多个 CreditCard 行。对于 CreditCard 表中的每行，在
+    UserAccount 表中恰有一行。 多重性也称为基数。
+</p>
+<h5>
+    数据库视图
+</h5>
+<p>
+    定义数据库视图与表的关系时，将使用从该视图到该表的依赖关系。依赖关系的构造型为 &lt;&lt;起源&gt;&gt;。通常，将命名视图依赖关系，而该依赖关系的名称与表的名称（在与数据库视图的依赖关系中定义）相同。
+</p>
+<p align="center">
+    <img height="513" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd22.gif" width="763" border="0" />
+</p>
+<p align="center">
+    视图和表依赖关系示例
+</p>
+<h5>
+    表空间
+</h5>
+<p>
+    使用依赖关系将表空间链接到特定数据库。如下图中所示，绘制的关系显示数据库与表空间有依赖关系。可以将多个表空间关联到模型中的单个数据库上。
+</p>
+<p align="center">
+    <img height="88" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd08.gif" width="298" border="0" />
+</p>
+<p align="center">
+    表空间和数据库依赖关系示例
+</p>
+<p>
+    依赖关系用于记录表空间和表空间中的表之间的关系。可以将一个或多个表与单个表空间相关联，或也可以将单个表与多个表空间相关联。 以下示例显示了指定到单个名为 PRIMARY 的表空间的 Auction 表。
+</p>
+<p align="center">
+    <img height="345" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd09.gif" width="560" border="0" />
+</p>
+<p align="center">
+    表和表空间依赖关系示例
+</p>
+<h5>
+    <u>实现</u>
+</h5>
+<p>
+    实现用于建立数据库和数据库中存在的表之间的关系。可以通过数据模型中的多个数据库实现一个表。
+</p>
+<p align="center">
+    <img height="348" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd10.gif" width="561" border="0" />
+</p>
+<p align="center">
+    表和数据库实现关系示例
+</p>
+<h5>
+    存储过程
+</h5>
+<p>
+    依赖关系用于记录存储过程容器与表之间的关系，存储过程容器中的存储过程将在这些表上执行。以下示例描述了此种类型的关系，显示将用于访问 Auction 表中的信息的存储过程 SP_Auction。
+</p>
+<p align="center">
+    <img height="344" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_datamd11.gif" width="633" border="0" />
+</p>
+<p align="center">
+    存储过程容器和表依赖关系示例
+</p>
+<h3>
+    <a id="Evolution of the Data Model" name="Evolution of the Data Model">数据模型的演进</a>
+</h3>
+<h4>
+    <a id="Inception Phase" name="Inception Phase">先启阶段</a>
+</h4>
+<p>
+    在<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/inception_D506BCB4.html" guid="_vyZOwCVuEdqSZ9OimJ-AzA">先启阶段</a>中，在进行“执行体系结构合成活动”任务时，可以将初始数据建模任务与所有“概念证明”原型的开发一起执行。在数据库已存在的项目中，数据库设计员可以对现有数据库进行反向工程，以根据现有数据库的结构开发初始物理数据模型。关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/reverse-engineering_relational_databases_902803B8.html" guid="1.338740134620651E-305">指南：反向设计关系数据库</a>。 可以按需要将物理数据模型的元素转换成设计模型元素，以支持所有概念证明原型构造任务。
+</p>
+<h4>
+    <a id="Elaboration Phase" name="Elaboration Phase">精化阶段</a>
+</h4>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/elaboration_6A203A50.html" guid="_-kFhcCVuEdqSZ9OimJ-AzA">精化阶段</a>的目标是消除技术风险并产生稳定的（建立了基线的）系统体系结构。在大规模系统中，由于设计不良的数据模型导致较差的性能是主要的体系结构问题。因此，数据建模以及开发允许评估数据库性能的体系结构原型对实现稳定的体系结构都是必需的。随着在每次迭代中详细描述和分析了在体系结构方面重要的用例，将根据来自用例的持久类设计开发来定义数据模型元素。
+    随着类设计的稳定，数据库设计员可定期将类设计转换成数据模型中的表并定义适当的数据存储模型元素。
+</p>
+<p>
+    在精化阶段结束时，必须使主要的数据库结构（表、索引、主键和外键列）到位以支持应用程序已定义的在体系结构方面重要的场景的执行。另外，必须将代表性的数据卷装入数据库以支持体系结构性能测试。根据性能测试的结果，可能需要使用优化技术调整数据模型，包括但不限于取消标准化、优化物理存储器属性或分发以及建立索引。
+</p>
+<h4>
+    <a id="Construction Phase" name="Construction Phase">构造阶段</a>
+</h4>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/construction_102AF1EA.html" guid="_SkuIwCVwEdqSZ9OimJ-AzA">构造阶段</a>期间不应发生重大的数据模型重构。构造阶段迭代期间，可以根据一组用例的详细设计以及分配给该迭代的已核准变更请求来定义附加的表和数据存储元素。构造阶段数据库设计的主要侧重点是不断监视数据库性能并按需要优化数据库设计（通过取消标准化、定义索引、创建数据库视图以及其他优化技术）。
+</p>
+<p>
+    物理数据模型是数据库设计员在构造阶段维护的设计工件。可以通过直接在模型中作出更新或作为读取已直接在数据库上作出的更新的工具的结果来维护它。
+</p>
+<h4>
+    <a id="Transition Phase" name="Transition Phase">移交阶段</a>
+</h4>
+<p>
+    数据模型和设计模型一样，在<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/transition_1018F224.html" guid="_cn2akCVwEdqSZ9OimJ-AzA">移交阶段</a>期间对已核准的变更请求的响应中维护。当应用程序通过最终验收测试并部署到生产中时，数据库设计员必须保持数据模型与数据库同步。
+</p>
+<h3>
+    <a id="Roundtrip Engineering Considerations" name="Roundtrip Engineering Considerations">双向工程注意事项</a>
+</h3>
+<p>
+    如果开发团队使用现代可视化建模工具，该工具有能力将类转换为表（反之亦然）并／或有能力对数据库进行前向或反向工程，则该团队需要建立管理转换和工程流程的指南。主要是大型项目需要这些指南，在大型项目中团队同时进行数据库和应用程序设计。开发团队必须在应用程序开发（构建／发行周期）中定义一些点，在这些点适合执行从类到表的转换以及对数据库执行软件体系结构文档中描述了软件设计工程师的远景。一旦创建了初始数据库，开发团队必须定义指南，以便当系统的设计和编码在整个项目中演进时，团队可以管理数据模型和数据库之间的同步。
+</p><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Applied Information Sciences 图标"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>此内容的全部或部分由 <a href="http://www.appliedis.com" target="_blank">Applied
+                Information Sciences</a> 开发。</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

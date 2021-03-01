@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 在 Rational Test RealTime 中配置测试环境</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="configuring_test_environment" name="uma.name">
+<meta content="在 Rational Test RealTime 中配置测试环境" name="uma.presentationName">
+<meta content="Tool:rup_test_realtime:Rational Test RealTime" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Test RealTime" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{C67F4C23-2951-4496-B3A6-94CE71E75125}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{C67F4C23-2951-4496-B3A6-94CE71E75125}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{C67F4C23-2951-4496-B3A6-94CE71E75125}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{C67F4C23-2951-4496-B3A6-94CE71E75125}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：在 Rational Test RealTime 中配置测试环境</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何在 Rational Test RealTime 中配置测试环境。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_test_realtime_861C5353.html" guid="{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}">Rational Test RealTime</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/support_development_1443EF07.html" guid="{35936CF9-4B04-402A-9482-07E5CFB45D99}">支持开发</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    编译器、链接程序、调试器和执行环境的每种组合都需要一个定制的目标部署端口（TDP）。可以在 Test RealTime 项目内逐个节点地对该 TDP 进行其他修改。
+</p>
+<p>
+    Rational Test RealTime 目标部署端口技术确保了实际无限的构建环境和目标支持。这一灵活性非常关键，因为除非 Test RealTime
+    的测试与运行时分析功能使用被测试应用程序所用的相同编译器、链接程序、调试器和执行体系结构，否则将把该功能视为无效。
+</p>
+<p>
+    基本 TDP 适配通过 TDP 编辑器实现。这个单独的实用程序可用于指定对特定构建和执行环境的 Test RealTime 支持至关重要的信息。只有极为熟悉目标开发环境和执行平台的特征与复杂性的开发人员才能实现正确的 TDP
+    适配。适配可以是任何行为，如从简单列出标准编译器包含文件的路径，到定义堆管理函数以确保 Test RealTime 的内存概要分析功能可跟踪非标准的内存分配函数。
+</p>
+<p>
+    尽管这种基本适配对于使用 Test RealTime 的“组件测试”和“运行时分析功能”已经足够，仍然可以执行进一步的修改来适应特殊的执行需求，如修改用于运行时分析的检测的级别和类型。缺省情况下，每个 Test RealTime
+    项目都分配了一个从“项目创建向导”中所选的 TDP 派生的基本“配置”。子节点将从项目继承该配置。但仍然可以为各子节点创建定制配置；事实上，该定制配置可以基于完全不同的 TDP。
+</p>
+<p>
+    “目标部署端口”的基本适配与个别“配置”结合在一起，可以确保正确配置测试环境。
+</p>
+<h4>
+    工具步骤
+</h4>
+<p>
+    要配置测试环境以确保成功使用 Test RealTime：
+</p>
+<ol>
+    <li>
+        <a href="#CustomizeTDP">使用 TDP 编辑器定制目标部署端口</a>
+    </li>
+    <li>
+        <a href="#MakeNode-SpecificModifications">使用 Test RealTime 的“配置设置”进行特定于节点的修改</a>
+    </li>
+</ol>
+<h3>
+    <a id="CustomizeTDP" name="CustomizeTDP">使用 TDP 编辑器定制目标部署端口</a>
+</h3>
+<p>
+    TDP 编辑器可用于修改 Test RealTime 随附的目标部署端口的缺省设置，以及为尚不支持的开发和执行环境创建全新的 TDP。
+</p>
+<p>
+    TDP 存储在基于 XML 的文件中（带有 .xdp 扩展名）；这些文件位于文件夹 ….\Rational\TestRealTime\targets\xml 中。TDP 编辑器通过图形形式，按照一种有序而记载完备的方式组织这些 .xdp
+    内容，从而确保其易于操作和理解。TDP 编辑器的左侧列出了可能需要定制的各种类别。窗口的右上部包含帮助信息。 窗口的右下部用于输入实际的数据。
+</p>
+<p>
+    正确配置了 TDP 之后，按“保存”按钮将自动在文件夹 …\Rational\TestRealTime\targets 中创建一系列定制文件和文件夹。对 .xdp 文件所作的更改可以保存在 TDP 编辑器内，此时将正确覆盖目标文件。
+</p>
+<p>
+    要配置现有 TDP 或者新建一个：
+</p>
+<ol>
+    <li>
+        在 Test RealTime 中，选择菜单项“工具 -&gt; 目标部署端口编辑器 -&gt; 启动”
+    </li>
+    <li>
+        选择菜单项“文件 -&gt;打开”－ 将显示文件夹 …\Rational\TestRealTime\targets\xml 的内容
+    </li>
+    <li>
+        如果要配置现有目标部署端口，请选择相应的 .xdp file 并将其打开。<br />
+         如果要新建目标部署端口，请选择菜单项“文件 -&gt; 新建”，然后选择相应的语言。
+    </li>
+    <li>
+        修改各种“基本设置”、“构建设置”、“库设置”和“解析器设置”以适应环境。在左侧窗口左键单击要修改的项，然后在右下窗口输入相应的值。通过右上窗口获取指导信息。
+    </li>
+    <li>
+        完成了配置 TDP 之后，请按“保存”按钮，或者选择菜单项“文件 -&gt; 保存”。
+    </li>
+</ol>
+<p>
+    <img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 有关详细信息，请参阅 <i>Rational Test
+    RealTime Target Deployment Guide</i>。
+</p>
+<h3>
+    <a id="MakeNode-SpecificModifications" name="MakeNode-SpecificModifications">使用 Test RealTime 的“配置设置”进行特定于节点的修改</a>
+</h3>
+<p>
+    在 Test RealTime 中创建项目时，必须选择目标部署端口。此 TDP 将成为项目“配置设置”的基础。 用户可使用此项目配置文件定义特定于节点的设置，这些设置执行下列操作：
+</p>
+<ul>
+    <li>
+        覆盖通过 TDP 编辑器输入的基本设置
+    </li>
+    <li>
+        修改只能在 Test RealTime 本身内设置的运行时分析参数
+    </li>
+</ul>
+<p>
+    通过使用“配置设置”，可以向组节点内的每个测试节点分配不同的 TDP，或向多个应用程序节点分配不同级别的检测。这种灵活性使您可以自由地同时测试和分析多种语言，或在一次运行过程中获取不同级别的信息。
+</p>
+<p>
+    要访问和修改 Test RealTime 项目的“配置设置”：
+</p>
+<ol>
+    <li>
+        在 Test RealTime 中打开项目之后，选择菜单项“项目 -&gt; 设置”。
+    </li>
+    <li>
+        移动生成的标题为“&lt;Project Name&gt; 配置设置”的窗口并调整其大小，以便自由地查看屏幕右侧的“项目浏览器”窗口。
+    </li>
+    <li>
+        左键单击“项目浏览器”中的任何节点可访问该特定节点的“配置设置”。
+    </li>
+    <li>
+        使用“配置设置”窗口可定义和／或覆盖现有设置。只要覆盖了设置，都将以粗体字列出设置名称及其类别名称。
+    </li>
+    <li>
+        按“应用”按钮保存修改。
+    </li>
+</ol>
+<p>
+    “配置设置”修改中的其他有用方面：
+</p>
+<ul>
+    <li>
+        常规 -&gt; 主机配置 -&gt; 目标部署端口<br />
+         用于选择将对每个组、应用程序或测试节点使用哪个 TDP。<br />
+    </li>
+    <li>
+        常规 -&gt; 目标部署端口 -&gt; 名称<br />
+         用于为配置文件创建定制名称（该文件的缺省名称是在项目创建过程中选择的活动 TDP）。
+    </li>
+    <li>
+        运行时分析<br />
+         各种设置，用于指定每个节点要使用的运行时分析的正确类型和级别。<br />
+    </li>
+</ul>
+<p>
+    <img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 有关详细信息，请参阅 <i>Rational Test
+    RealTime User Guide</i> 的主题“Graphical User Interface-&gt; Configurations and Settings”下的信息。
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

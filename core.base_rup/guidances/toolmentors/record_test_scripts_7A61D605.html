@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational Robot 实施测试脚本</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="record_test_scripts" name="uma.name">
+<meta content="使用 Rational Robot 实施测试脚本" name="uma.presentationName">
+<meta content="Tool:rup_robot:Rational Robot" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Robot" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational Robot 实施测试脚本</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述了如何使用 Rational Robot 来记录或编写测试脚本，以及随后如何通过编辑测试脚本扩展它们。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_robot_26C85D92.html" guid="{1A26E508-8140-4241-865E-0A2A5BCAEFFF}">Rational Robot</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">实施开发人员测试</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">实施测试套件</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    在运行 Microsoft Windows 98/2000/NT 4.0 时此工具向导可用。
+</p>
+<p>
+    要使用 Rational Robot 记录和扩展脚本：
+</p>
+<ol>
+    <li>
+        <a href="#heading of tool step one">在 Rational Robot 中记录测试脚本</a>
+    </li>
+    <li>
+        <a href="#heading of tool step two">插入验证点</a>
+    </li>
+    <li>
+        <a href="#step three">在需要时编辑测试脚本</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="heading of tool step one" name="heading of tool step one">在 Rational Robot 中记录测试脚本</a>
+</h3>
+<p>
+    在记录测试脚本时，Rational Robot 会记录：
+</p>
+<ul>
+    <li>
+        您与接受测试的应用程序交互时的操作。这些用户操作包括击键和鼠标单击，它们帮助您在应用程序中导航。
+    </li>
+    <li>
+        您创建的验证点，用于捕获并比较有关特定系统组件状态的信息。验证点是测试脚本中的点，您在这一点确定是否应该确认构建过程中目标测试项的元素的状态或行为。在测试脚本记录期间，验证点捕获有关系统状态的信息，并将它存储为预期结果的基线。在测试脚本回放期间，验证点再次捕获相同的系统状态信息，并将它与基线中存储的信息进行比较。
+    </li>
+</ul>
+<p>
+    记录的测试脚本确定目标测试项的预期行为的基线。在已修订的目标测试项的构件可用时，您可以对后续构件执行该测试脚本，通常，将在手动执行比较的时间段后在验证点比较系统状态信息。
+</p>
+<p>
+    在最初的测试脚本记录和随后的回放期间，Rational Robot 面向对象记录技术检查 Windows 层的系统状态信息。 因此，成功的测试脚本回放通常不需要依赖于绝对的屏幕坐标。
+    面向对象的记录使测试脚本与细微的用户界面更改分离，从而简化了测试脚本的维护。
+</p>
+<p>
+    要记录新的测试脚本：
+</p>
+<div align="center">
+    <center>
+        <table height="1063" cellpadding="5" width="85%" summary="布局表" border="0">
+            <tbody>
+                <tr>
+                    <td valign="top" align="right" width="45" height="40">
+                        1.
+                    </td>
+                    <td width="729" height="40">
+                        通过设置记录选项准备测试环境。请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_robot_3E2B9427.html" guid="{E717F672-A182-4A7C-85A6-51A86EB8A57F}">工具向导：在 Rational Robot 中设置测试环境</a>。
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="59">
+                    </td>
+                    <td width="729" height="59">
+                        启动接受测试的应用程序。（在启动记录后，您可以通过在 Robot 中单击<b>插入 &gt; 启动应用程序</b>来启动接受测试的应用程序。）
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        2.
+                    </td>
+                    <td width="729" height="21">
+                        单击 Robot 工具栏上的<b>记录 GUI 脚本</b>按钮。
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        3.
+                    </td>
+                    <td width="729" height="21">
+                        输入名称（最多 40 个字符），或者从列表中选择它。
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        4.
+                    </td>
+                    <td width="729" height="21">
+                        要更改记录选项，请单击<b>选项</b>。结束后，请单击<b>确定</b>。
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="40">
+                        5.
+                    </td>
+                    <td width="729" height="40">
+                        如果选择了先前定义或记录的脚本，那么您可以通过单击<b>属性</b>来更改属性。结束后，请单击<b>确定</b>。
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        6.
+                    </td>
+                    <td width="729" height="21">
+                        请单击<b>确定</b>以开始记录。 将发生以下事件：
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="97">
+                    </td>
+                    <td width="729" height="97">
+                        <ul>
+                            <li>
+                                如果选择了已记录的脚本，Robot 会询问您是否要覆盖它。单击<b>是</b>。（如果记录到现有的 GUI 脚本上，则会覆盖该脚本文件，但所有现有属性的将应用于新的脚本。）
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="40">
+                    </td>
+                    <td width="729" height="40">
+                        <ul>
+                            <li>
+                                Robot 处于最小化状态（缺省行为）。
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="59">
+                    </td>
+                    <td width="729" height="59">
+                        <ul>
+                            <li>
+                                悬浮的 GUI 记录工具栏出现。您可以使用该工具栏暂停或停止记录、重新显示 Robot 以及在脚本中插入功能。
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="60">
+                        7.
+                    </td>
+                    <td width="729" height="60">
+                        通过执行测试中标识的操作来执行测试，并插入所需的功能（如验证点、注释和计时器）。有关详细信息，<img height="16" alt="帮助手册图标" hspace="0"                         src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> 请参阅 Robot 联机帮助。
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        8.
+                    </td>
+                    <td width="729" height="21">
+                        必要时，从面向对象的记录切换到低级别的记录。
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="78">
+                    </td>
+                    <td width="729" height="78">
+                        面向对象的记录检查 Windows GUI 对象和接受测试的应用程序中的其他对象，且无需依赖精确计时或屏幕坐标。低级别的记录通过屏幕坐标和精确计时跟踪详细的鼠标移动和键盘操作。
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="40">
+                        9.
+                    </td>
+                    <td width="729" height="40">
+                        完成后，单击 GUI 记录工具栏上的<b>停止记录</b>按钮。将发生以下事件：
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45">
+                    </td>
+                    <td width="729">
+                        <ul>
+                            <li>
+                                您记录的脚本出现在 Robot 主窗口的“脚本”窗口中。
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="59">
+                    </td>
+                    <td width="729" height="59">
+                        <ul>
+                            <li>
+                                脚本中的验证点（如果有）出现在左侧的“资产”窗格中。
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="40">
+                    </td>
+                    <td width="729" height="40">
+                        <ul>
+                            <li>
+                                脚本文本出现在右侧的“脚本”窗格中。
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="59">
+                    </td>
+                    <td width="729" height="59">
+                        <ul>
+                            <li>
+                                在编译或回放脚本时，编译结果出现在“输出”窗口的“构建”选项卡中。
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right" width="45" height="21">
+                        10.
+                    </td>
+                    <td width="729" height="21">
+                        （可选）通过单击<b>文件 &gt; 属性</b>设置脚本的属性。
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center><br />
+</div>
+<h3>
+    2. <a id="heading of tool step two" name="heading of tool step two">插入验证点</a>
+</h3>
+<p>
+    要在记录或编辑测试脚本时插入验证点：
+</p>
+<ol>
+    <li>
+        执行以下操作之一：
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            在记录时，单击“GUI 记录”工具栏上的<b>显示 GUI 插入工具栏</b>按钮。
+        </li>
+        <li>
+            编辑时，则将指针置于脚本中， 并单击“标准”工具栏上的<b>显示 GUI 插入工具栏</b>按钮。
+        </li>
+    </ul>
+</blockquote>
+<ol start="2">
+    <li>
+        在“GUI 插入”工具栏上单击“验证点”按钮。
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p>
+            验证点用验证点类型命名（如果脚本中有多个相同类型，则需加上编号）。
+        </p>
+    </li>
+    <li>
+        相应地编辑名称。
+    </li>
+    <li>
+        （可选）设置等待状态选项。
+    </li>
+    <li>
+        （可选）设置预期的结果选项。
+    </li>
+    <li>
+        单击<b>确定</b>。
+    </li>
+    <li>
+        如果提示选择对象，则将对象查找工具拖到所需的对象上，释放鼠标左健，以选择该对象。（可选）可以通过单击<b>浏览</b>按钮从对象列表中选择该对象。在选择了所需的对象时，单击<b>确定</b>。
+    </li>
+</ol>
+<p>
+    有关更加详细的信息，<img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> 请参阅
+    Robot 联机帮助。<img height="15" alt="手册图标" hspace="0" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 另请参阅 <i>Using
+    Rational Robot</i> 手册中的“Creating Verification Points in GUI Scripts”一章。
+</p>
+<h3>
+    3. <a id="step three" name="step three">如果需要，编辑测试脚本</a>
+</h3>
+<p>
+    通过手动编辑测试脚本的源代码或插入部分新记录，您可以编辑现有的测试脚本。例如，您可以：
+</p>
+<ul>
+    <li>
+        编辑测试脚本的文本（删除行、移动文本等）
+    </li>
+    <li>
+        在现有测试脚本中插入一系列新的用户操作（选择菜单命令、单击按钮等）。
+    </li>
+    <li>
+        在现有测试脚本中添加新功能（添加验证点、注释等）
+    </li>
+    <li>
+        转至具有编译器错误的行（转至特定行号，查找下一处错误等）
+    </li>
+</ul>
+<p>
+    有关详细信息，<img height="16" alt="帮助手册图标 " hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> 请参阅
+    Rational Robot 联机帮助。<img height="15" alt="手册图标" hspace="0" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 另请参阅
+    <i>Using Rational Robot</i> 手册中的“Editing, Compiling, and Debugging Scripts”一章。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

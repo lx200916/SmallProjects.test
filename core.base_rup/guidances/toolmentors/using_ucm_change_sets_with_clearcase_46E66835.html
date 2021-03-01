@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 将 UCM 变更集与 Rational ClearCase 一起使用</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="using_ucm_change_sets_with_clearcase" name="uma.name">
+<meta content="将 UCM 变更集与 Rational ClearCase 一起使用" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{C7D320FC-FD99-4842-9193-28565FC50FEB}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{C7D320FC-FD99-4842-9193-28565FC50FEB}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：将 UCM 变更集与 Rational ClearCase 一起使用</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述在统一变更管理（UCM）活动中使用变更集来创建和记录变更。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    下图说明了 UCM 工作流程。此工具向导中讨论了加阴影的区域。
+</p>
+<h4>
+    UCM 工作流程
+</h4>
+<p>
+    <img height="125" alt="查找和设置活动、对活动执行操作（检出和修改、检入）、交付活动以及同步您的工作空间。" src="./../../../core.base_rup/guidances/toolmentors/resources/wflow_work.gif" width="274"     border="0" />
+</p>
+<p>
+    <i><b>术语注释：</b></i>ClearCase UCM 活动紧密映射到 RUP <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_work_order_CFBC805B.html" guid="{18DB40A1-6272-467A-AC68-B2C4BE1DCD6C}">工作单</a>。请勿将其与 RUP 概念<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/termdefinitions/activity_1D028230.html" guid="_yoVhMB_IEdq6CKKKq4D7YA">活动</a>相混淆。
+</p>
+<p>
+    UCM 活动跟踪处理开发任务时创建的版本。活动包括描述该任务的文本标题、活动创建者的用户标识和标识处理该活动时创建的所有版本的变更集。当准备就绪，可以修改源文件时，必须为活动设置开发视图。
+</p>
+<p>
+    在修改文件之前必须为开发视图设置活动。&nbsp;
+</p>
+<p>
+    此工具向导在运行 Microsoft Windows 时适用。 &nbsp;
+</p>
+<h3>
+    工具步骤
+</h3>
+<p>
+    要处理 UCM 活动：
+</p>
+<ol>
+    <li>
+        <a href="#1">创建或查找并设置活动</a>
+    </li>
+    <li>
+        <a href="#3">检出和修改版本</a>
+    </li>
+    <li>
+        <a href="#4">检入工作</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;<a id="1" name="1">创建或查找并设置活动</a>&nbsp;
+</h3>
+<p>
+    当在 UCM 项目中检出文件或目录时，会请求您指定一个活动来跟踪工作。
+</p>
+<h4>
+    创建新的活动并在当前视图中设置该活动
+</h4>
+<ol>
+    <li>
+        在“检出”、“检入”或“添加到源控制”对话框中，单击<b>新建</b>。
+    </li>
+    <li>
+        在“新建活动”对话框中，输入活动的标题。
+    </li>
+    <li>
+        单击<b>确定</b>。
+    </li>
+    <li>
+        要将此活动添加到活动流并在视图中设置此活动，请单击<b>确定</b>。
+    </li>
+</ol>
+<h4>
+    查找和设置活动
+</h4>
+<p>
+    在工作会话之间保持活动。遵循这些步骤，查找现有活动并在开发视图中进行设置。&nbsp;
+</p>
+<p>
+    从 ClearCase Explorer：
+</p>
+<ol>
+    <li>
+        在 ClearCase Explorer 中，单击<b>视图</b>选项卡。
+    </li>
+    <li>
+        单击项目所在的页面并选择开发视图。&nbsp;
+    </li>
+    <li>
+        在“文件夹”窗格中，单击<b>我的活动</b>。
+    </li>
+    <li>
+        在“详细信息”窗格中，选择要设置的活动旁边的复选框。
+    </li>
+</ol>
+<p>
+    从 ClearCase 对话框：
+</p>
+<ol>
+    <li>
+        从“检出”、“检入”或“添加到源控制”对话框执行以下操作之一：
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            从“活动”列表中选择一个活动。
+        </li>
+        <li>
+            单击<b>浏览</b>，并选择其他选择标准。
+        </li>
+    </ul>
+</blockquote>
+<ol start="2">
+    <li>
+        单击<b>确定</b>。ClearCase 将视图设置为在“活动”列表中当前所选的活动。
+    </li>
+</ol>
+<h3>
+    2.&nbsp;<a id="3" name="3">检出和修改版本</a>&nbsp;
+</h3>
+<p>
+    在修改源文件之前，转到“开发”视图并检出源文件。检出操作使文件或目录版本在视图中变为可写。 &nbsp;
+</p>
+<ol>
+    <li>
+        在 ClearCase Explorer 中选择文件或目录，然后右键单击选中的文件或目录，并单击<b>检出</b>。&nbsp;
+    </li>
+    <li>
+        ClearCase 打开“检出”对话框，在“活动”列表中选中当前设置的活动。您可以接受该选择、选择另一个活动或创建新的活动。
+    </li>
+    <li>
+        在<b>注释</b>框中，描述计划好的变更。注释显示在版本的“属性浏览器”和元素的“历史记录浏览器”中。
+    </li>
+    <li>
+        执行以下操作之一：
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            要只检出一个文件，请单击<b>确定</b>。
+        </li>
+        <li>
+            要对所有选中项使用此对话框中的当前设置，请单击<b>全部应用</b>。
+        </li>
+        <li>
+            要中断检出流程，并将正在检出的项和所有剩余项保留为检入状态，请单击<b>取消</b>。
+        </li>
+    </ul>
+</blockquote>
+<h3>
+    3. <a id="4" name="4">检入工作</a>&nbsp;
+</h3>
+<p>
+    当想保留文件当前状态的记录时，请检入该文件。检入文件或目录会向 VOB 添加新的版本。版本信息由当前设置的活动来记录。&nbsp;&nbsp;
+</p>
+<p>
+    在检入之后，视图保持设置为当前的活动。&nbsp;
+</p>
+<ol>
+    <li>
+        在 ClearCase Explorer 中，选择检出的文件或目录。&nbsp;
+    </li>
+    <li>
+        右键单击选中的文件或目录并单击<b>检入</b>。
+    </li>
+    <li>
+        在<b>注释</b>框中，可以覆盖或补充在检出文件或文件夹时输入的注释。
+    </li>
+    <li>
+        执行以下操作之一：
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            要只检入一个文件，请单击<b>确定</b>。
+        </li>
+        <li>
+            要对所有选中项使用此对话框中的当前设置，请单击<b>全部应用</b>。
+        </li>
+        <li>
+            要中断检入流程，并将正在检入的项和所有剩余项保留为检出状态，请单击<b>取消</b>。
+        </li>
+    </ul>
+</blockquote>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="15" />请参阅 <i>Developing Software</i>
+    联机帮助，以获得各个步骤的详细信息。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

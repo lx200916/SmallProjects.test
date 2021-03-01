@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务: 用例设计</title>
+<meta content="Task" name="uma.type">
+<meta content="use_case_design" name="uma.name">
+<meta content="用例设计" name="uma.presentationName">
+<meta content="Discipline:rup_analysis_design_discipline:分析和设计" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="设计人员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：用例设计</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务定义了如何通过开发设计级别用例实现来优化用例分析产品。</td>
+</tr>
+<tr>
+<td>规程：<a href="./../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">分析和设计</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_use_case__design" name="XE_use_case__design"></a> 
+<ul>
+    <li>
+        根据交互来优化用例实现
+    </li>
+    <li>
+        优化对设计类操作的需求
+    </li>
+    <li>
+        优化对设计子系统和／或它们的接口的操作的需求
+    </li>
+    <li class="reactive">
+        优化对封装体操作的需求
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">主执行者:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">其他执行者:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">分析模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">接口</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">设计子系统</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">用例实现</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">用例实现</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">流程使用情况</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">分析和设计</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/design_components_13B33BFC.html" guid="{9C683674-97C1-4AEE-8DB0-9514AEFF698E}">设计组件</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/use_case_design_7A33E90E.html" guid="_mL0YQEocEdqrjq4i3fchvA">用例设计</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    <a id="XE_interaction__describing_interactions_between_design_objects" name="XE_interaction__describing_interactions_between_design_objects" class="index" key="交互（interaction）" text="描述设计对象之间的交互"></a>系统的行为可以用许多方法来描述 －
+    协作或交互。此任务描述使用交互（特别是时序图）来描述系统的行为。当系统或子系统的行为可以主要由同步消息传递来描述时，时序图最有用。异步消息传递（特别在事件推动的系统中）根据状态机和协作来描述往往更容易，允许简洁地定义对象之间可能的交互。异步消息传递在实时或反应性系统中扮演重要的角色，并用于<img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">工作产品：封装体</a>的多个实例之间的通信。
+</p>
+<h4>
+    &nbsp;UML1.x 表示法
+</h4>
+<p>
+    可以在时序图中使用代理类来表示子系统。该代理类包含在子系统中，并用于表示图中不支持直接使用包的子系统以及作为行为元素的子系统。如果您希望显示特定子系统响应消息，则使用代理类。在该情况下，可以显示正从子系统代理发送到其他对象的消息。
+</p>
+<p>
+    请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/supportingmaterials/differences_between_uml_1_x_and_uml_2_0_CA70F2E6.html" guid="4.792914878943572E-306">UML 1.x 和 UML 2.0 之间的区别</a>以获取更多信息。<br />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading"> 创建用例实现</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Create Use-Case Realizations" name="Create Use-Case Realizations"></a>
+<p>
+    <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">工作产品：设计用例实现</a>提供一种将设计模型中的行为回溯到用例模型的方法，它还围绕着“用例”概念来组织设计模型中的协作。
+</p>
+<p>
+    为每个要设计的用例在设计模型中创建设计用例实现。设计用例实现的名称应该与相关联的用例相同，并且应建立从用例实现到其相关联用例的“实现”关系。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 描述设计对象之间的交互</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Describe Interactions Between Design Objects" name="Describe Interactions Between Design Objects"></a> 
+<p>
+    您应该创建一个或多个时序图，对每个用例实现阐明其参与设计对象之间的交互。这些时序图的早期版本可能已经在<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">任务：用例分析</a>期间创建。用例实现的这些“分析版本”描述了<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">分析类</a>之间的交互。它们需要进行演变，才能描述设计元素之间的交互。
+</p>
+<p>
+    更新时序图涉及以下步骤：
+</p>
+<ul>
+    <li>
+        确定参与用例流的每个对象。这是通过将<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">任务：确定设计元素</a>中确定的设计类和子系统实例化来完成的。在实时系统中，您还将确定参与用例流的封装体实例。
+    </li>
+    <li>
+        在时序图中表示每个参与对象。在时序图中为每个参与对象制作一条生命线。要表示设计子系统，您可以做出一些选择：
+        <ul>
+            <li>
+                您可以在时序图上显示子系统的实例。
+            </li>
+            <li>
+                您可以使用子系统实现的接口。如果您要展示的是，实现同一接口的任何模型元素都可以代替该接口使用，那么这就是首选。如果您选择在时序图上显示接口，则要知道，您要确保没有任何消息从接口发送到其他对象。这么做的原因是因为接口完全封装了它们的操作的内部实现。因此，我们不能确定实现接口的所有模型元素实际上都将同样设计。所以，时序图上不应显示从接口发送的任何消息。
+            </li>
+            <li>
+                在时序图上，可以使用组件来代表子系统。如果您要显示特定子系统响应了一条消息，则使用组件。在这种情况下，您可以显示从组件发送到其他对象的消息。
+            </li>
+        </ul>
+        <p>
+            请注意，这些是系统级的时序图，它们显示顶级设计元素的实例（通常是子系统和子系统接口）如何交互。显示子系统内部设计的时序图是作为<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">任务：子系统设计</a>的一部分而单独生成的。
+        </p>
+    </li>
+    <li>
+        <p>
+            请注意，活动对象交互通常是使用规范协作和状态机来描述的。在这里，它们将用来显示，在较大的用例实现中，系统中的其他元素可如何将消息发送给活动对象。在通常的使用情况下，活动对象是为了本任务而封装在子系统中的，这样，用例实现就由一组交互子系统组成。
+            交互定义了子系统的职责和接口。在子系统内，活动对象代表并发的执行线程。子系统允许将工作分给各个开发团队，其中接口充当团队间的正式约定。对于实时系统，您将使用<img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">工作产品：封装体</a>来代表活动对象。
+        </p>
+        <p>
+            关于显示从子系统发出的消息的小注释：将消息只限于接口，这就减少了模型元素之间的结合并提高了设计的弹性。您应尽可能尝试做到这一点，而在有消息从子系统发送到非接口模型元素的情况下，您应该寻机将这些消息改为发送到接口，以改进模型中的分离情况。
+        </p>
+    </li>
+    <li>
+        表示与参与者进行的交互。用时序图中的生命线来表示与参与对象交互的每个参与者实例和外部对象。
+    </li>
+    <li>
+        阐明参与对象之间发送消息的情况。事件流始于图的顶部，然后继续向下，表示一条垂直的时间顺序轴。通过在生命线之间创建消息（箭头），阐明对象之间发送消息的情况。消息的名称应为消息所调用的操作的名称。在设计的早期阶段，不会将许多操作分配给对象，所以您可能必须忽略该信息，并赋予该消息一个临时名称；这样的消息被称为“未分配的”。
+        以后，当您找到了参与对象的更多操作时，您就应通过“分配”带有这些操作的消息来更新时序图。
+    </li>
+    <li>
+        描述对象在收到消息后的操作。这是通过将脚本附加到相应消息上来完成的。将这些脚本放在图的页边空白处。使用结构化文本或伪码。如果您使用伪码，则务必使用该实施语言的结构体，这样就更容易实施相应的操作。当负责某一对象的类的人分配并定义该对象的操作时，该对象的脚本将为该工作提供基础。
+    </li>
+</ul>
+<p align="center">
+    <img height="417" alt="附带文本中描述的图。" src="./../../core.base_rup/guidances/guidelines/resources/seqdiag1.gif" width="672"     border="0" />
+</p>
+<p class="picturetext">
+    在时序图中记录对象执行的用例行为。
+</p>
+<p>
+    在您向众多对象分配行为时，应考虑如何控制流程。通过假设对象将在用例实现中以某种方式交互并具有某种角色，可找到它们。在分配行为时，您就可以开始测试这些假设。在流程的某些部分中，您可能希望使用分散的结构；在另外一些部分中，您可能更希望使用集中的结构。关于这些不同情况的定义，以及关于何时使用这两种结构的建议，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html#Distributing Control" guid="3.211008403369512E-306">技术：时序图</a>。
+</p>
+<p>
+    此时您可能需要新的对象，例如，如果您正使用集中式结构并需要一个新的对象来控制流程。记住，您添加到设计模型中的所有对象都必须满足对该对象模型提出的需求。
+</p>
+<h4>
+    <a id="Incorporate Applicable Design Mechanisms" name="Incorporate Applicable Design Mechanisms">并入适用的设计机制</a>
+</h4>
+<p>
+    在<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">任务：体系结构分析</a>期间，分析机制是已确定的。在<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">任务：确定设计机制</a>期间，分析机制改进为设计机制，在<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">软件体系结构文档</a>中记录从分析机制到设计机制的映射，并在<img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">特定于项目的指南</a>中记录设计机制。&nbsp;&nbsp;
+</p>
+<p>
+    该任务期间，用例设计、所有适用的设计机制都并入用例实现中。设计人员调查可用的设计机制并确定那些适用于正在开发中的用例实现的设计机制，根据软件体系结构文档和设计指南中记录的建议和指南开展工作。&nbsp;&nbsp;<br />
+     <b>注意：</b>适用的设计机制可能已在<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">任务：用例分析</a>中确定，在此期间可能已使用特定的分析机制“标记”了分析类，表示设计中需要处理的特定功能部分。在这种情况下，适用的设计机制是那些与分析机制相关联的设计机制，参与用例实现的分析类是使用这些分析机制标记的
+</p>
+<p>
+    设计人员遵循设计指南中记录的使用规则，将必要的设计元素和设计元素交互包括到用例实现中，从而将适用的设计机制合并到用例实现中。
+</p>
+<h4>
+    <a id="Handle All Variants of the Flow of Events" name="Handle All Variants of the Flow of Events">处理事件流的所有变体</a>
+</h4>
+<p>
+    应在单独的时序图中描述每个事件流变体。时序图通常优于通信图，因为当图必须包含我们设计系统时通常需要的详细程度时，时序图更易于理解。
+</p>
+<p>
+    首先描述基本流，基本流是最常见或最重要的事件流。然后描述变体，例如异常流。只要您使用并例举了参与对象的所有操作，就不必描述所有的事件流。因此，可以忽略非常次要的流，例如那些仅与某一对象有关的流。
+</p>
+<p>
+    研究用例，以查看是否有需求捕获和分析中未描述到的流变体，例如，依赖于实施的那些流变体。确定新流时，请在时序图中描述每个流。示例异常流包括以下事项。
+</p>
+<ul>
+    <li>
+        <b>错误处理</b>。如果某个接口报告在其与某个外部系统的通信中发生错误（举例），该用例则应处理这种情况。一种可能的解决方案是打开一条新的通信路线。
+    </li>
+    <li>
+        <b>超时处理</b>。如果用户在一定的时间段内不回应，用例则应采取一些特殊措施。
+    </li>
+    <li>
+        <b>处理对参与用例的对象的错误输入</b>。像这样的错误可能是由于用户输入错误而引起的。
+    </li>
+</ul>
+<h4>
+    <a id="Handle Optional Parts of the Use Case" name="Handle Optional Parts of the Use Case">处理用例的可选部分</a>
+</h4>
+<p>
+    可以将流的备选路径描述为可选流，而非变体。以下列表包含了两个可选流示例：
+</p>
+<ul>
+    <li>
+        通过发送信号，参与者从大量选项中决定接下来要执行的用例。例如，用例已要求参与者就某一问题回答是或否，或向参与者提供系统在用例的当前状态下可执行的多种功能。
+    </li>
+    <li>
+        流的路径根据已存储属性或关系的价值而变化。后续事件流依赖于要处理的数据的类型。
+    </li>
+</ul>
+<p>
+    如果希望特别注意可选流或任何复杂的子流，则使用单独的时序图。 应使用脚本、页边文本或注释来指示发生可选或子流行为的位置，从主事件流的时序图引用每个单独的时序图。
+</p>
+<p>
+    如果可选或异常流行为可能在任何情况下发生（例如在发生特定事件时执行的行为），则应在主事件流的时序图中标注，以表明该事件发生时将执行可选／异常时序图中所述的行为。可选地，如果有重要事件驱动行为，则考虑使用状态表图来描述系统的行为。
+    关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">指南：状态表图</a>。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 使用子系统简化时序图（可选）</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Simplify Sequence Diagrams Using Subsystems (optional)" name="Simplify Sequence Diagrams Using Subsystems (optional)"></a> 
+<p>
+    实现用例时，通常根据执行对象（即设计对象之间的交互）来描述事件流。要简化图并确定可重用的行为，可能需要封装某一系统中的事件子流。完成此操作后，使用发送到子系统的单个消息替换时序图的较大子节。在子系统中，单个时序图就可说明子系统中提供所要求行为的内部交互（有关更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">任务：子系统设计</a>）。
+</p>
+<p>
+    在以下情况下，应在子系统中封装时序图中的子序列消息：
+</p>
+<ul>
+    <li>
+        子序列在不同的用例实现中重复发生；即，将相同（或类似）的消息发送给相同（或类似）的对象，提供相同的最终结果。使用了短语“类似”，因为可能需要通过某些设计工作来使该行为可重用。
+    </li>
+    <li>
+        子序列仅在一个用例实现中发生，但预期它会在将来的迭代中或在将来的类似系统中重复执行。该行为可能会产生一个合适的可重用组件。
+    </li>
+    <li>
+        子序列仅在一个用例实现中发生，虽然复杂但易于封装，需要一个人或一个团队负责，提供明确的结果。在这些类型的情形下，复杂的行为通常需要有特殊技术知识或特殊领域知识，因此非常适合将其封装在子系统中。
+    </li>
+    <li>
+        子序列确定为封装在可替换组件中（请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">概念：组件</a>）。在此情况下，子系统是设计模型中组件的恰当表示。
+    </li>
+</ul>
+<p align="center">
+    <img height="121" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/seqdiag6.gif" width="409" border="0" />
+</p>
+<p class="picturetext">
+    如有必要，可以按子系统层次结构中的几个层次来描述用例实现。中间图中的生命线代表子系统；用圆圈圈起来的交互代表响应消息的子系统成员的内部交互。
+</p>
+<p>
+    该方法的优点有：
+</p>
+<ul>
+    <li>
+        用例实现变得更整齐，特别是在有些子系统的内部设计很复杂的情况下。
+    </li>
+    <li>
+        可在创建子系统的内部设计之前创建用例实现；例如，这在并行开发环境中很有用（请参阅“<a href="#How to Work in Parallel">如何并行工作</a>”）。
+    </li>
+    <li>
+        用例实现变得更为普通和易于更改，特别是在需要将一个子系统替换为另一个子系统的情况下。
+    </li>
+</ul>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    考虑以下时序图，该图是实现<b>本地呼叫</b>用例的一部分：
+</p>
+<p align="center">
+    <img height="396" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/seqdiag7.gif" width="729" />
+</p>
+<p class="example">
+    在该图中，灰色的类属于“网络处理”子系统；其他的类属于“订户处理”子系统。这意味着这是一个多子系统时序图，即，该图中包含了参与事件流的所有对象，无论它们的类是否处于相同的子系统中。
+</p>
+<p class="example">
+    作为一种备选方法，我们可以显示“网络处理”子系统上的行为调用，以及该子系统上特定接口的执行。这里假设“网络处理”子系统提供 ICoordinator 接口，“订户处理”子系统使用该接口：
+</p>
+<p align="center">
+    <img height="100" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/subs_if.gif" width="425" />
+</p>
+<p class="example">
+    ICoordinator 接口是由“网络处理”中的 Coordinator 类实现的。在这种情况下，我们可以在时序图中使用“网络处理”子系统自身及其 ICoordinator 接口，而不是使用“网络处理”中类的实例：
+</p>
+<p align="center">
+    <img height="417" alt="附带文本中描述的图。" src="./../../core.base_rup/guidances/guidelines/resources/seqdiag1.gif" width="672" />
+</p>
+<p class="example">
+    注意，Coordinator、Digit Information、和 Network 类实例由包含它们的子系统所替代。而所有对该子系统的调用都通过 ICoordinator 接口来完成。
+</p>
+<h4>
+    在生命线上显示接口
+</h4>
+<p>
+    为了实现众多实现同一接口的子系统的真正可替换性，在交互中（以及通常的图中）应只能看见它们的接口；否则当子系统相互替换时，需要更改交互（或图）。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example" align="left">
+    可在时序图中仅包含 ICoordinator 接口，而不包含提供它的子系统：
+</p>
+<p align="center">
+    <img height="309" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/seqdiag2.gif" width="519" />
+</p>
+<p class="example">
+    将消息发送到接口生命线，这意味着可以使用任何实现该接口的子系统替代图中的接口。注意，没有消息是从 ICoordinator
+    接口生命线发出的，因为实现该接口的不同子系统可能发送不同消息。但是，如果您希望描述应从实现该接口的任何子系统发送哪些消息（或允许发送哪些消息），这样的消息则可从接口生命线发出。
+</p>
+<h4>
+    <a id="How to Work in Parallel" name="How to Work in Parallel">如何并行工作</a>
+</h4>
+<p>
+    在某些情况下，以或多或少相对独立的方式开发子系统，并与其他子系统的开发并行进行，这可能比较合适。要完成此开发任务，首先必须通过确定子系统之间的接口来查找子系统依赖关系。
+</p>
+<p>
+    该工作可执行如下：
+</p>
+<ol>
+    <li>
+        着重于影响子系统之间接口的需求。
+    </li>
+    <li>
+        概括出所要求的接口，显示将越过子系统边界的消息。
+    </li>
+    <li>
+        根据每个用例的子系统来绘制时序图。
+    </li>
+    <li>
+        优化提供消息所需的接口。
+    </li>
+    <li>
+        并行开发每个子系统，并使用接口作为开发团队之间的同步手段。
+    </li>
+</ol>
+<p>
+    还可以选择是根据子系统还是仅根据它们的接口来排列时序图。在有些项目中，甚至有必要先实施提供接口的类，然后继续其余的建模工作。<br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 描述持久性相关行为</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_persistent_object__describing" name="XE_persistent_object__describing" class="index" key="持久对象（persistent object）" text="描述"></a><a id="Describe Persistence-Related Behavior" name="Describe Persistence-Related Behavior"></a> 
+<p>
+    面向对象的范例的整体目标是<b>封装</b>实施详细信息。因此，就持久性而言，我们希望有一个与瞬时对象<b>几乎相同</b>的持久对象。不必注意该对象是否为持久对象，或将它与任何其他对象区别对待。至少这是目标。
+</p>
+<p>
+    实际上，有时应用程序可能需要控制持久性的多个方面：
+</p>
+<ul>
+    <li>
+        读取和写入持久对象的时间
+    </li>
+    <li>
+        删除持久对象的时间
+    </li>
+    <li>
+        如何管理事务
+    </li>
+    <li>
+        如何完成锁定和并行控制
+    </li>
+</ul>
+<h4>
+    <a id="Writing Persistent Objects" name="Writing Persistent Objects">写入持久对象</a>
+</h4>
+<p>
+    在这里要关心两种情况：最初将对象写入持久对象存储时，以及随后应用程序希望使用该对象的更改来更新持久对象存储时。
+</p>
+<p>
+    在任一种情况下，特定机制均依赖于持久性框架所支持的操作。通常，使用该机制是为了向持久性框架发送消息，以创建持久对象。一旦对象成为持久对象，持久性框架将充分智能地检测随后对该持久对象的更改，并在必要时（通常是在提交事务时）将它们写入持久对象存储。
+</p>
+<p>
+    创建中的持久对象示例如下所示：
+</p>
+<p align="center">
+    <img height="230" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/vbos1.gif" width="325" />
+</p>
+<p class="picturetext" align="center">
+    对象 PersistenceMgr 是 VBOS 的一个实例，VBOS 是一个持久性框架。OrderCoordinator 创建永久 Order 的方法是将它作为“createPersistentObject”消息的实参发送到
+    PersistenceMgr。
+</p>
+<p>
+    <b>通常</b>没有必要显式地对此建模，除非需要知道该对象是在某一序列事件中的特定点显式存储的。如果后续操作需要查询该对象，则该对象必须存在于数据库中，因此就需要知道该对象将存在于数据库中。
+</p>
+<h4>
+    <a id="Reading Persistent Objects" name="Reading Persistent Objects">读取持久对象</a>
+</h4>
+<p>
+    在应用程序向持久对象发送消息之前，有必要从持久对象存储中检索该对象。记住，面向对象系统中的工作是通过向对象发送消息来执行的。但如果您希望发送消息的目标对象存在于数据库中而尚未存在于内存中，则会有一个问题：不能向尚不存在的事物发送消息！
+</p>
+<p>
+    简而言之，您需要向一个对象发送消息，该对象知道如何查询数据库、检索正确的对象并实例化该对象。然后，也只有在这之后，才能发送您原本打算发送的原始消息。实例化持久对象的对象有时称为<i>工厂</i>对象。<b>工厂</b>对象负责创建对象的实例，包括持久对象的实例。给定一个查询，可以设计<b>工厂</b>来返回符合该查询的一个或多个对象的集合。
+</p>
+<p>
+    通常，对象通过它们的关联充分地互相连接，所以通常只需要检索对象图中的<b>根</b>对象；其余的对象则根据它们与根对象的关联而基本上透明地从数据库中“拉”出。（良好的持久性机制对此应足够智能：它仅在需要时检索对象；否则，可能最终会不必要地尝试实例化大量对象。
+    在需要对象之前检索对象，这是过于简单的持久性机制所引起的主要性能问题之一）。
+</p>
+<p>
+    以下示例显示可如何对从持久对象存储中检索对象进行建模。在实际的时序图中，不会显示 DBMS，因为它将封装在<b>工厂</b>对象中。
+</p>
+<p align="center">
+    <img height="297" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/retriev.gif" width="489" />
+</p>
+<h4>
+    <a id="Deleting Persistent Objects" name="Deleting Persistent Objects">删除持久对象</a>
+</h4>
+<p>
+    持久对象的问题在于它们是持久存在的！与瞬时对象不同，瞬时对象在创建了它们的进程停止运转之后就消失了，而持久对象一直存在到它们明显被删除为止。所以，删除不再使用的对象是很重要的。
+</p>
+<p>
+    问题在于，这是很难确定的。只因为对一个对象执行了一个应用程序，并不表示所有应用程序（目前的和将来的）都已执行。而且，因为对象可以并确实具有甚至它们自己都不知道的关联，所以要断定是否可删除某个对象并不总是这么容易的。
+</p>
+<p>
+    在设计中，可以使用<b>状态表图</b>从语义上表示该情况：当对象达到<b>结束</b>状态时，可以认为其<b>已释放</b>。负责实施永久类的开发人员然后可以使用状态表图信息调用适当的持久机制行为，以释放该对象。用例实现设计人员的职责是调用适当的操作，以在对象适于删除时使该对象达到其<b>结束</b>状态。
+</p>
+<p>
+    如果某一对象充分连接到其他对象，则可能难以确定是否可删除该对象。因为<b>工厂</b>对象知道对象的结构以及其连接的其他对象，所以让某一类的工厂对象负责确定是否可删除特定实例常常很有用。持久性框架也可提供对该能力的支持。
+</p>
+<h4>
+    <a id="Modeling Transactions" name="Modeling Transactions">对事务进行建模</a>
+</h4>
+<p>
+    事务定义一组<b>元</b>操作调用；要么全部执行它们，要么全都不执行。在持久性环境中，一个事务定义了对一组对象的一组更改，这些更改要么全都执行，要么全都不执行。事务提供一致性，确保几组对象从一种状态转移到另一种状态。
+</p>
+<p>
+    在用例实现中，有几个选项可用于显示事务：
+</p>
+<ul>
+    <li>
+        <b>文本</b>。在时序图的页边空白处使用脚本，则可记录事务边界，如下所示。该方法很简单，并允许使用任意数量的机制来实施事务。
+    </li>
+</ul>
+<p align="center">
+    <img height="466" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/txn1.gif" width="496" />
+</p>
+<p class="picturetext">
+    使用文本注释来表示事务边界。
+</p>
+<ul>
+    <li>
+        <b>使用显式消息</b>。如果使用中的事务管理机制使用显式消息开始和结束事务，则可以在时序图中明确地显示这些消息，如下所示：
+    </li>
+</ul>
+<p align="center">
+    <img height="575" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/txn2.gif" width="558" />
+</p>
+<p class="picturetext">
+    显示显式消息的时序图，这些消息用以启动和停止事务。
+</p>
+<h4>
+    <a id="Handling Error Conditions" name="Handling Error Conditions">处理错误条件</a>
+</h4>
+<p>
+    如果无法执行某一事务中指定的所有操作（通常是因为发生了错误），该事务将<b>异常终止</b>，并且在该事务期间所作的所有更改都会撤消。预期的错误条件常常代表了用例中的异常事件流。在其他情况下，可能因为系统中的某个故障而发生错误情况。错误情况还应在交互中记录。简单的错误和异常可以在发生这些错误和异常的交互中显示；复杂的错误和异常则可能需要它们自身的交互。
+</p>
+<p>
+    特定对象的故障模式可以在状态表图中显示。可以在发生错误或异常的交互中，显示处理这些故障模式的条件控制流。
+</p>
+<h4>
+    <a id="Handling Concurrency Control" name="Handling Concurrency Control">处理并行控制</a>
+</h4>
+<p>
+    并行描述在事务过程中对关键系统资源的访问控制。为了保持系统处于一致状态，某一事务可能要求它对系统中的某些关键资源具有单独访问权。这种独占性可能包括读取一组对象、写入一组对象或读写一组对象的能力。
+</p>
+<p>
+    看一个简单的例子，即，为什么可能需要限制对一组对象的访问。假设我们正运行一个简单的订单输入系统。人们拨入电话来下订单，我们反过来又处理订单并发送订单。可以将订购看成一种事务。
+</p>
+<p>
+    为说明并行控制的需要，假设有人拨入电话来订购一双新的旅游鞋。订单输入系统后，系统将检查库存清单中是否有该顾客需要的、合适尺寸的旅游鞋。如果有，则希望<b>预订</b>这双鞋，这样，在订单送出之前别人就不能购买它。
+    一旦发出了订单，这双鞋就从库存清单中除去。
+</p>
+<p>
+    在下订单和发出订单的间隔时间内，这双鞋处于特殊状态 －
+    它在库存清单中，但已“提交到”客户的订单。如果由于某重原因而取消了客户订单（客户改主意了，或其信用卡已到期），这双鞋将回到库存清单中。一旦发出了该订单，则假定我们的小公司不想保留曾对这双鞋做下的记录。
+</p>
+<p>
+    并行的目标和事务一样，就是确保系统从一个一致状态转移到另一个。另外，并行工作尽力确保某一事务具有完成其工作所需要的所有资源。 可以用大量的不同方法实施并行控制，包括资源锁定、信号、共享内存锁存器以及专用工作空间。
+</p>
+<p>
+    在面向对象系统中，仅根据消息模式来断定特定消息是否会导致对象发生状态更改是比较困难的。另外，多种实施可避免限制访问某些类型的资源；例如，某些实施在事务开始时向每个事务提供其自身的系统状态视图。在这种情况下，其他进程可更改对象状态而不影响任何其他执行事务的“视图”。
+</p>
+<p>
+    为避免约束实施，在设计中我们只希望指出事务必须能够进行单独访问的资源。使用先前的示例，我们希望指出，我们需要对已订购旅游鞋的单独访问权。一种简单的备选方法是注释发送中的消息的描述，表明应用程序需要对该对象的单独访问权。然后实施者可使用这些信息来确定如何最好地实施并行需求。下面显示一个示例时序图，该图显示了关于哪些消息需要单独访问权的注释。假设条件是，完成事务后释放所有的锁。
+</p>
+<p align="center">
+    <img height="569" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/locking.gif" width="630" />
+</p>
+<p class="picturetext">
+    显示时序图中有注释的访问控制的示例。
+</p>
+<p>
+    不限制对事务中所需所有对象的访问权的原因是，通常只有一些对象应具有访问限制；限制访问参与事务的所有对象，会浪费宝贵的资源，并可能引起（而非防止）性能瓶颈。<br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 优化事件流描述</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Refine the Flow of Events Description" name="Refine the Flow of Events Description"></a> 
+<p>
+    在用例实现的事件流中，如果无法仅通过检验参与对象之间发送的消息来完全理解事件流，则可能需要向时序图追加描述。这些情况的一些示例包括需要计时注释、关于条件行为的注释或需要澄清操作行为，以使外部观察者更容易理解图。
+</p>
+<p>
+    事件流最初是在<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">任务：用例分析</a>中概括的。在该步骤中，按需要优化事件流，以澄清时序图。
+</p>
+<p>
+    通常，仅凭操作的名称不足以理解为何执行该操作。可能需要通过图的页边空白处文本注释或脚本来阐明时序图。还可能需要文本注释和脚本来表示控制流，例如决策步骤、循环和分支。另外，可能需要通过文本标记将用例中的扩展点与时序图中的特定位置关联起来。
+</p>
+<p>
+    该任务中的先前示例已说明了注释时序图的许多不同的方法。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 统一设计类和子系统</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_design_subsystem__unifying" name="XE_design_subsystem__unifying"></a><a id="Unify Classes and Subsystems" name="Unify Classes and Subsystems"></a>
+<p>
+    实现用例时，需要统一已确定的设计类和子系统，以确保<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>中的均一性和一致性。
+</p>
+<p>
+    考虑的要点有：
+</p>
+<ul>
+    <li>
+        模型元素的名称应描述它们的功能。
+    </li>
+    <li>
+        避免使用类似的名称和同义词，因为它们会使读者难以区分模型元素。
+    </li>
+    <li>
+        将定义类似行为或表示相同现象的模型元素合并起来。
+    </li>
+    <li>
+        将表示相同概念或有相同属性的实体类合并起来（即使它们的既定行为不同）。
+    </li>
+    <li>
+        使用继承来使模型元素抽象化，这往往使模型更健壮。
+    </li>
+    <li>
+        更新模型元素时，也更新用例实现的对应事件流描述。<br />
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 评估结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Evaluate Your Results" name="Evaluate Your Results"></a> 
+<p>
+    在这个阶段应检查设计模型，验证您的工作是否正朝着正确方向进行。不需要详细地复审模型，但在处理模型时应考虑<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/design_model_18BE347C.html" guid="1.4639852935143625E-305">设计模型</a>。
+</p>
+<p>
+    特请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/review_the_design_34CB80A9.html" guid="{9574768B-7886-40C9-9938-A7E36E9B0739}">任务：复审设计</a>中的<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/use-case_realization_444C8317.html" guid="9.828360528787822E-305">用例实现</a>。
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">核对表</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/use-case_realization_444C8317.html" guid="9.828360528787822E-305">用例实现</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/use-case_realization_C690D81F.html" guid="1.6790343052744206E-305">用例实现</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html" guid="3.211008403369512E-306">时序图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">状态表图</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/create_use_case_realization_1212EF9.html" guid="{AAB8D0D6-C666-4F4D-9D26-2AF026558A4C}">使用 Rational Rose 创建用例实现</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/designing_use_cases_11581AAA.html" guid="{89CA76CF-37A6-4590-B9B5-90942D2B50E8}">使用 Rational XDE Developer 设计用例</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_collaboration_diagram_42655C1D.html" guid="{49ACA284-8922-4308-BEA7-2EDE22B77AA2}">使用 Rational Rose 管理协作图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_sequence_diagrams_C11A1E78.html" guid="{70C1E98C-D6AC-4278-8554-1E000AF5A57D}">使用 Rational Rose 管理时序图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_design_model_1D45D75E.html" guid="{BD1DD906-031C-4D8C-8078-87B6869A8C14}">使用 Rational Rose 管理设计模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

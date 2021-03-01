@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<link rel="StyleSheet" href="../rop.css" type="text/css"/>
+<title>The Search Engine</title>
+</head>
+
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top">
+
+<script language="JavaScript">
+<!--
+
+//Tell the TreePath to update itself
+var thePath = "";
+var type = typeof parent.ory_button;
+if (type != "undefined") {
+	 type = typeof parent.ory_button.getTreePath();
+	 if (type != "undefined") {
+	 	 thePath = parent.ory_button.getTreePath();
+	 }
+}
+document.write(thePath);
+-->
+</script>
+
+<h1 class="banner"><a name="Top"></a>The Search Engine</h1>
+<p>A search query consists of one or more specified words. Boolean operators cannot
+  be used. Instead of Boolean operators, use the <b>All the words</b>, <b>Any word</b>,
+  <b>Exact phrase</b>, or <b>Without the word</b> fields that are provided. The
+  search process is not case-sensitive, which means that <font size="3"><tt>Hello, HELLO, and
+  hElLo</tt></font> are all considered the
+  same. The wildcard symbol <font size="3"><tt>*</tt></font>
+  is not supported. When more than one field is used, the query is evaluated with precedence from
+  top to bottom. For example, the query:</p>
+<div align="center">
+<table border="0" width="350" cellspacing="4" cellpadding="4" style="border: 1px solid rgb(128,128,128)" bordercolorlight="#808080" bordercolordark="#808080">
+  <tbody valign="top">
+    <tr>
+      <th width="40%" align="left">All the words:</th>
+      <td width="60%">project management</td>
+    </tr>
+    <tr>
+      <th width="40%" align="left"><b>Any word</b>:</th>
+      <td width="60%">adopt vision</td>
+    </tr>
+    <tr>
+      <th width="40%" align="left"><b>Exact phrase</b>:</th>
+      <td width="60%">Rational Unified Process</td>
+    </tr>
+    <tr>
+      <th width="40%" align="left"><b>Without the words</b>:</th>
+      <td width="60%">implementation</td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+</div>
+<p>is evaluated as (project AND management) AND (adopt OR vision) AND (Rational
+  Unified Process) NOT (implementation). In other words, the matching pages must
+  contain both of the words &quot;project&quot; and &quot;management&quot;, the
+  word &quot;adopt&quot; or &quot;vision&quot;, along with the phrase &quot;Rational
+  Unified Process&quot;. Matching pages must not contain the word &quot;implementation&quot;. Notice that wildcard searches using the wildcard character <font size="3"><tt>*</tt></font> or boolean operators are not supported</p>
+<br/>
+<br/>
+</td><td valign="top" width="24"></td><td valign="top" width="1%">
+<p>
+<a href="../index.htm"></a>
+</p>
+<script language="JavaScript">
+<!--
+
+var help_js_MESSAGE1 = "The content is already displayed using frames";
+
+function loadTop()
+{
+  if(parent.frames.length!=0 && parent.frames[1].name=="ory_toc")
+  {
+     alert(help_js_MESSAGE1);
+  }
+  else
+  {
+    var expires = new Date();
+    expires.setTime (expires.getTime() + (1000 * 20));
+    document.cookie = "rup_ory_doc=" + escape (document.URL) +
+    "; expires=" + expires.toUTCString() +  "; path=/";
+
+    var new_ory_doc_loc = null;
+
+    for(i=document.links.length-1;i>=0;i--)
+    {
+       if(document.links[i].href.indexOf("index.htm")!=-1)
+       {
+         new_ory_doc_loc = document.links[i].href;
+         break;
+       }
+    }
+
+    if(new_ory_doc_loc!=null)
+    {
+	if( self.name == "ory_doc" )
+	{
+		window.close();
+		window.open( new_ory_doc_loc );
+	}
+	else
+	{
+	       	top.location = new_ory_doc_loc;
+	}
+    }
+   }
+}
+// -->
+</script>
+<script language="JavaScript">
+<!--
+  function getImageUrl(image)
+  {
+    var new_ory_doc_loc=null;
+    for(i=document.links.length-1;i>=0;i--)
+    {
+       if(document.links[i].href.indexOf("index.htm")!=-1)
+       {
+         new_ory_doc_loc = document.links[i].href.substring(0,document.links[i].href.lastIndexOf("/"));
+         new_ory_doc_loc = new_ory_doc_loc + "" + image;
+         return new_ory_doc_loc;
+       }
+    }
+    return null;
+  }
+// -->
+</script>
+<script
+language="JavaScript">
+<!--
+MSFPhover =
+(((navigator.appName == "Netscape") &&
+  (parseInt(navigator.appVersion) >= 3 )) ||
+  ((navigator.appName == "Microsoft Internet Explorer") &&
+  (parseInt(navigator.appVersion) >= 4 )));
+
+  function MSFPpreload(img)
+  {
+     var a=new Image();
+     a.src=img;
+     return a;
+  }
+// -->
+</script>
+</td></tr></table>
+</body>
+</html>

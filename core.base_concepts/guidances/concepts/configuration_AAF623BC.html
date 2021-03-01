@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 方法配置</title>
+<meta content="Concept" name="uma.type">
+<meta content="configuration" name="uma.name">
+<meta content="方法配置" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "_uDU1oASEEdq61bDkWg1SXw", "_Tp3S0BTQEdqrUt4zetC1gg", "_d698IBUFEdqrUt4zetC1gg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "_uDU1oASEEdq61bDkWg1SXw", "_Tp3S0BTQEdqrUt4zetC1gg", "_d698IBUFEdqrUt4zetC1gg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "_d698IBUFEdqrUt4zetC1gg"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_d698IBUFEdqrUt4zetC1gg"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：方法配置</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">方法配置指定方法库的逻辑子集的选择。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    方法配置是选定<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/method_plugin_B417B6A2.html" guid="_0KeEMBUFEdqrUt4zetC1gg">方法插件</a>、<a class="elementLinkWithUserText" href="./../../../core.base_concepts/customcategories/method_package_CD28C7B8.html" guid="_R5Vk4BtpEdqSLrJ4Ij2LVA">方法包</a>和流程（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/capability_pattern_ECA78A86.html" guid="1.7072348895114264E-305">概念：能力模式</a>和<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/delivery_process_CFEBBC78.html" guid="_EhgqwO8MEdmKSqa_gSYthg">概念：交付流程</a>）的集合。当配置包含它所依赖的所有元素的完整传递闭包时，可将配置导出到它自己的独立库中。方法配置定义<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/method_library_CC7515AF.html" guid="_m8lGkBUFEdqrUt4zetC1gg">方法库</a>的逻辑子集。
+</p>
+<h3>
+    应用
+</h3>
+<p>
+    通常围绕一个或多个交付流程来构建配置。交付流程可对于不同的方法配置有效，但是每个配置都可包含或排除特定情况的特定内容。例如，可将交付流程定义为包含用于开发模式（不同类型的数据库管理系统的模式）的内容，如 RDBMS 和 OODBMS
+    的内容。使用此类交付流程时，用户可能希望只选择在项目中使用的 DBMS 类型，并因此会排除与其他 DBMS 类型相关的所有内容。他们通过选择排除相关内容的配置或在没有此类配置的情况下通过创建此类配置来实现此操作。<br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2005&nbsp;All Rights Reserved
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

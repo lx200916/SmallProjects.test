@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 维护自动测试套件</title>
+<meta content="Guideline" name="uma.type">
+<meta content="maintaining_automated_test_suites" name="uma.name">
+<meta content="维护自动测试套件" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{33DE37A2-ECFE-483B-934B-629F5802F87C}", "2.0721213907815595E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{33DE37A2-ECFE-483B-934B-629F5802F87C}", "2.0721213907815595E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{33DE37A2-ECFE-483B-934B-629F5802F87C}", "2.0721213907815595E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.0721213907815595E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.0721213907815595E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：维护自动测试套件</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南列出了有助于维护测试套件的设计准测和管理准测。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">实施开发人员测试</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_the_test_implementation_AAB73625.html" guid="{ED9DF0C0-744A-443A-AEBA-604382E05A5F}">构造测试实施</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_suite_DA8938D2.html" guid="{33DE37A2-ECFE-483B-934B-629F5802F87C}">测试套件</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test__developer_testing__maintaining_automated_tests" name="XE_test__developer_testing__maintaining_automated_tests"></a><a id="XE_developer_testing__automated_tests__maintanence_of" name="XE_developer_testing__automated_tests__maintanence_of"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    如同实际对象一样，测试也会中断。这不是测试本身损坏了，而是环境有所变化。可能测试转入了一个新的操作系统。或者（更可能的情况），测试用的代码稍有变化，<i>恰好</i>导致测试失败。假设您正从事某一电子银行应用程序的 2.0
+    版本的工作。对于版本 1.0，使用了这种方法登录：
+</p>
+<blockquote>
+    <p align="left">
+        <font size="+0">public boolean login (String username);</font>
+    </p>
+</blockquote>
+<p>
+    在版本 2.0 中，销售部门意识到密码保护可能是一个好主意。于是该方法改为如下：
+</p>
+<blockquote>
+    <p align="left">
+        <font size="+0">public boolean login (String username<i><b>, String password</b></i>);</font>
+    </p>
+</blockquote>
+<p>
+    使用 login 的任何测试都将失败，它甚至不会编译。 因为此时可行的有用工作并不多，不使用 login 而能编写的有用测试也不多。 您可能会面对数以百计或数以千计的失败测试。
+</p>
+<p>
+    使用“全局搜索并替换”工具可修正这些测试，该工具查找每个 login(<i>something</i>) 实例，并替换为 login(<i>something</i>, "dummy
+    password")。然后安排所有测试帐户使用该密码，您自己则接着测试。
+</p>
+<p>
+    然后，当销售部门决定不允许密码包含空格时，您只好再次全部替换。
+</p>
+<p>
+    这类事务是浪费时间的工作负担，特别是当（通常是这种情况）测试变更不那么容易进行时。有一种更好的方法。
+</p>
+<p>
+    假设测试最初不调用产品的 <font size="+0">login</font> 方法。相反，它们调用一种库方法，该方法尽其所能使测试登录并继续执行操作。 起初，该方法可能是这样的：
+</p>
+<blockquote>
+<pre>
+public boolean testLogin (String username) {
+  return product.login(username);
+}
+</pre>
+</blockquote>
+<p>
+    当进行版本 2.0 变更时，则更改实用程序库以进行匹配：
+</p>
+<blockquote>
+<pre>
+public Boolean testLogin (String username) {
+  return  product.login(username<b>
+<i>
+, "dummy password"</i></b>);
+}
+</pre>
+</blockquote>
+<p>
+    您不必更改一千个测试，只需更改一种方法。
+</p>
+<p>
+    理想情况下，测试工作开始时，所需的所有库方法都将可用。在实际情况下，无法预见所有方法 － 可能直到产品 <font size="+0">login</font> 首次变更后您才意识到需要 <font     size="+0">testLogin</font>
+    实用程序方法。因此通常按需要从现有的测试中“分解”出测试实用程序方法。执行这种现行的测试修复是<i>非常</i>重要的（即使面临着进度安排的压力）。如果不执行，您将浪费大量时间来处理糟糕而不可维护的测试套件。您可能很容易发现自己在放弃测试或无法编写出所需数量的新测试，因为所有可用的测试时间都花在了维护旧测试上。
+</p>
+<p>
+    <b>注意</b>：该产品的 <font size="+0">login</font> 方法的测试仍将直接调用它。如果它的行为有变化，则将需要部分或完全更新那些测试。（如果其行为变化时没有任何 <font     size="+0">login</font> 测试失败，则这些测试在检测缺陷方面可能表现不是很好。）
+</p>
+<h3>
+    <a id="AbstractionManagesComplexity" name="AbstractionManagesComplexity">抽象有助于控制复杂度</a>
+</h3>
+<p>
+    前面的示例显示了可如何从具体的应用程序中抽取测试。您很可能还要执行大量的抽取操作。您会发现，许多测试在开始时都按通用顺序调用方法：登录，设置某个状态，并浏览到您正在测试的那部分应用程序。
+    然后每个测试才会执行不同的操作。可以且应该使用一个启发性名称（如 <font     size="+0">readyAccountForWireTransfer</font>）将所有该设置包含在单一方法中。这样，您就会在编写特定类型的新测试时节省相当多的时间，并且可使每个测试的意图好懂得多。
+</p>
+<p>
+    对于测试而言，好懂是很重要的。旧式测试套件的常见问题就是没人知道测试在做什么或为什么这样做。测试中断后，就倾向于用尽可能最简单的方法进行修正。这经常导致测试越来越难以找出缺陷。它们不再测试原本要测试的内容。
+</p>
+<h3>
+    <a id="AnotherExample" name="AnotherExample">另一示例</a>
+</h3>
+<p>
+    假设您在测试编译器。第一次撰写的一部分类定义了编译器的内部语法分析树和树上进行的转换。使用许多测试构造语法分析树，并测试转换。这样的一个测试可能是这样的：
+</p>
+<blockquote>
+<pre>
+/* 
+ * Given
+ *   while (i&lt;0) { f(a+i); i++;}
+ * "a+i" cannot be hoisted from the loop because 
+ * it contains a variable changed in the loop.
+ */
+loopTest = new LessOp(new Token("i"), new Token("0"));
+aPlusI = new PlusOp(new Token("a"), new Token("i"));
+statement1 = new Statement(new Funcall(new Token("f"), aPlusI));
+statement2 = new Statement(new PostIncr(new Token("i"));
+loop = new While(loopTest, new Block(statement1, statement2));
+expect(false, loop.canHoist(aPlusI))
+</pre>
+</blockquote>
+<p>
+    这是一个难以理解的测试。假设这段时间过后。发生了一些变化，要求您更新测试。此时，可利用更多的产品基础结构。特别地，您可能有一个语法分析例程来将字符串转换为语法分析树。此时最好完全改写测试，以使用该例程：
+</p>
+<blockquote>
+<pre>
+loop=Parser.parse("while (i&lt;0) { f(a+i); i++; }");
+// Get a pointer to the "a+i" part of the loop.
+aPlusI = loop.body.statements[0].args[0];
+expect(false, loop.canHoist(aPlusI));
+</pre>
+</blockquote>
+<p>
+    这样的测试将容易理解得多，并将在现在和未来节省时间。事实上，这些测试的维护成本非常低，这样，将大多数测试延迟到有解析器可用是有意义的。
+</p>
+<p>
+    该方法略有不足：这样的测试可能会发现转换代码中存在缺陷（预计情况），也可能发现解析器中存在缺陷（意外情况）。因此问题的隔离和调试可能更为困难。另一方面，找出解析器测试所遗漏的问题并不是一件坏事。
+</p>
+<p>
+    还有一种可能：解析器中的缺陷可能会掩盖转换代码中的缺陷。这种可能性相当小，且由此而耗费的成本几乎肯定少于维护更复杂测试所需的成本。
+</p>
+<h3>
+    <a id="FocusingImprovement" name="FocusingImprovement">侧重于测试改进</a>
+</h3>
+<p>
+    大型测试套件将包含某些不会变化的测试块。它们对应着应用程序中的稳定区。其他的测试块将经常有变化。这些块对应着应用程序中行为经常有变化的区域。后面的这些测试块倾向于着重利用实用程序库。
+    每个测试都将测试可变区域中的特定行为。设计实用程序库是为了允许类似的测试检查其目标行为，同时不受未测试行为的变更的影响（相对而言）。
+</p>
+<p>
+    例如，上面所示的“循环上升”测试现在不受语法分析树构建细节的影响。它仍对 <font size="+0">while</font> 循环语法分析树的结构敏感（因为需要通过一系列访问来读取 a+i
+    的子树）。如果该结构证明是可变的，则可通过创建 <font size="+0">fetchSubtree</font> 实用程序方法来使该测试更抽象：
+</p>
+<blockquote>
+<pre>
+loop=Parser.parse("while (i&lt;0) { f(a+i); i++; }");
+<b>
+<i>
+aPlusI = fetchSubtree(loop, "a+i");</i></b>
+
+expect(false, loop.canHoist(aPlusI));
+</pre>
+</blockquote>
+<p>
+    现在该测试只对两个事项敏感：语言的定义（例如，整数可用 <font size="+0">++</font> 递增）和控制循环上升的规则（检查正确性的行为）。
+</p>
+<h3>
+    <a id="ThrowingAwayTests" name="ThrowingAwayTests">放弃测试</a>
+</h3>
+<p>
+    即使有了实用程序库，测试也可能因为与其检查内容毫无关系的行为变更而定期中断。修正该测试多半不是为了查找由于该变更而引起的缺陷；这样做是为了让测试有机会在某一天找到另外的某个缺陷。但这一系列修正的成本可能超过假设该测试找到缺陷的价值。最好的选择就是放弃该测试并致力于创建具有更大价值的新测试。
+</p>
+<p>
+    大多数人反对放弃测试的观点 － 至少直到他们对维护费用不堪重负，才会放弃<i>所有</i>测试。最好的选择是针对各个测试谨慎而不断地作出决定，并询问：
+</p>
+<ol>
+    <li>
+        要修正该测试，可能将向实用程序库添加多少工作量？
+    </li>
+    <li>
+        要使用多少附加时间？
+    </li>
+    <li>
+        该测试将来找出严重缺陷的可能性有多大？它和它的相关测试的跟踪记录是什么？
+    </li>
+    <li>
+        两次测试中断的时间间隔是多久？
+    </li>
+</ol>
+<p>
+    这些问题的答案将是粗略的估计，甚至是猜测。但询问这些问题的结果将好于单单具有修正所有测试的策略。
+</p>
+<p>
+    放弃测试的另一个原因是目前的测试过多。例如，在开发早期，可能有多个针对基本语法分析树构造方法的简单测试（<font size="+0">LessOp</font>
+    构造函数和诸如此类的构造函数）。后来，在编写解析器期间，将有许多解析器测试。因为解析器使用构造方法，解析器测试也将间接测试这些方法。当代码变更中断构造测试时，放弃一部分多余的测试是合情合理的。当然，任何新的或变更过的构造行为将需要新的测试。这些测试将直接（如果很难完全通过解析器进行测试）或间接（如果通过解析器进行测试是充分的和更易维护的）实施。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

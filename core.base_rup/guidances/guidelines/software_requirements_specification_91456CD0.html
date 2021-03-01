@@ -1,0 +1,1106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 软件需求规范</title>
+<meta content="Guideline" name="uma.type">
+<meta content="software_requirements_specification" name="uma.name">
+<meta content="软件需求规范" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{B16C2941-791C-44E6-B353-354109B5C9DE}", "5.0594212359881566E-306"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{BE8165DC-BAF2-4237-B27D-F2A037023364}", "5.0594212359881566E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{B16C2941-791C-44E6-B353-354109B5C9DE}", "5.0594212359881566E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{BE8165DC-BAF2-4237-B27D-F2A037023364}", "5.0594212359881566E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{B16C2941-791C-44E6-B353-354109B5C9DE}", "5.0594212359881566E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{BE8165DC-BAF2-4237-B27D-F2A037023364}", "5.0594212359881566E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "5.0594212359881566E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="5.0594212359881566E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：软件需求规范</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">软件需求规范（SRS）注重于收集和组织与项目有关的所有需求。本指南说明如何开发 SRS。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_software_requirements_specification_934E66F.html" guid="{BE8165DC-BAF2-4237-B27D-F2A037023364}">软件需求规范</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_software_requirements_specification__guidelines_for" name="XE_software_requirements_specification__guidelines_for" class="index" key="软件需求规范（software requirements specification）" text="指南"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">说明</a>
+</h3>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_requirements_specification_934E66F.html" guid="{BE8165DC-BAF2-4237-B27D-F2A037023364}">软件需求规范（SRS）</a>注重于收集和组织与您的项目有关的所有需求。如果有需求管理计划，则应该参阅需求管理计划以确定需求的正确位置和组织。例如，可能希望用单独的
+    SRS 描述产品特定发行版中的每个<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="5.360970653483052E-305">特性</a>的完整软件需求。这可能包含几个来自系统<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">用例模型</a>中的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>，以此来说明此特性的功能需求，以及<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>中的一系列相关详细需求。
+</p>
+<p>
+    由于您发现可使用几种不同的工具收集这些需求，因此意识到可能要在几种不同的工件和工具中收集需求是很重要的。例如，您可能发现使用<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>中的文本记录工具收集文本需求（如非功能需求、设计约束等）是很适合的。另一方面，您可能又发现收集<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>中的一些（或所有）功能需求非常有用，还可能发现使用满足<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">用例模型</a>定义需求的工具非常方便。
+</p>
+<h4>
+    <a id="A Document or a Package?" name="A Document or a Package?">是文档还是包？</a>
+</h4>
+<p>
+    我们发现侧重于所用工具之间的差别并没有很大的必要。毕竟，您正在收集需求且应真正注重于有效地收集和组织需求，而不必考虑手边的工具。既然是侧重于需求而不是工具，那么假定 SRS 中的需求集合构成一个信息<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/package_6C588F6C.html" guid="_yPjjANnmEdmO6L4XMImrsA">包</a>。一个称为<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_requirements_specification_934E66F.html" guid="{BE8165DC-BAF2-4237-B27D-F2A037023364}">软件需求规范（SRS）</a>的包中包含了系统各需求的精化。
+</p>
+<h4>
+    <a id="From Vision to SRS" name="From Vision to SRS">从远景到 SRS</a>
+</h4>
+<p>
+    SRS 包显然与<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_vision_2D6D6F1.html" guid="{417F089F-6636-451A-A8AB-AB4EAC7AC4F1}">远景</a>文档相关。事实上，远景文档充当 SRS
+    的输入。但这两个工件服务于不同的需要，并且通常由不同的作者撰写。在项目的这个阶段，项目的侧重点从宽泛地陈述系统的用户需要、目的和目标、目标市场和特性转移到详细说明将如何在解决方案中实施这些特性。
+</p>
+<p>
+    现在所需要的是描述系统完整外部行为的工件集合或工件包 － 即明确指出“这里是系统为实现那些特性而必须执行的操作”的包。而这个包就是我们所说的 SRS 包。
+</p>
+<h4>
+    <a id="A Living Artifact" name="A Living Artifact">活动的工件</a>
+</h4>
+<p>
+    SRS 包不是一本尘封的书，后者的生成是为了确保遵循 ISO 9000，然后就被弃置一边并忽略，而项目继续进行。相反，它是激活的活动工件。事实上，当开发人员着手实施工作时，它有多种用途：作为各方通信的基础 －
+    即在开发人员之间和开发人员与必须作为沟通对象的外部组（用户和其他项目干系人）之间。它正式或非正式地表示各方之间的约定协议，如果该协议不在 SRS 包中，开发人员则不应使用它。而如果它在 SRS 包中，则开发人员负责实现该功能。
+</p>
+<h4>
+    <a id="The Project Members' Reference Standard" name="The Project Members' Reference Standard">项目成员的参考标准</a>
+</h4>
+<p>
+    SRS 可用作<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_project_manager_363CE680.html" guid="{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}">项目经理</a>的参考标准。项目经理不太可能有时间、精力或技能来阅读由开发人员生成的代码并与<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_vision_2D6D6F1.html" guid="{417F089F-6636-451A-A8AB-AB4EAC7AC4F1}">远景</a>文档直接进行比较。他或她必须将 SRS 包用作与项目团队进行讨论的参考标准。
+</p>
+<p>
+    如之前所提到的，SRS 包充当设计和实施组的输入。根据项目的组织方式，在问题解决及特性定义任务最终生成远景文档之前，实施者可能已经参与了这些任务。但他们需要关注 SRS 包来确定他们的代码必须做什么。它充当软件测试和 QA
+    组的输入。这些组还应参与某些较早期的讨论，而这明显有助于他们很好地理解“远景”文档中展示的“远景”。但他们的职责是创建测试用例和 QA 过程，以确保已开发的系统的确满足 SRS 包中所展示的需求。对于他们而言，SRS
+    包还可用作计划和测试任务的标准参考。
+</p>
+<h3>
+    <a id="Defining Functional Requirements" name="Defining Functional Requirements">定义功能需求</a>
+</h3>
+<p>
+    请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_model_CC121CF4.html" guid="1.7617672560167394E-305">指南：用例模型</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use_case_CC89870D.html" guid="4.1983217662266927E-305">指南：用例</a>，以获取有关在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">用例模型</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>中定义功能需求的推荐方法的完整讨论。
+</p>
+<h3>
+    <a id="Defining Non-Functional Requirements" name="Defining Non-Functional Requirements">定义非功能需求</a>
+</h3>
+<p>
+    对系统的非功能需求应记录在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">工作产品：补充规范</a>中。在定义这些需求时要遵循以下原则。
+</p>
+<h4>
+    <b><a id="1 General" name="1 General"><font size="4">1 概述</font></a></b>
+</h4>
+<h5>
+    <b><a id="1.1 Assumptions and Issues" name="1.1 Assumptions and Issues"><font size="+0">1.1 假设和问题</font></a></b>
+</h5>
+<p>
+    收集和验证非功能需求时，维护假设和问题列表。&nbsp;
+</p>
+<p>
+    有些任务将无法为您提供令人满意的答案。这可能是由于缺少信息或只是因为您认为答案危及设计的可行性。因此，创建两个列表并在设计研究过程中进行维护：
+</p>
+<p>
+    您在需求和设计过程中所作的任何假设，包括那些假设背后的理由或思考过程。假设可用于确定该项目范围以外或该项目之后的相关子项目或工作项。
+</p>
+<p>
+    任何主要问题（可能会造成中断的重大问题）
+</p>
+<p>
+    在每个阶段结束时，应当与客户一起复审问题。假设也需要在每个阶段结束时复审，但客户并不总是复审那些次要问题的合适人选。
+</p>
+<p>
+    假设与问题适用于所有工作产品，但对于非功能需求尤为常见。
+</p>
+<h5>
+    <b><a id="1.2 Geographic Organization" name="1.2 Geographic Organization"><font size="+0">1.2 地理组织</font></a></b>
+</h5>
+<p>
+    记录客户的地理组织。
+</p>
+<p>
+    记录受该系统影响的业务部分的地理位置。定义还应包括那些不受影响的站点，那些站点主管主要的 IT 设施。对组织的任何移动部分作特殊注释。例如，将要到处出差和使用工作站的销售队伍。请注意您必须提供特殊本地语言支持（NLS）的任何地理位置。
+</p>
+<h4>
+    <b><a id="2 Givens" name="2 Givens"><font size="4">2 指定</font></a></b>
+</h4>
+<h5>
+    <b><a id="2.1 Pre-selected Application Packages?" name="2.1 Pre-selected Application Packages?"><font size="+0">2.1
+    预选的应用程序包？</font></a></b>
+</h5>
+<p>
+    需求指定使用任何应用程序包吗？有些指定可能会强烈要求作出一些系统设计决策，其中的一项非常重要的“指定”就是使用可提供预定义软件逻辑和数据组织的特定应用程序包。某些软件包是灵活的并允许进行大量定制；而某些软件包则非常固定且不允许定制。包可能会要求如下组件和决策：
+</p>
+<ul>
+    <li>
+        工作站类型
+    </li>
+    <li>
+        连接方法
+    </li>
+    <li>
+        处理器和直接访问存储设备（DASD）类型
+    </li>
+    <li>
+        系统控制程序
+    </li>
+    <li>
+        数据组织、放置和管理
+    </li>
+    <li>
+        编程语言
+    </li>
+    <li>
+        批处理接口
+    </li>
+    <li>
+        流程和数据关系
+    </li>
+    <li>
+        业务逻辑
+    </li>
+    <li>
+        屏幕设计和用户界面
+    </li>
+    <li>
+        性能和可用性属性
+    </li>
+    <li>
+        任何现有或必需的打印体系结构，如首选的打印数据格式（例如，PostScript、PCL、IPDT）
+    </li>
+    <li>
+        本地语言支持（NLS）
+    </li>
+</ul>
+<p>
+    了解任何给定包将对设计产生的影响是很重要的。如果您有一个“指定”包，则应确保您能获得有关该包的适当技能和知识。 这可能来自：
+</p>
+<ul>
+    <li>
+        包的供应商
+    </li>
+    <li>
+        外部顾问
+    </li>
+    <li>
+        经过特殊培训的设计团队成员
+    </li>
+</ul>
+<p>
+    不要假定该知识是现成可用的。要确保在您需要时可用。
+</p>
+<h5>
+    <b><a id="2.2 Other Givens" name="2.2 Other Givens"><font size="+0">2.2 其他指定</font></a></b>
+</h5>
+<p>
+    记录那些需求中将限制设计灵活性的任何其他给定事项。
+</p>
+<p>
+    如果您在早期任务中没有明确地考虑到有些可能会限制设计灵活性的特定需求，现在您就要处理所有这些需求。例如，考虑以下所有需求：
+</p>
+<ul>
+    <li>
+        现有处理器或操作系统映像的使用
+    </li>
+    <li>
+        现有工作站设备的使用
+    </li>
+    <li>
+        现有网络的使用
+    </li>
+    <li>
+        现有系统管理实践的使用
+    </li>
+    <li>
+        特定模型的使用，如：“对明确显示演示／业务／数据访问逻辑以及对接位置和方法的设计，必须使用客户机／服务器系统模型”。
+    </li>
+</ul>
+<p>
+    有任何这些给定条件会影响新的系统吗？如果新系统将在现有处理器、操作系统映像或网络配置上运行，那么现有平台和工作负载的属性会影响新系统吗？
+</p>
+<p>
+    现有工作负载已占用了多少连接和处理容量？
+</p>
+<p>
+    现有工作负载使用的是什么安全性控制？记下这些控制，并在考虑新系统时针对其安全性需求检查这些控制。
+</p>
+<p>
+    现有工作负载的可用性属性是什么？
+</p>
+<p>
+    请注意可能影响新系统以后的可用性设计的任何因素。例如，现有工作负载坚持要求每天晚上关闭整个处理器吗？
+</p>
+<h5>
+    <b><a id="2.3 Special Hardware?" name="2.3 Special Hardware?"><font size="+0">2.3 特殊硬件？</font></a></b>
+</h5>
+<p>
+    这些需求指定使用任何特殊硬件吗？
+</p>
+<p>
+    这可以用一般性的术语来陈述（“系统必须支持高速平板绘图仪”），也可以更具体些（“系统将支持现有的 Panda Corp ATM”）。尽可能记录：
+</p>
+<ul>
+    <li>
+        任何硬件或软件先决条件
+    </li>
+    <li>
+        供应商及其支持组织
+    </li>
+    <li>
+        本地语言（NLS）注意事项
+    </li>
+    <li>
+        加密设备
+    </li>
+</ul>
+<h5>
+    <b><a id="2.4 Existing Data?" name="2.4 Existing Data?"><font size="+0">2.4 现有数据？</font></a></b>
+</h5>
+<p>
+    这些需求指定使用现有的数据吗？如果有所指定，则将影响您的系统设计。记录：
+</p>
+<ul>
+    <li>
+        数据当前所在的系统
+    </li>
+    <li>
+        其结构（如关系文件或平面文件）
+    </li>
+    <li>
+        其大小
+    </li>
+    <li>
+        当天使用这些数据的用户和系统
+    </li>
+    <li>
+        可用性考虑事项（例如，由于进行数据库维护或批处理任务而导致数据不可用的时间段）
+    </li>
+    <li>
+        这些数据可以移动或复制吗？
+    </li>
+</ul>
+<h4>
+    <b><a id="3 Standards" name="3 Standards"><font size="4">3 标准</font></a></b>
+</h4>
+<h5>
+    <b><a id="3.1 Technical Architecture / Strategic Plan" name="3.1 Technical Architecture / Strategic Plan"><font     size="+0">3.1 技术体系结构／策略计划</font></a></b>
+</h5>
+<p>
+    客户端具有技术体系结构和／或 IT 策略计划（或等价的一组标准）吗？
+</p>
+<p>
+    技术体系结构大致相当于以下几项：
+</p>
+<ul>
+    <li>
+        企业技术平台
+    </li>
+    <li>
+        企业技术基础结构
+    </li>
+    <li>
+        技术体系结构
+    </li>
+</ul>
+<p>
+    在技术体系结构中，您可能发现以下各项的一些已经定义：
+</p>
+<ul>
+    <li>
+        计算中心的数量和使用
+    </li>
+    <li>
+        企业的网络连接（WAN）
+    </li>
+    <li>
+        某些设施的本地化连接（LAN）
+    </li>
+    <li>
+        客户机／服务器基础结构服务（中间件），包括
+    </li>
+</ul>
+<blockquote>
+    <p>
+        · 跟踪网络资源和属性的目录和命名服务<br />
+         · 通过注册用户和用户权限级别来保护网络资源免受未授权使用的安全服务<br />
+         · 在网络中调节日期和时间的时间服务<br />
+         · 跨某一网络中的多个系统协调资源恢复的事务管理服务
+    </p>
+</blockquote>
+<ul>
+    <li>
+        将用于新应用程序的开发方法&nbsp;
+    </li>
+    <li>
+        已被接受的一组支持产品，如：
+    </li>
+</ul>
+<blockquote>
+    <p>
+        · 硬件<br />
+         · 系统控制软件<br />
+         · 常用的应用软件，如“Office”<br />
+         · 帮助台使用<br />
+         · 安全性规则
+    </p>
+</blockquote>
+<ul>
+    <li>
+        打印子系统体系结构
+    </li>
+</ul>
+<p>
+    列表的范围可能很广，并且其中的项可能是受严密控制的，也可能根本没有强制实行。
+</p>
+<p>
+    记录明确要求或排除使用如下子体系结构的任何需求：
+</p>
+<ul>
+    <li>
+        OSI 或 SNA
+    </li>
+    <li>
+        UNIX**
+    </li>
+    <li>
+        SAA
+    </li>
+    <li>
+        PS/2*，装有 OS/2* EE。
+    </li>
+</ul>
+<p>
+    使用打包应用程序解决方案可能会包含的特殊体系结构。请记住，某些应用程序包有权进行体系结构定义。
+</p>
+<p>
+    记录客户端所要求的开放度（即供应商独立性和互操作性）。如果存在技术体系结构，则您的设计将几乎总要符合该体系结构。您应该理解该体系结构并了解将影响该系统设计的规则。
+</p>
+<h5>
+    <b><a id="3.2 Network Architecture" name="3.2 Network Architecture"><font size="+0">3.2 网络体系结构</font></a></b>
+</h5>
+<p>
+    客户端具有此系统必须符合的网络体系结构吗？网络体系结构是一组通用的高级连接规则以及通用的传输基础结构。这可能包括主干网络（包括集中器和线路）的定义。如果存在这样的体系结构，则请理解基本规则和拓扑并记录：
+</p>
+<p>
+    物理拓扑的注意事项（即，网络本质上是针对农村还是城市的，以及网络连接是密集分发还是松散分发的）。
+</p>
+<p>
+    当前的网络基础结构支持哪些高级连接功能。
+</p>
+<p>
+    使用哪些通信标准（如 SNA、OSI、TCP/IP）支持这些连接功能。
+</p>
+<p>
+    支持哪些编程接口。
+</p>
+<p>
+    客户机／服务器层或基本系统模型层之间连接的任何网络体系结构定义，如：
+</p>
+<ul>
+    <li>
+        客户机工作站与 LAN 关系服务器之间的关系数据访问必须通过特定关系数据库产品的协议来进行。
+    </li>
+    <li>
+        表示逻辑必须始终位于工作站中，并且数据访问逻辑必须始终位于集中式主机系统中。
+    </li>
+</ul>
+<h5>
+    <b><a id="3.3 Connection Policies" name="3.3 Connection Policies"><font size="+0">3.3 连接策略</font></a></b>
+</h5>
+<p>
+    客户端具有任何已规定的连接策略吗？
+</p>
+<p>
+    即使您不具有技术或网络体系结构，仍可具有某些连接策略。
+</p>
+<p>
+    记录任何有关以下事项的策略：
+</p>
+<ul>
+    <li>
+        使用特定协议或通信设施（用于一座大楼内部或者大楼或组织外部的连接）。
+    </li>
+    <li>
+        为了支持现有设备或软件，是否隐含地需要任何特定协议。
+    </li>
+    <li>
+        是否要使用现有物理连接设施（即电缆或电线、网络或外围控制器以及公用通信公司设施）。如果不使用，则对可使用的物理设施的类型可能会有限制（政策、政府法规、物理空间、场地所有权以及涉及第三方）。记录这些内容。
+    </li>
+    <li>
+        如果可能需要安装或修改物理设施，则可能需要涉及一家或多家第三方（如承包商或公用通信公司）。要了解如何处理承包或职责。如果业务交往将涉及到国际联系，这一点就尤其重要了。
+    </li>
+    <li>
+        支持移动用户。
+    </li>
+</ul>
+<h5>
+    <b><a id="3.4 Other Policies?" name="3.4 Other Policies?"><font size="+0">3.4 其他策略？</font></a></b>
+</h5>
+<p>
+    客户端还有其他策略、标准或规则未在需求中明确陈述吗？例如：
+</p>
+<ul>
+    <li>
+        用户的所有新系统接口必须根据面向对象原则进行设计，允许拖放操作。
+    </li>
+    <li>
+        所有新系统都必须以客户机／服务器应用模型为基础。
+    </li>
+    <li>
+        所有新系统都必须用开放标准来定义。
+    </li>
+    <li>
+        本地语言支持（NLS）的标准和策略，特别是如从右到左文本操作之类的事项。
+    </li>
+    <li>
+        安全策略，定义用户认证、访问控制和数据保护的管理职责和标准。
+    </li>
+    <li>
+        应用程序交换标准（如 UNEDIFACT 或 VISA），可能包含使用针对连接或安全性的特殊设备。
+    </li>
+</ul>
+<p>
+    如果存在其他策略，则确保理解这些策略并有权访问它们，这样就可保证您的设计在设计流程的以后阶段符合标准。如果使用打包应用程序解决方案，则很可能会给它带来某些隐含的标准。
+</p>
+<p>
+    什么策略允许用户或部门在以下位置添加和／或开发其本地程序：
+</p>
+<ul>
+    <li>
+        工作站
+    </li>
+    <li>
+        服务器（特别是磁盘空间使用）
+    </li>
+</ul>
+<p>
+    如果不加控制，您会发现本地使用很快用完生产系统所需的资源，而本地组件原本是为生产系统购买的。您还会发现，当最终准备展示生产系统时，却无法安装生产系统。
+</p>
+<h4>
+    <b><a id="4 Numbers" name="4 Numbers"><font size="4">4 数量</font></a></b>
+</h4>
+<h5>
+    <b><font size="+0">4.1 “评测单元”</font></b>
+</h5>
+<p>
+    与应用程序开发人员协作，将业务流程细分为更小的单元，如更小的业务流程或事务。
+</p>
+<p>
+    这样做的原因在于要获取下一个问题中的数字，并且必须决定要计算的对象。
+</p>
+<p>
+    请注意，一个业务流程会启动较小业务事务的几个实例（例如，每个客户订单有多个商品订单），并在记录数字时应记住这些乘数。但是，不要为过多的细节所牵制，特别是对于复杂的系统。
+</p>
+<p>
+    通常，一个业务“流程”（如客户订单处理）将由一个“应用程序”（IT 术语）来实施，但它也可能由多个应用程序来实施。在每个应用程序中，通常会有很多 IT“事务”，例如，“查询库存水平”或“生成客户信函”。
+</p>
+<p>
+    不同的团体使用各自的名称标识正试图认同的单元。例如，“事务”对于具有应用程序开发背景的人来说可能是一种意思，而对于基础结构团队来说则会是另一种完全不同的意思。协同合作以使名称相互关联并随后收集信息是很重要的。
+</p>
+<h5>
+    <b><font size="+0">4.2 “业务量和大小”</font></b>
+</h5>
+<p>
+    确定并记录 4.1“评测单元”中每个单元的业务量和大小信息，例如：
+</p>
+<ul>
+    <li>
+        按平均和高峰时间，预计有多少用户将使用每个业务流程或应用程序。
+    </li>
+    <li>
+        何时为高峰期（每天、每星期、每月等，适可而定）。
+    </li>
+    <li>
+        在高峰期和平均情况下，处理事务所需的速率。
+    </li>
+    <li>
+        每个数据组中数据元素和实例的数量和大小。
+    </li>
+</ul>
+<h5>
+    <b><font size="+0">4.3 “业务流程性能条件”</font></b>
+</h5>
+<p>
+    客户端可能为某些或所有业务流程指定了性能条件。但还请记住，记录系统支持流程（如系统备份）和应用程序开发流程的性能目标（如已确定）。对每个类别，记录：
+</p>
+<ul>
+    <li>
+        每个类别的响应／周转需求。
+    </li>
+    <li>
+        在何处评估这些类别。
+    </li>
+    <li>
+        是否在不同时间（例如非高峰期／夜间）可接受不同的条件。
+    </li>
+    <li>
+        在恢复或回退期间是否要符合条件。
+    </li>
+    <li>
+        是否需要性能保证。
+    </li>
+    <li>
+        如果不符合性能需求，将对任一方有何影响。
+    </li>
+    <li>
+        表述业务流程被认为可用的最低性能条件（也就是说，在该点以下，系统将被认为是“不可用”而不是“缓慢”）。
+    </li>
+    <li>
+        如果已选择打包应用程序解决方案，则请确保您有权访问其性能属性。您现在可能根本不需要这些性能特征，但是将来一旦需要，您应该知道从哪里找到它们。让第三方提供您所需的数字也可能要花很长时间，故请立即索取这些数字。
+    </li>
+</ul>
+<h4>
+    <b><a id="5 Availability" name="5 Availability"><font size="4">5 可用性</font></a></b>
+</h4>
+<h5>
+    <b><a id="5.1 Availability Advice" name="5.1 Availability Advice"><font size="+0">5.1 可用性建议</font></a></b>
+</h5>
+<p>
+    确定可用性需求的建议方法如下：
+</p>
+<ol>
+    <li>
+        确定系统的真实用户、他们正在执行的业务流程以及用户执行这些流程的时间（小时）
+    </li>
+    <li>
+        分析服务可用性（或不可用性）对用户完成其业务目标的能力的影响
+    </li>
+    <li>
+        指定适当的可用性需求，以直接反映用户为了完成其业务目标而具有的需求。
+    </li>
+    <li>
+        请注意，如果已经选择了封装的应用程序解决方案，那么它的结构和设计可能会对用户所看到的应用程序可用性特征产生重大影响。如果未设计成连续运作，包可能很难连续运作，特别是对于维护和批处理窗口。
+    </li>
+</ol>
+<p>
+    在形成可用性需求时，考虑这些指南：
+</p>
+<ul>
+    <li>
+        与其指定整个系统的“全局”需求，不如以较小的粒度（例如按各个流程、用户组、数据组等）来指定可用性需求。这样，设计人员就能够更加灵活地满足用户的需要。这对于具有很高连续可用性需求的系统尤其重要。
+    </li>
+</ul>
+<p>
+    一些示例：
+</p>
+<ul>
+    <li>
+        语句“系统必须每天 24 小时为纽约和香港的用户提供服务”为设计人员提供的设计灵活性就远不如语句“从纽约时间上午 7 点到下午 7 点，纽约用户必须能够对他们的数据执行事务处理；从香港时间上午 7 点到下午 7
+        点，香港用户必须能够对他们的数据执行事务处理”。在后一情况下，设计人员可对一个时区的数据或系统组件灵活地进行维护，与此同时其他时区仍处于工作日中。
+    </li>
+    <li>
+        在 ATM 应用程序中，在周一凌晨 3 点接受存款和取款是至关重要的，而在该时段提供确切帐户余额的能力可能并不那么重要。
+    </li>
+    <li>
+        区分“希望的”和“必需的”可用性属性。例如，“ATM 必须能够每天 24 小时接受存款和取款。希望 ATM 能够每天 24 小时为客户提供准确的帐户余额信息；不过，在帐户余额查询过程中可以有偶尔的中断，但中断持续时间必须少于 10
+        分钟，并且只能发生在凌晨 3:00 到凌晨 4:00 之间”。
+    </li>
+    <li>
+        如果不符合特定可用性目标的影响不会直接关系到用户实现业务目标的能力，则可能不适合将该目标定为系统的可用性需求。
+    </li>
+    <li>
+        如果可用性需求只是间接地反映了用户所感受到的可用性（例如“必须建立 IMS 控制区域”），这样的可用性需求通常不如那些直接反映可用性的需求有用（例如“银行出纳员必须能够执行流程 X 和 Y”）。
+    </li>
+</ul>
+<h5>
+    <b><font size="+0">5.2 “计划的服务时段”</font></b>
+</h5>
+<p>
+    对于每个业务流程和必须执行这些流程的用户组，确定用户必须能够执行该流程的时段。记住也要对那些不直接与用户组相关的流程执行该步骤。
+</p>
+<p>
+    如果用户组处在不同的时区（比如前面的“纽约／香港”示例），则将他们视为不同的用户组。
+</p>
+<p>
+    还显示是否存在可能不需要应用程序的特殊时期（比如业务节假日）。（这使设计人员能灵活地利用那些时期进行扩展维护）。在应用程序的计划生命期中的这些服务时段，预计会有什么变更呢？
+</p>
+<p>
+    该系统的服务时段也可能受与该系统对接的其他系统的服务时段的影响。
+</p>
+<p>
+    在该系统的计划生命期内，系统的预设服务时段预期会如何变化呢？
+</p>
+<h5>
+    <b><font size="+0">5.3 “服务中断成本”</font></b>
+</h5>
+<p>
+    了解在预设服务时段，与服务中断相关的业务影响、财务成本和风险。
+</p>
+<p>
+    要确定对该系统真正重要的可用性需求，请考虑一组业务流程和用户组并确定以下情况的业务影响：
+</p>
+<ul>
+    <li>
+        在预设时段，短暂中断或一段慢得无法接受的响应时间。当定义“短暂”和“极其缓慢”这两个短语时，应考虑到所使用的特定应用程序（请参阅“业务流程性能标准”）
+    </li>
+    <li>
+        在以上服务时段内的各种较长期中断（一分钟、几分钟、15 分钟、30 分钟、1 小时、2 小时、4 小时等等）
+    </li>
+    <li>
+        服务时段内的长期中断（一班、一天、几天等）。
+    </li>
+    <li>
+        还考虑不与用户组直接相关的任何流程（例如，晚间支票结算）。
+    </li>
+</ul>
+<p>
+    在评估每个中断的影响时，确定回退过程并考虑这些过程会如何减轻中断的真正业务影响。
+</p>
+<p>
+    尝试用财务术语（损耗人员或设备生产力的成本、损失当前业务的价值、由于客户不满意而造成的未来业务损失估计、利息费用、违规罚款等）量化该影响。
+</p>
+<p>
+    提供尽可能多的解答，以反映与不同持续时间的中断相关的成本和风险的差别，包括一天内的不同时间、是否进行了规划、哪些业务流程或用户受到了影响等。
+</p>
+<p>
+    在此系统的计划生命期内，预见服务中断的业务／财务影响将会有怎样的变化？
+</p>
+<p>
+    如果系统的某些部分变得暂时不可用，则检查每个已得到认同的重要业务流程，确定备用方案，以允许那些流程中最关键的元素继续发挥作用。如果能够暂时使用减少了的业务功能运作，则可能帮助减少关键流程和数据之间相互依赖关系的可用性影响。
+</p>
+<p>
+    一些示例：
+</p>
+<ul>
+    <li>
+        完全功能 1 读取和更新库存记录。
+    </li>
+    <li>
+        减少了的功能 1 输入库存记录的更新，排队以在将来进行更新。
+    </li>
+    <li>
+        完全功能 2 读取最新的客户余额。
+    </li>
+    <li>
+        减少了的功能 2 从备用源读取客户余额（可能不完全是当前的）。
+    </li>
+    <li>
+        完全功能 3 更新计算机日志。
+    </li>
+    <li>
+        减少了的功能 3 更新日志文件的打印副本。
+    </li>
+</ul>
+<p>
+    请记住，当系统使用减少了的功能时，对于业务流程的可接受程度可能存在限制。例如，过时的客户余额的过时时间不得超过 24 小时。
+</p>
+<p>
+    如果服务在计划时间内中断（请参阅“计划的服务时段”），则中断的影响通常会根据中断持续时间及其他条件而有所变化。某些中断对用户执行业务流程的能力可能影响极小（短暂中断，发生在一天当中使用率很低的时期的中断，只影响用户组的一个子集的中断，或存在可接受的手动回退过程的中断）。
+    其他中断（如持续时间较长的中断、或在一天中的“重要”时间段内发生的中断）则可能会产生更重大的影响。&nbsp;
+</p>
+<p>
+    一些示例：
+</p>
+<ul>
+    <li>
+        生产线控制流程的短暂中断对生产力的影响可能极小，因为工作可根据先前打印好的工作单继续下去，并可手动标注变更以在将来输入。但如果中断超过一小时，则可能导致班次剩余部分的生产线关闭。
+    </li>
+    <li>
+        在贸易进行的最后时刻，大额财务结算系统的中断可能导致重大的利息损失或违规罚款。
+    </li>
+    <li>
+        如果分派系统不可用，警察和消防部门能够继续使用手动回退过程来响应危及生命的紧急事件。但由于分派器的工作负载增加，响应时间可能会增加，并潜在地威胁生命。
+    </li>
+    <li>
+        航空或酒店预订系统在高峰期的中断不仅会导致损失当前业务（这时客户致电竞争对手进行预订），而且会导致损失将来的业务（如果客户对此很不满意，以致在下次需要这些服务时首先致电其他航空公司或酒店）。
+    </li>
+</ul>
+<h5>
+    <b><font size="+0">5.4 “可用性和恢复标准”</font></b>
+</h5>
+<p>
+    确定在“正常”情况下所采用的可用性和恢复标准。
+</p>
+<p>
+    不包括“灾难”情况，例如损失严重或整个计算设备关闭。
+</p>
+<p>
+    根据在“服务中断成本”中确定的业务／财务成本和风险来制定可用性标准的规范，必须满足这些可用性标准才能避免严重阻碍用户组执行他们所负责的业务流程。这样的条件可按如下形式指定：
+</p>
+<ul>
+    <li>
+        在给定分钟数／秒数内恢复的中断的百分比
+    </li>
+    <li>
+        在给定周／月／年内用户无法执行特定功能的最大时间量
+    </li>
+</ul>
+<p>
+    尽量具体地反映各种因素，例如计划中和计划外中断之间的差异、发生中断的时间（例如，是“关键”时间段还是使用率不高的时间段）、是所有用户还是少数几位用户受到影响等等。
+</p>
+<p>
+    注意，不要指定过于严格的可用性条件，因为这会显著影响实施成本。通常，如果无法用给定的一组中断条件来确定重大的业务／财务成本或风险，则表明这组中断条件不应包括在规定的可用性条件内。
+</p>
+<p>
+    如果“计划的服务时间”表示计划的服务时间有可能会发生变化，并且／或者“服务中断成本”表示与服务中断相关的业务务成本或风险有可能在预计的系统生命期内发生变化，那么，估计这些情况会使可用性标准发生什么样的变化。
+</p>
+<p>
+    如果要使用加密，则还将有其他恢复和可用性注意事项。例如：
+</p>
+<ul>
+    <li>
+        系统外部人员可能具备复原加密信息的能力。
+    </li>
+    <li>
+        需要确保受加密保护的数据的恢复与相应的加密密钥的恢复协调进行。
+    </li>
+</ul>
+<h5>
+    <b><font size="+0">5.5 “灾难恢复？”</font></b>
+</h5>
+<p>
+    在该设计项目的范围内，是否需要灾难恢复（在“灾难”情况下的可用性，例如在损失严重或整个计算设备关闭时的可用性）？如果要求，这种恢复的条件是什么？
+</p>
+<p>
+    请注意，可能并非所有业务流程都将需要灾难恢复设施。只选择那些至关重要的并确实需要灾难恢复的流程。即使在那些流程中，也可能不需要恢复所有的功能。
+</p>
+<ul>
+    <li>
+        服务必须在多长时候内得到服务？这是从灾难发生时还是从决定转到远程站点时进行估量？
+    </li>
+    <li>
+        在哪些条件下，组织决定在远程站点（而不是本地）进行恢复？
+    </li>
+    <li>
+        数据在远程站点必须达到何等最新程度才能让业务继续运作（绝对最新；故障发生的几分钟内；可接受前一天的数据）？
+    </li>
+    <li>
+        服务何时首先从远程站点恢复？
+    </li>
+    <li>
+        在某个未来的时间点吗？
+    </li>
+    <li>
+        这组应用程序相对于依赖同一计算设施的其他业务应用程序的远程站点恢复优先级是什么？
+    </li>
+</ul>
+<p>
+    请注意，对于系统的不同部分或根据灾难的类型，可能存在不同的条件集。
+</p>
+<p>
+    在应用程序的计划生命期内，上述灾难恢复需求预期会有什么变更？
+</p>
+<h5>
+    <b><font size="+0">5.6 “其他可用性设计注意事项”</font></b>
+</h5>
+<p>
+    要设计尽快恢复的系统，设计人员需要了解在实施应用程序时所允许的灵活程度，同时仍要符合该应用程序的功能需求。这里有一些问题对设计人员是有用的：
+</p>
+<p>
+    1. 为了能够进行必需的维护任务，系统是否可以在短时间内执行以下操作：
+</p>
+<blockquote>
+    <p>
+        a. 执行查询但不更新？
+    </p>
+    <p>
+        b. 接受用户发出的更新请求，但实际上要在维护任务完成后才更新数据库？
+    </p>
+</blockquote>
+<p>
+    2. 对于要求恢复数据的中断情况，执行以下操作是否更加重要：
+</p>
+<blockquote>
+    <p>
+        c. 尽快恢复服务（即使这意味着使用不完全最新的数据），或者：
+    </p>
+    <p>
+        d. 在恢复服务之前将所有数据恢复到当前状态（即使这会花更长的时间）？
+    </p>
+</blockquote>
+<p>
+    3. 假如发生故障时用户请求“正在处理中”，该用户是否一定会在服务恢复后重新输入请求？
+</p>
+<p>
+    4. 存在可能影响该系统可用性的任何非技术注意事项（如某个业务策略指出流程 A 不得供用户使用，除非流程 B 也可用）吗？
+</p>
+<p>
+    上述设计注意事项预期会随着时间发生变化吗？
+</p>
+<p>
+    对于那些对业务至关重要的流程，确定备选方案是有用的，因为即使当该系统的某些部分暂时不可用时，备选方案也允许那些流程中最关键的元素显示作用。如果能够暂时使用减少了的业务功能运作，则可能帮助减少关键流程和数据之间相互依赖关系的可用性影响。
+</p>
+<h4>
+    <b><a id="6 Security" name="6 Security"><font size="4">6 安全性</font></a></b>
+</h4>
+<h5>
+    <b><font size="+0">6.1 “安全性需求”</font></b>
+</h5>
+<p>
+    1. 确定要保护的数据
+</p>
+<p>
+    2. 确定每种数据所面临的威胁的类型：
+</p>
+<ul>
+    <li>
+        意外毁坏或破坏
+    </li>
+    <li>
+        蓄意毁坏或破坏
+    </li>
+    <li>
+        商业间谍
+    </li>
+    <li>
+        欺诈
+    </li>
+    <li>
+        黑客
+    </li>
+    <li>
+        病毒
+    </li>
+</ul>
+<blockquote>
+    <p>
+        1. 确定对实际安全性的威胁：
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                窃取组件
+            </li>
+            <li>
+                未授权的物理访问
+            </li>
+            <li>
+                用户的身体安全
+            </li>
+        </ul>
+    </blockquote>
+    <p>
+        2. 确定有可能成为这些威胁来源的人：
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                数据中心职员
+            </li>
+            <li>
+                其他 IT 职员（例如，开发人员）
+            </li>
+            <li>
+                组织中的非 IT 职员
+            </li>
+            <li>
+                组织外部人员
+            </li>
+        </ul>
+    </blockquote>
+    <p>
+        3. 确定任何特殊或异常的安全需求，特别是与以下方面有关的需求：
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                访问系统
+            </li>
+            <li>
+                数据加密
+            </li>
+            <li>
+                审计能力
+            </li>
+        </ul>
+    </blockquote>
+    <p>
+        4. 存在可能影响该系统的安全性设计的一般政策（如信息自由条例）吗？
+    </p>
+    <p>
+        5. 某些打包的应用程序解决方案具有自己的安全性子系统。如果您有“给定”的程序包，则要了解它的安全性功能。
+    </p>
+</blockquote>
+<p>
+    为了确定安全性需求并对其分类，可能要使用以下方法：
+</p>
+<blockquote>
+    <p>
+        1. 按逻辑或物理安全性列出要求保护的对象。
+    </p>
+    <p>
+        2. 确定与每个对象相关的风险。典型的类别是：
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                查看访问（违反机密性），例如帐户信息、客户列表和专利。
+            </li>
+            <li>
+                更新访问，即修改数据以诈骗、掩饰和转移资金。
+            </li>
+            <li>
+                资产丧失，即资产被他人占有且不再可供所有者使用（与因灾难而引起的损失区分开）。示例有：客户和潜在客户列表、合同等。
+            </li>
+        </ul>
+    </blockquote>
+    <p>
+        注意，并非所有对象都容易受上述所有风险的影响。
+    </p>
+    <p>
+        3. 确定与您的环境相关的所有威胁。示例有：
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                心怀不满的员工
+            </li>
+            <li>
+                未授权的员工
+            </li>
+            <li>
+                公共场所的开放式终端会话
+            </li>
+            <li>
+                黑客
+            </li>
+            <li>
+                线路窃听
+            </li>
+            <li>
+                设备丢失（如便携式 PC）
+            </li>
+        </ul>
+    </blockquote>
+    <p>
+        4. 为每个对象确定可能适用的威胁并将其与特定风险相关联。
+    </p>
+</blockquote>
+<p>
+    注意，您必须在静态位置（如在硬盘上）和在传输中（如在传输期间）均检查对象的安全性需求。
+</p>
+<p>
+    因为设计可能超出对象所在的位置而进入无保护区域，所以必须重新访问该主体。
+</p>
+<p>
+    某些系统设计在安全性方面可能要求很高。它们可能决定您的设计决策。它们可能导致无法接受其他好的结构和组件选择。因此对于正在设计的系统是否有特别高的安全性需求，请立即作出明确的选择。例如：
+</p>
+<ul>
+    <li>
+        敏感的军用系统
+    </li>
+    <li>
+        巨款传送系统
+    </li>
+    <li>
+        处理机密私人信息的系统
+    </li>
+</ul>
+<p>
+    如果您认为有特殊的安全性要求，则应确定一个安全专家或专业人员来帮助进行系统设计。
+</p>
+<h4>
+    <b><a id="6 Usability" name="6 Usability"><font size="4">7 可用性</font></a></b>
+</h4>
+<p>
+    可用性需求定义用户界面必须达到多高的可用性。
+</p>
+<p>
+    可用性需求应设置为系统为了得以使用而必须达到的最低可用性级别。而不应设置为您认为系统可以达到的级别。换言之，可用性需求不应视为一个目标（即上限）。可用性需求应定义可接受的绝对最低系统可用性。因此，当达到可用性需求时，您将不必停止改进可用性。
+</p>
+<p>
+    系统为了得以使用而必须达到的级别主要取决于使用系统的备选方案是什么。要求系统应当明显比备选方案更可用，这是合理的。备选方案可利用：
+</p>
+<ul>
+    <li>
+        现有的手动过程。
+    </li>
+    <li>
+        旧系统。
+    </li>
+    <li>
+        竞争产品。
+    </li>
+    <li>
+        系统的较早版本。
+    </li>
+</ul>
+<p>
+    可用性需求也可能来自从经济上证明新系统合理性这一需要：如果客户必须为新系统支付 3 百万美元，那么他可能想施加可用性需求，这意味着由于在人力资源上降低了工作负载，他每年可能将节省 1 百万美元。
+</p>
+<p>
+    以下是某些一般可用性需求的示例：
+</p>
+<ul>
+    <li>
+        最长执行时间 － 经过培训的用户执行一个普通方案所应花费的时间。
+    </li>
+    <li>
+        最大错误率 － 经过培训的用户执行一个普通方案的平均错误数。<br />
+         与评估相关的错误只是那些不可恢复的、将对组织有负面影响的错误，例如损失业务或引起受监视硬件的损坏。如果错误的唯一后果只是花时间修复，那么这影响的将是所评估的执行时间。
+    </li>
+    <li>
+        学习时间 － 用户学会在指定的最长执行时间内执行方案所花的时间。
+    </li>
+</ul>
+<p>
+    以下是“管理进入的邮件消息”用例的某些特定可用性需求的示例。
+</p>
+<ul>
+    <li>
+        邮件用户应只需单击鼠标就能排列邮件消息。
+    </li>
+    <li>
+        邮件用户应只需按键盘单键就能滚动邮件消息文本。
+    </li>
+    <li>
+        阅读现有的邮件消息时，邮件用户不应被进入的邮件消息所打扰。
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

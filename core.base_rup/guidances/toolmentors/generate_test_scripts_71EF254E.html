@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational TestFactory 实施生成的测试脚本</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="generate_test_scripts" name="uma.name">
+<meta content="使用 Rational TestFactory 实施生成的测试脚本" name="uma.presentationName">
+<meta content="Tool:rup_test_factory:Rational TestFactory" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestFactory" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{19F8AE86-E40A-42F5-8B81-673C306F5C35}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{19F8AE86-E40A-42F5-8B81-673C306F5C35}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{19F8AE86-E40A-42F5-8B81-673C306F5C35}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{19F8AE86-E40A-42F5-8B81-673C306F5C35}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational TestFactory 实施生成的测试脚本</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational TestFactory 自动生成测试脚本，这些测试脚本用于测试被测试应用程序的特定区域。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_test_factory_3EDA2115.html" guid="{FBA5098E-2CA8-483D-814D-DE3E876426B1}">Rational TestFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">实施测试套件</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    “Pilot”是可用于生成测试脚本的 Rational TestFactory 工具。Pilot 生成用于测试被测试应用程序（AUT）中的控件功能的脚本，这些控件由应用程序图的某个区域中的 UI
+    对象表示。有关开发应用程序图的信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_testfactory_C77C34F4.html" guid="{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}">工具向导：在 Rational TestFactory 中设置测试环境</a>。
+</p>
+<p>
+    在运行 98/2000/NT 4.0 时此工具向导可用。
+</p>
+<p>
+    要使用 Rational TestFactory 自动生成测试脚本：
+</p>
+<ol>
+    <li>
+        <a href="#Add Pilot">向应用程序图添加 Pilot</a>
+    </li>
+    <li>
+        <a href="#Set up run Pilot">设置和运行 Pilot</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="Add Pilot" name="Add Pilot">向应用程序图添加 Pilot</a>
+</h3>
+<p>
+    可在应用程序图中的任何位置添加 Pilot 对象。Pilot 将从此处自动生成测试脚本，这些测试脚本的重点放在与应用程序图的该部分相对应的 AUT 的特定功能区域。
+</p>
+<p>
+    要确定需要测试应用程序的哪一部分，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/structure_test_implementation_3CC01B9C.html" guid="{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}">工具向导：捕获自动化测试的测试设计结果</a>中的第一个任务。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参考 Rational TestFactory
+    联机帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Pilots: What they are and how they work</i>
+    </li>
+    <li>
+        <i>Effective Pilot placement</i>
+    </li>
+    <li>
+        <i>Add a Pilot</i>
+    </li>
+</ul>
+<h3>
+    2. <a id="Set up run Pilot" name="Set up run Pilot">设置和运行 Pilot</a>
+</h3>
+<p>
+    设置 Pilot 时，您需要指示控制 Pilot 如何运行的值和选项。可指定的设置信息包括：
+</p>
+<ul>
+    <li>
+        Pilot 必须在应用程序图中测试的深度。
+    </li>
+    <li>
+        Rational TestFactory 用于停止 Pilot 运行的条件。
+    </li>
+    <li>
+        要在测试中包含的应用程序图中的其他 UI 对象。
+    </li>
+    <li>
+        要从测试中排除的 Pilot 控制下的 UI 对象。
+    </li>
+</ul>
+<p>
+    在 Pilot 运行过程中，Pilot 将构建一个优化的“最佳脚本”，该脚本提供广泛的基于代码的测试覆盖率且不包含冗余脚本代码。
+</p>
+<p>
+    Pilot 还将生成针对基于 UI 的测试覆盖率优化过的“UI 脚本”。在 AUT 的后续构建中，可将 UI 脚本作为简单的冒烟测试运行来检查用户界面中的控件。
+</p>
+<p>
+    每次运行 Pilot 时，Rational TestFactory 都将在应用程序图的 Pilot 下添加一个新的“run”文件夹。该 run 文件夹包含 Pilot 生成的测试脚本。如果 Pilot
+    在运行过程中遇到缺陷，TestFactory 将把该缺陷测试脚本放到 run 文件夹下的“defects”子文件夹中。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参考 Rational TestFactory
+    联机帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Pilot view</i>
+    </li>
+    <li>
+        <i>Set up a Pilot run</i>
+    </li>
+    <li>
+        <i>Run a single Pilot</i>
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

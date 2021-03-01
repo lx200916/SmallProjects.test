@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 关于方法调用的测试构想</title>
+<meta content="Guideline" name="uma.type">
+<meta content="test_ideas_for_method_calls" name="uma.name">
+<meta content="关于方法调用的测试构想" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "4.418859682485385E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "4.418859682485385E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3lZjkCxqEdqYV4MWf8PiCw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "4.418859682485385E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.418859682485385E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.418859682485385E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：关于方法调用的测试构想</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">测试构想基于可能的软件故障以及发现这些故障的最佳方法。本指南描述了一种方法，用于检测代码不处理调用方法的结果这种情况。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_ideas_list_2A0F8E03.html" guid="{45219F27-0F84-4FD5-A7BC-73C19226303B}">测试构想列表</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test__developer_testing__test_ideas__for_method_calls" name="XE_test__developer_testing__test_ideas__for_method_calls"></a><a id="XE_design__developer_testing__test_ideas__for_method_calls" name="XE_design__developer_testing__test_ideas__for_method_calls"></a><a id="XE_test-ideas__for_method_calls" name="XE_test-ideas__for_method_calls"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    下面是有缺陷的代码的一个示例：
+</p>
+<blockquote>
+<pre>
+File file = new File(stringName);
+file.delete();
+</pre>
+</blockquote>
+<p>
+    缺陷是 <font size="+0">File.delete</font> 可能会失败，但该代码并不会检查这一点。修复它需要添加下面显示的斜体代码：
+</p>
+<blockquote>
+<pre>
+File file = new File(stringName);
+<font color="#ff0000">
+<i>
+<b>
+if (</b></i></font>file.delete()<font color="#ff0000">
+<i>
+<b>
+== false) {...}</b></i></font>
+</pre>
+</blockquote>
+<p>
+    本指南描述了一种方法，用于检测代码不处理调用方法的结果的情况。（请注意它假设所调用的方法为您提供的任何输入都可以生成正确的结果。应该测试这种情况，但是为调用的方法创建测试构想则是另外一项任务。也就是说，测试 <font     size="+0">File.delete</font> 并不是您需要做的事。）
+</p>
+<p>
+    主要思想是您应为方法调用的每个<i>不同的未处理的相关结果</i>创建一个测试构想。为定义该术语，让我们先看一下<i>结果</i>。当一个方法执行时，它会更改一切的状态。下面是一些示例：
+</p>
+<ul>
+    <li>
+        它可能将返回值推到运行时堆栈上。
+    </li>
+    <li>
+        它可能抛出异常。
+    </li>
+    <li>
+        它可能更改一个全局变量。
+    </li>
+    <li>
+        它可能更新数据库中的一个记录。
+    </li>
+    <li>
+        它可能通过网络发送数据。
+    </li>
+    <li>
+        它可能将消息打印到标准输出。
+    </li>
+</ul>
+<p>
+    现在让我们再使用一些示例看一下<i>相关</i>。
+</p>
+<ul>
+    <li>
+        假设正在调用的方法将一条消息打印到标准输出。这“更改了一切的状态”，但它不会影响此程序的进一步处理。不管打印出的是什么，即使什么都没有，它也不能影响您的代码的执行。
+    </li>
+    <li>
+        如果该方法返回 true 表示成功，返回 false 表示失败，您的程序非常可能应基于该结果分支。所以该返回值是相关的。
+    </li>
+    <li>
+        如果所调用的方法更新了您的代码稍后要读取和使用的一个数据库记录，则该结果（更新记录）是相关的。
+    </li>
+</ul>
+<p>
+    （相关和不相关之间没有严格的界限。通过调用 <font     size="+0">print</font>，您的方法可能会引起分配缓冲区，这种分配可能是相关的。可以想像的是，一个缺陷可能取决于是否分配了缓冲区，以及分配了什么缓冲区。这是可以想像的，但它是否根本就是似是而非的呢？）
+</p>
+<p>
+    一个方法可能有非常大量的结果，但是仅其中一部分将是<i>不同的</i>。例如，考虑一个向磁盘写入字节的方法。它可能返回一个小于 0 的数以表示失败；否则，它返回写入的字节数（可能小于所请求的数）。大量的可能性可以分组为三种不同结果：
+</p>
+<ul>
+    <li>
+        小于 0 的数。
+    </li>
+    <li>
+        写入的数等于请求的数
+    </li>
+    <li>
+        一些字节被写入，但小于请求的数
+    </li>
+</ul>
+<p>
+    所有小于 0 的值被分组为一个结果，因为任何合理程序都不可能在它们之间找出不同。所有小于 0 的值（如果实际上可能有多个）都应被视为一个错误。类似地，如果代码请求写入 500 个字节，则实际写入 34 个还是 340
+    个无关紧要：对于未写入的字节可能会进行同一操作。（如果应对某个值，例如 0，进行不同的操作，这将形成一个新的不同结果。）
+</p>
+<p>
+    在定义术语方面还要说明最后一个问题。这种特定的测试技术不关心已经<i>处理的</i>不同结果。再次考虑以下代码：
+</p>
+<blockquote>
+<pre>
+File file = new File(stringName);
+if (file.delete() == false) {...}
+</pre>
+</blockquote>
+<p>
+    有两个不同结果（true 和 false）。代码会处理它们。代码可能会错误地处理它们，但是<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_booleans_and_boundaries_74AE938C.html" guid="1.8659406802663404E-305">工作产品指南：关于布尔值和边界的测试构想</a>中的测试构想将会检查这一点。此测试技术关心未由不同的代码具体处理的不同结果。这种情况发生是由于两种原因：您认为这种不同是不相关的，或您只是没注意到它。下面是第一种情况的示例：
+</p>
+<blockquote>
+<pre>
+result = m.method();
+switch (result) {
+    case FAIL:
+    case CRASH:
+       ...
+       break;
+    case DEFER:
+       ...
+       break;
+    default:
+       ...
+       break;
+}
+</pre>
+</blockquote>
+<p>
+    <font size="+0">FAIL</font> <font size="+0">CRASH</font> 由同一代码处理。检查一下这是否真正适当是比较明智的。下面是一个没有注意到不同的示例：
+</p>
+<blockquote>
+<pre>
+result = s.shutdown();
+if (result == PANIC) {
+   ...
+} else {
+   // success! Shut down the reactor.
+   ...
+} 
+</pre>
+</blockquote>
+<p>
+    其实关闭可能返回另一个截然不同的结果：<font size="+0">RETRY</font>。所编写的代码将这种情况视为与成功的情况相同，这几乎百分之百是错误的。
+</p>
+<h3>
+    <a id="FindingTestIdeas" name="FindingTestIdeas">查找测试构想</a>
+</h3>
+<p>
+    所以您的目标是考虑您先前没有注意到的那些不同相关结果。这看似不可能：如果您先前没认识到它们是相关的，为什么现在会认识到？
+</p>
+<p>
+    答案是对代码的系统性重新检查，当在一种测试心境而不是一种编程心境的情况下，有时会使您有新的思维。您<i>可以</i>通过有系统地一步步执行代码、查看您调用的方法、重新检查它们的文档以及思考而置疑自己的假设。下面是要注意的一些情况。
+</p>
+<h4>
+    “不可能的”情况
+</h4>
+<p>
+    错误返回常常看似不可能。请双重检查您的假设。
+</p>
+<p>
+    下面的示例显示了一个处理临时文件的常见 Unix 代码模式的 Java 实施。
+</p>
+<blockquote>
+<pre>
+File file = new File("tempfile");
+FileOutputStream s;
+try {
+    // open the temp file.
+    s = new FileOutputStream(file);
+} catch (IOException e) {...}
+// Make sure temp file will be deleted
+file.delete();
+</pre>
+</blockquote>
+<p>
+    目标是确保一个临时文件始终删除，而无论该程序如何退出。您通过创建临时文件，然后立即删除它来执行此操作。在 Unix 上，您可以继续处理被删除的文件，操作系统会记住在该进程退出时进行清除。一个不用心的 Unix
+    程序员可能会不写该代码以检查失败的删除。因为只要她成功地创建了这个文件，她一定能够删除它。
+</p>
+<p>
+    此技巧对 Windows 无效。删除将因为文件是打开的而失败。发现这个事实是很困难的：至 2000 年 8 月，Java 文档还没有列举出 <font size="+0">delete</font>
+    可能失败的情况；它只是说可能发生这种情况。但是（可能）在“测试方式”中，程序员可能会置疑她自己的假设。由于假设她的代码是要“一次编写，到处运行”的，她可能询问 Windows 程序员 <font     size="+0">File.delete</font> 何时会在 Windows 上失败，并因此发现可怕的事实。
+</p>
+<h4>
+    “不相关的”情况
+</h4>
+<p>
+    阻碍注意到不同相关值的另一种力量是已经深信它无关紧要。Java <font size="+0">Comparator</font> 的 <font size="+0">compare</font> 方法会返回一个小于 0 的数、0
+    或一个大于 0 的数。这些是可能尝试的三种不同情况。该代码可能会将其中的两种情况混在一起：
+</p>
+<blockquote>
+<pre>
+void allCheck(Comparator c) {
+   ...
+   if (c.compare(o1, o2) &lt;= 0) {
+      ...
+   } else {
+      ...
+   }
+</pre>
+</blockquote>
+<p>
+    但是，这可能是错误的。发现它是否错误的方式是分别尝试两种情况，即使您实际上相信它没有什么区别。（您相信的事物实际上就是您正在测试的事物。）请注意，您可能会因为其他原因而多次执行 <font size="+0">if</font> 语句的
+    <font size="+0">then</font> 情况。为什么不使用小于 0 的结果尝试其中一个，而使用确切等于 0 的结果尝试一个呢？
+</p>
+<h4>
+    未捕获的异常
+</h4>
+<p>
+    异常是一种不同结果。通过后台，考虑以下代码：
+</p>
+<blockquote>
+<pre>
+void process(Reader r) {
+   ...
+   try {
+      ...
+      int c = r.read();
+      ...
+   } catch (IOException e) {
+      ...
+   }
+}
+</pre>
+</blockquote>
+<p>
+    您期望检查该处理程序代码是否对读取错误实际执行正确的操作。但是假设一个异常明显未处理过。相反，允许它通过经受测试的代码向上传播。在 Java 中，这可能看起来如下：
+</p>
+<blockquote>
+<pre>
+void process(Reader r) <font color="#ff0000">
+<i>
+<b>
+throws IOException</b></i></font> {
+    ...
+    int c = r.read();
+    ...
+}
+</pre>
+</blockquote>
+<p>
+    此技术要求您测试该情况，<i>即使</i>该代码明显不处理它。为什么？因为下面这种故障：
+</p>
+<blockquote>
+<pre>
+void process(Reader r) throws IOException {
+    ...
+    <font color="#ff0000">
+<i>
+<b>
+Tracker.hold(this);</b></i></font>
+    ...
+    int c = r.read();
+    ...
+    <font color="#ff0000">
+<i>
+<b>
+Tracker.release(this);</b></i></font>
+    ...
+}
+</pre>
+</blockquote>
+<p>
+    此处，该代码影响了全局状态（通过 <font size="+0">Tracker.hold</font>）。如果抛出异常，将永远不调用 <font size="+0">Tracker.release</font>。
+</p>
+<p>
+    （请注意 release 失败将可能没有明显的直接后果。除非再次调用 <font size="+0">process</font>，否则很可能看不见该问题，因此，再次 <font size="+0">hold</font>
+    该对象的尝试将失败。Keith Stobie 的 <a href="http://www.testingcraft.com/stobie-exceptions.pdf" target="_blank">“测试异常”</a>是关于这些缺陷的一篇好文章。（<a href="http://www.adobe.com/products/acrobat/alternate.html" target="_blank">获取 Adobe Reader</a>））
+</p>
+<h3>
+    <a id="UndiscoveredFaults" name="UndiscoveredFaults">未发现的故障</a>
+</h3>
+<p>
+    此特定技术并不处理与方法调用相关联的所有缺陷。下面是它不能捕获的两种缺陷。
+</p>
+<h4>
+    错误的实参
+</h4>
+<p>
+    考虑下面两行 C 代码，其中第一行是错误的，第二行是正确的。
+</p>
+<blockquote>
+<pre>
+... strncmp(s1, s2, strlen(s1)) ...
+... strncmp(s1, s2, strlen(<font color="#ff0000">
+<i>
+<b>
+s2</b></i></font>)) ...
+</pre>
+</blockquote>
+<p>
+    <font size="+0">strncmp</font> 会比较两个字符串，如果第一个字符串按字典顺序排列小于第二个字符串（即在字典中出现得较早），则返回一个小于 0 的数字。如果这两个字符串相等，则返回
+    0。如果第一个字符串按字典顺序排列大于第二个字符串，则返回一个大于 0 的数字。但是，它仅比较第三个实参提供的字符数。问题是第一个字符串的长度用于限制比较，而它应该等于第二个的长度。
+</p>
+<p>
+    此技术将需要三个测试，对于每个不同的返回值一个。下面是您可以使用的三个测试：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    s1
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    s2
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    预期结果
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    实际结果
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    "a"
+                </td>
+                <td align="middle" width="25%">
+                    "bbb"
+                </td>
+                <td align="middle" width="25%">
+                    &lt;0
+                </td>
+                <td align="middle" width="25%">
+                    &lt;0
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    "bbb"
+                </td>
+                <td align="middle" width="25%">
+                    "a"
+                </td>
+                <td align="middle" width="25%">
+                    &gt;0
+                </td>
+                <td align="middle" width="25%">
+                    &gt;0
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    "foo"
+                </td>
+                <td align="middle" width="25%">
+                    "foo"
+                </td>
+                <td align="middle" width="25%">
+                    =0
+                </td>
+                <td align="middle" width="25%">
+                    =0
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    该缺陷未发现，因为此技术中没有任何东西<i>强制</i>第三个实参有任何特定值。所需要的是如下的测试用例：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    <b>s1</b>
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    <b>s2</b>
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    <b>预期结果</b>
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    <b>实际结果</b>
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    "foo"
+                </td>
+                <td align="middle" width="25%">
+                    "foo<font color="#ff0000"><i><b>d</b></i></font>"
+                </td>
+                <td align="middle" width="25%">
+                    <font color="#ff0000"><i><b>&lt;0</b></i></font>
+                </td>
+                <td align="middle" width="25%">
+                    =0
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    尽管有适于捕获此类缺陷的技术，在实践中它们很少使用。您的测试工作量可能最好耗费在一组丰富的目标是许多缺陷类型的（以及您希望将此类型作为副作用捕获的）测试中。
+</p>
+<h4>
+    难以辨别的结果
+</h4>
+<p>
+    当您在逐个方法地编码（和测试）时，有一种危险。这里是一个示例。有两个方法。第一个是 <font size="+0">connect</font>，它需要建立网络连接：
+</p>
+<blockquote>
+<pre>
+void connect() {
+   ...
+   Integer portNumber = serverPortFromUser();
+   if (portNumber == null) {
+      // pop up message about invalid port number
+      return;
+   }
+</pre>
+</blockquote>
+<p>
+    当它需要端口号时，它调用 <code>serverPortFromUser</code>。该方法返回两个不同的值。如果选择的端口号有效（1000 或更大），则返回该用户选择的一个端口号。否则，它会返回 null。如果返回
+    null，正在测试的代码会弹出一个错误消息并退出。
+</p>
+<p>
+    当测试 <font size="+0">connect</font> 时，它如预期的那样工作：有效端口号使得连接建立，无效端口号导致弹出消息。
+</p>
+<p>
+    <font size="+0">serverPortFromUser</font> 的代码略为复杂。它先弹出一个窗口要求输入一个字符串，并有标准的“确定”和“取消”按钮。基于用户的操作，有四种情况：
+</p>
+<ol>
+    <li>
+        如果用户输入了有效的数字，则返回该数字。
+    </li>
+    <li>
+        如果该数字过小（小于 1000），则返回 null（所以将显示关于无效端口号的消息）。
+    </li>
+    <li>
+        如果该数字格式不对，则也将返回 null（并且同一消息也适用）。
+    </li>
+    <li>
+        如果用户单击“取消”，则返回 null。
+    </li>
+</ol>
+<p>
+    此代码也像预想的那样工作。
+</p>
+<p>
+    但是，这两段代码组合有一个坏的结果：用户按下“取消”和获得关于无效端口号的消息。所有代码都像预想的那样工作，但整体效果仍然是错误的。它虽经合理的方式测试，但是错过了一个缺陷。
+</p>
+<p>
+    此处的问题为 <font size="+0">null</font> 是一个代表两种不同<i>含义</i>（“值错误”和“用户已取消”）的结果。此技术中没有什么能使您注意到 <font     size="+0">serverPortFromUser</font> 的设计问题。
+</p>
+<p>
+    但是测试可以有所帮助。当孤立测试 <font size="+0">serverPortFromUser</font> 时（只是为了看一下它是否在这四种情况下都返回预期的值），丢失了使用环境。取而代之，假设使用 <font     size="+0">connect</font> 进行测试。将有同时试验这两个方法的四个测试：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    输入
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    预期结果
+                </th>
+                <th scope="col" align="middle" width="25%" bgcolor="#c0c0c0">
+                    设想流程
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    用户输入“1000”
+                </td>
+                <td align="middle" width="25%">
+                    到端口 1000 的连接打开
+                </td>
+                <td align="middle" width="25%">
+                    <font size="+0">serverPortFromUser</font> 返回一个数字（使用了该数字）。
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p align="center">
+                        用户输入“999”
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        弹出关于无效端口号的消息
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        <font size="+0">serverPortFromUser</font> 返回 null，导致弹出消息。
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    <p align="center">
+                        用户输入“i99”
+                    </p>
+                </td>
+                <td align="middle" width="25%">
+                    弹出关于无效端口号的消息
+                </td>
+                <td align="middle" width="25%">
+                    <font size="+0">serverPortFromUser</font> 返回 null，导致弹出消息。
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" width="25%">
+                    用户单击“取消”
+                </td>
+                <td align="middle" width="25%">
+                    整个连接进程应被取消
+                </td>
+                <td align="middle" width="25%">
+                    <font size="+0"><i>serverPortFromUser</i></font> <i>返回 null，无意义地等待一分钟...</i>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    通常的情况下，在较大环境中的测试会揭示小范围测试中疏忽掉的集成问题。同时，通常在测试设计期间的谨慎思考会在运行测试之前揭示问题。（但是如果这时没有捕获该缺陷，则它将在测试运行时捕获。）
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

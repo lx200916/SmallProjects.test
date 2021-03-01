@@ -1,0 +1,93 @@
+/******************************************************************************
+ * Copyright (c) 2004, 2007 IBM Corporation.  All Rights Reserved.            * 
+ ******************************************************************************/
+
+table, tr, td {
+	border: 0px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.dojoAccordionPane .label {
+	background: url("../images/bg_draw_closed.gif") repeat-x;
+	color: #666666;
+	cursor: pointer;
+	height: 20px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.dojoAccordionPane-selected .label {
+	background: url("../images/bg_draw_opened.gif") repeat-x;
+	color: #666666;
+	cursor: pointer;
+	height: 20px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.dojoAccordionPane .accBody {
+	background: #fff;
+	overflow: auto;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 0px solid #e8e8e8;
+	border-right: 0px solid #e8e8e8;
+	border-left: 0px solid #e8e8e8;
+}
+
+.dojoAccordionPane .labelText {
+	background-image: url(../images/arrow_closed.gif);
+	background-position: 0px 3px;
+	background-repeat: no-repeat;	
+	color: #666666;
+	cursor: pointer;
+	font-size: 12px;
+	margin: 0px 0px 0px 0px;	
+	padding: 3px 0px 0px 20px;
+}
+
+.dojoAccordionPane-selected .labelText {
+	background-image: url(../images/arrow_opened.gif);
+	background-position: 0px 3px;
+	background-repeat: no-repeat;
+	color: #666666;
+	cursor: pointer;
+	font-size: 12px;
+	margin: 0px 0px 0px 0px;	
+	padding: 3px 0px 0px 20px;
+}
+
+.dojoAccordionPane-selected .closeButton {
+	background-image: url(../images/close_normal.gif);
+	background-position: 0px 3px;	
+	background-repeat: no-repeat;	
+	cursor: pointer;
+	margin: 0px 0px 0px 0px;
+	padding: 3px 0px 20px 0px;
+}
+
+.dojoAccordionPane .closeButton {
+	background-image: url(../images/close_normal.gif);
+	background-position: 0px 3px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 20px 0px 0px;
+}
+
+.dojoAccordionPane .label:hover {
+	background: url("../images/bg_draw_hover.gif") repeat-x;
+	cursor: pointer;
+}
+
+.dojoAccordionPane .labelText:hover {
+	background-image: url(../images/arrow_closed_hov.gif);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.dojoAccordionPane-selected .labelText:hover {
+	background-image: url(../images/arrow_opened_hov.gif);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}

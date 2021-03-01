@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工作产品描述符: 事件</title>
+<meta content="WorkProductDescriptor" name="uma.type">
+<meta content="rup_event" name="uma.name">
+<meta content="事件" name="uma.presentationName">
+<meta content="WorkProductDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{9C683674-97C1-4AEE-8DB0-9514AEFF698E},_CQ1sCRi2Edq_uI8xTPML6g';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, false, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_CQ1sCRi2Edq_uI8xTPML6g"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工作产品：事件</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/workdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">该工作产品指定事情（涉及空间和时间）；比较不正式的说法是所发生的系统必须响应的事情。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_event__as_artifact" name="XE_event__as_artifact" class="index" key="事件（event）" text="作为工件"></a><a id="Top" name="Top"></a><a id="XE_event__purpose_of" name="XE_event__purpose_of"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    该工作产品用于获取事件的某些特征，例如频率、优先级和响应需求。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">简述</th><td class="sectionTableCell"><a id="Brief Outline" name="Brief Outline"></a> 
+<p>
+    事件的重要特征是：
+</p>
+<ul>
+    <li>
+        内部对外部 － 是外部事件还是内部事件？
+    </li>
+    <li>
+        优先级 － 为了处理该事件，是否需要使其他处理暂挂？
+    </li>
+    <li>
+        频率 － 该事件发生的频率？
+    </li>
+    <li>
+        频率分发 － 该事件在固定时间间隔发生，还是存在突发现象？
+    </li>
+    <li>
+        响应需求 － 系统必须以何速度响应事件（可能需要区分一般情况和最坏情况）。
+    </li>
+    <li>
+        类型 － 是调用事件、时间事件、信号事件还是更改事件（有关定义请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/events_and_signals_734567DC.html" guid="1.800598287887014E-305">概念：事件和信号</a>）？<br />
+    </li>
+</ul></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">主要描述</th><td class="sectionTableCell"><p>
+    事件用于识别和捕捉关于外部事件的信息，系统觉察到该外部事件并且必须响应它。还可以使用事件来捕获关于内部事件（例如异常）的信息。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="Yes" alt="Yes" height="15" width="20" src="./../../images/true.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">定制</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">说明选项</th><td class="sectionTableCell"><p>
+    在状态表图和活动图的环境中，事件指的是状态过渡的触发器。
+</p>
+<p>
+    但是，该工作产品涵盖了更具一般意义的“事件”，即系统必须响应的事件，包括信号、调用、状态更改或时间事件。
+</p>
+<p>
+    另请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_signal_AD16C912.html" guid="{8CA124DA-A80C-45D7-BC65-BA6B4247FF11}">工作产品：信号</a>。
+</p>
+<p>
+    <a id="Tailoring" name="Tailoring"></a>
+</p>
+<p>
+    可以在电子表格、数据库、需求管理数据库捕获事件特征，或作为软件体系结构文档中的表捕获事件特征。
+</p>
+<p>
+    甚至可以作为类、已定型的 &lt;&lt;事件&gt;&gt;
+    来捕获它们，但是只应将此作为捕获关于事件的管理信息的一种简便方法，不应与事件发生时传输的数据相混淆。如果调用事件导致数据传输，则应使用被调用操作的特征符来表示数据。如果事件是一个信号，则可以明确地对其数据进行建模（请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_signal_AD16C912.html" guid="{8CA124DA-A80C-45D7-BC65-BA6B4247FF11}">工作产品：信号</a>）。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">概念</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/events_and_signals_734567DC.html" guid="1.800598287887014E-305">事件和信号</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>规程: 实施</title>
+<meta content="Discipline" name="uma.type">
+<meta content="rup_implementation_discipline" name="uma.name">
+<meta content="实施" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_yd3ExNnmEdmO6L4XMImrsA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yd3ExNnmEdmO6L4XMImrsA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_yd3ExNnmEdmO6L4XMImrsA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">规程：实施</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/content_package.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此规程说明了如何开发、组织、按单元测试和集成根据设计规范实施的组件。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">引用工作流</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/implementation_8FF0AAD4.html" guid="{F2AD342D-0F3B-4E19-A351-75ECDCB806F5}">实施</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">任务</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/analyze_runtime_behavior_B2DD7652.html" guid="{5131A5BB-5B95-499E-A68B-788A2F0957C3}">分析运行时行为</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/review_code_27AD7580.html" guid="{9EC0DF69-EEE1-4B41-8F48-9FB6B0DB7F72}">复审代码</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">构造实施模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/integrate_system_9AFF7BFD.html" guid="{3233A207-6271-4492-A8BF-64E1D89D6C5E}">集成系统</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/integrate_subsystem_E8F878D6.html" guid="{58FF0476-120F-411A-AD8C-16573032BE91}">集成子系统</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/plan_system_integration_2B706402.html" guid="{11538D9A-7439-4FDD-8333-9E2E47E5E173}">计划系统集成</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/plan_subsystem_integration_9CF14B68.html" guid="{197B2D0F-6B49-4998-8A71-0799BC29D13F}">计划子系统集成</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">实施开发人员测试</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/implement_component_AE366827.html" guid="{3293F4F7-EFCD-4476-BFF1-81AC3812B512}">实施设计元素</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/perform_developer_test_512B18D9.html" guid="{55EAEE66-A254-457F-BCC3-D1C21ED88134}">执行开发人员测试</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_implementation_discipline__purpose_of" name="XE_implementation_discipline__purpose_of" class="index" key="实施规程（implementation discipline）" text="与其他规程的关系"></a><a id="Purpose" name="Purpose"></a><a id="XE_implementation_discipline__relation_to_other_disciplines" name="XE_implementation_discipline__relation_to_other_disciplines"></a><a id="Relation to Other Disciplines" name="Relation to Other Disciplines"></a> 
+<p>
+    实施的目的为：
+</p>
+<ul>
+    <li>
+        根据按层组织的实施子系统，定义代码的组织
+    </li>
+    <li>
+        根据实施元素（源文件、二进制文件、可执行程序及其他文件）实施设计元素
+    </li>
+    <li>
+        按单元测试已开发的组件
+    </li>
+    <li>
+        将单个实施者（或团队）产生的结果集成至可执行系统
+    </li>
+</ul>
+<p>
+    实施规程将其范围限制在如何对单个类进行单元测试。在“测试”规程中描述系统测试和集成测试。
+</p>
+<p>
+    实施与其他规程相关：
+</p>
+<ul>
+    <li>
+        <b><a class="elementLinkWithUserText" href="./../../core.base_rup/disciplines/rup_requirements_discipline_8EEB5209.html" guid="_ydt60dnmEdmO6L4XMImrsA">需求</a></b>规程描述如何在用例模型中捕捉实施应满足的需求。
+    </li>
+    <li>
+        <b><a class="elementLinkWithUserText" href="./../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">分析与设计</a></b>规程描述如何开发设计模型。 设计模型表示实施意图，是实施规程的主要输入。
+    </li>
+    <li>
+        <b><a class="elementLinkWithUserText" href="./../../core.base_rup/disciplines/rup_test_discipline_9DFAFB2F.html" guid="_yd3EzdnmEdmO6L4XMImrsA">测试</a></b>规程描述在系统集成期间如何集成测试每个工作版本。它还描述如何测试系统以验证是否已满足所有需求，以及如何检测和提交缺陷。
+    </li>
+    <li>
+        <b><a class="elementLinkWithUserText" href="./../../core.base_rup/disciplines/rup_environment_discipline_41478973.html" guid="_yeKmwtnmEdmO6L4XMImrsA">环境</a></b>规程描述如何开发和维护实施期间使用的支持工件，例如流程描述、设计指南和编程准则。&nbsp;
+    </li>
+    <li>
+        <b><img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="_yd3E1NnmEdmO6L4XMImrsA">部署</a></b>规程描述如何使用实施模型产生代码并将代码交付给最终客户。
+    </li>
+    <li>
+        <b><a class="elementLinkWithUserText" href="./../../core.base_rup/disciplines/rup_project_management_discipline_F303DA84.html" guid="_yeA1y9nmEdmO6L4XMImrsA">项目管理</a></b>规程描述如何以最佳方法规划项目。 规划过程的重要方面是迭代规划、变更管理和缺陷跟踪系统。
+    </li>
+</ul>
+<p>
+    <br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">概念</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305">从设计到代码的映射</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/important_decisions_in_implementation_BC39CD13.html" guid="1.0139590031965295E-304">实施中的重要决策</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 在 Rational TestFactory 中设置测试环境</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="setup_testfactory" name="uma.name">
+<meta content="在 Rational TestFactory 中设置测试环境" name="uma.presentationName">
+<meta content="Tool:rup_test_factory:Rational TestFactory" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestFactory" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：在 Rational TestFactory 中设置测试环境</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何执行设置 Rational TestFactory 环境的步骤，以便可以为接受测试的应用程序（AUT）实施生成的测试脚本。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_test_factory_3EDA2115.html" guid="{FBA5098E-2CA8-483D-814D-DE3E876426B1}">Rational TestFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_the_test_implementation_AAB73625.html" guid="{ED9DF0C0-744A-443A-AEBA-604382E05A5F}">构造测试实施</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/support_development_1443EF07.html" guid="{35936CF9-4B04-402A-9482-07E5CFB45D99}">支持开发</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    您必须设置测试环境配置后，才能使用 Rational TestFactory 自动生成测试脚本。TestFactory 根据应用程序图生成测试脚本，应用程序图是 UI 对象的层次结构列表，UI
+    对象表示接受测试的应用程序（AUT）的用户界面中的窗口和控件。
+</p>
+<p>
+    在运行 98/2000/NT 4.0 时此工具向导可用。
+</p>
+<p>
+    要在 Rational TestFactory 中设置测试环境：
+</p>
+<ol>
+    <li>
+        <a href="#Define AUT">将项目定义到 Rational TestFactory，并配备 AUT</a>
+    </li>
+    <li>
+        <a href="#Map AUT">为接受测试的应用程序绘图</a>
+    </li>
+    <li>
+        <a href="#Review refine AUT">复审并优化应用程序图</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp; <a id="Define AUT" name="Define AUT">将项目定义到 Rational TestFactory，并配备 AUT</a>
+</h3>
+<p>
+    在 Rational TestFactory 中第一次打开项目时，您需要提供有关该项目和接受测试的应用程序（AUT）的信息。在您指定项目信息后，TestFactory 的主功能区域才可用。
+</p>
+<p>
+    为测量已执行的测试脚本基于代码的测试覆盖率，AUT 必须包含检测点计数器，以标记测试脚本执行的代码部分。Rational TestFactory 使用配备文件中的信息来计算 TestFactory 生成的测试脚本和您可以从
+    TestFactory 回放的 Robot 测试脚本基于代码的覆盖数据。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp; 请参考 Rational TestFactory 帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Starting TestFactory</i>
+    </li>
+    <li>
+        <i>Specifying information for a new project</i>
+    </li>
+    <li>
+        <i>Instrumenting the application-under-test</i>
+    </li>
+</ul>
+<h3>
+    2.&nbsp;&nbsp; <a id="Map AUT" name="Map AUT">为接受测试的应用程序绘图</a>
+</h3>
+<p>
+    绘制好应用程序图是在 Rational TestFactory
+    中生成测试脚本的基础。“应用程序绘图程序”（创建应用程序图的进程）浏览接受测试的应用程序（AUT）的所有用户界面。检查每个窗口和控件，并与存储在“用户界面（UI）库”中的已知类和子类进行比较。根据比较结果，绘图过程创建 UI
+    对象（该对象是匹配的类的实例）并将它置于应用程序图中。
+</p>
+<p>
+    UI 库中的每个已定义的类都有一组特定的“UI 对象属性”与其关联。当创建 UI 对象时，应用程序绘图程序为对象指定与其类关联的属性集。这些属性标识 AUT 中该对象表示的控件，并通知 Rational TestFactory
+    在绘图和测试过程中如何处理控件。
+</p>
+<p>
+    如果 AUT 包含需要特殊输入（如，用户标识或密码）的登录对话框，则您必须向应用程序绘图程序提供特定的登录信息。
+</p>
+<p>
+    在绘图完成时，“绘图摘要”报告中的信息反映 AUT 中 Rational TestFactory 已绘制的窗口和控件。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参考 Rational TestFactory
+    帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Map the AUT using the Application Mapper Wizard</i>
+    </li>
+    <li>
+        <i>Map the AUT using the Map It! shortcut</i>
+    </li>
+    <li>
+        <i>Mapping an AUT that has a logon dialog box</i>
+    </li>
+</ul>
+<h3>
+    3.&nbsp;&nbsp; <a id="Review refine AUT" name="Review refine AUT">复审和优化应用程序图</a>
+</h3>
+<p>
+    应用程序图的第一版也许不能精确反映 AUT 中的所有控件。该应用程序图可能不完整，或者可能需要对绘制的 UI 对象重新分类。
+</p>
+<p>
+    定义好应用程序图对于生成高质量的测试脚本很重要。Rational TestFactory 只能测试 AUT 中的控件，这些控件由应用程序图中的 UI
+    对象表示。在开始测试之前，通过复审和优化应用程序图，您可以扩大生成的测试脚本的作用范围，并提高其质量。
+</p>
+<p>
+    您可以将在 AUT 中看到的窗口和控件与应用程序图中的 UI 对象相比较，复审该应用程序图。如果注意到 AUT 中未绘制的控件，并且如果要测试这些控件，那么您需要确定并解析每个未绘制控件的原因。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参考 Rational TestFactory
+    帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Review the application map</i>
+    </li>
+    <li>
+        <i>Defining undetected controls</i>
+    </li>
+    <li>
+        <i>Resolving generic objects</i>
+    </li>
+    <li>
+        <i>Using interaction objects to improve the application map</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

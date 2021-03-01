@@ -1,0 +1,13 @@
+.splitBar {
+	background-color: #fcfcfc;
+	border-left: 1px solid;
+	border-right: 1px solid;	
+	border-color: #ccc;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.splitSizer {
+	cursor: pointer;
+}
+

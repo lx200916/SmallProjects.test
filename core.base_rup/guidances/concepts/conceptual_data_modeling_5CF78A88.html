@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 概念性数据建模</title>
+<meta content="Concept" name="uma.type">
+<meta content="conceptual_data_modeling" name="uma.name">
+<meta content="概念性数据建模" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "7.217811033438091E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "7.217811033438091E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "7.217811033438091E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.217811033438091E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：概念性数据建模</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">概念性数据模型描述了重要实体以及它们的关系以探索域概念，其中项目项目干系人定义了要由系统解决的问题范围。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">数据库设计</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">数据库设计员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="Concepts: Conceptual Data Modeling" name="Concepts: Conceptual Data Modeling"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>简介
+</h3>
+<p>
+    如&nbsp;[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#NBG01" guid="7.755968586980351E-308"><font color="#ff0000">NBG01</font></a>]
+    中所定义的，概念性数据建模代表了系统中持久数据和持久数据存储的设计开发初始阶段。在许多情况下，系统的持久数据通过关系数据库管理系统（RDBMS）进行管理。
+    根据业务模型和系统需求得出的在概念层面确定的业务和系统实体将通过用例分析、用例设计和数据库设计任务，发展成详细的物理表设计，这些表设计将在 RDBMS 中实施。请注意，本概念文档中讨论的概念性数据模型并不是一个单独的工作产品。
+    而是由包含在现有业务建模、需求以及分析和设计规程等工作产品中的信息的组合视图构成，这些信息与<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>的开发相关。&nbsp;
+</p>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>通常通过以下三个一般阶段逐渐发展：
+</p>
+<ul>
+    <li>
+        <b>概念阶段</b> － 此阶段涉及到明确标出高级关键业务和系统实体以及它们的关系，这三者定义了要由系统解决的问题范围。 定义这些关键业务和系统实体的方法是，使用包含在业务分析模型中的业务建模 UML
+        概要文件建模元素，以及分析模型的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">分析类</a>模型元素。
+    </li>
+    <li>
+        <b>逻辑阶段</b> － 此阶段涉及到将概念性的高级业务和系统实体改进为更详细的逻辑实体。 这些逻辑实体以及它们的关系可以在逻辑数据模型中定义（可选），方法是：如<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">指南：数据模型</a>中所述，使用用于数据库设计的 UML 概要文件的建模元素。这个可选的逻辑数据模型是<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">工作产品：数据模型</a>的一部分，并不是单独的 RUP 工作产品。
+    </li>
+    <li>
+        <b>物理阶段</b> － 此阶段涉及到将逻辑类设计转换成详细和优化的物理数据库表设计。 物理阶段还包括将数据库表设计映射到表空间，以及映射到数据库存储设计中的数据库组件。
+    </li>
+</ul>
+<p>
+    与数据库设计相关的任务贯穿于整个软件开发生命周期，并且初始的数据库设计任务可能开始于<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/inception_D506BCB4.html" guid="_vyZOwCVuEdqSZ9OimJ-AzA">先启阶段</a>期间。对于使用业务建模来描述应用程序的业务环境的项目，数据库设计可以在概念级别开始，识别业务用例模型中的业务参与者和业务用例，以及业务分析模型中的业务工作者和业务实体。
+    对于不使用业务建模的项目，数据库设计可以在概念级别开始识别用例模型中的系统参与者和系统用例，以及识别来自用例实现的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">分析模型</a>中的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">分析类</a>。
+</p>
+<p>
+    下图显示了概念性数据模型元素的集合，这些元素驻留在业务模型、需求模型和分析模型中。
+</p>
+<p align="center">
+    <img height="433" alt="在内容中描述了该图。" src="./../../../core.base_rup/guidances/concepts/resources/co_concdatmd1.gif" width="704" border="0" />
+</p>
+<p>
+    以下各部分描述了业务模型、用例模型和分析模型的元素，这些元素可以用来为系统中的持久数据定义初始的概念性数据模型。
+</p>
+<h3>
+    <a id="Conceptual Data Model Elements" name="Conceptual Data Model Elements"></a>概念性数据建模元素
+</h3>
+<h4>
+    <a id="Business Models" name="Business Models"></a>业务模型
+</h4>
+<p>
+    <b><u>业务用例模型</u></b>
+</p>
+<p>
+    业务用例模型由业务参与者和业务用例构成。业务用例代表用于为要开发的系统定义环境的关键业务流程。 业务参与者代表通过业务用例与业务进行交互的关键外部实体。 下图显示一个非常简单的网上拍卖应用程序业务用例模型
+</p><br />
+<br />
+<p align="center">
+    <img height="109" alt="在内容中描述了该图。" src="./../../../core.base_rup/guidances/concepts/resources/co_concdatmd2.gif" width="529" border="0" />
+</p>
+<p>
+    作为对于系统空间问题起重要作用的实体，业务参与者是概念性数据模型的候选实体。 在上例中，买方和卖方业务参与者是网上拍卖应用程序必须为它们存储信息的候选实体。
+</p>
+<p>
+    <b><u>业务分析模型</u></b>
+</p>
+<p>
+    业务分析模型包含为业务工作者和业务实体进行建模的类，其中业务工作者和业务实体是根据对业务用例中的工作流程的分析而确定的。 业务工作者代表为了运转该工作流程而执行所需操作的工作者。
+    业务实体是业务工作者在该工作流程期间使用或生成的“事物”。在许多情况下，业务实体代表系统必须持久存储的信息类型。 &nbsp;
+</p>
+<p>
+    下图显示一个示例时序图，该图描绘了一个用于管理拍卖、名为“提供网上拍卖”的业务用例场景中的业务工作者和业务实体。
+</p>
+<p align="center">
+    <img height="465" alt="在内容中描述了该图。" src="./../../../core.base_rup/guidances/concepts/resources/co_concdatmd3.gif" width="624" border="0" />
+</p>
+<p>
+    在这个简化的示例中，“拍卖管理员”对象代表一个“业务工作者”角色，该角色将可能由网上拍卖管理系统本身担当。
+    “拍卖”和“拍卖商品”对象是由“拍卖管理员”工作者使用或生成的业务实体，而“拍卖管理员”工作者担当“卖方”和“买方”业务参与者的代理。从数据库设计的角度，“拍卖”和“拍卖商品”业务实体是概念性数据模型的候选实体。 &nbsp;
+</p>
+<h4>
+    <a id="Requirements and Analysis Models" name="Requirements and Analysis Models"></a>需求和分析模型
+</h4>
+<p>
+    对于不执行业务建模的项目，需求（系统用例）和分析模型包含可用来开发初始概念性数据模型的模型元素。 对于使用业务建模的项目，在业务分析模型中识别的业务实体和关系将在分析模型中优化和详述为实体类。 &nbsp;&nbsp;
+</p>
+<p>
+    <u><b>系统用例模型</b></u>
+</p>
+<p>
+    系统用例模型包含系统参与者和系统用例，它们定义用户与系统之间的主要交互。 系统用例定义系统的功能需求。
+</p>
+<p>
+    从概念性数据建模角度来说，系统参与者代表系统以外的实体，系统可能需要为这些实体存储持久信息。 在以下情况下这是很重要的，即：系统参与者是一个为所开发系统提供数据和／或从所开发系统接收数据的外部系统。
+    系统参与者可以源自业务用例模型中的业务参与者，以及业务分析模型中的业务工作者。 &nbsp;
+</p>
+<p>
+    下图描绘了用于网上拍卖系统的业务用例模型。 在此模型中，“买方”和“卖方”业务参与者现在源自一般的用户业务参与者。 其中添加了一个名为“信用服务机构”的新的系统参与者，以反映通过外部实体处理支付的需要。
+    这个新的系统参与者是概念性数据模型的又一个候选实体。
+</p><br />
+<br />
+<p align="center">
+    <img height="552" alt="在内容中描述了该图。" src="./../../../core.base_rup/guidances/concepts/resources/co_concdatmd4.gif" width="732" border="0" />
+</p><br align="center" />
+<br />
+<p>
+    <u><b>分析模型</b></u>
+</p>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">分析模型</a>包含在系统用例的用例实现中识别的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">分析类</a>。从概念性数据建模的角度，主要引人注意的分析类的类型是实体分析类。 如<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">指南：分析类</a>中所定义，实体分析类代表由系统管理且必须以持久方式存储的信息。实体分析类和它们的关系组成了应用程序的初始数据模型的基础。 &nbsp;
+</p>
+<p>
+    分析模型中的概念实体分析类可以优化和详述成设计模型中的逻辑持久设计类。 这些设计类代表数据模型中的候选表。 类的属性是表的候选列，同时也代表它们的候选关键字。 请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/forward-engineering_relational_databases_53C0441E.html" guid="5.250868507423771E-305">指南：正向设计关系数据库</a>，以获取关于如何将设计模型中的元素映射到数据模型元素的描述。
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Applied Information Sciences 图标"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>此内容的全部或部分由 <a href="http://www.appliedis.com" target="_blank">Applied
+                Information Sciences</a> 开发。</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

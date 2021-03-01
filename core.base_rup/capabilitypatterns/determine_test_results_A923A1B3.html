@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务描述符: 确定测试结果</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="determine_test_results" name="uma.name">
+<meta content="确定测试结果" name="uma.presentationName">
+<meta content="_BRd9oEoiEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="测试分析人员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={35359DDF-6361-43E5-8B1B-18D204DA8CFF}&path={35359DDF-6361-43E5-8B1B-18D204DA8CFF},{93B7D625-C83A-4EFB-9772-B88F2EB02CE2},_BRd9oEoiEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_C6jF0EdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_BRd9oEoiEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_dTvnIEdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_BRd9oEoiEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_sz1ksZ5IEdq7s5zuJVEAAw", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_BRd9oEoiEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_C6jF0EdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_BRd9oEoiEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_dTvnIEdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_BRd9oEoiEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_zvv6IEdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_BRd9oEoiEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_C6jF0EdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_BRd9oEoiEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_dTvnIEdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_BRd9oEoiEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_sz1ksZ5IEdq7s5zuJVEAAw", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_BRd9oEoiEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_BRd9oEoiEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：确定测试结果</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务描述如何精确记录测试的发现结果，以及所需后续操作的种类。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test__determining_results_of" name="XE_test__determining_results_of"></a> 
+<p>
+    此任务的目的是：
+</p>
+<ul>
+    <li>
+        为感觉的产品质量制定持续进行的总结评估
+    </li>
+    <li>
+        识别并捕获详细测试结果
+    </li>
+    <li>
+        就用来解决质量故障的纠正操作提出相应的建议
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">主要:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_analyst_B42E0A72.html" guid="_CWqAOhi2Edq_uI8xTPML6g">测试分析人员</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">其他:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">辅助:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_A1E681F6.html" guid="_CWqAKhi2Edq_uI8xTPML6g">测试策略</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_ideas_list_35A82644.html" guid="_CWqAMxi2Edq_uI8xTPML6g">测试构想列表</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_log_23609DC8.html" guid="_CWqAIxi2Edq_uI8xTPML6g">测试日志</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">外部:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_results_D5D8E5B1.html" guid="_BRwRgUoiEdqrjq4i3fchvA">测试结果 </a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_evaluation_summary_CB3B05A1.html" guid="_BRwRgEoiEdqrjq4i3fchvA">测试评估摘要</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> 检查所有测试事故和故障</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineTestIncidentsandFailures" name="ExamineTestIncidentsandFailures"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                调查每个事故，并获得对产生的问题的详细理解。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    在此任务中，将根据每个测试的预期结果和实际结果之间的差别，对测试日志进行分析以确定有意义的测试结果。依次识别并分析每个事故和故障。对每个发生的事故和故障尽可能多地从中学到东西。
+</p>
+<p>
+    检查重复的事故、共同的症状和事故之间的其他关系。这些状况通常对于深入了解一组事故的根本原因很有价值。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 创建并维护变更请求</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="CreateMaintainCRs" name="CreateMaintainCRs"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                将变更请求信息输入到跟踪工具中，以进行评估、管理和问题解决。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    差别指示目标测试项中存在潜在缺陷，应输入到跟踪系统中作为事故或变更请求，并指明可以采取的适当纠正操作。
+</p>
+<p>
+    <b>子主题：</b>
+</p>
+<ul>
+    <li>
+        <a href="#VerifyIncidentFacts">验证事故实情</a>
+    </li>
+    <li>
+        <a href="#ClarifyCRDetail">阐明变更请求详细信息</a>
+    </li>
+    <li>
+        <a href="#CRSeverityPriority">指示相对的影响严重性和解决优先级</a>
+    </li>
+    <li>
+        <a href="#LogAnotherCR">分开地记录附加变更请求</a>
+    </li>
+</ul>
+<h4>
+    <a id="VerifyIncidentFacts" name="VerifyIncidentFacts">验证事故实情</a> <a href="#CreateMaintainCRs"><img     src="./../../core.base_rup/resources/top.gif" alt="回到页首" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    验证是否存在可用的精确支持数据。整理数据以直接附加到“变更请求”，或者如果数据能分开地获取，则在变更请求中进行引用。
+</p>
+<p>
+    只要可能，就验证问题是否是可重现的。可重复出现的问题被开发人员注意到，并随后进行修正的可能性要大得多；而不能重复出现的问题则容易使开发人员泄气，且会将宝贵的编程资源浪费在毫无成果的研究中。我们建议您仍记录这些事故，但请考虑将不可重复出现的事故与可重复出现的事故分开标识。
+</p>
+<h4>
+    <a id="ClarifyCRDetail" name="ClarifyCRDetail">阐明变更请求详细信</a> <a href="#CreateMaintainCRs"><img     src="./../../core.base_rup/resources/top.gif" alt="回到页首" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    对于变更请求，它的可理解性很重要，尤其是标题。请确保标题的有力简明，清楚地表明特定的问题。简要的标题对于摘要缺陷列表和 <a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/ccb_59E01CD3.html" target="_blank" guid="_x9h-49nmEdmO6L4XMImrsA">CCB</a>
+    状态会议中的讨论很有用。
+</p>
+<p>
+    变更请求的详细描述应是明确的，并便于解释，这很重要。一个好的主意是尽可能早地记录您的变更请求，但在提交开发人员复审之前，再花时间回来改进和扩展您的描述。
+</p>
+<p>
+    尽可能多地提供候选解决方案。这有助于减少描述中其余的模糊性，通常有助于进行阐明。它还确保了能提高解决方案接近于您的预期的可能性。而且，事实表明测试团队不仅准备好查找问题，而且还能帮助确定相应的解决方案。
+</p>
+<p>
+    要包含的其他详细信息是：屏幕抓图、测试数据文件、自动测试脚本、诊断实用工具的输出以及任何其他可帮助开发人员隔离和纠正底层故障的信息。
+</p>
+<h4>
+    <a id="CRSeverityPriority" name="CRSeverityPriority">指示相对的影响严重性和解决优先级</a> <a href="#CreateMaintainCRs"><img     src="./../../core.base_rup/resources/top.gif" alt="回到页首" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    就问题的严重性向管理和开发人员提供指示。在较大的团队中，实际的解决优先级通常留给管理团队确定，不过您可以允许个人指明他们首选的解决优先级，然后在必要的时候进行调整。作为一般规则，我们建议您在缺省情况下为变更请求指定一个平均的解决优先级，并在必要时根据情况升高或降低该优先级。
+</p>
+<p>
+    您可能需要区分以下两种影响：变更请求对生产环境的影响（如果变更请求未解决）以及变更请求对测试工作的影响（如果变更请求未解决）；对于管理团队，了解缺陷何时影响测试工作与了解缺陷对用户的严重性同等重要。
+</p>
+<p>
+    有时难以预见为何您同时需要这两种属性。可能存在这种情况，即某项事故可能的确很严重（例如系统崩溃），但再现这种事故所需要的操作发生的可能性很小。 在这种情况下，团队可能将其严重性指示为高，但将其解决优先级指示为很低。
+</p>
+<h4>
+    <a id="LogAnotherCR" name="LogAnotherCR">分开地记录附加变更请求</a>
+</h4>
+<p>
+    事故常常应验了一句老话“有烟必有火”。在您识别和记录一个变更请求时，您常常识别了需要解决的其他问题。避免简单地将这些附加的发现添加到现有变更请求：如果信息直接相关并有助于更好地解决现有问题，则可以这样做。如果其他问题不同，则根据现有 CR
+    识别它们可能会导致对那些问题不起作用，得不到它们自己权利的优先级，或者影响解决其他问题的速度。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 分析和评估状态</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AnalyzeEvaluateStatus" name="AnalyzeEvaluateStatus"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>目的：</b>
+                </td>
+                <td width="95%">
+                    计算和交付测试的关键度量和指标。&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    <b>子主题：</b>
+</p>
+<ul>
+    <li>
+        <a href="#IncidentData">事故分发</a>
+    </li>
+    <li>
+        <a href="#ExecutionCoverageData">测试执行覆盖范围</a>
+    </li>
+    <li>
+        <a href="#CRData">变更请求统计信息</a>
+    </li>
+</ul>
+<h4>
+    <a id="IncidentData" name="IncidentData">事故分发</a>
+</h4>
+<p>
+    根据事故的分发位置（例如功能区域、质量风险、指定的测试员和指定的开发人员）分析事故。
+</p>
+<p>
+    寻找分发中的模式，例如显示为缺陷数超过平均缺陷数的功能区域。还请寻找可能因为劳累过度而工作质量下滑的开发人员和测试员。
+</p>
+<h4>
+    <a id="ExecutionCoverageData" name="ExecutionCoverageData">测试执行覆盖范围</a>
+</h4>
+<p>
+    为评估测试执行覆盖范围，您需要复审测试日志并确定：
+</p>
+<ul>
+    <li>
+        以下两个数量的比率：此测试周期中已执行的测试（测试脚本或测试用例）数，比上所有计划的目标测试项的测试总数。
+    </li>
+    <li>
+        成功执行的测试用例的比率。
+    </li>
+</ul>
+<p>
+    目标是为了确保在针对此测试周期的测试中，已经有足够数量的测试有效执行。如果不可能，或者扩增了执行数据，则可以确定一个或多个附加的测试覆盖条件，它们基于：
+</p>
+<ul>
+    <li>
+        质量风险或优先级
+    </li>
+    <li>
+        基于规范的覆盖范围（需求等）
+    </li>
+    <li>
+        业务需求或优先级
+    </li>
+    <li>
+        基于代码的覆盖范围
+    </li>
+</ul>
+<p>
+    请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/key_measures_of_test_62253EE4.html#Requirements-based test coverage" guid="5.312818155786224E-305">概念：关键测试度量，基于需求的测试覆盖</a>。
+</p>
+<p>
+    将现有的测试结果记录到此测试周期的测试评估报告中。
+</p>
+<h4>
+    <a id="CRData" name="CRData">变更请求统计信息</a>
+</h4>
+<p>
+    为分析缺陷，您需要复审和分析选择作为缺陷分析策略的一部分的度量。最常用的缺陷度量包括以下各种不同的度量（通常以图的形式显示）：
+</p>
+<ul>
+    <li>
+        <b>缺陷密度</b> － 缺陷数显示为一个或两个缺陷属性（例如在功能区域上的分发或质量风险与状态或严重性的比较）的函数。
+    </li>
+    <li>
+        <b>缺陷趋势</b> － 缺陷计数显示为随时间的函数。
+    </li>
+    <li>
+        <b>缺陷熟化</b> － 一种特殊的缺陷密度报告，其中缺陷计数显示为缺陷保持给定状态（开放、新、正在等待验证等等）的时间长度的函数。
+    </li>
+</ul>
+<p>
+    将来自此测试周期的度量与当前迭代的运行总数以及来自先前迭代分析的度量进行比较，以更好地理解随时间呈现的趋势。
+</p>
+<p>
+    如有要求，建议您以支持发现的图的形式表现结果。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 对当前质量经验做出评估</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AssessCurrentQuality" name="AssessCurrentQuality"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                就当前在软件产品中感觉和经历的质量给出反馈。&nbsp;
+            </td>
+        </tr>
+    </table>
+    <p>
+        制定一份当前质量经验的摘要，重点强调软件产品质量的优劣面。
+    </p>
+</div></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 对突出的质量风险做出评估</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AssessQualityRisks" name="AssessQualityRisks"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                就“其余的哪些风险领域最有可能给项目带来风险”作出反馈。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    确定并解释在质量风险方面尚未解决的领域，并指出它将给团队留下什么影响以及带来何种风险。
+</p>
+<p>
+    就您认为每个突出的质量风险拥有哪个优先级提供指示，并使用该优先级指示这些问题应采用的解决顺序。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 对测试覆盖做出评估</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="TestCoverage" name="TestCoverage"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                对测试覆盖分析做出摘要评估。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    根据在步骤<a href="#ExecutionCoverageData">测试执行覆盖范围</a>中的工作，就数据代表的状态和信息提供一份简要的摘要陈述。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 草拟测试评估摘要</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="GenerateTestEvaluationSummary" name="GenerateTestEvaluationSummary"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                将测试结果传达给项目干系人，并对质量和测试状态做出目标评估。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    在测试评估摘要中表现此测试周期的测试结果。此步骤是为了开发摘要的初稿。完成此步骤的方法是组合已收集到可读的摘要报告中的先前信息。根据项目干系人人群和项目环境，摘要的实际格式和内容会有所不同。
+</p>
+<p>
+    通常，一个不错的主意是，在将摘要发布给更广大的人群之前，首先将初稿分发给一部分项目干系人，从中获得反馈，然后将反馈合并到以后的版本。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 就关键发现向项目干系人建议</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AdviseStakeholdersFindings" name="AdviseStakeholdersFindings"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                在适当的时候提升和发布评估摘要。&nbsp;
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    使用任何适用的方法，发布此信息。我们建议您考虑将其公布到集中式项目站点上，或在定期举行的状态会议上提出，以便能收集反馈，并能确定接下来的行动。
+</p>
+<p>
+    请意识到，公开评估摘要有时候可能成为敏感的政治问题。 与开发管理员进行协商，以这样一种方式表现结果，即它们能忠实地和精确地反映您的发现的摘要，同时又尊重开发人员的劳动。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 评估和验证您的结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                验证任务已恰当地完成，生成的工作产品是可以接受的。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    既然您已完成了该工作，那么最好验证该工作是否有足够的价值，而且您并不是简单地消耗大量纸张。您应评估您的工作质量是否适当，是否完整得足以让其他团队成员觉得您的工作很有用，并随后将它们用作他们自己工作的输入源。在可能的情况下，请使用 RUP
+    中提供的核对表验证质量和完整性是否都“足够好”。
+</p>
+<p>
+    让执行下行任务（根据您输入的工作信息）的人员参与复审您的过渡工作。请在您还有时间针对他们的意见采取行动时让他们参与复审。
+    您还应针对主要输入工作产品评估您的工作，以确保您已精确并充分地展示了它们。让输入工作产品的作者以此为基础复审您的工作，这可能很有用。
+</p>
+<p>
+    请记住，RUP
+    是一个迭代式的交付流程，并且在许多情况下工作产品是随着时间而演进的。所以，通常没必要完全形成将在近期的后续工作中只部分使用或根本不用的工作产品，并且这通常对生产力有副作用。这是因为很有可能在使用工作产品前，工作产品周围的情况会发生变化（并且在创建工作产品时作出的假设也会证明是不正确的），从而带来工时的浪费和高成本的重复工作。同时也要避免在展示内容值的危害方面花费过多周折的陷阱。
+    在展示作为项目可交付件有很大的重要性而且有经济价值的项目环境中，您可能希望考虑使用管理资源来执行展示任务。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_多次出现" abbr="多次出现">多次出现</th><td align="left" class="sectionTableCell" headers="property_多次出现"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_事件驱动" abbr="事件驱动">事件驱动</th><td align="left" class="sectionTableCell" headers="property_事件驱动"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_正在进行" abbr="正在进行">正在进行</th><td align="left" class="sectionTableCell" headers="property_正在进行"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可重复" abbr="可重复">可重复</th><td align="left" class="sectionTableCell" headers="property_可重复"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_execution_of_suite_75D39B9.html" guid="{E4299918-C096-4CEE-A119-490B0DE11867}">使用 Rational TestFactory 评估执行测试套件的结果</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/evaluate_test_execution_result_7F4BCD38.html" guid="{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}">使用 Rational TestManager 和 Rational TestFactory 分析测试故障</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_and_measure_code_based_coverage_32EF4DC6.html" guid="{F0ECC223-C6D1-46A9-802B-E4D86FD1572B}">使用 Rational TestFactory 评估 Rational Robot 测试脚本基于代码的测试覆盖率</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_test_coverage_8F1DEC44.html" guid="{D4C656B2-68B7-4C88-B999-FA80AA417C6C}">使用 Rational TestFactory 评估测试覆盖率</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/report_defect_trends_status_345B6B16.html" guid="{FB4F9056-6E9F-4E1A-8190-099CAFE40736}">使用 Rational ClearQuest 报告缺陷趋势和状态</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/submit_change_request_form_4C353A19.html" guid="{5B77C491-E5E9-4BE3-86BD-E4C8A82F8E32}">使用 Rational ClearQuest 提交变更请求</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

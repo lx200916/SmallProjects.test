@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务描述符: 复审设计</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="review_the_design" name="uma.name">
+<meta content="复审设计" name="uma.presentationName">
+<meta content="_3G8crkocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="技术复审员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{FB3EB753-A979-4849-B57B-97F39271F82B},_3G8crkocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_3G8crkocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_3G8crkocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_rw4S4Z5IEdq7s5zuJVEAAw", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_3G8crkocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_3G8crkocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_3G8crkocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_3G8crkocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_XSr4YCFtEdqrX8YVzvtlIg", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_3G8crkocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_J1u8gCGYEdqMcovRzkCQow", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_3G8crkocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_rw4S4Z5IEdq7s5zuJVEAAw", "_Sc_yUCCdEdq3qtLcbHn6PQ", "_3G8crkocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_3G8crkocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：复审设计</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务定义了如何进行设计的复审，以及如何处理复审结果。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<ul>
+    <li>
+        验证设计模型是否满足系统上的要求，并验证设计模型是否可作为实施的良好基础。
+    </li>
+    <li>
+        确保设计模型与一般设计指南保持一致。
+    </li>
+    <li>
+        确保设计指南实现自身目标。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">主要:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_technical_reviewer_F94F712A.html" guid="_iCzSYDnfEdqxANP9kNH4WA">技术复审员</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">其他:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">辅助:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_navmap_B30A6B3E.html" guid="_iDLs4DnfEdqxANP9kNH4WA">导航图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html" guid="_oAeb4zbYEdqdbfmtFQj8qA">设计模型</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_F9C7C5E1.html" guid="_oAeb4jbYEdqdbfmtFQj8qA">补充规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_analysis_model_AC415F64.html" guid="_iDLs4jnfEdqxANP9kNH4WA">分析模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_465A5F1.html" guid="_oAeb4zbYEdqdbfmtFQj8qA">设计模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_data_model_A43D5F34.html" guid="_pOsigjbYEdqdbfmtFQj8qA">数据模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_user_interface_prototype_C73ECF8B.html" guid="_CPBHEhi2Edq_uI8xTPML6g">用户界面原型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_usecase_model_BDA84B4E.html" guid="_iDLs4TnfEdqxANP9kNH4WA">用例模型</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">外部:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_review_record_B6DF3F74.html" guid="_iDLs4znfEdqxANP9kNH4WA">复审记录</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> 一般建议</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="GeneralRecommendations" name="GeneralRecommendations"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                每次复审的一般建议。
+            </td>
+        </tr>
+    </table><br />
+</div>“同级”复审人员的人员配备概要信息与“角色：<a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>”相同，但更注重技术问题。领导能力、成熟性、实用性以及结果导向的重要程度相对较低，但还是很重要：复审人员可能会发现一些可能不太普遍、但威胁项目日程安排的设计缺陷。较好的做法还是及早提出关键问题（这时可以解决问题），而不是盲目按照日程安排行事，导致项目团队走上错误道路。设计复审人员需要平衡风险和成本之间的关系，对项目成功的更宽泛问题保持敏感。设计复审人员还需要成为一个有说服力的交流者，能提出并讨论敏感问题。从技术知识的立场出发，设计复审人员需要拥有作为“角色：<a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>”的经验。</td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 复审整个设计模型</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Review the Design Model as a Whole" name="Review the Design Model as a Whole"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的&nbsp;</b>
+            </td>
+            <td width="95%">
+                确保设计模型的整体结构形成得很好。<br />
+                 检测无法通过查看低级别元素看到的大范围质量问题。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    <br />
+     <a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>必须进行整体复审，通过分层和职责划分来检测突出的问题。整体复审模型是为了检测更详细的复审将会忽略的大范围问题。
+</p>
+<p>
+    在“先启”阶段和“精化”阶段早期，这种复审将注重模型的整体结构，特别强调分层和接口。应检查包和子系统依赖关系，以确保封装元素之间宽松的结合。应检查包和子系统的内容，以确保封装元素内的高度内聚性。总体而言，应检查所有元素来确保它们的职责清晰、恰当，并确保它们的名称能反映它们的职责。
+</p>
+<p>
+    一旦开发了体系结构原型，就应开展更为综合的设计复审。首先应复审模型的完整性，然后更仔细地寻找缺陷。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 复审每个设计用例实现</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Review Each Design Use-Case Realization" name="Review Each Design Use-Case Realization"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                确保系统的行为（如设计用例实现中所说的）符合系统所要求的行为（如用例中所说的），即，它完整吗？<br />
+                 确保行为在各模型元素间分配得当，即，它正确吗？&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    <br />
+     一旦复审了设计模型的结构，就需要复审模型的行为。首先，通过查看设计用例实现完全覆盖了当前迭代的所有场景，确保不缺少任何行为。相关用例子流程中的所有行为都必须在已完成的<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">设计用例实现</a>中有所描述。
+</p>
+<p>
+    如果系统的行为是事件推动的行为，您就可能使用状态表图来描述用例的行为。在状态表图存在的情况下，则需要检验这些状态表图，以确保它们描述正确的行为，参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">技术：状态表图</a>可了解更多详细信息。在实时系统中，当<img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="{6E4F4D6F-2934-432C-9335-5537B795F67F}">工作产品：协议</a>用于描述交互的<img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">工作产品：封装体</a>时，应对它们进行检查，查看它们是否提供正确的行为。
+</p>
+<p>
+    接着，确保设计用例实现的行为是在实现中的模型元素之间正确分发的：确保操作得到正确使用、所有参数都已传递且返回值的类型正确。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 复审每个设计元素</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Review Each Design Element" name="Review Each Design Element"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的&nbsp;</b>
+            </td>
+            <td width="95%">
+                确保设计元素的内部实施执行了所要求的行为。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    对于每个被分配了行为的设计元素（例如设计类或设计子系统），都必须复审内部设计。对于<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">设计子系统</a>，这意味着确保在开放的<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">接口</a>中指定的行为已分配给一个或多个包含的设计元素。对于设计类，这意味着每个操作的描述都是充分定义的，这样就可以明确地实施该操作。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 复审设计指南</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Review Design Guidelines" name="Review Design Guidelines"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                确保与设计相关的项目特定指南保持最新状态，并纠正指南中存在的缺陷。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    <br />
+     基于设计复审，在设计指南中查找缺陷。
+</p>
+<ul>
+    <li>
+        遵照指南了吗？如果没有，那是为什么？
+    </li>
+    <li>
+        它们正确吗？检测到由于错误的指南而造成的系统缺陷吗？
+    </li>
+    <li>
+        它们完整吗？如果提供指导信息，系统缺陷会减少吗？
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 准备复审记录并记录缺陷</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Prepare Review Record and Document Defects" name="Prepare Review Record and Document Defects"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                记录复审结果。<br />
+                 确保记录已确定的缺陷。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    <br />
+     每次复审会议后，会议的结果记录在<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_review_record_CA816ECE.html" guid="{4047B5B0-5FB7-4960-8A7E-451719D85DFF}">复审记录</a>中。此外，所有的缺陷都按照项目的变更管理流程进行记录。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_多次出现" abbr="多次出现">多次出现</th><td align="left" class="sectionTableCell" headers="property_多次出现"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_事件驱动" abbr="事件驱动">事件驱动</th><td align="left" class="sectionTableCell" headers="property_事件驱动"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_正在进行" abbr="正在进行">正在进行</th><td align="left" class="sectionTableCell" headers="property_正在进行"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可重复" abbr="可重复">可重复</th><td align="left" class="sectionTableCell" headers="property_可重复"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">概念</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/usability_testing_EA14CC80.html" guid="2.3731649174885136E-305">可用性测试</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/comparing_merging_rose_models_62845B55.html" guid="{C0DD6F06-15D6-4D34-B2B0-39330A3CC180}">使用 Model Integrator 比较和合并 Rational Rose 模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/publishing_webbased_models_7604E738.html" guid="{C5291A9E-2269-41F8-AFCD-813E18A031D4}">使用 Web Publisher 发布基于 Web 的 Rational Rose 模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

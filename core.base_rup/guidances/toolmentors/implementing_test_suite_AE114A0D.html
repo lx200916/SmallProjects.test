@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational TestManager 实施自动化测试套件</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="implementing_test_suite" name="uma.name">
+<meta content="使用 Rational TestManager 实施自动化测试套件" name="uma.presentationName">
+<meta content="Tool:rup_test_manager_tool:Rational TestManager" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestManager" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{803E510B-B96F-481B-92A9-EEF6CF6AAA24}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{803E510B-B96F-481B-92A9-EEF6CF6AAA24}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{803E510B-B96F-481B-92A9-EEF6CF6AAA24}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{803E510B-B96F-481B-92A9-EEF6CF6AAA24}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational TestManager 实施自动化测试套件</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational TestManager 设计功能测试或性能测试套件。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_test_manager_tool_2C79A4DC.html" guid="{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}">Rational TestManager</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_the_test_implementation_AAB73625.html" guid="{ED9DF0C0-744A-443A-AEBA-604382E05A5F}">构造测试实施</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">实施测试套件</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    套件显示任务的体系结构表示和要运行和测试的工作负载的体系结构表示。它显示计算机组、分配给各计算机组的资源、计算机组运行的测试脚本和每个测试脚本运行的次数等项。
+</p>
+<p>
+    在运行 Microsoft Windows 98/2000/NT 4.0 时此工具向导可用。
+</p>
+<h4>
+    工具步骤
+</h4>
+<p>
+    要使用 Rational TestManager 设计自动化测试套件，需执行以下步骤：
+</p>
+<ol>
+    <li>
+        <a href="#Create a suite">创建套件</a>
+    </li>
+    <li>
+        <a href="#Insert user groups into a suite (for performance testing only)">向套件插入用户组（仅针对性能测试）</a>
+    </li>
+    <li>
+        <a href="#Insert computer groups into a suite">向套件插入计算机组</a>
+    </li>
+    <li>
+        <a href="#Insert test scripts into a suite">将测试脚本插入套件</a>
+    </li>
+    <li>
+        <a href="#Insert other items into a suite">向套件插入其他项</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp; <a id="Create a suite" name="Create a suite">创建套件</a>
+</h3>
+<p>
+    套件不仅可用于运行测试脚本，更重要的是，还可用于模拟使用系统的虚拟测试员的操作。套件可以简单到是执行一个测试脚本的一个虚拟测试员，也可以复杂到是不同组中的数百个虚拟测试员，而每个组还使用不同资源执行不同次数的不同测试脚本。
+</p>
+<p>
+    可以若干不同方式创建套件：
+</p>
+<blockquote>
+    <ul>
+        <li>
+            使用性能测试套件向导
+        </li>
+        <li>
+            使用功能测试套件向导
+        </li>
+        <li>
+            基于任何类型的现有套件
+        </li>
+        <li>
+            基于现有机器人会话
+        </li>
+        <li>
+            使用空白的性能测试套件
+        </li>
+        <li>
+            使用空白的功能测试套件
+        </li>
+    </ul>
+</blockquote>
+<p>
+    要使用这些方法的任何一种新建套件，请单击<b>文件 &gt; 新建套件</b>。
+</p>
+<p>
+    <b>注</b>：使用向导新建套件时，必须具有可在套件中使用的有效测试脚本。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参阅 Rational TestManager
+    联机帮助中标题为 <i>Creating a Suite</i> 的主题。
+</p>
+<h3>
+    2.&nbsp;&nbsp; <a id="Insert user groups into a suite (for performance testing only)" name="Insert user groups into a suite (for performance testing only)">向套件插入用户组（仅针对性能测试）</a>
+</h3>
+<p>
+    用户组是所有性能测试套件的基本构建块。用户组是执行相同活动的虚拟测试员的集合。
+</p>
+<ul>
+    <li>
+        要向套件插入用户组，请从打开的套件中单击<b>套件 &gt; 插入 &gt; 用户组</b>。
+    </li>
+    <li>
+        如下设置“用户”计数：
+    </li>
+</ul>
+<blockquote>
+    <p>
+        <b>固定</b> － 指定固定数量的虚拟测试员。输入希望能够运行的最大虚拟测试员数。
+    </p>
+    <p>
+        <b>可伸缩</b> － 指定动态数量的虚拟测试员。输入用户组代表的工作负载的百分比。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        如下设置计算机：
+    </li>
+</ul>
+<blockquote>
+    <p>
+        缺省计算机为 TestManager 本地计算机，但您可以指定用户组在定义的任何计算机上运行。
+    </p>
+    <p>
+        <b>注</b>：请将测试所需的任何用户创建的外部 C 库、Java 类文件或&nbsp;COM&nbsp;组件复制到“代理计算机”。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        也可以在多个计算机之间分发虚拟测试员。要在多个计算机之间分发一个用户组中的虚拟测试员，请单击<b>套件 &gt; 插入 &gt; 用户组</b>，然后单击<b>多个计算机</b>。
+    </li>
+</ul>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参阅 Rational TestManager
+    联机帮助中的 <i>User groups into a suite</i> 主题。
+</p>
+<h3>
+    3.&nbsp;&nbsp; <a id="Insert computer groups into a suite" name="Insert computer groups into a suite">向套件插入计算机组</a>
+</h3>
+<p>
+    计算机组是所有功能测试套件的基本构建块。实施测试的活动主要是创建可复用的测试脚本。 计算机组是运行相同测试脚本并且因而测试相同应用程序的一个或多个计算机或计算机列表。
+</p>
+<ul>
+    <li>
+        要向套件插入计算机组，请单击<b>套件 &gt; 插入 &gt; 计算机组</b>。
+    </li>
+</ul>
+<blockquote>
+    <b>注</b>：向套件添加计算机组时，您可以指定一个计算机组来用于运行时的资源提示，或指定大量计算机组来用于运行时的资源提示。但在一个套件内不能混用以下计算机组：带特定资源的计算机组与不带特定资源的计算机组。&nbsp;
+</blockquote>
+<ul>
+    <li>
+        要在一个计算机组中的多个计算机之间分发虚拟测试员，请单击<b>套件 &gt; 插入 &gt; 计算机组</b>，然后单击<b>更改</b>。
+    </li>
+</ul>
+<blockquote>
+    <p>
+        <b>注</b>：这样做的好处是：可通过在不同计算机上同时运行虚拟测试员来节约时间。
+    </p>
+</blockquote>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参阅 Rational TestManager
+    联机帮助中的 <i>computer groups into a suite</i> 主题。
+</p>
+<h3>
+    4.&nbsp;&nbsp; <a id="Insert test scripts into a suite" name="Insert test scripts into a suite">向套件插入测试脚本</a>
+</h3>
+<p>
+    要从打开的套件运行测试脚本，请为功能测试选择<b>计算机组</b>，或为性能测试选择用户组，然后单击<b>套件 &gt; 插入 &gt; 测试脚本</b>。
+</p>
+<p>
+    需要作出下列决策：
+</p>
+<ul>
+    <li>
+        <b>测试脚本源</b> － 从中选择脚本类型（如 GUI、VU、VB、Java 等）。
+    </li>
+    <li>
+        <b>查询</b> － 从中选择要用于搜索脚本或采用新脚本的查询的类型。
+    </li>
+    <li>
+        前置条件 － 这是对套件序列的提示，它表明对于您将运行的套件序列中的子项，测试脚本、套件或测试用例必须在该套件运行期间成功完成。
+    </li>
+    <li>
+        迭代次数 － 所选脚本重复运行的频率如何？
+    </li>
+    <li>
+        调度方法 － 显示项的情况以及这些项可用还是暂挂。
+    </li>
+</ul>
+<p>
+    <b>注意</b>：不能在用户组中混用 GUI 测试脚本和 VU 测试脚本。不过，您可以混用其他测试脚本类型。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参阅 Rational TestManager
+    联机帮助中标题为 <i>test scripts into a suite</i> 的主题。
+</p>
+<h3>
+    5.&nbsp;&nbsp; <a id="Insert other items into a suite" name="Insert other items into a suite">向套件插入其他项</a>
+</h3>
+<p>
+    只要有计算机组和测试脚本，套件就可以运行。但是，比起该样本模型，对实际的虚拟测试员执行的工作进行实际建模的套件很可能更为复杂和不同。实际的套件可能还包含测试用例、子测试套件、场景、选择器（仅针对性能测试）、延迟、同步点和处理员（仅针对性能测试），以表示各种虚拟测试员操作。
+</p>
+<p>
+    可插入套件的其他项包括：
+</p>
+<ul>
+    <li>
+        插入测试用例
+    </li>
+    <li>
+        插入套件
+    </li>
+    <li>
+        插入场景
+    </li>
+    <li>
+        插入选择器（仅针对性能测试）
+    </li>
+    <li>
+        插入延迟
+    </li>
+    <li>
+        插入处理员（仅针对性能测试）
+    </li>
+    <li>
+        插入同步点
+    </li>
+</ul>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参阅 Rational TestManager
+    联机帮助中标题为 <i>other items into a suite</i> 的主题。
+</p>
+<h4>
+    插入测试用例
+</h4>
+<ol>
+    <li>
+        要向套件插入测试用例，请从打开的套件中单击“套件 &gt; 插入 &gt; 测试用例”。
+    </li>
+    <li>
+        也可以对测试用例应用前置条件。请右键单击测试用例，然后选择<b>运行属性</b>。&nbsp;
+    </li>
+</ol>
+<blockquote>
+    <p>
+        <b>注</b>：可将测试用例视为已配置，具体取决于其属性。
+    </p>
+</blockquote>
+<h4>
+    插入套件
+</h4>
+<p>
+    要向套件插入套件，请从打开的套件中单击<b>套件 &gt; 插入 &gt; 套件</b>。
+</p>
+<p>
+    <b>注</b>：不能将基于用户组的性能套件放入另一个套件中。此外，插入套件中的基于计算机组的功能套件必须是使用为该计算机组选择的<b>资源的提示</b>选项创建的。
+</p>
+<h4>
+    插入场景
+</h4>
+<p>
+    场景可用于将测试脚本一起分到组中，从而可在多个用户组之间共享这些测试脚本。如果您有一个使用多个测试脚本的复杂套件，通过场景对这些测试脚本分组还能带来额外的好处：可以使您的套件更容易读取和维护。
+</p>
+<ol>
+    <li>
+        要新建场景，请从套件的<b>场景</b>部分单击<b>套件 &gt; 插入 &gt; 场景</b>。
+    </li>
+    <li>
+        要向套件插入场景，请单击要放置场景的区域，然后单击<b>套件 &gt; 插入 &gt; 场景</b>。
+    </li>
+</ol>
+<p>
+    <b>注</b>：在向用户组添加场景之前，最好填充场景。只要有测试脚本，场景就可以运行。但是，与用户组一样，实际的场景可能还包含选择器、延迟、同步点和处理员。场景甚至还可以包含其他场景。
+</p>
+<h4>
+    插入选择器（仅针对性能测试）
+</h4>
+<p>
+    与在套件中按照简单的顺序运行连续的项相比，选择器可以提供更为复杂的控制。选择器通知 TestManager 每个虚拟测试员按照何种顺序执行了哪些项。
+</p>
+<p>
+    要向套件插入选择器，请选择将包含此选择器的计算机组或场景，然后单击<b>套件 &gt; 插入 &gt; 选择器</b>。
+</p>
+<p>
+    选择器的类型包括：
+</p>
+<ul>
+    <li>
+        <b>连续</b> － 按照套件中显示的顺序运行每个测试脚本或场景。
+    </li>
+    <li>
+        <b>并行</b> － 向可用的虚拟测试员分发测试脚本或场景（每台计算机一个虚拟测试员）
+    </li>
+    <li>
+        <b>随机可替换</b> － 选择器以随机顺序运行其下的项，每当选择了某项，再次选择此项的几率仍然相同。
+    </li>
+    <li>
+        <b>随机不替换</b> － 选择器以随机顺序运行其下的项，但每当选择了某项，几率就随之改变。
+    </li>
+    <li>
+        <b>动态负载均衡</b> － 如果使用此类型，将不随机选择项。将根据对这些项设置的权重进行选择，以平衡工作负载。可以针对时间或频率来平衡工作负载。
+    </li>
+</ul>
+<h4>
+    插入延迟
+</h4>
+<p>
+    延迟通知 TestManager 要暂停多久才运行套件中的下一项。
+</p>
+<p>
+    要向套件插入延迟，请单击要添加延迟的<b>计算机组</b>（针对功能测试）、<b>用户组</b>（针对性能测试）、<b>场景</b>或<b>选择器</b>，然后单击<b>套件 &gt; 插入 &gt; 延迟</b>。
+</p>
+<p>
+    <b>注</b>：可将延迟插入套件或测试脚本。向套件插入延迟的好处是延迟在套件中是可见的，并且不编辑测试脚本就轻松更改延迟。
+</p>
+<h4>
+    插入处理员（仅针对性能测试）
+</h4>
+<p>
+    处理员通知 TestManager 给定时间段内每个虚拟测试员运行的任务数。
+</p>
+<p>
+    要向套件插入处理员，请选择将包含此处理员的用户组或选择器，然后单击<b>套件 &gt; 插入 &gt; 处理员</b>。
+</p>
+<p>
+    处理员可以为以下两种类型之一：
+</p>
+<ul>
+    <li>
+        <b>协同</b>处理员，它具有内置同步点，可用于指定您要达成的总速率。
+    </li>
+    <li>
+        <b>独立</b>处理员，可使每个虚拟测试员（VT）独立运行。它不使用内置的同步点使其下的 VT 协同运行。
+    </li>
+</ul>
+<p>
+    处理员可有以下两种速率之一：
+</p>
+<ul>
+    <li>
+        <b>总速率</b> － 对于协同处理员，通常选择此速率。
+    </li>
+    <li>
+        <b>用户速率</b> － 对于独立处理员，必须选择此速率。
+    </li>
+</ul>
+<p>
+    &nbsp;对于处理员，分发选项有三种：
+</p>
+<ul>
+    <li>
+        <b>常量分发</b>表示每个事务完全按照您指定的速率发生。
+    </li>
+    <li>
+        <b>统一分发</b>表示事务关于时间的平均速率等于您指定的速率（尽管每个事务之间的时间是常量）。
+    </li>
+    <li>
+        相反，<b>负指数分发</b>则更改事务发生的概率。这种分发对于活动爆发之后逐渐减少这一典型的 VT 行为作了最为接近的模拟。
+    </li>
+</ul>
+<h4>
+    插入同步点
+</h4>
+<p>
+    同步点使您可以通过在特定时间点（称为同步点）暂停各 VT 的执行来协调大量 VT 的活动。
+</p>
+<p>
+    要向套件插入同步点，请单击<b>套件 &gt; 插入 &gt; 同步点</b>。
+</p>
+<p>
+    同步点的设置包括：
+</p>
+<ul>
+    <li>
+        <b>同时</b> － 同时释放所有虚拟测试员。
+    </li>
+    <li>
+        <b>交错式</b> － 逐个释放虚拟测试员。
+    </li>
+    <li>
+        <b>超时</b> － 表示同步点的该时间段指定的是 TestManager 等待 VT 到达同步点的总时间。超时周期在第一个 VT 到达同步点时开始。
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

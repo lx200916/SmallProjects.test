@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 测试生命周期</title>
+<meta content="Concept" name="uma.type">
+<meta content="the_lifecycle_of_testing" name="uma.name">
+<meta content="测试生命周期" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_u2yEADIEEdqwaNnSEheSAg", "_yd3EzdnmEdmO6L4XMImrsA", "3.372337174521937E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yd3EzdnmEdmO6L4XMImrsA", "3.372337174521937E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "3.372337174521937E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.372337174521937E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：测试生命周期</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">该指南描述了测试规程在 RUP 生命周期内的适合程度。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/disciplines/rup_test_discipline_9DFAFB2F.html" guid="_yd3EzdnmEdmO6L4XMImrsA">测试</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test_lifecycle__introduction_to" name="XE_test_lifecycle__introduction_to" class="index" key="测试生命周期（test lifecycle）" text="简介"></a><a id="XE_test__lifecycle_of" name="XE_test__lifecycle_of"></a> 
+<p>
+    软件在 RUP 软件开发生命周期中是通过迭代改进的。在这个流程环境中遵循同等的迭代方法会让测试生命周期有所受益。在每个迭代中，软件开发团队会产生一个或多个工作版本，而每个工作版本就是一个潜在的测试候选对象。
+</p>
+<p>
+    开发团队的重点和目标随迭代的不同而不同。因此，测试团队成员必须相应地组织他们的测试工作。我们建议您将预先、详细的测试规划和设计的数量保持在最低程度，并且，如果需要这么做，就努力在这项工作中设定与实际使用尽可能接近的时间。我们还建议您在提前时间不早于一个迭代的时候完成预先、详细的测试开发。
+</p>
+<p>
+    为每个工作版本实施和执行的测试都会经过补充、改进和删除。这些测试中的某一些会保留下来并积累在测试主体中，以供用于对在将来的每个测试周期中使用的后续工作版本进行回归测试。正如修订软件本身一样，这种方法改动和修订整个流程中的测试。没有不变的软件规范和测试。下图说明了测试如何随时间的推移而演变。
+</p>
+<p align="center">
+    <img height="215" alt="迭代和测试组件图" src="./../../../core.base_rup/guidances/concepts/resources/lifec001.gif" width="374" />
+</p>
+<p>
+    这个迭代方法（结合使用组件体系结构）要求您考虑在每个后续工作版本中对产品质量进行回归测试。所有在迭代 X 中开发的测试都是迭代
+    X+1、X+2...中的回归测试的潜在候选对象。当同一个测试可能要重复数次时，考虑使该测试自动化是值得的。测试自动化是应对使用方案的重复测试的方法，可从中解放测试人员，让他们得以在新的功能领域中研究测试。
+</p>
+<p>
+    在不考虑项目剩余部分的情况下看看测试生命周期。下图显示了在给定迭代中“测试”规程的工作细节分类。
+</p>
+<p align="center">
+    <img height="525" alt="迭代和测试组件图" src="./../../../core.base_rup/guidances/concepts/resources/wf_tst.gif" width="266" />
+</p>
+<p>
+    这个生命周期与剩余开发团队遵循的迭代周期一致。“迭代”由测试团队的调查开始，测试团队与项目经理和其他项目干系人就在即将来临的迭代中进行的、最为有用的测试工作进行协商。大多数测试团队成员都参与此协商工作。
+</p>
+<p>
+    通常，如下一个图所示，每个迭代包含至少一个测试周期。为每个“迭代”生成多个工作版本并将测试周期与每个工作版本协调一致，这是相当常见的做法。但是，在某些情况下，特定的工作版本不会经过测试。
+</p>
+<p>
+    随着核心测试工作的进行，团队中的部分成员可能正在调查新的测试技巧。这样的调查努力证明这些技巧是有用的因此团队可依赖于它们（尤其是在后续迭代中）。
+</p>
+<p align="center">
+    <img height="365" alt="随时间推移的迭代图" src="./../../../core.base_rup/guidances/concepts/resources/lifec003.gif" width="675" />
+</p>
+<p>
+    测试生命周期是软件生命周期的一部分；它们应在同等的时限内开始。测试的设计和开发流程可与软件产品本身的开发流程一样复杂和艰巨。如果测试不按第一个可执行软件发行版相应地开始，那么测试工作就会将太多的问题延迟到开发周期的后期才发现。这经常导致在开发时间安排的结尾再补加一段很长的错误修正时间，结果无法实现原定目标并且会消除迭代开发的益处。
+</p>
+<p>
+    尽管早期开始的测试规划和定义任务可在早期规范工作中暴露出重要故障或缺陷，但是我们建议您要小心地选择要提前进行的测试工作。注意已提及的返工可能性的同时，测试团队也需要小心地保持他们作为公正的质量顾问的角色，而不要充当“质量警察”使早期的需求和设计任务出现偏差。按照项目团队的本性，项目团队早期为了解问题和解决方案空间所作的尝试会有缺陷。如果对该早期工作的质量提出不合理的要求，就有可能在测试团队和开发组剩余团队之间产生嫌隙。
+</p>
+<p>
+    在迭代中发现的问题可在同一迭代中解决，或推迟到下一个迭代中解决（这样的决定最终由“项目经理”角色作出）。测试团队和项目经理的主要任务之一是：通过验证是否达到在“迭代计划”中概述的迭代目标，来评估迭代的完整性如何。从一个迭代到另一个迭代的跨越之间有持续进行的“需求发现”。您需要注意这一点并准备管理它。
+</p>
+<p>
+    您将如何执行测试取决于以下几个因素：
+</p>
+<ul>
+    <li>
+        您的应用程序领域
+    </li>
+    <li>
+        您的预算
+    </li>
+    <li>
+        您公司的策略
+    </li>
+    <li>
+        您对风险的容忍度
+    </li>
+    <li>
+        您的职员
+    </li>
+</ul>
+<p>
+    您在测试中投资多少取决于在您的特定环境中如何评估质量和容忍风险。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

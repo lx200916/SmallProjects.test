@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 用例包</title>
+<meta content="Guideline" name="uma.type">
+<meta content="use-case_package" name="uma.name">
+<meta content="用例包" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{102E424E-98DE-4F54-B1A0-8F8FD54D6BEE}", "9.871865834975133E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "9.871865834975133E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.871865834975133E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：用例包</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">用例包是用例模型的一部分，用例模型由一组半独立的紧密相关的用例组成。本指南说明何时将用例模型分解为用例包会有益。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_package_A96DDE65.html" guid="{102E424E-98DE-4F54-B1A0-8F8FD54D6BEE}">用例包</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_use_case_model_93D8F44.html" guid="{F7D9D038-B184-43CC-9353-15BA154F87B5}">构造用例模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_use-case_package__guidelines_for" name="XE_use-case_package__guidelines_for" class="index" key="用例包（use-case package）" text="指南"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">说明</a>
+</h3>
+<p>
+    如果将模型按结构划分成较小单元，则更易于理解。如果能以包的形式表示模型的各主要部分，则更容易显示它们之间的关系。 包既可以是模型的顶级包，也可以构造为<b>用例包</b>。您还可以让客户决定如何构造模型的主要部分。
+</p>
+<ul>
+    <li>
+        如果存在很多用例或参与者，您可以使用用例包进一步构造用例模型。 用例包包含许多参与者、用例、它们的关系以及其他包；这样，您可以拥有多个级别的用例包（包中有包）。
+    </li>
+    <li>
+        顶级包包含所有顶级用例包、所有顶级参与者和所有顶级用例。
+    </li>
+</ul>
+<h3>
+    <a id="Use" name="Use">使用</a>
+</h3>
+<p>
+    您可以出于很多原因而将用例模型分割成用例包：
+</p>
+<ul>
+    <li>
+        可以使用用例包来反映已完成系统中的顺序、配置或在该系统中传递单元。
+    </li>
+    <li>
+        由于资源分配以及不同开发团队的能力不同，可能要求在处于不同位置的不同组之间划分项目。 有些用例包适于某个组，有些用例包适于某个人，这使得众多的包自然而然地成为继续进行开发的有效方式。
+        但是，您必须确保为每个包定义不同的职责，这样就可以并行地进行开发。
+    </li>
+    <li>
+        您可以反映用户类型的方式使用用例包来构造用例模型。 许多变更需求均来源于用户。 用例包确保特定用户类型的变更将只影响系统中对应于该用户类型的部分。
+    </li>
+    <li>
+        在某些应用程序中，某些信息应只能由少数人访问。用例包使您可在需要保持机密的区域保持机密。
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

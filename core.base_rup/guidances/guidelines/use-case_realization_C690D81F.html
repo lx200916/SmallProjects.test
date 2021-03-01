@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 用例实现</title>
+<meta content="Guideline" name="uma.type">
+<meta content="use-case_realization" name="uma.name">
+<meta content="用例实现" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "1.6790343052744206E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "1.6790343052744206E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{87EB094F-095B-4981-ACC3-319B3B298641}", "1.6790343052744206E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.6790343052744206E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.6790343052744206E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：用例实现</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">用例实现代表一个用例在协作对象方面将如何实施。本指南描述了它的用途和 UML 表示法。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">用例分析</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">用例设计</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">用例实现</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_use-case_realization__guidelines_for" name="XE_use-case_realization__guidelines_for"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    用例实现代表一个用例在协作对象方面将如何实施。 此工件可以有各种形式。例如，它可以包含文本描述（文档）、参与类和子系统的类图以及说明类和子系统实例之间交互流程的交互图（通信图和时序图）。
+</p>
+<p>
+    在一个模型中，用例实现表示为一个 UML 协作，该协作将形成用例实现一部分的这些图和附加信息（例如文本描述）分组。
+</p>
+<p>
+    将用例实现与其用例分开的原因是，这样做允许用例与它们的实现分开管理。这对于较大的项目或成系列的系统尤其重要，其中相同的用例在产品系列内的不同产品中的设计可以不同。请考虑一个电话交换机系列的情况，它们有许多公共的用例，但是又根据产品定位、性能和价格对它们进行不同的设计和实施。
+</p>
+<p>
+    对于较大的项目，将用例与其实现分开允许对用例的设计进行更改，而不影响作为基线的用例本身。
+</p>
+<p>
+    对于用例模型中的每个用例，分析／设计模型中都有一个与该用例有实现关系的用例实现。在 UML 中，这显示为一个虚线箭头，箭头象征泛化关系，表示实现是一种继承以及一种依赖关系（即，它可能已显示为使用
+    &lt;&lt;realization&gt;&gt; 构造的依赖关系）。
+</p>
+<p class="picturecenter" align="center">
+    <img height="109" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/ucrea1.gif" width="291" border="0" />
+</p>
+<p class="picturetext">
+    分析／设计模型中的用例实现可以跟踪到用例模型中的用例。
+</p>
+<h3>
+    <a id="Class Diagrams" name="Class Diagrams">用例实现拥有的类图</a>
+</h3>
+<p>
+    对于每个用例实现，可能有描绘其参与类的一个或多个类图。 下图显示了<b>接收抵押商品</b>用例的实现的类图。一个类及其对象经常参与若干用例实现。在设计期间重要的是，协调对一个类的所有需求，及它的可能由不同用例实现所拥有的对象。
+</p>
+<p class="picturecenter" align="center">
+    <img height="213" alt="描述用例实现的通信图" src="./../../../core.base_rup/guidances/guidelines/resources/md_ucre3.gif" width="328" />
+</p>
+<p class="picturetext">
+    用例“接收抵押商品”及其类图。
+</p>
+<h3>
+    通信和<a id="Sequence Diagrams" name="Sequence Diagrams">用例实现拥有的时序图</a>
+</h3>
+<p>
+    对于每个用例实现，有描绘其参与对象及其交互的一个或多个交互图。有两种类型的交互图：时序图和通信图。它们表达类似的信息，却以不同的方式显示。时序图显示消息的明确顺序，更适用于直观化消息的时间排序很重要的情况，而通信图显示对象之间的通信链接，更适用于理解对给定对象的所有影响和进行算法设计的情况。关于更多信息，请参阅下面的<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html" guid="3.211008403369512E-306">技术：时序图</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/communication_diagram_FFFEA1B5.html" guid="4.5194432001390347E-305">技术：通信图</a>。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

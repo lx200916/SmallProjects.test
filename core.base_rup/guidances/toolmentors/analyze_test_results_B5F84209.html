@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational Test RealTime 分析测试结果</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="analyze_test_results" name="uma.name">
+<meta content="使用 Rational Test RealTime 分析测试结果" name="uma.presentationName">
+<meta content="Tool:rup_test_realtime:Rational Test RealTime" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Test RealTime" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{449954B7-E120-43B5-B9F3-B9673E4EF590}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{449954B7-E120-43B5-B9F3-B9673E4EF590}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{449954B7-E120-43B5-B9F3-B9673E4EF590}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{449954B7-E120-43B5-B9F3-B9673E4EF590}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational Test RealTime 分析测试结果</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational Test RealTime 分析测试执行的结果。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_test_realtime_861C5353.html" guid="{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}">Rational Test RealTime</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    此工具向导描述如何使用 Rational Test RealTime 分析测试执行的结果。如果不能方便快捷地解释测试活动的结果并在随后采取行动，则无法实现尽早测试、持续测试的价值。
+</p>
+<p>
+    通过使用源代码插入技术以及源代码分析，Rational Test RealTime 能够将其组件测试和运行时分析功能直接集中于源代码级别。已添加的各种功能可确保快速进行故障隔离，确保轻松高效地处理所关联的源代码：
+</p>
+<ul>
+    <li>
+        可以在 Test RealTime 文本编辑器中打开并修改源代码。
+    </li>
+    <li>
+        可以操纵版本控制程序（例如 Rational ClearCase）来检入／检出版本化的代码。
+    </li>
+    <li>
+        可以直接访问变更管理程序（例如 ClearQuest）来进行缺陷提交和发出改进请求
+    </li>
+</ul>
+<p>
+    这些功能将与测试工具产生的分析报告结合在一起使用。Test RealTime
+    的每项关键功能（即：组件测试、系统测试、内存概要分析、性能概要分析、代码覆盖率分析、运行时跟踪和静态度量生成）都有一个专门的报告。这些报告包含从源代码解析器、源代码检测器、测试脚本生成器、测试脚本编译器、目标部署端口和报告生成器所生成的大量日志文件中抽取而来的信息。这些文件可在运行结束时由
+    Test RealTime 自动打开，也可以手动打开。
+</p>
+<p>
+    每一份报告都设计成可立即进行解释，以确保快捷高效地诊断和解决问题。
+</p>
+<h4>
+    报告类型
+</h4>
+<p>
+    以下将讨论每一项 Test RealTime 功能的报告分析。在相关之处也将讨论因使用的编程语言的不同而引起的报告差异：
+</p>
+<ul>
+    <li>
+        <a href="#ComponentAndSystemTesting">组件测试和系统测试</a>
+    </li>
+    <li>
+        <a href="#MemoryProfiling">内存概要分析</a>
+    </li>
+    <li>
+        <a href="#PerformanceProfiling">应用程序性能概要分析</a>
+    </li>
+    <li>
+        <a href="#CodeCoverageAnalysis">代码覆盖率分析</a>
+    </li>
+    <li>
+        <a href="#RuntimeTracing">运行时跟踪</a>
+    </li>
+    <li>
+        <a href="#StaticMetrics">静态度量</a>
+    </li>
+</ul>
+<h3>
+    <a id="ComponentAndSystemTesting" name="ComponentAndSystemTesting">组件测试和系统测试</a>
+</h3>
+<p>
+    要在 Test RealTime 用户界面右侧的“项目”窗口中使用“项目浏览器”选项卡打开这些报告，请右键单击测试节点并选择“查看报告 -&gt; 测试”。要使用 Test RealTime 菜单打开这些报告，请执行以下操作：
+</p>
+<ol>
+    <li>
+        选择菜单项“文件 &gt; 浏览报告”。
+    </li>
+    <li>
+        选择工具栏按钮“添加”。
+    </li>
+    <li>
+        从“文件类型”下拉列表中选择<b>报告</b>
+    </li>
+    <li>
+        浏览至与要查看的报告相应的 .xrd 文件并选择它们
+    </li>
+    <li>
+        单击“打开”按钮
+    </li>
+</ol>
+<p>
+    要从命令行打开这些报告，只要将每个 .xrd 文件作为命令行 <code><b>studio</b></code> 的参数即可。
+</p>
+<p>
+    报告具有两个主要的部分，前面是详细信息部分，后面是摘要部分。
+</p>
+<ul>
+    <li>
+        <i>摘要 －</i> 摘要部分包含诸如报告文件位置、测试执行的时间，以及已通过和未通过的测试的总数之类的信息。<br />
+        <br />
+    </li>
+    <li>
+        <i>组件测试详细信息 －</i> 对于组件测试，这一部分提供有关所测试的驱动程序／服务／函数／方法／过程的信息。对于每一项，报告都包含以下的部分或全部信息，这取决于源语言和所选的选项： 
+        <ul>
+            <li>
+                提供概述并总结测试是否通过的测试部分
+            </li>
+            <li>
+                变量值部分，指定每个变量的获取值
+            </li>
+            <li>
+                如果执行了代码覆盖率分析，则会显示代码覆盖率部分
+            </li>
+            <li>
+                关于约定（即，声明）确认以及验证 C++ 和 Java 查询的附加信息
+            </li>
+        </ul><br />
+    </li>
+    <li>
+        <i>系统测试详细信息 －</i> 对于系统测试，将提供以下子部分： 
+        <ul>
+            <li>
+                “初始化”部分，用于详述建立与所测试组件的连接所涉及的步骤。
+            </li>
+            <li>
+                一个或多个“场景”部分，用于详述已执行的实际测试。场景块可以嵌套。
+            </li>
+            <li>
+                “终止”部分，用于详述终止与所测试组件的连接所涉及的步骤。
+            </li>
+        </ul><br />
+    </li>
+</ul>
+<p>
+    Test RealTime
+    用户界面的报告资源管理器可以用于管理测试报告（双击感兴趣的任何节点即可）；通过“测试报告”菜单项和工具栏，您可以过滤报告以仅查看出错的报告。测试报告的多个部分均超链接至测试脚本；只要右键单击那些部分（鼠标会变成手状图标）即可。
+</p>
+<p>
+    <img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 关于查看测试报告的详细信息，请参阅 <i>Rational Test
+    RealTime User Guide</i> 的“Automated Testing-&gt;Component Testing”一章中讨论测试报告的部分。
+</p>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b>有关使用报告文件的详细技术信息，请参考
+    <i>Rational Test RealTime Reference Guide</i> 中讨论各种测试报告生成器的部分。特别请参阅 Appendices-&gt;File Types。
+</p>
+<h3>
+    <a id="MemoryProfiling" name="MemoryProfiling">内存概要分析</a>
+</h3>
+<p>
+    所有支持语言（C、C++ 和 Java）的内存概要分析报告均存储在 Project 文件夹或 TDP 文件夹（取决于所使用的语言）基于 XML 的文件中。
+</p>
+<p>
+    要使用“测试 RealTime”用户界面右侧的“项目”窗口中的“项目浏览器”选项卡打开这些报告，请右键单击某个测试节点，然后选择“查看报告 -&gt; 内存概要文件”。
+</p>
+<p>
+    要使用 Test RealTime 菜单打开这些报告，请执行以下操作：
+</p>
+<ol>
+    <li>
+        选择菜单项“文件 &gt; 浏览报告”。
+    </li>
+    <li>
+        选择工具栏按钮“添加”。
+    </li>
+    <li>
+        从“文件类型”下拉列表中选择<b>内存概要分析</b>。
+    </li>
+    <li>
+        浏览至您想查看的文件，然后选择这些文件。
+    </li>
+    <li>
+        根据需要，重复步骤 2-4。
+    </li>
+    <li>
+        请单击“报告浏览器”窗口中的“打开”按钮。
+    </li>
+</ol>
+<p>
+    要从命令行打开这些报告，只要将您想查看的一个或多个文件用作命令行 <code><b>studio</b></code> 的参数即可。
+</p>
+<p>
+    报告具有两个主要的部分，前面是详细信息部分，后面是摘要部分。
+</p>
+<ul>
+    <li>
+        <i>摘要 －</i> 直方图和文本报告部分，用于显示已分配和释放的总块数和总字节数，以及在任何给定时间所分配的最大块／字节数。<br />
+        <br />
+    </li>
+    <li>
+        <i>C 和 C++ 详细信息 －</i> 列出每个错误和警告，以及其关联的调用堆栈。列出调用堆栈时会最先列出上次调用的函数／方法；调用堆栈中的所有函数／方法都具有与源代码的超级链接<br />
+        <br />
+    </li>
+    <li>
+        <i>Java 详细信息 －</i> 显示自上次快照以来已分配对象的每个方法的清单。
+        基本表中会列出自每个方法的上次快照以来所分配的对象数和关联的字节数，以及每个方法及其子方法（即父代的子方法）所分配的对象总数和字节总数。<br />
+        <br />
+    </li>
+</ul>
+<p>
+    Test RealTime
+    用户界面的报告资源管理器可以用于管理测试报告（双击感兴趣的任何节点即可）；通过“测试报告”菜单项和工具栏，您可以过滤报告以仅查看出错的报告。测试报告的多个部分均超链接至测试脚本；只要右键单击那些部分（鼠标会变成手状图标）即可。
+</p>
+<p>
+    <img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 关于查看内存概要分析报告的详细信息，请参阅 <i>Rational
+    Test RealTime User Guide</i> 的“Runtime Analysis-&gt;Memory Profiling”一章。
+</p>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b>有关使用报告文件的详细技术信息，请参考
+    <i>Rational Test RealTime Reference Guide</i> 中讨论各种测试报告生成器的部分。特别请参阅 Appendices-&gt;File Types。
+</p>
+<h3>
+    <a id="PerformanceProfiling" name="PerformanceProfiling">应用程序性能概要分析</a>
+</h3>
+<p>
+    所有支持语言（C、C++ 和 Java）的性能概要分析报告均存储在 Project 文件夹或 TDP 文件夹（取决于所使用的语言）基于 XML 的文件中。
+</p>
+<p>
+    要使用“测试 RealTime”用户界面右侧的“项目”窗口中的“项目浏览器”选项卡打开这些报告，请右键单击某个测试节点，然后选择“查看报告 -&gt; 内存概要文件”。
+</p>
+<p>
+    要使用 Test RealTime 菜单打开这些报告，请执行以下操作：
+</p>
+<ol>
+    <li>
+        选择菜单项“文件 &gt; 浏览报告”。
+    </li>
+    <li>
+        选择工具栏按钮“添加”。
+    </li>
+    <li>
+        从“文件类型”下拉列表中选择<b>性能概要分析</b>。
+    </li>
+    <li>
+        浏览至您想查看的文件，然后选择这些文件。
+    </li>
+    <li>
+        根据需要，重复步骤 2-4。
+    </li>
+    <li>
+        请单击“报告浏览器”窗口中的“打开”按钮。
+    </li>
+</ol>
+<p>
+    要从命令行打开这些报告，只要将您想查看的一个或多个文件用作命令行 <code><b>studio</b></code> 的参数即可。
+</p>
+<p>
+    报告按如下组织：每个报告的顶部是一个饼图，该图详述每个独占总执行时间 5%
+    或以上的函数／方法（至多六个）。饼图下面是一个可排序的表，列出了每个函数／方法和各种关联的统计信息。在列标题上单击鼠标将按该列的内容对整个列表排序；在任何指定的函数／方法上单击鼠标将打开相应的源代码。值是不分好坏的 －
+    很大的函数执行时间（或很大的目标函数及子函数执行时间），仅仅是突出显示可能存在的低效算法，从而可作为进行优化的候选对象。
+</p>
+<p>
+    <img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 关于查看性能概要分析报告的详细信息，请参阅 <i>Rational
+    Test RealTime User Guide</i> 的“Runtime Analysis-&gt;Performance Profiling”一章。
+</p>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b>有关使用报告文件的详细技术信息，请参考
+    <i>Rational Test RealTime Reference Guide</i> 中讨论各种测试报告生成器的部分。特别请参阅 Appendices-&gt;File Types。
+</p>
+<h3>
+    <a id="CodeCoverageAnalysis" name="CodeCoverageAnalysis">代码覆盖率分析</a>
+</h3>
+<p>
+    所有支持语言（C、C++、Ada 和 Java）的代码覆盖率分析报告均存储在 Project 文件夹或 TDP 文件夹（取决于所使用的语言）基于 XML 的文件中。
+</p>
+<p>
+    要使用“测试 RealTime”用户界面右侧的“项目”窗口中的“项目浏览器”选项卡打开这些报告，请右键单击某个测试节点，然后选择“查看报告 -&gt; 内存概要文件”。
+</p>
+<p>
+    要使用 Test RealTime 菜单打开这些报告，请执行以下操作：
+</p>
+<ol>
+    <li>
+        选择菜单项“文件 &gt; 浏览报告”。
+    </li>
+    <li>
+        选择工具栏按钮“添加”。
+    </li>
+    <li>
+        从“文件类型”下拉列表中选择<b>代码覆盖率</b>。
+    </li>
+    <li>
+        浏览至您想查看的文件，然后选择这些文件。
+    </li>
+    <li>
+        根据需要，重复步骤 2-4。
+    </li>
+    <li>
+        请单击“报告浏览器”窗口中的“打开”按钮。
+    </li>
+</ol>
+<p>
+    要从命令行打开这些报告，只要将您想查看的一个或多个文件用作命令行 <code><b>studio</b></code> 的参数即可。
+</p>
+<p>
+    报告组织成两个主要组成部分：“源”和“比率”组成部分。
+</p>
+<ul>
+    <li>
+        <i>源 －</i> “源”选项卡反映了两级代码覆盖率信息： 
+        <ul>
+            <li>
+                当选择根文件夹时，“源”选项卡会使用饼图总结整体的代码覆盖率。
+            </li>
+            <li>
+                当选择“报告”窗口中的任何其他节点时，“源”选项卡使用具有颜色的代码来反映已覆盖以及未覆盖哪些代码。“源”选项卡显示与所选择的任一个节点相关的信息。
+            </li>
+        </ul><br />
+    </li>
+    <li>
+        <i>比率 －</i> “比率”选项卡将每个函数／方法／过程的覆盖率级别分解为百分比。<br />
+        <br />
+    </li>
+</ul>
+<p>
+    <img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 关于查看代码覆盖率报告的详细信息，请参阅 <i>Rational
+    Test RealTime User Guide</i> 的“Runtime Analysis-&gt;Code Coverage”一章。
+</p>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b>有关使用报告文件的详细技术信息，请参考
+    <i>Rational Test RealTime Reference Guide</i> 中讨论各种测试报告生成器的部分。特别请参阅 Appendices-&gt;File Types。
+</p>
+<h3>
+    <a id="RuntimeTracing" name="RuntimeTracing">运行时跟踪</a>
+</h3>
+<p>
+    所有支持语言（C、C++ 和 Java）的运行时跟踪报告均存储在 Project 文件夹或 TDP 文件夹（取决于所使用的语言）基于 XML 的文件中。
+</p>
+<p>
+    要使用“测试 RealTime”用户界面右侧的“项目”窗口中的“项目浏览器”选项卡打开这些报告，请右键单击某个测试节点，然后选择“查看报告 -&gt; 内存概要文件”。
+</p>
+<p>
+    要使用 Test RealTime 菜单打开这些报告，请执行以下操作：
+</p>
+<ol>
+    <li>
+        选择菜单项“文件 &gt; 浏览报告”。
+    </li>
+    <li>
+        选择工具栏按钮“添加”。
+    </li>
+    <li>
+        从“文件类型”下拉列表中选择<b>跟踪文件</b>。
+    </li>
+    <li>
+        浏览至您想查看的文件，然后选择这些文件。
+    </li>
+    <li>
+        根据需要，重复步骤 2-4。
+    </li>
+    <li>
+        请单击“报告浏览器”窗口中的“打开”按钮。
+    </li>
+</ol>
+<p>
+    要从命令行打开这些报告，只要将您想查看的一个或多个文件用作命令行 <code><b>studio</b></code> 的参数即可。
+</p>
+<p>
+    运行时跟踪报告是应用程序或测试代码执行过程中发生的所有事件的时序图。该时序图使用了来自统一建模语言的符号表示法，因而可以恰当称它为基于 UML 的时序图。竖线为生命线；每条生命线代表一个 Java
+    对象实例。用线图代表的最开始的生命线视为“环境”－
+    即操作系统。横线将一根生命线与另一根生命线连接起来。绿线代表构造函数调用，黑线代表方法调用，红线代表方法返回，蓝线代表析构函数调用，黄线代表异常。将鼠标悬浮在任何方法调用上可以查看全部文本。每个调用和调用返回都有时间戳记。每条竖线和横线都具有与受监视源代码的超级链接。菜单项“运行时跟踪
+    -&gt; 过滤器”可用来创建过滤器，使运行时跟踪报告更易于管理。
+</p>
+<p>
+    <img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 关于查看运行时跟踪报告的详细信息，请参阅 <i>Rational
+    Test RealTime User Guide</i> 的“Runtime Analysis-&gt;Runtime Tracing”一章。
+</p>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b>有关使用报告文件的详细技术信息，请参考
+    <i>Rational Test RealTime Reference Guide</i> 中讨论各种测试报告生成器的部分。特别请参阅 Appendices-&gt;File Types。
+</p>
+<h3>
+    <a id="StaticMetrics" name="StaticMetrics">静态度量</a>
+</h3>
+<p>
+    所有支持语言（C、C++ 和 Java）的内存概要分析报告均存储在 Project 文件夹或 TDP 文件夹（取决于所使用的语言）基于 XML 的文件中。
+</p>
+<p>
+    要使用“测试 RealTime”用户界面右侧的“项目”窗口中的“项目浏览器”选项卡打开这些报告，请右键单击某个测试节点，然后选择“查看报告 -&gt; 内存概要文件”。
+</p>
+<p>
+    要使用 Test RealTime 菜单打开这些报告，请执行以下操作：
+</p>
+<ol>
+    <li>
+        选择菜单项“文件 &gt; 浏览报告”。
+    </li>
+    <li>
+        选择工具栏按钮“添加”。
+    </li>
+    <li>
+        从“文件类型”下拉列表中选择<b>度量</b>。
+    </li>
+    <li>
+        浏览至您想查看的文件，然后选择这些文件。
+    </li>
+    <li>
+        根据需要，重复步骤 2-4。
+    </li>
+    <li>
+        请单击“报告浏览器”窗口中的“打开”按钮。
+    </li>
+</ol>
+<p>
+    要从命令行打开这些报告，只要将您想查看的一个或多个文件用作命令行 <code><b>studio</b></code> 的参数即可。
+</p>
+<p>
+    报告组织成两个级别：文件视图和对象视图：
+</p>
+<ul>
+    <li>
+        <i>文件视图 －</i> 选择根文件夹时，为每个选定文件显示使用 7 种 Halstead 度量中其中一种表示的条形图。您可以使用菜单更改所显示的特殊度量。选中任何其他节点时，将显示特定于该节点的静态度量值。<br />
+        <br />
+    </li>
+    <li>
+        <i>对象视图 －</i> 选中根文件夹时，将显示一个图形。该图形将每个函数／方法的特定静态度量进行比较 － 这可以使用菜单来更改。选中任何其他节点时，将显示特定于该节点的静态度量值。<br />
+        <br />
+    </li>
+</ul>
+<p>
+    <img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 关于查看静态度量报告的详细信息，请参阅 <i>RationalTest
+    RealTime User Guide</i> 的“Runtime Analysis-&gt;Static Metrics”一章。
+</p>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /></b>有关使用报告文件的详细技术信息，请参考
+    <i>Rational Test RealTime Reference Guide</i> 中讨论各种测试报告生成器的部分。特别请参阅 Appendices-&gt;File Types。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

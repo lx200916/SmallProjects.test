@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational Rose Data Modeler 设计和模型化数据库</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="modeling_and_designing_databases" name="uma.name">
+<meta content="使用 Rational Rose Data Modeler 设计和模型化数据库" name="uma.presentationName">
+<meta content="Tool:rup_rose_classic:Rational Rose" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Rose" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{C1A09291-4091-4300-AF91-B7715DE432F9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{C1A09291-4091-4300-AF91-B7715DE432F9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{C1A09291-4091-4300-AF91-B7715DE432F9}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{C1A09291-4091-4300-AF91-B7715DE432F9}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{C1A09291-4091-4300-AF91-B7715DE432F9}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational Rose Data Modeler 设计和模型化数据库</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述用 Rational Rose Data Modeler 创建数据模型。此工具向导还提供以下信息：从 Rose 数据模型生成新的 DDL 或数据库模式，以及如何反向设计数据库以创建数据模型。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_rose_classic_20F2524D.html" guid="{06FB737B-5D74-4C3B-98F4-36153CFB2E34}">Rational Rose</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">数据库设计</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    Rational Rose Data Modeler 的功能允许数据库设计员和软件开发人员使用相同的工具开发应用程序和数据库设计。作为数据库设计员或开发人员，您可以使用 Rational Rose Data Modeler
+    对数据库进行建模和设计，并集成您的应用程序和数据库。&nbsp;
+</p>
+<p>
+    Rational Rose Data Modeler 可使用或创建三种模型：对象模型、数据模型和可选的数据存储模型。对象模型代表类、类的行为和类之间的关系。Rational Rose Data Modeler 中的“对象”模型一般对应于
+    RUP <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>工作产品。Rose
+    类图代表对象模型的视图。数据模型表示由企业实现的数据库的结构。可选的数据存储模型表示数据库的物理存储结构。Rational Rose Data Modeler 的“数据模型”和“数据存储模型”一般对应于 RUP <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>工作产品。
+</p>
+<p>
+    通过将对象模型中的持久类转换为数据模型中的表，您可以创建数据库物理设计的模型。必须将持久类指定给组件，并位于同一逻辑软件包中。创建物理数据库设计模型的另一个方法是：反向设计现有数据库模式或 DDL 脚本。
+</p>
+<p>
+    通过使用 Rose Data Modeler
+    变换选项，您可以集成应用程序和数据库设计。变换选项映射对象模型中包含的元素以创建数据模型，或者变换数据模型中的元素以创建对象模型。您必须理解面向对象的分析和设计（OOAD）概念和统一建模语言（UML）才能创建对象模型。创建数据模型要求理解关系数据库设计。Rose
+    Data Modeler 使用数据库术语和 UML 构造型来表示数据库元素。<br />
+     &nbsp;
+</p>
+<h3>
+    工具步骤
+</h3>
+<ol>
+    <li>
+        <a href="#Develop Logical Data Model (Optional)">开发逻辑数据模型（可选）</a>
+    </li>
+    <li>
+        <a href="#Develop Physical Database Design">开发物理数据库设计</a> 
+        <ul>
+            <li>
+                <a href="#Create Domains">创建域</a>
+            </li>
+            <li>
+                <a href="#Transforming Persistent Design Elements to Physical Data Model Elements">创建初始物理数据库设计元素</a>
+            </li>
+            <li>
+                <a href="#Define Reference Tables">定义引用表</a>
+            </li>
+            <li>
+                <a href="#Create Primary Key and Unique Key Constraints">创建主键和唯一键的约束</a>
+            </li>
+            <li>
+                <a href="#Define Data and Referential Integrity Rules">定义数据和引用完整性实施规则</a>
+            </li>
+            <li>
+                <a href="#Optimize Data Model for Performance">反向规范化数据库设计以优化性能</a>
+            </li>
+            <li>
+                <a href="#Optimize Data Access">优化数据访问</a>
+            </li>
+            <li>
+                <a href="#Define Storage Characteristics">定义存储特征</a>
+            </li>
+            <li>
+                <a href="#Distribute Class Behavior to the Database">设计存储过程以向数据库分发类行为</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#Review the Results">查看结果</a>
+    </li>
+</ol>
+<p>
+    除了以上描述的步骤，此工具向导还提供关于以下<a href="#Additional Topics">其他主题</a>的信息，这些主题与在 Rational Rose 中构建和管理数据模型相关。
+</p>
+<ul>
+    <li>
+        <a href="#Forward Engineer the Data Model">正向设计数据模型</a>
+    </li>
+    <li>
+        <a href="#Maintain the Data Model">维护数据模型</a>
+    </li>
+    <li>
+        <a href="#Reverse Engineer DDL Script or Database Schema">从 DDL 脚本或数据库模式反向设计数据模型</a>
+    </li>
+</ul>
+<p>
+    有关如何使用 Rational Rose Data Modeler 来设计数据库和为数据库建模的概述，请参阅 Rose Data Modeler 联机帮助主题的&nbsp;<img height="16" alt="帮助手册图标"     hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="17" border="0" /> <i>Getting Started</i> 部分。&nbsp;
+</p>
+<h3>
+    <a id="Develop Logical Data Model (Optional)" name="Develop Logical Data Model (Optional)"></a>1. <a id="Develop Logical Data Model" name="Develop Logical Data Model">开发逻辑数据模型（可选）</a>
+</h3>
+<p>
+    一些项目可能需要创建数据库设计的理想“逻辑”模型，该数据库设计捕获关键逻辑数据实体及其关系的应用程序独立视图。该“逻辑数据模型”可被视为与可在应用程序设计开发中使用的可选<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">工作产品：分析模型</a>类似的模型的“分析”类型。应该注意，逻辑数据模型包含在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">工作产品：数据模型</a>中，而不是单独的 RUP 工作产品。&nbsp;
+</p>
+<p>
+    可以使用 Rational Rose Data Modeler 中用数据模型图构建新数据模型的功能来创建逻辑数据模型。在 Rational Rose Data Modeler 中，逻辑数据模型将包含在 Rational Rose
+    逻辑视图中的单独模式软件包中。有关构建数据模型的信息，请查阅以下联机帮助主题：
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Building a
+        Data Model</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create a
+        Schema</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Working
+        with Data Model Diagrams</i>。
+    </li>
+</ul>
+<p>
+    理想逻辑数据模型的开发可以根据特定的项目需要进行选择。项目可以选择使用 Rational Rose Data Modeler 对象－表变换功能而不是单独构建模型来开发数据模型。&nbsp;
+</p>
+<h3>
+    2. <a id="Develop Physical Database Design" name="Develop Physical Database Design">开发物理数据库设计</a>
+</h3>
+<p>
+    物理数据库设计是使用逻辑视图中的数据模型图创建的数据库的详细表设计。物理数据库设计可以描述为“物理数据模型”，它还包含数据库视图、索引、约束、存储过程以及其他元素的模型元素，在联机帮助主题 <img height="16"     alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Data Model Elements</i>
+    中对这些元素进行了描述。该物理数据模型不被视为单独的工作产品，而被视为<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">工作产品：数据模型</a>的一部分，并可以包含在 Rational Rose 逻辑视图中的一个或多个模式软件包中。&nbsp;
+</p>
+<p>
+    初始物理数据库设计模型元素最初可以用以下一种方法创建：
+</p>
+<ul>
+    <li>
+        使用 Rational Rose Data Modeler 对象－表变换功能来创建初始表集。
+    </li>
+    <li>
+        反向设计现有的数据库模式或 DDL 脚本（请参阅 <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Reverse Engineering a Database or DDL File</i>）
+    </li>
+    <li>
+        通过可选逻辑数据模型中包含的逻辑数据库设计的演进来开发初始物理数据模型。
+    </li>
+</ul>
+<p>
+    此工具向导中的其余步骤讨论使用对象－表变换过程开始物理数据库设计的方法。有关使用对象－表变换功能的先决条件的信息，请查阅 <img height="16" alt="帮助手册图标" hspace="0"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Transforming an Object Model to a Data Model</i> 联机帮助主题。
+</p>
+<h4>
+    <a id="Create Domains" name="Create Domains">创建域</a>
+</h4>
+<p>
+    创建域可实施用户定义的数据类型，这些类型可用于整个数据模型中，以实施数据库设计标准。有关什么是域以及如何使用域的概述，请参阅以下联机帮助主题 <img height="16" alt="帮助手册图标" hspace="0"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Working with Domains</i>。在第一次创建数据模型中的模式软件包时，Rational
+    Rose Data Modeler 还在逻辑视图中创建<b>全局数据类型</b>软件包，用于存储域软件包和域。 有关创建域的更多详细信息，请参考以下 Rational Rose Data Modeler 联机帮助主题。
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Domains</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create a
+        Domain Package</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create a
+        Domain</i>
+    </li>
+</ul>
+<h4>
+    <a id="Transforming Persistent Design Elements to Physical Data Model Elements" name="Transforming Persistent Design Elements to Physical Data Model Elements">创建初始物理数据库设计元素</a>
+</h4>
+<p>
+    通过使用 Rational Rose Data Modeler，您可以变换对象模型中的类及其关系，从而在数据模型中创建表和数据模型关系。有关对象模型元素是如何变换成数据模型元素的详细描述，请参阅 Rational Rose Data
+    Modeler 联机帮助主题 <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+    <i>Transforming Object Model Elements Mapping</i>。
+</p>
+<p>
+    &nbsp;在将对象模型变换为数据模型之前：
+</p>
+<ul>
+    <li>
+        将类的状态设置为持久。
+    </li>
+    <li>
+        为使用 Java、Visual Basic 或 Analysis 语言的组件分配类。
+    </li>
+    <li>
+        将类归在同一逻辑软件包中。
+    </li>
+</ul>
+<p>
+    在 Rational Rose Data Modeler <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"     border="0" /> <i>Transform an Object Model to a Data Model</i> 联机帮助主题中对特定的变换步骤进行了描述。对象模型元素是使用特定于选定 DBMS
+    的数据类型映射变换为数据模型元素的。当变换完成时，您可以创建“数据模型图”来开始开发详细的物理数据库设计。有关更多信息，请参阅 <img height="16" alt="帮助手册图标" hspace="0"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create Data Model Diagrams</i>。
+</p>
+<p>
+    您可以在数据模型中修改表和／或创建其他表和关系。有关创建表和关系的更多信息，请参考以下主题：
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Tables</i>
+        和 <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create
+        Tables</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Columns</i>
+        和 <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create a
+        Column</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+        <i>Relationships</i> 和 <img height="16" alt="帮助手册图标 " hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Create Relationships</i>
+    </li>
+</ul>
+<h4>
+    <a id="Define Reference Tables" name="Define Reference Tables">定义引用表</a>
+</h4>
+<p>
+    根据需求创建引用表来管理数据库中所有的静态数据项。有关创建表和关系的信息，请参阅此工具向导的前述步骤中有关表和关系的主题列表。
+</p>
+<h4>
+    <a id="Create Primary Key and Unique Key Constraints" name="Create Primary Key and Unique Key Constraints">创建主键和唯一键的约束</a>
+</h4>
+<p>
+    定义主键约束和唯一键约束来识别表中的信息行。有关如何创建和使用主键约束和唯一键约束的信息，请查阅以下 Rose Data Modeler 联机帮助主题：
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Key
+        Constraints</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create a
+        Key Constraint</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create Keys
+        (Primary and Unique)</i>
+    </li>
+</ul>
+<h4>
+    <a id="Define Data and Referential Integrity Rules" name="Define Data and Referential Integrity Rules">定义数据和引用完整性实施规则</a>
+</h4>
+<p>
+    定义引用完整性规则可确保正确管理数据库更新。Rational Rose Data Modeler 支持声明引用完整性（DRI）和系统生成的引用完整性（RI）触发器。有关信息，请查阅以下联机帮助主题。
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Referential
+        Integrity</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Define
+        Referential Integrity</i>
+    </li>
+</ul>
+<p>
+    应用检查约束可在数据模型中实施业务规则。Rational Rose Data Modeler 允许将检查约束指定到列、域或表。以下联机帮助主题提供了有关创建和使用检查约束的更多信息。
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Check
+        Constraints</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create
+        Check Constraints</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Apply
+        Business Rules</i>
+    </li>
+</ul>
+<p>
+    外键约束是数据和引用完整性实施的另一个重要方面。通过创建表之间的关系可获得外键约束。在创建关系时，父表的主键作为外键迁移到子表中。 有关创建外键约束的更多信息，请参阅以下联机帮助主题：<img height="16"     alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Key Constraints</i> 和 <img     height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Migrating Keys</i>。
+</p>
+<h4>
+    <a id="Optimize Data Model for Performance" name="Optimize Data Model for Performance">反向规范化数据库设计以优化性能</a>
+</h4>
+<p>
+    偶尔会需要提高性能，以存储相同表中一起检索的对象。这种技术称为反向规范化。要在数据模型中体现这一技术，请将两个表的唯一列合并到一个表中，并删除第二个表。有关反向规范化和优化的更多信息，请查阅以下 Rational Rose Data
+    Modeler 联机帮助主题：
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+        <i>De-normalizing the Data Model</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Optimizing
+        the Data Model</i>
+    </li>
+</ul>
+<h4>
+    <a id="Optimize Data Access" name="Optimize Data Access">优化数据访问</a>
+</h4>
+<p>
+    另一优化技巧是使用列索引来更有效地访问表中的数据。有关如何在数据模型中创建索引的信息，请参阅以下主题。
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Indexes</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create an
+        Index</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Optimizing
+        the Data Model</i>
+    </li>
+</ul>
+<p>
+    另外，可以定义视图以改进数据访问。可以使用视图从由应用程序频繁访问的一个或多个表和／或其他视图创建包含列的虚拟表。 以下 Rational Rose Data Modeler
+    联机帮助主题提供了有关在模型中创建视图和创建视图与表之间关系的详细信息。
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Views</i> 和
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Create
+        Views</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Working
+        with Views</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+        <i>Dependencies 和&nbsp;</i><img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16"         border="0" /> <i>Working with View Dependencies</i>
+    </li>
+</ul>
+<h4>
+    <a id="Define Storage Characteristics" name="Define Storage Characteristics">定义存储特征</a>
+</h4>
+<p>
+    通过创建数据存储模型，您可对数据的物理存储进行建模。数据存储模型由包含一个或多个表空间的数据库组成。此“数据存储模型”被视为部分物理数据模型，它包含在 RUP 中的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">工作产品：数据模型</a>中，而不是单独的工作产品。数据存储模型包含在整个 Rose 模型的组件视图中。
+</p>
+<p>
+    表空间是存储表数据的逻辑存储元素。您可以向表空间分配一个或多个表，并将表数据分发给一个或多个容器。容器是物理存储设备，如磁盘、文件或目录。每个容器分段为多个扩展数据块或页面，以千字节为单位。有关数据库和表空间的更多信息，请参阅以下
+    Rose Data Modeler 联机帮助部分中的主题列表。
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Modeling
+        Data Storage</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Building a
+        Data Storage Model</i>
+    </li>
+</ul>
+<p>
+    这些帮助部分还包含提供定义数据存储模型元素的信息的主题，这些数据存储模型元素特定于 Rational Rose Data Modeler 支持的数据管理系统（DBMS）。
+</p>
+<h4>
+    <a id="Distribute Class Behavior to the Database" name="Distribute Class Behavior to the Database">设计存储过程以向数据库分发类行为</a>
+</h4>
+<p>
+    根据需要定义存储过程来支持数据库信息的有效存储和检索。检查用于创建候选存储过程的初始表的设计类操作。存储过程可以作为过程或函数来实施。有关如何在数据模型中创建存储过程的更多信息，请参阅以下 Rational Rose Data
+    Modeler 联机帮助主题：
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Stored
+        Procedures</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Creating
+        Stored Procedures</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Working
+        with Stored Procedures</i>
+    </li>
+</ul>
+<p>
+    您还可以根据需要定义触发器，以进一步控制和管理对表中信息的修改。 有关在数据模型中创建触发器的更多信息，请查阅以下联机帮助主题：
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Custom
+        Triggers</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Creating
+        Custom Triggers</i>
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Working
+        with Custom Triggers</i>
+    </li>
+</ul>
+<h3>
+    <a id="Review the Results" name="Review the Results">3. 复查结果</a>
+</h3>
+<p>
+    查看<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>中数据库设计的结果，以与<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>中的应用程序设计保持一致，并与整体应用程序体系结构保持一致。 有关要复查的某些特定项，请参考<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/checklists/data_model_D22985A5.html" guid="2.800761632096845E-305">核对表：数据模型</a>。
+</p>
+<h3>
+    <a id="Additional Topics" name="Additional Topics">其他主题</a>
+</h3>
+<p>
+    此工具向导的本部分描述与数据模型和数据库的双向设计和维护相关的一些其他项。
+</p>
+<h4>
+    <a id="Forward Engineer the Data Model" name="Forward Engineer the Data Model">正向设计数据模型</a>
+</h4>
+<p>
+    已在数据模型中充分开发了详细的数据库设计（包括数据存储设计）后，就可以使用 Rose Data Modeler“正向设计向导”从数据模型图生成 DDL 或数据库模式。“正向设计向导”读取数据模型中的模式，并针对您在该向导中指定的 DBMS
+    生成 DDL 脚本。在该向导中，您可以选择执行 DDL 脚本以生成数据库模式。
+</p>
+<p>
+    在正向设计向导中，选择要生成的选项：
+</p>
+<ul class="plus">
+    <li>
+        表
+    </li>
+    <li>
+        索引
+    </li>
+    <li>
+        触发器
+    </li>
+    <li>
+        存储过程
+    </li>
+    <li>
+        视图
+    </li>
+    <li>
+        表空间
+    </li>
+    <li>
+        标准名称。这些用于在表名称前面加上模式名称前缀。
+    </li>
+    <li>
+        加引号的标识，用于使用双字节代码集（DBCS）的本地化所需的表、列和模式
+    </li>
+    <li>
+        SQL 删除语句以覆盖现有 DDL 脚本、数据库元素或注释
+    </li>
+</ul>
+<p>
+    要使正向设计过程能够起作用，您将需要确保已建立了正确的数据库连接。有关正向设计的更多信息，请查阅以下 Rational Rose Data Modeler 联机帮助主题：
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Forward
+        Engineering to a DDL or Database</i>（正向设计过程信息）
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Forward
+        Engineer to a DDL or Database</i>（运行正向设计向导的特定步骤）
+    </li>
+</ul>
+<p>
+    有关数据类型映射、数据库连接和与从数据模型到特定目标 DBMS 的正向设计相关的其他主题的特定信息，请查阅 Rational Rose Data Modeler 联机帮助 <img height="16" alt="帮助手册图标"     hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Reference</i> 部分中的数据库管理系统（DBMS）主题列表。
+</p>
+<h4>
+    <a id="Maintain the Data Model" name="Maintain the Data Model">维护数据模型</a>
+</h4>
+<p>
+    一旦已正向设计数据模型来创建数据库，就可以使用 Rational Rose Data Modeler“比较与同步向导”来保持数据模型与已实施数据库的一致性。&nbsp;
+</p>
+<p>
+    在将数据模型与已实施数据库同步时，您将需要确保已建立了正确的数据库连接，以使比较和同步过程起作用。有关数据模型比较和同步的更多信息，请查阅以下 Rational Rose Data Modeler 联机帮助主题：
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Comparing
+        and Synchronizing the Data Model</i>（比较与同步过程信息）
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Compare a
+        Schema to a Database or DDL file from a Database or DDL file</i>（运行“比较与同步向导”的特定步骤）
+    </li>
+</ul>
+<p>
+    有关数据类型映射、数据库连接以及与比较和同步数据模型与特定目标 DBMS 相关的其他主题的特定信息，请查阅 Rational Rose Data Modeler 联机帮助的 <img height="16" alt="帮助手册图标"     hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Reference</i> 部分中的数据库管理系统（DBMS）主题列表。
+</p>
+<p>
+    有关修改数据模型元素的特定规则的信息，还可以参考 Rational Rose Data Modeler 联机帮助主题 <img height="16" alt="帮助手册图标" hspace="0"     src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Modifying Data Models</i>。
+</p>
+<h4>
+    <a id="Reverse Engineer DDL Script or Database Schema" name="Reverse Engineer DDL Script or Database Schema"></a>从 DDL
+    脚本或数据库模式反向设计数据模型
+</h4>
+<p>
+    使用 Rational Rose Data Modeler“反向设计向导”可以从数据库模式或 DDL 文件生成数据模型。“反向设计向导”读取数据库模式或 DDL文件，并创建包含所有加引号标识实体的名称的数据模型图。 根据
+    DBMS、Rose Data Modeler“反向设计向导”对数据模型图中的表、表之间的关系、存储过程、索引以及触发器建模。
+</p>
+<p>
+    要使反向设计过程起作用，需要确保已建立了正确的数据库连接。有关反向设计的更多信息，请查阅以下 Rational Rose Data Modeler 联机帮助主题：
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Reverse
+        Engineering a Database or DDL</i>（反向设计过程信息）
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Reverse
+        Engineer from a Database or DDL file</i>（运行反向设计向导的特定步骤）
+    </li>
+</ul>
+<p>
+    有关数据类型映射、数据库连接以及与从特定 DBMS 反向设计数据模型相关的其他主题的特定信息，请查阅 Rational Rose Data Modeler 联机帮助 <img height="16" alt="帮助手册图标"     hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Reference</i> 部分中的数据库管理系统（DBMS）主题列表。
+</p>
+<p>
+    在反向设计数据库或 DDL 后，您可以选择将在反向设计过程中生成的数据模型中的表变换成对象（设计）模型中的类。有关表－对象变换过程的更多信息，请参阅以下主题。
+</p>
+<ul>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+        <i>Transforming a Data Model to an Object Model</i>（变换过程信息）
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> <i>Transform a
+        Data Model into an Object Model</i>（执行变换的特定步骤）
+    </li>
+    <li>
+        <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />
+        <i>Transforming Data Model Elements Mapping</i>（数据模型元素到对象模型元素的映射）
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Applied Information Sciences 图标"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>此内容的全部或部分由 <a href="http://www.appliedis.com" target="_blank">Applied
+                Information Sciences</a> 开发。</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

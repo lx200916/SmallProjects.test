@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational TestManager 执行测试套件</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="executing_test_suite" name="uma.name">
+<meta content="使用 Rational TestManager 执行测试套件" name="uma.presentationName">
+<meta content="Tool:rup_test_manager_tool:Rational TestManager" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestManager" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational TestManager 执行测试套件</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational TestManager 执行测试套件。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_test_manager_tool_2C79A4DC.html" guid="{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}">Rational TestManager</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/execute_test_suite_492795DE.html" guid="{6B420194-5EB7-4A12-A061-09FAA5DC18DE}">执行测试套件</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    TestManager 的其中一项功能是管理测试工作，可用于将所有类型的测试脚本（GUI、Manual Test、虚拟用户、命令行、Visual Basic 和
+    Java）整合为一个由用户执行的步骤。该步骤称为套件，可用于在您的测试团队内作为一个粘合的整体（而非零散步骤）分发、执行和评估测试脚本系列。
+</p>
+<p>
+    执行套件时，需要提供特定于运行时的信息。执行分配的套件项的每个虚拟测试员按照这些指示信息运行。执行套件的结果存储在日志中。执行套件之后，可生成报告来分析存储在日志中的数据，以及以图形和图表的形式显示执行结果。
+</p>
+<p>
+    请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/implementing_test_suite_AE114A0D.html" guid="{803E510B-B96F-481B-92A9-EEF6CF6AAA24}">工具向导：使用 Rational TestManger 设计自动化测试套件</a>，获取有关创建测试套件的更多信息。
+</p>
+<p>
+    在运行 Microsoft Windows 98/2000/NT 4.0 时此工具向导可用。
+</p>
+<h4>
+    工具步骤
+</h4>
+<p>
+    要使用 TestManager 执行测试套件，需执行以下步骤：
+</p>
+<ol>
+    <li>
+        <a href="#Specify a suite">指定套件</a>
+    </li>
+    <li>
+        <a href="#Define your user load">定义用户负载</a>
+    </li>
+    <li>
+        <a href="#Specify a log file">指定日志文件</a>
+    </li>
+    <li>
+        <a href="#Enable or disable resource monitoring">启用或禁用资源监视</a>
+    </li>
+    <li>
+        <a href="#Choose whether to ignore configurations">选择是否忽略配置</a>
+    </li>
+    <li>
+        <a href="#Specify run-time reporting options">指定运行时报告选项</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp; <a id="Specify a suite" name="Specify a suite">指定套件</a>
+</h3>
+<ul>
+    <li>
+        要指定套件，请从<b>文件</b>菜单单击<b>运行套件</b>。将显示“运行套件”对话框。
+    </li>
+    <li>
+        要更改套件，请单击<b>套件信息</b>内的<b>更改...</b>。
+    </li>
+</ul>
+<h3>
+    2.&nbsp;&nbsp; <a id="Define your user load" name="Define your user load">定义用户负载</a>
+</h3>
+<ul>
+    <li>
+        如果您选择运行的套件已经定义了固定的计算机组，并且<b>名称</b>下没有可见字段，请转到步骤 3 <a href="#Specify a log file">指定日志文件</a>。
+    </li>
+    <li>
+        否则，在<b>用户数</b>框中输入要运行的虚拟测试员的数量。
+    </li>
+    <li>
+        如果套件同时包含固定的和可伸缩的组，则首先分配固定组。可用的虚拟测试员数量取决于您拥有的许可证的类型。如果您的许可证不支持指定的虚拟测试员数，将显示一个错误消息。
+    </li>
+</ul>
+<p>
+    <b>注意</b>：在定义了计算机组的情况下，如果选中<b>运行套件前提示计算机</b>复选框，将显示“计算机”列表，并包含<b>编辑计算机</b>、<b>编辑计算机列表</b>和<b>属性</b>按钮。
+</p>
+<h3>
+    3.&nbsp;&nbsp; <a id="Specify a log file" name="Specify a log file">指定日志文件</a>
+</h3>
+<p>
+    当前构建版本号在<b>构建版本</b>框中显示。“日志文件夹”的名称基于套件，而“日志名称”则基于虚拟测试员数和套件的已运行次数。
+</p>
+<p>
+    要更改日志文件夹或日志名称，请单击<b>日志信息</b>内的<b>更改...</b>。
+</p>
+<h3>
+    4.&nbsp;&nbsp; <a id="Enable or disable resource monitoring" name="Enable or disable resource monitoring">启用或禁用资源监视</a>
+</h3>
+<p>
+    如果计划监视资源，则单击<b>监视资源</b>复选框。修改<b>更新速率</b>框中的时间间隔可更改更新视图的速率。时间间隔越小，更新就越快。
+</p>
+<p>
+    监视功能将在您回放套件时监测计算机资源的使用情况，并在您分析结果时，以图形方式表示对应虚拟测试员响应时间内的这些使用情况数据。
+</p>
+<h3>
+    5.&nbsp;&nbsp; <a id="Choose whether to ignore configurations" name="Choose whether to ignore configurations">选择是否忽略配置</a>
+</h3>
+<p>
+    单击<b>忽略测试用例的配置</b>复选框可让 TestManager 忽略测试用例的系统配置，并在任何可用的计算机上运行这些测试用例。
+</p>
+<p>
+    如果选中此选项，TestManager 有三种运行套件的方式：
+</p>
+<ul>
+    <li>
+        如果套件包含一个带有已配置的测试用例的测试用例，并且该父测试用例具有实施（例如，测试脚本或套件），TestManager 将在可用的任何计算机上运行此父测试用例，但不运行任何已配置的测试用例。
+    </li>
+    <li>
+        如果套件包含一个带有已配置的测试用例的测试用例，但该父测试用例没有实施，TestManager 将不运行父测试用例或任何已配置的测试用例。
+    </li>
+    <li>
+        如果单独的一个已配置测试用例具有实施，TestManager 将在指定的计算机上运行该测试用例。
+    </li>
+</ul>
+<h3>
+    6.&nbsp;&nbsp; <a id="Specify run-time reporting options" name="Specify run-time reporting options">指定运行时报告选项</a>
+</h3>
+<ul>
+    <li>
+        要更改 TestManager 报告套件执行状态的方式，请单击<b>选项...</b>。这样就可以设置以下类型的选项： 
+        <ul>
+            <li>
+                <b>监视</b>选项卡控制 TestManager 在套件执行过程中显示信息的方式。
+            </li>
+            <li>
+                <b>报告</b>选项卡指定 TestManager 在套件完成执行时生成的报告。此选项仅适用于性能测试。
+            </li>
+            <li>
+                <b>运行</b>选项卡控制套件执行的记录，供以后进行评估。
+            </li>
+            <li>
+                <b>VU 编译</b>选项卡指定带条件的 VU 编译的缺省定义，并指定在套件中包含外部 C 库。
+            </li>
+        </ul>
+    </li>
+</ul>
+<blockquote>
+    <p>
+        <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 有关更多信息，请参阅 Rational
+        TestManager 联机帮助中标题为 <i>Options dialog box</i> 的主题。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        配置了执行之后，单击<b>确定</b>将执行测试。TestManager 检查套件并编译任何未编译或过时的测试脚本。要在 TestManager 检查套件时停止套件执行，请单击<b>取消</b>。
+    </li>
+    <li>
+        TestManager 检查套件并编译必需的测试脚本之后，将最小化“准备运行”窗口。此时不能取消或关闭该窗口。要暂停执行，请单击<b>监视</b>菜单上的<b>停止</b>。
+    </li>
+    <li>
+        执行测试之后，可以评估测试结果。
+    </li>
+</ul>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 有关更多信息，请参阅 TestManager
+    联机帮助中标题为 <i>Executing Tests</i> 的主题。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

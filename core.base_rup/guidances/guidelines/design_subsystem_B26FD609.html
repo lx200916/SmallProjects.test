@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 设计子系统</title>
+<meta content="Guideline" name="uma.type">
+<meta content="design_subsystem" name="uma.name">
+<meta content="设计子系统" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "1.2314266786534317E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "1.2314266786534317E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}", "1.2314266786534317E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.2314266786534317E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.2314266786534317E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：设计子系统</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">“设计子系统”实施“软件组件”的概念。本指南说明如何确定和指定设计子系统。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">设计子系统</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_layering__layering_guidelines_for_design_subsystems" name="XE_layering__layering_guidelines_for_design_subsystems" class="index" key="分层（layering）" text="设计子系统的分层指南"></a><a id="XE_design_subsystem__guidelines_for" name="XE_design_subsystem__guidelines_for"></a> 
+<h3>
+    <a id="XE_design_subsystem__partitioning_patterns" name="XE_design_subsystem__partitioning_patterns"></a><a id="Subsystem Usage" name="Subsystem Usage">子系统用途</a>
+</h3>
+<p>
+    <a id="XE_layering__partitioning_patterns" name="XE_layering__partitioning_patterns"></a>可以用大量补充方法使用子系统，以将系统分成以下单元：
+</p>
+<ul>
+    <li>
+        可以单独订购、配置或交付的单元
+    </li>
+    <li>
+        只要接口保持不变，就可以独立开发的单元
+    </li>
+    <li>
+        可以在一组分发式计算节点之间独立部署的单元
+    </li>
+    <li>
+        可以独立更改而不中断系统其他部分的单元
+    </li>
+</ul>
+<p>
+    因此，子系统适用于对组件建模 － 在基于组件的开发中，组合件的可替换单元，大于单个设计类。
+</p>
+<p>
+    另外，子系统可以
+</p>
+<ul>
+    <li>
+        将系统分成各种单元，这些单元对关键资源提供受限制的安全性
+    </li>
+    <li>
+        表示设计中的现有产品或外部系统。
+    </li>
+</ul>
+<h3>
+    <a id="XE_design_subsystem__identifying_subsystems" name="XE_design_subsystem__identifying_subsystems"></a><a id="Identifying Subsystems" name="Identifying Subsystems">确定子系统</a>
+</h3>
+<p>
+    如果一个复杂的分析类看似包含作为单个设计类单独作用而无法尽责的行为，则应将该分析类映射到设计子系统。如果可能作为一组协作类实施一个复杂的设计类，则该设计类也可以成为子系统。
+</p>
+<p>
+    子系统也是确定要由单独团队独立开发的系统部件的好方法。如果协作设计元素可以与它们的协作一起完全包含在一个包中，则子系统可以提供比简单的包所提供的更强形式的封装。在一个或多个接口后面完全隔离子系统中的内容和协作，以便子系统的客户端仅依赖于该接口。然后子系统的设计者完全与外部依赖关系隔离；需要该设计者（或设计团队）指定如何实现该接口，但他们完全可以自由更改内部子系统设计，而不会影响外部依赖关系。在有大量独立团队的大型系统中，这一程度的分离与正式接口所提供的体系结构实施相结合，是选择子系统而不是简单的包的一个有力的理由。
+</p>
+<p>
+    使用设计子系统封装这些协作，方法是使子系统客户端可以完全不管子系统的内部设计，即使它们使用该子系统提供的服务也是如此。如果协作中的参与类／子系统仅互相交互来产生良好定义的一组结果，则应将该协作及其协作设计元素封装在一个子系统中。
+</p>
+<p>
+    此规则还可以应用于协作的子集。协作的任何部分或者整体都可以被封装和简化，这种做法将使设计更易理解。
+</p>
+<h4>
+    提示
+</h4>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="row0" scope="col" width="35%">
+                    <blockquote>
+                        <p class="tableheading" align="center">
+                            提示
+                        </p>
+                    </blockquote>
+                </th>
+                <td scope="col" headers="row0" width="65%">
+                    <p class="tableheading" align="center">
+                        详细信息
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th id="row1" width="35%">
+                    查找可选性
+                </th>
+                <td headers="row1" width="60%">
+                    如果特定协作（或子协作）代表可选行为，则在子系统中包含它。可选择删除、升级或替换的功能应认为其是独立的。
+                </td>
+            </tr>
+            <tr>
+                <th id="row2" width="35%" rowspan="2">
+                    查看系统用户接口。
+                </th>
+                <td headers="row2" width="60%">
+                    如果用户接口与系统中的实体类是相对独立的（即，可以独立地更改这两者），则创建水平集成的子系统：将相关用户接口边界类分组到一个子系统中并将相关实体类分组到另一个子系统中。
+                </td>
+            </tr>
+            <tr>
+                <td headers="row2" width="65%">
+                    如果用户接口和它显示的实体类是紧密耦合的（即，更改其中一个将触发另一个的更改），则创建垂直集成的子系统：将相关边界类和实体类包含到一个公共子系统中）。
+                </td>
+            </tr>
+            <tr>
+                <th id="row3" width="35%" rowspan="2">
+                    查看参与者
+                </th>
+                <td headers="row3" width="65%">
+                    分隔两个不同的参与者使用的功能，因为每个参与者应能够独立地更改他们对系统的需求。
+                </td>
+            </tr>
+            <tr>
+                <td headers="row3" width="65%">
+                    创建子系统以封装对外部系统或设备的访问。
+                </td>
+            </tr>
+            <tr>
+                <th id="row5" width="35%">
+                    查找设计元素之间的耦合与聚集
+                </th>
+                <td headers="row5" width="65%">
+                    高度耦合或聚集的类／子系统进行协作以提供某组服务。 将高度耦合的元素组织到子系统中，并按弱耦合界线分隔元素。在某些情况中，通过将类分成具有更多聚集职责的更小的类，或相应地重新划分子系统，可以完全消除弱耦合。
+                </td>
+            </tr>
+            <tr>
+                <th id="row6" width="35%">
+                    查看替代
+                </th>
+                <td headers="row6" width="65%">
+                    如果为特定能力指定了几个服务级别（例如：高、中和低可用性），则将每个服务级别表示为一个单独的子系统，每个子系统实现相同的一组接口。通过这样做，子系统之间可以互相替换。
+                </td>
+            </tr>
+            <tr>
+                <th id="row7" width="35%">
+                    查看分发
+                </th>
+                <td headers="row7" width="65%">
+                    <span                     style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE">虽然特定子系统可以有多个实例，每个实例在不同的节点上执行，在许多体系结构中不可能在多个节点之间分割组件的单个实例。在必须在各个节点之间拆分子系统行为的情况下，建议将子系统分解成功能更受限制的更小的子系统（每个子系统代表一个单独的组件）。
+                    <span                     style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE; mso-spacerun: yes">&nbsp;</span>确定必须存在于每个节点上的功能并创建“拥有”该功能的新子系统，相应地分发原子系统的职责和相关元素。
+                    <span                     style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: HE; mso-spacerun: yes">&nbsp;</span>新子系统对原子系统是内部的。</span>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    一旦将设计组织成子系统，则相应更新用例实现。
+</p>
+<h3>
+    <a id="Modeling Subsystems" name="Modeling Subsystems">将子系统建模</a>
+</h3>
+<p>
+    使用 UML 组件对设计子系统建模。此构造提供了以下建模能力：
+</p>
+<ul>
+    <li>
+        能对类进行分组以定义较大粒度的系统部件
+    </li>
+    <li>
+        能分离可视界面和内部实施
+    </li>
+    <li>
+        可在运行时执行
+    </li>
+</ul>
+<p>
+    其他注意事项是：
+</p>
+<ul>
+    <li>
+        必须向每个设计子系统提供一个名称和简短描述。
+    </li>
+    <li>
+        应将原分析类的职责转移到新创建的子系统，使用子系统描述来记录这些职责
+    </li>
+</ul>
+<p>
+    注意：UML 2.0 还为组件定义了名为 &lt;&lt;subsystem&gt;&gt; 的构造型，例如，表示可使用它来代表大规模结构。RUP 设计子系统可能是大规模结构，也可能不是；这两者从 RUP
+    角度而言都是设计子系统。这是软件设计人员要决定的问题（例如选择是否将组成组件的组件标记为 &lt;&lt;subsystem&gt;&gt;）。
+</p>
+<h3>
+    <a id="Subsystems That Represent Existing Products" name="Subsystems That Represent Existing Products">表示现有产品的子系统</a>
+    <a href="#Top"><img height="20" alt="回到页首" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    当现有产品是导出接口（即操作，并可能是<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/reception_E5EE6A47.html" guid="_yS_Rg9nmEdmO6L4XMImrsA"><b>接收</b></a>）的产品，但以其他方式保留所有隐藏的实施详细信息时，则应将它建模为逻辑视图中的子系统。可以使用子系统表示的、系统使用的产品示例包括：
+</p>
+<ul>
+    <li>
+        通信软件（中间件）。
+    </li>
+    <li>
+        数据库访问支持（RDBMS 映射支持）。
+    </li>
+    <li>
+        特定于应用程序的产品。
+    </li>
+</ul>
+<p>
+    某些现有的诸如类型和数据结构集合（例如，堆栈、列表和队列）之类的产品最好表示为包，因为它们揭示了比行为更多的内容，并且重要和有用的是包的特定内容而非包本身，包只是一个容器。&nbsp;
+</p>
+<p>
+    可以将普通的实用程序（例如数学库）表示为子系统（如果它们只是简单地导出接口），但这是否有必要或有意义，则依赖于设计者对建模事物性质的判断。子系统是面向对象的构造（因为它们是已建模的组件）：子系统可以有实例（如果设计者这样声明）。 UML
+    在<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/utility_5BFC0972.html" guid="_ybVVMNnmEdmO6L4XMImrsA">实用程序</a>中提供了另一种对各组全局变量和过程建模的方法，即类的构造型 － 实用程序没有实例。&nbsp;
+</p>
+<p>
+    当定义子系统来表示产品时，还定义了一个或多个接口来表示产品接口。
+</p>
+<h3>
+    <a id="Subsystem Dependency Restrictions" name="Subsystem Dependency Restrictions">子系统依赖关系限制</a> <a href="#Top"><img     height="20" alt="回到页首" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    设计子系统（建模为 UML 组件）在其语义中与包不同：子系统通过其实现的一个或多个接口提供其行为。包不提供行为；它们只是提供行为的事物的容器。
+</p>
+<p>
+    使用子系统而非包的原因是子系统封装其内容，仅通过其接口提供行为。这么做的好处是：与包不同，可以完全自由地更改子系统的内容和内部行为，只要子系统的接口保持不变。子系统还提供了“可替换的设计”元素：任何两个实现相同接口（或
+    &lt;&lt;specification&gt;&gt; 组件）的 &lt;&lt;realization&gt;&gt; 组件都是可交换的。
+</p>
+<p>
+    为了确保子系统是模型中的可交换元素，需要强制以下一些规则：
+</p>
+<ul>
+    <li>
+        子系统应尽可能不显露其内容。理想情况是子系统不能包含具有“公共”可视性的元素，因此子系统之外不存在这样的元素，它依赖于子系统内部特定元素的存在。某些例外情况如下： 
+        <ul>
+            <li>
+                在某些技术中，无法将子系统外部建模为 UML 接口。例如，将 Java 接口建模为构造型的类。
+            </li>
+            <li>
+                子系统设计可能要求显露类而非 UML 接口。例如，可以使用“delegate”或“access”类隐藏其他类的复杂协作。 在也可以使用普通包的情况下，可以使用子系统以强调封装行为和隐藏内部详细信息的意图。
+            </li>
+        </ul>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <br />
+         当子系统的外部不是 UML 接口时，通常有一个显示子系统可见元素的图（例如，取名为“外部视图”）是很有帮助的。
+    </li>
+    <li>
+        子系统应定义其对子系统接口的依赖关系（以及上面描述的例外情况中子系统的公共可见元素）。另外，大量子系统可能共享一组公共的接口或类定义，在这些情况中这些子系统“导入”包含公共元素的包的内容。这对体系结构较低层中的包是更常见的情况，以确保一致地定义了必须在子系统之间传送的公共类定义。
+    </li>
+</ul>
+<p>
+    子系统和包依赖关系的示例如下：
+</p>
+<p align="center">
+    <img alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_dsub2.jpg" />
+</p>
+<p class="picturetext">
+    设计模型中的子系统和包依赖关系
+</p>
+<h3>
+    <a id="Subsystem Specification and Realization" name="Subsystem Specification and Realization">子系统规范和实现</a><a href="#Top"><img height="20" alt="回到页首" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<h4>
+    <a id="Definition" name="Definition">定义</a><a href="#Top"><img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h4>
+<p>
+    UML（[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML04" guid="7.755968586980351E-308">UML04</a>]）声明：
+</p>
+<blockquote>
+    <p>
+        存在大量适用于组件的 UML 标准构造型（例如 &lt;&lt;specification&gt;&gt; 和
+        &lt;&lt;realization&gt;&gt;）来对具有不同的规范和实现定义（其中一个规范可有多个实现）的组件建模。
+    </p>
+    <p>
+        &lt;&lt;specification&gt;&gt; 定型的组件指定了一个对象域，而未定义这些对象的物理实施。它仅提供和要求接口，不打算有任何实现类和子组件作为其定义的一部分。
+    </p>
+    <p>
+        &lt;&lt;realization&gt;&gt; 定型的组件指定了一个对象域，而且定义了这些对象的物理实施。例如，由 &lt;&lt;realization&gt;&gt; 定型的组件将仅有实现类和子组件，它们实施单独的
+        &lt;&lt;specification&gt;&gt; 组件指定的行为。
+    </p>
+</blockquote>
+<p>
+    规范和实现的分离实际上允许对子系统有两个独立的描述。规范作为一个协议，定义了客户端为使用子系统所需知道的所有信息。实现是详细的内部设计，用于指导实施者。如果希望支持多个实现，则创建单独的“realization”子系统，并得出从每个实施子系统到规范子系统的实现。
+</p>
+<h4>
+    <a id="When and how to use" name="When and how to use">何时使用以及如何使用</a>
+</h4>
+<p>
+    如果子系统的内部状态和行为相对简单，通过子系统显露的接口、用于描述行为的状态表图和描述性文本来指定子系统可能已经足够了。
+</p>
+<p>
+    对于更复杂的内部状态和行为，可以使用分析类在高抽象级别指定子系统。对于大型系统，子系统的指定可能还包括用例。请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/developing_large-scale_systems_with_the_rational_unified_process_7AA2AF65.html" guid="1.768223108034868E-305">利用 Rational Unified Proces 开发大规模系统</a>。
+</p>
+<p>
+    在以下情形中，提供与实现分离的详细规范有可能最有用：
+</p>
+<ul>
+    <li>
+        子系统实现的内部状态或行为很复杂 － 并且为了客户端能够有效地使用规范，应尽可能简单地表达它；
+    </li>
+    <li>
+        子系统是可复用的“组合组件”，它们用来组装大量系统（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">概念：组件</a>）；
+    </li>
+    <li>
+        希望让单独的组织开发子系统内部；
+    </li>
+    <li>
+        需要创建子系统的多个实施；
+    </li>
+    <li>
+        希望用有重大内部更改、却没有外部可见行为更改的另一个版本替换子系统。
+    </li>
+</ul>
+<p>
+    然而，维护独立的规范需要努力 － 因为必须确保子系统的实现符合规范。何时以及是否创建独立的规范、实现类和协作的标准应在<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">工作产品：特定于项目的指南</a>中定义。
+</p>
+<h4>
+    <a id="Dependencies" name="Dependencies">依赖关系</a>
+</h4>
+<p>
+    规范应定义其依赖关系。这些是来自其他子系统和包中的接口和可见元素，它们必须在所有兼容的子系统实现中都是可用的。
+</p>
+<p>
+    实现可能包含由设计者或实施者引入的附加依赖关系。例如，可能有机会使用实用程序组件简化实施 － 但不应将该实用程序组件使用详细情况显露给客户端。应当在作为实现一部分的独立图中捕获这些附加依赖关系。
+</p>
+<h4>
+    <a id="Relationship to Implementation" name="Relationship to Implementation">与实施的关系</a>
+</h4>
+<p>
+    全面详述的规范定义了客户端使用子系统所需的所有信息。这意味着优化显露的接口和任何公共的可见元素，以便它们与代码成一对一关系。引入以指定子系统行为的分析类应仍然保留为高级别的抽象，因为它们应独立于所有子系统实现。
+</p>
+<p>
+    子系统的实现元素应与代码密切保持一致。
+</p>
+<p>
+    关于该主题的进一步讨论，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305">技术：从设计到代码的映射</a>。
+</p>
+<h3>
+    <a id="UML_1x_Representation" name="UML_1x_Representation">UML 1.x 表示</a>
+</h3>
+<h4>
+    建模
+</h4>
+<p>
+    可以将设计子系统建模为 UML 2.0 组件或 UML 1.5 子系统。这些构造提供了几乎等价的建模能力，如模块性、封装和能够在运行时执行的实例。
+</p>
+<p>
+    关于这些建模选项的其他注意事项是：
+</p>
+<ul>
+    <li>
+        UML 1.5 子系统显式地包括了“规范”和“实现”的表示法（在上面标题为<a href="#Subsystem Specification and Realization">『子系统规范和实现』</a>一节中定义）。UML 2.0
+        组件支持规范的表示法（以一个或多个提供和要求的接口的形式）和实现的表示法（由一个或多个实现其行为的类和子组件组成的内部实施）。
+    </li>
+    <li>
+        UML 1.5 子系统也是包。UML 2.0 组件有打包能力，表示它们可以拥有并导入可能很大的一组模型元素。
+    </li>
+</ul>
+<p>
+    但是，基本上可以互换地使用这些表示法。将设计子系统表示成 UML 1.5 子系统还是 UML 2.0 组件的决策应记录在为您的项目定制的<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">特定于项目的指南</a>中。
+</p>
+<p>
+    如果可视建模工具支持 UML 1.5 包但不支持 UML 1.5 子系统，则构造型为 &lt;&lt;subsystem&gt;&gt; 的包可用于表示子系统。
+</p>
+<h4>
+    子系统依赖关系限制
+</h4>
+<p>
+    在标题为<a href="#Subsystem Dependency Restrictions">子系统依赖关系限制</a>一节中提到的那些依赖关系限制和讨论同样适用于建模为 UML 1.5 子系统的设计子系统。
+</p>
+<p>
+    UML 1.5 中的子系统和包依赖关系示例如下：
+</p><br />
+<br />
+<p align="center">
+    <img height="240" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_dsub1.gif" width="370" />
+</p>
+<p class="picturetext">
+    设计模型中的子系统和包依赖关系<br />
+    <br />
+</p>
+<h4>
+    子系统规范和实现
+</h4>UML 1.5 声明： 
+<blockquote>
+    <p>
+        将子系统的内容分成两个子集：1）规范和 2）实现元素。规范元素与子系统的操作和接收一起，用于给出实现元素所提供的行为的抽象规范。实现元素集合对物理系统的行为单元内部建模。
+    </p>
+</blockquote>
+<p>
+    规范和实现的分离实际上允许对子系统有两个独立的描述。规范作为一个协议，定义了客户端为使用子系统所需知道的所有信息。实现是详细的内部设计，用于指导实施者。
+</p>
+<p>
+    如果建模环境不直接支持，对规范和实现的建模可选择在每个子系统中放置两个包（规范和实现）。
+</p>
+<p>
+    规范的一项动机是支持多个实现。这在 UML 1.x 中不直接支持。如果希望使用 UML 1.5 子系统支持多个实现，请创建单独的“实现”子系统，并得出从每个实现子系统到规范子系统的实现。
+</p>
+<p>
+    基本上，适用于 UML 2.0 的那些规范和实现的注意事项在这里也适用（有关说明，请参阅<a href="#When and How to Use">何时使用和如何使用</a>、<a href="#Dependencies">依赖关系</a>和<a href="#Relationship to Implementation">与实施的关系</a>）。
+</p>
+<h4>
+    附加信息
+</h4>
+<p>
+    关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/supportingmaterials/differences_between_uml_1_x_and_uml_2_0_CA70F2E6.html" guid="4.792914878943572E-306">UML 1.x 和 UML 2.0 之间的区别</a>。<br />
+    <br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

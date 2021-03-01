@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 分布模式</title>
+<meta content="Concept" name="uma.type">
+<meta content="distribution_patterns" name="uma.name">
+<meta content="分布模式" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "6.137181182978733E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "6.137181182978733E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "6.137181182978733E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.137181182978733E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：分布模式</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">分布模式强调了系统解决方案在分布方面的重要性，以及分布方面影响其他体系结构决策的程度。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">体系结构分析</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">描述分发</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_architecture__distribution_patterns" name="XE_architecture__distribution_patterns" class="index" key="体系结构（architecture）" text="3 层"></a><a id="XE_distribution_patterns__introduction_to" name="XE_distribution_patterns__introduction_to" class="index" key="分发模式（distribution patterns）" text="3 层"></a> 
+<h3>
+    <a id="Nodes, Processors and Devices" name="Nodes, Processors and Devices">节点、处理器和设备</a>
+</h3>
+<p>
+    处理器和设备是常见的节点构造型。似乎很难评估这两者之间的区别，因为许多设备现在都包含它们自己的 CPU。 但是，处理器和设备之间仍有区别，这在于它们上面执行的软件的类型。 处理器执行的程序／软件是明确地为正在开发的系统编写的。
+    处理器是通用的计算设备，它具有计算容量、内存和执行能力。
+</p>
+<p>
+    设备执行为控制设备自身的功能而编写的软件。 设备通常连接到控制该设备的处理器。它们通常执行嵌入式软件，不能运行通用程序。 它们的功能通常受设备驱动程序软件的控制。
+</p>
+<h3>
+    <a id="Distribution Patterns" name="Distribution Patterns">分布模式</a>
+</h3>
+<p>
+    系统中存在许多典型的分发模式，它们取决于系统的功能和应用程序的类型。 在许多情况下，非正式地使用分发模式来描述系统的“体系结构”，尽管完整的体系结构不仅包含它，而且还包含许多更多的内容。
+    例如，许多时候系统将被描述为具有“客户机－服务器体系结构”，尽管这只是体系结构的分发方面。 这用来强调系统分发方面的重要性，以及分发方面影响其他体系结构决策的程度。
+</p>
+<p>
+    下面描述的分发模式暗示了某些系统特征、性能特征和流程体系结构。 每种模式解决某些问题，但也构成独特的挑战。
+</p>
+<h3>
+    <a id="Client/Server Architectures" name="Client/Server Architectures">客户机／服务器体系结构</a><a id="XE_architecture__client/server" name="XE_architecture__client/server"></a><a id="XE_distribution_patterns__client/server_architectures" name="XE_distribution_patterns__client/server_architectures"></a>
+</h3>
+<p>
+    在所谓的“客户机／服务器体系结构”中，有些专用的网络处理器节点称为<b>客户机</b>，而有些节点称为<b>服务器</b>。客户机是服务器提供的服务的使用者。客户机通常服务于单个用户，并经常处理最终用户的表示服务（GUI）；而服务器通常同时向数台客户机提供服务，所提供的服务通常是数据库服务、安全性服务或打印服务。
+    这些系统中的“应用逻辑”或业务逻辑通常分布于客户机和服务器上。业务逻辑的分布称为<b>应用程序分区</b>。
+</p>
+<p>
+    在下图中，客户机 A 显示了 2 层体系结构的示例，大部分应用逻辑均位于服务器中。 客户机 B 显示了典型的 3 层体系结构，其中业务服务在业务对象服务器中实施。 客户机 C 显示了典型的基于 Web 的应用程序。
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/dpatt01.gif" alt="在内容中描述了该图。" width="546" height="287" />
+</p>
+<p class="picturetext">
+    客户机－服务器体系结构的变体
+</p>
+<p>
+    在传统的客户机／服务器系统中，大部分业务逻辑在客户机上实施，但一些功能更适合于位于服务器上，例如常常要访问存储在服务器上的数据的功能。这样，人们可以减少网络通信，而网络流量在大多数情况下代价是十分昂贵的（其速度要比进程间通信慢一到两个数量级）。
+</p>
+<p>
+    一些特征：
+</p>
+<ul>
+    <li>
+        系统可以由几种不同类型的客户机构成，例如： 
+        <ul>
+            <li>
+                用户工作站
+            </li>
+            <li>
+                网络计算机
+            </li>
+        </ul>
+    </li>
+    <li>
+        客户机和服务器通过使用各种不同的技术进行通信，例如 CORBA/IDL 或 RPC（远程过程调用）技术。
+    </li>
+    <li>
+        系统可以由几种不同类型的服务器构成，例如： 
+        <ul>
+            <li>
+                <b>数据库服务器</b>，处理诸如 Sybase、Ingres、Oracle 和 Informix 之类的数据库机器
+            </li>
+            <li>
+                <b>打印服务器</b>，处理诸如特定打印机的排队之类的驱动程序逻辑
+            </li>
+            <li>
+                <b>通信服务器</b>（TCP/IP、ISDN、X.25）
+            </li>
+            <li>
+                <b>窗口管理器服务器</b>（X）
+            </li>
+            <li>
+                <b>文件服务器</b>（UNIX 下的 NFS）
+            </li>
+        </ul>
+    </li>
+</ul>
+<h4>
+    <a id="The 3-Tier Architecture" name="The 3-Tier Architecture">“3 层体系结构”</a><a id="XE_architecture__3-tier" name="XE_architecture__3-tier"></a><a id="XE_distribution_patterns__3-tier_architecture" name="XE_distribution_patterns__3-tier_architecture"></a>
+</h4>
+<p>
+    “3 层体系结构”是“客户机／服务器体系结构”的特例，其中系统的功能分成 3 个逻辑分区：应用程序服务、业务服务和数据服务。 实际上“逻辑分区”可以映射到 3 个或更多的物理节点。
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/3-tier.gif" alt="在内容中描述了该图。" width="175" height="268" />
+</p>
+<p class="picturetext">
+    3 层体系结构的示例
+</p>
+<p>
+    逻辑被划分到这三“层”中，这一做法反映了人们对典型办公应用程序的观察结果，即这类应用程序应从哪个方向进行实施以及它如何变化。应用程序服务主要处理 GUI 表示问题，它们倾向于在带有图形化、窗口化的操作环境的专用桌面工作站中执行。
+    功能的更改往往受到易用性和美学方面考虑的支配，本质上是<b>人为因素</b>的问题。
+</p>
+<p>
+    数据服务倾向于使用数据库服务器技术来实施，该技术倾向于在一个或多个高性能、高带宽的节点上执行，这些节点连接在网络上，向几百几千的用户提供服务。 在已存信息的表示和不同已存信息之间的关系变化时，数据访问倾向于随之而变。
+</p>
+<p>
+    业务服务反映业务流程的具体编码。它们处理并合成从数据服务获取的信息，并提供给应用程序服务。 业务服务通常由许多用户共同使用，因此这些服务也倾向于位于专门的服务器上，尽管它们可以驻留在与数据服务相同的节点上。
+</p>
+<p>
+    沿着这一连串服务的分区功能，为可伸缩性提供了一个相对可靠的模式：通过添加服务器和在数据和业务服务器之间重新平衡处理，来达到更高程度的可伸缩性。
+</p>
+<h4>
+    <a id="The 'Fat Client Architecture'" name="The 'Fat Client Architecture'">“胖客户机体系结构”</a><a id="XE_architecture__fat-client" name="XE_architecture__fat-client"></a><a id="XE_distribution_patterns__fat-client_architecture" name="XE_distribution_patterns__fat-client_architecture"></a>
+</h4>
+<p>
+    之所以把客户机描述为“胖”，是因为几乎所有服务都在该客户机上运行（除了一种称为“两层体系结构”的变体，此时数据服务位于单独的节点上）。应用程序服务、业务服务和数据服务均驻留在客户机上，数据库服务器通常位于另一台机器上。
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/2-tier.gif" alt="在内容中描述了该图。" width="166" height="174" />
+</p>
+<p class="picturetext">
+    传统的 2 层或“胖客户机”体系结构
+</p>
+<p>
+    “胖客户机”的设计和构建相对简单，但却比较难以分发（它们往往既大又是整体式的）和维护。 因为客户机倾向于将数据在本地进行高速缓存以提高性能，所以本地高速缓存的一致性和相容性往往是需要引起特别关注的问题和领域。
+    对位于多个本地高速缓存的共享对象的变更进行协调是很困难的，且代价不菲，因为涉及到将变更通过网络进行传播。
+</p>
+<h4>
+    <a id="Web Application" name="Web Application">“胖服务器体系结构”</a><a id="XE_architecture__fat-server" name="XE_architecture__fat-server"></a><a id="XE_distribution_patterns__fat-server_architecture" name="XE_distribution_patterns__fat-server_architecture"></a>
+</h4>
+<p>
+    与“胖客户机”截然不同的另一面是“胖服务器”或“瘦客户机”。 典型的例子是运行一组 HTML 页面的 Web 浏览器应用程序，在客户机上几乎根本没有应用程序。 几乎所有的工作均发生在一台或多台 Web 服务器和数据服务器上。
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/dpatt04.gif" alt="在内容中描述了该图。" width="166" height="174" />
+</p>
+<p class="picturetext">
+    Web 应用程序
+</p>
+<p>
+    Web 应用程序易于分发，易于变更。开发和支持它们的代价相对较低（因为应用程序基础体系结构的大部分由浏览器和 Web 服务器提供）。
+    不过它们可能不会提供对应用程序所需的控制级别，如果设计不佳，它们往往很快使网络饱和（有时即使设计良好也会很快使网络饱和）。
+</p>
+<h4>
+    <a id="Distributed Client/Server" name="Distributed Client/Server">分布式客户机／服务器体系结构</a><a id="XE_architecture__distributed_client/server" name="XE_architecture__distributed_client/server"></a><a id="XE_distribution_patterns__distributed_client/server_architecture" name="XE_distribution_patterns__distributed_client/server_architecture"></a>
+</h4>
+<p>
+    在这种体系结构中，应用程序服务、业务服务和数据服务驻留在不同的节点上，在业务服务层和数据服务层中的服务器均可能是专门化的。 它是 3 层体系结构的完整实现。
+</p>
+<h3>
+    <a id="The Peer-to-Peer Architecture" name="The Peer-to-Peer Architecture">点对点体系结构</a><a id="XE_architecture__peer-to-peer" name="XE_architecture__peer-to-peer"></a><a id="XE_distribution_patterns__peer-to-peer_architecture" name="XE_distribution_patterns__peer-to-peer_architecture"></a>
+</h3>
+<p>
+    在点对点体系结构中，系统中任何进程或节点都可以同时是客户机<b>和</b>服务器。 达到功能分发的方法是，将相互关联的服务分组在一起，以使网络流量最少，同时使吞吐量和系统利用率最大。
+    这样的系统往往很复杂，而且更需要意识到诸如死锁、进程间资源缺乏以及故障处理之类的问题。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

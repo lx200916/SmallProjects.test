@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational RequisitePro 查看需求历史记录</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="view_history_of_requirement" name="uma.name">
+<meta content="使用 Rational RequisitePro 查看需求历史记录" name="uma.presentationName">
+<meta content="Tool:rup_requisite_pro:Rational RequisitePro" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational RequisitePro" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{9D4EA8B0-AB27-4B4F-9571-938469E24D7A}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{9D4EA8B0-AB27-4B4F-9571-938469E24D7A}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{9D4EA8B0-AB27-4B4F-9571-938469E24D7A}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{9D4EA8B0-AB27-4B4F-9571-938469E24D7A}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational RequisitePro 查看需求历史记录</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导说明了如何使用 Rational RequisitePro&amp;reg 来查看需求的历史记录。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_requisite_pro_593FD397.html" guid="{887DBA0C-5761-494D-862D-5956F1C51BF7}">Rational RequisitePro</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    在修改需求时，需求历史记录使您能够跟踪这些需求变更的<b>内容</b>、<b>时间</b>、<b>原因</b>和<b>执行者</b>。需求历史记录提供以下信息：
+</p>
+<ul>
+    <li>
+        需求变更的频率如何？（变更得太频繁说明需求定义可能有问题。）
+    </li>
+    <li>
+        谁修改了特定需求？（您可能需要向那个人咨询，以在确认或拒绝该变更前了解其变更的动机。）
+    </li>
+    <li>
+        为什么变更需求？（理由是什么？）
+    </li>
+    <li>
+        什么造成两个需求之间的关系变得“可疑”？
+    </li>
+</ul>
+<p>
+    当您尝试确定对某个需求的变更是否影响其关联的需求时，在分析影响期间，了解需求的历史记录特别有用。&nbsp;
+</p>
+<h3>
+    工具步骤
+</h3>
+<p>
+    此工具向导介绍以下需求历史记录过程：
+</p>
+<ol>
+    <li>
+        <a href="#ViewHistory">查看需求的历史记录</a>
+    </li>
+    <li>
+        <a href="#ImpactAnalysis">执行影响分析</a>
+    </li>
+    <li>
+        <a href="#Tips">记录需求的历史记录</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="ViewHistory" name="ViewHistory">查看需求的历史记录</a>
+</h3>
+<p>
+    在 RequisitePro 中，需求的历史记录位于“需求属性”对话框的<b>修订版</b>选项卡中。可从 Microsoft&reg; Word 文档或视图访问该对话框。
+</p>
+<p>
+    在 Word 文档中：
+</p>
+<ol>
+    <li>
+        将光标置于需求文本中。
+    </li>
+    <li>
+        单击 <b>RequisitePro</b> &gt; <b>需求</b> &gt; <b>属性</b>。“需求属性”对话框出现。
+    </li>
+</ol>
+<p>
+    在视图中：
+</p>
+<ol>
+    <li>
+        选择需求行，并执行以下操作打开“需求属性”对话框：
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            右键单击以显示上下文相关菜单，然后从弹出菜单中单击<b>属性</b>。
+        </li>
+        <li>
+            单击<b>需求 &gt; 属性</b>。
+        </li>
+    </ul>
+</blockquote>
+<ol start="2">
+    <li>
+        执行以下操作：
+    </li>
+    <li style="list-style: none">
+        <ul>
+            <li>
+                单击<b>修订版</b>选项卡。该窗格显示对该需求的最后一次变更。将显示日期、时间、作者或变更描述（变更理由）。
+            </li>
+            <li>
+                单击<b>历史记录</b>按钮。“修订版历史记录”对话框显示自创建该需求以来对它所作的所有修改。RequisitePro 在发生修改时自动增加修订版号。
+            </li>
+            <li>
+                在“修订版”列表框中单击修订版，查看有关该修订版的详细信息。
+            </li>
+            <li>
+                单击<b>打印</b>，打印该需求的修订版集。
+            </li>
+        </ul>
+    </li>
+</ol>
+<blockquote>
+    <p>
+        <b>请注意：</b>要打印涉及多个需求的修订版，请使用 Rational SoDA&reg;，即 Rational 文档自动化工具，从 RequisitePro 项目中抽取任何修订版集，并打印 Word 或 Adobe&reg;
+        FrameMaker 文档。另一种方法是，通过 ODBC 连接打开只读的 RequisitePro 数据库，并使用数据库报告工具查询多个需求的修订版。
+    </p>
+</blockquote>
+<h3>
+    2.&nbsp; <a id="ImpactAnalysis" name="ImpactAnalysis">执行影响分析</a>
+</h3>
+<p>
+    复查需求的历史记录是影响分析中的一个重要步骤。您在需求之间设置可跟踪性链接，其中一个原因就是提供一种方法来标记可能受相关需求中的变更影响的需求。
+</p>
+<p>
+    RequisitePro
+    使用<b>可疑链接</b>来表示两个相关需求之间的关系，由于修改了其中一个需求，因此必须重新检查这两个需求之间的关系。在可跟踪性矩阵或可跟踪性树中，用穿过可跟踪性箭头的红色斜杠来直观地表示可疑链接。该指示符直观地通知用户需求的文本或属性已变更，并且该变更可能会影响与所修改的需求相互跟踪的需求。
+</p>
+<p>
+    显示可疑链接时，要调查造成该可疑链接的原因，以及该变更对其他需求可能造成的影响。按照此工具向导的第一部分中列出的步骤（<a href="#ViewHistory">查看需求的历史记录</a>），查看可疑链接中涉及的两个需求的历史记录。当您查看已修改需求的历史记录时，您可能得出以下两个结论之一：
+</p>
+<ul>
+    <li>
+        对该需求的修改不影响被链接的需求。在这种情况下，可以清除该可疑链接。要在可跟踪性视图中清除可疑链接，请将光标置于该可疑链接图标上。右键单击以显示上下文相关菜单，并选择<b>清除可疑</b>。
+    </li>
+    <li>
+        修改影响链接的需求。在这种情况下，必须更新所链接需求的定义，以反映清除该链接前的变更。
+    </li>
+</ul>
+<p>
+    要在可跟踪性视图中清除可疑链接，双击受影响的需求。然后，执行以下某个操作：
+</p>
+<ul>
+    <li>
+        如果该需求是在 RequisitePro 文档中创建的，则 RequisitePro 打开该文档，并将光标置于该需求上。根据需要按照相关的已修改需求修改需求的文本，然后单击 <b>RequisitePro &gt; 文档 &gt;
+        保存</b>以提交变更。
+    </li>
+    <li>
+        如果该需求是直接在视图中创建的，则出现“需求属性”对话框。修改<b>文本</b>框，并单击<b>确定</b>以提交您的变更。
+    </li>
+</ul>
+<h3>
+    3. <a id="Tips" name="Tips">记录需求的历史记录</a>
+</h3>
+<p>
+    以下技巧与使用需求历史记录相关。
+</p>
+<ul>
+    <li>
+        <b>技巧 1</b>：<a href="#tip1">向所有用户分配用户名</a>
+    </li>
+    <li>
+        <b>技巧 2</b>：<a href="#tip2">不删除需求</a>
+    </li>
+    <li>
+        <b>技巧 3</b>：<a href="#tip3">向可跟踪性关系添加修订版</a>
+    </li>
+    <li>
+        <b>技巧 4</b>：<a href="#tip4">始终填充变更通知对话框</a>
+    </li>
+</ul>
+<h4>
+    技巧 1：<a id="tip1" name="tip1">向所有用户分配用户名</a>
+</h4>
+<p>
+    需求历史记录中的一个重要记录是需求变更的作者。该作者是在修改该需求时登录到 RequisitePro 项目的用户。要记录登录的用户，您必须启用 RequisitePro 项目安全性。
+</p>
+<p>
+    缺省情况下，RequisitePro 项目的安全性是禁用的。即使您不想为每个项目组件（项目、文档、需求等）设置许可权，您也应该启用安全性，以便可以向用户分配用户名。当用户创建或修改需求时，这些用户名将被输入到需求修订版中。
+</p>
+<p>
+    要启用安全性并创建用户名，请执行以下操作：
+</p>
+<ol>
+    <li>
+        单击<b>文件 &gt; 项目管理 &gt; 安全性</b>。此时将显示“项目安全性”对话框。
+    </li>
+    <li>
+        选择<b>为此项目启用安全性</b>复选框。
+    </li>
+</ol>
+<p>
+    要创建用户组：
+</p>
+<ol>
+    <li>
+        单击<b>组</b>框底部的<b>添加</b>按钮。此时将显示“组许可权”对话框。
+    </li>
+    <li>
+        输入该组的组名，并定义许可权。可以为特定文档类型、需求类型、属性和属性值设置许可权。您还可以定义该用户组是否可以修改项目结构。这可能包括向需求类型添加属性、添加文档类型等许可权。
+    </li>
+</ol>
+<p align="left">
+    要添加单个用户：
+</p>
+<ol>
+    <li>
+        在“项目安全性”对话框中，在“组”列表中选择组。
+    </li>
+    <li>
+        单击<b>用户组</b>框中的<b>添加</b>按钮。此时将显示“添加用户”对话框。
+    </li>
+    <li>
+        输入用户名（例如，John Smith）；您可以选择是否输入密码和电子邮件地址。电子邮件地址在用户参与电子邮件组讨论时使用。
+    </li>
+</ol>
+<h4>
+    技巧 2：<a id="tip2" name="tip2">不删除需求</a>
+</h4>
+<p>
+    RequisitePro 允许您删除需求。当您第一次创建项目时，该功能很有用；您可能想试验如何使用 RequisitePro
+    和对需求使用何种详细程度。这时，确定您的项目是否已就绪可以进行维护了。从这时起，您应该跟踪在项目中进行的每次修改。注意 RequisitePro
+    何时删除了需求，删除的该需求的每个属性，包括其历史记录；这通常是您不想丢失的信息。RequisitePro 在删除该需求前，要求您进行确认。
+</p>
+<p>
+    我们建议您不要使用<b>删除</b>功能删除需求。相反，您可以创建属性（例如，“已删除”或“不活动”）将需求标记为“已删除”（或不活动）。以后只需更改该属性的值，就可以重新激活该需求。
+</p>
+<p>
+    您还可能想要重新放置不活动的需求，将其置于显示它们的文档的底部，或者置于数据库中（这样不活动的需求就不会出现在文档中了）。与只位于视图中的那些需求相比，要移动位于 Word 文档中的需求，就要执行以下步骤：
+</p>
+<ol>
+    <li>
+        在 Word 文档中，将光标置于需求文本中。
+    </li>
+    <li>
+        单击 <b>RequisitePro &gt; 需求 &gt; 剪切</b>。
+    </li>
+    <li>
+        在 Explorer 中，单击要粘贴需的属性矩阵，然后单击<b>编辑 &gt; 粘贴</b>。
+    </li>
+</ol>
+<h4>
+    技巧 3：<a id="tip3" name="tip3">向可跟踪性关系添加修订版</a>
+</h4>
+<p>
+    缺省情况下，RequisitePro 维护需求的修订版，而不是可跟踪性链接的修订版。要将 RequisitePro 设置为同时也维护可跟踪性链接的修订版，请执行以下操作：
+</p>
+<ol>
+    <li>
+        单击<b>工具</b> &gt; <b>选项</b>。
+    </li>
+    <li>
+        在“可跟踪性”部分，选择<b>将变更记录到历史记录中</b>复选框。
+    </li>
+    <li>
+        单击<b>确定</b>。
+    </li>
+</ol>
+<p>
+    要验证可跟踪性历史记录日志，请打开可跟踪性矩阵。添加或除去两个需求之间的可跟踪性链接。然后，选择一个需求，并单击<b>需求 &gt;
+    属性</b>以打开“需求”对话框。在<b>修订版</b>选项卡上，单击<b>历史记录</b>。“修订版”列表中出现可跟踪性变更。
+</p>
+<h4>
+    技巧 4：<a id="tip4" name="tip4">始终填充变更通知对话框</a>
+</h4>
+<p>
+    作为良好的需求管理流程的一部分，我们建议项目成员记录他们变更需求的原因。RequisitePro 提供了一个<b>变更描述</b>字段，可以在其中记录该信息。
+</p>
+<p>
+    <b>变更描述</b>字段位于“需求属性”对话框的<b>修订版</b>选项卡中。
+</p>
+<p>
+    当您保存包含已修改需求的 RequisitePro 文档时，RequisitePro 为每个已修改的需求显示“变更通知”对话框。您可以使用<b>将所有已修改需求应用于文档中</b>复选框，将相同的变更描述信息（例如，“根据 2001 年
+    5 月 30 日的副总裁会议”）添加到所有已修改的需求中。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 创建 Rational RequisitePro 项目的基线</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="baseline_requirements" name="uma.name">
+<meta content="创建 Rational RequisitePro 项目的基线" name="uma.presentationName">
+<meta content="Tool:rup_requisite_pro:Rational RequisitePro" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational RequisitePro" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{CC4BC013-6917-468D-A3DC-0E696FB9DB7A}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{CC4BC013-6917-468D-A3DC-0E696FB9DB7A}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{CC4BC013-6917-468D-A3DC-0E696FB9DB7A}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{CC4BC013-6917-468D-A3DC-0E696FB9DB7A}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：创建 Rational RequisitePro 项目的基线</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational Administrator 和 Rational ClearCase 创建需求基线。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_requisite_pro_593FD397.html" guid="{887DBA0C-5761-494D-862D-5956F1C51BF7}">Rational RequisitePro</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/setup_cm_environment_78ABEDF9.html" guid="{FC91D0C9-759E-4D3D-86D8-22D7B26AA0F6}">建立配置管理（CM）环境</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<p>
+    <strong><font size="4">概述</font></strong>
+</p>
+<p>
+    在每个项目<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/concepts/iteration_441A13D7.html" guid="3.379871268737602E-305">里程碑</a>处创建需求项目的基线是一个不错的主意。基线创建的 ClearCase 对象代表 Rational RequisitePro&reg;
+    项目在特定时间的稳定配置。该对象可用来创建新项目。
+</p>
+<p>
+    RequisitePro 项目由需求数据库、项目视图以及含有需求的文档组成。 可以直接在项目视图中创建需求，也可以在 RequisitePro 的 Microsoft&reg; Word
+    文档中创建。所有需求均存储在数据库中，与它们在项目内所处的位置无关。您可以创建任何 RequisitePro 项目的基线，无论该项目使用的是 Oracle、Microsoft Access 还是 SQL Server 数据库。
+</p>
+<p>
+    <strong>注意：</strong>有关 RequisitePro 项目归档的信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/archiving_requirements_A3B2A33E.html" guid="{1AA3B210-5979-4E05-8A08-A436B38997B0}">工具向导：使用 RequisitePro 归档需求</a>。
+</p>
+<h3>
+    使用统一变更管理创建项目基线
+</h3>
+<p>
+    通过统一变更管理（UCM）模型，RequisitePro 项目管理员可以通过在 Rational Administrator 和 ClearCase 中执行任务来创建 RequisitePro 项目的基线。
+</p>
+<p>
+    在创建 RequisitePro 项目的基线之前，必须先满足以下前置条件：
+</p>
+<ul>
+    <li>
+        RequisitePro 项目必须与 Rational Administrator 中支持 UCM 的 Rational 项目关联。
+    </li>
+    <li>
+        必须在没有活动用户的情况下关闭 RequisitePro 项目。
+    </li>
+</ul>
+<p>
+    创建 RequisitePro 项目的基线：
+</p>
+<ol>
+    <li>
+        打开 Rational Administrator。
+    </li>
+    <li>
+        右键单击 Administrator 项目，然后单击<strong>配置</strong>。
+    </li>
+    <li>
+        在“配置项目”对话框的<strong>需求资产</strong>区域中，单击<strong>全部检入</strong>。
+    </li>
+    <li>
+        在随后出现的消息中确认您的选择，并输入用来描述基线的活动。
+    </li>
+    <li>
+        完成“全部检入”操作后，关闭“配置项目”对话框。
+    </li>
+    <li>
+        在 Rational Administrator <strong>工具</strong>菜单中，单击 <strong>Rational ClearCase Project Explorer</strong>。此时会显示
+        ClearCase Explorer。
+    </li>
+    <li>
+        右键单击 <strong>RequisitePro 需求资产</strong>集成流，然后单击弹出菜单中的<strong>创建基线</strong>。
+    </li>
+    <li>
+        输入基线标题，选择<strong>完全</strong>基线类型，选择<strong>视图环境</strong>，然后单击<strong>确定</strong>。
+    </li>
+</ol>
+<h4>
+    有关更多信息
+</h4>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" /> 请参阅 RequisitePro 联机帮助中的主题 <i>Creating
+    baselines&nbsp;with Unified Change Management</i>（索引：creating &gt; baselines）。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

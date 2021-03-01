@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 通信关联关系</title>
+<meta content="Guideline" name="uma.type">
+<meta content="communicate-association" name="uma.name">
+<meta content="通信关联关系" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "4.1665593852713E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "4.1665593852713E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "4.1665593852713E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.1665593852713E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.1665593852713E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：通信关联关系</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">通信关联关系将用例和参与者通过互相发送信号来交互的方式进行建模。本指南说明如何使用此关系。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">查找参与者和用例</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">用例模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_communicates-association__guidelines_for" name="XE_communicates-association__guidelines_for" class="index" key="通信关联（communicates-association）" text="指南"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">说明</a>
+</h3>
+<p>
+    用例和参与者通过互相发送信号来交互。为表示这样的交互，我们使用用例和参与者之间的<b>通信关联关系</b>。一个用例与一个特定参与者最多有一个通信关联关系，而一个参与者与一个特定用例也最多有一个通信关联关系，无论存在多少信号传输都是如此。此类关联关系的完整网络是系统与其环境之间的静态通信图。
+</p>
+<p>
+    通信关联关系没有给定名称。因为在用例和参与者之间只能有一个通信关联关系，所以只需要指定起点和终点就可以标识特定通信关联关系。
+</p>
+<p align="center">
+    <img height="140" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/comasso1.gif" width="214" />
+</p>
+<p class="picturetext">
+    参与者和用例之间的线或箭头表示它们通过互相发送信号来交互。
+</p>
+<h3>
+    <a id="Roles" name="Roles">角色</a>
+</h3>
+<p>
+    通信关联关系的每一端都是一个<b>角色</b>，该角色指定了用例或参与者在关联关系中扮演的角色<i>。</i> 各角色用于指定关联关系的多重性和方向（请参阅下文）。
+</p>
+<h3>
+    <a id="Multiplicity" name="Multiplicity">多重性</a>
+</h3>
+<p>
+    通信关联关系的每个角色表示其类型的<b>多重性</b>，即可以将该参与者或用例的多少个实例与其他用例或参与者的一个实例相关联。
+    使用角色上的文本表达式表示多重性。表达式是一个逗号分隔的整数范围列表。使用一个整数（下限值）、两个点和另一个整数（上限值）来表示范围；单个整数是有效范围，而符号“*”表示“许多”，即不限制对象数。符号“*”自身等于“0..*”，即任何数字（包括空）；这是缺省值。可选的标量角色具有多重性
+    0..1。
+</p>
+<p>
+    可以使用时间单元约束扩大多重性。可以按时间单元期间所允许的不同实例数声明可关联的实例数，以完成此操作。该信息是很有用的，因为它可以告诉我们某个用例是否经常执行，以及每个参与者实例使用该用例的频率。
+</p>
+<h5>
+    示例：
+</h5>
+<p align="center">
+    <img height="105" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_coma4.gif" width="450" />
+</p>
+<p class="picturetext">
+    “客户”每天使用“执行事务”用例 400,000 次。每个客户每月使用该用例两次。
+</p>
+<h3>
+    <a id="Navigability" name="Navigability">可导航性</a>
+</h3>
+<p>
+    通信关联关系的每个角色都有一个<b>可导航性</b>属性，表示交互中启动通信的那一方。使用一个箭头显示可导航性。如果箭头指向用例，则在关联另一端的参与者启动与系统的交互。如果箭头指向参与者，则由系统启动与参与者的交互。使用不带箭头的线显示双向可导航性（如果用两个箭头会使图变乱）。
+</p>
+<p align="center">
+    <img height="211" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/comasso2.gif" width="446" />
+</p>
+<p class="picturetext">
+    通信箭头定义了启动用例的参与者。对于每个通信箭头，都假设有返回消息。没有箭头的线表示双向通信。
+</p>
+<p>
+    不要将可导航性与数据流混淆；<span style="mso-bidi-font-family: 'Courier New'">前者仅用于</span> <span     style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-family: 'Courier New'; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">显示通信的启动。例如，即使大多数数据是从系统流向客户的，仍使用一个到用例（代表系统）的箭头来显示客户的数据请求。</span>
+</p>
+<h3>
+    <a id="Communication from Actor to Use Case" name="Communication from Actor to Use Case">从参与者到用例的通信</a> <a href="#Top"><img height="20" alt="回到页首" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    参与者通过发送信号与系统通信。为完全理解参与者的角色，您必须知道该参与者涉及的用例。这通过参与者和用例之间的通信关联关系来显示。
+</p>
+<p>
+    关联的多重性显示参与者的一个实例可以在同一时间与多少用例实例通信。
+</p>
+<h5>
+    示例：
+</h5>
+<p class="example">
+    在回收机器系统中，每次参与者“客户”的一个实例交来一个堆积物项时，他将信号发送至用例“回收项”的关联实例。当参与者完成时，该用例打印出收据。一个客户只可以与“回收项”的一个实例通信。因此，该关联的多重性是
+    1。这里将系统返回的收据看成来自用例实例的响应；因此，通信关联关系不需要其他方向的可导航性。
+</p>
+<p class="picturecenter" align="center">
+    <img height="68" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_coma2.gif" width="236" />
+</p>
+<p class="picturetext">
+    希望将堆积物项返回至回收机器的客户将与用例“回收项”通信。
+</p>
+<p>
+    参与者因为许多原因而与用例通信，包括：
+</p>
+<ul>
+    <li>
+        调用用例。参与者实例总是调用用例实例。
+    </li>
+    <li>
+        请求系统中存储的某些数据，然后用例取得这些数据并显示给该参与者。
+    </li>
+    <li>
+        通过系统对话框，更改系统中存储的数据。
+    </li>
+    <li>
+        报告在系统周围发生的、系统应进行处理的某些特定情况。
+    </li>
+</ul>
+<h3>
+    <a id="Communication from Use Case to Actor" name="Communication from Use Case to Actor">从用例到参与者的通信</a>
+</h3>
+<p>
+    一个参与者启动一个用例。但是，用例一旦启动，它可以与几个参与者通信。可以使用用例和参与者之间的通信关联关系显示与该用例通信的参与者。 关联的多重性显示用例的一个实例可以在同一时间与参与者的多少实例通信。
+</p>
+<p>
+    用例因为许多原因而与参与者通信，包括：
+</p>
+<ul>
+    <li>
+        在系统中发生的某些特别情况，参与者可能需要知道该情况。
+    </li>
+    <li>
+        用例可能需要请求参与者帮助确定某些选项是否可用。
+    </li>
+</ul>
+<p>
+    常见但并不总是如此的一种情况是当用例将信号发送给参与者之后，它会等待其回答。应在用例中显式地描述此情形。
+</p>
+<h3>
+    <a id="Optional Conventions" name="Optional Conventions">可选约定</a>
+</h3>
+<p>
+    以下是常见可选约定，这些约定使得能够明确哪个参与者启动用例。
+</p>
+<ul>
+    <li>
+        <span style="mso-bidi-font-family: Courier New">总是显示发起的参与者到用例箭头，即使该用例后来启动与发起参与者的通信也一样。这也是所显示的唯一的参与者到用例箭头。</span>
+    </li>
+    <li>
+        <span style="mso-bidi-font-family: Courier New">可以省略从用例到参与者的箭头，或出于清晰性而包含该箭头。</span><br />
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 从设计到代码的映射</title>
+<meta content="Concept" name="uma.type">
+<meta content="mapping_from_design_to_code" name="uma.name">
+<meta content="从设计到代码的映射" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "1.424219730601675E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_yd3ExNnmEdmO6L4XMImrsA", "1.424219730601675E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "1.424219730601675E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yd3ExNnmEdmO6L4XMImrsA", "1.424219730601675E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "1.424219730601675E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.424219730601675E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：从设计到代码的映射</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南描述了从设计转向实施的一些不同选项，并讨论了这些方法的益处和缺点。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/disciplines/rup_implementation_discipline_263E22DB.html" guid="_yd3ExNnmEdmO6L4XMImrsA">实施</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_implementer_D145E819.html" guid="{75501BAA-0CCE-4852-A7B2-B10CA71C002A}">实施者</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_code__mapping_from_design" name="XE_code__mapping_from_design"></a> 
+<h3>
+    <b><a id="Introduction" name="Introduction">简介</a></b>
+</h3>
+<p>
+    设计必须充分定义系统，以便可以明确地实施该系统。怎样才算充分随项目和公司的不同而不同。
+</p>
+<p>
+    在某些情况下，设计就像一个草稿，仅制作到确保足以使实施者可以继续的程度就可以了（“先打草稿再写代码”方法）。规范程度随实施者的经验、设计的复杂性以及设计可能被误解的风险而变化。
+</p>
+<p>
+    在其他情况中，将设计制作到其可被自动转换成代码的程度。这通常涉及对标准 UML 的扩展，以表示特定于语言和／或环境的语义。
+</p>
+<p>
+    设计还可能是分层的，例如以下情况：
+</p>
+<ul>
+    <li>
+        高级别设计模型，拟订整个系统概况
+    </li>
+    <li>
+        子系统规范模型，准确地指定了系统中的主要子系统所需的接口和行为
+    </li>
+    <li>
+        子系统内部的详细设计模型
+    </li>
+</ul>
+<p>
+    <img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{F071C3D3-7054-457F-8A81-EFA6678CCDE1}">开发案例</a>应定义如何以项目的特定过程实现设计模型，以及如何或是否将模型关联到其他模型以及实施。应在<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">特定于项目的指南</a>中捕获该详细信息。
+</p>
+<p>
+    以下部分描述与设计和实施有关的一些不同选项，并讨论这些方法的益处和缺点。
+</p>
+<h3>
+    <b><a id="sketch" name="sketch">草稿和代码</a></b>
+</h3>
+<p>
+    一个常见的设计方法是在非常抽象的级别勾画出设计，然后直接转换为代码。设计模型的维护是手动的。
+</p>
+<p>
+    在此方法中，使设计类成为几个代码级别类的抽象。建议将每个设计类映射到一个“头”类，该类又可使用几个“协助”类以执行其行为。可以使用“协助”类实施复杂属性，或构建实现操作所需的数据结构。在设计中，您无需建立“协助”类的模型，而只需建立由头类定义的某些关键属性、关系和操作的模型。此类模型的目的是抽象出可由实施者完成的详细信息。
+</p>
+<p>
+    扩展该方法以将其应用到其他设计模型元素。可能已设计过比代码级别接口更抽象的接口等。
+</p>
+<h3>
+    <b><a id="round" name="round">双向工程</a></b>
+</h3>
+<p>
+    在双向工程环境中，设计模型发展成可变为代码的可视说明的详细级别。同步代码及其可视说明（有工具支持）。
+</p>
+<p>
+    以下是用于表示双向工程环境中的设计模型的一些选项。
+</p>
+<p>
+    <b><a id="trace" name="trace">高级设计模型和详细设计模型</a></b><a href="#Top"><img height="20" alt="到首页"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</p>
+<p>
+    在此方法中，维护两个级别的设计模型。每个高级别设计元素都是双向模型中一个或多个详细元素的抽象。例如，设计类可能映射到一个“头”类和几个“协助”类，就像先前在“草稿和代码”方法中描述的一样。从高级别设计模型元素到双向模型元素的可跟踪性可以帮助维护两个模型之间的一致性。
+</p>
+<p>
+    虽然这可以帮助抽象出较不重要的详细信息，但必须将该益处与为维护模型之间的一致性所需的工作量相权衡。
+</p>
+<p>
+    <b><a id="evolves" name="evolves">单个演化设计模型</a></b><a href="#Top"><img height="20" alt="到首页"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</p>
+<p>
+    在此方法中，有单个设计模型。初始设计元素草稿演化成可以与代码同步的程度。各种图（例如那些用于描述设计用例实现的图）初始引用草稿设计类，但最终将引用特定于语言的类。按需要维护设计的高级别描述，如：
+</p>
+<ul>
+    <li>
+        系统的逻辑结构的图，
+    </li>
+    <li>
+        子系统／组件规范，
+    </li>
+    <li>
+        设计模式／机制。<br />
+    </li>
+</ul>
+<p>
+    这样的模型易于维护与实施的一致性。
+</p>
+<h3>
+    <a id="specification" name="specification">规范和实现模型</a>
+</h3>
+<p>
+    相关方法是按照主要子系统的规范定义设计，详细至可以对它们编译客户端实施的程度。
+</p>
+<p>
+    子系统实现的详细设计的建模和维护可以与此规范模型分开。
+</p>
+<p>
+    关于与子系统规范和实现以及应何时使用它们相关的指南，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_subsystem_B26FD609.html" guid="1.2314266786534317E-305">工作产品指南：设计子系统</a>。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

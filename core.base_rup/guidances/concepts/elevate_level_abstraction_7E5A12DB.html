@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 提升抽象级别</title>
+<meta content="Concept" name="uma.type">
+<meta content="elevate_level_abstraction" name="uma.name">
+<meta content="提升抽象级别" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "_0_ltcDqYEdqvoMTMKvbIlA", "_5thn8DqzEdqvoMTMKvbIlA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "_0_ltcDqYEdqvoMTMKvbIlA", "_5thn8DqzEdqvoMTMKvbIlA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_5thn8DqzEdqvoMTMKvbIlA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：提升抽象级别</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../core.base_rup/guidances/concepts/resources/pract_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此原则描述了如何通过提高抽象级别来降低复杂性。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><table bordercolor="#ffffff" height="330" width="100%" border="1">
+    <tbody>
+        <tr>
+            <td width="23%" height="340">
+                <h4 dir="ltr">
+                    简介
+                </h4>
+                <p dir="ltr" align="left">
+                    复杂性是软件开发的中心问题。提升抽象级别有助于降低复杂性和项目所需的文档数量。可通过重用、使用高级别建模工具和稳定早期体系结构来达到此目的。
+                </p>
+            </td>
+            <td width="4%" height="340">
+                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+            </td>
+            <td width="73%">
+                <table bordercolor="#000000" height="310" cellpadding="10" width="99%" border="3">
+                    <tbody>
+                        <tr>
+                            <td width="16%" height="60">
+                                <strong>好处</strong>
+                            </td>
+                            <td width="84%">
+                                <ul>
+                                    <li>
+                                        生产率
+                                    </li>
+                                    <li>
+                                        降低复杂性。
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="98">
+                                <strong>模式</strong>
+                            </td>
+                            <td>
+                                <ol>
+                                    <li>
+                                        重用现有资产
+                                    </li>
+                                    <li>
+                                        使用高级工具和语言来降低产生的文档数量
+                                    </li>
+                                    <li>
+                                        首先注重体系结构
+                                    </li>
+                                    <li>
+                                        复原能力、质量、可理解性和复杂度控制的架构设计师。
+                                    </li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="136">
+                                <strong>反模式</strong>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        要直接将含糊的高级别需求变为定制的代码： 
+                                        <ul>
+                                            <li>
+                                                由于只使用了少数抽象，许多讨论都是在代码层面与更概念化的层面上进行的，这样失去了许多重用的机会。
+                                            </li>
+                                            <li>
+                                                非正式捕获的需求和附加信息需要反复地重新查看决定和规范。
+                                            </li>
+                                            <li>
+                                                对体系结构的有限强调将导致在项目后期进行返工。
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h4>
+    讨论&#160;
+</h4>
+<p>
+    在软件开发中面临的一个主要问题是复杂性。我们知道降低复杂性对生产力有很大影响。在更高的抽象级别上工作将降低复杂性，并能促进沟通。
+</p>
+<p>
+    其中一个降低复杂性的有效方法是<em>重用现有资产</em>，诸如可重用组件、旧系统、现有业务流程、模式或开放式源代码软件。以下是在过去十年中，对软件行业有重大影响的重要重用示例：
+</p>
+<div style="MARGIN-LEFT: 2em">
+    <ul>
+        <li>
+            重用中间件，例如数据库、Web 服务器和门户网站，以及最新的
+        </li>
+        <li>
+            开放式源代码软件，提供许多可利用的小型和大型组件。
+        </li>
+    </ul>
+</div>
+<p>
+    更进一步来说，Web Service 会对重用带来很大影响，因为它提供了在不同平台并在消费者和服务供应商耦合松散的情况下，重用功能的主要组块的简单方法。这说明我们能更方便地利用服务的不同组合来处理业务需要。 还可通过开放标准（例如
+    RAS、UDDI、SOAP、WSDL、XML 和 UML）来促进重用。
+</p>
+<p align="center">
+    <img alt="说明通过面向服务的体系结构来重用现有资产的图" src="./../../../core.base_rup/guidances/concepts/resources/bp_fig5.gif" /><br />
+     <strong>通过面向服务的体系结构来重用现有资产。</strong><br />
+     <em>重用的其中一个问题是在开发时，两个组件需要知道彼此的存在。
+    面向服务的体系结构可通过提供称为松散耦合的服务来减轻此问题的影响：服务的消费者可动态找到服务的供应商。因此，可将现有组件或旧系统包含在服务中，允许其他组件或应用程序通过基于标准的接口、不必依赖平台和实施技术即可动态地访问那些功能</em>。
+</p>
+<p>
+    降低复杂性并促进沟通的另一个方法包括<em>利用高级工具、框架和语言：</em>
+</p>
+<ul>
+    <li>
+        <strong>标准语言</strong>（例如统一建模语言（UML））和快速应用程序语言（例如 EGL）提供表达高级别构造（例如业务流程和服务组件）的功能，便于针对高级别构造进行协作，同时隐藏不必要的细节。
+    </li>
+    <li>
+        <strong>设计和构造工具</strong>，可自动从高级别构造移动到工作代码：
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                提供向导，通过生成代码并启用代码片段来自动设计、构造和测试任务。
+            </li>
+            <li>
+                通过集成开发、构建和测试环境，将集成和测试转换为无缝开发任务。
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>组合包管理工具</strong>，将多个项目的财务和其他方面管理作为一个实体，而不是一组单独的实体。
+    </li>
+</ul>
+<p>
+    简而言之，高级别工具可以图形化方式捕获关键建模信息，这是概括和表达此信息的极有效且有吸引力的方法。可在<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/supportingmaterials/model_visually_uml_5FB6F965.html" guid="2.2182245081579854E-305">支持材料：可视建模</a>中找到有关可视建模好处的更多详细信息。
+</p>
+<p>
+    管理复杂性的第三个方法为<em>注重体系结构</em>，定义业务或者开发系统或应用程序。在软件开发中，旨在项目早期设计、实施和测试体系结构。这说明在项目早期，注重于以下目标：<!--EndFragment-->
+</p>
+<div style="MARGIN-LEFT: 2em">
+    <ul>
+        <li>
+            定义高级别构建块和最重要的组件，及其职责和接口。
+        </li>
+        <li>
+            设计并实施体系结构机制，即常见问题的现成解决方案，例如如何处理持久性或垃圾回收问题。
+        </li>
+    </ul>
+</div>
+<p>
+    通过尽早确定正确的体系结构，可提供系统的框架结构，使其在将更多人员、组件、功能和代码添加到项目时更易管理复杂性。还可确定可利用哪些可重用资产，以及需要定制构建哪些系统方面。
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

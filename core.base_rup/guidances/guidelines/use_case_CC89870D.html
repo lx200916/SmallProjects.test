@@ -1,0 +1,703 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 用例</title>
+<meta content="Guideline" name="uma.type">
+<meta content="use_case" name="uma.name">
+<meta content="用例" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{B1526BC5-E346-42CB-A08A-3C0D7F382407}", "4.1983217662266927E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.1983217662266927E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.1983217662266927E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：用例</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">用例描述了系统进行何种操作来满足需求。本指南说明如何确定和开发用例。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_use_case_model_93D8F44.html" guid="{F7D9D038-B184-43CC-9353-15BA154F87B5}">构造用例模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_use_case__guidelines_for" name="XE_use_case__guidelines_for"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">说明</a>
+</h3>
+<p>
+    在该定义中有几个关键字：
+</p>
+<ul>
+    <li>
+        <b>用例实例</b><i>。</i>定义中所引用的序列确实是系统中的特定事件流或某个实例。存在多个事件流是可能的，并且它们可能十分类似。要使用例模型易于理解，应该将类似的事件流组合到一个用例中。确定并描述用例实际意味着确定和描述一组相关的事件流。
+    </li>
+    <li>
+        <b>系统执行</b><i>。</i>这意味着系统提供用例。参与者与系统的一个用例实例进行通信。
+    </li>
+    <li>
+        <b>可观察的结果值。</b>可在已成功执行的用例上放置值。用例应确保参与者可以执行具有可确定的值的任务。在确定用例的恰当级别或详细程度时，这是非常重要的。恰当的级别是指实现不太小的用例。在某些情况下，您可以将用例作为组织中的计划单元使用，该组织包括在系统中担当参与者的人。
+    </li>
+    <li>
+        <b>操作。</b>操作是一种计算或算法过程。它是在参与者向系统提供信号或在系统获得一个时间事件时调用的。操作可能表示向调用参与者或其他参与者传输信号。操作是很微小的，这意味着要么完全执行要么根本不执行。
+    </li>
+    <li>
+        <b>特定参与者</b><i>。</i>该参与者是查找恰当用例的关键，特别是因为该参与者可帮助您避免使用过大的用例。作为示例，请考虑可视建模工具。 该应用程序实际有两个参与者：开发人员 －
+        使用工具作为支持来开发系统的人员；以及系统管理员 － 管理该工具的人员。每个参与者都对系统有自己的需求，因此需要有自己的一组用例。
+    </li>
+</ul>
+<p>
+    系统的功能由不同用例定义，每个用例代表一个特定的事件流。用例的描述定义在执行用例时系统中发生的事件。
+</p>
+<p class="picturecenter" align="center">
+    <img height="173" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/im_uc.gif" width="325" />
+</p>
+<p class="picturetext">
+    例如，在自动柜员机上，客户可以从帐户中取款、将金额转到某个帐户上或检查帐户余额。这些功能与可用用例表示的流相对应。
+</p>
+<p>
+    每个用例都有各自的任务要执行。收集的用例构成使用系统的所有可能的方法。仅仅观察用例的名称，就可以了解用例任务的概念。
+</p>
+<h3>
+    <a id="How to Find Use Cases" name="How to Find Use Cases">如何查找用例</a>
+</h3>
+<p>
+    以下是在确定用例时有用的一组问题：
+</p>
+<ul>
+    <li>
+        对于已确定的每个参与者，涉及到系统的任务是哪些？
+    </li>
+    <li>
+        需要通知参与者系统中发生的某些情况吗？
+    </li>
+    <li>
+        参与者需要向系统通知突发的外部变更吗？
+    </li>
+    <li>
+        系统为业务提供恰当的行为吗？
+    </li>
+    <li>
+        已确定的用例可以执行所有功能吗？
+    </li>
+    <li>
+        哪些用例将支持和维护系统？
+    </li>
+    <li>
+        必须在系统中修改或创建哪些信息？
+    </li>
+</ul>
+<p>
+    由于通常不代表系统主要功能而经常被忽视的用例可能属于以下类型：
+</p>
+<ul>
+    <li>
+        系统启动和停止。
+    </li>
+    <li>
+        系统维护。例如，添加新的用户并设置用户概要文件。
+    </li>
+    <li>
+        维护存储在系统中的数据。例如，构造系统以与旧系统并行运行，并且数据需要在两个系统之间同步化。
+    </li>
+    <li>
+        修改系统中的行为所需的功能。用于创建新报告的功能将是一个示例。
+    </li>
+</ul>
+<p>
+    如果您已经开发了业务用例模型和业务分析模型，那么这些工件对于确定用例而言是一个不错的起点。
+</p>
+<h3>
+    <a id="How a Use Case Evolves" name="How a Use Case Evolves">用例如何发展</a>
+</h3>
+<p>
+    在精化阶段的早期迭代中，除了简短描述之外，只详细描述几个用例（那些被视为在体系结构上很重要的用例）。在深入了解详细信息之前，应始终首先得出用例的概述（按逐步的形式）。这种逐步概述应是您第一次尝试定义用例事件流的结构（请参阅下面的<a href="#Flow of Events - Structure">事件流 － 结构</a>）。请始终从用例的基本流开始。一旦在基本流的概述上达成某种协议，就可以添加与基本流相关的备用流了。
+</p>
+<p>
+    在精化阶段末期，将完成您计划详细描述的所有用例。
+</p>
+<h3>
+    <a id="Are All Use Cases Described in Detail?" name="Are All Use Cases Described in Detail?">详细描述所有用例吗？</a>
+</h3>
+<p>
+    模型中的用例通常如此简单，以致于不需要详细描述事件流，使用逐步概述就足够了。作出该决策的条件是您未发现作为读者的用户类型与用例的含义不一致，并且设计人员和测试人员对于按逐步方式提供的详细级别感到满意。比如描述简单输入或从系统检索某些数据的用例。
+</p>
+<h3>
+    <a id="XE_use_case__scope_of_a_use_case" name="XE_use_case__scope_of_a_use_case"></a><a id="The Scope of a Use Case" name="The Scope of a Use Case">用例范围</a>
+</h3>
+<p>
+    通常很难确定一组用户系统交互或对话是一个还是多个用例。 请考虑使用回收机器。客户将堆积物项（如罐头、瓶子和板条箱）插入回收机器。插入了所有堆积物项后，按下某个按钮并打印出收据。然后她就可以用该收据换钱了。
+</p>
+<p>
+    是一个用例插入堆积物项，而另一个用例要求收据吗？还是都是一个用例呢？有两个操作，但如果只有一个操作而缺少另一个操作，这对客户来说是没什么价值的。更准确地说，所有的插入及得到收据是一次完整对话，对于客户来说这才是有价值的（并有意义的）。因此，完整的对话
+    － 从插入第一个堆积物项到按下按钮并得到收据 － 是一个完整的用例。
+</p>
+<p>
+    另外，您要将两个操作放在一起，这样就能够同时进行检查、一起修改、测试、撰写手册并通常将它们作为一个单元进行管理。这在更大型的系统中就更明显了。
+</p>
+<h3>
+    <a id="How Use Cases Are Realized" name="How Use Cases Are Realized">用例如何实现</a>
+</h3>
+<p>
+    用例描述当参与者与系统交互以执行用例时系统中发生的事件。用例并不定义系统如何根据协作对象在内部执行任务。这留待用例实现来显示。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    在电话示例中，用例主要将表明 － 系统在接听器被提起时发出信号并开始接收数字信号，查找接听方，使电话响铃，连接通话，传送对话等等。
+</p>
+<p>
+    在执行系统中，用例实例不对应实施模型中的任何特定对象（例如，代码中的类实例）。相反，它与由参与者调用并作为一组对象之间的事件序列而执行的特定事件流相对应。换言之，用例实例与已实施的对象的通信实例相对应。我们将此称为用例实现。通常，相同的对象参与多个用例的实现。例如，银行系统中的用例“存款”和“提款”都可以使用它们的实现中的某个帐户对象。这并不表示两个用例在通信，只是说明这两个用例在使用其实现中的同一个对象。
+</p>
+<p>
+    可以将事件流看作是由几个子流组成，它们一起产生了总的事件流。可以在其他用例的事件流中重用某个子流的描述。一个用例的事件流描述中的子流可通用于其他用例的描述。在设计中，您应该让相同的对象对所有相关用例执行这个共同的行为；即，无论哪个用例在执行，应只有一组对象执行该行为。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    在自动柜员机系统中，初始子流与用例“提款”和“检查余额”的事件流中的子流一样。两个用例的事件流都从检查卡的身份和客户的私人访问代码开始。
+</p>
+<h3>
+    <a id="A Use-Case has Many Possible Instances" name="A Use-Case has Many Possible Instances">一个用例具有多个可能的实例</a>
+</h3>
+<p>
+    一个用例实例可遵照几乎无限制、但可一一枚举的多个路径。这些路径表示向用例事件流描述中的用例实例开放的选项。选择的路径取决于事件。事件类型包括：
+</p>
+<ul>
+    <li>
+        参与者的输入。例如，参与者可以从多个选项中决定下一步行动。
+    </li>
+</ul>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    在回收机器系统中的用例“回收物项”中，客户始终有两个选项：继续提交其他堆积物项或得到退还物项的收据。
+</p>
+<ul>
+    <li>
+        检查内部对象或属性的值或类型。例如，如果值大于或小于某个值，则事件流可能有所不同。
+    </li>
+</ul>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    在自动柜员机系统中的用例“提款”中，如果客户申请提取的金额大于帐户中的金额，事件流将有所不同。因此，用例实例将遵照不同的路径。
+</p>
+<h3>
+    <a id="Concurrency of Use Case Instances" name="Concurrency of Use Case Instances">用例实例的并行性</a>
+</h3>
+<p>
+    如果系统允许，多个用例的实例和同一用例的多个实例则并行运作。在用例建模中，可以假设用例实例可以无冲突地并行活动。由于用例建模未描述事项如何运作，因此希望由设计模型来解决这个问题。查看该问题的一个方法是假定一次只有一个用例实例处于活动状态，并且执行该实例是一个很微小的操作。在用例建模中，“解释机器”被认为是极快的，因此用例实例的序列化是不成问题的。
+</p>
+<h3>
+    <a id="Name" name="Name">名称</a>
+</h3>
+<p>
+    每个用例都应有一个名称来表明它与参与者的交互实现了什么。名称可能必须由几个字组成才能被理解。任何两个用例的名称都不能相同。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    以下是回收机器示例中的用例“回收物项”的名称的变体示例：
+</p>
+<ul>
+    <li>
+        接收堆积物项
+    </li>
+    <li>
+        接收堆积物项
+    </li>
+    <li>
+        返还堆积物项
+    </li>
+    <li>
+        堆积物项
+    </li>
+</ul>
+<h3>
+    <a id="Brief Description" name="Brief Description">简述</a>
+</h3>
+<p>
+    用例的简短描述应反映它的用途。当撰写描述时，请参考用例中涉及到的参与者、词汇表，并在需要时定义新的概念。
+</p>
+<h5>
+    示例：
+</h5>
+<p class="example">
+    以下是回收机器系统中的用例“回收物项”和“添加新的瓶子类型”的简短描述样本：
+</p>
+<p class="example">
+    <b>回收物项</b>：用户使用该机器自动对所有返还物项（瓶子、罐头和板条箱）计数并接收收据。收据将在收银机上兑换成现金。
+</p>
+<p class="example">
+    <b>添加新的瓶子类型</b>：通过以“学习模式”启动这种瓶子并如同在返还物项时那样插入 5 个样本，可以将新类型的瓶子添加到机器中。这样，机器就可以估量并学会识别这些瓶子了。管理员指定新的瓶子类型的退款额。
+</p>
+<h3>
+    <a id="XE_use_case__flow_of_events" name="XE_use_case__flow_of_events"></a><a id="XE_flow_of_events__guidelines_for" name="XE_flow_of_events__guidelines_for"></a><a id="Flow of Events - Contents" name="Flow of Events - Contents">事件流 －
+    内容</a>
+</h3>
+<p>
+    用例的<b>事件流</b>包含从用例建模工作中派生出来的最重要信息。这些信息应充分明确地描述用例的事件流，以便外部人员易于了解它。请记住，事件流应该表示系统做什么，而不是如何设计系统以执行必需的行为。
+</p>
+<p>
+    事件流内容的指导信息如下：
+</p>
+<ul>
+    <li>
+        描述如何启动和结束用例。
+    </li>
+    <li>
+        描述在参与者和用例之间交换什么数据。
+    </li>
+    <li>
+        不描述用户界面的详细信息，除非有必要理解系统的行为。例如，当预先知道应用程序将基于 Web 时，使用有限的一组特定于 Web
+        的术语通常是一种很好的做法。否则就会有将用例文本视为过于抽象的风险了。您的术语中包含的词语可以是“导航”、“浏览”、“超链接”、“页面”、“提交”和“浏览器”。不过，引用“框架”或“Web
+        页”时最好不要造成对两者之间界限进行臆测的效果，这一点是至关重要的设计决策。&nbsp;
+    </li>
+    <li>
+        不仅描述功能，还描述事件流。要实施该行为，则让每个操作以“当参与者 ...”开始。
+    </li>
+    <li>
+        只描述属于该用例的事件，不描述发生在其他用例中或系统外部的事件。
+    </li>
+    <li>
+        避免使用含糊的术语。
+    </li>
+    <li>
+        详细说明事件流，即应该回答所有“什么”所指的内容。请记住，测试设计人员要使用该文本来确定测试用例。
+    </li>
+</ul>
+<p>
+    如果已在其他用例中的使用了某些术语，则务必在该用例中使用完全相同的术语，并且它们的预期含义也是相同的。要管理通用术语，请将这些术语放入一个词汇表中。
+</p>
+<h3>
+    <a id="Flow of Events - Structure" name="Flow of Events - Structure">事件流 － 结构</a> <a href="#Top"><img height="20"     alt="回到页首" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    事件流的两个主要部分是<b>基本事件流</b>和<a id="XE_flow_of_events__alternative_flow" name="XE_flow_of_events__alternative_flow"></a><b>备用事件流</b>。基本事件流应涵盖执行用例时“通常”发生的事件。备用事件流涵盖相对于正常行为的可选行为或异常属性，以及正常行为的变体。可以将备用事件流视为基本事件流的“迂回路线”，某些备用事件流将返回到基本事件流，而某些备用事件流将结束用例的执行。
+</p>
+<p align="center">
+    <img height="212" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/ucstrct.gif" width="231" />
+</p>
+<p class="picturetext">
+    事件流的典型结构。直箭头表示基本事件流，而曲线表示相对于正常路径的备用路径。某些备用路径返回到基本事件流；而其他备用路径则结束用例。
+</p>
+<p>
+    基本事件流和备用事件流都应进一步构化为步骤或子流。在实现此操作时，您的主要目标应是文本易读（另请参阅下面的<a href="#Flow of Events - Style">事件流 －
+    样式</a>部分）。根据经验，子流应是具有明确用途的用例内的一段行为，并且从某种意义（要么执行所述的全部操作要么根本不执行）上讲是“很微小”的。您可能需要多个子流级别，但应尽量避免这种情况，因为这会使文本更复杂和更难理解。可以用活动图说明事件流的结构，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/activity_diagram_in_the_use-case_model_C2043F1.html" guid="7.230899877161861E-305">工作产品指南：用例中的活动图</a>。
+</p>
+<p>
+    这种构造成连贯子章节的书面文本将按类别向读者间接表示子流之间的顺序。为避免误解，应始终指出子流的顺序是否固定。这种注意事项通常关系到：
+</p>
+<ul>
+    <li>
+        业务规则。例如，必须先对用户授权，然后系统才能使某些数据可用。
+    </li>
+    <li>
+        用户界面设计。例如，系统不应强制某一序列行为对某些用户直观而对其他用户不直观。
+    </li>
+</ul>
+<p>
+    要阐明备用事件流在结构中的合适位置，您需要描述关于基本事件流的每条“迂回路线”的以下信息：
+</p>
+<ul>
+    <li>
+        可在基本事件流的什么位置插入备用行为。
+    </li>
+    <li>
+        启用备用行为所需满足的条件。
+    </li>
+    <li>
+        如何以及在何处恢复基本事件流或如何结束用例。
+    </li>
+</ul>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    这是回收机器系统中用例“返还物项”中的备用子流。
+</p>
+<p class="example">
+    <b>2.1. 瓶子被卡住</b>
+</p>
+<p class="example">
+    如果在 1.5“插入堆积物项”部分中，一个瓶子在入口处被卡住了，那么入口周围的传感器和测定入口将检测到该问题。传送带停止，并且机器发出警报以呼叫操作员。机器会等待操作员作出问题已解决的指示。然后，机器继续执行基本流的 1.9 部分。
+</p>
+<p>
+    在以上示例中，在基本事件流的特定位置插入备用事件流。也可以在多个位置插入备用事件流，某些备用事件流甚至可以插入到基本事件流的任何位置。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    这是回收机器系统中用例“返还物项”中的备用子流。
+</p>
+<p class="example">
+    <b>2.2. 前面板已卸下</b>
+</p>
+<p class="example">
+    如果有人卸下回收机器的前面板，则会停用罐头压缩。在没有前面板的情况下，是不可能启动罐头压缩的。移去操作也会导致向操作员发出警报。当前面板再次闭合时，机器从基本事件流的停止位置恢复操作。
+</p>
+<p>
+    如果备用事件流非常简单，只是在基本事件流部分对它进行描述（使用某个非正式的“if-then-else”结构），则可能是很吸引人的。应避免这种情况。备用事件流过多将使正常行为难以查看。另外，在基本事件流部分包括备用路径将使文本更“像伪码”并且更难以阅读。
+</p>
+<p>
+    在通常情况下，提取部分事件流并单独描述这些部分可增强基本事件流的可读性并改进用例和用例模型的结构。 可对已提取的部分建模如下：
+</p>
+<ul>
+    <li>
+        基本用例中的一个备用事件流，如果它是简单的变体、选项或基本事件流的异常。
+    </li>
+    <li>
+        如果您想要将它封装起来以供其他用例重复使用，则与基本用例有显式包含关系（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/include-relationship_5AE2718.html" guid="7.259881398615376E-305">工作产品指南：包含关系</a>）。
+    </li>
+    <li>
+        如果基本用例的基本事件流是完整的（即，已定义开始和结束），则它与基本用例内有隐式包含关系（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">工作产品指南：扩展关系</a>）。扩展流的本质应在于您倾向于将其隐含在基本用例的描述中，以使其简单一些。
+    </li>
+    <li>
+        基本事件流中的子流（可作为另一个选择），如果上述备用事件流都不适用。例如，在“维护员工信息”用例中，可使用单独的子流添加、删除和修改员工信息。
+    </li>
+</ul>
+<h3>
+    <a id="Flow of Events - Style" name="Flow of Events - Style">事件流 － 样式</a> <a href="#Top"><img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    您可以按多种样式描述用例。作为示例，我们展示按三种不同样式（主要是正式程度上的区别）描述的用例“管理订单”的基本事件流。建议使用下面所示的<a href="#Example 1:">示例 1</a>
+    中的第一个样式，因为它易于理解并且事件发生的顺序显而易见。文本分成已编号和已命名的子章节。编号是为了便于参考子章节。子章节的名称将使读者只阅读文本标题即可快速了解事件流的概况。
+</p>
+<p>
+    在下面的<a href="#Example 2:">示例 2</a> 中，事件流的描述未能阐明事件发生的顺序。如果按此样式撰写，那么您和其他人可能会遗漏关系到系统的重要事项。
+</p>
+<p>
+    下面的<a href="#Example 3:">示例 3</a> 显示了另一样式，如果您发现很难表达清楚事件的顺序，那么该示例将会有所帮助。这种伪码样式更加明确，但非技术人员很难读懂和理解这种文本，特别是在您想快速领会事件流时。
+</p>
+<h5>
+    <a id="Example 1:" name="Example 1:">示例 1：</a>
+</h5>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <b>1.1. 启动用例</b> 
+                    <p>
+                        当参与者操作员指示系统创建评估订单时，该用例启动。然后，系统将检索可用于该特定操作员的所有“网络元素”参与者、其评估对象以及相应的评估功能。可用的网络元素是指那些处于运作中、并且操作员有权访问的网络元素。评估功能的可用性取决于为特定类型的评估对象所作的设置。
+                    </p>
+                    <p>
+                        <b>1.2. 配置评估订单</b>
+                    </p>
+                    <p>
+                        系统允许参与者操作员选择要评估的网络元素，然后显示可用于所选网络元素的评估对象。 系统还允许操作员选择评估对象并选择为每个评估对象设置的评估功能。
+                    </p>
+                    <p>
+                        系统允许操作员在评估订单上输入文本注释。
+                    </p>
+                    <p>
+                        操作员指示系统完成评估订单。作为响应，系统将生成评估订单的唯一名称并设置进行评估的缺省时间、缺省频率和缺省持续时间。这些缺省值对每个操作员都是唯一的。然后，系统将允许操作员编辑这些缺省值。
+                    </p>
+                    <p>
+                        <b>1.3. 初始化订单</b>
+                    </p>
+                    <p>
+                        操作员指示系统初始化评估订单。然后，系统将记录创建订单的操作员的身份、创建日期和评估订单的“已调度”状态。
+                    </p>
+                    <p>
+                        <b>1.4. 用例结束</b>
+                    </p>
+                    <p>
+                        系统向操作员确认评估订单的初始化，并且评估订单可供其他参与者查看。
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext" align="center">
+    描述用例：按照此样式，文本是易读的，而事件流易于遵循。 请在描述中使用此样式。
+</p>
+<h5>
+    <a id="Example 2:" name="Example 2:">示例 2：</a>
+</h5>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    订购人员可以创建订单来收集网络元素的评估数据。 
+                    <p>
+                        系统将为订单指定唯一名称以及指示评估持续时间和评估时间以及评估重复频率的缺省值。订购人员将能够编辑这些值。
+                    </p>
+                    <p>
+                        订购人员必须进一步指定适用的评估功能、网络元素和评估对象。订购人员也可为订单添加个人注释。
+                    </p>
+                    <p>
+                        定义了必要信息之后，就用定义的属性、创建者名称和创建日期来创建和初始化新的订单。订单的状态将被设置为“已调度”。（可能的状态值是：已调度、正在执行、已完成、已取消和错误。）
+                    </p>
+                    <p>
+                        然后，用户界面收到关于新订单已创建的通知并接收到该新订单的参考，这样就可以显示该订单。
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    描述用例：该样式是可读的，但没有明确的事件流。
+</p>
+<h5>
+    <a id="Example 3:" name="Example 3:">示例 3：</a>
+</h5>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="65%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+<pre>
+<small>
+‘管理订单’（用户身份）
+REPEAT
+    &lt;= ‘显示管理订单菜单’
+    IF（=&gt; '创建订单'（评估功能、网络元素、评估目标））THEN
+    系统找到唯一名称，以及应在什么时候执行评估和执行评估的时长的缺省值。
+&lt;= '显示订单'（缺省属性）
+REPEAT
+    =&gt; '编辑订单'（变更属性，属性的新值）
+    &lt;= '更新屏幕'（新属性）
+UNTIL（定义了所有属性）
+REPEAT
+    IF（=&gt; '编辑订单'（变更属性，属性的新值））
+THEN &lt;= '更新屏幕'（新属性）
+ELSIF（=&gt; '保存订单'（订单标识，属性））THEN
+    在系统中创建和初始化该订单，并附带定义的属性、创建者名字、创建日期以及状态“已调度”。
+    &lt;= '新订单已创建'（该订单）
+ENDIF
+UNTIL（=&gt; '退出'）
+    ENDIF
+UNTIL '退出管理订单'</small>
+</pre>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    描述用例：在此，作者选择了使用伪码的正式样式。该样式使读者很难快速领会流程步骤，但当很难准确获取事件流时，该样式可能是有用的。
+</p>
+<h3>
+    <a id="XE_flow_of_events__examples_of" name="XE_flow_of_events__examples_of"></a><a id="Flow of Events - Example" name="Flow of Events - Example">事件流 － 示例</a>
+</h3>
+<p>
+    用例“管理订单”的事件流的完整描述（包括其备用流）可能如下所示：
+</p>
+<p>
+    <b>1. 基本事件流</b>
+</p>
+<p>
+    <b>1.1. 启动用例</b>
+</p>
+<p>
+    当参与者操作员指示系统创建评估订单时，该用例启动。然后，系统将检索可用于该特定操作员的所有“网络元素”参与者、其评估对象以及相应的评估功能。可用的网络元素是指那些处于运作中、并且操作员有权访问的网络元素。评估功能的可用性取决于为特定类型的评估对象所作的设置。
+</p>
+<p>
+    <b>1.2. 配置评估订单</b>
+</p>
+<p>
+    系统允许参与者操作员选择要评估的网络元素，然后显示可用于所选网络元素的评估对象。系统还允许操作员选择评估对象并选择为每个评估对象设置的评估功能。
+</p>
+<p>
+    系统允许操作员在评估订单上输入文本注释。
+</p>
+<p>
+    操作员指示系统完成评估订单。作为响应，系统将生成评估订单的唯一名称并设置进行评估的缺省时间、缺省频率和缺省持续时间。这些缺省值对每个操作员都是唯一的。然后，系统将允许操作员编辑这些缺省值。
+</p>
+<p>
+    <b>1.3. 初始化订单</b>
+</p>
+<p>
+    操作员指示系统初始化评估订单。然后，系统将记录创建订单的操作员的身份、创建日期和评估订单的“已调度”状态。
+</p>
+<p>
+    <b>1.4. 用例结束</b>
+</p>
+<p>
+    系统向操作员确认评估订单的初始化，并且评估订单可供其他参与者查看。
+</p>
+<p>
+    <b>2. 备用事件流</b>
+</p>
+<p>
+    <b>2.1. 没有可用的网络元素</b>
+</p>
+<p>
+    如果在 1.1“启动用例”中发现没有可用于评估该操作员的网络元素，系统将通知操作员。然后用例结束。
+</p>
+<p>
+    <b>2.2. 没有可用的评估功能</b>
+</p>
+<p>
+    如果在 1.2“配置评估订单”中，没有可用于所选网络元素的评估功能，系统将通知操作员并允许该操作员选择其他网络元素。
+</p>
+<p>
+    <b>2.3. 取消评估订单</b>
+</p>
+<p>
+    系统将允许操作员在执行用例期间随时取消所有操作。 然后系统将回到启动用例之前的状态并结束该用例。
+</p>
+<h3>
+    <a id="Special Requirements" name="Special Requirements">特殊需求</a> <a href="#Top"><img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    在用例的“特殊需求”中，描述事件流未涵盖的所有用例需求。这些需求是将影响设计模型的非功能需求。 另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_model_CC121CF4.html" guid="1.7617672560167394E-305">工作产品指南：用例模型</a>中关于非功能需求的讨论。可以将这些需求组织成多个类别，如可用性、可靠性、性能和可替换性，但通常这些需求很少，因此这样的分组并不是特别增值。
+</p>
+<h5>
+    示例：
+</h5>
+<p class="example">
+    在回收机器系统中，“返还堆积物项”用例的某个特殊需求可以是：
+</p>
+<p class="example">
+    机器必须能够以 95% 以上的可靠性识别堆积物项。
+</p>
+<h3>
+    <a id="XE_postcondition__guidelines_for" name="XE_postcondition__guidelines_for"></a><a id="XE_precondition__guidelines_for" name="XE_precondition__guidelines_for"></a><a id="preconditions and Postconditions" name="preconditions and Postconditions">前置条件和后置条件</a>
+</h3>
+<p>
+    使用<b>前置条件</b>和<b>后置条件</b>概念对于阐述如何启动和结束事件流是很有用的。但是，仅当用例使用者认为这些概念可增值时，才使用这些概念。
+</p>
+<p align="center">
+    <img height="278" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/ucprepst.gif" width="344" />
+</p>
+<p class="picturetext">
+    前置条件是可以启动用例之前系统的状态和所需的环境。后置条件是结束用例之后系统可能处在的状态。
+</p>
+<p>
+    请考虑以下各项：
+</p>
+<ul>
+    <li>
+        由前置条件或后置条件描述的状态应为用户可观察到的状态。可观察到的状态示例有“用户已登录到系统”或“用户已打开文档”。
+    </li>
+    <li>
+        前置条件是对用例可在何时启动的约束。它不是启动用例的事件。
+    </li>
+    <li>
+        虽然可在子流级别定义前置条件和后置条件，但一个用例的前置条件并不只是一个子流的前置条件。
+    </li>
+    <li>
+        无论执行了什么备用流，用例的后置条件均应为真；仅对于主流，它不应为真。如果出现故障，可以通过声明“操作已完成，或者，如果出现故障，则不执行操作”（而不只是“操作已完成”）在后置条件中包含该情况。
+    </li>
+    <li>
+        当将后置条件与扩展关系结合使用时，应注意，扩展用例并不引入违反基本用例中后置条件的子流。
+    </li>
+    <li>
+        后置条件可成为描述用例的强有力工具。首先定义假设用例要实现的目标 － 后置条件。然后可以描述如何达到该条件 － 所需的事件流。
+    </li>
+</ul>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    ATM 机器中用例“提款”的前置条件：客户具有适合读卡机的针对个人发行的卡，已发行 PIN 编号并向银行系统注册。
+</p>
+<p class="example">
+    ATM 机器中用例“提款”的后置条件：结束用例时，所有帐户和事务日志都是平衡的，与银行系统的通信已重新初始化，且已退还客户的卡。
+</p>
+<h3>
+    <a id="Extension Points" name="Extension Points">扩展点</a>
+</h3>
+<p>
+    <b>扩展点</b>展开用例，使其有可能扩展。它具有名称和用例的事件流内一个或多个位置的一系列引用。扩展点可以引用该用例内两个行为步骤之间的单个位置。它也可以引用一组离散的位置。
+</p>
+<p>
+    使用已命名的扩展点，将帮助您将扩展用例的行为规范与基本用例的内部详细信息相分离。可以修改或重新安排基本用例，只要扩展点的名称保持不变，这将不会影响扩展用例。同时，您没有下载基本用例的事件流的描述文本以及可扩展行为的位置的详细信息。另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">工作产品指南：扩展关系</a>。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    在电话系统中，用例“发出呼叫”可以用<a class="elementLinkWithUserText" id="XE_use_case__abstract_use_case" href="./../../../core.base_rup/guidances/guidelines/use-case_model_CC121CF4.html#Concrete and Abstract Use Cases" name="XE_use_case__abstract_use_case" guid="1.7617672560167394E-305">抽象</a>用例“显示来电者身份”来扩展。这是可选服务，通常称为“致电者身份”，接收方可请求也可不请求该服务。用例“发出呼叫”中的扩展点的描述可如下所示：
+</p>
+<p class="example">
+    <b>名称</b>：显示身份
+</p>
+<p class="example">
+    <b>位置</b>：在“1.9 使接听方电话响铃”这一部分之后。
+</p>
+<h3>
+    <a id="Use-Case Diagrams" name="Use-Case Diagrams">用例图</a>
+</h3>
+<p>
+    可以选择在归用例所有的用例图（在个别用例中不止一个图）中说明用例与参与者以及用例与其他用例的关系。如果用例涉及多个参与者，或与多个其他用例有关系，这种做法是很有用的。这类图具有“局部”特性，因为它仅从一个用例的角度显示了用例模型，而且并不是旨在解释任何关于整个用例模型的一般事实。另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_diagram_B894D435.html" guid="4.246859429016601E-305">工作产品指南：用例图</a>。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>规程: 配置与变更管理</title>
+<meta content="Discipline" name="uma.type">
+<meta content="rup_config_and_change_manage_discipline" name="uma.name">
+<meta content="配置与变更管理" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_nB0hwAITEdqu-LkyOdB8SQ", "_yeA1xNnmEdmO6L4XMImrsA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yeA1xNnmEdmO6L4XMImrsA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_yeA1xNnmEdmO6L4XMImrsA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">规程：配置与变更管理</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/content_package.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此规程说明了如何控制和同步组成软件系统的一组工作产品的演进。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">引用工作流</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/configuration_change_management_5C81A290.html" guid="{C85C9CC0-AD92-46C9-85BA-4C0672D6571E}">配置与变更管理</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">任务</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/review_change_request_E7D91346.html" guid="{1CD358DF-3FFC-4281-B3EF-8E3CD76C5900}">复审变更请求</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/setup_cm_environment_78ABEDF9.html" guid="{FC91D0C9-759E-4D3D-86D8-22D7B26AA0F6}">建立配置管理（CM）环境</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/confirm_duplicate_or_rejected_cr_8AB600B7.html" guid="{23EFB27B-DADC-483B-BF97-5B05089E3E56}">确认重复或拒绝的 CR</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/submit_change_request_29FC7F2E.html" guid="{1393CA8E-5CA4-4494-93FE-587F51931896}">提交变更请求</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Introduction" name="Introduction"></a><a id="Purpose" name="Purpose"></a><a id="Simultaneous Update" name="Simultaneous Update"></a><a id="Limited Notification" name="Limited Notification"></a><a id="Multiple Versions" name="Multiple Versions"></a><a id="Relation to Other Disciplines" name="Relation to Other Disciplines"></a> 
+<p>
+    CM 系统对于控制由处理同一项目的多名人员产生的众多工作产品而言至关重要。这种控制帮助避免代价很高的混乱状况，并确保得出的工作产品不会因为以下问题而有冲突：
+</p>
+<ul>
+    <li>
+        <a href="#Simultaneous Update">同时更新</a>
+    </li>
+    <li>
+        <a href="#Limited Notification">有限的通知</a>
+    </li>
+    <li>
+        <a href="#Multiple Versions">多个版本</a>
+    </li>
+</ul>
+<p>
+    <a id="Simultaneous Update" name="Simultaneous Update">同时更新</a>
+</p>
+<blockquote>
+    <p>
+        当两名或更多团队成员各自处理同一工作产品时，最后一个作更改的人员会破坏先前人员的工作。基本的问题是：如果系统不支持同时更新，这将导致顺序更改，会降低开发流程的速度。然而，对于同时更新，存在的挑战是要检测到更新已同时发生，并要在合并这些更改时解决任何集成问题。
+    </p>
+</blockquote>
+<p>
+    <a id="Limited Notification" name="Limited Notification">有限的通知</a>
+</p>
+<blockquote>
+    <p>
+        当在几个开发人员共享的工作产品中修订了某个问题后，没有向其中一些人通知该更改。
+    </p>
+</blockquote>
+<p>
+    <a id="Multiple Versions" name="Multiple Versions">多个版本</a>
+</p>
+<blockquote>
+    <p>
+        大多数大程序是以演进的发行版方式开发的。一个发行版可能已由客户在使用，另一个发行版在测试，而第三个发行版仍在开发中。如果在任何一个版本中发现问题，都需要在这些版本之间传播修订。如果不小心控制和监视更改，就可能会出现混乱，导致成本高昂的修订和返工。
+    </p>
+</blockquote>
+<p>
+    CM 系统有助于管理演进软件系统的多个变体，它跟踪给定的软件工作版本中使用了哪些版本，根据用户定义的版本规范执行个别程序或整个发行版的工作版本，以及实施特定于站点的开发策略。
+</p>
+<p>
+    CM 系统提供的一些直接好处包括以下方面：
+</p>
+<ul>
+    <li>
+        支持开发方法
+    </li>
+    <li>
+        维护产品完整性
+    </li>
+    <li>
+        确保已配置产品的完整性和正确性
+    </li>
+    <li>
+        提供用于开发产品的稳定环境
+    </li>
+    <li>
+        根据项目策略限制对工作产品的更改
+    </li>
+    <li>
+        提供有关更改任何工作产品的原因、时间和执行人员的审计跟踪
+    </li>
+</ul>
+<p>
+    此外，CM 系统存储关于开发流程本身的详细“记帐”数据：谁创建了特定版本（以及何时、何因）、哪些版本的源代码进入了特定工作版本以及其他相关信息。
+</p>
+<p>
+    组织的 CM 系统将在整个产品生命周期（从先启到部署）中使用。作为组织的资产存储库，CM 系统包含需求、设计和实施工件（用于定义系统或系统组件的特定版本）的源文件的当前及历史版本。
+</p>
+<p>
+    CM 系统中展示的产品目录结构包含实现产品所需的所有工件。同样，配置与变更管理（CCM）规程也与所有其他流程规程相关，因为它充当其他规程的结果工作产品集合的存储库。这包括：
+</p>
+<blockquote>
+    <ul>
+        <li>
+            <a class="elementLinkWithUserText" href="./../../core.base_rup/domains/requirements_58267518.html" guid="_KVkLoN7HEdm8G6yT7-Wdqw">域：需求</a>、
+        </li>
+        <li>
+            <a class="elementLinkWithUserText" href="./../../core.base_rup/domains/analysis_and_design_BD3BBB1D.html" guid="_kjFBYN7HEdm8G6yT7-Wdqw">域：分析与设计</a>、
+        </li>
+        <li>
+            <a class="elementLinkWithUserText" href="./../../core.base_rup/domains/implementation_442FA5B0.html" guid="_M6RHkN7IEdm8G6yT7-Wdqw">域：实施</a>、
+        </li>
+        <li>
+            <a class="elementLinkWithUserText" href="./../../core.base_rup/domains/test_FBB424F8.html" guid="_SPvXcN7IEdm8G6yT7-Wdqw">域：测试</a>、
+        </li>
+        <li>
+            <img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="_7CnosP_FEdmAzesbYywanQ">域：部署</a>、
+        </li>
+        <li>
+            <a class="elementLinkWithUserText" href="./../../core.base_rup/domains/configuration_ _change_management_121DC50A.html" guid="_wgltAP_IEdmAzesbYywanQ">域：配置与变更管理</a>、
+        </li>
+        <li>
+            <a class="elementLinkWithUserText" href="./../../core.base_rup/domains/project_management_7C2F57A0.html" guid="_C49xgP_UEdmVCcs_BRqacA">域：项目管理</a>、
+        </li>
+        <li>
+            <a class="elementLinkWithUserText" href="./../../core.base_rup/domains/environment_53C41220.html" guid="_5JJn0P_UEdmVCcs_BRqacA">域：环境</a><b>。</b>
+        </li>
+    </ul>
+</blockquote><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">概念</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/configuration_and_change_request_management_CDEBF750.html" guid="1.3564691989508223E-304">配置与变更请求管理</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/important_decisions_in_configuration_change_management_3798119B.html" guid="4.634602406965372E-305">配置与变更管理中的重要决策</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">支持材料</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/supportingmaterials/manage_change_63A0327F.html" guid="9.443126080601602E-306">变更管理</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

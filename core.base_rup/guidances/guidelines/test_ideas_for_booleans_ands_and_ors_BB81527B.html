@@ -1,0 +1,2083 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 关于&ldquo;与&rdquo;和&ldquo;或&rdquo;混合的测试构想</title>
+<meta content="Guideline" name="uma.type">
+<meta content="test_ideas_for_booleans_ands_and_ors" name="uma.name">
+<meta content="关于&ldquo;与&rdquo;和&ldquo;或&rdquo;混合的测试构想" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "9.407283892342409E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "9.407283892342409E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3lZjkCxqEdqYV4MWf8PiCw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "9.407283892342409E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "9.407283892342409E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.407283892342409E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：关于&ldquo;与&rdquo;和&ldquo;或&rdquo;混合的测试构想</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此页面提供了一些测试构想的示例，这些测试构想基于组合了 AND 和 OR 的布尔表达式。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_ideas_list_2A0F8E03.html" guid="{45219F27-0F84-4FD5-A7BC-73C19226303B}">测试构想列表</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test_ideas_catalog__examples_of" name="XE_test_ideas_catalog__examples_of" class="index" key="测试构想目录（test ideas catalog）" text="示例"></a> 
+<p>
+    此目录适用于组合了“与”和“或”的表达式。作为一种提示，下面显示了如何得出同类表达式的测试需求：
+</p>
+<p>
+    <b>A<sub>1</sub> && A<sub>2</sub> && ... && A<sub>n</sub></b>：
+</p>
+<ul>
+    <li>
+        所有 A<sub>i</sub> 都为 true 的一个测试构想
+    </li>
+    <li>
+        <i>N</i> 种情况，每种情况都有一项为 false。
+    </li>
+</ul>
+<p>
+    示例：
+</p>
+<div align="center">
+    <table bordercolor="#999999" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_0" valign="top" align="middle" width="100%" bgcolor="#E6E6E6" colspan="3">
+                    <b>A && B && C</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_1" align="middle" headers="un_0" width="33.33%">
+                    <b>A</b>
+                </th>
+                <th id="un_2" align="middle" headers="un_0" width="33.33%">
+                    <b>B</b>
+                </th>
+                <th id="un_3" align="middle" headers="un_0" width="33.33%">
+                    <b>C</b>
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_0 un_1" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_0 un_2" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_0 un_3" width="33.33%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_0 un_1" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_0 un_2" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_0 un_3" width="33.33%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_0 un_1" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_0 un_2" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_0 un_3" width="33.33%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_0 un_1" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_0 un_2" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_0 un_3" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div><br />
+<p>
+    <b>A<sub>1</sub> || A<sub>2</sub> || ... || A<sub>n</sub></b>：
+</p>
+<ul>
+    <li>
+        所有 A<sub>i</sub> 都为 false 的一个测试构想
+    </li>
+    <li>
+        <i>N</i> 种情况，每种情况都有一项为 true。
+    </li>
+</ul>
+<p>
+    示例：
+</p>
+<div align="center">
+    <table bordercolor="#999999" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_4" valign="top" align="middle" width="100%" bgcolor="#E6E6E6" colspan="3">
+                    <b>A || B || C</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_5" align="middle" headers="un_4" width="33.33%">
+                    <b>A</b>
+                </th>
+                <th id="un_6" align="middle" headers="un_4" width="33.33%">
+                    <b>B</b>
+                </th>
+                <th id="un_7" align="middle" headers="un_4" width="33.33%">
+                    <b>C</b>
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_4 un_5" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_4 un_6" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_4 un_7" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_4 un_5" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_4 un_6" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_4 un_7" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_4 un_5" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_4 un_6" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_4 un_7" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_4 un_5" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_4 un_6" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_4 un_7" width="33.33%">
+                    true
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h3 align="center">
+    <a id="TwoBooleanOperators" name="TwoBooleanOperators"></a>两个布尔运算符
+</h3>
+<div align="center">
+    <table bordercolor="#999999" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_8" valign="top" align="middle" width="100%" bgcolor="#E6E6E6" colspan="3">
+                    <b>(A && B) || C</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_9" align="middle" headers="un_8" width="33.33%">
+                    <b>A</b>
+                </th>
+                <th id="un_10" align="middle" headers="un_8" width="33.33%">
+                    <b>B</b>
+                </th>
+                <th id="un_11" align="middle" headers="un_8" width="33.33%">
+                    <b>C</b>
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_8 un_9" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_8 un_10" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_8 un_11" width="33.33%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_8 un_9" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_8 un_10" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_8 un_11" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_8 un_9" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_8 un_10" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_8 un_11" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_8 un_9" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_8 un_10" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_8 un_11" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+    <br />
+     
+    <table bordercolor="#999999" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_12" valign="top" align="middle" width="100%" bgcolor="#E6E6E6" colspan="3">
+                    <b>A && (B || C)</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_13" align="middle" headers="un_12" width="33.33%">
+                    <b>A</b>
+                </th>
+                <th id="un_14" align="middle" headers="un_12" width="33.33%">
+                    <b>B</b>
+                </th>
+                <th id="un_15" align="middle" headers="un_12" width="33.33%">
+                    <b>C</b>
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_12 un_13" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_12 un_14" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_12 un_15" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_12 un_13" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_12 un_14" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_12 un_15" width="33.33%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_12 un_13" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_12 un_14" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_12 un_15" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_12 un_13" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_12 un_14" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_12 un_15" width="33.33%">
+                    true
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+    <br />
+     
+    <table bordercolor="#999999" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_16" valign="top" align="middle" width="100%" bgcolor="#E6E6E6" colspan="3">
+                    <b>A || (B && C)</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_17" align="middle" headers="un_16" width="33.33%">
+                    <b>A</b>
+                </th>
+                <th id="un_18" align="middle" headers="un_16" width="33.33%">
+                    <b>B</b>
+                </th>
+                <th id="un_19" align="middle" headers="un_16" width="33.33%">
+                    <b>C</b>
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_16 un_17" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_16 un_18" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_16 un_19" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_16 un_17" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_16 un_18" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_16 un_19" width="33.33%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_16 un_17" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_16 un_18" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_16 un_19" width="33.33%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_16 un_17" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_16 un_18" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_16 un_19" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+    <br />
+     
+    <table bordercolor="#999999" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_20" valign="top" align="middle" width="100%" bgcolor="#E6E6E6" colspan="3">
+                    <b>(A || B) && C</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_21" align="middle" headers="un_20" width="33.33%">
+                    <b>A</b>
+                </th>
+                <th id="un_22" align="middle" headers="un_20" width="33.33%">
+                    <b>B</b>
+                </th>
+                <th id="un_23" align="middle" headers="un_20" width="33.33%">
+                    <b>C</b>
+                </th>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_20 un_21" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_20 un_22" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_20 un_23" width="33.33%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_20 un_21" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_20 un_22" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_20 un_23" width="33.33%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_20 un_21" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_20 un_22" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_20 un_23" width="33.33%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" headers="un_20 un_21" width="33.33%">
+                    FALSE
+                </td>
+                <td align="middle" headers="un_20 un_22" width="33.33%">
+                    true
+                </td>
+                <td align="middle" headers="un_20 un_23" width="33.33%">
+                    FALSE
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h3 align="center">
+    <a id="ThreeBooleanOperators" name="ThreeBooleanOperators"></a>三个布尔运算符<br />
+    <br />
+     <i>一个“与”</i>
+</h3>
+<p align="center">
+    要对查找表达式有所帮助，请从上至下阅读这些列。在您阅读时，“与”符号从左往右移动。
+</p>
+<div align="center">
+    <table bordercolor="#ffffff" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_24" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>(A && B) || C || D</b>
+                </th>
+                <th id="un_25" valign="top" bordercolor="#ffffff" align="middle" width="4%">
+                    &#160;
+                </th>
+                <th id="un_26" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>((A || B) && C) || D</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_27" bordercolor="#999999" align="middle" headers="un_24" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_28" bordercolor="#999999" align="middle" headers="un_24" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_29" bordercolor="#999999" align="middle" headers="un_24" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_30" bordercolor="#999999" align="middle" headers="un_24" width="12%">
+                    <b>D</b>
+                </th>
+                <th id="un_31" valign="top" bordercolor="#ffffff" align="middle" headers="un_25" width="4%">
+                    &#160;
+                </th>
+                <th id="un_32" bordercolor="#999999" align="middle" headers="un_26" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_33" bordercolor="#999999" align="middle" headers="un_26" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_34" bordercolor="#999999" align="middle" headers="un_26" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_35" bordercolor="#999999" align="middle" headers="un_26" width="12%">
+                    <b>D</b>
+                </th>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_27" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_28" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_29" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_30" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_25 un_31" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_32" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_33" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_34" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_35" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_27" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_28" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_29" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_30" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_25 un_31" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_32" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_33" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_34" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_35" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_27" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_28" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_29" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_30" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_25 un_31" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_32" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_33" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_34" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_35" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_27" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_28" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_29" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_30" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_25 un_31" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_32" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_33" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_34" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_35" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_27" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_28" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_29" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_24 un_30" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_25 un_31" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_32" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_33" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_34" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_26 un_35" width="12%">
+                    FALSE
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+    <br />
+     
+    <table bordercolor="#ffffff" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_36" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>A && (B || C || D)</b>
+                </th>
+                <th id="un_37" valign="top" bordercolor="#ffffff" align="middle" width="4%">
+                    &#160;
+                </th>
+                <th id="un_38" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>A || (B && (C || D))</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_39" bordercolor="#999999" align="middle" headers="un_36" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_40" bordercolor="#999999" align="middle" headers="un_36" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_41" bordercolor="#999999" align="middle" headers="un_36" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_42" bordercolor="#999999" align="middle" headers="un_36" width="12%">
+                    <b>D</b>
+                </th>
+                <th id="un_43" valign="top" bordercolor="#ffffff" align="middle" headers="un_37" width="4%">
+                    &#160;
+                </th>
+                <th id="un_44" bordercolor="#999999" align="middle" headers="un_38" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_45" bordercolor="#999999" align="middle" headers="un_38" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_46" bordercolor="#999999" align="middle" headers="un_38" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_47" bordercolor="#999999" align="middle" headers="un_38" width="12%">
+                    <b>D</b>
+                </th>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_39" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_40" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_41" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_42" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_37 un_43" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_44" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_45" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_46" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_47" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_39" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_40" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_41" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_42" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_37 un_43" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_44" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_45" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_46" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_47" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_39" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_40" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_41" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_42" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_37 un_43" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_44" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_45" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_46" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_47" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_39" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_40" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_41" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_42" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_37 un_43" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_44" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_45" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_46" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_47" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_39" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_40" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_41" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_36 un_42" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_37 un_43" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_44" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_45" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_46" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_38 un_47" width="12%">
+                    true
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+    <br />
+     
+    <table bordercolor="#ffffff" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_48" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>A || (B && C) || D</b>
+                </th>
+                <th id="un_49" valign="top" bordercolor="#ffffff" align="middle" width="4%">
+                    &#160;
+                </th>
+                <th id="un_50" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>A || B || (C && D)</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_51" bordercolor="#999999" align="middle" headers="un_48" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_52" bordercolor="#999999" align="middle" headers="un_48" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_53" bordercolor="#999999" align="middle" headers="un_48" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_54" bordercolor="#999999" align="middle" headers="un_48" width="12%">
+                    <b>D</b>
+                </th>
+                <th id="un_55" valign="top" bordercolor="#ffffff" align="middle" headers="un_49" width="4%">
+                    &#160;
+                </th>
+                <th id="un_56" bordercolor="#999999" align="middle" headers="un_50" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_57" bordercolor="#999999" align="middle" headers="un_50" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_58" bordercolor="#999999" align="middle" headers="un_50" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_59" bordercolor="#999999" align="middle" headers="un_50" width="12%">
+                    <b>D</b>
+                </th>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_51" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_52" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_53" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_54" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_49 un_55" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_56" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_57" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_58" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_59" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_51" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_52" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_53" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_54" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_49 un_55" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_56" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_57" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_58" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_59" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_51" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_52" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_53" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_54" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_49 un_55" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_56" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_57" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_58" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_59" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_51" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_52" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_53" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_54" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_49 un_55" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_56" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_57" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_58" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_59" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_51" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_52" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_53" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_48 un_54" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_49 un_55" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_56" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_57" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_58" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_50 un_59" width="12%">
+                    FALSE
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+    <br />
+     
+    <table bordercolor="#ffffff" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_60" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>(A||B) && (C || D)</b>
+                </th>
+                <th id="un_61" valign="top" bordercolor="#ffffff" align="middle" width="4%">
+                    &#160;
+                </th>
+                <th id="un_62" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>(A || B || C) && D</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_63" bordercolor="#999999" align="middle" headers="un_60" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_64" bordercolor="#999999" align="middle" headers="un_60" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_65" bordercolor="#999999" align="middle" headers="un_60" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_66" bordercolor="#999999" align="middle" headers="un_60" width="12%">
+                    <b>D</b>
+                </th>
+                <th id="un_67" valign="top" bordercolor="#ffffff" align="middle" headers="un_61" width="4%">
+                    &#160;
+                </th>
+                <th id="un_68" bordercolor="#999999" align="middle" headers="un_62" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_69" bordercolor="#999999" align="middle" headers="un_62" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_70" bordercolor="#999999" align="middle" headers="un_62" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_71" bordercolor="#999999" align="middle" headers="un_62" width="12%">
+                    <b>D</b>
+                </th>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_63" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_64" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_65" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_66" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_61 un_67" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_68" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_69" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_70" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_71" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_63" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_64" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_65" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_66" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_61 un_67" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_68" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_69" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_70" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_71" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_63" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_64" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_65" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_66" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_61 un_67" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_68" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_69" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_70" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_71" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_63" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_64" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_65" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_60 un_66" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_61 un_67" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_68" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_69" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_70" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_71" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#ffffff" align="middle" headers="un_60 un_63" width="12%">
+                    &#160;
+                </td>
+                <td bordercolor="#ffffff" align="middle" headers="un_60 un_64" width="12%">
+                    &#160;
+                </td>
+                <td bordercolor="#ffffff" align="middle" headers="un_60 un_65" width="12%">
+                    &#160;
+                </td>
+                <td bordercolor="#ffffff" align="middle" headers="un_60 un_66" width="12%">
+                    &#160;
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_61 un_67" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_68" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_69" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_70" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_62 un_71" width="12%">
+                    FALSE
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h3 align="center">
+    <a id="ThreeBooleanOperators" name="ThreeBooleanOperators"></a>三个布尔运算符<br />
+    <br />
+     <i>两个“与”</i>
+</h3>
+<p align="center">
+    要对查找表达式有所帮助，请从上至下阅读这些列。在您阅读时请注意，OR 符号从右往左移动
+</p>
+<div align="center">
+    <table bordercolor="#ffffff" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_72" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>(A && B && C) || D</b>
+                </th>
+                <th id="un_73" valign="top" bordercolor="#ffffff" align="middle" width="4%">
+                    &#160;
+                </th>
+                <th id="un_74" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>((A && B) || C) && D</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_75" bordercolor="#999999" align="middle" headers="un_72" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_76" bordercolor="#999999" align="middle" headers="un_72" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_77" bordercolor="#999999" align="middle" headers="un_72" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_78" bordercolor="#999999" align="middle" headers="un_72" width="12%">
+                    <b>D</b>
+                </th>
+                <th id="un_79" valign="top" bordercolor="#ffffff" align="middle" headers="un_73" width="4%">
+                    &#160;
+                </th>
+                <th id="un_80" bordercolor="#999999" align="middle" headers="un_74" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_81" bordercolor="#999999" align="middle" headers="un_74" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_82" bordercolor="#999999" align="middle" headers="un_74" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_83" bordercolor="#999999" align="middle" headers="un_74" width="12%">
+                    <b>D</b>
+                </th>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_75" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_76" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_77" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_78" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_73 un_79" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_80" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_81" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_82" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_83" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_75" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_76" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_77" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_78" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_73 un_79" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_80" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_81" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_82" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_83" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_75" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_76" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_77" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_78" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_73 un_79" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_80" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_81" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_82" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_83" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_75" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_76" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_77" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_78" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_73 un_79" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_80" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_81" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_82" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_83" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_75" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_76" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_77" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_72 un_78" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_73 un_79" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_80" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_81" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_82" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_74 un_83" width="12%">
+                    FALSE
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+    <br />
+     
+    <table bordercolor="#ffffff" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_84" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>A && B && (C || D)</b>
+                </th>
+                <th id="un_85" valign="top" bordercolor="#ffffff" align="middle" width="4%">
+                    &#160;
+                </th>
+                <th id="un_86" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>A && (B || (C && D))</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_87" bordercolor="#999999" align="middle" headers="un_84" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_88" bordercolor="#999999" align="middle" headers="un_84" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_89" bordercolor="#999999" align="middle" headers="un_84" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_90" bordercolor="#999999" align="middle" headers="un_84" width="12%">
+                    <b>D</b>
+                </th>
+                <th id="un_91" valign="top" bordercolor="#ffffff" align="middle" headers="un_85" width="4%">
+                    &#160;
+                </th>
+                <th id="un_92" bordercolor="#999999" align="middle" headers="un_86" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_93" bordercolor="#999999" align="middle" headers="un_86" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_94" bordercolor="#999999" align="middle" headers="un_86" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_95" bordercolor="#999999" align="middle" headers="un_86" width="12%">
+                    <b>D</b>
+                </th>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_87" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_88" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_89" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_90" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_85 un_91" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_92" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_93" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_94" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_95" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_87" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_88" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_89" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_90" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_85 un_91" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_92" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_93" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_94" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_95" width="12%">
+                    <p>
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_87" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_88" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_89" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_90" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_85 un_91" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_92" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_93" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_94" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_95" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_87" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_88" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_89" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_90" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_85 un_91" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_92" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_93" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_94" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_95" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_87" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_88" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_89" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_84 un_90" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_85 un_91" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_92" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_93" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_94" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_86 un_95" width="12%">
+                    true
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+    <br />
+     
+    <table bordercolor="#ffffff" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_96" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>A && (B || C) && D</b>
+                </th>
+                <th id="un_97" valign="top" bordercolor="#ffffff" align="middle" width="4%">
+                    &#160;
+                </th>
+                <th id="un_98" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6" colspan="4">
+                    <b>(A || B) && C && D</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_99" bordercolor="#999999" align="middle" headers="un_96" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_100" bordercolor="#999999" align="middle" headers="un_96" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_101" bordercolor="#999999" align="middle" headers="un_96" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_102" bordercolor="#999999" align="middle" headers="un_96" width="12%">
+                    <b>D</b>
+                </th>
+                <th id="un_103" valign="top" bordercolor="#ffffff" align="middle" headers="un_97" width="4%">
+                    &#160;
+                </th>
+                <th id="un_104" bordercolor="#999999" align="middle" headers="un_98" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_105" bordercolor="#999999" align="middle" headers="un_98" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_106" bordercolor="#999999" align="middle" headers="un_98" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_107" bordercolor="#999999" align="middle" headers="un_98" width="12%">
+                    <b>D</b>
+                </th>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_99" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_100" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_101" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_102" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_97 un_103" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_104" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_105" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_106" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_107" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_99" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_100" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_101" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_102" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_97 un_103" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_104" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_105" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_106" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_107" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_99" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_100" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_101" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_102" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_97 un_103" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_104" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_105" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_106" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_107" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_99" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_100" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_101" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_102" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_97 un_103" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_104" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_105" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_106" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_107" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_99" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_100" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_101" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_96 un_102" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_97 un_103" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_104" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_105" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_106" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_98 un_107" width="12%">
+                    FALSE
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+    <br />
+     
+    <table bordercolor="#ffffff" cellspacing="0" cellpadding="2" width="85%" border="1">
+        <tbody align="middle">
+            <tr>
+                <th id="un_108" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6"                 colspan="4">
+                    <b>(A && B) || (C && D)</b>
+                </th>
+                <th id="un_109" valign="top" bordercolor="#ffffff" align="middle" width="4%">
+                    &#160;
+                </th>
+                <th id="un_110" valign="top" bordercolor="#999999" align="middle" width="48%" bgcolor="#E6E6E6"                 colspan="4">
+                    <b>A || (B && C && D)</b>
+                </th>
+            </tr>
+            <tr>
+                <th id="un_111" bordercolor="#999999" align="middle" headers="un_108" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_112" bordercolor="#999999" align="middle" headers="un_108" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_113" bordercolor="#999999" align="middle" headers="un_108" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_114" bordercolor="#999999" align="middle" headers="un_108" width="12%">
+                    <b>D</b>
+                </th>
+                <th id="un_115" valign="top" bordercolor="#ffffff" align="middle" headers="un_109" width="4%">
+                    &#160;
+                </th>
+                <th id="un_116" bordercolor="#999999" align="middle" headers="un_110" width="12%">
+                    <b>A</b>
+                </th>
+                <th id="un_117" bordercolor="#999999" align="middle" headers="un_110" width="12%">
+                    <b>B</b>
+                </th>
+                <th id="un_118" bordercolor="#999999" align="middle" headers="un_110" width="12%">
+                    <b>C</b>
+                </th>
+                <th id="un_119" bordercolor="#999999" align="middle" headers="un_110" width="12%">
+                    <b>D</b>
+                </th>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_111" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_112" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_113" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_114" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_109 un_115" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_116" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_117" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_118" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_119" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_111" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_112" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_113" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_114" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_109 un_115" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_116" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_117" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_118" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_119" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_111" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_112" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_113" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_114" width="12%">
+                    true
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_109 un_115" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_116" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_117" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_118" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_119" width="12%">
+                    true
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_111" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_112" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_113" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_108 un_114" width="12%">
+                    FALSE
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_109 un_115" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_116" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_117" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_118" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_119" width="12%">
+                    FALSE
+                </td>
+            </tr>
+            <tr>
+                <td bordercolor="#ffffff" align="middle" headers="un_108 un_111" width="12%">
+                    &#160;
+                </td>
+                <td bordercolor="#ffffff" align="middle" headers="un_108 un_112" width="12%">
+                    &#160;
+                </td>
+                <td bordercolor="#ffffff" align="middle" headers="un_108 un_113" width="12%">
+                    &#160;
+                </td>
+                <td bordercolor="#ffffff" align="middle" headers="un_108 un_114" width="12%">
+                    &#160;
+                </td>
+                <td valign="top" bordercolor="#ffffff" align="middle" headers="un_109 un_115" width="4%">
+                    &#160;
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_116" width="12%">
+                    FALSE
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_117" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_118" width="12%">
+                    true
+                </td>
+                <td bordercolor="#999999" align="middle" headers="un_110 un_119" width="12%">
+                    FALSE
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div><br />
+<br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

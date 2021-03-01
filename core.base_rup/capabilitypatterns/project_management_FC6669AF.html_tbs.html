@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>能力模式: 项目管理</title>
+<meta content="CapabilityPattern" name="uma.type">
+<meta content="project_management" name="uma.name">
+<meta content="项目管理" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={EA0C1D32-E39A-4D96-B956-E178DB776A96}&path={EA0C1D32-E39A-4D96-B956-E178DB776A96}';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo,  defaultQueryStr, false, true, true);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div autoWrap="true">
+<div id="page-guid" value="{EA0C1D32-E39A-4D96-B956-E178DB776A96}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">能力模式：项目管理</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/process.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此能力模式涵盖项目管理规程的活动和工作流程。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="tab"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td><td class="tab" nowrap><a id="TAB_Description" class="tab" href="./../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html_desc.html">描述</a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap><a id="TAB_WBS" class="tab" href="./../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html_wbs.html"><span style="white-space:nowrap;">工作分解结构</span></a></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_a.gif"></td><td class="activeTab" nowrap><span style="white-space:nowrap;">团队分配</span></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap><a id="TAB_WPBS" class="tab" href="./../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html_wpbs.html"><span style="white-space:nowrap;">工作产品使用</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="./../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td colspan="4"><img height="2" title="" alt="" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space_middle.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="10" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space.gif"></td><td colspan="3"><img title="" alt="" height="2" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">团队分解</div>
+<div class="sectionContent">
+<div id="treeContent"></div>
+<script language="JavaScript">
+contentPage.processPage.treeTable.data = {
+title: "团队分解", summary: "团队分解", 
+columns: [
+["presentation_name", "分解元素"],
+["model_info", "模型信息"],
+["teams", "团队"],
+["type", "类型"],
+["is_planned", "已计划"],
+["has_multiple_occurrences", "多次出现"],
+["is_optional", "可选"]],
+rows: [
+
+{id: "d1fb1ef8", parentId: "", relPath: ",_IH6i8EogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_review_manager", title: "复审协调员", url: "./../../core.base_rup/capabilitypatterns/rup_review_manager_DAA18AF5.html", 
+	predecessors: "", info: "", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "5aaaac36", parentId: "d1fb1ef8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_review_record", title: "复审记录", url: "./../../core.base_rup/capabilitypatterns/rup_review_record_1479B71B.html", 
+	predecessors: "", info: "负责", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "8303989a", parentId: "d1fb1ef8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_review_record", title: "复审记录", url: "./../../core.base_rup/capabilitypatterns/rup_review_record_1479B71B.html", 
+	predecessors: "", info: "修改", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e249cfca", parentId: "d1fb1ef8", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "organize_review", title: "组织复审", url: "./../../core.base_rup/capabilitypatterns/organize_review_E56F2828.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "5d5df642", parentId: "", relPath: ",_I1FK8EogEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_reviewer", title: "复审员", url: "./../../core.base_rup/capabilitypatterns/rup_reviewer_19096DB0.html", 
+	predecessors: "", info: "", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "76309a9c", parentId: "5d5df642", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_review_record", title: "复审记录", url: "./../../core.base_rup/capabilitypatterns/rup_review_record_1479B71B.html", 
+	predecessors: "", info: "修改", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1a1ce3e0", parentId: "5d5df642", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "conduct_review", title: "执行复审", url: "./../../core.base_rup/capabilitypatterns/conduct_review_9AB3A314.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "57304368", parentId: "", relPath: ",_wERjwEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_management_reviewer", title: "管理复审员", url: "./../../core.base_rup/capabilitypatterns/rup_management_reviewer_A474289.html", 
+	predecessors: "", info: "", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "82588bd6", parentId: "57304368", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_review_record", title: "复审记录", url: "./../../core.base_rup/capabilitypatterns/rup_review_record_EA27568.html", 
+	predecessors: "", info: "修改", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c1dee6b0", parentId: "57304368", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "iteration_plan_review", title: "迭代计划复审", url: "./../../core.base_rup/capabilitypatterns/iteration_plan_review_35A6F0A8.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "6482c69a", parentId: "57304368", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "iteration_evaluation_criteria_review", title: "迭代评估条件复审", url: "./../../core.base_rup/capabilitypatterns/iteration_evaluation_criteria_review_64D7BD8C.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "fe9fd18", parentId: "57304368", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "project_approval_review", title: "项目核准复审", url: "./../../core.base_rup/capabilitypatterns/project_approval_review_FAA2089B.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "366816e4", parentId: "57304368", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "project_planning_review", title: "项目计划复审", url: "./../../core.base_rup/capabilitypatterns/project_planning_review_742A8F4E.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "5e4f32c0", parentId: "", relPath: ",_CbuGURi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "", prefix: "", name: "rup_project_manager", title: "项目经理", url: "./../../core.base_rup/capabilitypatterns/rup_project_manager_5C1873A3.html", 
+	predecessors: "", info: "", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "dd0a1cbc", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_iteration_plan", title: "迭代计划", url: "./../../core.base_rup/capabilitypatterns/rup_iteration_plan_342BBB49.html", 
+	predecessors: "", info: "负责", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "3ec86196", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_iteration_assessment", title: "迭代评估", url: "./../../core.base_rup/capabilitypatterns/rup_iteration_assessment_FBC6A58.html", 
+	predecessors: "", info: "负责", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c3626ae8", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_risk_list", title: "风险列表", url: "./../../core.base_rup/capabilitypatterns/rup_risk_list_F4369D8.html", 
+	predecessors: "", info: "负责", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "2a6b94b2", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_work_order", title: "工作单", url: "./../../core.base_rup/capabilitypatterns/rup_work_order_A4668733.html", 
+	predecessors: "", info: "负责", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "1143b7e", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_plan", title: "软件开发计划", url: "./../../core.base_rup/capabilitypatterns/rup_project_plan_343476D7.html", 
+	predecessors: "", info: "负责", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "91f32f38", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_case", title: "业务案例", url: "./../../core.base_rup/capabilitypatterns/rup_business_case_554F67C9.html", 
+	predecessors: "", info: "负责", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "cf98daf8", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_status_assessment", title: "状态评估", url: "./../../core.base_rup/capabilitypatterns/rup_status_assessment_9DBD70B.html", 
+	predecessors: "", info: "负责", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "40b3e3e", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_iteration_plan", title: "迭代计划", url: "./../../core.base_rup/capabilitypatterns/rup_iteration_plan_FD07B2C3.html", 
+	predecessors: "", info: "修改", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "89241b22", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_iteration_assessment", title: "迭代评估", url: "./../../core.base_rup/capabilitypatterns/rup_iteration_assessment_FBC6A58.html", 
+	predecessors: "", info: "修改", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "c0458fd2", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_risk_list", title: "风险列表", url: "./../../core.base_rup/capabilitypatterns/rup_risk_list_F4369D8.html", 
+	predecessors: "", info: "修改", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "206b2af2", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_work_order", title: "工作单", url: "./../../core.base_rup/capabilitypatterns/rup_work_order_A4668733.html", 
+	predecessors: "", info: "修改", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f9e280a4", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_project_plan", title: "软件开发计划", url: "./../../core.base_rup/capabilitypatterns/rup_project_plan_343476D7.html", 
+	predecessors: "", info: "修改", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "7fb28f22", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_business_case", title: "业务案例", url: "./../../core.base_rup/capabilitypatterns/rup_business_case_554F67C9.html", 
+	predecessors: "", info: "修改", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f82ed4e6", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "rup_status_assessment", title: "状态评估", url: "./../../core.base_rup/capabilitypatterns/rup_status_assessment_9DBD70B.html", 
+	predecessors: "", info: "修改", type: "工作产品", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "9da4eab6", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "schedule_and_assign_work", title: "安排和分配工作", url: "./../../core.base_rup/capabilitypatterns/schedule_and_assign_work_9E5335E8.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "f14dc1c0", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "report_status", title: "报告状态", url: "./../../core.base_rup/capabilitypatterns/report_status_661264A5.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "a09ac076", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "define_project_organization_and_staffing", title: "定义项目组织和人员配备", url: "./../../core.base_rup/capabilitypatterns/define_project_organization_and_staffing_C1AB432B.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "d6238b6c", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "acquire_staff", title: "获得工作人员", url: "./../../core.base_rup/capabilitypatterns/acquire_staff_954197B4.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "302e8504", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "plan_phases_and_iterations", title: "计划阶段和迭代", url: "./../../core.base_rup/capabilitypatterns/plan_phases_and_iterations_CC2271F9.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "e9c96c86", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "develop_business_case", title: "开发业务案例", url: "./../../core.base_rup/capabilitypatterns/develop_business_case_E0AA749B.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "ad9867d0", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "assess_iteration", title: "评估迭代", url: "./../../core.base_rup/capabilitypatterns/assess_iteration_5A29E9EF.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "91960456", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "initiate_iteration", title: "启动迭代", url: "./../../core.base_rup/capabilitypatterns/initiate_iteration_BC7F1824.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "63f38186", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "initiate_project", title: "启动项目", url: "./../../core.base_rup/capabilitypatterns/initiate_project_2FD943F8.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "a9bd3498", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "identify_and_assess_risks", title: "确定并评估风险", url: "./../../core.base_rup/capabilitypatterns/identify_and_assess_risks_CB9F9D89.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+
+{id: "29efe54a", parentId: "5e4f32c0", relPath: "", isSuppressed: "", indentSize: 1, hasChildren:false, 
+	index: "", prefix: "", name: "develop_iteration_plan", title: "制定迭代计划", url: "./../../core.base_rup/capabilitypatterns/develop_iteration_plan_BBB6B1EE.html", 
+	predecessors: "", info: "作为拥有者执行", type: "任务", 
+	repeatable: "", multiOccurences: "", optional: "", planned: "",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: ""},
+	
+
+		
+]};
+				</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

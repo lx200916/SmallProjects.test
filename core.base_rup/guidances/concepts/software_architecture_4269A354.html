@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 软件体系结构</title>
+<meta content="Concept" name="uma.type">
+<meta content="software_architecture" name="uma.name">
+<meta content="软件体系结构" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "3.066252221588648E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "3.066252221588648E-305"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "3.066252221588648E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "3.066252221588648E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "3.066252221588648E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "3.066252221588648E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}", "3.066252221588648E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "3.066252221588648E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.066252221588648E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：软件体系结构</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">软件体系结构代表了系统的结构，它由软件组件、这些组件的外部可视属性和组件之间的关系组成。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">分析和设计</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h2>
+    <a id="XE_architecture__introduction_to" name="XE_architecture__introduction_to"></a><a id="Introduction" name="Introduction">简介</a>
+</h2>
+<p>
+    大多数工程师，尤其是稍有经验的工程师，都直观地认为软件体系结构是一个容易理解的概念，但是很难确切地定义。明确区分设计和体系结构尤其困难，体系结构是设计的一个方面，它着重于某些具体的特性。
+</p>
+<p>
+    在<i>软件体系结构的简介</i>中，David Garlan 和 Mary Shaw 提出，软件体系结构是某一层面的设计，它涉及以下问题：“超越计算的算法和数据结构，设计并指定整个系统结构成为了新一类的问题。
+    结构问题包括整个组织和全局控制结构；关于通信、同步和数据访问的协议；向设计元素分派功能；实际分发；组装设计元素；规模缩放和性能；以及设计备用项的选择。”[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#GAR93" guid="7.755968586980351E-308">GAR93</a>]
+</p>
+<p>
+    但是对体系结构而言，要考虑的就不仅是结构了；IEEE 体系结构工作组（IEEE Working Group on Architecture）将其定义为“<b>体系结构环境中</b>系统最高层次的概念”[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#IEP1471" guid="7.755968586980351E-308">IEP1471</a>]。它还包括对系统完整性、经济约束、美学观念和风格的“适合性”。体系结构不限于内在焦点，而要考虑用户环境和开发环境中的整个系统 － 外在焦点。
+</p>
+<p>
+    在 RUP 中，软件系统的体系结构（在给定点）是系统中众多重要组件的组织或结构，这些组件通过接口与由更小的组件和接口相继组成的组件交互。
+</p>
+<h2>
+    <a id="Architecture Description" name="Architecture Description">体系结构描述</a>
+</h2>
+<p>
+    要说明并理解软件体系结构，您必须先定义一种体系结构表示法，它是一种描述体系结构重要方面的方式。在 RUP 中，该描述是记录在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">软件体系结构文档</a>中的。
+</p>
+<h3>
+    <a id="Architectural Views" name="Architectural Views">体系结构视图</a>
+</h3>
+<p>
+    我们已选择在多个<b>体系结构视图</b>中展示软件体系结构。每个体系结构视图都针对了开发流程中特定于项目干系人（用户、设计人员、经理、系统工程师、维护人员等）的一组具体问题。
+</p>
+<p>
+    视图通过显示软件体系结构如何分解为组件以及<b>连接器</b>如何连接组件以生成有用的<b>格式</b> [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#PW92" guid="7.755968586980351E-308">PW92</a>]，来获取主要的结构设计决策。 这些设计选项必须遵循<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/requirements_62E28784.html" guid="4.582668643506599E-305">需求</a>约束、功能约束、补充约束和其他约束。但是反过来，这些选择对需求以及未来较低层次的设计决策进行了进一步的<b>约束</b>。
+</p>
+<h3>
+    <a id="A Typical Set of Architectural Views" name="A Typical Set of Architectural Views">一组典型的体系结构视图</a>
+</h3>
+<p>
+    体系结构用一些不同的体系结构视图表示，这些视图实际上是说明“对体系结构有重要意义”模型元素的选萃。在 RUP 中，首先是一组称为“4+1 视图模型”的典型视图 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#KRU95" guid="7.755968586980351E-308">KRU95</a>]。它的组成为：
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/use-case_view_11F15731.html" guid="6.820983346069146E-305"><b>用例视图</b>，</a>它包含用例和场景，这些用例和场景含有重要体系结构行为、类或技术风险。它是<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">用例模型</a>的子集。
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/logical_view_C135365E.html" guid="6.901347907565747E-305">逻辑视图</a>，它包含最重要的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_package_8376BC8E.html" guid="{80CC5437-F481-487B-A69B-957D9D236D8D}">包</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">子系统</a>中类的组织，以及各<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">层</a>中这些包和子系统的组织。它还包含某些<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">用例实现</a>。它是<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>的子集。
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/implementation_view_E373E3B6.html" guid="4.693519701160983E-305"><b>实施视图</b>，</a>它包含<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">实施模型</a>的概述，以及按模块划分为包和层的模型组织。还描述了从“逻辑视图”将包和类分配到“实施视图”中的包和类。它是<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_implementation_model_5858DB65.html" guid="{157E9B67-C619-410D-A927-F2CD217BF8FE}">实施模型</a>的子集。
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/process_view_E3DD0B09.html" guid="6.45284088262517E-306">流程视图</a>，它包含所涉及任务（进程和线程）的描述、任务的交互和配置以及从设计对象和类到任务的分配。仅当系统具有相当<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/concurrency_EE2E011A.html" guid="3.5787175388799096E-305">并行</a>程度时，才需要使用该视图。在 RUP 中，它是<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>的子集。
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/deployment_view_64CB74A6.html" guid="2.8416696002928195E-305">部署视图</a>，它包含对最典型平台配置的多个实际节点的描述，以及从“流程视图”将任务分配到实际节点。仅当系统为分发式系统时，才需要使用该视图。它是<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_deployment_model_57DF1DF5.html" guid="{5981B6BE-2FD1-4984-AA94-2F7428439BA6}">部署模型</a>的子集。
+    </li>
+</ul>
+<p>
+    体系结构视图记载在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">软件体系结构文档</a>中。您可设想额外的视图来表达不同的特殊关注点：用户界面视图、安全视图、数据视图等。对于简单的系统，您可以省略 4+1
+    视图模型中包含的某些视图。
+</p>
+<h2>
+    <a id="Architectural Focus" name="Architectural Focus">体系结构焦点</a>
+</h2>
+<p>
+    尽管上述视图可代表系统的整个设计，但是体系结构本身只涉及几个具体的方面：
+</p>
+<ul>
+    <li>
+        模型的<b>结构</b> － 组织模式，例如<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">分层</a>。
+    </li>
+    <li>
+        <b>基本元素</b> － 关键<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>、主要<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">类</a>、常见机制等（与模型中的所有元素相对而言）。
+    </li>
+    <li>
+        显示系统范围内的主要控制流的一些<b>关键场景</b>。
+    </li>
+    <li>
+        用以获取模块性、可选特性和产品线的<b>服务</b>。
+    </li>
+</ul>
+<p>
+    本质上，体系结构视图是整个设计的<b>抽象</b>或简化，其中重要特征的详细信息被略去，以使这些特征更为直观。当探讨以下问题时，这些特征是很重要的：
+</p>
+<ul>
+    <li>
+        系统发展，进入下一个开发周期。
+    </li>
+    <li>
+        在产品线环境中重用体系结构或体系结构的某些部件。
+    </li>
+    <li>
+        评估补充品质，例如性能、可用性、可移植性和安全。
+    </li>
+    <li>
+        将开发工作分配给团队或转包商。
+    </li>
+    <li>
+        关于包括现成组件的决策。
+    </li>
+    <li>
+        插入更宽泛的系统。
+    </li>
+</ul>
+<h3>
+    <a id="Architectural Patterns" name="Architectural Patterns">体系结构模式</a>
+</h3>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/architectural_pattern_E2E8EB79.html" guid="_x7JZRtnmEdmO6L4XMImrsA"><b>体系结构模式</b></a>是解决重现的体系结构问题的现成形式。<b>体系结构框架</b>或<b>体系结构基础结构</b>（中间件）是您可用以构建某种体系结构的一组组件。许多主要的体系结构难题都应在框架或基础结构中解决，这些难题通常以具体的领域（命令和控件、MIS、控制系统等）为目标。
+</p>
+<h4>
+    体系结构模式示例
+</h4>
+<p>
+    [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#BUS96" guid="7.755968586980351E-308">BUS96</a>] 根据体系结构模式最适用的系统特征对体系结构模式进行分组，其中每一类别都对应较常见的结构化问题。该表显示了 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#BUS96" guid="7.755968586980351E-308">BUS96</a>] 中提出的类别以及这些类别包含的模式。
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="col1" width="50%">
+                    类别
+                </th>
+                <th id="col2" width="50%">
+                    模式
+                </th>
+            </tr>
+            <tr>
+                <th id="row2" align="left" headers="col1" width="50%" rowspan="3">
+                    结构
+                </th>
+                <td headers="row2 col2" width="50%">
+                    层
+                </td>
+            </tr>
+            <tr>
+                <td headers="row2 col2" width="50%">
+                    Pipes and Filters
+                </td>
+            </tr>
+            <tr>
+                <td headers="row2 col2" width="50%">
+                    Blackboard
+                </td>
+            </tr>
+            <tr>
+                <th id="row3" align="left" headers="col1" width="50%">
+                    分发式系统
+                </th>
+                <td headers="row3 col2" width="50%">
+                    Broker
+                </td>
+            </tr>
+            <tr>
+                <th id="row4" align="left" headers="col1" width="50%" rowspan="2">
+                    交互式系统
+                </th>
+                <td headers="row4 col2" width="50%">
+                    Model-View-Controller
+                </td>
+            </tr>
+            <tr>
+                <td headers="row4 col2" width="50%">
+                    Presentation-Abstraction-Control
+                </td>
+            </tr>
+            <tr>
+                <th id="row5" align="left" headers="col1" width="50%" rowspan="2">
+                    适用的系统
+                </th>
+                <td headers="row5 col2" width="50%">
+                    Reflection
+                </td>
+            </tr>
+            <tr>
+                <td headers="row5 col2" width="50%">
+                    Microkernel
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    在此将更详细地说明其中的两种模式，以阐明这些观点；关于完整的阐释，请参阅 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#BUS96" guid="7.755968586980351E-308">BUS96</a>]。这些模式是采用以下广泛使用的形式来说明的：
+</p>
+<ul>
+    <li>
+        模式名称
+    </li>
+    <li>
+        环境
+    </li>
+    <li>
+        问题 
+        <ul>
+            <li>
+                强行描述应考虑的不同方面问题
+            </li>
+        </ul>
+    </li>
+    <li>
+        解决方案 
+        <ul>
+            <li>
+                根本原因
+            </li>
+            <li>
+                生成的环境
+            </li>
+            <li>
+                示例
+            </li>
+        </ul>
+    </li>
+</ul>
+<h5>
+    模式名称
+</h5>
+<p>
+    <b><i>层</i></b>
+</p>
+<h5>
+    环境
+</h5>
+<p>
+    需要分解的大型系统。
+</p>
+<h5>
+    问题
+</h5>
+<p>
+    必须按不同的抽象程度来处理问题的一个系统。例如：硬件控制问题、常见服务问题和特定于领域的问题。 如果要编写处理所有级别问题的纵向组件，那将是非常没有必要的。 同样的问题将不得不在不同组件中多次处理（有可能不一致）。
+</p>
+<blockquote>
+    <p>
+        影响力
+    </p>
+    <ul>
+        <li>
+            系统的部件应是可替换的。
+        </li>
+        <li>
+            组件的更改不应引起连锁反应。
+        </li>
+        <li>
+            相似职责应组织在一起。
+        </li>
+        <li>
+            组件的大小（复杂组件可能必须分解）<font size="3">.</font>
+        </li>
+    </ul>
+</blockquote>
+<h5>
+    解决方案
+</h5>
+<p>
+    将系统构化为几组组件，这些组件相互堆叠成层。使靠上的层仅可使用其下的层的服务（绝不能向上使用）。尽量使用紧挨的下一层的服务（不要跳层使用，除非中间层仅补充直通的组件）。
+</p>
+<blockquote>
+    <p>
+        示例：
+    </p>
+    <p>
+        1. 一般层
+    </p>
+    <p align="center">
+        <img height="313" alt="在内容中描述了该图。" src="./../../../core.base_rup/guidances/concepts/resources/layers.gif" width="508" border="0" />
+    </p>
+    <p align="left">
+        严格分层的体系结构规定，设计元素（类、包、子系统）仅使用其下方的层的服务。服务可包括事件处理、错误处理、数据库访问等。 与底层中记录的原始操作系统级别调用相比，它包含了更具体的机制。
+    </p>
+    <p align="left">
+        2. 业务系统层
+    </p>
+    <p align="left">
+        <img height="398" alt="在内容中描述了该图。" src="./../../../core.base_rup/guidances/concepts/resources/layers2.gif" width="615" border="0" />
+    </p>
+    <p align="left">
+        上图显示了另一分层示例，其中存在特定于应用程序的纵向层以及横向的基础结构层。注意，目标是拥有极短的业务“管道”并充分利用应用程序中的共同性。<span         style="mso-spacerun: yes">&nbsp;</span>否则，可让多人解决同一问题，解决方法可能有所不同。
+    </p>
+    <p align="left">
+        关于该模式的更多讨论，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/layering_FCCD1BDA.html" guid="4.458864982057142E-306">指南：分层</a>。
+    </p>
+</blockquote>
+<h5 align="left">
+    模式名称
+</h5>
+<p align="left">
+    <b><i>Blackboard</i></b>
+</p>
+<h5 align="left">
+    环境
+</h5>
+<p align="left">
+    一个域，其中尚不知道或没有可行的任何封闭（算法）方法来解决问题。示例为 AI 系统、语音识别和监视系统。
+</p>
+<h5 align="left">
+    问题
+</h5>
+<p align="left">
+    多个问题解决代理程序（知识代理程序）必须协作起来才能解决任一代理程序无法解决的问题。各代理程序的工作结果必须可供所有其他代理程序访问，这样它们就可判断是否对找到解决方案有帮助并公布它们的工作结果。
+</p>
+<blockquote>
+    <p align="left">
+        影响力
+    </p>
+    <ul>
+        <li>
+            <p align="left">
+                知识代理程序可帮助解决问题的序列并不具有确定性，且可能取决于问题解决策略。
+            </p>
+        </li>
+        <li>
+            <p align="left">
+                不同代理程序的输入信息（结果或部分解决方案）可能有不同的表示法。
+            </p>
+        </li>
+        <li>
+            <p align="left">
+                代理程序并不直接知道彼此的存在，但可以评估彼此的公布结果。
+            </p>
+        </li>
+    </ul>
+</blockquote>
+<h5 align="left">
+    解决方案
+</h5>
+<p align="left">
+    许多知识代理程序可访问名为 Blackboard 的共享数据存储。Blackboard 提供检查和更新其内容的接口。控制模块／对象按照某种策略来激活代理程序。 一旦激活，代理程序将检查
+    Blackboard，以查看它是否对解决问题有所帮助。如果代理程序确定它有助于问题的解决，控制对象可允许代理程序将其部分（或最终）解决方案输入到 Blackboard 上。
+</p>
+<blockquote>
+    <p align="left">
+        示例：
+    </p>
+    <p align="center">
+        <img height="264" alt="在内容中描述了该图。" src="./../../../core.base_rup/guidances/concepts/resources/blkbd.gif" width="464" border="0" />
+    </p>
+    <p align="left">
+        这显示了使用 UML 建模的结构视图或静态视图。这将成为参数化协作的一部分，然后将结合实参来对模式进行实例化。
+    </p>
+</blockquote>
+<h3>
+    <a id="Architectural Style" name="Architectural Style">体系结构风格</a>
+</h3>
+<p>
+    软件体系结构，或只是体系结构视图，可能具有被称为<b>体系结构风格</b>的属性，这将减少要选择的一批可能的形式，并对体系结构强加一定程度的统一性。风格可通过一组模式、通过选择特定的组件或连接器作为基本构建块来定义。对于给定的系统，可将某种风格作为体系结构描述的一部分而记录在
+    <b>体系结构风格指南</b>（通过 RUP 中的<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">特定于项目的指南</a>工作产品提供）中。风格在体系结构的可理解性和完整性方面起主要作用。
+</p>
+<h3>
+    <a id="Architectural Blueprints" name="Architectural Blueprints">体系结构蓝图</a>
+</h3>
+<p>
+    体系结构视图的图形描绘被称为<b>体系结构蓝图</b>。对上述的多种视图而言，蓝图是由统一建模语言（Unified Modeling Language）[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML01" guid="7.755968586980351E-308">UML01</a>]
+    中的以下各图组成的：
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/logical_view_C135365E.html" guid="6.901347907565747E-305">逻辑视图</a>。类图、状态机和对象图
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/process_view_E3DD0B09.html" guid="6.45284088262517E-306">流程视图</a>。类图和对象图（包括任务进程和线程）
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/implementation_view_E373E3B6.html" guid="4.693519701160983E-305">实施视图</a>。组件图
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/deployment_view_64CB74A6.html" guid="2.8416696002928195E-305">部署视图</a>。部署图
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/use-case_view_11F15731.html" guid="6.820983346069146E-305">用例视图</a>。描绘用例、参与者和普通设计类的用例图；描绘设计对象及其协作的时序图
+    </li>
+</ul>
+<h3>
+    <a id="The Architecting Process" name="The Architecting Process">设计流程</a>
+</h3>
+<p>
+    在 RUP 中，体系结构主要是<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">分析与设计工作流程</a>的输出结果。由于项目在每次迭代后均重新制定该工作流程，所以体系结构将趋于完美。因为每次迭代都包含集成和测试，所以体系结构在产品交付时已相当强健。该体系结构是<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/elaboration_6A203A50.html" guid="_-kFhcCVuEdqSZ9OimJ-AzA">精化</a>阶段中各迭代的主要焦点，该阶段结束时体系结构通常已设置了基线。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

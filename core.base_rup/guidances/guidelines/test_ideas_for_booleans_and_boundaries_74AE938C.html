@@ -1,0 +1,1714 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 关于布尔运算和边界的测试构想</title>
+<meta content="Guideline" name="uma.type">
+<meta content="test_ideas_for_booleans_and_boundaries" name="uma.name">
+<meta content="关于布尔运算和边界的测试构想" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "1.8659406802663404E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "1.8659406802663404E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3lZjkCxqEdqYV4MWf8PiCw", "{45219F27-0F84-4FD5-A7BC-73C19226303B}", "1.8659406802663404E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.8659406802663404E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.8659406802663404E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：关于布尔运算和边界的测试构想</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">测试构想基于可能的软件故障以及发现这些故障的最佳方法。本指南说明了如何制定关于布尔表达式和边界条件的测试构想。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_ideas_list_2A0F8E03.html" guid="{45219F27-0F84-4FD5-A7BC-73C19226303B}">测试构想列表</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test__developer_testing__test_ideas__for_booleans_and_boundaries" name="XE_test__developer_testing__test_ideas__for_booleans_and_boundaries"></a><a id="XE_test-ideas__for_booleans_and_boundaries" name="XE_test-ideas__for_booleans_and_boundaries" class="index" key="测试构想（test-ideas）" text="关于布尔运算和边界的测试构想"></a><a id="XE_design__developer_testing__test_ideas__for_booleans_and_boundaries" name="XE_design__developer_testing__test_ideas__for_booleans_and_boundaries"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>简介
+</h3>
+<p>
+    测试构想是以<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/fault_model_C99EBECA.html" target="_blank" guid="_yJJZCdnmEdmO6L4XMImrsA">故障模型</a>为基础的，是关于软件中哪些故障看似可能以及如何最大程度地找到这些故障的想法。本指南显示如何根据布尔表达式和关系表达式来形成测试构想。它首先着眼于代码来促动技术，然后描述在尚未编写出代码或代码不可用的情况下如何应用这些技术。
+</p>
+<h3>
+    <a id="BooleanExpressions" name="BooleanExpressions"></a><b>布尔表达式</b>
+</h3>
+<p>
+    考虑从管理炸弹爆炸的（虚构）系统中提取的以下代码片段。它是安全系统的一部分，并且控制着是否遵照指令按下“引爆炸弹”按钮。
+</p>
+<blockquote>
+<pre>
+if (publicIsClear || technicianClear) {
+    bomb.detonate();
+}
+</pre>
+</blockquote>
+<p>
+    代码有错误。<font size="+0">||</font> 应为 <font size="+0">&&</font>.
+    该错误将造成严重影响。炸弹不会在炸弹技术人员和人群均完全离开时才引爆，而是在<i>两者之一</i>完全离开时就引爆。
+</p>
+<p>
+    什么测试能找到这个错误？
+</p>
+<p>
+    考虑关于在技术人员和人群均完全离开后按下按钮的测试。代码将允许引爆炸弹。但是，<i>正确</i>的代码（使用 <font size="+0">&&</font>
+    的代码）会执行同样的操作（这点很重要）。因此，该测试对故障查找无效。
+</p>
+<p>
+    类似地，当技术人员和人群均在炸弹附近时，该错误代码将正确运作：炸弹不会引爆。
+</p>
+<p>
+    要找出错误，您的某一用例中的已编写代码的求值必须不同于应已编写的代码。例如，人群必须完全离开，但炸弹技术人员仍在炸弹附近。这里是所有表格形式的测试：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="20%">
+                    <p align="center">
+                        publicIsClear
+                    </p>
+                </th>
+                <th scope="col" width="20%">
+                    <p align="center">
+                        technicianClear
+                    </p>
+                </th>
+                <th scope="col" width="20%">
+                    <p align="center">
+                        编写的代码...
+                    </p>
+                </th>
+                <th scope="col" width="20%">
+                    <p align="center">
+                        正确的代码将...
+                    </p>
+                </th>
+                <th width="20%">
+                    &nbsp;
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#008000">引爆</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#008000">已引爆</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        测试无效（对该故障）
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#ff0000">引爆</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#ff0000">未引爆</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        有效的测试
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#ff0000">引爆</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#ff0000">未引爆</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        有效的测试
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#008000">不引爆</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        <font color="#008000">未引爆</font>
+                    </p>
+                </td>
+                <td width="20%">
+                    <p align="center">
+                        测试无效（对该故障）
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    中间的两个测试对查找该特定故障均有效。但要注意，由于两个测试中的任何一个即可找出故障，所以您无需运行两个测试，其中一个是多余的。
+</p>
+<p>
+    该表达式还可能存在其他错误。这里是布尔表达式中常见错误的两个列表。左边的故障都是由此处讨论的方法找到的。右边的故障则可能并非如此。因此，该方法无法如我们所希望的那样找到所有故障，但它仍是有效的。
+</p>
+<div align="right">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        <b>检测到的故障</b>
+                    </p>
+                </th>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        <b>可能未检测到的故障</b>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    使用了错误的运算符：a <font color="#ff0000"><b>||</b></font> b 应为 a <font                     color="#ff0000"><b>&&</b></font>b
+                </td>
+                <td width="50%">
+                    使用了错误的变量：a&&<font color="#ff0000"><b>b</b></font>&&c 应为 a&& <font                     color="#ff0000"><b>x</b></font>&&d
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    “非”运算被省略或不正确：a||b 应为 <font color="#ff0000"><b>!</b></font>a||b，或者 <font color="#ff0000"><b>!</b></font>
+                    a||b 应为 a||b
+                </td>
+                <td width="50%">
+                    表达式太简单：a&&b 应为 a&&b<font color="#ff0000"><b>&&c</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    未对表达式配置正确的括号：a&&b||c 应为 a&&<font color="#ff0000"><b>(</b></font>b||c<font                     color="#ff0000"><b>)</b></font>
+                </td>
+                <td width="50%">
+                    含有左列中一个以上故障的表达式
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    表达式过于复杂：a&&b<b>&&c</b> 应为 <font size="+0">a&&b<br />
+                    </font> （该故障不大可能出现，但是使用针对其他理由有效的测试可轻易找出该故障。）
+                </td>
+                <td width="50%">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    如何使用这些观点？假设给您一个布尔表达式，比如 <font size="+0">a&&!b</font>。则您可以构造这样一个真值表：
+</p>
+<div align="right">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="14%">
+                    <p align="center">
+                        a
+                    </p>
+                </th>
+                <th scope="col" width="14%">
+                    <p align="center">
+                        b
+                    </p>
+                </th>
+                <th scope="col" width="14%">
+                    <p align="center">
+                        a&&!b<br />
+                         （已编写的代码）
+                    </p>
+                </th>
+                <th scope="col" width="14%">
+                    <p align="center">
+                        可能应为<br />
+                         a<font color="#ff0000"><b>||</b></font>!b
+                    </p>
+                </th>
+                <th scope="col" width="14%">
+                    <p align="center">
+                        可能应为<br />
+                         <font color="#ff0000"><b>!</b></font>a&&!b
+                    </p>
+                </th>
+                <th scope="col" width="15%">
+                    <p align="center">
+                        可能应为<br />
+                         a&&b
+                    </p>
+                </th>
+                <th scope="col" width="15%">
+                    <p align="center">
+                        ...
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        <font color="#ff0000">true</font>
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        <font color="#ff0000">true</font>
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        <font color="#ff0000">false</font>
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        <font color="#ff0000">true</font>
+                    </p>
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        <font color="#ff0000">true</font>
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="15%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    如果您查看过所有可能的表达式，就会发现第一种、第二种和第四种可能的表达式就是所需要的表达式。第三种表达式将找不出其他表达式也找不出的错误，因此您无需尝试。（表达式越复杂，不需要的用例所带来的节约就增长越快。）
+</p>
+<p>
+    当然，有头脑的人是不会构画这种表格的。幸运的是，您无需如此。简单表达式所需的用例是很好记的。（请参阅下一节。）有关更复杂的表达式，例如 <font size="+0">A&&B||C</font>，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_booleans_ands_and_ors_BB81527B.html" target="_blank" guid="9.407283892342409E-306">“与”和“或”混合的测试构想</a>，其中列出了关于具有两个或三个运算符的表达式的测试构想。关于更为复杂的表达式，可使用<a href="http://www.testing.com/tools/multi/README.html" target="_blank">程序</a>来生成测试构想。
+</p>
+<h3>
+    <a id="SimpleExpressionTables" name="SimpleExpressionTables"></a><b>简单布尔表达式表</b>
+</h3>
+<p>
+    如果表达式为 <font size="+0">A&&B</font>，则使用以下值进行测试：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        A
+                    </p>
+                </th>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        B
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="50%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="50%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    如果表达式为 <font size="+0">A||B</font>，则使用以下值进行测试：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        A
+                    </p>
+                </th>
+                <th scope="col" width="50%">
+                    <p align="center">
+                        B
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="50%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="50%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    如果表达式为 <font size="+0">A<sub>1</sub> && A<sub>2</sub> && ... &&
+    A<sub>n</sub></font>，则使用以下值进行测试：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>1</sub>，A<sub>2</sub>、...，以及 A<sub>n</sub> 均为 true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>1</sub> 为 false，其余均为 true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>2</sub> 为 false，其余均为 true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>n</sub> 为 false，其余均为 true
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p align="left">
+    如果表达式为 <font size="+0">A<sub>1</sub> || A<sub>2</sub> || ... || A<sub>n</sub></font>，则使用以下值进行测试：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>1</sub>、A<sub>2</sub>、...，以及 A<sub>n</sub> 均为 false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>1</sub> 为 true，其余均为 false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>2</sub> 为 true，其余均为 false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        ...
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A<sub>n</sub> 为 true，其余均为 false
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    如果表达式为 <font size="+0">A</font>，则使用以下值进行测试：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    因此，当需要测试 <font size="+0">a&&!b</font> 时，可应用上述第一个表格，反转 b 的含义（因为 b 被求反），则得到这样一列<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html" guid="6.149711039531016E-305">测试构想</a>：
+</p>
+<ul>
+    <li>
+        A true，B false
+    </li>
+    <li>
+        A true，B true
+    </li>
+    <li>
+        A false，B false
+    </li>
+</ul>
+<h3>
+    <a id="RelationalExpressions" name="RelationalExpressions"></a><b>关系表达式</b>
+</h3>
+<p align="left">
+    这是另外一个含有故障的代码示例：
+</p>
+<blockquote>
+<pre>
+if (finished &lt; required) {
+    siren.sound();
+}
+</pre>
+</blockquote>
+<p align="left">
+    <font size="+0">&lt;</font> 应为 <font size="+0">&lt;=</font>。这样的错误相当常见。使用布尔表达式，您可以构造测试值的表格并查看哪些测试会检测到该故障：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        finished
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        required
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        编写的代码...
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        正确的代码将...
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        1
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        5
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        发出警报声
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        已发出警报声
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        5
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        5
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        <font color="#ff0000">不发出警报声</font>
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        <font color="#ff0000">已发出警报声</font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        5
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        1
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        不发出警报声
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        未发出警报声
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    更通常的是，只要 <font size="+0">finished=required</font>，就可以检测出故障。根据对似乎可能的故障进行的分析，我们可以得出测试构想的这些规则：
+</p>
+<p>
+    如果表达式为 A&lt;B 或 A&gt;=B，则使用以下值进行测试：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A=B
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A 略小于 B
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    如果表达式为 A&gt;B 或 A&lt;=B，则使用以下值进行测试：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A=B
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="100%">
+                    <p align="center">
+                        A 略大于 B
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    “略”表示什么意思？如果 A 和 B 是整数，则 A 应比 B 小 1 或是大 1。如果它们是浮点数，则 A 与 B 应非常接近。（它可能不一定是最接近 B 的浮点数。）
+</p>
+<h3>
+    <a id="CombinedExpressions" name="CombinedExpressions"></a><b>布尔和关系组合表达式的规则</b>
+</h3>
+<p>
+    大多数关系运算符是在布尔表达式中出现的，如此例中所示：
+</p>
+<blockquote>
+<pre>
+if (finished &lt; required) {
+    siren.sound();
+}
+</pre>
+</blockquote>
+<p>
+    关系表达式的规则将引出这些测试构想：
+</p>
+<ol>
+    <li>
+        <font size="+0">finished</font> 等于 required
+    </li>
+    <li>
+        <font size="+0">finished</font> 略小于此表达式：<font size="+0">required</font>
+    </li>
+</ol>
+<p>
+    布尔表达式的规则将引出这些测试构想：
+</p>
+<ol>
+    <li>
+        <font size="+0">finished &lt; required</font> 应为 true
+    </li>
+    <li>
+        <font size="+0">finished &lt; required</font> 应为 false
+    </li>
+</ol>
+<p>
+    它可能是此表达式：<font size="+0">finished</font> 略小于此表达式：<font size="+0">required</font>, <font size="+0">finished &lt;
+    required</font> 为 true，因此后者毫无意义。
+</p>
+<p>
+    如果此表达式为 false，则它毫无意义：<font size="+0">finished</font> ＝ <font size="+0">required</font>, <font size="+0">，finished &lt;
+    required</font>。
+</p>
+<p>
+    如果关系表达式不包含布尔运算符（<font size="+0">&&</font> 和 <font size="+0">||</font>），则忽略该表达式也是布尔表达式这一事实。
+</p>
+<p>
+    对于布尔运算符和关系运算符的组合而言，情况略为复杂，如下所示：
+</p>
+<blockquote>
+<pre>
+if (count&lt;5 || always) {
+   siren.sound();
+}
+</pre>
+</blockquote>
+<p>
+    根据关系表达式，可得出：
+</p>
+<ul>
+    <li>
+        <font size="+0">count</font> 略小于 5
+    </li>
+    <li>
+        <font size="+0">count</font> 等于 5
+    </li>
+</ul>
+<p>
+    根据布尔表达式，可得出：
+</p>
+<ul>
+    <li>
+        <font size="+0">count&lt;5</font> true，always false
+    </li>
+    <li>
+        <font size="+0">count&lt;5</font> false，always true
+    </li>
+    <li>
+        <font size="+0">count&lt;5</font> false，always false
+    </li>
+</ul>
+<p>
+    可将这些观点组合为三个更具体的测试构想。（在此要注意 <font size="+0">count</font> 为整数。）
+</p>
+<ol>
+    <li>
+        <font size="+0">count=4</font>，always false
+    </li>
+    <li>
+        <font size="+0">count=5</font>，always true
+    </li>
+    <li>
+        <font size="+0">count=5</font>，always false
+    </li>
+</ol>
+<p>
+    请注意 <font size="+0">count=5</font> 使用了两次。似乎仅使用一次更好（以允许使用其他值），但为什么终究使用了两次 5 来测试该表达式呢：<font size="+0">count</font> ? 使用 5
+    来测试一次，使用其他值来测试另一次，这样结果就为 false，难道不是更好吗？（示例：<font size="+0">count&lt;5</font> 这样会更好，但这样尝试是非常危险的。因为这样做很容易出错。假设进行如下尝试：
+</p>
+<ol>
+    <li>
+        <font size="+0">count=4</font>，always false
+    </li>
+    <li>
+        <font size="+0">count=5</font>，always true
+    </li>
+    <li>
+        <font size="+0"><b>count&lt;5</b></font> <b>false</b>，always false
+    </li>
+</ol>
+<p>
+    假设存在某种故障，而该故障只有在使用以下值时才能够被捕获：<font size="+0">count=5</font>。这意味着在表达式 <font size="+0">count&lt;5</font> 中，使用值 5
+    会得出“false”，而正确代码应得出 true。然而，该 false 值随即被替换为值 always，而该值为 true。这就是说，即使关系子表达式的值是错误的，整个表达式的值也是正确的。这将无法发现该故障。
+</p>
+<p>
+    如果<i>其他</i> count=5 不那么具体，就会发现该故障。
+</p>
+<p>
+    当关系表达式位于布尔运算符的右侧时，会发生类似的问题。
+</p>
+<p>
+    由于难以知道哪些子表达式必须精确以及哪些可以笼统，所以最好使所有表达式都精确。备选方案是使用上述的<a href="http://www.testing.com/tools/multi/README.html" target="_blank">布尔表达式程序</a>。它会针对任意混合的布尔和关系表达式生成正确的测试构想。
+</p>
+<h3>
+    <a id="TestIdeasWithoutCode" name="TestIdeasWithoutCode"></a><b>无代码的测试构想</b>
+</h3>
+<p>
+    如<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-first_design_6124EA6D.html" guid="2.5962561793181055E-305">概念：测试优先设计</a>中所述，在实施代码之前先设计测试通常更为可取。因此，尽管技术是由代码示例启发的，但它们通常可在无代码的情况下应用。如何应用呢？
+</p>
+<p>
+    某些设计工件，例如状态表图和时序图，使用布尔表达式作为保护。这些用例是相当简明的，它们直接将来自布尔表达式的测试构想添加到工件的测试构想核对表中。请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_statechart_and_flow_diagrams_B881354C.html" guid="3.794638918140148E-305">工作产品指南：关于状态表图和活动图的测试构想</a>。
+</p>
+<p>
+    当布尔表达式暗示而不明示时，情况就比较棘手了。描述 API 时常常是这种情况。这里是一个示例。考虑这一方法：
+</p>
+<blockquote>
+<pre>
+List matchList(Directory d1, Directory d1,
+       FilenameFilter excluder);
+</pre>
+</blockquote>
+<p>
+    对该方法的行为的描述可能是这样的：
+</p>
+<blockquote>
+    <p>
+        返回在两个目录中都出现的所有文件的绝对路径名的列表。子目录得以继承下来。返回列表中排除了与 <font size="+0">excluder</font> 相匹配的 [...] 文件名。excluder
+        仅适用于顶级目录，而不适用于子目录中的文件名。
+    </p>
+</blockquote>
+<p>
+    没有出现词语“与”和“或”。但如果返回列表中包含文件名呢？当它出现在第一个目录中<b>且</b>出现在第二个目录中，<b>且</b>它处于较低级目录中<b>或</b>未被特别排除。在以下代码中：
+</p>
+<blockquote>
+<pre>
+if (appearsInFirst && appearsInSecond &&
+    (inLowerLevel || !excluded)) {
+  add to list
+}
+</pre>
+</blockquote>
+<p>
+    这里是该表达式的表格形式的测试构想：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        appearsInFirst
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        appearsInSecond
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        inLower
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        excluded
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    <br />
+     从文本中发现隐含布尔表达式的一般方法是，首先列出所描述的操作（例如“返回匹配的名称”）。然后编写布尔表达式，描述采取某一操作的情况。从所有表达式中得出测试构想。
+</p>
+<p>
+    该流程中允许存在异议情况。例如，某人可能会写出上面使用的布尔表达式。另一人可能会认为存在两个截然不同的操作：首先，程序发现匹配的名称，然后将其过滤掉。因此，将有两个操作，而不是一个：
+</p>
+<dl>
+    <dt>
+        发现匹配项：
+    </dt>
+    <dd>
+        当某一文件在第一个目录中<b>且</b>在第二个目录中有同名文件时
+    </dd>
+    <dt>
+        过滤匹配项：
+    </dt>
+    <dd>
+        当匹配的文件在顶级目录中，<b>且</b>名称与 <font size="+0">excluder</font> 相匹配时
+    </dd>
+</dl>
+<p>
+    这些不同的方法会引出不同的测试构想以及不同的测试。但差异很可能并不特别重要。即，花时间考虑哪个表达式正确和尝试备用方法，还不如把时间投入到其他技术并生成更多的测试上。如果您很想知道可能的各种差异，请继续阅读下文。
+</p>
+<p>
+    第二个人会得出两组测试构想。
+</p>
+<blockquote>
+    <p>
+        关于发现匹配项的测试构想：
+    </p>
+    <ul>
+        <li>
+            文件在第一个目录中，文件在第二个目录中（true，true）
+        </li>
+        <li>
+            文件在第一个目录中，文件不在第二个目录中（true，false）
+        </li>
+        <li>
+            文件不在第一个目录中，文件在第二个目录中（false，true）
+        </li>
+    </ul>
+    <p>
+        关于过滤匹配项的测试构想（一旦发现匹配项）：
+    </p>
+    <ul>
+        <li>
+            匹配的文件在顶级目录中，名称与 <font size="+0">excluder</font> 相匹配（true，true）
+        </li>
+        <li>
+            匹配的文件在顶级目录中，名称与 <font size="+0">excluder</font> 不匹配（true，false）
+        </li>
+        <li>
+            匹配的文件在某个较低级别的目录中，名称与 <font size="+0">excluder</font> 相匹配（false，true）
+        </li>
+    </ul>
+</blockquote>
+<p>
+    假设将这两组测试构想组合起来。第二组中的观点仅当文件在两个目录中都存在时起作用，因此仅可将这些观点与第一组中的第一个观点组合起来。得出以下结论：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        文件在第一个目录中
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        文件在第二个目录中
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        顶级目录
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        匹配 excluder
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    关于发现匹配项的两个测试构想不出现在该表格中。我们可这样添加它们：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        文件在第一个目录中
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        文件在第二个目录中
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        顶级目录
+                    </p>
+                </th>
+                <th scope="col" width="25%">
+                    <p align="center">
+                        匹配 excluder
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    单元格为空白则表示该列无关。
+</p>
+<p>
+    该表现在看上去与第一个人得出的表非常相似。可使用相同的术语来强调该相似性。第一个人的表中有一列名为“inLower”，第二个人的表中有一列名为“in top
+    level”。通过交换值的意义，可转换这两列。这样，我们就得出第二个表的这一版本：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th width="25%">
+                    <p align="center">
+                        appearsInFirst
+                    </p>
+                </th>
+                <th width="25%">
+                    <p align="center">
+                        appearsInSecond
+                    </p>
+                </th>
+                <th width="25%">
+                    <p align="center">
+                        inLower
+                    </p>
+                </th>
+                <th width="25%">
+                    <p align="center">
+                        excluded
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td width="25%">
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p align="center">
+                        false
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        true
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+                <td>
+                    <p align="center">
+                        -
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    前三行与第一个人的表完全相同。后两行的区别在于该版本未指定值，而第一个人的表指定了值。这就得出了关于代码编写方式的假设。第一个人假设了一个复杂的布尔表达式：
+</p>
+<blockquote>
+<pre>
+if (appearsInFirst && appearsInSecond &&
+    (inLowerLevel || !excluded)) {
+  add to list
+}
+</pre>
+</blockquote>
+<p>
+    第二个人假设一个嵌套的布尔表达式：
+</p>
+<blockquote>
+<pre>
+if (appearsInFirst && appearsInSecond) {
+    // found match.
+    if (inTopLevel && excluded) {
+// filter it
+    }
+}
+</pre>
+</blockquote>
+<p>
+    两者的区别在于：第一个人的测试构想将检测出第二个人的测试构想检测不出的两个故障，因为那些故障不适用。
+</p>
+<ol>
+    <li>
+        在第一个实施中，可能存在括号引起的故障。<font size="+0">||</font> 两边的括号正确吗？由于第二个实施中不含括号和 <font size="+0">||</font>，因此不存在故障。
+    </li>
+    <li>
+        第一个实施的测试需求将进行检查以确定第二个表达式 <font size="+0">&&</font> 是否应为 <font size="+0">||</font>。在第二个实施中，显式的 <font         size="+0">&&</font> 被替换为隐式的 <font size="+0">&&</font>。其中没有 <font size="+0">||</font>-for-<font         size="+0">&&</font> 故障。（可能存在嵌套错误的情况，但该方法并不是针对这一点。）
+    </li>
+</ol><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

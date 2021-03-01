@@ -1,0 +1,47 @@
+.searchScope {
+	font-size: 9pt;
+	background-color: #f0f0f0;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.searchScopeTitle {	
+	background-color: #f0f0f0;
+	font-family: arial, helvetica, sans-serif, kanji2;
+	font-size: 9pt;
+	color:#666666;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	padding-top: 2px;
+	text-decoration: none;
+	width: 100%;
+}
+
+#searchScopeIcon {
+	background-color: #f0f0f0;
+	cursor: hand;
+}
+
+.searchScopeContent {
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	text-align: right;
+}
+
+.textSection {
+	padding-bottom: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 5px;
+	text-align: center;
+}
+

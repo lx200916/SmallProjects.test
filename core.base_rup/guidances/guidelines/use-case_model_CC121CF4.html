@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 用例模型</title>
+<meta content="Guideline" name="uma.type">
+<meta content="use-case_model" name="uma.name">
+<meta content="用例模型" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "1.7617672560167394E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "1.7617672560167394E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "1.7617672560167394E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.7617672560167394E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.7617672560167394E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：用例模型</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">用例模型是系统的预期功能及其环境的模型，并充当客户与开发者之间的约定。本指南是开发用例模型的路线图。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_use_case_model_93D8F44.html" guid="{F7D9D038-B184-43CC-9353-15BA154F87B5}">构造用例模型</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">用例模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_use-case_model__guidelines_for" name="XE_use-case_model__guidelines_for"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">说明</a>
+</h3>
+<p>
+    用例模型是关于系统预期功能及其环境的模型，并充当客户与开发人员之间的约定。 用例充当贯穿整个系统开发过程的统一线程。相同的用例模型是“需求”规程的结果，并用作“分析与设计”规程和“测试”规程的输入。
+</p>
+<p>
+    下图显示了回收机器系统的用例模型的一部分。
+</p>
+<p class="picturecenter" align="center">
+    <img height="213" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_ucmo2.gif" width="421" />
+</p>
+<p class="picturetext">
+    用例图，显示具有参与者和用例的用例模型示例。
+</p>
+<p>
+    对系统建模的方法有多种，每种方法都可能针对一种不同的用途。但是，用例模型最重要的用途是将系统的行为传达给客户或用户。因此，模型必须易于理解。
+</p>
+<p>
+    用户和可与该系统交互的任何其他系统是参与者。因为参与者代表系统用户，所以它们有助于为系统定界并更明确地描绘出系统应该做什么。用例是根据参与者的需要而开发的。这就确保系统最终将符合用户的预期目标。
+</p>
+<h3>
+    <a id="How the Use-Case Model Evolves" name="How the Use-Case Model Evolves">用例模型如何发展</a>
+</h3>
+<p>
+    通过将客户和潜在用户的需求用作至关重要的信息，就可以找到参与者和用例。找到它们后，应简短描述用例和参与者。详细描述用例之前，应由客户检查用例模型，以验证所有用例和参与者都已找到，并且它们合起来就可满足客户需要。
+</p>
+<p>
+    在迭代开发环境中，将选择要在每次迭代中详细描述的一个用例子集。另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/prioritize_use_cases_E6E4D9A0.html" guid="{6E23D919-D149-43C2-9D37-8AF77B667CA8}">任务：划分用例的优先级</a>。
+</p>
+<p>
+    找到参与者和用例后，详细描述每个用例的事件流。这些描述显示系统如何与参与者交互以及系统在每个用例中的行为。
+</p>
+<p>
+    最后，检查已完成的用例模型（包括用例描述），而开发人员和客户使用该模型就系统应执行的操作达成一致。
+</p>
+<h3>
+    <a id="Avoiding Functional Decomposition" name="Avoiding Functional Decomposition">避免功能分解</a>
+</h3>
+<p>
+    用例模型退化而导致系统功能分解是很常见的。要避免这种情况，请注意以下症状：
+</p>
+<ul>
+    <li>
+        “小型”用例，表示对于事件流的描述仅为一句或几句话。
+    </li>
+    <li>
+        “许多”用例，表示用例的数量是几百个，而不是几十个。
+    </li>
+    <li>
+        用例名的构造类似于“根据这一特定数据执行此操作”或“利用这一数据执行此功能”。例如，不应将“在 ATM 机器上输入个人识别号码”作为 ATM
+        机器的单独用例建模，因为没有人会只为了执行此操作而使用系统。用例是为参与者带来有价值事项的完整事件流。
+    </li>
+</ul>
+<p>
+    要避免功能分解，应确保用例模型有助于回答像这样的问题：
+</p>
+<ul>
+    <li>
+        系统的环境是什么？
+    </li>
+    <li>
+        为什么构建系统？
+    </li>
+    <li>
+        用户使用系统时希望实现什么？
+    </li>
+    <li>
+        系统怎样对用户增值？
+    </li>
+</ul>
+<h3>
+    <a id="Non-Functional Requirements" name="Non-Functional Requirements">非功能需求</a>
+</h3>
+<p>
+    很容易发现，用例是获取系统功能需求的一种极好方法。但是非功能需求怎么办呢？非功能需求有哪些以及在何处获取呢？
+</p>
+<p>
+    非功能需求通常分为可用性、可靠性、性能和可替换性需求（另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/requirements_62E28784.html" guid="4.582668643506599E-305">概念：需求</a>）。这些需求通常指定了符合任何法律和条例需求的需要。也可以是针对所用操作系统、平台环境、兼容性问题或任何适用的应用程序标准的设计约束。在通常情况下，您可以认为：不顾及多个设计选项的任何需求均应被视为设计约束。
+</p>
+<p>
+    许多非功能需求都适用于单个用例，并且是在该用例的属性中获取的。在该情况下，这些需求是在用例事件流中获取的，或是作为用例（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use_case_CC89870D.html" guid="4.1983217662266927E-305">指南：用例</a>）的特殊需求获取的。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    在回收机器系统中，特定于“返还堆积物项”用例的某个非功能需求可以是：
+</p>
+<p class="example">
+    机器必须能够以 95% 以上的可靠性识别堆积物项。
+</p>
+<p>
+    非功能需求通常适用于整个系统。这样的需求是在补充规范中获取的（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">工作产品：补充规范</a>）。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    在回收机器系统中，适用于整个系统的某个非功能需求可以是：
+</p>
+<p class="example">
+    机器一次将只允许一个用户。
+</p>
+<h3>
+    <a id="The What vs. How Dilemma" name="The What vs. How Dilemma">什么／如何两难境况</a>
+</h3>
+<p>
+    学习如何确定用例应该在怎样具体的情况下“开始和结束”是一件比较困难的事情。在何处启动特性和开始用例，以及在何处结束用例和开始设计？我们经常说，用例或软件需求应说明系统做“什么”，而不是“如何”做。请考虑下图：
+</p>
+<p align="center">
+    <img height="196" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/ucm2.gif" width="382" />
+</p>
+<p class="picturetext">
+    一个人的终点是另一个人的起点。
+</p>
+<p>
+    根据个人背景，您可以使用不同的环境来确定您对“什么”以及“如何”的理解。 在确定是否应将某一具体情况排除在用例模型之外时，需要考虑这个问题。
+</p>
+<h3>
+    <a id="Concrete and Abstract Use Cases" name="Concrete and Abstract Use Cases"></a><a id="XE_abstract_use_case__description_of" name="XE_abstract_use_case__description_of" class="index" key="抽象用例（abstract use case）" text="描述"></a>
+</h3>
+<p>
+    具体用例和抽象用例之间存在差别。<b>具体</b>用例由参与者发起，并构成完整的事件流。“完整”表示用例的实例会执行参与者所要求的全部操作。
+</p>
+<p>
+    <b>抽象</b>用例本身从不实例化。抽象用例包含在（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/include-relationship_5AE2718.html" guid="7.259881398615376E-305">指南：包含关系</a>），扩展到（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">指南：扩展关系</a>）或泛化到（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_generalization_B301F53B.html" guid="3.7061366529594173E-305">工作产品指南：用例泛化关系</a>）其他用例中。当发起某一具体用例时，即创建该用例的一个实例。该实例还展示由其关联的抽象用例指定的行为。因此，没有从抽象用例创建任何单独的实例。
+</p>
+<p>
+    两种用例之间的区别是很重要的，因为参与者将在系统中“看到”并启动的是具体用例。
+</p>
+<p>
+    通过用斜体撰写用例名称，来表明该用例是抽象用例。
+</p>
+<h5>
+    示例：
+</h5>
+<p align="center">
+    <img height="165" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/ucmex3.gif" width="213" />
+</p>
+<p class="picturetext">
+    用例“创建任务”包含在用例“注册订单”中。“创建任务”是抽象用例。
+</p>
+<p class="example">
+    在库处理系统中，抽象用例“创建任务”是包含在用例“注册订单”中的。在发起“注册订单”时，即创建“注册订单”的一个实例，该实例除遵循“注册订单”的事件流外，还遵循所包含的用例“创建任务”中描述的事件流。“创建任务”从不自行执行，它始终作为“注册订单”（或包含它的任何其他用例）的一部分。因此，“创建任务”是抽象用例。
+</p>
+<h3>
+    <a id="Structuring the Use-Case Model" name="Structuring the Use-Case Model">构造用例模型</a>
+</h3>
+<p>
+    构造用例模型有三个主要原因：
+</p>
+<ul>
+    <li>
+        使用例更易理解。
+    </li>
+    <li>
+        划分出许多用例中描述的通用行为。
+    </li>
+    <li>
+        使用例模型更易维护。
+    </li>
+</ul>
+<p>
+    但构造并不是您的当务之急。只有在更多地了解用例行为（而不是一句简短的描述）之后，您才知道如何构造用例。您应当至少已确立了用例事件流的分步概括，以确保您的决策是以充分准确地了解行为为基础的。
+</p>
+<p>
+    要构造用例，有三种关系。您将使用这些关系分解用例段，这些用例段可在其他用例中重用，或者是该用例的专门化或可选方案。表示修改的用例被称为<b>附加用例</b>。 被修改的用例被称为<b>基本用例</b>。
+</p>
+<ul>
+    <li>
+        如果基本用例中有一部分表示某种功能，用例使用该功能时只根据结果，而不是根据用于生成结果的方法，则可以将该部分用例分解为附加用例。使用包含关系可将该附加用例显式插入基本用例中。 另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/include-relationship_5AE2718.html" guid="7.259881398615376E-305">指南：包含关系</a>。
+    </li>
+    <li>
+        如果基本用例的一部分是可选的，或对于理解该用例的主要目的来说不是必需的，那么您可以将这部分分离出来，形成一个附加用例，以简化基本用例的结构。使用扩展关系可将该附加用例隐式插入基本用例中。另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">指南：扩展关系</a>。
+    </li>
+    <li>
+        如果用例在行为和结构方面有共同点并具有类似的用途，则这些用例的共同部分可分解出来，成为一个由附加用例（子用例）继承的基本用例（父用例）。子用例可在从父用例继承而来的结构中插入新的行为和修改现有的行为。另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_generalization_B301F53B.html" guid="3.7061366529594173E-305">工作产品指南：用例泛化关系</a>。
+    </li>
+</ul>
+<p>
+    可以使用参与者泛化关系来显示参与者相互之间是如何专门化的。另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/actor-generalization_2AFC6BE3.html" guid="2.144844789747145E-305">指南：参与者泛化关系</a>。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    对订单管理系统考虑部分用例模型。
+</p>
+<p class="example">
+    将普通客户与 Internet 客户相分离是有用的，因为它们的属性略有不同。 但由于 Internet 客户展示客户的所有属性，因此可以说，Internet 客户是客户的一种专门化情况（以参与者泛化关系表示）。
+</p>
+<p class="example">
+    此图中的具体用例是“电话订单”（由客户参与者发起）和“因特网订单”（由因特网客户发起）。这些用例都是更通用的“下订单”用例（在本例中该用例是抽象用例）的变体。“请求目录”用例表示可选的行为分段，不属于“下订单”的主要用途。该用例已分解成为抽象用例，以简化“下订单”用例。“提供客户数据”用例表示已分解的行为分段，因为它是只影响“下订单”用例的单独功能。“提供客户数据”用例还可由其他用例重用。在本例中，“请求目录”和“提供客户数据”都是抽象用例。
+</p>
+<p align="center">
+    <img height="366" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/ucmex2.gif" width="354" />
+</p>
+<p class="picturetext">
+    该用例图显示订单管理系统的用例模型的一部分。
+</p>
+<p>
+    下表显示三种不同的用例关系之间的更详细比较结果：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th width="20%">
+                    问题
+                </th>
+                <th width="20%">
+                    扩展
+                </th>
+                <th width="27%">
+                    包含
+                </th>
+                <th width="33%">
+                    泛化关系
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    关系的方向如何？
+                </td>
+                <td width="20%">
+                    附加用例引用基本用例。
+                </td>
+                <td width="27%">
+                    基本用例引用附加用例。
+                </td>
+                <td width="33%">
+                    附加用例（子）引用基本用例（父）。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    关系具有多重性吗？
+                </td>
+                <td width="20%">
+                    是的，在附加用例这方面。
+                </td>
+                <td width="27%">
+                    不必。如果要多次包含同一个行为分段，则需要在基本用例中规定该情况。
+                </td>
+                <td width="33%">
+                    不必。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    关系有条件吗？
+                </td>
+                <td width="20%">
+                    是的。
+                </td>
+                <td width="27%">
+                    不必。如果要表达有关包含关系的条件，则需要在基本用例中明确指出。
+                </td>
+                <td width="33%">
+                    不必。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    附加用例是抽象用例吗？
+                </td>
+                <td width="20%">
+                    通常是，但不一定是。
+                </td>
+                <td width="27%">
+                    是的。
+                </td>
+                <td width="33%">
+                    通常不是，但有可能是。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    基本用例是由附加用例修改的吗？
+                </td>
+                <td width="20%">
+                    扩展关系隐式修改基本用例的行为。
+                </td>
+                <td width="27%">
+                    包含关系显式修改基本用例的影响。
+                </td>
+                <td width="33%">
+                    如果基本用例（父）已实例化，则不受子用例的影响。 要获得附加用例的影响，则必须实例化附加用例（子）。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    基本用例必须完整而有意义吗？
+                </td>
+                <td width="20%">
+                    是的。
+                </td>
+                <td width="27%">
+                    与附加用例一起时，是的。
+                </td>
+                <td width="33%">
+                    如果是抽象用例，则不是。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    附加用例必须完整而有意义吗？
+                </td>
+                <td width="20%">
+                    不必。
+                </td>
+                <td width="27%">
+                    不必。
+                </td>
+                <td width="33%">
+                    与基本用例（父）在一起时，是的。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    附加用例可以访问基本用例的属性吗？
+                </td>
+                <td width="20%">
+                    是的。
+                </td>
+                <td width="27%">
+                    不必。封装了包含关系，但只能“看见”它自身。
+                </td>
+                <td width="33%">
+                    可以，按正常继承机制。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    基本用例可以访问附加用例的属性吗？
+                </td>
+                <td width="20%">
+                    不必。在缺少附加用例的情况下，基本用例必须格式正确。
+                </td>
+                <td width="27%">
+                    不必。基本用例只了解附加用例的影响。封装附加用例。
+                </td>
+                <td width="33%">
+                    不必。在缺少附加用例（子）的情况下，基本用例（父）必须格式正确。
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    为了更易理解而组织用例模型的另一种情况是将用例合到包中。可以将用例模型组织成具有层次结构的用例包，其中“叶子”是参与者或用例。另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_package_1EFD6458.html" guid="9.871865834975133E-306">指南：用例包</a>。
+</p>
+<p class="picturecenter" align="center">
+    <img height="235" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_ucmo6.gif" width="181" />
+</p>
+<p class="picturetext">
+    该图显示用例模型层次结构。箭头表示可能的所有权。
+</p>
+<h3>
+    <a id="Use Cases Are Always Related to Actors" name="Use Cases Are Always Related to Actors">用例始终与参与者相关吗？</a>
+</h3>
+<p>
+    执行每个用例包括与一个或多个参与者通信。用例实例始终由要求系统执行操作的参与者启动。这表示每个用例均应与参与者有通信关联。使用该规则的原因是强制系统只提供用户需要的功能。 如果存在无人请求的用例，则表示用例模型或需求中有错误。
+</p>
+<p>
+    不过，该规则也有一些例外：
+</p>
+<ul>
+    <li>
+        如果用例是抽象用例（不单独实例化），则它的行为可能不包含与任何参与者交互。 在该情况下，参与者与该抽象用例将不存在任何通信关联。
+    </li>
+    <li>
+        如果父用例描述所有参与者通信，则泛化关系中的子用例不需要具有与其相关联的参与者。
+    </li>
+    <li>
+        如果包含用例描述所有参与者通信，则包含关系中的基本用例不需要具有与其相关联的参与者。
+    </li>
+    <li>
+        可根据日程表（例如，一周一次或一天一次）发起用例，这意味着系统时钟就是发起方。系统时钟是系统内置的，并且用例不由参与者发起，而由内部系统事件发起。如果在用例中未出现其他参与者交互，该用例将与参与者没有任何关联。
+        但为了明确起见，可以使用虚构的参与者“时间”来显示在用例图中用例是如何被发起的。
+    </li>
+</ul>
+<h3>
+    <a id="The Survey Description" name="The Survey Description">调查描述</a>
+</h3>
+<p>
+    用例模型的调查描述应：
+</p>
+<ul>
+    <li>
+        声明系统的主要用例是哪些（构建系统的原因）。
+    </li>
+    <li>
+        归纳有关系统的重要技术事件。
+    </li>
+    <li>
+        指出系统的界限 － 系统不应执行的操作。
+    </li>
+    <li>
+        归纳系统的环境，例如目标平台和现有软件。
+    </li>
+    <li>
+        描述在系统中正常执行用例的任何顺序。
+    </li>
+    <li>
+        指定不由用例模型处理的功能。
+    </li>
+</ul>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    <font color="#000000">以下是回收机器的用例模型的调查描述样例：</font>
+</p>
+<p class="example">
+    该模型包含三个参与者和三个用例。主要用例是“回收物项”，它表示回收机器的主要用途。
+</p>
+<p class="example">
+    起支持作用的用例是：
+</p>
+<ul>
+    <li>
+        <p class="example">
+            “打印日常报告”，允许操作员获取有关已回收物项的数量的报告。
+        </p>
+    </li>
+    <li>
+        <p class="example">
+            “管理堆积物项”，允许操作员更改某种堆积物项的退款额，或者添加新的堆积物项类型。
+        </p>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

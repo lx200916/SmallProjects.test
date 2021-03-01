@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 单元测试</title>
+<meta content="Guideline" name="uma.type">
+<meta content="unit_test" name="uma.name">
+<meta content="单元测试" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_M6RHkN7IEdm8G6yT7-Wdqw", "{74C60DFE-7221-45F1-BB8B-922A81C5AA98}", "9.315724622037552E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_M6RHkN7IEdm8G6yT7-Wdqw", "{74C60DFE-7221-45F1-BB8B-922A81C5AA98}", "9.315724622037552E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{74C60DFE-7221-45F1-BB8B-922A81C5AA98}", "9.315724622037552E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "9.315724622037552E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.315724622037552E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：单元测试</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">单元测试是对软件模块内部结构的精确测试。本指南讨论了进行单元测试的白匣方法与黑匣方法。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">实施开发人员测试</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_developer_test_44109C5.html" guid="{74C60DFE-7221-45F1-BB8B-922A81C5AA98}">开发人员测试</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test__developer_testing__unit_test__guidelines_for" name="XE_test__developer_testing__unit_test__guidelines_for"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    单元测试是对软件最小的可测试元素（单元）实施的，并涉及测试内部结构（例如逻辑和数据流）以及该单元的功能和可以观察的行为。对专注于单元的内部结构的测试进行设计和实施依赖于对该单元实施的了解（白匣方法）。为核实单元的可观测行为和功能而进行的测试设计和实施并不依赖于对实施情况的了解，因而被称为黑匣方法。&nbsp;
+</p>
+<p>
+    为了成功和全面地对单元进行测试，需要使用这两种方法设计和实施不同类型的测试（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/types_of_test_8AB94831.html" guid="1.6037730846300355E-307">技术：测试类型</a>）。&nbsp;
+</p>
+<p>
+    关于从单元测试中生成测试用例的其他信息，另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_case_81FD1D9F.html" guid="1.3981505661923931E-304">技术：测试用例</a>。
+</p>
+<h4>
+    <a id="WhiteBox_Test" name="WhiteBox_Test">白匣测试方法</a><a id="XE_unit_test__white-box_test" name="XE_unit_test__white-box_test"></a><a id="XE_test__white-box_test__of_units" name="XE_test__white-box_test__of_units"></a>
+</h4>
+<p>
+    应使用白匣测试方法验证单元的内部结构。从理论上说，您应该测试通过该代码的每个可能路径，但这仅在非常简单的单元的情况下是可能的。至少，您应试验每个<b>决策到决策路径</b>（DD
+    路径）至少一次，因为这样您就至少执行了一次所有语句。决策一般为 if 语句，DD 路径是指两个决策之间的路径。
+</p>
+<p>
+    要获取这个级别的测试覆盖，建议您选择的测试数据能使每个决策都以每种可能的方式求值。&nbsp;
+</p>
+<p>
+    使用代码覆盖工具确定白匣测试未曾执行的代码。可靠性测试应与白匣测试同时进行。
+</p>
+<p>
+    关于其他信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_case_81FD1D9F.html" guid="1.3981505661923931E-304">技术：测试用例</a>。&nbsp;
+</p>
+<h4>
+    <a id="BlackBox_Test" name="BlackBox_Test">黑匣测试方法</a><a id="XE_unit_test__black-box_test" name="XE_unit_test__black-box_test"></a><a id="XE_test__black-box_test__of_units" name="XE_test__black-box_test__of_units"></a>
+</h4>
+<p>
+    黑匣测试的目的是在无需了解单元<b>如何</b>实施其功能和行为的情况下验证单元的指定功能和可观察行为。黑匣测试着重并依赖于单元的输入和输出。
+</p>
+<p>
+    基于黑盒方法得出单元测试利用了该单元操作的输入和输出实参，和／或求值的输出状态。例如，该操作可能包含一个算法（需要两个值作为输入并返回第三个值作为输出），或发起对对象或组件状态的更改，例如添加或删除数据库记录。它们都必须完整测试。
+    要测试一个操作，您应得出足够的测试用例以验证以下各项：
+</p>
+<blockquote>
+    <ul>
+        <li>
+            对于每个用作输入的有效值，该操作都返回一个相应的值
+        </li>
+        <li>
+            对于每个用作输入的无效值，该操作都返回一个相应的值
+        </li>
+        <li>
+            对于每个有效的输入状态，都会出现一个相应的输出状态
+        </li>
+        <li>
+            对于每个无效的输入状态，都会出现一个相应的输出状态
+        </li>
+    </ul>
+</blockquote>
+<p>
+    使用代码覆盖工具确定白匣测试未曾执行的代码。可靠性测试应与黑盒测试同时进行。
+</p>
+<p>
+    关于其他信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_case_81FD1D9F.html" guid="1.3981505661923931E-304">技术：测试用例</a>。&nbsp;
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 从 Rational Rose 访问 Rational ClearCase</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="accessing_clearcase" name="uma.name">
+<meta content="从 Rational Rose 访问 Rational ClearCase" name="uma.presentationName">
+<meta content="Tool:rup_rose_classic:Rational Rose" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Rose" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{B67E317F-3C7C-4377-9F44-E9B38321C3F1}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{B67E317F-3C7C-4377-9F44-E9B38321C3F1}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{B67E317F-3C7C-4377-9F44-E9B38321C3F1}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{06FB737B-5D74-4C3B-98F4-36153CFB2E34}", "{B67E317F-3C7C-4377-9F44-E9B38321C3F1}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{B67E317F-3C7C-4377-9F44-E9B38321C3F1}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：从 Rational Rose 访问 Rational ClearCase</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational Rose ClearCase 外挂程序来访问 Rational ClearCase，以便管理对 Rose 模型文件及其生成的源代码文件的变更。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_rose_classic_20F2524D.html" guid="{06FB737B-5D74-4C3B-98F4-36153CFB2E34}">Rational Rose</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">构造实施模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    Rational Rose ClearCase 外挂程序提供了 Rational ClearCase 和 Rational Rose 之间的紧密集成。使用此外挂程序，您可以从 Rational Rose 内部访问许多 ClearCase
+    功能，从而可以简单方便地进行设置，并确保对 Rose 模型文件以及 Rose 生成的某些类型的源文件进行源控制和变更管理。
+</p>
+<p>
+    Rational Rose 文件包含模型文件（.mdl）、各种文件和受控单元（.cat、.sub、.prc、.prp），以及从 ANSI C++ 或 Rose C++ 类和组件生成的源文件。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 关于 Rose 文件的详细信息，请参阅 Rational Rose 联机帮助中的
+    <b>Controlled Units</b> 主题。
+</p>
+<h3>
+    工具步骤
+</h3>
+<p>
+    为了顺利地从 Rational Rose 使用 Rational ClearCase，必须确保 Rose ClearCase 外挂程序在 Rose Add-In Manager 中处于活动状态。然后可从 Rose 内部执行以下
+    ClearCase 任务：
+</p>
+<ol>
+    <li>
+        <a href="#Create and manage the Rose development environment">创建和管理 Rose 开发环境</a>
+    </li>
+    <li>
+        <a href="#Add Rose files to ClearCase version control">向 Rational ClearCase 版本控制添加 Rational Rose 文件</a>
+    </li>
+    <li>
+        <a href="#Check out and check in Rose files">检入和检出 Rational Rose 文件</a>
+    </li>
+    <li>
+        <a href="#View ClearCase information about Rose files">查看关于 Rational Rose 文件的 Rational ClearCase 信息</a>
+    </li>
+    <li>
+        <a href="#Deliver Rose files to the integration stream">将 Rational Rose 文件交付给集成流</a>
+    </li>
+    <li>
+        <a href="#Update a work area from the integration stream">从集成流更新工作空间</a>
+    </li>
+</ol>
+<h4>
+    1. <a id="Create and manage the Rose development environment" name="Create and manage the Rose development environment">创建和管理 Rational Rose 开发环境</a>
+</h4>
+<p>
+    您可以使用 Rational Rose ClearCase 菜单来执行许多必需的任务，以便从 Rose 内部创建和管理 Rose 开发环境：
+</p>
+<ul>
+    <li>
+        使用<b>启动 Version Control Explorer</b> 来查看 ClearCase 详细信息，并获得对 ClearCase 环境的命令（包括处理 VOB、视图、分支、流和项目的命令）的访问。
+    </li>
+    <li>
+        使用 <b>Project Explorer</b> 来创建和处理 ClearCase 项目、视图和流。一旦启动 Rational ClearCase Explorer，便可以访问所有 ClearCase
+        命令，这些命令允许您定义和提升基线、交付和同步流。仅在运行 ClearCase 4.0 或更高版本时此命令才有效。
+    </li>
+</ul>
+<h5>
+    <b>有关更多信息</b>
+</h5>
+<p>
+    请参阅以下 Rational ClearCase 工具向导：
+</p>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_implementation_model_40C73358.html" guid="{FEEAA9AD-2CEE-41C6-BD6C-BBF14CA205A5}">使用 Rational ClearCase 设置实施模型</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/creating_baselines_EFAE6E4.html" guid="{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}">使用 Rational ClearCase 创建基线</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/promoting_project_baselines_728AA53B.html" guid="{BCD4B9BC-9799-4B27-A010-4D82F2CAE82B}">使用 Rational ClearCase 提升项目基线</a>
+    </li>
+</ul>
+<h4>
+    2. <a id="Add Rose files to ClearCase version control" name="Add Rose files to ClearCase version control">向 Rational
+    ClearCase 版本控制添加 Rational Rose 文件</a>
+</h4>
+<p>
+    要从 Rational Rose 向 Rational ClearCase 版本控制添加文件，可以使用 Rose 弹出菜单，或从 Rose“工具”菜单上的 ClearCase 子菜单选择<b>添加至版本控制</b>。根据所运行的
+    ClearCase 版本，此命令会显示与 ClearCase 对接的 Rose 对话框，或者显示实际的 ClearCase 对话框。您也可以使用 Rose ClearCase 命令从 ClearCase
+    版本控制中除去文件。不过，在从版本控制中除去文件时，始终应该谨慎为好。
+</p>
+<h5>
+    <b>有关更多信息</b>
+</h5>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 关于向 Rational ClearCase
+    版本控制添加文件以及从中除去文件的详细信息，请参阅 Rational Rose ClearCase 外挂程序联机帮助和 Rational ClearCase 工具向导<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_implementation_model_40C73358.html" guid="{FEEAA9AD-2CEE-41C6-BD6C-BBF14CA205A5}">使用 Rational ClearCase 设置实施模型</a>。
+</p>
+<h4>
+    3. <a id="Check out and check in Rose files" name="Check out and check in Rose files">检入和检出 Rational Rose 文件&nbsp;</a>
+</h4>
+<p>
+    要通过 Rational Rose 将文件从 Rational ClearCase 版本控制中检出以及检入其中，可以使用 Rose 弹出菜单，或从 Rose“工具”菜单上的 ClearCase 子菜单选择下面的一条命令：
+</p>
+<ul>
+    <li>
+        检入
+    </li>
+    <li>
+        检出
+    </li>
+    <li>
+        撤消检出
+    </li>
+    <li>
+        获取最新
+    </li>
+</ul>
+<p>
+    根据所运行的 Rational ClearCase 版本，这些命令会显示与 ClearCase 对接的 Rational Rose 对话框，或者它们显示实际的 ClearCase 对话框。
+</p>
+<h5>
+    <b>有关更多信息</b>
+</h5>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 关于对 Rational ClearCase 版本控制的 Rational
+    Rose 文件检出和检入的详细信息，请参阅 Rose ClearCase 外挂程序联机帮助和 Rational ClearCase 工具向导<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/check_out_check_in_203CEEC2.html" guid="{3D4CC908-5E3C-48C5-99F6-D4137834D9A4}">检出和检入配置项</a>以及<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/using_ucm_change_sets_with_clearcase_46E66835.html" guid="{C7D320FC-FD99-4842-9193-28565FC50FEB}">使用 UCM 变更集</a>。
+</p>
+<h4>
+    4. <a id="View ClearCase information about Rose files" name="View ClearCase information about Rose files">查看关于 Rational
+    Rose 文件的 Rational ClearCase 信息</a>
+</h4>
+<p>
+    Rational Rose ClearCase 外挂程序提供了两组命令，允许您获取关于 Rose 文件的 ClearCase 信息。
+</p>
+<ul>
+    <li>
+        <b>列表</b>命令查询 Rational ClearCase，然后以文本格式显示请求的信息。列表命令包含：“对象”、“历史记录”、“检出”、“版本树”和“以上全部”。
+    </li>
+    <li>
+        <b>浏览</b>命令直接访问 Rational ClearCase 对话框，从而允许您使用 ClearCase 的图形浏览器查看文件信息。浏览命令包含“属性”、“历史记录”、“版本树”和“目录”。
+    </li>
+</ul>
+<h5>
+    <b>有关更多信息</b>
+</h5>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 关于如何在 Rational Rose 内部查看 Rational
+    ClearCase 信息的详细内容，请参阅 Rose ClearCase 外挂程序联机帮助。关于 ClearCase 文件信息的详细说明，请参阅 Rational ClearCase 联机帮助。
+</p>
+<h4>
+    5. <a id="Deliver Rose files to the integration stream" name="Deliver Rose files to the integration stream">将 Rational
+    Rose 文件交付给集成流</a>&nbsp;
+</h4>
+<p>
+    要将 Rational Rose 文件从开发流交付给集成流，请从 Rose“工具”菜单的 Rational ClearCase 子菜单使用<b>交付流</b>命令。仅在运行 ClearCase 4.0 或更高版本时此命令才有效。
+</p>
+<h5>
+    <b>有关更多信息</b>
+</h5>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 关于在 Rational ClearCase
+    中将开发流交付给集成流的详细信息，请参阅 Rational ClearCase 工具向导<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/delivering_your_work_4891CF09.html" guid="{DD0A5FB2-76C7-4B86-BBBD-FFF767EA07FA}">交付工作</a>。
+</p>
+<h4>
+    6.&nbsp;<a id="Update a work area from the integration stream" name="Update a work area from the integration stream">从集成流更新工作空间</a>
+</h4>
+<p>
+    要从集成流中最近的基线更新开发流中的 Rational Rose 文件，请从 Rose“工具”菜单的 Rational ClearCase 子菜单使用<b>同步流</b>命令。仅在运行 ClearCase 4.0
+    或更高版本时此命令才有效。
+</p>
+<h5>
+    <b>有关更多信息</b>
+</h5>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 关于使用 Rational ClearCase 同步开发流的详细信息，请参阅
+    Rational ClearCase 工具向导<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/updating_your_project_workarea_DE9AB16A.html" guid="{12294137-8815-4CC8-B79E-09BE5046C6D8}">更新工作空间</a>。
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

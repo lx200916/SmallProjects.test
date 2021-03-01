@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务描述符: 复审体系结构</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="review_the_architecture" name="uma.name">
+<meta content="复审体系结构" name="uma.presentationName">
+<meta content="_eOA0MEocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="技术复审员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{F2160C54-F666-4736-9982-FC7F58F15FAD},_eOA0MEocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_UNdM0CFtEdqrX8YVzvtlIg", "_eOA0MEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_UNdM0CFtEdqrX8YVzvtlIg", "_eOA0MEocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_UNdM0CFtEdqrX8YVzvtlIg", "_eOA0MEocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_eOA0MEocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：复审体系结构</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务定义了何时与如何进行体系结构的复审，以及如何处理复审结果。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_reviewing__architecture" name="XE_reviewing__architecture" class="index" key="复审（reviewing）" text="体系结构"></a><a id="XE_architecture__reviewing" name="XE_architecture__reviewing"></a><a id="Top" name="Top"></a> 
+<ul>
+    <li>
+        揭示进度安排或预算中所有未知或察觉到的风险。
+    </li>
+    <li>
+        检测任何体系结构设计缺陷。已经知道，体系结构缺陷最难修正，并且从长期看最具破坏性。
+    </li>
+    <li>
+        检测需求和体系结构之间的潜在不匹配：过度设计、不切实际的需求或缺少需求。特别地，评估会检查在操作、管理和维护区域中经常被忽视的某些方面。系统是如何安装的? 如何更新的？如何转移当前数据库？
+    </li>
+    <li>
+        评估一个或多个特定体系结构质量：性能、可靠性、可修改性、安全性和保险性。
+    </li>
+    <li>
+        确定复用机会
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">主要:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_technical_reviewer_ED166471.html" guid="_eOTIEEocEdqrjq4i3fchvA">技术复审员</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">其他:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">辅助:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_risk_list_F13C8FDC.html" guid="_eOfVUEocEdqrjq4i3fchvA">风险列表</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_7A057157.html" guid="_COWYthi2Edq_uI8xTPML6g">软件体系结构文档</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_4FFE3F60.html" guid="_COWYuRi2Edq_uI8xTPML6g">补充规范</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">外部:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_review_record_FBDA6FEC.html" guid="_eOfVUUocEdqrjq4i3fchvA">复审记录</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> 一般建议</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="GeneralRecommendations" name="GeneralRecommendations"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                每次复审的一般建议。
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    大致一看，软件体系结构评估与任何其他评估或复审没有太大区别。
+</p>
+<p>
+    但是，软件体系结构的一个重要特征是缺乏对于多个体系结构质量属性的特定评估 － 只有几项体系结构质量可以客观评估。
+    性能是可能可以评估的一个示例。其他质量则更加定性或主观：概念上的完整性就是一个示例。而且，在缺乏可比的其他数据或参考的情况下，通常很难确定某个度量表示什么。如果参考系统可用并且目标使用者能够理解，则<b>相对于</b>此参考系统来表示某些复审结果通常是很方便的。这可能发生在被设计系统与较早设计可比的环境中。
+</p>
+<p>
+    此评估在生命周期中的发生时间也影响它的目的或有用性。
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/ac_rvarc.gif" alt="项目生命周期迭代图" width="660" height="210" />
+</p>
+<ol>
+    <li>
+        在初始开发周期中的先启阶段结束时，通常很少有到位的具体体系结构。但复审会揭示某些不切实际的目标、缺失部分和错过的重用现有产品的机会等。
+    </li>
+    <li>
+        软件体系结构评估最常放置在精化阶段结束时。 此阶段主要侧重于详细研究需求并建立体系结构基线。在此里程碑，RUP 要求执行体系结构复审。在此情况下，将检查大范围的体系结构质量。
+    </li>
+    <li>
+        更集中的评估发生在构造阶段期间（检查特定质量属性，如性能或保险性）和构造阶段结束时（检查会导致产品不适合提供给用户的任何滞留问题）。
+    </li>
+    <li>
+        损坏控制评估发生在构造阶段后期或移交阶段，当确实有东西出错的情况下：构造未完成，或在移交阶段中，程度不可接受的问题出现在已安装的基础产品中。
+    </li>
+    <li>
+        最后，当评估发生在移交阶段结束时，特别地列出最终新产品或演进周期的可重用资产的清单。
+    </li>
+</ol>
+<p>
+    “同级”复审人员的人员配备概要信息与“角色：<a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>”相同，但更注重技术问题。领导地位、成熟度、实用性和面向结果的重要程度有所下降，但仍然很重要 －
+    复审人员揭示体系结构缺陷，如果这些缺陷影响到项目的进度安排，则可能是不希望看到的。不过，关键问题最好在能够解决时及早提出， 而不要盲目遵循导致项目团队沿错误路径而行的进度安排。
+    体系结构复审人员需要平衡风险和成本，对项目成功的更多问题保持敏感。体系结构复审人员也需要是能够提出和讨论敏感问题的具有说服力的沟通人员。<br />
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 建议的复审会议</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="RecommendedReviewMeetings" name="RecommendedReviewMeetings"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                定义复审的范围和目标。<br />
+                 定义用于每个具体范围／目标组合的方法。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    执行复审可使用不同的方法：
+</p>
+<ul>
+    <li>
+        表示驱动
+    </li>
+    <li>
+        信息驱动
+    </li>
+    <li>
+        场景驱动
+    </li>
+</ul>
+<h5>
+    表示驱动的复审
+</h5>
+<p>
+    获得（或建立）体系结构表示，然后基于这一表示来找问题和原因。
+</p>
+<p>
+    这里存在广泛的情况：有很善于建立体系结构并将提供可理解的描述来着手进行的组织，有需要确定谁是软件设计人员（甚至隐藏在某个其他名称后）并需要获取此人信息的组织，还有软件体系结构是一个完全未知概念的组织。
+    此流程则称为“挖掘体系结构”，实际在字面上像是：使用镐将体系结构从软件或文档中挖出，查看源代码、接口、配置数据等。
+</p>
+<p>
+    可用于组织表示的一种模型是使用体系结构视图（在软件体系结构文档中提供）的形式：逻辑视图组织主要类（对象模型）、进程视图描述主要控制线程和线程之间如何通信、开发视图显示各种子系统及其依赖关系、物理视图描述其他视图的元素到一个或多个物理配置的映射。将问题与各种视图一起组织起来。
+</p>
+<h5>
+    信息驱动的复审
+</h5>
+<p>
+    确定论证所需的一系列信息（数据、度量），获取信息并将此信息与需求或某个已认可的参考标准相比较。这很适用于调查某些质量属性，如性能或健壮性。
+</p>
+<h5>
+    场景驱动的复审
+</h5>
+<p>
+    这是有条理的“如果...会怎样”的方法。将所问的一般问题转换成系统应通过的一组场景，并基于场景来提问题。此类场景的示例是：
+</p>
+<ul>
+    <li>
+        系统在平台 X 和 Y 上运行。（探查的真正质量属性是可移植性。）
+    </li>
+    <li>
+        系统执行此（附加）功能 F。（真正的质量属性是可扩展性。）
+    </li>
+    <li>
+        系统每小时处理 200 个请求。（真正的质量属性是可伸缩性。）
+    </li>
+    <li>
+        用户将系统安装在这种类型的站点上。（真正的质量属性是完全性或可用性。）
+    </li>
+</ul>
+<p>
+    这种方法的好处在于它将任务置于非常具体的、各方都可理解的角度。它也允许探查需求内的疏漏或缺陷，特别是当需求非正式、非书面或非常不具体时。缺点在于它不将体系结构本身作为复审的对象来捕获，而是将系统作为黑匣，只能对其中发出某些探查。
+</p>
+<p>
+    实际上，许多事情并不是那么明确地分离的，我们以所有三种方法都执行一部分来作为结束。
+</p>
+<h5>
+    确定问题
+</h5>
+<p>
+    揭示潜在的问题主要由人基于知识和经验来判断。某些故障模式在项目间和组织间是重复的。某些启发式方法可用于揭示问题区域。检查列表是有用的（以后会建议一些非常普遍的检查列表），以前的复审得出的结果（如有）也很有用。
+</p>
+<p>
+    捕获<b>潜在</b>问题（当出现时），以中立的语气（不要指指点点，也不是“劫数难逃”）描述问题。可以象 AT&T 复审人员那样使用小纸板卡，或使用 CRC 卡，帮助对问题划分优先级、组织和消除问题。
+</p>
+<p>
+    然后，按范围或影响的递减顺序对候选问题排序，并且如果存在多个问题，则首先处理与手边的问题直接相关的问题，如果时间允许，保留“其他建议”以便以后使用。接着，声明问题的真实性：极常见的情况是一个人可以察觉到一个问题，但它可能并不是真正的问题。
+    我们尚未与恰当的人交谈以及查看恰当的信息。再次排序。确保有多个数据点来验证问题的真实性。（缺乏经验的评估员倾向于思路太单一。）
+</p>
+<p>
+    当确认问题后，快速检查可消除问题的方法，而不必尝试即时重新设计系统。写下可能的简化、重用和备选方法（例如，购买还是自制）。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 分配缺陷解决职责</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Allocate Defect Resolution Responsibilities" name="Allocate Defect Resolution Responsibilities"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                对已确定的缺陷采取行动。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    在复审之后，为每个确定的缺陷分配职责。在这种情况下，“职责”可能不是修正缺陷，而是协调附加的备选方法调查，或协调缺陷的解决（如果缺陷范围广大、影响深远）。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_多次出现" abbr="多次出现">多次出现</th><td align="left" class="sectionTableCell" headers="property_多次出现"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_事件驱动" abbr="事件驱动">事件驱动</th><td align="left" class="sectionTableCell" headers="property_事件驱动"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_正在进行" abbr="正在进行">正在进行</th><td align="left" class="sectionTableCell" headers="property_正在进行"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可重复" abbr="可重复">可重复</th><td align="left" class="sectionTableCell" headers="property_可重复"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/software_architecture_document_F4C93435.html" guid="2.9494785550310917E-305">软件体系结构文档</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/comparing_merging_rose_models_62845B55.html" guid="{C0DD6F06-15D6-4D34-B2B0-39330A3CC180}">使用 Model Integrator 比较和合并 Rational Rose 模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

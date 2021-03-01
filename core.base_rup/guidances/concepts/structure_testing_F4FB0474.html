@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 结构测试</title>
+<meta content="Concept" name="uma.type">
+<meta content="structure_testing" name="uma.name">
+<meta content="结构测试" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_4EQgMDIEEdqwaNnSEheSAg", "_SPvXcN7IEdm8G6yT7-Wdqw", "{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}", "6.14131872549316E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_SPvXcN7IEdm8G6yT7-Wdqw", "{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}", "6.14131872549316E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3lZjkCxqEdqYV4MWf8PiCw", "{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}", "6.14131872549316E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "6.14131872549316E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.14131872549316E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：结构测试</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">结构测试的关键在于所有决策结果必须在测试期间单独测试，且软件模块所需的测试数必须等同于该模块的圈复杂度。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_test_strategy_C1677B8.html" guid="{DC3E85E6-C5A9-4AC6-8DDF-E2CF2CB0573E}">测试策略</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    结构测试的概念用在两种主要环境中。尽管本性不同，但可论证结构测试背后的根本概念或思想在两种情况中是相同的。
+</p>
+<h4>
+    <a id="StructureofCode" name="StructureofCode">内部代码的结构测试</a>
+</h4>
+<p>
+    对“结构测试”一词较早的引用和可能更为确定的使用与软件源代码的内部结构测试相关。最为常见的是，这种形式的结构测试被作为“静态”测试（与“动态”测试相对）执行，原因在于并不执行软件本身来执行测试。
+    诊断工具会分析源代码，查找结构错误和弱点，通常将提供列表以支持采取后续的更正操作。开发人员（而非系统测试人员）执行这种类型的测试和评估。
+</p>
+<h4>
+    <a id="StructureofWebSites" name="StructureofWebSites">Web 站点的结构测试</a>
+</h4>
+<p>
+    基于 Web 的应用程序（使用 Internet 应用程序技术的应用程序）日益普遍。 由于此软件开发和部署方法使组织可利用若干种由技术实现的商业利益（如下所示），因此更是促进了基于 Web 的应用程序的普及。
+</p>
+<ul>
+    <li>
+        <b>无需送出任何片段的软件或文字即开发的客户、潜在客户和业务合作伙伴目标对象<i>。</i></b>拥有浏览器且可访问“网络”（因特网或内部网）的任何一个人都可轻松地将浏览器连接到已发布的 URL 并立即运行应用程序。
+    </li>
+    <li>
+        <b>集中控制和维护。</b>基于 Web 的应用程序的“瘦客户机／胖服务器”模型将应用程序组件和逻辑放置在 Web
+        服务器上，这样可集中并简化控制与维护。这还使开发人员可以自动分发软件。一旦应用程序位于服务器上，所有的用户都可立即获得该应用程序。
+    </li>
+</ul>
+<p>
+    尽管这给使用该技术的人带来好处，但是基于 Web 的应用程序增加了测试需求。这些基于 Web 的应用程序就像它们的非 Web 对应物（客户机／服务器、旧应用程序等）一样，需要进行测试以清楚应用程序的功能和性能特征。此外，基于 Web
+    的应用程序还需要着重于应用程序结构的测试，以确保应用程序结构良好并且所有链接都有效。
+</p>
+<p>
+    一般而言，基于 Web 的应用程序是使用一系列的文档（同时包括 HTML 文本文档和 GIF/JPEG
+    图形）构建的，而这些文档又通过很多静态链接和一些活动的链接或由程序控制的链接相互连接。这些应用程序还可能包含“活动内容”，例如表单、Java 脚本、“提供插件的内容”或 Java
+    应用程序。这个活动内容常常只用于输出，例如音频或视频演示。但是，它还可用于导航辅助，帮助用户浏览应用程序（Web 站点）。基于 Web
+    的应用程序所具有的自由形式本性（通过它的链接）是一个巨大的优点，但是由于结构完整性很容易受到破坏，因此这个本性也就成了一个极大的弱点。
+</p>
+<p>
+    结构测试被实施和执行来验证正确连接了所有的链接（静态的或活动的）。这些测试包括：
+</p>
+<ul>
+    <li>
+        <b>验证为每个链接显示正确的内容（文本、图形等）。</b> 不同类型的链接用于在基于 Web 的应用程序中引用目标内容，例如书签、到其他目标内容（在同一或不同 Web
+        站点中）的超链接或热点。每个链接都需要接受验证，以确保为用户提供正确的目标内容。
+    </li>
+    <li>
+        <b>确保没有中断的链接。</b>中断的链接是那些找不到目标内容的链接。链接可能出于很多原因而中断，包括移动、除去或重命名目标内容文件。链接还可能因不正确的语法使用而中断，包括缺少斜杠、冒号或字母。
+    </li>
+    <li>
+        <b>验证没有孤立的内容。</b>孤立的内容是那些在当前 Web 站点中无“入站”链接指向的文件；即没有途径访问或显示该内容。必须小心地调查孤立内容以确定原因： 
+        <ul>
+            <li>
+                是由于真的不再需要它而孤立它吗？
+            </li>
+            <li>
+                是由于中断的链接而孤立它吗？
+            </li>
+            <li>
+                或者它由当前 Web 站点外的某个链接访问？
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>
+    一旦确定了原因，应采取适当的相应措施，例如除去该内容文件、修复中断的链接或忽略孤立。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

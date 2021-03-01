@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 设计模型</title>
+<meta content="Guideline" name="uma.type">
+<meta content="design_model" name="uma.name">
+<meta content="设计模型" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "2.3158107674855575E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "2.3158107674855575E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "2.3158107674855575E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.3158107674855575E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.3158107674855575E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：设计模型</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南说明如何从分析模型派生设计模型。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Identifying Design Elements from Analysis Classes" name="Identifying Design Elements from Analysis Classes">从分析类确定设计元素</a> <img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" />
+</h3>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">工作产品：分析类</a>表示设计元素实例扮演的角色；可以使用一个或多个设计模型元素实现这些角色。另外，单个设计元素可以实现多个角色。以下资料讨论了实现分析角色的方法：
+</p>
+<ul>
+    <li>
+        分析类可以成为设计模型中的单个设计类。
+    </li>
+    <li>
+        分析类可以成为设计模型中的设计类的一部分。
+    </li>
+    <li>
+        分析类可以成为设计模型中的聚集设计类。（表示不能将该聚集中的部件显式建模为分析类）。
+    </li>
+    <li>
+        分析类可以成为从设计模型中的相同类继承的一组设计类。
+    </li>
+    <li>
+        分析类可以成为设计模型中的一组功能相关的设计类。
+    </li>
+    <li>
+        分析类可以成为设计模型中的设计子系统。
+    </li>
+    <li>
+        分析类可以成为设计子系统的部件，例如一个或多个接口以及它们的对应实施。
+    </li>
+    <li>
+        分析类可以成为设计模型中的关系。
+    </li>
+    <li>
+        分析类之间的关系可以成为设计模型中的设计类。
+    </li>
+    <li>
+        分析类主要处理功能需求并对来自“问题”域的对象建模；设计类处理非功能需求并对来自“解决方案”域的对象建模。
+    </li>
+    <li>
+        可以使用分析类来表示“希望系统支持的对象”，而无需决定用硬件支持分析类的多少部分，用软件支持分析类的多少部分。因此，可以使用硬件实现部分分析类，而根本不在设计模型中对分析类进行建模。
+    </li>
+</ul>
+<p>
+    以上各项的任意组合都是可以的。
+</p>
+<p>
+    如果维护单独的分析模型，请确保维护从已确定的设计元素到它们对应的分析类的可跟踪性。关于更多信息，请参阅<a href="#Mapping to the Analysis Model">映射到分析模型</a>。
+</p>
+<h3>
+    <a id="Mapping to the Analysis Model" name="Mapping to the Analysis Model">映射到分析模型</a> <img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" />
+</h3>
+<p>
+    本节仅适用于维护单独分析模型的情况。
+</p>
+<p>
+    设计期间，将确定支持与体系结构和所选技术更紧密地保持一致的设计元素。应将分析模型中的每个分析类与设计模型中至少一个设计类相关联。
+</p>
+<p>
+    为对此可跟踪性建模，应得出从设计元素到它所代表分析类的 &lt;&lt;跟踪&gt;&gt; 依赖关系，如下图中所示：&nbsp;
+</p>
+<p>
+    <img height="85" alt="本图显示跟踪依赖关系。" src="./../../../core.base_rup/guidances/guidelines/resources/md_des1.gif" width="437" border="0" />
+</p>
+<p>
+    注意：可跟踪性链接是<i>从</i>设计模型元素<i>到</i>分析模型元素绘制的，以使设计模型依赖于分析模型而不是其他方法。
+</p>
+<h3>
+    <a id="XE_design_model__mapping_to_the_Implementation_Model" name="XE_design_model__mapping_to_the_Implementation_Model"></a><a id="toImplementation" name="toImplementation">映射到实施模型</a>
+</h3>
+<p>
+    应在设计开始之前确定设计模型中的类应如何与实施类相关；应在特定于项目的设计指南中描述此信息。
+</p>
+<p>
+    设计模型可能或多或少地与实施模型相近，这依赖于如何将设计模型的类、包和子系统映射到实施模型中的实施类、文件、包和子系统。实施期间，通常将解决与实施环境相关的小策略问题，这些问题不应影响到设计模型。例如，可以在实施期间添加类和子系统以处理并行开发，或调整导入依赖关系。关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">任务：构造实施模型</a>以及<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/mapping_from_design_to_code_D1454680.html" guid="1.424219730601675E-305">概念：从设计映射到代码</a>。
+</p>
+<p>
+    从设计模型到实施模型应当有一致的映射。<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">工作产品：特定于项目的指南</a>应定义此映射，并且应在整个设计模型中应用一致的抽象级别。
+</p>
+<h3>
+    <b><a id="XE_design_model__mapping_from_the_Analysis_Model" href="#Characteristics of a Good Design Model" name="XE_design_model__mapping_from_the_Analysis_Model"></a><a id="Characteristics of a Good Design Model" name="Characteristics of a Good Design Model">良好设计模型的特征</a></b>
+</h3>
+<p>
+    <a id="XE_design_model__characteristics_of_a_good" name="XE_design_model__characteristics_of_a_good"></a>良好设计模型有以下特征：
+</p>
+<ul>
+    <li>
+        它满足系统需求。
+    </li>
+    <li>
+        它可以适应实施环境中的更改。
+    </li>
+    <li>
+        相对于其他可能的对象模型和系统实施，易于维护。
+    </li>
+    <li>
+        实施方式明确。
+    </li>
+    <li>
+        不包含最好在程序代码中记录的信息。
+    </li>
+    <li>
+        易于适应需求更改。
+    </li>
+</ul>
+<p>
+    关于具体特征，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/checklists/design_model_18BE347C.html" guid="1.4639852935143625E-305">核对表：设计模型</a>。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

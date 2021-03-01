@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 时序图</title>
+<meta content="Guideline" name="uma.type">
+<meta content="sequence_diagram" name="uma.name">
+<meta content="时序图" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "3.211008403369512E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "3.211008403369512E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "3.211008403369512E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.211008403369512E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.211008403369512E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：时序图</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">时序图是一种 UML 构造，用来显示实现用例场景行为的对象交互的顺序。本指南描述此构造的 UML 表示法。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">用例分析</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">用例设计</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_sequence_diagram__guidelines_for" name="XE_sequence_diagram__guidelines_for" class="index" key="时序图（sequence diagram）" text="指南"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    多数情况下，我们使用时序图来阐明用例实现（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">工作产品：用例实现</a>），即说明对象如何通过交互来执行全部或部分用例的行为。一个或多个时序图可以阐释制定用例的对象交互。典型的组织是：一个时序图用于主要的事件流，一个时序图用于用例的每个独立子流程。
+</p>
+<p>
+    时序图对于设计人员而言尤其重要，因为时序图阐明了对象在流程中的角色，并为确定类职责和接口提供了基础输入信息。
+</p>
+<p>
+    与通信图不同，时序图包括了按时间排定的序列，而不包括对象关系。时序图和通信图表述相似的信息，但显示的方式不同。时序图显示了消息的明确序列，当需要对消息的时间排序进行可视化时，时序图更为适用。如果您对交互中的实例之间的结构关系感兴趣，则使用通信图。关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/communication_diagram_FFFEA1B5.html" guid="4.5194432001390347E-305">技术：通信图</a>。
+</p>
+<h3>
+    <b><a id="Contents" name="Contents">时序图的内容</a></b>
+</h3>
+<p>
+    时序图中可含对象和参与者实例，以及描述它们如何交互的消息。该图根据激活情况，描述了所包含的对象中发生的情况，以及对象如何通过相互发送消息进行通信。可为用例的事件流的每一变体制作一个时序图。
+</p>
+<p class="picturelarge" align="center">
+    <img height="417" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/seqdiag1.gif" width="672" />
+</p>
+<p class="picturetext">
+    时序图描述了一个简单的“电话交换机”中的用例<b>拨打本地电话</b>的部分事件流。
+</p>
+<h4>
+    <a id="XE_sequence_diagram__objects_in" name="XE_sequence_diagram__objects_in"></a><a id="XE_object__in_sequence_diagram" name="XE_object__in_sequence_diagram" class="index" key="对象（object）" text="时序图中的对象"></a><b><a id="Objects" name="Objects">对象</a></b>
+</h4>
+<p>
+    对象显示为叫做“生命线”的垂直虚线。生命线代表该对象在特定时间的存在。在生命线的顶端绘有对象符号，并显示对象及其类的名称，两个名称均标有下划线且由冒号分隔：
+</p>
+<p>
+    对象名：类名
+</p>
+<p>
+    可按以下方式使用时序图中的对象：
+</p>
+<ul>
+    <li>
+        生命线可代表对象或对象的类。因此，您可以使用生命线对类和对象行为建模。但是，生命线通常代表某一类的所有对象。
+    </li>
+    <li>
+        可以不指定对象的类。正常情况下，您首先使用对象来创建时序图，之后再指定对象的类。
+    </li>
+    <li>
+        可以不命名对象，但如果您想要区别同一个类的不同对象，则应命名它们。
+    </li>
+    <li>
+        同一图中的几条生命线可代表同类的不同对象；但是，如前所述，为区别两个对象，您应命名对象。
+    </li>
+    <li>
+        代表某一类的生命线可与代表该类的对象的多条生命线同时存在。代表该类的生命线的对象名称可以设置为该类的名称。
+    </li>
+</ul>
+<h4>
+    <a id="Actors" name="Actors">参与者</a>
+</h4>
+<p>
+    正常情况下，时序图中的第一条（最左边的）生命线代表了参与者实例，参与者实例将作为交互的调用者。如果同一图中有几个参与者实例，则尝试让它们均处于最左端或最右端的生命线。
+</p>
+<h4>
+    <a id="XE_sequence_diagram__messages_in" name="XE_sequence_diagram__messages_in"></a><a id="XE_message__in_sequence_diagram" name="XE_message__in_sequence_diagram" class="index" key="消息（message）" text="时序图中的消息"></a><a id="Messages" name="Messages">消息</a>
+</h4>
+<p>
+    消息是对象之间的通信信息，对象传达信息的同时还期望活动随之发生；在时序图中，消息显示为一个水平的实心箭头，从一个对象的生命线指向另一个对象的生命线。在消息从某个对象传向该对象自身的情况下，箭头可以始于和终于同一生命线。该箭头是用消息的名称及其参数来标注的。为了显示消息在整个交互中的顺序，还可以用序号来标记消息箭头。在时序图中，箭头的实际位置显示了相对序列，所以通常将省略序列号。
+</p>
+<p>
+    可以不指定消息，这意味着消息名称是描述消息整体意思的临时字符串，而不是接收方对象的操作的名称。可以稍后通过指定消息的目标对象的操作来分配消息。然后指定的操作将替换该消息的名称。
+</p>
+<h4>
+    <a id="XE_sequence_diagram__script_in" name="XE_sequence_diagram__script_in"></a><a id="XE_script__in_sequence_diagrams" name="XE_script__in_sequence_diagrams" class="index" key="脚本（script）" text="时序图中的脚本"></a><a id="Scripts" name="Scripts">脚本</a>
+</h4>
+<p>
+    脚本以文本形式描述时序图中的事件流。
+</p>
+<p>
+    应该将脚本放在生命线的左侧，这样就可以自上至下地查看整个流程（请参阅上图）。您可以将脚本连接到某个消息，这将确保脚本随消息一同移动。
+</p>
+<h3>
+    <a id="Distributing Control" name="Distributing Control">在时序图中分布控制流</a>
+</h3>
+<p>
+    全部或部分事件流程的<b>集中控制</b>指的是：少数对象通过向其他对象发送消息或从其他对象接收消息来操纵流程。这些控制对象决定了用例中其他对象的激活顺序。剩余对象之间的交互作用非常小，或者完全不存在。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    在<b>回收机器系统</b>中，用例<b>打印日常报告</b>将跟踪（除其他操作之外）已回收对象的数量和类型，并在收据上记录这些信息。<b>报告生成器</b>控制对象则确定抽取和书写合计数据的顺序。
+</p>
+<p class="picturecenter" align="center">
+    <img height="334" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_seqd3.gif" width="385" />
+</p>
+<p class="picturetext">
+    用例<b>打印日常报告</b>的行为结构集中于控制对象<b>报告生成器</b>。
+</p>
+<p>
+    这是集中行为的示例。控制结构得以集中化的主要原因是，事件流的不同子事件阶段是相互独立的。该方法的主要优点是：每个对象均无需明了下一个对象的计数。要更改子事件阶段的顺序，只需更改控制对象。如果（举例）流程中包含一个新类型的退还项，您也可简单地添加另一个子事件阶段。该结构的另一优点是：由于众多对象中未设立行为顺序，所以您可以很容易地重用其他用例中的各种子事件阶段。
+</p>
+<p>
+    当参与对象相互之间直接通信、而不是通过一个或多个控制对象进行通信时，就形成了<b>分散</b><b>控制</b>。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    在用例<b>发送信件</b>中，某人通过邮局向另一个国家或地区寄信。信件首先送到收件人所在的国家或地区。在这个国家或地区，信件送往某个具体的城市。该城市转而将该信件送往收件人的住处。
+</p>
+<p class="picturelarge" align="center">
+    <img height="310" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_seqd4.gif" width="499" />
+</p>
+<p class="picturetext">
+    用例<b>发送信件</b>的行为结构是分散的。
+</p>
+<p class="example">
+    用例行为是分散的事件流。子事件阶段是彼此从属的。信件的发件人要求“把信发送给某人。”他既不需要知道也不想知道信件在各个国家或地区或城市中转寄的细节。（如果是在国家或地区内寄送邮件，这些行为可能就不会都发生。）
+</p>
+<p>
+    使用的控制类型取决于应用程序。一般来说，您应尝试实现独立的对象，即，将多种任务委托给在性质上最适合执行这些任务的对象。
+</p>
+<p>
+    使用集中控制的事件流将具有“叉形”时序图。另一方面，“梯形”时序图则表明控制结构对于参与交互的对象来说是分散的。
+</p>
+<p class="picturecenter" align="center">
+    <img height="399" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_seqd5.gif" width="326" />
+</p>
+<p class="picturetext">
+    事件流中的集中控制结构产生了“叉形”时序图。分散的控制结构则产生了“梯形”时序图。
+</p>
+<p>
+    用例实现的行为结构在大多情况下由集中行为和分散行为混合而成。
+</p>
+<p>
+    分散结构适用的情况：
+</p>
+<ul>
+    <li>
+        如果子事件阶段是紧密结合的。符合该情况的前提是参与对象： 
+        <ul>
+            <li>
+                形成层次结构的一部分或由层次结构组成，例如“国家或地区 － 省／直辖市 － 城市”；
+            </li>
+            <li>
+                形成信息层次结构，例如“CEO － 分部经理 － 地区经理”；
+            </li>
+            <li>
+                代表固定的时间顺序进度（子事件阶段的序列将始终按相同的顺序执行），例如“广告 － 订单 － 发货单 － 交付 － 付款”；或
+            </li>
+            <li>
+                形成概念上的继承层次结构，例如“动物 － 哺乳动物 － 猫”。
+            </li>
+        </ul>
+    </li>
+    <li>
+        如果您想概述功能并随之进行抽象化。对于始终希望使用完整功能的人来说，这是很好的做法，因为在行为结构被集中的情况下，功能就可能变得难以掌握。
+    </li>
+</ul>
+<p>
+    集中结构适用的情况：
+</p>
+<ul>
+    <li>
+        如果子事件阶段的执行顺序可能有变化。
+    </li>
+    <li>
+        如果您期望插入新的子事件阶段。
+    </li>
+    <li>
+        如果你想要使功能的某些部分可作为单独片段来重复使用。
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

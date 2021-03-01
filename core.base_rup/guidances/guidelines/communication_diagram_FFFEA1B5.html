@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 通信图</title>
+<meta content="Guideline" name="uma.type">
+<meta content="communication_diagram" name="uma.name">
+<meta content="通信图" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.5194432001390347E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.5194432001390347E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "4.5194432001390347E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.5194432001390347E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.5194432001390347E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：通信图</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">通信图是 UML 构造，用于显示对象如何交互以执行用例场景的行为。本指南描述此构造的 UML 表示法。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">用例分析</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_communication_diagram__guidelines_for" name="XE_communication_diagram__guidelines_for" class="index" key="通信图（communication diagram）" text="指南"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    <img height="16" alt="UML 图标" src="./../../../core.base_rup/guidances/guidelines/resources/uml.gif" width="13" />已将协作图重命名为通信图。关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/supportingmaterials/differences_between_uml_1_x_and_uml_2_0_CA70F2E6.html" guid="4.792914878943572E-306">UML 1.x 和 UML 2.0 之间的区别</a>。
+</p>
+<p>
+    通信图用于显示对象如何交互以执行特定用例或用例中某一部分的行为。设计者使用通信图和时序图来定义和阐明对象角色，这些对象执行特定的用例事件流。它们是用于确定类职责和接口的主要信息源。
+</p>
+<p>
+    与时序图不同，通信图显示了对象之间的关系。时序图和通信图表述相似的信息，但显示的方式不同。 通信图显示了对象之间的关系，它更有利于理解对给定对象的所有影响，也更适合过程设计。
+</p>
+<p>
+    通信图的格式决定了它们更适合在分析任务（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">任务：用例分析</a>）中使用。特别地，它们更适用于描述较少量对象的较简单交互。当对象和消息数量增加时，该图将变得越来越难以阅读。另外，很难显示附加的描述信息（例如计时、决策点），或其他可以方便地添加到时序图的注释中去的非结构化信息。
+</p>
+<h3>
+    通信图的<a id="Contents" name="Contents">内容</a>
+</h3>
+<p>
+    通信图中可以有对象和参与者实例，以及链接和消息（描述是它们是如何相关和交互的）。该图按照各对象如何通过互相发送消息进行通信，描述在参与的各对象中发生的事情。可以为用例的事件流的每个变体制作一个通信图。
+</p>
+<p class="picturelarge" align="center">
+    <img height="297" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/collab1.gif" width="502" />
+</p>
+<p class="picturetext">
+    描述<b>回收机器系统</b>中用例<b>接收寄存项</b>的部分事件流的通信图。
+</p>
+<h4>
+    <a id="Objects" name="Objects">对象</a>
+</h4>
+<p>
+    使用对象符号来表示对象，该符号显示了冒号分隔的对象名称及其类（有下划线）：
+</p>
+<p>
+    对象名：类名
+</p>
+<p>
+    可以用以下方式使用通信图中的对象：
+</p>
+<ul>
+    <li>
+        可以不指定对象的类。通常首先使用对象创建通信图，随后再指定它们的类。
+    </li>
+    <li>
+        可以不命名对象，但如果您想要区别同一个类的不同对象，则应命名它们。
+    </li>
+    <li>
+        可以在通信图中表示对象类自身（如果它积极参与交互）。
+    </li>
+</ul>
+<h4>
+    <a id="Actors" name="Actors">参与者</a>
+</h4>
+<p>
+    通常在通信图中存在参与者实例，作为交互的调用者。如果在同一图中有多个参与者实例，则应尝试在该图的外围保留它们。
+</p>
+<h4>
+    <a id="Links" name="Links">链接</a>
+</h4>
+<p>
+    链接定义如下：
+</p>
+<ul>
+    <li>
+        链接是对象之间的一种关系，可以在这些对象之间发送消息。在通信图中，链接显示为两个对象之间的实线。
+    </li>
+    <li>
+        一个对象通过它到其他对象的链接与这些对象交互，或浏览至这些对象。
+    </li>
+    <li>
+        链接可以是关联的实例，或是<b>匿名</b>的，表示未指定其关联。
+    </li>
+    <li>
+        将消息流连接至链接，请参阅<b>消息</b>。
+    </li>
+</ul>
+<h4>
+    <a id="Messages" name="Messages">消息</a>
+</h4>
+<p>
+    消息是对象之间的通信，它传送信息，期望在这些信息之后将发生某些活动。在通信图中，消息显示为在链接附近的标注箭头。这表示该链接用于向目标对象传输消息，或以其他方式实施向目标对象传递消息。箭头沿链接指向目标对象方向（接收消息的对象）。该箭头是用消息的名称及其参数来标注的。为了显示消息在整个交互中的顺序，还可以用序号来标记消息箭头。通常在通信图中使用序号，因为序号是描述消息的相对顺序的唯一方法。
+</p>
+<p>
+    可以取消分配一个消息，表示其名称是一个临时字符串，描述了该消息的全部意义。可以稍后通过指定消息的目标对象的操作来分配消息。然后指定的操作将替换该消息的名称。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

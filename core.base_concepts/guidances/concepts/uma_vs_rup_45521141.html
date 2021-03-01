@@ -1,0 +1,895 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: UMA 与 RUP 2003 元模型</title>
+<meta content="Concept" name="uma.type">
+<meta content="uma_vs_rup" name="uma.name">
+<meta content="UMA 与 RUP 2003 元模型" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "_uDU1oASEEdq61bDkWg1SXw", "_SZDtIEdjEdqBmOmOgjH2IQ"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "_uDU1oASEEdq61bDkWg1SXw", "_SZDtIEdjEdqBmOmOgjH2IQ"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_SZDtIEdjEdqBmOmOgjH2IQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：UMA 与 RUP 2003 元模型</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此概念描述 Unified Method Architecture 和 Rational Unified Process／Rational Process Workbench 2003 元模型之间的主要差异。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    背景
+</h3>
+<p>
+    Unified Method Architecture（UMA）的开发目的是统一 IBM 中所有方法和流程工程方法的说明纲要与术语，并支持行业中最重要的标准。因此，如下图所示，IBM Rational Unified
+    Process（RUP）、IBM Global Services Method（GS Method）和 IBM Rational Summit Ascendant 的架构设计师协作开发了 UMA。除此核心架构设计师小组之外，IBM
+    内外的许多其他开发流程计划的项目干系人也复审并参与了该规范的制定。该规范本身已作为 <a href="http://www.omg.org/cgi-bin/doc?ad/2004-11-4" target="_blank">SPEM
+    2.0 标准</a>的提案提交给 <a href="http://www.omg.org/" target="_blank">OMG</a>。由于 RUP 2003 元模型是根据当前 <a href="http://www.omg.org/technology/documents/formal/spem.htm" target="_blank">SPEM 1.1 标准</a>进行开发的，因此可以将此 SPEM 2.0
+    草案看作该标准的持续重要演进。
+</p>
+<center>
+    <img alt="一个图片，显示 Unified Method Architecture 的演进" src="./../../../core.base_concepts/guidances/concepts/./resources/uma-evo.gif" />
+</center>
+<p>
+    此统一的主要目的是生成一套术语和数据结构，以允许在不丢失主要特征的情况下表示所有这些方法和流程。例如，设计 UMA 的目的是支持很多种不同的生命周期模型：RUP 迭代开发生命周期、递增 GS Method 生命周期和 Summit
+    Ascendant 瀑布式及迭代生命周期。除此之外，还需要解决术语差异：RUP 称为“活动”的操作在 GS Method 中称为“任务”，RUP 中的“工件”在 Summit Ascendant 中定义为“可交付件”等。
+</p>
+<h3>
+    对于 RUP 2003 用户，UMA 中的更改
+</h3>
+<p>
+    由于只定义一个数据结构和所有这些方法使用一个术语的重要性增加，折中方案和更改必须被所有项目干系人接受。尽管这些更改可能会对当前 RUP
+    用户产生困扰，但是从长远来看，用户将从广泛使用并且统一的术语和标准化的方法内容和流程表达方式中受益，因为这些更改可改进有关流程的通信并便于复用。以下列表总结了 RUP 2003 元模型的最重要的更改。此页末尾的表为您提供了 UMA
+    所有重要来源的完整术语比较。
+</p>
+<ul>
+    <li>
+        <strong>活动已重命名为任务</strong>：为了使流程条例和项目管理的关系更紧密，我们将最小的可分配工作单元重命名为“任务”，因为“任务”最常用。
+    </li>
+    <li>
+        <strong>工作流程详细信息重命名为活动</strong>：通常以活动图层次结构表示工作流程（例如，UML 2.0 中定义的活动图）。虽然 RUP 只提供一层工作流程细分，但 UMA 被设计为提供多层此类细分。
+        由于“活动”一词通常用来表示活动图的元素以及活动图本身，因此我们决定将 RUP 中使用的名称“工作流程详细信息”替换成名称“活动”。我们意识到“活动”一词用途的转换可能会使现有 RUP 用户产生困惑。但是，UMA
+        工作的一个重要目标就是以标准和行业中最常用的方式使用术语。&nbsp;
+    </li>
+    <li>
+        <strong>任务（以前在 RUP 中称为活动）可由很多角色执行</strong>：在 RUP 2003 中，活动是作为角色操作建模的。客户反馈（对其他流程建模方法的意见）以及在 UML 2.0
+        中引入的更改指示此设计极大地限制了建模人员行为。此方法不接受“某些工作是通过不同角色的协作执行的”这样的表述。UMA 通过使“任务”成为独立的模型元素来解决此问题（可以将执行角色作为资源指定给“任务”）。因此，UMA
+        现在允许向任务指定多个角色。为了向后兼容，UMA 仍然允许标识主执行角色（正在负责任务的角色）以及多个其他执行者。
+    </li>
+    <li>
+        <strong>改进了工件概念</strong>：RUP 过去仅使用工件的概念定义开发项目中使用和产生的对象。UMA
+        定义了这些概念的扩展分类法。它定义工作产品的常规概念，工作产品有三种不同的规范（特定的工作产品类型）：工件（受管的工作产品）、可交付件（将交付给项目干系人进行复审的封装工作产品）和成果（不受管的无形工作产品）。
+    </li>
+    <li>
+        <strong>对工作产品和角色进行不同的分类</strong>：在 RUP 中，工件和角色都按规程分类。但是，有时会跨规程使用工件，只按一个规程分类就会产生混乱。在 UMA
+        中为工作定义（任务和活动的规程）、工作产品（域和工作产品种类）以及角色（角色集）定义了不同的类别。&nbsp;
+    </li>
+    <li>
+        <strong>流程组件重命名为方法包</strong>：在许多标准和技术中通常会使用组件概念。组件的大部分应用会将它链接到封装的抽象，该抽象将组件定义为可通过明确定义的接口来使用的黑匣。RUP 组件并不满足此黑匣条件。并且
+        SPEM 标准定义了包和组件。为了与 SPEM 和“组件”一词的行业用法一致，我们将“流程组件”重命名为“方法包”。（从技术层面上来看，“方法包”是“方法”，因为它可包含方法元素或进程元素。）
+    </li>
+    <li>
+        <strong>分离方法内容元素和进程元素</strong>：在 RUP 2003 中，可通过定义新配置和将开发案例中的工件更改手动记录到标准 RUP 来创建新流程。UMA
+        作为对配置概念的补充，提供了扩展概念，以供定制流程。它允许您对流程进行具体建模，确定每个阶段中您实际希望执行的方法内容中定义的工作，因为您可以在流程结构中轻松地添加、除去元素和对元素进行重新排序，并可重新使用或不重新使用方法内容中的所有内容。
+        它通过更清楚地分离方法内容（例如，为规程定义的任务）和流程中方法内容的应用（以活动图和／或工作分解结构表示）以及流程建模（即创建新的或修改过的活动图，或者新的或修改过的工作分解结构），实现这些功能。它引入了一些新概念（例如描述符），这些概念支持此分离并可实现新功能，来支持在同一配置中维护和复用许多不同系列的替代流程和流程组成部分。
+    </li>
+</ul>
+<h3>
+    术语对比
+</h3>下表显示 UMA 术语与其他流程工程方法中所使用的术语的对应关系。<br />
+<br />
+<table cellspacing="0" cellpadding="0" width="938" border="1">
+    <colgroup>
+        <col style="WIDTH: 48pt" width="64" />
+        <col style="WIDTH: 176pt" width="235" />
+        <col style="WIDTH: 117pt" width="156" />
+        <col style="WIDTH: 108pt" width="144" />
+        <col style="WIDTH: 139pt" width="185" />
+        <col style="WIDTH: 116pt" width="154" />
+    </colgroup>
+    <tbody>
+        <tr bgcolor="#CCCCCC" height="17">
+            <td width="64" height="17">
+                &nbsp;
+            </td>
+            <td width="235">
+                <b>UMA/RMC</b>
+            </td>
+            <td width="156">
+                <b>RUP 2003</b>
+            </td>
+            <td width="144">
+                <b>SUMMIT</b>
+            </td>
+            <td width="185">
+                <b>IGSM</b>
+            </td>
+            <td width="154">
+                <b>SPEM 1.1</b>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="17">
+                基本方法元素
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td height="136" rowspan="8">
+                &nbsp;
+            </td>
+            <td>
+                角色
+            </td>
+            <td>
+                角色
+            </td>
+            <td>
+                角色
+            </td>
+            <td>
+                角色
+            </td>
+            <td>
+                流程角色
+            </td>
+        </tr>
+        <tr>
+            <td>
+                工作产品
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                可交付件
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                工作产品／工件
+            </td>
+            <td>
+                工件
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                工作产品描述
+            </td>
+            <td>
+                工作产品
+            </td>
+        </tr>
+        <tr>
+            <td>
+                工作产品／成果
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                任务成果
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                工作产品／可交付件
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                可交付件内容描述
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                任务
+            </td>
+            <td>
+                活动
+            </td>
+            <td>
+                活动
+            </td>
+            <td>
+                任务
+            </td>
+            <td>
+                活动
+            </td>
+        </tr>
+        <tr>
+            <td>
+                步骤
+            </td>
+            <td>
+                步骤
+            </td>
+            <td>
+                步骤
+            </td>
+            <td>
+                子任务
+            </td>
+            <td>
+                步骤
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="17">
+                相关流程
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td height="102" rowspan="6">
+                &nbsp;
+            </td>
+            <td>
+                活动
+            </td>
+            <td>
+                工作流程详细信息
+            </td>
+            <td>
+                任务
+            </td>
+            <td>
+                活动
+            </td>
+            <td>
+                工作定义
+            </td>
+        </tr>
+        <tr>
+            <td>
+                迭代
+            </td>
+            <td>
+                迭代
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                迭代
+            </td>
+        </tr>
+        <tr>
+            <td>
+                阶段
+            </td>
+            <td>
+                阶段
+            </td>
+            <td>
+                阶段
+            </td>
+            <td>
+                阶段
+            </td>
+            <td>
+                阶段
+            </td>
+        </tr>
+        <tr>
+            <td>
+                能力模式
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                能力模式
+            </td>
+            <td>
+                （流程组件）
+            </td>
+        </tr>
+        <tr>
+            <td>
+                交付流程
+            </td>
+            <td>
+                生命周期／配置
+            </td>
+            <td>
+                路径图
+            </td>
+            <td>
+                接洽模型
+            </td>
+            <td>
+                （流程）
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="17">
+                分类
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td height="85" rowspan="5">
+                &nbsp;
+            </td>
+            <td>
+                规程
+            </td>
+            <td>
+                规程
+            </td>
+            <td>
+                模块
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                规程
+            </td>
+        </tr>
+        <tr>
+            <td>
+                域
+            </td>
+            <td>
+                （工件集）
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                域
+            </td>
+            <td>
+                工作产品种类
+            </td>
+        </tr>
+        <tr>
+            <td>
+                角色集
+            </td>
+            <td>
+                （角色集）
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                工具
+            </td>
+            <td>
+                工具
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="17">
+                方法封装
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td height="102" rowspan="6">
+                &nbsp;
+            </td>
+            <td>
+                方法插件
+            </td>
+            <td>
+                流程模型插件
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                进程
+            </td>
+        </tr>
+        <tr>
+            <td>
+                方法包
+            </td>
+            <td>
+                流程组件
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                包
+            </td>
+        </tr>
+        <tr>
+            <td>
+                方法包／内容包&nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                包
+            </td>
+        </tr>
+        <tr>
+            <td>
+                方法包／流程包
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                包
+            </td>
+        </tr>
+        <tr>
+            <td>
+                流程包／流程组件
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                流程组件
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="17">
+                指导信息类型
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td height="204" rowspan="12">
+                &nbsp;
+            </td>
+            <td>
+                指南
+            </td>
+            <td>
+                指南
+            </td>
+            <td>
+                参考文档
+            </td>
+            <td>
+                技术文档
+            </td>
+            <td>
+                指南
+            </td>
+        </tr>
+        <tr>
+            <td>
+                概念
+            </td>
+            <td>
+                概念
+            </td>
+            <td>
+                参考文档
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                白皮书
+            </td>
+            <td>
+                白皮书
+            </td>
+            <td>
+                参考文档
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                核对表
+            </td>
+            <td>
+                核对表
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                技术文档（V&V）
+            </td>
+            <td>
+                核对表
+            </td>
+        </tr>
+        <tr>
+            <td>
+                工具向导
+            </td>
+            <td>
+                工具向导
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                工具指南
+            </td>
+            <td>
+                工具向导
+            </td>
+        </tr>
+        <tr>
+            <td>
+                模板
+            </td>
+            <td>
+                模板
+            </td>
+            <td>
+                模板
+            </td>
+            <td>
+                模板
+            </td>
+            <td>
+                模板
+            </td>
+        </tr>
+        <tr>
+            <td>
+                报告
+            </td>
+            <td>
+                报告
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                估算
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                估算
+            </td>
+            <td>
+                估算注意事项
+            </td>
+            <td>
+                估算
+            </td>
+        </tr>
+        <tr>
+            <td>
+                示例
+            </td>
+            <td>
+                示例
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                引用项／示例
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                路线图&nbsp;
+            </td>
+            <td>
+                路线图
+            </td>
+            <td>
+                路径图描述
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                术语定义
+            </td>
+            <td>
+                （词汇表）
+            </td>
+            <td>
+                （词汇表）
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                实践
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2005&nbsp;All Rights Reserved
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

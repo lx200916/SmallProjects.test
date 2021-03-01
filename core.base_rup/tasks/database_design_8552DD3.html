@@ -1,0 +1,781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务: 数据库设计</title>
+<meta content="Task" name="uma.type">
+<meta content="database_design" name="uma.name">
+<meta content="数据库设计" name="uma.presentationName">
+<meta content="Discipline:rup_analysis_design_discipline:分析和设计" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="数据库设计员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：数据库设计</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务说明了如何设计数据库以在应用程序中实现数据的持久性存储。</td>
+</tr>
+<tr>
+<td>规程：<a href="./../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">分析和设计</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<ul>
+    <li>
+        确保持久数据能一致、有效地存储。
+    </li>
+    <li>
+        定义必须在数据库中实施的行为。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">主执行者:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">数据库设计员</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">其他执行者:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">分析类</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">用例实现</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">流程使用情况</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">分析和设计</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/design_the_database_2BE59DB0.html" guid="{FB3EB753-A979-4849-B57B-97F39271F82B}">设计数据库</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/database_design_5998D016.html" guid="_2Bsr0EocEdqrjq4i3fchvA">数据库设计</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    此任务中展示的步骤假定将使用关系数据库管理系统（RDBMS）来实施应用程序的持久数据设计。假设您熟悉数据库概念，包括规范化和反向规范化，而且熟悉类似 [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#DAT99" guid="7.755968586980351E-308">DAT99</a>]
+    这样的引用中涉及的数据库术语。&nbsp;
+</p>
+<p>
+    此任务中的步骤还参考了“统一建模语言”（UML）概要文件来进行数据库建模，这在&nbsp;[<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#NBG01" guid="7.755968586980351E-308"><font     color="#ff0000">NBG01</font></a>] 中进行了讨论。此外，[<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#NBG01" guid="7.755968586980351E-308"><font     color="#ff0000">NBG01</font></a>] 还包含了使用 UML 来对关系数据库进行建模和设计的过程的一般描述。关于关系数据模型和对象模型之间关系的背景信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/relational_databases_and_object_orientation_1C67069E.html" guid="3.2166604011257303E-305">概念：关系数据库和对象方向</a>。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading"> 开发逻辑数据模型（可选）</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Develop Logical Data Model" name="Develop Logical Data Model"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                定义数据库逻辑设计的模型。
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    逻辑数据模型的目的是提供关键逻辑数据实体和它们的关系的理想视图，该视图独立于任何特定的软件或数据库实施。它一般是第三规范格式（请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/normalization_47199FE9.html" guid="3.183357382287462E-306">概念：规范化</a>），这是一种将冗余度降到最低并确保没有传递性依赖关系的数据建模格式。这样的模型关心的是，在捕获数据时，数据库的外观是怎样的，而不关心使用数据的应用程序及其性能。
+    请注意，逻辑数据模型被认为是<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">工作产品：数据模型</a>的一部分，而不是独立的 RUP 工作产品。但是，为以下对象定义单个逻辑数据模型往往很重要：
+</p>
+<ul>
+    <li>
+        数据库和应用程序设计在由独立的团队开发的项目。
+    </li>
+    <li>
+        其中有多个将共享通用数据库的应用程序的项目。
+    </li>
+</ul>
+<p>
+    如果您在创建逻辑数据模型，您在最开始可以使用<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">工作产品指南：数据模型</a>中讨论的模型元素，或者您可以从<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">分析模型</a>或<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>中的每个持久类的实体开始。
+</p>
+<p>
+    您可能决定不创建独立逻辑数据模型，特别是如果您在设计为单个应用程序服务的数据库。在这种情况下，<a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">数据库设计人员</a>根据“设计模型”中的一组持久类以及它们的关系来开发物理数据模型。
+</p>
+<p>
+    不管用哪种方法，很重要的一点是<a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">数据库设计人员</a>和<a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>要在整个分析和设计过程中合作，以确定<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">工作产品：设计模型</a>中的哪些类需要在数据库中存储信息。如题为“确定<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">任务：类设计</a>的持久类”的步骤中所述，数据库设计员与设计人员合作确定“设计模型”中的那些<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>被认为是持久的，而且是成为数据库中的表的可能候选者。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 定义物理数据库设计</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Develop Physical Data Model" name="Develop Physical Data Model"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                定义数据库的详细的物理设计。
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    物理数据库设计包括代表数据库详细物理结构的模型元素（如表、视图和存储过程）以及代表数据库的底层数据存储设计的模型元素（如模式和表空间）。这些模型元素综合起来组成了数据库的物理数据模型。这个物理数据模型包含在<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">工作产品：数据模型</a>中，它不是独立的模型工作产品。
+</p>
+<p>
+    开发物理数据库设计的详细步骤如下：
+</p>
+<ul>
+    <li>
+        <a href="#Define Domains">定义域</a>。
+    </li>
+    <li>
+        <a href="#Transform Persistent Design Elements to the Physical Data Model">创建初始物理数据库设计元素</a>。
+    </li>
+    <li>
+        <a href="#Define Reference Tables and Default Values">定义引用表</a>。
+    </li>
+    <li>
+        <a href="#Create Primary Key and Unique Key Constraints">创建主键和唯一性约束</a>。
+    </li>
+    <li>
+        <a href="#Define Data and Referential Integrity Enforcement Rules">定义数据和参照完整性实施规则</a>。
+    </li>
+    <li>
+        <a href="#Optimize the Data Model for Performance">将数据库设计反向规范化来为性能进行优化</a>。
+    </li>
+    <li>
+        <a href="#Optimize Data Access">优化数据访问</a>。
+    </li>
+    <li>
+        <a href="#Define Storage Characteristics">定义存储器特征</a>。
+    </li>
+    <li>
+        <a href="#Distribute Class behavior to the Database">设计存储过程来将类行为分发给数据库</a>。
+    </li>
+</ul>
+<h4>
+    <a id="Define Domains" name="Define Domains">定义域</a>
+</h4>
+<table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)" bordercolorlight="#808080" bordercolordark="#808080">
+    <tr>
+        <td width="5%">
+            <b>目的</b>
+        </td>
+        <td width="95%">
+            定义可重用的用户定义的类型。&nbsp;
+        </td>
+    </tr>
+</table>
+<p>
+    域可以由数据库设计人员用来在整个数据库设计过程中实施类型标准。 域是用户定义的数据类型，它可以应用于表中的列。域有列的属性，而没有名称。&nbsp;
+</p>
+<h4>
+    <a id="Transform Persistent Design Elements to the Physical Data Model" name="Transform Persistent Design Elements to the Physical Data Model">创建初始物理数据库设计元素</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                创建初始数据库表和关系。
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    数据库设计人员用表和表中的列对物理数据模型元素建模，如<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">工作产品指南：数据模型</a>中所述。&nbsp;
+</p>
+<p>
+    如果已经创建了逻辑数据模型，那么它的逻辑实体就可以用作初始的表集合的基础。
+</p>
+<p>
+    或者，数据库设计人员可以将数据模型中的持久类用作物理数据模型中的表的起点来启动物理数据模型。数据库设计人员分别将持久类以及它们的属性建模为表和列。数据库设计人员还需要根据设计模型中的持久类之间的关联来定义表之间的关系。在<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/forward-engineering_relational_databases_53C0441E.html" guid="5.250868507423771E-305">工作产品指南：正向设计关系数据库</a>中提供了关于设计模型元素和关系如何映射到数据模型元素和关系的描述。
+</p>
+<p>
+    如果您是从持久类（而不是规范化的逻辑数据模型）开始模型，那么您一般将需要应用一些规范化才能消除数据冗余和非关键字段依赖关系。有关数据库规范化的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/normalization_47199FE9.html" guid="3.183357382287462E-306">概念：规范化</a>。
+</p>
+<h4>
+    <a id="Define Reference Tables and Default Values" name="Define Reference Tables and Default Values">定义引用表</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                定义整个项目中使用的标准引用表。
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    在整个项目中往往会使用标准查找表、验证表或引用表。因为这些表中的数据往往会被频繁访问，但数据很少发生更改，所以这些数据值得特别考虑。在设计模型中，这些表可能包含标准产品代码、省或直辖市代码、邮政编码、税率表、区域代码验证表或其他被频繁访问的信息。在财务系统中，这些表可能包含很多系列的保单代码、保单评定类别或换算比率。在设计模型中查看主要为只读的类，为大量客户提供验证信息。
+</p>
+<p>
+    如果引用表很小，那就不要建立索引了，因为对较小的表建立索引可能实际上会增加额外的开销。较小的、经常访问的表还往往会保留在内存中，因为高速缓存算法经常会将频繁访问的表保存在数据高速缓存中。
+</p>
+<p>
+    如果可能的话，确保数据库高速缓存足够大，能使所有引用表保留在内存中，还有正常的用于查询和事务的“工作集空间”。提高数据库性能的秘密往往是降低磁盘 I/O。
+</p>
+<p>
+    一旦定义了引用表结构，就要确定填充引用表的策略。 因为这些表是大约在项目开始时访问的，所以确定引用值并装入表往往需要在应用程序运行时期间相对较早的时候进行。数据库设计人员虽然不负责获得数据，但是要负责确定引用表如何以及何时刷新。
+</p>
+<h4>
+    <a id="Create Primary Key and Unique Key Constraints" name="Create Primary Key and Unique Key Constraints">创建主键和唯一性约束</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                定义一个或多个唯一标识表中的行的列。<br />
+                 对保证数据或数据集的唯一性的列定义约束。
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    主键是唯一标识表中的行的一列或多列。表只有一个主键。往往有“自然”键可以用于唯一标识一行数据（例如，引用表中的邮政编码）。主键不应该包含可能会随业务环境的变化而变化的数据。如果“自然”键是可能会更改的值（例如人名），那么就建议数据库设计人员在创建主键时创建单一的、非有意义的、非用户输入的列。这样创建的数据结构能更好地适应业务结构、规则或环境发生的变更。
+</p>
+<p>
+    将非有意义的、非用户输入的列用作主键是设计数据仓库中的一个基本概念。事务系统往往会选择这样的“自然”主键：非有意义的、非用户输入的列可能会受到极小更改。
+</p>
+<p>
+    唯一的约束指定，列或列集合中的数据在每行都是唯一的。如果唯一性约束加在某一列上，那么所指定列中的特定行中的数据必须是唯一的，要与同一列中的不同行中的数据不同。&nbsp;
+</p>
+<p>
+    为一组列定义唯一的约束时，唯一性所基于的是组成该唯一约束的列中的全部数据。在特定列中的特定行中的数据不必是唯一的，不必与同一列中的不同行中的数据不同。数据库设计人员使用唯一的约束来确保业务数据的唯一性。
+</p>
+<h4>
+    <a id="Define Data and Referential Integrity Enforcement Rules" name="Define Data and Referential Integrity Enforcement Rules">定义数据和参照完整性实施规则</a>
+</h4>
+<table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)" bordercolorlight="#808080" bordercolordark="#808080">
+    <tr>
+        <td width="5%">
+            <b>目的</b>
+        </td>
+        <td width="95%">
+            确保数据库的完整性。
+        </td>
+    </tr>
+</table>
+<p>
+    数据完整性规则（也称为约束）确保数据值位于定义的范围内。在能确定这些范围的地方，数据库就可以实施数据完整性规则。（这并不是说应用程序中不应该进行数据验证，而只是说在应用程序无法正常工作的情况下，数据库可以作为“最终检验者”。）在存在数据验证规则的地方，必须设计数据库约束来实施这些规则。
+</p>
+<p>
+    外键是表中映射到另一个表中的主键的一列或多列。一个表可能有很多外键，而且每个外键都是到不同表的映射。表之间的这种映射（或关系）往往称为父子关系。子表包含外键，外键映射到父表中的主键。&nbsp;
+</p>
+<p>
+    外键约束的定义还经常被查询优化器用来促进查询性能。在许多情况下，外键实施规则使用引用表。
+</p>
+<h4>
+    <a id="Optimize the Data Model for Performance" name="Optimize the Data Model for Performance">将数据库设计反向规范化来优化性能</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                为性能优化数据库数据结构。
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    如果是关系数据模型，初始的映射一般会产生类到表的映射。如果需要同时检索来自不同类的对象，RDBMS
+    就使用称为“表连接”的操作来检索与感兴趣的对象相关的行。对于频繁访问的数据，连接操作从计算的角度看可能很昂贵。为了消除连接成本，往往会使用一种称为“反向规范化”的标准关系技术。
+</p>
+<p>
+    反向规范化将来自两个或更多个不同表的列组合到相同的表中，有效地预先将信息连接起来。反向规范化反映了在较昂贵的更新操作之间为获得不太昂贵的检索操作而作出的权衡。这种方法还降低了系统在查询中的性能 －
+    这样的查询只对有效地连接到反向规范化的表中的一个对象的属性感兴趣，而通常情况下，在每个查询中，所有属性都会被检索。对于应用程序一般想要所有属性的情况，性能可能会有很大的提高。
+</p>
+<p>
+    将两个以上的表反向规范化是很少见的，它会增加插入和更新的成本，也会增加非连接查询的成本。将反向规范化限制在两个表是一个很好的策略，除非在带来的好处方面有很确凿、很有说服力的证据。
+</p>
+<p>
+    在类被嵌套的情况下，反向规范化可以从<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>中推断。 嵌套类可以映射到反向规范化的表。
+</p>
+<p>
+    一些对象数据库允许类似于反向规范化的概念，其中相关的对象群集在磁盘上，并在单个操作中被检索。使用的概念是类似的：通过减少系统为了从数据库检索相关对象必须做的工作来减少对象检索时间。
+</p>
+<p>
+    在某些情况下，优化数据模型可以揭示<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>中的一些问题，包括性能瓶颈、建模情况差或者设计不完整。在这种情况下，与类的<a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>讨论这些问题，在适当时提出变更请求。
+</p>
+<h4>
+    <a id="Optimize Data Access" name="Optimize Data Access">优化数据访问</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                用建立索引为有效的数据访问作准备。<br />
+                 用数据库视图为有效的数据访问作准备。
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    一旦设计好了表结构，您就必须确定将针对数据执行的查询类型。建立索引被数据库用来加速访问。建立索引最有效的时候是当被建立索引的列中的数据值相对不同时。
+</p>
+<p>
+    请考虑以下建立索引的原则：
+</p>
+<ul>
+    <li>
+        必须总是对表的主键列建立索引。主键列经常用作搜索键，并用于连接操作。
+    </li>
+    <li>
+        大小小于 100 行且只有数列的表很少能从建立索引中受益。较小的表一般很容易装入数据库高速缓存。
+    </li>
+    <li>
+        还应当为频繁执行的查询或者必须快速检索数据的查询（一般是人可能在等待时就已完成的任何搜索）定义索引。应该为每一组一起用作搜索条件的属性定义索引。例如，如果系统需要能够查找订购了某种特定的产品的所有订单，那么就要求有关于“订单商品”表上的产品号列的索引。
+    </li>
+    <li>
+        索引一般应该仅对用作标识的列进行定义，而不应对数值（如帐户余额）或文本信息（如订单注释）进行定义。标识列值一般在对象创建时分配，然后在对象的整个生命周期保持不变。
+    </li>
+    <li>
+        简单数字（整数和数字数据类型）的索引比字符串索引要简单得多、快速得多。考虑到查询或较大连接上处理的较大数据量，小处的缩减会很快累加起来。对数字列的索引所占的空间往往比对字符的索引小得多。
+    </li>
+</ul>
+<p>
+    反过来，索引的使用不是无偿的；表上的索引越多，插入和更新用来处理的时间就越长。在考虑使用索引时，请记住以下预防措施：
+</p>
+<ul>
+    <li>
+        不要只为了加速不经常执行的查询而建立索引，除非该查询在关键点出现，而有必要将速度提到最高。
+    </li>
+    <li>
+        在某些系统中，更新和插入性能比查询性能更重要。一个常见的示例是在工厂数据采集应用程序中，其中质量数据是实时捕获的。在这些系统中，只是偶尔执行在线查询，而且大多数数据是由对数据执行统计分析的批处理报告应用程序定期分析的。对于数据采集系统，除去所有的索引可实现最大的吞吐量。如果需要索引，它们可以就在批处理报告和分析应用程序运行前重新构造，然后在报告和分析完成后删除。
+    </li>
+    <li>
+        总是记住，索引有隐藏的成本。例如，它们花时间更新（每次插入、更新或删除要付出的代价）并占用磁盘空间。要确保您能从使用它们中获得价值。
+    </li>
+</ul>
+<p>
+    许多数据库提供对索引类型的选择。最常见的包括：
+</p>
+<ul>
+    <li>
+        <b>B 型树索引 －</b> 最常使用的类型是基于平衡的 B 型树索引数据结构的。 当索引键值是随机分发并倾向于有很大的可变性时，这样的索引很有用。 但是，当建立索引的数据已经有顺序时，它们的性能就很差。
+    </li>
+    <li>
+        <b>散列索引 －</b>
+        索引键值很少是散列的。当索引键值的范围为已知、相对不变并且唯一的时候，散列能提供更好的性能。这种方法依赖于使用键值来计算感兴趣的数据的地址。因为有可预见性的需要，所以散列索引往往只对很少发生变化的中等大小查找表有用。
+    </li>
+</ul>
+<p>
+    您对建立索引策略和索引创建计时的选择对性能可以有很大的影响。大量的数据负载应以无索引的方式执行（这可通过删除索引、装载数据然后重新创建索引来实现）。这么做的原因是，随着每一行的添加，索引结构重新获得平衡。因为后面的行将更改最佳索引结构，所以在插入每一行时重新平衡索引所做的工作中很大一部分就浪费了。不带索引装入数据，然后当数据装入完成后重新创建索引，这样做更快、更有效。一些数据库提供批量数据装入程序，来自动完成这一步骤。
+</p>
+<p>
+    优化数据库访问性能的另一个策略是使用视图。数据库视图是虚拟表，没有自己独立的存储器。但是，对于调用程序（或用户），视图的行为就像表一样。视图支持数据的检索，它也可以用于更新数据 －
+    取决于数据库结构和数据库供应商。视图包含的数据来自于一个或多个可以通过单个选择语句访问的表。性能的提高在选择数据期间发生，特别是在频繁查询的表中。数据从单个位置（视图）中检索，而不是通过搜索存在于数据库中的多个或较大的表来检索。
+</p>
+<p>
+    视图在数据库安全性中也扮演着重要的角色。包含部分表的视图可以限制对基本表中包含的敏感数据的访问。
+</p>
+<h4>
+    <a id="Define Storage Characteristics" name="Define Storage Characteristics">定义存储特征</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                设计数据库的空间分配和磁盘页组织。
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    数据库设计人员使用表空间来代表分配给表、索引、存储过程等等的存储空间的量。一个或多个表空间被映射到数据库。数据库设计人员必须分析数据模型中的表来确定如何在数据库的存储空间中分发这些表以及其他支持数据库元素。
+</p>
+<p>
+    在确定数据库的表空间结构时，请记住，数据库不在行、记录或甚至整个表上执行 I/O。实际上，它们是在磁盘块上执行 I/O。这么做的原因很简单：块 I/O
+    操作通常在系统上的软件和硬件中优化。结果，数据库中的表和索引的物理组织对系统的性能可能会有急剧的影响。
+</p>
+<p>
+    在规划数据库的空间分配和磁盘页组织时，请考虑以下因素：
+</p>
+<ul>
+    <li>
+        磁盘页中的信息密度
+    </li>
+    <li>
+        磁盘页在单个磁盘或多个磁盘上的位置
+    </li>
+    <li>
+        要分配给表的磁盘空间的量
+    </li>
+</ul>
+<p>
+    这些因素在接下来的小节中讨论。
+</p>
+<blockquote>
+    <h5>
+        <b>磁盘页密度</b>
+    </h5>
+    <p>
+        磁盘页的密度取决于期望数据随着时间的发展而变化的程度。 基本上，密度较低的页更能够接受随着时间的发展而带来的值的变化或者数据的添加，而较满的数据页的读性能更高，因为所读取的每个块中能检索更多数据。
+    </p>
+    <p>
+        为了简化磁盘管理，数据库设计人员可以根据表可能变化的程度来将表分组。以下三个组为这种类型的组织构成了一个良好的开端：
+    </p>
+    <ul>
+        <li>
+            高度动态的表
+        </li>
+        <li>
+            有点动态的表
+        </li>
+        <li>
+            最稳定的表
+        </li>
+    </ul>
+    <p>
+        高度动态的表应该映射到有大量空白空间（可能为 30%）的磁盘页；有点动态的表应该映射到空白空间较少（可能为 15%）的磁盘页；而最稳定的应该映射到几乎没有空白空间（可能为 5%）的磁盘页。表的索引也必须用类似的规则映射。
+    </p>
+    <h5>
+        <b>磁盘页位置</b>
+    </h5>
+    <p>
+        各组表被映射后，数据库设计人员必须确定在哪里放置磁盘页。这里的目标是尝试平衡一些不同的驱动器和磁头之间的工作负载，来减少或消除瓶颈。请考虑以下指南：
+    </p>
+    <ul>
+        <li>
+            永远不要把数据放在与操作系统、它的临时文件或交换设备相同的磁盘上。 这些驱动器不用添加更多的工作负载就已经够忙的了。
+        </li>
+        <li>
+            将同时访问的数据放在不同的驱动器上，以平衡工作负载。一些系统支持并行 I/O 通道。如果是这种情况，请将数据放到不同的通道上。
+        </li>
+        <li>
+            将索引放到与它检索的数据不同的驱动器上，来分散工作负载。
+        </li>
+        <li>
+            参阅数据库供应商的文档，获得指南。
+        </li>
+        <li>
+            使用的存储器的类型（例如 RAID-5、RAID-10、SAN、NAS 和连接通道）影响数据库性能。利用存储器提供者提供的性能指南。
+        </li>
+    </ul>
+    <p>
+        数据库 I/O 一般是数据库性能的限制因素。I/O 平衡是一个迭代、实验的过程。通过在“精化”阶段对数据库访问性能构造原型，加上适当的检测来监视物理和逻辑 I/O，您可以在早期（尚有时间调整数据库设计时）发现性能问题。
+    </p>
+    <h5>
+        <b>磁盘空间分配</b>
+    </h5>
+    <p>
+        使用持久性设计机制的特征，估计必须存储的对象的数量。存储对象所需的磁盘空间的量因各个 RDBMS
+        而异。在计算磁盘空间时，请确保考虑到由于数据的添加而造成的增长。要估计数据库的磁盘空间，先要估计每个表所必需的磁盘空间，然后计算所有表的空间要求。请参阅特定的 RDBMS
+        产品的数据库管理员手册，以确定精确的大小估计公式。以下是估计表的空间要求的一些一般步骤：
+    </p>
+    <ul>
+        <li>
+            计算平均行大小。这个计算应该包含记录级别的任何控制信息，以及可变长度列所要求的任何控制信息。
+        </li>
+        <li>
+            计算将放入页或 I/O 块的行数。因为大多数数据库只在页或 I/O 块中存储完整的记录，所以这应该是将放入页或 I/O 块的整数行数。
+        </li>
+        <li>
+            计算在数据库中存储估计的记录数所需的页数或 I/O 块数。估计的记录数必须包含所有负载因子。
+        </li>
+        <li>
+            将所需的页数或 I/O 块数乘以页或 I/O 块的大小。
+        </li>
+        <li>
+            添加其他索引的任何开销。
+        </li>
+        <li>
+            为表添加任何固定开销。
+        </li>
+    </ul>
+    <p>
+        一旦定义了表空间要求：
+    </p>
+    <ul>
+        <li>
+            计算表所要求的空间的总数。
+        </li>
+        <li>
+            加入任何要进行数据库管理的、必需的固定空间量。
+        </li>
+        <li>
+            加入事务日志和审计跟踪所需的磁盘空间。&nbsp;
+        </li>
+    </ul>
+    <p>
+        在频繁更新的环境中，审计跟踪的保留需求要求有大量的存储量。主要商业数据库管理系统的文档通常提供详细的确定大小的指示信息。请确保在估算数据库磁盘空间需求时参阅这些指示信息。
+    </p>
+</blockquote>
+<h4>
+    <a id="Distribute Class behavior to the Database" name="Distribute Class behavior to the Database">设计存储过程来将类行为分发给数据库</a>
+</h4>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                确定存储过程或触发器是否应该用于实施数据访问类操作。
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    大多数数据库支持存储过程功能。存储过程是在数据库管理系统的进程空间内运行的可执行代码。它提供在服务器上执行与数据库相关的操作而不必在网络中传送数据的功能。对存储过程的明智的使用能提高系统的性能。
+</p>
+<p>
+    存储过程通常是这两种类型中的一个：实际过程或触发器。过程由应用程序显式执行，一般有参数，并提供显式返回值。
+    另一方面，触发器在某个数据库事件发生时（例如，插入行、更新行或删除行）隐式调用，除了被修改的行以外没有其他参数（因为是隐式调用的），而且不提供显式返回值。
+</p>
+<p>
+    在缺乏约束的数据库系统中，触发器经常用于实施参考完整性和数据完整性。否则，它们往往在事件需要触发（或造成）另一个事件时使用。 触发器还通过审计触发器事件，频繁用于安全性目的。
+</p>
+<p>
+    必须检验设计模型中的设计类来查看它们是否拥有应该用存储过程或触发器设施来实施的操作。候选者包括：
+</p>
+<ul>
+    <li>
+        任何主要处理持久数据的操作（创建、更新、检索或删除数据）。
+    </li>
+    <li>
+        计算中涉及查询的任何操作（例如计算库存中某产品的平均数量和价值）。
+    </li>
+    <li>
+        必须访问数据库以验证数据的操作。
+    </li>
+</ul>
+<p>
+    请记住，提高数据库性能通常意味着减少 I/O。因此，如果在 DBMS 服务器上执行计算将降低网络中传递的数据量，那么计算就可能应该在服务器上执行。
+</p>
+<p>
+    与设计类的设计人员合作，讨论数据库可以如何用于提高性能。 设计人员将更新操作方法，来指示一个或多个存储过程是否可以用于实施操作。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 复审结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Review the Results" name="Review the Results"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>目的</b>
+                </td>
+                <td width="95%">
+                    确保<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>的质量和完整性。
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    在此任务的整个过程中，您都必须一直考虑<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/data_model_D22985A5.html" guid="2.800761632096845E-305">核对表：数据模型</a>来评估工作的完整性和质量。此外，数据库设计人员必须定期复审数据库的已实施的结构，来确保数据模型与已经在数据库中直接作出的任何更改相一致。如果项目使用的数据建模工具支持数据模型与数据库的物理结构的同步，则数据库设计人员必须定期用数据库检查数据模型的状态，并在需要时作出调整。&nbsp;
+</p>
+<p>
+    已经确定但不在此时进行更正的缺陷必须记录在<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_change_request_F2E6419.html" guid="{694A7BC8-3D20-4172-BC56-6C7BD4590BA5}">变更请求</a>中，并最终分配给某人所有并产生解决方案。
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">核对表</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/data_model_D22985A5.html" guid="2.800761632096845E-305">数据模型</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">概念</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/conceptual_data_modeling_5CF78A88.html" guid="7.217811033438091E-305">概念性数据建模</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/relational_databases_and_object_orientation_1C67069E.html" guid="3.2166604011257303E-305">关系数据库和面向对象</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">数据模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/forward-engineering_relational_databases_53C0441E.html" guid="5.250868507423771E-305">正向设计关系数据库</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/modeling_and_designing_databases_C61A6907.html" guid="{C1A09291-4091-4300-AF91-B7715DE432F9}">使用 Rational Rose Data Modeler 设计和模型化数据库</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/database_design_51B0B5D9.html" guid="{A7B13419-14D8-4C55-B98C-497B2E17CC73}">使用 Rational XDE Developer 设计数据库</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/reverse_engineering_db_31C775E7.html" guid="{8F40AECA-8AAA-4409-81F0-BFB7B6BECDBC}">使用 Rational XDE Developer 反向设计数据库</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/forward_engineering_db_14F5AD0B.html" guid="{F55D370E-F820-4646-A0B8-C2242A07A83F}">使用 Rational XDE Developer 正向设计数据库</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/managing_db_ACA9AB6E.html" guid="{3B09E5BE-4AC8-4206-B9D8-4F85D36B9C75}">使用 Rational XDE Developer 管理数据库</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Applied Information Sciences 图标"                 src="./../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>此内容的全部或部分由 <a href="http://www.appliedis.com" target="_blank">Applied
+                Information Sciences</a> 开发。</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

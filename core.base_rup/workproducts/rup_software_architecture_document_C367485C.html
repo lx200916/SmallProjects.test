@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工件: 软件体系结构文档</title>
+<meta content="Artifact" name="uma.type">
+<meta content="rup_software_architecture_document" name="uma.name">
+<meta content="软件体系结构文档" name="uma.presentationName">
+<meta content="@Type:@Name:@DisplayName" name="uma.category">
+<meta content="WorkProductType:specification:规范" name="uma.category">
+<meta content="Artifact" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工件：软件体系结构文档</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../core.base_rup/workproducts/resources/doc_artf.jpg"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">该工作产品使用许多不同的体系结构视图来描述系统的多个方面，从而全面地概述系统的体系结构。</td>
+</tr>
+<tr>
+<td>域：<a href="./../../core.base_rup/domains/analysis_and_design_BD3BBB1D.html" guid="_kjFBYN7HEdm8G6yT7-Wdqw">分析与设计</a>
+<br>工作产品类型：<a href="./../../core.base_rup/workproducttypes/specification_435F570D.html" guid="_3aJCcN7REdmjRZts2c4ZjQ">规范</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    软件体系结构文档提供软件系统体系结构的全面概述。它用作<b>软件架构设计师</b>和其他<b>项目团队成员</b>之间的通信媒介，讨论已针对项目作出的体系结构方面的重要决策。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">负责人:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">修改者:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">任务</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">输入至:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/review_the_architecture_D27975CC.html" guid="{35BAFA92-EAF9-41E8-8BDE-AB9B61A68E04}">复审体系结构</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/construct_arch_proof_145E3656.html" guid="{63D0BC8C-1FE9-48F7-9B03-B2394C11DCB5}">构造体系结构概念验证</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">合并现有设计元素</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/prioritize_use_cases_E6E4D9A0.html" guid="{6E23D919-D149-43C2-9D37-8AF77B667CA8}">划分用例优先级</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">描述分发</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">描述运行时体系结构</a>
+</li>
+</ul>
+<br>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/define_test_approach_51A370C3.html" guid="{87F96887-83EF-4F0F-8F79-E98043406B52}">定义测试方法</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_test_ideas_395DAB3B.html" guid="{6FAD9DF9-DE4E-4BA5-9B9B-482A2366D1B9}">确定测试构想</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">确定设计机制</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">确定设计元素</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/implement_component_AE366827.html" guid="{3293F4F7-EFCD-4476-BFF1-81AC3812B512}">实施设计元素</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">体系结构分析</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">用例分析</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/develop_iteration_plan_144CF253.html" guid="{50EDC6A8-97B0-46C1-9B1C-7630DE286841}">制定迭代计划</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">输出自:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">构造实施模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">合并现有设计元素</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/prioritize_use_cases_E6E4D9A0.html" guid="{6E23D919-D149-43C2-9D37-8AF77B667CA8}">划分用例优先级</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">描述分发</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">描述运行时体系结构</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">确定设计机制</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">体系结构分析</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">流程使用情况</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">分析和设计</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/define_a_candidate_architecture_A3651DA3.html" guid="{71ADFE9A-34A0-41BD-8A17-BEA3210E2BBD}">定义候选体系结构</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_DAF8531C.html" guid="_Pu3DAUocEdqrjq4i3fchvA">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">分析和设计</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/perform_architectural_synthesis_B63930B9.html" guid="{C67C8E56-D9B6-499C-8171-C153FB28F1C3}">执行体系结构合成</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_40590572.html" guid="_COQSIxi2Edq_uI8xTPML6g">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">分析和设计</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/refine_the_architecture_F40FA195.html" guid="{F2160C54-F666-4736-9982-FC7F58F15FAD}">优化体系结构</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_7A057157.html" guid="_COWYthi2Edq_uI8xTPML6g">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">分析和设计</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/analyze_behavior_59C89065.html" guid="{DAFB461E-9ADB-4849-8285-B7E3E72BDB43}">分析行为</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_ED082073.html" guid="_CQXK5Ri2Edq_uI8xTPML6g">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/implementation_8FF0AAD4.html" guid="{F2AD342D-0F3B-4E19-A351-75ECDCB806F5}">实施</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_components_AFD1799D.html" guid="{4DC6F53E-1FE1-44EE-812B-003D3BD1ACEA}">实施组件</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_70A46067.html" guid="_FVsIYEofEdqrjq4i3fchvA">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/implementation_8FF0AAD4.html" guid="{F2AD342D-0F3B-4E19-A351-75ECDCB806F5}">实施</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/structure_the_implementation_model_505A84E.html" guid="{4C4FF747-885B-4569-A462-756C8ADD79AB}">构造实施模型</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_A98EE1BE.html" guid="_AS-cdEofEdqrjq4i3fchvA">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html" guid="{EA0C1D32-E39A-4D96-B956-E178DB776A96}">项目管理</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/plan_for_next_iteration_55840038.html" guid="{8040B743-6467-4067-8C0F-E62C3DE99414}">规划下一次迭代</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_D468EC0F.html" guid="_TI1SsUogEdqrjq4i3fchvA">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html" guid="{EA0C1D32-E39A-4D96-B956-E178DB776A96}">项目管理</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/Plan Remainder of Initial Iteration_F7FF0FA5.html" guid="_342gUBstEdqXHNTdjKtnvA">计划初始迭代的剩余部分</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_9CAE0F63.html" guid="__mSgIUofEdqrjq4i3fchvA">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/requirements_4EE062EE.html" guid="{38A9C609-9A59-4D03-B835-AA84A716E626}">需求</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/manage_the_scope_of_the_system_7E0B34E5.html" guid="{CA9197A9-051E-4845-A7FC-2A8750BD8C02}">管理系统范围</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_37F3A599.html" guid="_BCzRoDneEdqxANP9kNH4WA">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">测试</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/verify_test_approach_A743008A.html" guid="{7BD514AF-19F9-408F-8279-309BD153C157}">验证测试方法</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A557B7B.html" guid="_CTmsIxi2Edq_uI8xTPML6g">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">测试</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/improve_test_assets_1C99FFB9.html" guid="{CD77CBDA-CC13-4593-BB81-41AF3FF7A84C}">改善测试资产</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_3538707C.html" guid="_s10jYEoiEdqrjq4i3fchvA">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">测试</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/define_evaluation_mission_611C79D9.html" guid="{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5}">定义评估任务</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A01A65B.html" guid="_CWRlphi2Edq_uI8xTPML6g">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">测试</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/test_and_evaluate_4D17BD6A.html" guid="{93B7D625-C83A-4EFB-9772-B88F2EB02CE2}">测试和评估</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_AF7C6E88.html" guid="_-1-yo0ohEdqrjq4i3fchvA">软件体系结构文档</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">图示</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">模板</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.informal_resources/guidances/templates/software_architecture_document_informal_146E1F0.html" guid="1.803811802464695E-305">Software Architecture Document (Informal)</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">示例</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.informal_resources/guidances/examples/csps_software_architecture_document_-_elaboration_phase_66B745FA.html" guid="1.8186460940456451E-305">CSPS Software Architecture Document - Elaboration Phase</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">定制</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">说明选项</th><td class="sectionTableCell">以 UML 表示：一组相关的体系结构视图：用例、逻辑、流程、部署、实施和数据。
+<p>
+    <a id="Tailoring" name="Tailoring"></a>
+</p>
+<p>
+    您应调整<b>软件体系结构文档</b>的大纲以适合软件性质：
+</p>
+<ul>
+    <li>
+        某些体系结构视图可能是不相关的：
+        <ul>
+            <li>
+                对于单 CPU 系统不需要部署视图。
+            </li>
+            <li>
+                如果系统仅使用单控制线程，则不需要流程视图。
+            </li>
+            <li>
+                除非对象持久性是系统的重要方面<b>并且</b>持久性机制需要持久对象和非持久对象之间存在映射，否则不需要数据视图。
+            </li>
+        </ul>
+    </li>
+    <li>
+        软件的一些特定方面可能需要它们自己的部分；例如，与数据管理或可用性问题相关的方面。
+    </li>
+    <li>
+        可能需要附加的附录来解释某些方面，例如与已被消除的解决方案一起的某些关键选择的基本原理，或定义首字母缩写或缩写，或说明一般的设计原理。
+    </li>
+    <li>
+        根据系统的项目干系人以及他们的侧重点或感兴趣的方面，各个部分的顺序可能不同。
+    </li>
+</ul>
+<p>
+    每个体系结构视图的优点和缺点如下：
+</p>
+<h4>
+    用例视图
+</h4>
+<blockquote>
+    <p>
+        <b>该视图是必需的。</b>
+    </p>
+</blockquote>
+<h4>
+    逻辑视图
+</h4>
+<blockquote>
+    <p>
+        <b>该视图是必需的。</b>
+    </p>
+</blockquote>
+<h4>
+    流程视图
+</h4>
+<blockquote>
+    <p>
+        <b>该视图是可选的。</b>仅当系统有多个控制线程并且各个线程进行交互或彼此依赖时，才使用该视图。
+    </p>
+</blockquote>
+<h4>
+    部署视图
+</h4>
+<blockquote>
+    <p>
+        <b>该视图是可选的。</b>仅当系统分布在多个节点中时才使用该视图。即使在这些情况下，仅在分发具有体系结构意义的地方使用部署视图。例如，在有单个服务器和许多客户机的情况下，部署视图只需描述服务器以及作为节点类的客户机的职责，如果所有客户机都有相同的能力，则无需显示每个客户机节点。
+    </p>
+</blockquote>
+<h4>
+    实施视图
+</h4>
+<blockquote>
+    <p>
+        <b>该视图是可选的。</b>仅当没有严格地根据设计来进行实施时（即，在设计模型和实施模型中相对应的包之间有不同的职责分配）使用该视图。如果设计和实施模型的包是相同的，则可以省略该视图。
+    </p>
+</blockquote>
+<h4>
+    数据视图
+</h4>
+<blockquote>
+    <p>
+        <b>该视图是可选的。</b> 仅当持久性是系统的重要方面并且从设计模型到数据模型的转换不是由持久性机制自动完成时，才使用该视图。
+    </p>
+</blockquote><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">核对表</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/software_architecture_document_D261D8F3.html" guid="7.634303669338443E-306">软件体系结构文档</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">概念</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/software_architecture_4269A354.html" guid="3.066252221588648E-305">软件体系结构</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/logical_view_C135365E.html" guid="6.901347907565747E-305">逻辑视图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/process_view_E3DD0B09.html" guid="6.45284088262517E-306">流程视图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/implementation_view_E373E3B6.html" guid="4.693519701160983E-305">实施视图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/deployment_view_64CB74A6.html" guid="2.8416696002928195E-305">部署视图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/use-case_view_11F15731.html" guid="6.820983346069146E-305">用例视图</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/software_architecture_document_F4C93435.html" guid="2.9494785550310917E-305">软件体系结构文档</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

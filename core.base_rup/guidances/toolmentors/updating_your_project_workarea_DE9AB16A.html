@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational ClearCase 更新项目工作区</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="updating_your_project_workarea" name="uma.name">
+<meta content="使用 Rational ClearCase 更新项目工作区" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{12294137-8815-4CC8-B79E-09BE5046C6D8}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{12294137-8815-4CC8-B79E-09BE5046C6D8}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{12294137-8815-4CC8-B79E-09BE5046C6D8}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{12294137-8815-4CC8-B79E-09BE5046C6D8}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{12294137-8815-4CC8-B79E-09BE5046C6D8}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{12294137-8815-4CC8-B79E-09BE5046C6D8}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{12294137-8815-4CC8-B79E-09BE5046C6D8}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{12294137-8815-4CC8-B79E-09BE5046C6D8}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational ClearCase 更新项目工作区</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用已集成、已测试和已核准一般用于 Rational ClearCase 的工作来更新开发工作区。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    下图说明了 UCM 工作流程。 此工具向导中讨论了加阴影的区域。
+</p>
+<p>
+    <img height="129" alt="UCM 工作流程图" src="./../../../core.base_rup/guidances/toolmentors/resources/wflow_rebase.gif" width="332" border="0" />
+</p>在 UCM 模型中，从多个源交付的活动（工作）会集成和组织到基线中。通常，基线要经过测试和错误修正循环，直至达到满意的稳定级别。当基线达到该级别时，项目经理将其指定为流的建议基线。 
+<p align="left">
+    要以建议的基线处理一组版本，则重新为开发工作空间定基。 当交付活动时，要使必要合并的数量最小，则使用每个新建议的基线（当其变为可用时）重新为开发工作空间定基。
+</p>
+<p>
+    此工具向导在运行 Microsoft Windows 时适用。
+</p>
+<h3>
+    工具步骤
+</h3>重新定基操作包括以下任务： 
+<ol>
+    <li>
+        <a href="#Prepare your development view">准备开发视图</a>
+    </li>
+    <li>
+        <a href="#Start the rebase operation">启动重新定基操作</a>
+    </li>
+    <li>
+        <a href="#Merge files">合并文件</a>
+    </li>
+    <li>
+        <a href="#Test your development work area">测试开发工作空间</a>
+    </li>
+    <li>
+        <a href="#Complete the rebase operation">完成同步操作</a>
+    </li>
+</ol>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /></b> 有关此过程步骤的详细信息，请参考以下 ClearCase
+    联机帮助主题：
+</p>
+<ul>
+    <li>
+        <i>Comparing files, directories, and versions</i>
+    </li>
+    <li>
+        <i>Merging files, directories, and versions</i>
+    </li>
+</ul>
+<h3>
+    1.&nbsp;<a id="Prepare your development view" name="Prepare your development view">准备开发视图</a>
+</h3>
+<ol>
+    <li>
+        在开始重新定基操作之前，检入所有工作。ClearCase 只更新检入的文件和目录。ClearCase <b>Find Checkouts</b> 实用程序查找视图中的已检出版本。
+    </li>
+    <li>
+        浏览到开发工作空间。在左边窗格中，右键单击<b>视图</b>目录，然后单击 <b>ClearCase &gt; 查找检出</b>。
+    </li>
+</ol>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="15" nosave="nosave" /> 有关查找和检出工作的详细指示信息，请参考
+    ClearCase 联机帮助中 <i>Finding checked out elements</i> 主题。
+</p>
+<h3>
+    2.&nbsp;<a id="Start the rebase operation" name="Start the rebase operation">启动同步操作</a>
+</h3>
+<ol>
+    <li>
+        从连接到开发流的视图开始重新定基操作。&nbsp;
+    </li>
+    <li>
+        “重新定基流预览”对话框显示项目的建议基线以重新定基。当开始重新定基操作时，它执行文件合并，并且在遇到必须手动解决的文件冲突时通知您。&nbsp;
+    </li>
+</ol>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="15" nosave="nosave" /> 有关此过程的详细指示信息，请参考
+    ClearCase 联机帮助中的 <i>To start a rebase operation</i> 主题。
+</p>
+<h3>
+    3.&nbsp;<a id="Merge files" name="Merge files">合并文件</a>&nbsp;
+</h3>
+<ol>
+    <li>
+        ClearCase 将开发流中的工作和集成流中的工作合并起来，自动完成不重要的合并。&nbsp;&nbsp;
+    </li>
+    <li>
+        如果发生严重的合并冲突，则同步操作会启动 <b>DiffMerge</b> 实用程序并提示您解决冲突。&nbsp;
+    </li>
+</ol>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="15" /> 有关此过程中步骤的详细信息，请参考 ClearCase 联机帮助中的
+    <i>Merging files, directories, and versions</i>主题。
+</p>
+<h3>
+    4.&nbsp;<a id="Test your development work area" name="Test your development work area">测试开发工作空间</a>
+</h3>
+<ol>
+    <li>
+        构建和测试开发视图中的源文件，以验证已使用基线中的版本成功构建未交付的活动。&nbsp;
+    </li>
+    <li>
+        在重新定基之后，构建和测试开发视图中的源文件，以验证已使用基线中的版本成功构建了未交付的活动。
+    </li>
+</ol>
+<h3>
+    5.&nbsp;<a id="Complete the rebase operation" name="Complete the rebase operation">完成同步操作</a>&nbsp;
+</h3>
+<p>
+    完成重新定基操作由两个任务组成：检入所有合并结果和将操作状态更改为完成。&nbsp;
+</p>
+<ol>
+    <li>
+        测试工作之后，在“同步状态”对话框中单击<b>完成</b>。&nbsp;
+    </li>
+    <li>
+        ClearCase 检入所有已检出到开发视图的版本并通知开发流重新定基操作完成。
+    </li>
+    <li>
+        单击<b>关闭</b>退出该对话框。
+    </li>
+</ol>
+<p>
+    <img height="15" alt="手册图标" hspace="0" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 有关每一步的详细信息，请参阅 ClearCase
+    手册 <i>Developing Software</i> 中的“Rebasing Your Work Area”。&nbsp;
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

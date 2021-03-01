@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 接口</title>
+<meta content="Guideline" name="uma.type">
+<meta content="interface" name="uma.name">
+<meta content="接口" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "3.6682388132488183E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "3.6682388132488183E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{C6938487-1DAA-4F6A-B3BC-CB99165F0680}", "3.6682388132488183E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.6682388132488183E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.6682388132488183E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：接口</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">接口用来表示系统的用户视图并隐藏它的实施。本指南建议使用一组规则来控制接口规范。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">接口</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Topics" name="Topics"></a> 
+<h3>
+    <a id="XE_interface__naming" name="XE_interface__naming" class="index" key="接口（interface）" text="命名"></a><a id="Naming Interfaces" name="Naming Interfaces">命名接口</a> <a href="#Topics"><img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<ul>
+    <li>
+        命名接口，以反映它在系统中担当的角色。
+    </li>
+    <li>
+        名称应简短，1 到 2 个单词。
+    </li>
+    <li>
+        名称中不要包含“<b>interface</b>”一词；它通过模型元素的类型（例如 <b>interface</b>）来暗示
+    </li>
+</ul>
+<h3>
+    <a id="XE_interface__describing" name="XE_interface__describing"></a><a id="Describing Interfaces" name="Describing Interfaces">描述接口</a> <a href="#Topics"><img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<ul>
+    <li>
+        描述应表达接口的职责。
+    </li>
+    <li>
+        描述的长度应是几句话，最长可为一小段。
+    </li>
+    <li>
+        描述不应只是重述一遍接口的名称，而应说明接口在系统中担当的角色。
+    </li>
+</ul>
+<h3>
+    <a id="XE_interface__defining_operations" name="XE_interface__defining_operations"></a><a id="Defining Operations" name="Defining Operations">定义操作</a> <a href="#Topics"><img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<ul>
+    <li>
+        操作名称应反映操作的结果。
+    </li>
+    <li>
+        当操作<b>设置</b>或<b>获取</b>信息时，在操作的名称中包含 <b>set</b> 或 <b>get</b>
+        就多余了。应对操作和正被设置或检索的模型元素的属性赋予相同的名称。这样命名的操作，如果不带参数，则检索属性；这样命名的操作，如果<b>带</b>参数，则<b>设置</b>属性。
+    </li>
+</ul>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    <b>name()</b> 返回对象的名称；<b>name(aString)</b> 将对象的名称设置为 <b>aString</b>。
+</p>
+<ul>
+    <li>
+        操作的描述应说明操作要<b>做什么</b>，包括所有主要算法以及它返回<b>何值</b>。
+    </li>
+    <li>
+        操作参数的命名应指示正将何种信息传递给操作。
+    </li>
+    <li>
+        确定参数的<b>类型</b>。
+    </li>
+</ul>
+<h3>
+    <a id="XE_interface__documenting" name="XE_interface__documenting"></a><a id="Documenting Interfaces" name="Documenting Interfaces">记录接口</a> <a href="#Topics"><img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    由接口定义的行为被指定为一组操作。可能需要传达附加信息：
+</p>
+<ul>
+    <li>
+        如何使用操作，以及这些操作的执行顺序（用示例时序图说明）。
+    </li>
+    <li>
+        实现该接口的模型元素可能所处的、外部可观察到的可能状态（通过状态机说明，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">指南：状态表图</a>）。
+    </li>
+    <li>
+        测试计划和脚本，它们测试任何实现该接口的模型元素的行为。
+    </li>
+</ul>
+<p>
+    为了对这些信息进行分组和管理，应创建一个包来包含该接口和所有相关工作产品。
+</p>
+<h3>
+    <a id="Hints and Tips" name="Hints and Tips">提示与技巧</a> <a href="#Topics"><img height="20" alt="回到页首"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    每个接口代表系统中的一条“接缝”：系统可以在该处“分开”并重新构建或重新设计。接口代表了规范与设计或实施的分离。 构造良好的接口应：
+</p>
+<ul>
+    <li>
+        简单却又完整，提供所有必要的操作，却又足以指定单项服务
+    </li>
+    <li>
+        可理解，提供的信息足以使用和实现接口，而不必检查现有用法或实施
+    </li>
+    <li>
+        易使用，提供信息以指导用户利用接口的主要属性，而不需要深入了解操作的细节
+    </li>
+</ul>
+<p>
+    当您绘制接口时，
+</p>
+<ul>
+    <li>
+        只要需要简单地指出系统中存在接缝，就可使用“棒棒糖”符号表示法。 最常见的情况是，您需要将此用于子系统而不是用于类。
+    </li>
+    <li>
+        在您需要表示服务本身的详细信息时，使用扩展的“类”表示法。最常见的情况是，您需要将此用于指定包或子系统提供的服务。
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 软件集成</title>
+<meta content="Concept" name="uma.type">
+<meta content="software_integration" name="uma.name">
+<meta content="软件集成" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{502B4138-0772-4A4E-A183-C647497AFCB8}", "4.2039054537812067E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{502B4138-0772-4A4E-A183-C647497AFCB8}", "4.2039054537812067E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "4.2039054537812067E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.2039054537812067E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：软件集成</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">该指南描述了一些将软件组件集成到系统中的方法。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_integrator_284A604C.html" guid="{502B4138-0772-4A4E-A183-C647497AFCB8}">集成人员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_integration__introduction_to" name="XE_integration__introduction_to" class="index" key="集成（integration）" text="简介"></a> 
+<p>
+    术语“集成”指的是一种软件开发活动，在该活动中将独立的软件组件合并成整体。在几个实施级别和阶段完成集成：
+</p>
+<ul>
+    <li>
+        在将子系统发布给系统集成者之前，集成在同一实施子系统中工作的团队的工作。
+    </li>
+    <li>
+        将子系统集成至完整系统。
+    </li>
+</ul>
+<p>
+    Rational Unified Process 的集成方法是<b>递增地</b>集成软件。递增地集成表示一小段一小段地编写和测试代码，然后合并到一个整体的工作版本中（一次添加一小段）。
+</p>
+<p>
+    与递增集成相对的方法是<b>阶段集成</b>。阶段集成依赖于一次集成多个（新的和已更改的）组件。阶段集成的主要缺点是引入了多个变量并且难以定位错误。这主要是由于错误有可能在任何一个新组件中、在系统核心处的新组件之间的交互中或在新组件之间的交互中。
+</p>
+<p>
+    <a id="XE_integration__benefits_of" name="XE_integration__benefits_of"></a>递增集成的好处有：
+</p>
+<ul>
+    <li>
+        <b>容易定位故障。</b>在递增集成期间发生新问题时，新的或已更改的组件或其与先前集成的组件的交互是查找错误的明显位置。递增集成也使其更可能一次发现一个缺陷，使得易于识别故障。
+    </li>
+    <li>
+        <b>更完整地测试组件。</b>在已开发和测试组件之后再集成它。这表示与在一个步骤中完成集成相比，更频繁地使用组件。
+    </li>
+    <li>
+        <b>某些工作更早执行。</b>开发人员可以更早地看到他们的工作成果，而不用等到所有工作结束，有利于提高士气。这样还可能获得早期反馈。
+    </li>
+</ul>
+<p>
+    理解在<b>每个迭代中</b>进行至少一次集成非常重要。迭代计划定义了要设计的用例以及要实施的类。集成策略的侧重点是确定类的实施和组合顺序。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

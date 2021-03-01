@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational ClearCase 通过 UCM 设置实施模型</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="setting_up_impl_model_with_ucm" name="uma.name">
+<meta content="使用 Rational ClearCase 通过 UCM 设置实施模型" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{10964F4E-39B2-4D34-9A75-3B6360B47C2B}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational ClearCase 通过 UCM 设置实施模型</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本工具向导描述如何使用 Rational ClearCase 统一变更管理（UCM）来建立配置管理环境。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">构造实施模型</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/setup_cm_environment_78ABEDF9.html" guid="{FC91D0C9-759E-4D3D-86D8-22D7B26AA0F6}">建立配置管理（CM）环境</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    下图说明管理 UCM 项目的工作流程。此工具向导中讨论了加阴影的区域。
+</p>
+<p>
+    <img height="163" alt="UCM 工作流程图" src="./../../../core.base_rup/guidances/toolmentors/resources/wflow_create_proj.gif" width="536" border="0" />
+</p>
+<p>
+    此工具向导在运行 Microsoft Windows 时适用。 它描述了在完整 ClearCase 中可用的特性。
+</p>
+<h4>
+    术语
+</h4>
+<p>
+    RUP 术语和 ClearCase 所用的术语之间存在一些差别。以下特定于工具的术语的定义将有助于阐明这些差别。
+</p>
+<ul>
+    <li>
+        <b>活动</b>：ClearCase 活动紧密映射到 RUP <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_work_order_CFBC805B.html" guid="{18DB40A1-6272-467A-AC68-B2C4BE1DCD6C}">工作单</a>。请勿将其与 RUP 概念<a class="elementLinkWithUserText" href="./../../../core.base_concepts/guidances/termdefinitions/activity_1D028230.html" guid="_yoVhMB_IEdq6CKKKq4D7YA">术语定义：活动</a>相混淆。
+    </li>
+    <li>
+        <b>配置管理</b>：在 ClearCase 中，术语“配置管理”的使用是指版本控制和工作版本管理。RUP 使用<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/configuration_management_ECFE6290.html" guid="_yEPD19nmEdmO6L4XMImrsA">术语定义：配置管理</a>（CM）的 IEEE 和 ISO 定义，“配置管理”还包括“变更管理”。&nbsp;
+    </li>
+    <li>
+        <b>配置和变更管理</b>：ClearCase 和 Rational ClearQuest 都指配置和变更管理，它类似于<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/configuration_management_ECFE6290.html" guid="_yEPD19nmEdmO6L4XMImrsA">术语定义：配置管理</a>的 RUP 定义。RUP 以相同的含义使用这些术语。
+    </li>
+    <li>
+        <b>项目</b>：ClearCase 项目映射到 RUP <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_repository_E3932821.html" guid="{A99B1686-7BD7-43B3-9A7F-7DB18A10F4B2}">项目存储库</a>。
+    </li>
+</ul>
+<h4>
+    工具步骤
+</h4>
+<p>
+    要设置 UCM 项目：
+</p>
+<ol>
+    <li>
+        <a href="#1">创建用于存储项目信息的存储库</a>
+    </li>
+    <li>
+        <a href="#2">创建包含开发人员处理的一组文件的组件</a>
+    </li>
+    <li>
+        <a href="#3">创建确定文件版本的基线，开发人员使用这些版本开始工作</a>
+    </li>
+    <li>
+        <a href="#4">创建 UCM 项目</a><br />
+         &nbsp;
+    </li>
+</ol>
+<h3>
+    1.&nbsp;<a id="1" name="1">创建用于存储项目信息的存储库</a>
+</h3>
+<p>
+    ClearCase 项目需要项目 VOB（PVOB），它用于存储 UCM 对象和有关信息。
+</p>
+<ol>
+    <li>
+        要启动“VOB 创建向导”，请从 Windows 任务栏中，单击<b>开始 &gt; 程序 &gt; Rational Software &gt; Rational ClearCase &gt; 管理 &gt; 创建
+        VOB</b>。
+    </li>
+    <li>
+        在第一个屏幕上，确保选中了 <b>UCM 项目数据</b>复选框。&nbsp;
+    </li>
+    <li>
+        选择<b>帮助</b>，帮助会提供完成该向导的指导。&nbsp;&nbsp;
+    </li>
+</ol>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 请参考 ClearCase 联机帮助中的主题 <i>VOB Creation
+    Wizard</i>，以获取详细信息。&nbsp;&nbsp;
+</p>
+<h3>
+    2.&nbsp;<a id="2" name="2">创建</a><a id="2" name="2">包含开发人员开发的文件集的组件</a>
+</h3>
+<p>
+    组件用于将一组相关目录和文件元素组织到 UCM 项目中。通常情况下，您开发、集成和发行一起组成一个组件的元素。项目必须包含至少一个组件，且可以包含多个组件。项目可以共享组件。
+</p>
+<p>
+    可以使用 VOB 创建向导创建组件：
+</p>
+<ol>
+    <li>
+        单击<b>开始 &gt; 程序 &gt; Rational ClearCase 管理 &gt; 创建 VOB</b>。&nbsp;
+    </li>
+    <li>
+        在向导的第一步，选中<b>将 VOB 创建为 UCM 组件</b>。新建的 VOB 可供 UCM 项目用作组件。&nbsp;
+    </li>
+</ol>
+<p>
+    也可以通过将现有 VOB 转换为组件，来将存储在 VOB 中的现有数据迁移到 UCM 项目中：
+</p>
+<ol>
+    <li>
+        浏览到 ClearCase Project Explorer。从 Windows 任务栏单击<b>开始 &gt; 程序 &gt; Rational Software &gt; Rational ClearCase &gt;
+        Project Explorer</b>。
+    </li>
+    <li>
+        选择 PVOB 的根文件夹。&nbsp;
+    </li>
+    <li>
+        单击<b>工具</b> &gt; <b>导入 VOB</b>。出现“导入 VOB”对话框。在“可用 VOB”列表中，选择要制成组件的 VOB。&nbsp;
+    </li>
+    <li>
+        要将 VOB 移至<b>要导入的 VOB</b> 列表中，请单击<b>添加</b>。&nbsp;&nbsp;
+    </li>
+    <li>
+        完成时，单击<b>导入</b>。
+    </li>
+</ol>
+<p>
+    <img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" /> 请参阅 ClearCase 手册 <i>Managing Projects</i>
+    中的主题“Creating Components”。
+</p>
+<h3>
+    3.&nbsp;<a id="3" name="3">创建</a>标识开发人员开始工作的文件版本的基线。
+</h3>
+<p>
+    基线对组件的每个元素确定一个版本，表示可从中开始工作的稳定的源配置。UCM 模型需要使用它们来访问组件的文件和目录。
+</p>
+<p>
+    当从头开始创建 ClearCase 组件时，它们是随初始基线一起创建的。
+</p>
+<p>
+    如果将基本 ClearCase VOB 转换为组件，则可以从现有的已标注版本建立基线。 检查最新的稳定版本是否已标注。如果尚未标注，则需要创建一个标签类型并将其应用于计划包含在项目中的版本。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 有关详细信息，请参阅 ClearCase 联机帮助中的主题 <i>Using
+    the Apply Label Wizard</i>。
+</p>
+<p>
+    要从由标签类型标识的一组版本中创建基线：
+</p>
+<ol>
+    <li>
+        在 ClearCase Project Explorer 中，选择 PVOB 的根文件夹。单击<b>工具</b> &gt; <b>导入标签</b>。 出现“导入标签向导”。
+    </li>
+    <li>
+        在<b>可用组件</b>列表中，选择一个组件，该组件包含创建基线所依据的标签。
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            要将组件移至<b>选定组件</b>列表中，请单击<b>添加</b>。
+        </li>
+        <li>
+            完成后单击<b>下一步</b>。&nbsp;
+        </li>
+    </ul>
+</blockquote>
+<ol start="3">
+    <li>
+        在“导入标签向导”的步骤 2 中，选择要导入的标签类型。输入基线名称，该基线是为由标签类型标识的版本创建的。选择基线的提升级别。 单击<b>完成</b>。
+    </li>
+</ol>
+<p>
+    此过程创建一个项目基本基线，它确定开发人员要用于开始工作的文件版本。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 请参考 ClearCase 联机帮助中的 <i>Create and
+    manage baselines</i> 主题。
+</p>
+<h3>
+    4.&nbsp;<a id="4" name="4">创建 UCM 项目</a>
+</h3>
+<p>
+    在创建了将要使用的项目 VOB 和组件之后，就可以创建 UCM 项目了。要执行此操作，必须提供项目名称并确定该项目的项目组件和基线。ClearCase 提供了“新建项目向导”，引导您完成此过程的步骤。
+</p>
+<ol>
+    <li>
+        在 ClearCase Project Explorer 中，选择 PVOB 的根文件夹。从弹出菜单中单击<b>创建新项目</b>，以启动该向导。
+    </li>
+    <li>
+        遵循该向导提供的步骤。单击每个屏幕上的<b>帮助</b>按钮可获取每个步骤的帮助。
+    </li>
+    <li>
+        在向导的步骤 3，添加要用于该项目的组件基线，指定在上述<a href="#3">过程 3</a> 中创建的基线。
+    </li>
+    <li>
+        向导的下两个步骤要求您指定项目的详细配置信息，包括开发策略和是否允许项目使用 Rational 变更请求数据库。 可以定制配置以符合项目的特定需要。有关所有可用选项的描述，请参阅联机帮助。
+    </li>
+</ol>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 有关此过程的概述，请参考 ClearCase 联机帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Workflow for creating projects&nbsp;</i>
+    </li>
+    <li>
+        <i>New Project Wizard</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

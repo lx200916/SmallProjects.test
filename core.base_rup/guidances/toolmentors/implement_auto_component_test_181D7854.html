@@ -1,0 +1,620 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational QualityArchitect 实现自动化组件测试</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="implement_auto_component_test" name="uma.name">
+<meta content="使用 Rational QualityArchitect 实现自动化组件测试" name="uma.presentationName">
+<meta content="Tool:rup_quality_architect:Rational QualityArchitect" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational QualityArchitect" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{11A91795-5221-4C65-A9DE-EE431CEA6993}", "{CE38BCE7-D8E1-460F-ADF0-1FC94CB1D7E2}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{11A91795-5221-4C65-A9DE-EE431CEA6993}", "{CE38BCE7-D8E1-460F-ADF0-1FC94CB1D7E2}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{11A91795-5221-4C65-A9DE-EE431CEA6993}", "{CE38BCE7-D8E1-460F-ADF0-1FC94CB1D7E2}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{CE38BCE7-D8E1-460F-ADF0-1FC94CB1D7E2}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational QualityArchitect 实现自动化组件测试</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导概述通过 Rational QualityArchitect 执行的单元测试任务。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_quality_architect_3444CDC5.html" guid="{11A91795-5221-4C65-A9DE-EE431CEA6993}">Rational QualityArchitect</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">实施开发人员测试</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/perform_developer_test_512B18D9.html" guid="{55EAEE66-A254-457F-BCC3-D1C21ED88134}">执行开发人员测试</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    此工具向导概述通过 Rational QualityArchitect 执行的四个主要单元测试任务：
+</p>
+<ul>
+    <li>
+        单元测试
+    </li>
+    <li>
+        场景测试
+    </li>
+    <li>
+        存根生成
+    </li>
+    <li>
+        EJB 会话记录
+    </li>
+</ul>
+<p>
+    将测试推迟到可将所有组件汇编为一个完整系统的开发流程是风险很高的做法。在生命周期中过晚发现的缺陷将更难修正，因此更可能导致在进度安排上发生严重延迟，尤其是当这些缺陷是体系结构方面的问题时，可能需要大量的重新设计才能更正这些问题。
+</p>
+<p>
+    即使某个团队在系统组件的质量上拥有相当高的置信度，系统的总体置信度仍然有可能低到难以接受。例如，假设由五个组件组成的一个简单系统，每个组件的可靠度评为
+    95％（无论是按照测试覆盖率度量还是按照量化程度较低的方法）。由于系统可靠度是累积计算的，因此总体等级为 95% x 95% x 95% x 95%x 95%，也就是刚刚超过
+    77%。尽管任何单个组件发生问题的可能性只有百分之五，对于整个系统则将近百分之二十五，这还是组件相对较少的系统。
+</p>
+<p>
+    反之，将组件测试结合到整个迭代开发流程中的开发流程则具有若干明显的好处：
+</p>
+<ul>
+    <li>
+        可以在隔离环境中找到并更正问题，从而使这些问题不仅更容易修复，还更容易检测和诊断。
+    </li>
+    <li>
+        由于整个生命周期中测试和开发都紧密结合，因此对进度的评估更为可靠 － 现在查看进度可以了解项目的编码工作和测试工作执行了多少，而不仅仅是编码工作执行了多少。
+    </li>
+    <li>
+        将由于难以预料的问题而导致的进度安排方面的中断降到了最低，从而使总体进度安排更切实际，也就降低了项目的风险。
+    </li>
+</ul>
+<p>
+    尽管早期就进行测试的益处很多，但这种做法却远远没有普及，尤其是测试那些 GUI 很少的中间层组件时。
+</p>
+<p>
+    为什么？因为这既费时间，又枯燥乏味；在过去，克服这些实际问题的开销经常会超过带来的好处。同时，由于大多数测试都是针对特定组件定制的，因此几乎不能复用。许多组织都意识到了以下做法是一种浪费：从头构建测试装置和存根，使用它们，然后逐个项目的将它们抛弃。他们更倾向于将有限的资源重点用在其他方面。
+</p>
+<p>
+    使用
+    QualityArchitect，早期测试真正变得切实可行，因为测试装置和存根是自动生成的：不是仅仅一次性的，而是随着模型在整个开发过程中的演进而发生增量变化。由于组件测试的结果有利于使用更高的入口条件来防止不成熟的系统测试，因此整个开发流程的结构性、测量度和可视度更高。QualityArchitect
+    使开发人员可以将重点放在定义测试的创新方面，因此可以将时间用在考虑运用组件的最佳方式上，而不是用在编写和调试测试驱动程序和存根上。开发人员和架构设计师密切合作来使用共享可视模型，因此彼此自然形成更具建设性的关系。
+</p>
+<p>
+    在运行 98/2000/NT 4.0 时此工具向导可用。
+</p>
+<h4>
+    工具步骤
+</h4>
+<p>
+    此工具向导涵盖以下与使用 QualityArchitect 实施自动化组件测试有关的主要任务：
+</p>
+<ol>
+    <li>
+        <a href="#Prerequisite steps for unit testing">单元测试的必备步骤</a>
+    </li>
+    <li>
+        <a href="#Implement a unit test">实施单元测试</a>
+    </li>
+    <li>
+        <a href="#Implement a scenario test">实施场景测试</a>
+    </li>
+    <li>
+        <a href="#Create a stub component">创建存根组件</a>
+    </li>
+    <li>
+        <a href="#Using the EJB session recorder">使用 EJB 会话记录器</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp; <a id="Prerequisite steps for unit testing" name="Prerequisite steps for unit testing">单元测试的必备步骤</a>
+</h3>
+<p>
+    要使用 QualityArchitect 生成任何测试，无论这些测试是否针对 COM 或 EJB 组件，都必须使用 Rational Administrator 创建并配置一个 Rational
+    项目。该项目必须包含一个测试数据存储来存储所有测试资产，如测试结果和数据池。<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/configure_projects_82600862.html" guid="{63D2EE2A-A8D2-4A1D-BC41-8D62E9DA7CBF}">工具向导：使用 Rational Administrator 配置项目</a>中描述了这些内容。
+</p>
+<h3>
+    2.&nbsp;&nbsp; <a id="Implement a unit test" name="Implement a unit test">实施单元测试</a>
+</h3>
+<p>
+    单元测试的目标是验证对给定组件执行给定操作是否可为给定输入集提供正确的返回值。单元测试是按照逻辑视图中的类规范创建出来的。创建和执行单元测试的过程由三个步骤组成：
+</p>
+<ul>
+    <li>
+        生成单元测试代码
+    </li>
+    <li>
+        生成单元测试数据
+    </li>
+    <li>
+        执行测试并检查结果
+    </li>
+</ul>
+<h4>
+    生成单元测试代码
+</h4>
+<p>
+    单元测试代码包含实例化组件、调用被测试操作和针对基线检查返回结果所需的所有指令。
+</p>
+<h5>
+    对于 COM 组件
+</h5>
+<ol>
+    <li>
+        在“逻辑”视图的组件界面中选择要测试的操作。
+    </li>
+    <li>
+        右键单击组件的界面下列出的操作，并选择 <b>Rational Test &gt; 生成单元测试</b>。如果此过程中出现提示，则可能必须登录 Rational Project。
+    </li>
+</ol>
+<blockquote>
+    <p>
+        QualityArchitect 生成 Visual Basic 6 兼容代码作为此过程的输出。
+    </p>
+</blockquote>
+<p>
+    您首先需要通过 Visual Basic 尝试编译这些代码。所有编译错误都需要检查。在某些情况下，QualityArchitect 不能生成代码来测试那些大量使用复杂数据类型的操作。如果出现这种情况，QualityArchitect
+    将插入无效代码，这些无效代码在编译时将突出显示需要手动编码的代码段。这些代码编译后，您可以继续到下一步（<a href="#GeneratingUnitTestData">生成单元测试数据</a>）。
+</p>
+<h5>
+    对于 EJB 组件
+</h5>
+<ol>
+    <li>
+        从远程界面的“逻辑”视图中选择要测试的操作。
+    </li>
+    <li>
+        右键单击操作并选择 <b>Rational Test &gt; 选择单元测试模板</b>。
+    </li>
+    <li>
+        浏览至对应于 EJB 服务器的相应模板。对于 WebSphere，请在 EJBWebSphereBusiness Methods 文件夹中选择 websphere_remote.template。对于 Web Logic，请在
+        EJBWeb LogicBusiness Methods 文件夹中选择 weblogic_remote.template。
+    </li>
+    <li>
+        选择 <b>Rational Test &gt; 生成单元测试</b>。如果此过程中出现提示，则可能必须登录 Rational Project。 &nbsp;
+    </li>
+</ol>
+<blockquote>
+    <p>
+        QualityArchitect 将生成 Java 代码作为此过程的输出。
+    </p>
+    <p>
+        您可使用 IDE 或自己选择的编辑器检查这些 Java 代码。Rational Rose 中随附了 R2 编辑器，该编辑器可用于此目的。
+    </p>
+</blockquote>
+<p>
+    一旦打开了编辑器，就可以首先尝试编译这些代码。所有编译错误都需要检查。在某些情况下，QualityArchitect 不能生成大量使用复杂数据类型的代码。如果出现这种情况，QualityArchitect
+    将插入无效代码，这些无效代码将不编译，而是标记出需要手动编码的代码行。这些代码编译后，您可以继续到下一步（<a href="#GeneratingUnitTestData">生成单元测试数据</a>）。
+</p>
+<h4>
+    <a id="GeneratingUnitTestData" name="GeneratingUnitTestData">生成单元测试数据</a>
+</h4>
+<p>
+    衡量单元测试是否成功的真正标准为测试数据。测试代码本身完全可以自由丢弃，因为 QualityArchitect 随时都可以重新生成这些代码。虽然 QualityArchitect
+    可以创建测试代码，但是它不能创建有意义的测试数据。而这是分析人员或实施者的职责。创建用于验证具有代表性的正面及负面测试的测试数据时需要当心。那些将重点放在组件逻辑的边界条件上的测试数据是单元测试数据的极佳候选对象。
+</p>
+<h5>
+    对于 COM 组件
+</h5>
+<ol>
+    <li>
+        在“逻辑”视图的组件界面中选择要测试的操作。
+    </li>
+    <li>
+        右键单击操作并选择 <b>Rational Test &gt; 创建数据池</b>。
+    </li>
+    <li>
+        一旦选择<b>创建数据池</b>之后，就会显示“数据池属性”对话框。此时，可以选择<b>编辑数据池数据</b>以开始输入数据，也可以选择<b>定义数据池字段</b>以使 QualityArchitect 生成测试数据。
+    </li>
+</ol>
+<h5>
+    对于 EJB 组件
+</h5>
+<ol>
+    <li>
+        从远程界面的“逻辑”视图中选择要测试的操作。
+    </li>
+    <li>
+        右键单击远程界面中列出的操作，并选择“Rational Test &gt; 创建数据池”。
+    </li>
+    <li>
+        一旦选择<b>创建数据池</b>之后，就会显示“数据池属性”对话框。此时，可以选择<b>编辑数据池数据</b>以开始输入数据，也可以选择<b>定义数据池字段</b>以使 QualityArchitect 生成测试数据。
+    </li>
+</ol>
+<h5>
+    <a id="Working with Datapools" name="Working with Datapools">处理数据池</a>
+</h5>
+<p>
+    如果选择<b>定义数据池字段</b>，则可以使用 QualityArchitect 的测试数据生成功能。QualityArchitect 可以生成各种类型的普通数据，这些类型在<b>类型</b>字段的数据类型下拉列表中指定。&nbsp;
+</p>
+<p>
+    选择了相应类型之后，请选择要生成的行数并单击<b>生成数据</b>。QualityArchitect 很可能无法为您生成全部数据。例如，QualityArchitect
+    可以生成美国城市的一般列表，但不能为订购系统生成特定于系统的有效发票号列表。这些数据必须作为数据类型手动输入，或直接输入数据池中。使用定制数据创建数据类型的价值在于：QualityArchitect
+    可由此通过“定义数据池字段”界面生成这种类型的数据。如果将数据直接输入数据池，则这些数据仅可用于此特定数据池。
+</p>
+<p>
+    选择了<b>编辑数据池数据</b>之后，您可以直接输入有意义的测试数据。将有一个字段用于各参数，一个字段用于预期返回，一个字段用于预期错误。指定错误时，错误号和文本错误消息均为有效输入。如果操作需要一个复杂对象来作为参数，或应返回复杂对象，您将不能在数据池中插入该对象引用。
+    请将此对象分解为构造对象实例所需的简单参数类型。请使用<b>在前插入</b>和<b>在后插入</b>按钮为此目的向数据池添加字段。必须修改此测试代码，才能使用提供的数据构造对象的实例。
+</p>
+<h4>
+    执行测试并检查结果
+</h4>
+<p>
+    一旦创建了测试代码和测试数据，就可以运行测试了。您可以从 IDE 运行测试，也可以在 TestManager 套件中安排测试的时间。请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/executing_test_suite_AF13B74.html" guid="{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}">工具向导：使用 Rational TestManager 执行测试套件</a>，以获得有关此主题的更多信息。
+</p>
+<ol>
+    <li>
+        测试开始运行时，会提示您提供存储测试日志结果的位置。一旦指定了位置，TestManager 会将测试的运行结果存储在那里。
+    </li>
+    <li>
+        运行结束时，TestManager 会显示测试日志。要查看测试结果，请选择“日志查看器”窗口的<b>详细视图</b>选项卡。展开结果的树视图可查看测试的运行详细信息。 右键单击任意行并选择<b>属性</b>可查看更多信息。
+    </li>
+</ol>
+<h3>
+    3.&nbsp;&nbsp; <a id="Implement a scenario test" name="Implement a scenario test">实施场景测试</a>
+</h3>
+<p>
+    场景测试的目的是验证在一系列给定组件上执行的一系列给定操作组合起来是否可正确执行集合体任务。场景测试通过交互图（尤其是时序图和协作图）创建。创建和执行单元测试的过程由以下三个步骤组成：
+</p>
+<ul>
+    <li>
+        生成场景测试代码
+    </li>
+    <li>
+        生成场景测试数据
+    </li>
+    <li>
+        执行测试并检查结果
+    </li>
+</ul>
+<h4>
+    生成场景测试代码
+</h4>
+<p>
+    场景测试代码由下列操作所需的全部测试驱动程序代码组成：实例化组件、调用被测试的操作，以及使用验证点评估这些操作的结果。验证点是测试代码可用于对数据库运行 SQL 语句来验证底层数据的处理是否正确的一种机制。
+</p>
+<h5>
+    对于 EJB 组件
+</h5>
+<ol>
+    <li>
+        在浏览器中选择协作图。
+    </li>
+    <li>
+        右键单击图并选择 <b>Rational Test &gt; 选择场景测试模板</b>。
+    </li>
+    <li>
+        浏览至对应于 EJB 服务器的相应模板。对于 WebSphere，请在 EJBWebSphereScenario 文件夹中选择 websphere<sub>_</sub>scenario.template。对于 Web
+        Logic，则在 EJBWeb LogicScenario 文件夹中选择 weblogic_scenario.template。
+    </li>
+    <li>
+        打开模拟测试场景的指定时序图或协作图。为图中将测试的组件指定消息非常重要。通过双击消息行然后在<b>常规</b>选项卡的下拉列表框中指定一个名称就可以指定消息。名称需要对应于将测试的操作。另外，可以修改这些消息规范以包含测试用例数据。<br />
+        <br />
+         例如，缺省情况下，ROSE 将把消息规范显示为：<br />
+         <font face="Courier New" size="2">getTransactions(customerID : String)</font><br />
+        <br />
+         可以修改此规范以包含一个数据用例，如下所示：<br />
+         <font face="Courier New" size="2">getTransactions(customerID : String="BBryson")<br />
+        <br />
+        </font> 对于每个场景测试，QualityArchitect 均会自动生成测试数据用例的数据池。图中的数据将填充到第一行中。您可以在这之后添加后续行。
+    </li>
+    <li>
+        要开始测试，请右键单击浏览器中的该图，然后选择 <b>Rational Test &gt; 生成场景测试</b>。如果提示您登录项目，请登录。&nbsp;
+    </li>
+    <li>
+        此时将显示一个对话框，提示您选择场景测试目标。选择图中所有将参加测试的组件。对于选中的每个组件，将调用该组件的消息中所指定的相应操作。&nbsp;
+    </li>
+</ol>
+<h5>
+    对于 COM 组件
+</h5>
+<ol>
+    <li>
+        打开模拟测试场景的指定时序图或协作图。为图中将测试的组件指定消息非常重要。通过双击消息行然后在<b>常规</b>选项卡的下拉列表框中指定一个名称就可以指定消息。名称需要对应于将测试的操作。另外，可以修改这些消息规范以包含测试用例数据。<br />
+        <br />
+         例如，缺省情况下，ROSE 将把消息规范显示为：<br />
+         <font face="Courier New" size="2">getTransactions(customerID : String)</font><br />
+        <br />
+         可以修改此规范以包含一个数据用例，如下所示：<br />
+         <font face="Courier New" size="2">getTransactions(customerID : String="BBryson")<br />
+        <br />
+        </font> 对于每个场景测试，QualityArchitect 均会自动生成测试数据用例的数据池。图中的数据将填充到第一行中。您可以在这之后添加后续行。
+    </li>
+    <li>
+        要开始测试，请右键单击浏览器中的该图，然后选择 <b>Rational Test &gt; 生成场景测试</b>。如果提示您登录项目，请登录。&nbsp;
+    </li>
+    <li>
+        此时将显示一个对话框，提示您选择场景测试目标。选择图中所有将参加测试的组件。对于选中的每个组件，将调用该组件的消息中所指定的相应操作。&nbsp;
+    </li>
+</ol>
+<h5>
+    验证点
+</h5>
+<p>
+    对于将调用并将在测试结束时再次调用的每个操作，将提示您插入验证点。QualityArchitect 使用验证点来验证操作是否正确进行。尽管验证点体系结构是开放且可扩展的，然而目前仅实施数据库验证点。数据库验证点允许输入一些 SQL
+    来运行查询。组件将在测试时执行创建的查询来验证数据库的操作是否正确。&nbsp;
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;可使用 QualityArchitect
+    联机帮助中包含的步骤来实施您自己的验证点。
+</p>
+<ol>
+    <li>
+        选择<b>是</b>以插入验证点。
+    </li>
+    <li>
+        选择要插入的验证点的相应类型。除非已经实施了自己的验证点，否则必须选择<b>数据库验证点</b>。
+    </li>
+    <li>
+        将为您提供一个“查询构建器”，可将该查询构建器用于建立数据库连接参数，以及构建为了验证正在调用的操作是否正常工作所要执行的查询。要建立此连接和创建此查询，需要了解底层数据库和 SQL 语法的基础知识。
+    </li>
+</ol>
+<p>
+    此阶段的输出是下列操作所需的代码：实例化所有组件、调用所有操作和运行插入的验证点。
+</p>
+<h4>
+    生成场景测试数据
+</h4>
+<p>
+    对于生成的每个场景测试，QualityArchitect 将自动创建一个数据池来包含测试数据。如果在图中指定了数据，则此数据池的第一行中已经填充了这些信息，以及与插入的验证点相关的信息。如果没有指定，数据池将仅包含与验证点相关的信息。
+</p>
+<p>
+    要查看和编辑这些信息，请遵循以下步骤：
+</p>
+<ol>
+    <li>
+        从 Rose 中，选择“工具 &gt; Rational Test &gt; 工具栏”。
+    </li>
+    <li>
+        在“工具栏”上选择第二个工具栏项来编辑数据池。QualityArchitect 将创建一个数据池，它包含以 _D 结尾的场景图名称。用于命名数据池的算法相当复杂，困难到无法在本文档中预测每个数据池的名称。
+    </li>
+</ol>
+<p>
+    要编辑此数据，请遵循<a href="#Working with Datapools">处理数据池</a>中概述的那些基本步骤。
+</p>
+<h4>
+    执行测试并检查结果
+</h4>
+<p>
+    一旦创建了测试代码和测试数据，就可以运行测试了。您可以从 IDE 运行测试，也可以在 TestManager 套件中安排测试的时间。请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/executing_test_suite_AF13B74.html" guid="{4F5BE3FD-35F5-40E8-828B-EFE6013FCF00}">工具向导：使用 Rational TestManager 执行测试套件</a>，以获得有关此主题的更多信息。
+</p>
+<ol>
+    <li>
+        测试开始运行时，会提示您提供存储测试日志结果的位置。一旦指定了位置，TestManager 会将测试的运行结果存储在那里。
+    </li>
+    <li>
+        运行结束时，TestManager 会显示测试日志。要查看测试结果，请选择“日志查看器”窗口的<b>详细视图</b>选项卡。展开结果的树视图可查看测试的运行详细信息。 右键单击任意行并选择<b>属性</b>可查看更多信息。
+    </li>
+</ol>
+<p>
+    对于验证点，没有为第一轮运行提供<b>通过</b>或<b>失败</b>指示（第一轮运行用于捕获查询结果的快照，而这些结果将用作将来测试运行的基线数据）。
+</p>
+<p>
+    双击验证点将显示一个比较器，其中包含查询的结果。可以编辑这些结果，因此，如果查询未返回正确的结果，则可修改这些数据。此测试的所有后续运行会将其查询结果与该第一轮运行中捕获的结果进行比较。
+</p>
+<h3>
+    4.&nbsp;&nbsp; <a id="Create a stub component" name="Create a stub component">创建存根组件</a>
+</h3>
+<p>
+    单元测试或场景测试中测试的组件通常依赖于其他组件才能完成其任务。这些辅助组件不能正常工作时，将发生问题。这些组件有时仍然在开发中，有时则是存在缺陷。无论如何，不必到了可使用辅助组件的时候才开始测试基本组件。出于测试目的，可使用存根或临时组件来替换任何不工作的组件。存根不实施实际组件的功能；它仅对输入作出反应。存根为一组给定值返回已编程的响应，但不实施任何逻辑。它是一种简单的激励响应关系。
+</p>
+<p>
+    QualityArchitect 可为 COM 和 EJB 组件轻松创建存根。这些存根依赖查找表来复制其替换的组件的业务逻辑。而作为数据池实施的查找表则确定一组给定输入的返回值应是什么。
+</p>
+<p>
+    创建和部署存根的过程由以下三个步骤组成：
+</p>
+<ul>
+    <li>
+        生成存根组件
+    </li>
+    <li>
+        生成存根查找表
+    </li>
+    <li>
+        部署存根
+    </li>
+</ul>
+<h4>
+    生成存根组件
+</h4>
+<p>
+    生成存根时，必须生成一个完整的组件。因此，对于要生成存根的操作，您需要创建一个查找表。存根生成过程的输出是已生成存根的组件（其中包含此组件的所有操作的存根代码）。不能对单个操作生成存根。
+</p>
+<h5>
+    对于 Com 组件
+</h5>
+<ol>
+    <li>
+        在“逻辑”视图中选择组件界面。
+    </li>
+    <li>
+        右键单击界面并选择 <b>Rational Test &gt; 生成存根</b>。 此时将提示您输入存储所生成的存根代码的位置。选择此位置后，就将生成代码。
+    </li>
+</ol>
+<h5>
+    对于 EJB 组件
+</h5>
+<ol>
+    <li>
+        在“逻辑”视图中选择 bean 实施类。&nbsp;
+    </li>
+    <li>
+        右键单击类并选择 <b>Rational Test &gt; 生成存根</b>。 此时将提示您输入存储所生成的存根代码的位置。选择此位置后，就将生成代码。
+    </li>
+</ol>
+<h4>
+    生成存根查找表
+</h4>
+<p>
+    要复制实际组件的逻辑，存根必须了解实际组件在给定了一组参数的情况下将如何反应。此逻辑保存在查找表中，查找表用于指定为一组给定参数返回哪个值或错误。对要在生成存根的组件上执行的每个操作创建一个查找表。
+</p>
+<h5>
+    对于 Com 组件
+</h5>
+<ol>
+    <li>
+        在“逻辑”视图的组件界面下选择操作。
+    </li>
+    <li>
+        右键单击界面并选择 <b>Rational Test &gt; 创建查找表</b>。 这将显示“数据池属性”对话框。
+    </li>
+    <li>
+        要创建此查找表，请遵循<a href="#Working with Datapools">使用数据池</a>中概括的相同基本步骤。您将使用该表来指定要为各个给定参数返回的值或异常。
+    </li>
+</ol>
+<h5>
+    对于 EJB 组件
+</h5>
+<ol>
+    <li>
+        在“逻辑”视图中选择 bean 实施类的操作。 &nbsp;
+    </li>
+    <li>
+        右键单击类并选择 &nbsp;
+    </li>
+    <li>
+        <b>Rational Test &gt; 创建查找表</b>。这将显示“数据池属性”对话框。
+    </li>
+    <li>
+        要创建此查找表，请遵循<a href="#Working with Datapools">使用数据池</a>中概括的相同基本步骤。您将使用该表来指定要为各个给定参数返回的值或异常。
+    </li>
+</ol>
+<h4>
+    部署存根
+</h4>
+<p>
+    生成了存根和查找表之后，必须部署该存根来替代现有组件。此过程特定于环境，QualityArchitect 联机帮助中的标题下提供了该任务的指导信息。
+</p>
+<h3>
+    5.&nbsp;&nbsp; <a id="Using the EJB session recorder" name="Using the EJB session recorder">使用 EJB 会话记录器</a>
+</h3>
+<p>
+    EJB 会话记录器是一种 Java 应用程序，可用于与已部署的活动 EJB 组件交互。该功能仅适用于 Enterprise JavaBeans，不适用于 COM 组件。
+</p>
+<p>
+    使用 EJB 会话记录器的过程涉及以下步骤：
+</p>
+<ul>
+    <li>
+        启动 XML 记录会话
+    </li>
+    <li>
+        连接到 EJB 服务器
+    </li>
+    <li>
+        创建被测试的 bean 的实例
+    </li>
+    <li>
+        对 bean 调用操作
+    </li>
+    <li>
+        插入验证点和 Java 代码
+    </li>
+    <li>
+        从 EJB 会话记录生成测试代码
+    </li>
+</ul>
+<p>
+    可以两种方式使用 EJB 会话记录器：记录和非记录。使用记录方式时，执行的所有操作都将记录到 XML 日志中，EJB 会话记录器将把该日志转换为可执行的 Java 代码。代码包含了所有方法调用、所有插入的 Java
+    代码以及验证点。以非记录方式执行操作时，该工具将被限制为创建 EJB 的实例和调用其操作。
+</p>
+<ol>
+    <li>
+        要连接到 EJB 服务器，必须提供所需的提供者 URL 和 InitialContextFactory。这些信息应与您的客户机代码用于连接到该服务器的信息相同。联机的产品文档中包含 WebSphere 和 Web Logic
+        的缺省连接信息。&nbsp;
+    </li>
+    <li>
+        提供了连接信息之后，请选择<b>连接</b>，之后将为您显示该服务器上部署的 bean 列表。您可以在会话期间与 bean 进行一对多的交互；此时应选择要交互的第一个 bean。
+    </li>
+    <li>
+        这样就创建了要测试的第一个 bean 的实例。请从“方法”窗口的上半部选择相应创建方法。如果创建方法需要特定参数，请在<b>参数</b>部分中指定。完成之后，请选择<b>调用</b>来创建 bean 的实例。
+    </li>
+    <li>
+        创建了 bean 的实例之后，EJB 会话记录器将为您提供可对该 bean 执行的各种操作。“方法”窗口的上半部分将显示该 bean
+        自己的操作，下半部分显示继承的操作。通常不测试继承的操作。选择了要测试的操作之后，可以在“参数”窗口中提供此操作的必需参数。
+    </li>
+    <li>
+        如果参数是复杂对象，将有一个名为“新建”的按钮。此按钮用于打开一个后续窗口，该窗口向您显示一个可用于创建所需对象的实例的对话框。该窗口显示构造对象实例所需的全部构造函数和必需参数。提供了构造函数信息之后，需对该对象命名，这样才可以在以后进行记录时引用它（如需要）。&nbsp;
+    </li>
+    <li>
+        如果会话记录期间将再次使用参数值，则有必要对这些参数指定名称。如果提供了名称，当您右键单击某个参数字段时，QualityArchitect 就可以在该字段中填充该值。
+    </li>
+    <li>
+        单击<b>调用</b>时，将以提供的参数调用此操作。返回值在<b>最新返回值</b>字段中显示。如果该值作为后续调用的输入是必需的，则可将其拖放到所需字段中。也可以在鼠标指向要插入此值的参数字段时右键单击。为了确定右键单击菜单中应包含哪些值，EJB
+        会话记录器将参数的类型与先前在测试期间已使用的类型进行匹配。&nbsp;
+    </li>
+    <li>
+        在此会话中，您可以随时从<b>插入</b>菜单插入 Java 代码或验证点。这些验证点与生成场景测试代码时所用的相同。同样，也可插入 Java 代码来执行其他处理。
+    </li>
+    <li>
+        如果是处于记录方式，则在完成了所有测试步骤之后，可将基于 XML 的记录转换为 Java 代码。单击<b>停止</b>可执行此操作。将提示您把 XML 代码转换为 Java 代码，并且您需要提供会话名称和脚本名称。此过程的输出为
+        Java 代码，您可以执行此代码来复制记录过程中执行的步骤。&nbsp;
+    </li>
+</ol></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RoleSets nodeId="724f81e6">
+<RoleSet pname="测试员" name="testers" nodeId="aa9f7264">
+<Role pname="测试分析人员" name="rup_test_analyst" nodeId="bb3f2dc0"></Role>
+<Role pname="测试管理员" name="rup_test_manager" nodeId="f3ffda4e"></Role>
+<Role pname="测试设计人员" name="rup_test_designer" nodeId="2d93e77a"></Role>
+<Role pname="测试员" name="rup_tester" nodeId="66549408"></Role>
+</RoleSet>
+<RoleSet pname="分析人员" name="analysts" nodeId="e275a626">
+<Role pname="系统分析人员" name="rup_system_analyst" nodeId="2a49ec02"></Role>
+<Role pname="项目干系人" name="rup_stakeholder" nodeId="63ddf92e"></Role>
+<Role pname="需求指定者" name="rup_requirement_specifier" nodeId="73aa53ec"></Role>
+</RoleSet>
+<RoleSet pname="管理员" name="managers" nodeId="ad3e6118">
+<Role pname="变更控制管理员" name="rup_change_manager" nodeId="e5ff0da6"></Role>
+<Role pname="测试管理员" name="rup_test_manager" nodeId="29fd32a2"></Role>
+<Role pname="管理复审员" name="rup_management_reviewer" nodeId="a54ae422"></Role>
+<Role pname="配置管理员" name="rup_configuration_manager" nodeId="dedef14e"></Role>
+<Role pname="系统管理员" name="rup_system_administrator" nodeId="eeab4c0c"></Role>
+<Role pname="项目经理" name="rup_project_manager" nodeId="283f5938"></Role>
+</RoleSet>
+<RoleSet pname="开发人员" name="developers" nodeId="610005c6">
+<Role pname="集成人员" name="rup_integrator" nodeId="9a9412f2"></Role>
+<Role pname="软件设计人员" name="rup_software_architect" nodeId="15e1c472"></Role>
+<Role pname="设计人员" name="rup_designer" nodeId="4f75d19e"></Role>
+<Role pname="实施者" name="rup_implementer" nodeId="974a177a"></Role>
+<Role pname="数据库设计员" name="rup_database_designer" nodeId="a7e9d2d6"></Role>
+<Role pname="用户界面设计员" name="rup_user_interface_designer" nodeId="e0aa7f64"></Role>
+</RoleSet>
+<RoleSet pname="生产与支持" name="production_support" nodeId="1a3e8c90">
+<Role pname="流程工程师" name="rup_process_engineer" nodeId="52ff391e"></Role>
+<Role pname="系统管理员" name="rup_system_administrator" nodeId="d98a630c"></Role>
+</RoleSet>
+<RoleSet pname="一般角色" name="general_roles" nodeId="124b0f9a">
+<Role pname="复审协调员" name="rup_review_manager" nodeId="2b918fb0"></Role>
+<Role pname="复审员" name="rup_reviewer" nodeId="6677d10c"></Role>
+<Role pname="技术复审员" name="rup_technical_reviewer" nodeId="1b598fb8"></Role>
+<Role pname="任何角色" name="rup_any_role" nodeId="2f0e6f84"></Role>
+<Role pname="项目干系人" name="rup_stakeholder" nodeId="68a27cb0"></Role>
+</RoleSet>
+</RoleSets>

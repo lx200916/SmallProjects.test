@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 使用 UML 构建 Web 应用程序</title>
+<meta content="Guideline" name="uma.type">
+<meta content="building_web_applications_with_the_uml" name="uma.name">
+<meta content="使用 UML 构建 Web 应用程序" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "4.559124609104376E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "4.559124609104376E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.559124609104376E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：使用 UML 构建 Web 应用程序</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南对用例分析进行了进一步的说明，以启动 Web 应用程序的设计。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="References" name="References">参考资料</a>
+</h3>
+<p>
+    以下书籍和文档是这些指南的参考资料：
+</p>
+<ul>
+    <li>
+        <i>Building Web Applications with UML</i>（作者：Jim Conallen）[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">CONA99</a>]
+    </li>
+    <li>
+        &nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/modeling_web_application_architectures_with_uml_54011136.html" guid="_TACPgEWgEdqT6eCCQuiftQ"><u><font color="#0000ff">白皮书：使用 UML 对 Web 应用程序体系结构建模</font></u></a>
+    </li>
+</ul>
+<h3>
+    <a id="Elaborate on Use-Case Analysis" name="Elaborate on Use-Case Analysis">详细说明用例分析</a>
+</h3>
+<p>
+    与您在<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">任务：用例分析</a>中所发现的相比，不同之处在于它更专注边界类，目的更单一。这些类的对象的寿命很短，任何客户端状态（Web
+    页面中）都需要由特定的机制明确管理。例如，Microsoft Active Server Pages 使用“Cookies”作为所有当前活动客户机的状态图的索引。
+</p>
+<p>
+    同时，当阅读用例的规范时，适用以下各项：&nbsp;
+</p>
+<ul>
+    <li>
+        任何对 Web 页面的提及都转换为边界类。&nbsp;
+    </li>
+    <li>
+        任何对超链接的提及都转换为从一个边界类到另一个边界类或控制器类的关联。&nbsp;
+    </li>
+    <li>
+        流程的动词或描述倾向于映射为控制器类。&nbsp;
+    </li>
+    <li>
+        名词映射为实体类。&nbsp;
+    </li>
+</ul>
+<p>
+    通过其启动通信的边界类与控制器类谈话。该控制器类通常将不通过此边界类的同一实例回应。
+</p>
+<h3>
+    <a id="Using Interaction Diagrams" name="Using Interaction Diagrams">使用交互图</a>
+</h3>
+<p>
+    因为用例分析是连续的，场景可以使用时序图描述。这有助于对用例的场景验证分析对象的存在。如果发现分析对象不参与任何场景，则它们有些可疑并需要重新求值。此处的风险是，如果您太深入细节，这些图就变得过大并不可管理。为了避免这点，请集中于较短的离散场景，并仅包含边界和主要的控制器对象和实体对象。
+</p>
+<p>
+    请记住，Web 应用程序边界对象有一个较短的寿命。但是，可以在场景执行期间实例化边界类若干次，这意味着从图中的同一类中可以实例化若干边界对象。
+</p>
+<p>
+    分析级别时序图中的参与者与边界对象交互。一条浏览消息从参与者发送到该边界对象。
+</p>
+<h3>
+    <a id="Creating Initial Design Classes" name="Creating Initial Design Classes">创建初始设计类</a>
+</h3>
+<h4>
+    初始边界类设计
+</h4>
+<p>
+    边界类可以映射为客户端页面类。
+</p>
+<p>
+    如果该边界类涉及输入信息，您通常会通过聚集将其与表单（或 Web 表单）相关联。表单可以建模为客户端页面的嵌套类，因为其完整的生命周期由该客户端页面控制。表单始终与服务器页面（处理表单的值）有一个提交关系，最终产生新的返回客户端页面。
+</p>
+<p>
+    如果该用户界面需要客户端上有某个动态行为，可以做到这点的最简单方式是通过在客户端上使用动态 HTML。在设计模型中，这通常显示为客户端页面上的操作。 在客户端页面上的操作直接映射为 Java 脚本函数。Java
+    页面的属性直接映射为这些页面中页面范围内的变量。动态 HTML 事件处理程序被捕获为标注值。
+</p>
+<p>
+    如果用户界面有非常复杂的行为，则您应考虑使用聚集将一个 applet 与该边界类相关联。
+</p>
+<p>
+    如果您的体系结构基于一个分发式对象系统（例如 RMI、IIOP 或 DCOM），则该客户端页面可能引用绕开 HTTP 使用 RMI、IIOP 或 DCOM 与服务器直接通信的组件的界面。这些类型的关系通常都构造为
+    &lt;&lt;rmi&gt;&gt;、&lt;&lt;iiop&gt;&gt; 或 &lt;&lt;dcom&gt;&gt;，以向设计人员表明将发生网络通信的任何区域（因此是候选瓶颈）。
+</p>
+<h4>
+    初始实体类设计
+</h4>
+<p>
+    在设计 Web 应用程序时，关于实体类的唯一不同之处是，如果对象驻留在客户端页面的范围内，则实体对象将映射为一个 Java 脚本对象。
+</p>
+<h4>
+    初始控制器类设计
+</h4>
+<p>
+    控制类映射为服务器页面。控制器表达并协调业务逻辑，以及协调其他逻辑。它们通常驻留在服务器上。许多控制器对象都负责构建客户端页面（从本质上说，它们使用大量的 HTML
+    作为主要输出）。控制器对象可以与服务器端资源（如数据库、中间层组件、事务监视器等）进行交互。&nbsp;
+</p>
+<p>
+    控制器类通常映射为编写了服务器端脚本的 Web 页面（Active Server Pages、Java Server Pages）。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

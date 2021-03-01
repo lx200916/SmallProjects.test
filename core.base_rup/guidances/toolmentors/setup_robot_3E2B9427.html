@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 在 Rational Robot 中设置测试环境</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="setup_robot" name="uma.name">
+<meta content="在 Rational Robot 中设置测试环境" name="uma.presentationName">
+<meta content="Tool:rup_robot:Rational Robot" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Robot" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{E717F672-A182-4A7C-85A6-51A86EB8A57F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{E717F672-A182-4A7C-85A6-51A86EB8A57F}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{E717F672-A182-4A7C-85A6-51A86EB8A57F}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{E717F672-A182-4A7C-85A6-51A86EB8A57F}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：在 Rational Robot 中设置测试环境</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational Robot 设置测试环境。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_robot_26C85D92.html" guid="{1A26E508-8140-4241-865E-0A2A5BCAEFFF}">Rational Robot</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/execute_test_suite_492795DE.html" guid="{6B420194-5EB7-4A12-A061-09FAA5DC18DE}">执行测试套件</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/support_development_1443EF07.html" guid="{35936CF9-4B04-402A-9482-07E5CFB45D99}">支持开发</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    在运行 Microsoft Windows 98/2000/NT 4.0 时此工具向导可用。
+</p>
+<p>
+    要使用 Rational Robot 为测试设置测试环境，请执行以下操作：
+</p>
+<div style="MARGIN-LEFT: 2em">
+    <ol>
+        <li>
+            <a href="#heading of tool step one">为记录、编辑或测试脚本回放设置测试环境</a>
+        </li>
+        <li>
+            <a href="#heading of tool step two">设置 GUI 记录脚本选项</a>
+        </li>
+        <li>
+            <a href="#step three">设置 GUI 脚本回放选项</a>
+        </li>
+    </ol>
+</div>
+<h3>
+    1. <a id="heading of tool step one" name="heading of tool step one">为记录、编辑或测试脚本回放设置测试环境</a>
+</h3>
+<p>
+    Microsoft Windows 环境和接受测试的应用程序的状态会影响脚本回放。如果在记录的环境和回放环境之间存在差异，那么回放时会发生问题。
+</p>
+<p>
+    在记录或编辑测试脚本前，请确保接受测试的应用程序和所有其他软件（在测试环境中）处于正确的初始状态。另外，在执行测试（回放测试脚本）之前，请确保接受测试的应用程序和所有其他软件处于与记录／编辑测试脚本时相同的初始状态。无论您开始记录时应用程序和窗口是否打开、活动或显示，当您开始回放时，该脚本应该为打开、活动或显示。另外，请确保任何相关网络设置、活动数据库和系统内存都处于与记录脚本时相同的状态。
+</p>
+<p>
+    回放测试脚本时，请确保设置正确的回放选项，包括 Rational Robot 应该如何处理意外的活动窗口和如何从脚本命令错误中恢复（请参阅下一部分）。
+</p>
+<h3>
+    2. <a id="heading of tool step two" name="heading of tool step two">设置 GUI 脚本记录选项</a>
+</h3>
+<p>
+    图形用户界面（GUI）脚本记录选项向 Rational Robot 提供在记录脚本期间如何拖动鼠标、处理某些对象、窗口设置、对象内容以及 Robot 窗口的指示信息。
+</p>
+<p>
+    要设置 GUI 脚本记录选项：
+</p>
+<ol>
+    <li>
+        执行以下某个操作，显示“GUI 记录选项”对话框：
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            在开始记录之前，单击<b>工具 &gt; GUI 记录选项</b>。
+        </li>
+        <li>
+            单击工具栏上的<b>记录 GUI 脚本</b>按钮开始记录。在“记录”对话框中，单击<b>选项</b>。
+        </li>
+    </ul>
+</blockquote>
+<ol start="2">
+    <li>
+        在每个选项卡上设置选项。有关每个选项卡的详细信息，<img height="15" alt="手册图标" hspace="0" src="./../../../core.base_rup/resources/book.gif" width="16"         border="0" /> 请参阅 <i>Using Rational Robot</i> 手册中的 <b>Setting GUI Record Options</b> 一章，或者 <img height="16"         alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> 参阅 Robot 联机帮助。
+    </li>
+</ol>
+<blockquote>
+    <p>
+        <b>常规</b> － 指定 Robot 如何识别列表和菜单内容以及不支持的鼠标拖动。 另外，从该选项卡上，您还可以指定：用于脚本自动命名的前缀、Robot 是否保存和恢复活动窗口的大小和位置、是否记录思考时间或者记录在按下
+        Enter 键后的延迟。
+    </p>
+    <p>
+        <b>Robot 窗口</b> － 指定记录测试脚本期间如何显示 Robot 窗口。用户还能够在该选项卡上指定用于隐藏／重新显示 Robot 窗口以及在面向对象的记录和低级别记录方式之间切换的热键。
+    </p>
+    <p>
+        <b>对象识别顺序</b> － 用于在记录前或记录时为个别对象类型更改对象识别方法的优先级。
+    </p>
+</blockquote>
+<p>
+    有关如何记录脚本的信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/record_test_scripts_7A61D605.html" guid="{279B8DDC-F3D9-4087-87CE-AC8D718D8C8E}">工具向导：使用 Rational Robot 创建测试脚本</a>。
+</p>
+<h3>
+    3. <a id="step three" name="step three">设置 GUI 脚本回放选项</a>
+</h3>
+<p>
+    GUI 脚本回放选项为 Rational Robot 提供如何回放 GUI 脚本的指示信息。您可以在开始回放之前或回放过程的早期设置这些选项。
+</p>
+<p>
+    要设置 GUI 回放选项：
+</p>
+<ol>
+    <li>
+        执行以下一个操作，显示“GUI 回放选项”对话框：
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            在开始回放之前，单击<b>工具 &gt; GUI 回放选项</b>。
+        </li>
+        <li>
+            单击工具栏上的<b>回放脚本</b>按钮开始回放。在“回放”对话框中，单击<b>选项</b>。
+        </li>
+    </ul>
+</blockquote>
+<ol start="2">
+    <li>
+        在每个选项卡上设置选项。&nbsp;<br />
+        <br />
+         有关每个选项卡的详细信息，<img height="15" alt="手册图标" hspace="0" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" /> 请参阅
+        <i>Using Rational Robot</i> 手册中的 <b>Setting GUI Playback Options</b> 一章，或者 <img height="16" alt="帮助手册图标" hspace="0"         src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /> 参阅 Robot 联机帮助。
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p>
+            <b>回放</b> － 指定命令和击键之间的延迟、是否使用记录的思考时间和输入延迟、是否跳过验证点、是否显示应答结果框以及回放期间 Robot 窗口中会发生什么事件。有关信息，请单击对话框中的<b>帮助</b>按钮。
+        </p>
+        <p>
+            <b>日志</b> － 指定日志中保存什么结果、日志是否在回放后自动出现、在覆盖日志前是否要提示您以及使用缺省日志信息还是您提供的信息。
+        </p>
+        <p>
+            <b>捕获匹配</b> － 指定 Robot 如何将记录期间捕获的窗口标题与回放期间找到的标题相匹配。有关信息，请单击对话框中的<b>帮助</b>按钮。
+        </p>
+        <p>
+            <b>等待状态</b> － 指定回放期间的缺省重试和超时值。
+        </p>
+        <p>
+            <b>意外的活动窗口</b> － 指定 Robot 在意外活动窗口出现时如何作出响应。
+        </p>
+        <p>
+            <b>错误恢复</b> － 指定 Robot 如何在脚本回放期间从脚本命令和验证点故障中恢复。
+        </p>
+        <p>
+            <b>陷阱</b> － 指定陷阱实用程序捕获关于回放过程中发生的常规保护故障的哪些信息以及如何恢复。
+        </p>
+    </li>
+    <li>
+        单击<b>确定</b>。
+    </li>
+</ol>
+<p>
+    有关如何回放脚本的信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/execute_test_tm_7A967353.html" guid="{59DDCE9D-6A75-4F57-B0A8-0DB3698B1942}">工具向导：使用 Rational Robot 执行测试。</a><br />
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

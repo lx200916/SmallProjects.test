@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational Robot 执行测试套件</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="execute_test_tm" name="uma.name">
+<meta content="使用 Rational Robot 执行测试套件" name="uma.presentationName">
+<meta content="Tool:rup_robot:Rational Robot" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Robot" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{59DDCE9D-6A75-4F57-B0A8-0DB3698B1942}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{59DDCE9D-6A75-4F57-B0A8-0DB3698B1942}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{1A26E508-8140-4241-865E-0A2A5BCAEFFF}", "{59DDCE9D-6A75-4F57-B0A8-0DB3698B1942}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{59DDCE9D-6A75-4F57-B0A8-0DB3698B1942}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational Robot 执行测试套件</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational Robot 执行测试套件（回放一个或多个测试脚本）和分析测试执行的结果。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_robot_26C85D92.html" guid="{1A26E508-8140-4241-865E-0A2A5BCAEFFF}">Rational Robot</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/perform_developer_test_512B18D9.html" guid="{55EAEE66-A254-457F-BCC3-D1C21ED88134}">执行开发人员测试</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/execute_test_suite_492795DE.html" guid="{6B420194-5EB7-4A12-A061-09FAA5DC18DE}">执行测试套件</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    在运行 Microsoft Windows 98/2000/NT 4.0 时此工具向导可用。
+</p>
+<p>
+    要使用 Rational Robot 执行已记录或已编程的测试脚本，请回放该测试脚本。
+</p>
+<ol>
+    <li>
+        <a href="#PlayTheScriptBack">回放脚本</a>
+    </li>
+    <li>
+        <a href="#Evaluate the execution of test">查看 TestManager 日志中的结果</a>
+    </li>
+    <li>
+        <a href="#step three">使用比较器分析验证点结果</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="PlayTheScriptBack" name="PlayTheScriptBack">回放脚本</a>
+</h3>
+<p>
+    回放脚本时，Rational Robot 将重复您的已记录操作并自动执行测试。通过自动执行，您可以比手动测试更快、更彻底的方式来测试您应用程序的每个新构建版本。 这样可以减少测试时间，并且可以提高覆盖率和整体一致性。
+</p>
+<p>
+    测试脚本在测试生命周期过程中将回放若干次：
+</p>
+<ul>
+    <li>
+        <b>测试实施</b> － 使用曾经记录的被测试应用程序的相同构建版本回放脚本，以验证这些脚本是否按预期工作。这将验证被测试应用程序的预期行为的基线。
+    </li>
+    <li>
+        <b>测试执行与回归</b> －
+        回放脚本以将被测试应用程序的最新构建版本与测试实施过程中建立的基线相比较。开发周期过程中对所有测试脚本不断进行的回放将展现上一个构建版本以来可能已引入该应用程序的所有差异。可评估这些差异以确定其是真正的缺陷，还是特意进行的更改。
+    </li>
+</ul>
+<p>
+    回放之前，如果测试脚本在上次运行之后已经更改，则 Rational Robot 将自动对其进行编译。
+</p>
+<p>
+    有关为测试脚本回放准备测试环境的信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_robot_3E2B9427.html" guid="{E717F672-A182-4A7C-85A6-51A86EB8A57F}">工具向导：在 Rational Robot 中设置测试环境</a>。
+</p>
+<p>
+    要回放测试脚本：
+</p>
+<ol>
+    <li>
+        单击工具栏上的<b>回放脚本</b>按钮。将显示“回放”对话框。
+    </li>
+    <li>
+        输入测试脚本名称或从列表选择。
+    </li>
+</ol>
+<blockquote>
+    <p>
+        要更改“回放”选项，请单击 <b>GUI 选项</b>。
+    </p>
+    <p>
+        结束后，请单击<b>确定</b>。<br />
+         有关回放选项的信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_robot_3E2B9427.html" guid="{E717F672-A182-4A7C-85A6-51A86EB8A57F}">工具向导：在 Rational Robot 中设置测试环境</a>。
+    </p>
+</blockquote>
+<ol start="3">
+    <li>
+        单击<b>确定</b>以继续。
+    </li>
+    <li>
+        如果显示了“指定日志信息”对话框，则执行以下操作：
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            从列表选择一个构建版本。要新建构建版本，请单击右侧的<b>构建版本</b>按钮。
+        </li>
+        <li>
+            从列表选择一个测试日志文件夹。要新建测试日志文件夹，请单击右侧的<b>日志文件夹</b>按钮。
+        </li>
+        <li>
+            接受缺省的测试日志名称（该名称与测试脚本名称相同），或输入新名称。
+        </li>
+        <li>
+            单击<b>确定</b>。
+        </li>
+    </ul>
+</blockquote>
+<ol start="6">
+    <li>
+        如果出现提示，询问您是否要覆盖日志，请单击<b>是</b>。
+    </li>
+</ol>
+<p>
+    <b>注意</b>：要停止回放测试脚本，请按 F11 键。仅当回放面向对象的命令时，Rational Robot 才可识别 F11 键。低级别操作过程中，F11 键将不停止测试脚本回放。
+</p>
+<h3>
+    2. <a id="Evaluate the execution of test" name="Evaluate the execution of test">查看 TestManager 测试日志中的结果</a>
+</h3>
+<p>
+    回放完成之后，使用 TestManager 测试日志可查看回放的结果，包括验证点故障、过程故障、异常中断和其他任何回放信息。
+</p>
+<p>
+    要控制测试日志信息和测试日志的显示，可设置“GUI 回放选项”对话框的“日志”选项卡内的选项：
+</p>
+<ul>
+    <li>
+        要以回放结果更新项目，请选择<b>输出回放结果到日志</b>。
+    </li>
+    <li>
+        要在回放后自动显示日志，请选择<b>回放后查看日志</b>。
+    </li>
+</ul>
+<p>
+    如果未选择该选项，则可在回放之后通过单击<b>工具 &gt; Rational Test &gt; Rational TestManager</b> 显示测试日志。
+</p>
+<p>
+    如果回放测试脚本产生了错误，则必须识别出该错误的具体原因。
+</p>
+<p>
+    未能成功执行的测试脚本在测试日志的<b>结果</b>列中以单词 <b>Fail</b> 标识（显示为红色），或以 <b>Warning</b>
+    标识（显示为黄色）。要针对的执行故障包含若干类：致命错误、脚本错误和验证点故障。致命错误通常表明测试环境配置（而非测试脚本本身）存在问题。请调查测试环境配置，隔离故障并解决对应的故障问题。解决测试脚本错误可能需要进行一些测试脚本维护。验证点故障（在测试实施过程中）通常需要更改验证点参数，或指出记录脚本时与回放脚本时在目标测试项理想状态方面的差异。请参阅下一部分以了解如何分析验证点。
+</p>
+<p>
+    可以在<b>日志事件属性</b>对话框中查看与该错误条件有关的附加信息。通过选择测试日志事件并单击<b>查看 &gt; 属性</b>可打开该对话框。
+</p>
+<p>
+    对于发生了故障（或警告）的每个测试脚本，请查看与该故障有关的信息，并且如果需要，请编辑测试脚本（请参阅上面的<a href="#step three">第 3 部分：编辑测试脚本（如果需要）</a>）。可以通过单击<b>查看 &gt;
+    脚本</b>从测试日志打开测试脚本（和 Rational Robot）。
+</p>
+<p>
+    编辑测试脚本之后，应将环境重置为相应的初始状态（<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_robot_3E2B9427.html" guid="{E717F672-A182-4A7C-85A6-51A86EB8A57F}">工具向导：在 Rational Robot 中设置测试环境</a>）（请参阅步骤：<a href="#PlayTheScriptBack">回放脚本</a>）。
+</p>
+<h3>
+    3. <a id="step three" name="step three">使用比较器分析验证点结果</a>
+</h3>
+<p>
+    使用比较器可分析验证点结果。要从 TestManager 测试日志打开比较器：
+</p>
+<ol>
+    <li>
+        在“日志事件”列，选择验证点并单击<b>查看 &gt; 验证点</b>。将显示相应的比较器。也可以通过双击“资产”窗格中的验证点，从 Rational Robot 打开比较器。但是，如果使用这种方法打开比较器，则只能查看基线文件。
+    </li>
+    <li>
+        将突出显示基线与实际结果之间的差异。
+    </li>
+    <li>
+        查看这些差异并确定相应的操作过程，包括：<br />
+         （<b>注意</b>：可用操作将根据验证点的类型而有所不同。）
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            将属性复制到基线 － 复制当前的单个实际属性，并覆盖基线属性。
+        </li>
+        <li>
+            将所有属性复制到基线 － 复制所有实际属性值，并覆盖所有基线属性。
+        </li>
+        <li>
+            通过双击属性（菜单、值等）并输入不同的值，编辑该属性。
+        </li>
+        <li>
+            编辑属性列表（以确定验证点应捕获哪些属性）。
+        </li>
+        <li>
+            创建或修改掩码。
+        </li>
+    </ul>
+</blockquote>
+<ol start="4">
+    <li>
+        在比较器中完成了相应更改之后，请单击<b>文件 &gt; 保存基线</b>以保存更改，然后单击<b>退出</b>按钮以关闭比较器。
+    </li>
+</ol>
+<p>
+    编辑测试脚本或验证点之后，应将环境重置为相应的初始状态（<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_robot_3E2B9427.html" guid="{E717F672-A182-4A7C-85A6-51A86EB8A57F}">工具向导：在 Rational Robot 中设置测试环境</a>）（请参阅步骤：<a href="#PlayTheScriptBack">回放脚本</a>）。<br />
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

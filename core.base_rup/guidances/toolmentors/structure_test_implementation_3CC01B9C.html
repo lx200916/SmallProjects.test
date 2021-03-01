@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational TestFactory 构造测试实施</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="structure_test_implementation" name="uma.name">
+<meta content="使用 Rational TestFactory 构造测试实施" name="uma.presentationName">
+<meta content="Tool:rup_test_factory:Rational TestFactory" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestFactory" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{AD403709-9F1A-496A-B5F7-F7CF823F8BDD}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational TestFactory 构造测试实施</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational TestFactory 开始构造测试实施，以实施生成的测试。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_test_factory_3EDA2115.html" guid="{FBA5098E-2CA8-483D-814D-DE3E876426B1}">Rational TestFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    在 Rational TestFactory 中，您使用“应用程序图”功能开始构造测试实施。
+</p>
+<p>
+    开发得好的应用程序图会反映接受测试的应用程序中（AUT）中用户界面的精确表示。AUT 中的每个窗口和控件都通过应用程序图中的“UI 对象”表示。有关开发应用程序图的信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/setup_testfactory_C77C34F4.html" guid="{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}">工具向导：在 Rational TestFactory 中设置测试环境</a>。
+</p>
+<p>
+    在运行 98/2000/NT 4.0 时此工具向导可用。
+</p>
+<p>
+    要使用 Rational TestFactory 为自动测试捕获测试模型的结果：
+</p>
+<ol>
+    <li>
+        <a href="#ID test locations">标识接受测试的应用程序的部件</a>
+    </li>
+    <li>
+        <a href="#Set up interaction objects">设置交互对象以反映测试脚本需求</a>
+    </li>
+    <li>
+        <a href="#Supply test data">为表示文本控件的对象提供测试数据</a>
+    </li>
+    <li>
+        <a href="#Restrict object testing">限制特定对象的测试</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;&nbsp; <a id="ID test locations" name="ID test locations">标识接受测试的应用程序的部件</a>
+</h3>
+<p>
+    在开发了应用程序图后，您可以确定适用于在 Rational TestFactory 进行测试的 AUT 域。
+</p>
+<p>
+    “Pilot”是自动生成测试脚本的 Rational TestFactory 工具。Pilot 在应用程序图中的位置决定它们可以测试的 AUT 中的控件。Pilot 可以测试该图中位于该 Pilot 父对象下分支的中所有可用 UI
+    对象。如果该图的分支中的 UI 对象及其表示的控件可用，则 Pilot 将测试它。
+</p>
+<p>
+    通过客观识别以下项，复查设计测试任务期间创建的测试过程：
+</p>
+<ul>
+    <li>
+        必须以特定顺序操作的控件。
+    </li>
+    <li>
+        必须为其提供测试数据的控件。
+    </li>
+    <li>
+        显示控件的窗口或对话框。
+    </li>
+</ul>
+<p>
+    应用程序图中对应于您标识的窗口、对话框和控件的 UI 对象适合用 Rational TestFactory 中的 Pilot 进行测试。通过设置控件所对应的 UI 对象的属性值，您可以在 AUT 中指定 TestFactory
+    必须如何测试该控件。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参考 Rational TestFactory
+    帮助中的以下主题：
+</p>
+<p>
+    <i>Pilots: What they are and how they work</i>
+</p>
+<p>
+    <i>Effective Pilot placement</i>
+</p>
+<h3>
+    2.&nbsp;&nbsp; <a id="Set up interaction objects" name="Set up interaction objects">设置交互对象以反映测试脚本需求</a>
+</h3>
+<p>
+    所有控件都位于同一窗口中的测试脚本适合在 Rational TestFactory 中进行测试。“交互对象”是 TestFactory 功能部件，它允许您为这些控件指定测试脚本交互方法。
+</p>
+<p>
+    交互对象是将一个或多个 UI 对象作为“组件”添加的容器。交互对象组件表示 AUT 中需要进行操作以采用特定路径或执行特定任务的控件。在为交互添加组件后，您可以将它们配置为符合测试脚本的需求。
+</p>
+<p>
+    如果具有多个测试脚本可测试同一窗口中的控件，您可以为单个交互对象中的每个测试脚本指定需求。在单个测试套件执行或 Pilot 运行期间，TestFactory 的 Pilot 功能部件可以测试同一窗口中的多个交互对象。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 请参考 Rational TestFactory 帮助中的 <i>Using
+    interaction objects to set up specific tests</i> 主题：
+</p>
+<h3>
+    3.&nbsp;&nbsp; <a id="Supply test data" name="Supply test data">为表示输入控件的对象提供测试数据</a>
+</h3>
+<p>
+    对于它所访问的图中特定区域的可用 UI 对象，TestFactory 的 Pilot 功能部件对尽可能多的对象执行多项测试。缺省情况下，Pilot 以随机顺序操作对象，并向需要输入的对象提供随机数据值。
+</p>
+<p>
+    如果测试脚本中有控件需要特定测试数据作为输入，那么您可以使用“数据输入样式”来提供必需的输入信息。数据输入样式是为 UI 对象指定测试输入的一组 UI 对象属性：
+</p>
+<ul>
+    <li>
+        TestFactory Pilot 必须使用的字符串用例。
+    </li>
+    <li>
+        充当数据池的字符串用例的列表，Pilot 可以随机挑选这些字符串用例。
+    </li>
+    <li>
+        掩码用例列表，Rational TestFactory 为其生成 Pilot 可以随机挑选的字符串值。
+    </li>
+    <li>
+        允许 Pilot 生成随机整数、浮点和字符串值的选项。
+    </li>
+</ul>
+<p>
+    Rational TestFactory 提供了一组预定义的<i>系统</i>数据输入样式，它们反映标准输入类型。
+    您可以创建额外的<i>定制</i>数据输入样式，它们基于系统样式或现有的定制样式。您还可以覆盖单个对象的系统样式或定制样式中的设置。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 请参考 Rational TestFactory 帮助中的 <i>Using
+    data entry styles for input-type objects</i> 主题：
+</p>
+<h3>
+    4.&nbsp;&nbsp; <a id="Restrict object testing" name="Restrict object testing">限制特定对象的测试</a>
+</h3>
+<p>
+    缺省情况下，AUT 中由应用程序图中的 UI 对象所表示的所有控件都可用于测试。如果 Pilot 在通过应用程序图中的路径时遇到 UI 对象，那么该 Pilot 可以在生成的测试脚本中包含该 UI 对象。但您的 AUT 可以包含不需要
+    Pilot 测试的绘制控件。以下是一些示例：
+</p>
+<ul>
+    <li>
+        不稳定的控件
+    </li>
+    <li>
+        其功能造成破坏性操作的控件<br />
+         （例如，删除数据库的控件）
+    </li>
+    <li>
+        您不需要测试的控件<br />
+         （例如，打印控件或打开“帮助”的控件）
+    </li>
+</ul>
+<p>
+    如果 AUT 包含这类控件，则您可以从测试中排除其关联的 UI 对象。您还可以限制 Pilot 对控件执行的测试操作。与控件关联的 UI 对象的属性反映用户可以对控件执行的可能操作。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp; 请参考 Rational TestFactory
+    帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Excluding UI objects from testing</i>
+    </li>
+    <li>
+        <i>Change UI object test actions</i>
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

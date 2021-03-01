@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational XDE Developer 设计数据库</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="database_design" name="uma.name">
+<meta content="使用 Rational XDE Developer 设计数据库" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{A7B13419-14D8-4C55-B98C-497B2E17CC73}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{A7B13419-14D8-4C55-B98C-497B2E17CC73}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{A7B13419-14D8-4C55-B98C-497B2E17CC73}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{A7B13419-14D8-4C55-B98C-497B2E17CC73}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{A7B13419-14D8-4C55-B98C-497B2E17CC73}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational XDE Developer 设计数据库</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational XDE Develope Data Modeler 构建数据模型。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">数据库设计</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    此工具向导描述如何使用 Data Modeler 构建<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>。
+</p>
+<ul>
+    <li>
+        此工具向导中的步骤与相应任务中的那些步骤相匹配。
+    </li>
+    <li>
+        在本工具向导中执行以下步骤：
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <ul>
+            <li>
+                <a href="#Develop Logical Data Model">开发逻辑数据模型</a> &lt;可选&gt;
+            </li>
+            <li>
+                <a href="#Develop Physical Data Model">开发物理数据模型</a> 
+                <ul>
+                    <li>
+                        <a href="#Define Domains">定义域</a>
+                    </li>
+                    <li>
+                        <a href="#Transform Logical Database Design into Physical Database Design">创建初始物理数据库设计元素</a>
+                    </li>
+                    <li>
+                        <a href="#Define Reference Tables">定义引用表</a>
+                    </li>
+                    <li>
+                        <a href="#Create Primary Key and Unique Key Constraints">创建主键和唯一键的约束</a>
+                    </li>
+                    <li>
+                        <a href="#Define Data and Referential Integrity Enforecment Rules">定义数据和引用完整性实施规则</a>
+                    </li>
+                    <li>
+                        <a href="#De-Normalize the Database Design to Optimize for Performance">对数据库设计进行反向规范化来优化性能</a>
+                    </li>
+                    <li>
+                        <a href="#Optimize Data Access">优化数据访问</a>
+                    </li>
+                    <li>
+                        <a href="#Define Storage Characteristics">定义存储特征</a>
+                    </li>
+                    <li>
+                        <a href="#Distribute Class Behavior to the Database">设计存储过程以向数据库分发类行为</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#Review the Results">查看结果</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>
+    Rational XDE (TM) 软件工具包含的功能可使应用程序设计员和数据库设计员使用同一个工具来开发应用程序和数据库。作为<u><a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">数据库设计员</a></u>（或简称<u><a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计员</a></u>）您可以使用
+    XDE 对数据库进行建模和设计，以及集成自己的应用程序和数据库。XDE&nbsp;Data Modeler 将针对数据库建模的统一建模语言（UML）概要文件用作标准表示法来构造数据模型。以下&nbsp;XDE 联机帮助主题针对与使用
+    Rational XDE 进行数据库建模和开发有关的具体细节提供关键背景信息：
+</p>
+<ul>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Databases Supported in Rational XDE</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_db_support"); -->：列出了 Rational XDE
+        中支持的数据库。
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Supported OLE DB Providers and JDBC Drivers</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_support_ole_db_jdbc"); -->：列出了
+        Rational XDE 中支持的数据访问提供程序和驱动程序。
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Setting Options for Data Models</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_data_pref"); -->：总结了对缺省数据库指定和数据库目标的设置。
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Setting the Default Database Assignment</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_set_default_db_assign"); -->：提供有关如何将
+        XDE 数据模型配置为指向特殊命名的数据库的指导信息。
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>UML Data Modeling Profile</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_uml_dm_profile"); -->：总结了数据模型中使用的统一建模语言（UML）建模元素。
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Data Modeling Visibility Icons</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_visible_icon"); -->：列出了一些概念元素，它们用于定义特定于数据模型的主键／外键和数据库触发器。
+    </li>
+</ul>
+<p>
+    在 XDE 中可以使用三种方法创建<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>：
+</p>
+<ul>
+    <li>
+        使用 Data Modeler 工具在 XDE 中直接构建数据模型。
+    </li>
+    <li>
+        转换<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>中的持久类，以在数据模型中创建表。
+    </li>
+    <li>
+        对现有数据库模式或 DDL 脚本进行反向设计以创建数据模型。&nbsp;
+    </li>
+</ul>
+<p>
+    有关创建数据模型的不同方法的更多信息，请参阅以下 XDE 帮助主题：
+</p>
+<ul>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Designing Data Models</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_bld_dm"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Class to Table Transformation</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_clss_tbl_transf"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Building Data Models by Reverse Engineering</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_gen_dm_re"); -->
+    </li>
+</ul>
+<p>
+    此工具向导的其余部分提供了有关如何通过转换设计模型中的持久类来进行开发以构造数据模型的指示信息。<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">XDE 模型构造指南</a>中的“数据模型”部分更详细地描述了此处讨论的数据模型程序包结构。
+</p>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/reverse_engineering_db_31C775E7.html" guid="{8F40AECA-8AAA-4409-81F0-BFB7B6BECDBC}">工具向导：使用 Rational XDE 对数据库进行反向设计</a>中提供了有关如何通过对物理数据库设计进行反向设计来创建数据模型的更多信息。
+</p>
+<h3>
+    <a id="Develop Logical Data Model" name="Develop Logical Data Model">开发逻辑数据模型 &lt;可选&gt;</a>
+</h3>
+<p>
+    有些项目可能需要创建数据库设计的理想“逻辑”模型，用于捕获与应用程序无关的视图，该视图包含关键的逻辑数据实体及其关系。可将此逻辑数据模型视为“分析”类型的模型，类似于应用程序设计的开发中可能使用的可选<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">工作产品：分析模型</a>。请注意，逻辑数据模型包含在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">工作产品：数据模型</a>中，不能将其视为单独的 RUP 工作产品。&nbsp;&nbsp;
+</p>
+<p>
+    可以使用 XDE Data Modeler 工具直接创建逻辑数据模型。请参阅&nbsp;<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/model_structure_guidelines_for_rational_xde_developer_6D2FD64A.html" guid="2.67081400527339E-306">XDE 模型构造指南</a>获取有关在整个数据模型工作产品内创建逻辑数据模型的信息。参考：<img alt="帮助手册图标"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Logical Data Models</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_logical_dm"); -->
+</p>
+<h3>
+    <a id="Develop Physical Data Model" name="Develop Physical Data Model">开发物理数据库设计</a>
+</h3>
+<p>
+    可优化逻辑数据模型以使用 Rational XDE 创建物理数据库设计的详细模型。<br />
+     （请参阅 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Physical Data Models</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_phys_dm"); -->。）随后可对这个详细的物理数据模型进行正向设计来创建数据库。（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/forward_engineering_db_14F5AD0B.html" guid="{F55D370E-F820-4646-A0B8-C2242A07A83F}">工具向导：在 Rational XDE 中对数据库进行正向设计</a>。）下文描述开发物理数据模型的主要步骤。
+</p>
+<h4>
+    <a id="Define Domains" name="Define Domains">定义域</a>
+</h4>
+<p>
+    创建域以实施可在整个数据模型中使用的用户定义的数据类型，以实施数据库设计标准。（请参阅 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Domains</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_dom"); -->。）域也可用于在列中嵌入业务规则。&nbsp;
+</p>
+<p>
+    要在数据模型中使用域定义的数据类型，必须遵循以下指导信息：
+</p>
+<ul>
+    <li>
+        域应在数据模型内单独的程序包中定义。对于大型团队，通常允许使用单独的 XDE 模型。（请参阅<img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating
+        Domains</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_dom"); -->。）
+    </li>
+    <li>
+        必须将包含这些域的程序包分配给实现数据库中的表的数据库组件。（请参阅<img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Assigning Domain
+        Packages to Databases</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_assign_dom_pkg_db"); -->。）
+    </li>
+</ul>
+<p>
+    有关如何在数据模型中将域应用于列的信息，请参阅 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Assigning Domains to Columns</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_assign_dom_col"); -->。&nbsp;
+</p>
+<h4>
+    <a id="Transform Logical Database Design into Physical Database Design" name="Transform Logical Database Design into Physical Database Design">创建初始物理数据库设计元素</a>
+</h4>
+<p>
+    将设计模型中的持久类转换为设计模型中的表。（请参阅 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Class to Table Transformation</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_clss_tbl_transf"); -->。）这些类的属性将变为表中的列。Rational
+    XDE 提供了将类的属性定义为候选键的选项。 （请参阅 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Assigning Candidate Keys</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_assign_cand_key"); -->。）Rational XDE
+    还将类之间的特定关联转换为表之间的关系。以下 Rational XDE 联机帮助主题提供了有关如何将类转换为表的更多信息：
+</p>
+<ul type="square">
+    <li>
+        常规的映射信息 － <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Class to Table Transformation Mapping</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_clsstbl_transf_map"); -->
+    </li>
+    <li>
+        特定于 DBMS 的映射信息 － <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Class to Table Transformation Data Type
+        Mapping</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_clss_tbltransf_dtmap"); -->
+    </li>
+</ul>
+<h4>
+    <a id="Define Reference Tables" name="Define Reference Tables">定义引用表</a>
+</h4>
+<p>
+    根据需求创建引用表来管理数据库中所有的静态数据项。可以使用&nbsp;XDE Data Modeler 功能直接在数据模型中创建引用表。 参考：<img alt="帮助手册图标"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modeling Tables and Columns</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_tables_col"); -->
+</p>
+<h4>
+    <a id="Create Primary Key and Unique Key Constraints" name="Create Primary Key and Unique Key Constraints">创建主键和唯一键的约束</a>
+</h4>
+<p>
+    定义主键约束和唯一键约束来识别表中的信息行。请参阅联机帮助主题 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Primary Key Constraints</i>。 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_pk_cnstrnt"); -->联机帮助主题&nbsp; <img     alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Primary Key Constraints</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_pk_cnstrnt"); -->描述了用于在表的一个或多个列上创建主键约束的步骤。<img      alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Unique Key Constraints</i> 中包含了有关定义唯一键约束的信息。 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_uk_cnstrnt"); -->在模型中创建唯一键约束的步骤：<img     alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Unique Key Constraints</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_uk_cnstrnt"); -->。
+</p>
+<p>
+    请参阅 Rational XDE 联机帮助：<img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Constraints</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_create_cnstrnt"); -->
+</p>
+<h4>
+    <a id="Define Data and Referential Integrity Enforecment Rules" name="Define Data and Referential Integrity Enforecment Rules">定义数据和引用完整性实施规则</a>
+</h4>
+<p>
+    可使用检查约束来控制对表中的数据元素的更新。Rational&nbsp;XDE 提供了为表、列和域定义检查约束的功能。 请参阅主题 <img alt="帮助手册图标"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Check Constraints</i>。 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_ck_cnstrnt"); -->以下 XDE
+    联机帮助主题描述了如何在数据模型中创建三种类型的检查约束：
+</p>
+<ul>
+    <li>
+        列检查约束 － <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Column Check Constraints</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_ckcnstrnt_col"); -->
+    </li>
+    <li>
+        表检查约束 － <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Table Check Constraints</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_ckcnstrnt_tbl"); -->
+    </li>
+    <li>
+        域检查约束 － <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Domain Check Constraints</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_ckcnstrnt_dom"); -->
+    </li>
+</ul>
+<p>
+    用于确保引用完整性的另一种类型的约束为外键约束。（请参阅<img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>外键</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fk_cnstrnt"); -->。）只能通过创建表之间的关系生成外键约束。
+    （请参阅 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Foreign Key Constraints</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_fk_cnstrnt"); -->。）这种情形的例外情况是将数据库或
+    DDL 脚本反向设计为数据模型的过程，在这种情况下，关系及外键是自动生成的。键的迁移取决于两个表之间添加的确定与非确定的关系类型。
+</p>
+<p>
+    参考：<img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Key Migration</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_key_mig"); -->参考：<img alt="帮助手册图标"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Changing the Migrated Key</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_chng_mig_key"); -->。
+</p>
+<h4>
+    <a id="De-Normalize the Database Design to Optimize for Performance" name="De-Normalize the Database Design to Optimize for Performance">对数据库设计进行反向规范化来优化性能</a>
+</h4>
+<p>
+    根据特定的项目情况，可能需要调整规范化的物理数据库设计以满足性能需求。请通过将表设计为将一起检索到的对象存储在同一个表中，来为提高性能优化数据模型。这种技术称为反向规范化。要进行反向规范化，请将两个表中的唯一列合为一个，并除去第二个表。&nbsp;
+</p>
+<h4>
+    <a id="Optimize Data Access" name="Optimize Data Access">优化数据访问</a>
+</h4>
+<p>
+    另一优化技巧是使用列索引来更有效地访问表中的数据。请参阅 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Indexes</i>。 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_index"); -->如何在数据模型中创建索引的描述：<img     alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Indexes</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_index"); -->
+</p>
+<p>
+    数据访问的另一方面为使用数据库视图。视图可用于控制或限制对一个或多个表中的数据的访问。请参阅<img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating
+    Views</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_view"); -->以获取如何在“数据模型”中创建视图的描述。参考：<img      alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modeling Views</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_view"); -->
+</p>
+<h4>
+    <a id="Define Storage Characteristics" name="Define Storage Characteristics">定义存储特征</a>
+</h4>
+<p>
+    请通过定义表空间和表空间容器来为数据库创建模型存储设计。（请参阅<img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>表空间</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_ts_overview"); -->。）通过实现关系将物理数据库设计元素映射到存储元素。XDE
+    联机帮助主题 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Adding Tablespaces to Databases</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_add_ts_db"); --> 描述了如何为特定数据库创建表空间。XDE
+    联机帮助主题 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Assigning Tables to Tablespaces</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_assign_tbl_ts"); --> 描述了如何将模型中的表分配给表空间。
+</p>
+<p>
+    Rational XDE 目前支持为 Oracle、DB2 和 SQL Server 的表空间建模。以下&nbsp;XDE 联机帮助主题提供了有关如何为这些 DBMS 产品的表空间建模的指导信息：&nbsp;
+</p>
+<ul>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modeling Oracle Tablespaces</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_oracle_ts"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modeling DB2 Tablespaces</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_db2_ts"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modeling SQL Server Tablespaces</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_sqlsrv_ts"); -->
+    </li>
+</ul>
+<p>
+    请参阅 Rational XDE 联机帮助中的以下主题，获取有关表空间和数据库模型元素的更多信息：
+</p>
+<ul>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modeling Databases and Tablespaces</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_ts"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Databases</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_db"); -->
+    </li>
+</ul>
+<h4>
+    <a id="Distribute Class Behavior to the Database" name="Distribute Class Behavior to the Database">设计存储过程以向数据库分发类行为</a>
+</h4>
+<p>
+    根据需要定义存储过程来支持数据库信息的有效存储和检索。请检查曾用于为候选存储过程创建表的设计类的操作。可将存储过程作为过程或函数实施。请参阅&nbsp;<img alt="帮助手册图标"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Stored Procedures</i>。 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_sp"); -->正如 <img alt="帮助手册图标"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Stored Procedure Containers</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_sp_cont"); -->
+     中所述，存储过程必须位于“存储过程容器”中。存储过程是作为其所在的“存储过程容器”类的操作而创建的。请参阅 <img alt="帮助手册图标"     src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Stored Procedures</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_sp"); -->, <img     alt="helpbook icon" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Stored Procedure Containers</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_sp_cont"); -->, <img     alt="helpbook icon" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Creating Stored Procedure Parameters</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_create_sp_prmtr"); -->
+</p>
+<p>
+    请参阅 Rational XDE 联机帮助主题：<img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modeling Stored Procedures</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_sp"); -->
+</p>
+<p>
+    按照需要定义触发器以进一步控制和管理对表中信息的修改。参考：主题 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Modeling Triggers</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_trig"); -->
+</p>
+<h3>
+    <a id="Review the Results" name="Review the Results">查看结果</a>
+</h3>
+<p>
+    查看<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>中数据库设计的结果，以与<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>中的应用程序设计保持一致，并与整体应用程序体系结构保持一致。 请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/checklists/data_model_D22985A5.html" guid="2.800761632096845E-305">核对表：数据模型</a>，了解要复审的特定项。
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Applied Information Sciences 图标"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>此内容的全部或部分由 <a href="http://www.appliedis.com" target="_blank">Applied
+                Information Sciences</a> 开发。</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

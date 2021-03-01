@@ -1,0 +1,42 @@
+/******************************************************************************
+ * Copyright (c) 2004, 2007 IBM Corporation.  All Rights Reserved.            * 
+ ******************************************************************************/
+html, body, #mainWindow {
+	font-family: arial, helvetica, sans-serif, kanji2;
+	font-size: 10pt;
+	height: 100%;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.banner {
+	background-image: url(../images/banner.jpg);
+	background-repeat: no-repeat;
+	color: #ffffff;
+	height: 63px; /*this need to be the ezact height of the image, */
+	text-align: right;
+	width: 100%;
+}
+
+.dojoContentPane {
+	overflow: auto;
+	padding : 10px 10px 10px 10px;
+}
+
+.contentTopPane {
+	background-image: url('images/bg.gif');
+	border-width: 0px;
+	height: 30px;
+	background-position-x: right;
+	width: 100%;
+}
+
+.floatingPane {
+	border: 0px;
+	height: 300px;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	width: 400px;
+}

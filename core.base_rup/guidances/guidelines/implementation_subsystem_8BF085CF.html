@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 实施子系统</title>
+<meta content="Guideline" name="uma.type">
+<meta content="implementation_subsystem" name="uma.name">
+<meta content="实施子系统" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{0F629848-C19E-49AB-A6C1-C8D6A094898A}", "9.455380296721554E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "9.455380296721554E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.455380296721554E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：实施子系统</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">实施子系统有助于组织实施模型，从而降低实施模型的复杂程度。本指南讨论设计实施子系统时要考虑的一些选项。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_implementation_subsystem_118747E9.html" guid="{0F629848-C19E-49AB-A6C1-C8D6A094898A}">实施子系统</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_implementation_subsystem__guidelines_for" name="XE_implementation_subsystem__guidelines_for" class="index" key="实施子系统（implementation subsystem）" text="指南"></a> 
+<h3>
+    <a id="Explanation" name="Explanation"></a>说明
+</h3>
+<p>
+    对于包含数百个元素的实施模型，降低其复杂性的一个基本方法是使用实施子系统。
+</p>
+<p>
+    子系统通常采用目录的形式，并带有附加的结构信息或管理信息。 例如，子系统可以创建为文件系统中的目录或文件夹，或者创建为 Rational Apex for C++ 或 Ada 中的子系统，或者创建为使用 Java 的包。 在
+    Rational XDE 开发中，子系统是由集成开发环境（IDE）定义的“项目”。
+</p>
+<p>
+    实施子系统是<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/design_package_74F2CD5B.html" guid="_yF4CmdnmEdmO6L4XMImrsA">设计包</a> <i>（或粗略的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">设计子系统</a>）的实施模拟。</i>实施模型和实施子系统是<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/implementation_view_CC9CEB3B.html" guid="_yKpN1tnmEdmO6L4XMImrsA">实施视图</a>的目标，因此在开发阶段意义重大。
+</p>
+<h4>
+    <a id="XE_implementation_subsystem__exporting_elements" name="XE_implementation_subsystem__exporting_elements"></a><a id="XE_element__exporting_from_implementation_subsystems" name="XE_element__exporting_from_implementation_subsystems" class="index" key="元素（element）" text="从实施子系统导出"></a>导出元素
+</h4>
+<p>
+    实施子系统控制其内容的外部可视性。如果声明拥有某一元素的子系统使其可见（即“导出”该元素），该元素则可由子系统以外的元素引用。
+</p>
+<p>
+    在缺省情况下，子系统中的所有元素（以及包含的子系统）通常在子系统外是可见的。 这意味着此子系统以外的任何元素都可以引用子系统内的所有元素。 例如，在 C++ 中，这意味着外部的元素可以通过 #include 引用子系统内的所有元素。
+</p>
+<h3>
+    <a id="Use" name="Use"></a>使用
+</h3>
+<p>
+    实施模型可以或多或少接近于设计模型，这取决于您如何将设计包映射到实施模型中的实施子系统。
+</p>
+<p>
+    建议您保持一一映射，即一个设计包应映射到一个实施子系统。这样做的主要原因是保持从设计到代码的无缝可跟踪性。
+</p>
+<p>
+    存在这样的情况，即您需要使实施中的子系统与设计中的包和子系统有所区别。 关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">任务：构造实施模型</a>。是否表示此映射，以及如何表示此映射，应包括在<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">工作产品：特定于项目的指南</a>中。
+</p>
+<p>
+    您可以出于很多原因而将一个系统分成几个子系统。设计中的条件同样适用于实施中。 关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_package_8CF100B8.html" guid="3.3691722315666536E-305">指南：设计包</a>。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

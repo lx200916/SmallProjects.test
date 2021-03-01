@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational PurifyPlus 工具分析运行时性能（Windows 和 UNIX）</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="analyzing_runtime_behavior_using_purifyplus" name="uma.name">
+<meta content="使用 Rational PurifyPlus 工具分析运行时性能（Windows 和 UNIX）" name="uma.presentationName">
+<meta content="Tool:rup_purifyplus:Rational PurifyPlus" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational PurifyPlus" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{63F53632-61E3-40E9-BA84-3DCE7903F99D}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{63F53632-61E3-40E9-BA84-3DCE7903F99D}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{63F53632-61E3-40E9-BA84-3DCE7903F99D}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}", "{63F53632-61E3-40E9-BA84-3DCE7903F99D}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{63F53632-61E3-40E9-BA84-3DCE7903F99D}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational PurifyPlus 工具分析运行时性能（Windows 和 UNIX）</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational PurifyPlus 工具来实现无内存错误和泄漏的代码，实现高效地使用内存并提供最佳性能。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_purifyplus_CABB5CD4.html" guid="{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}">Rational PurifyPlus</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/analyze_runtime_behavior_B2DD7652.html" guid="{5131A5BB-5B95-499E-A68B-788A2F0957C3}">分析运行时行为</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<p>
+    此工具向导适用于 Microsoft Windows 系统和 UNIX 系统。
+</p>
+<p>
+    PurifyPlus 工具包含 Rational Purify、Rational PureCoverage 和 Rational Quantify。
+</p>
+<p>
+    <img height="15" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />要了解有关 PurifyPlus
+    工具的更多信息，请参阅 PurifyPlus 的 <i>Getting Started</i> 手册（Windows 版本或 UNIX 版本）。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" />有关使用 PurifyPlus
+    工具的分步信息，请参阅工具的联机帮助。
+</p>
+<h2>
+    运行时性能分析
+</h2>
+<p>
+    运行时性能分析包括以下内容：
+</p>
+<ul>
+    <li>
+        <b>检测内存错误和泄漏（Windows 和 UNIX 上的 C/C++ 程序）。</b> 
+        <ul>
+            <li>
+                使用 Purify 可在您自己的代码以及您的软件所使用的组件中准确地找出这些问题，即使在没有源的情况下也是可以的。
+            </li>
+            <li>
+                使用 PureCoverage 可确保所有代码都已覆盖到。（也可以独立于 Purify 而使用 PureCoverage 来收集 C/C++、Java 和 .NET 受管代码的覆盖率数据。）
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>概要分析内存使用情况（Windows 上的 Java 和 .NET 受管代码）。</b>使用 Purify 可显示正在低效使用内存的位置。
+    </li>
+    <li>
+        <b>概要分析性能（Windows 和 UNIX）。</b>使用 Quantify 可显示您的程序花费最长时间的位置，以便消除主要的性能瓶颈。
+    </li>
+</ul>
+<p>
+    使用 PurifyPlus 工具进行运行时分析将产生以最高效率运行的无错误代码。
+</p>
+<h4>
+    工具步骤
+</h4>
+<p>
+    使用 PurifyPlus 工具执行运行时分析：
+</p>
+<div style="MARGIN-LEFT: 2em">
+    <ol>
+        <li>
+            <a href="#Step1">在 Purify 下运行程序来收集错误、泄漏和覆盖率数据（Windows 和 UNIX 上的 C/C++ 程序）</a>
+        </li>
+        <li>
+            <a href="#Step2">在 Purify 下运行程序来检测低效的内存使用情况（Windows 上的 Java 和 .NET 受管代码）</a>
+        </li>
+        <li>
+            <a href="#Step3">在 Quantify 下运行程序来查找性能瓶颈（Windows 和 UNIX）</a>
+        </li>
+    </ol>
+</div>
+<h3>
+    1. <a id="Step1" name="Step1"></a><b>在 Purify 下运行程序来收集错误、泄漏和覆盖率数据（Windows 和 UNIX 上的 C/C++ 程序）&nbsp;</b>
+</h3>
+<p>
+    Purify
+    可以检测难以发现的运行时错误，包括您自己的代码和您的软件所使用的组件中的内存泄漏。它能够报告诸如数组范围错误、通过悬空指针进行的访问、未初始化的内存读取、内存分配错误以及内存泄漏之类的内存错误，使您可以在它们造成任何损害之前解决它们。如果系统上有
+    Rational PureCoverage，您还可以看到已经测试以及未经测试的代码的各个部分。&nbsp;
+</p>
+<p>
+    通过在 Purify 下运行程序来开始：
+</p>
+<ul>
+    <li>
+        在 Windows 系统上： 
+        <ul>
+            <li>
+                如果您是在 Microsoft Visual Studio 6 中工作，则请先选择 Visual Studio 菜单项 <b>Purify&nbsp;&gt; Engage Purify
+                Integration</b>。如果系统上有 PureCoverage，也请选择 <b>Purify&nbsp;&gt; Collect Coverage Data</b>，从而指示 Purify
+                监视代码覆盖率。然后照常在 Visual Studio 中运行程序。
+            </li>
+            <li>
+                如果是将 Purify 用作独立的程序，而非与 Visual Studio 集成在一起使用，请选择 <b>File &gt; Run</b>。在 Run Program 对话框中，选择 <b>Collect
+                error, leak, and coverage data</b>（或者如果系统上没有 PureCoverage，则选择 <b>Collect error and leak data</b>）并运行程序。
+            </li>
+        </ul>
+    </li>
+    <li>
+        在 UNIX 系统上，请添加单词 <font face="Courier New" size="2">purify</font>。 将此放在编译／链接行的开始。 如果系统上有 PureCoverage，则还要添加 <font         face="Courier New" size="2">purecov</font>。 例如：<br />
+         <font face="Courier New,Courier" size="-1">% purify purecov cc -g hello_world.c</font><br />
+         然后照常运行程序。
+    </li>
+</ul>执行程序时，Purify 会在 Purify 查看器中列出了运行时错误。退出程序时，Purify 将报告内存泄漏。 
+<p>
+    扫描消息头来确定关键错误。展开消息以查看更多详细的诊断信息，包括生成错误的代码在内。通过查看器，您可在编辑器中打开源代码，找到出错的行，并直接进行更正。
+</p>
+<p>
+    更正错误并重新构建程序后，请通过重新运行更新的程序并将新结果与上一次运行的结果进行比较来验证您更正的内容。重复执行检测和运行、分析以及更正的全过程，直到程序“干净”地运行为止。
+</p>
+<p>
+    如果收集了程序运行的覆盖率数据，则还可以看到尚未检查错误的代码的各个部分。请使用此信息来调整运行时分析的范围，以便找到程序中的所有错误，无论它们发生在何处。
+</p>
+<p>
+    <b><img height="16" alt="帮助手册图标" hspace="0" src="./../../../core.base_rup/resources/helpbook.gif" width="16" border="0" /></b>有关更多信息，请查看
+    Purify 联机帮助索引中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>running programs</i>
+    </li>
+    <li>
+        <i>Purify messages</i>
+    </li>
+    <li>
+        <i>source code</i>
+    </li>
+    <li>
+        <i>coverage data</i>
+    </li>
+</ul>
+<h3>
+    2. <a id="Step2" name="Step2"></a><b>在 Purify 下运行程序来检测低效的内存使用情况（Windows 上的 Java 和 .NET 受管代码）&nbsp;</b>
+</h3>
+<p>
+    Purify 可以帮助您确定 Java 和 .NET 受管代码内存问题。使用 Purify 可确定：
+</p>
+<ul>
+    <li>
+        程序正在使用的内存量
+    </li>
+    <li>
+        程序为特定一组操作消耗的内存量
+    </li>
+    <li>
+        程序中的哪些方法和对象消耗了过多的内存
+    </li>
+    <li>
+        哪些对象阻止了对不必要的对象进行的垃圾回收
+    </li>
+    <li>
+        在何处适合强制进行垃圾回收以提高性能
+    </li>
+</ul>通过在 Purify 下运行程序来开始。 
+<ul>
+    <li>
+        如果您是在 Microsoft Visual Studio .NET、IBM WSWB 或 IBM WSS AD 中工作，请先选择菜单项 <b>PurifyPlus&nbsp;&gt; Purify&nbsp;&gt;
+        Engage Purify Integration</b>。然后照常运行程序。
+    </li>
+    <li>
+        如果是将 Purify 用作独立的程序，而非与 Visual Studio .NET 或 WSWB/WSS AD 集成在一起使用，请在 Purify 用户界面中选择 <b>File &gt; Run</b>。在 Run
+        Program 对话框中，选择 <b>Collect memory profiling data</b> 并运行程序。
+    </li>
+</ul>在程序完成其初始化过程后，请使用 Purify snapshot 命令来捕获该时刻的内存使用情况的<b>基准</b>快照。此快照是调查程序运行时如何使用内存的基础。&nbsp;&nbsp; 
+<p>
+    有了此快照后，便可以在程序运行时捕获程序的内存使用记录。执行程序中您怀疑存在内存泄漏的各个部分。Purify 将会显示内存分配图，图中会显示当前内存使用的实时变化。当观察到所分配的内存增加时，请创建另一个快照。
+</p>
+<p>
+    比较两个快照来确定可能在泄漏内存的方法。退出程序并比较（或“diff”）两个快照。Purify
+    会显示一个调用图，该调用图显示了在程序运行时，在第一次和第二次快照获取的间隔时间内，内存分配量最大的各种方法。您可以将重点放在此调用图中的特定方法上，以便更密切地调查它们。
+</p>
+<p>
+    如果分配给某个方法的内存量出奇地大，请检查源代码并根据需要进行修订，以便在不再需要内存时释放它。
+</p>
+<p>
+    一旦确定了看起来有内存问题的方法，就可以在对象级别上分析这些方法。查找应该被释放和进行垃圾回收，但实际上未被释放和进行垃圾回收的对象，可能是因为其他对象不必要地保留了一个对它们的引用。&nbsp;
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 关于更多信息，请在 Purify 联机帮助索引中查找以下内容：&nbsp;
+</p>
+<ul>
+    <li>
+        <i>running programs</i>
+    </li>
+    <li>
+        <i>comparing runs</i>
+    </li>
+    <li>
+        <i>data browser</i>
+    </li>
+</ul>
+<h3>
+    3. <a id="Step3" name="Step3"><b>在 Quantify 下运行程序来查找性能瓶颈（Windows 和 UNIX）。</b></a>
+</h3>
+<p>
+    Quantify 可为您的程序及其组件提供一个完整准确、易于解释的性能数据集，使您可以中确定并消除代码中的性能瓶颈。
+</p>
+<p>
+    通过在 Quantify 下运行程序来开始，以收集性能数据：
+</p>
+<ul>
+    <li>
+        在 Windows 系统上： 
+        <ul>
+            <li>
+                如果您是在 Microsoft Visual Studio 6 中工作，请先选择 Visual Studio 菜单项 <b>Quantify&nbsp;&gt; Engage Quantify
+                Integration</b>。然后照常在 Visual Studio 中运行程序。
+            </li>
+            <li>
+                如果您是在 Microsoft Visual Studio .NET、IBM WSWB 或 IBM WSS AD 中工作，则请选择菜单项 <b>PurifyPlus&nbsp;&gt;
+                Quantify&nbsp;&gt; Engage Quantify Integration</b>。然后照常运行程序。
+            </li>
+            <li>
+                如果是将 Quantify 用作独立的程序，而非与 Visual Studio 或 WSWB/WSS AD 集成在一起使用，则请在 Quantify 用户界面中选择
+                <b>File&nbsp;&gt;&nbsp;Run</b> 来运行程序。
+            </li>
+        </ul>
+    </li>
+    <li>
+        在 UNIX 系统上，将单词 <i>quantify</i> 添加到编译／链接行的开头。例如：<br />
+<pre>
+     % quantify cc -g hello_world.c
+</pre>
+        然后照常运行程序。
+    </li>
+</ul>
+<p>
+    当执行代码时，Quantify 会记录关于程序性能的数据，并显示其线程及纤程的活动。退出程序时，Quantify 会显示关于程序性能的准确概要信息，您可以使用此概要信息来查找及诊断瓶颈。
+</p>
+<p>
+    Quantify 数据显示包括：
+</p>
+<ul>
+    <li>
+        调用图窗口，该窗口使用图形方式描绘程序中各函数的调用结构及性能
+    </li>
+    <li>
+        可排序的函数列表窗口，其中列出所有函数及性能数据
+    </li>
+    <li>
+        函数详细信息窗口，其中显示特定函数、其调用者及其子函数的数据
+    </li>
+    <li>
+        附注释的源代码窗口，其中显示关于源代码副本的分行性能数据
+    </li>
+</ul>
+<p>
+    使用所收集的数据，您将能够确定性能瓶颈，例如不必要的计算和重复计算、不成熟的计算，或过多的开销很高的库调用。
+</p>
+<p>
+    修改代码以消除或最小化瓶颈后，请在 Quantify 下重新运行更新的程序。然后通过创建“diff”数据集将新结果与上一次运行结果进行比较，这样就会给出性能提高和降低的明确指示。
+</p>
+<p>
+    有关更多信息，请查看 Quantify 联机帮助索引中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>running programs</i>
+    </li>
+    <li>
+        <i>comparing runs</i>
+    </li>
+    <li>
+        <i>call graph window</i>
+    </li>
+    <li>
+        <i>annotated source window</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

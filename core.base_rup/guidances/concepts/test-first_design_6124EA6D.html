@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 测试优先设计</title>
+<meta content="Concept" name="uma.type">
+<meta content="test-first_design" name="uma.name">
+<meta content="测试优先设计" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_M6RHkN7IEdm8G6yT7-Wdqw", "{74C60DFE-7221-45F1-BB8B-922A81C5AA98}", "2.5962561793181055E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_M6RHkN7IEdm8G6yT7-Wdqw", "{74C60DFE-7221-45F1-BB8B-922A81C5AA98}", "2.5962561793181055E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_OKm3oN7UEdmjRZts2c4ZjQ", "{74C60DFE-7221-45F1-BB8B-922A81C5AA98}", "2.5962561793181055E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "2.5962561793181055E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.5962561793181055E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：测试优先设计</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">该指南讨论了测试优先设计。在写入和测试代码之前，通过首先创建测试脚本应用测试优先设计。继续该操作直到没有可测试的代码。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_developer_test_44109C5.html" guid="{74C60DFE-7221-45F1-BB8B-922A81C5AA98}">开发人员测试</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test__developer_testing__test-first_design" name="XE_test__developer_testing__test-first_design"></a><a id="XE_design__test-first_design" name="XE_design__test-first_design"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    测试设计是使用来自多种工作产品的信息创建的，包括诸如用例实现、设计模型或分类器接口的设计工作产品。在创建组件之后执行测试。通常恰好在测试执行之前、软件设计工作产品创建之后创建测试设计。下面的图 1
+    显示了一个示例。在此，测试设计在实施结束前的某个时间开始。它利用了组件设计的结果。从实施指向测试执行的箭头表示在实施完成之前不能执行测试。
+</p>
+<p align="center">
+    <img height="159" alt="生命周期图中的测试设计位置" src="./../../../core.base_rup/guidances/concepts/resources/tstfrsdsg-img1.gif" width="614" />
+</p>
+<p class="picturetext">
+    图 1：传统上，测试设计在生命周期后期执行
+</p>
+<p>
+    但是，不是必须这样做。虽然必须等到组件实施后才能执行测试，但测试设计可以在较早时进行。它可以在设计工作产品完成后立即进行。甚至可以与组件设计并行进行，如这里所示：
+</p>
+<p align="center">
+    <img height="158" alt="测试优先设计图" src="./../../../core.base_rup/guidances/concepts/resources/tstfrsdsg-img2.gif" width="610" />
+</p>
+<p class="picturetext">
+    图 2：测试优先设计按时间顺序将测试设计与软件设计串联起来
+</p>
+<p>
+    以这种方式“向上”推移测试工作通常称为“测试优先设计”。它的优势是什么呢？
+</p>
+<ol>
+    <li>
+        无论您多么仔细地设计软件，都将会犯错误。您可能会遗漏某个相关情况。或者特定的思考习惯会使您很难发现特定备选方案。又或者仅仅由于疲劳而忽略了某些情况。让其他人来复审您的设计工作产品是有用的。他们可能会发现您遗漏的情况或察觉到您忽略的情况。最好这些人有与您不同的视角；从不同的角度来查看设计，将会发现您遗漏的情况。<br />
+        <br />
+         经验表明测试设想是一种有效的方法。它是十分具体的。在软件设计期间，很容易想到如“显示当前客户的头衔”之类的特定字段，然后继续工作而没有真正地对其进行思考。在测试设计期间，必须<i>明确</i>决定当从海军退役并获得法律学位的客户坚持将自己称为“（退役）海军上尉
+        Morton H. Throckbottle 先生”时，该字段将如何显示。他的头衔是“海军上尉”还是“先生”？<br />
+        <br />
+         如果测试设计被推迟到测试执行正要开始之前，如图 1
+        所示，您将可能会浪费资金。软件设计中的错误始终未能发现，直到测试设计时，某个测试人员说，“知道吗？我在海军认识这家伙……”时，才创建“Morton”测试并发现问题。现在，必须重写部分或全部的实施并更新设计工作产品。而在实施开始之前捕获问题将会使代价低一些。<br />
+        <br />
+    </li>
+    <li>
+        在测试设计之前可以捕获某些错误。不过，它们将由实施者捕获。那样的话仍然很糟。
+        因为实施必须慢慢停下来，而重点从如何实施设计转移到该设计应是什么。即使当实施者和设计人员角色由同一个人担当时，那也是破坏性的；当两个角色是不同的人时破坏性会更强。防止这种破坏是测试优先设计帮助提高效率的另一种方法。<br />
+        <br />
+    </li>
+    <li>
+        测试设计通过阐明设计以另一种方法帮助实施者。如果实施者对于设计意图有疑问，则测试设计可以作为期望行为的特定示例。这将有助于减少由于实施者的误解而产生的错误。<br />
+        <br />
+    </li>
+    <li>
+        即使该问题是实施者<i>未</i>考虑到但应该考虑到的，也会减少错误。例如，可能存在某种不明确的情况，即设计人员不知不觉地解释成一种方式，而实施者解释成另一种方式。如果实施者是从设计和测试用例（有关组件应该执行什么操作的特定指令）两方面来实施的，则组件更可能实际去执行需要执行的行为。
+    </li>
+</ol>
+<h3>
+    <a id="Examples" name="Examples">示例</a>
+</h3>
+<p>
+    这里是一些示例，使您了解测试优先设计的特点。
+</p>
+<p>
+    假设您正在创建一个系统，替换旧的“询问秘书”的安排会议室方法。<b>MeetingDatabase</b> 类的一种方法称为 <b>getMeeting</b>，具有以下签名：
+</p>
+<blockquote>
+<pre>
+     Meeting getMeeting(Person, Time);
+</pre>
+</blockquote>
+<p>
+    给定某个人和时间，<b>getMeeting</b> 返回在此时间安排此人参加的会议。如果此人未安排任何事情，则返回<b>未安排的</b>特殊 <b>Meeting</b> 对象。某些直接了当的测试用例如下：
+</p>
+<ul>
+    <li>
+        在给定时间此人未参加任何会议。返回<b>未安排的</b>会议吗？
+    </li>
+    <li>
+        在该时间此人参加某个会议。方法返回正确的会议吗？
+    </li>
+</ul>
+<p>
+    这些测试用例是令人乏味的，但最终需要尝试它们。最好还是通过编写将在某天运行的实际测试代码，现在创建它们。首次测试的 Java 代码可与以下内容相似：
+</p>
+<pre>
+ // if not in a meeting at given time,     // expect to be unscheduled.     
+ public void testWhenAvailable() { Person fred = new Person("fred"); Time now = Time.now(); MeetingDatabase db = new MeetingDatabase(); expect(db.getMeeting(fred, now) == Meeting.unscheduled);     }
+</pre>
+<p>
+    不过也有更有趣的测试构想。例如，用此方法搜索一个匹配。当方法搜索时，有一个好想法，即如果搜索发现多于一个的匹配，则询问应发生什么。在本例中，那意味着询问“一个人能同时参加两个会议吗？”似乎是不可能的，但如果向秘书询问此类情况，可能会得到令人惊讶的答案。结果发现某些主管确实经常被同时安排了两个会议。他们的任务是匆匆进入会议，用短暂的时间“召集与会人员”，然后继续到下一个会议。未能容纳该行为的系统将至少被部分地淘汰。
+</p>
+<p>
+    这是在实施层面进行的测试优先设计的一个示例，它捕获一个分析问题。关于该示例，有几点要注意：
+</p>
+<ol>
+    <li>
+        您会希望好的用例定义和分析已经发现了此需求。那样，将会避免问题“向上蔓延”，并且将以不同的方式设计 <b>getMeeting</b>。
+        （它不能返回一个会议；必须返回一组会议。）不过分析总是会遗漏一些问题，最好在实施期间，而不是部署后发现这些问题。<br />
+        <br />
+    </li>
+    <li>
+        在许多情况下，设计人员和实施者将不具备捕获此类问题的域知识 － 他们将没有机会或时间来盘问秘书。在该情况下，为 <b>getMeeting</b>
+        设计测试的人员会询问“存在应返回两个会议的情况吗？”，思考一会儿，得出“不存在”的结论。因此，测试优先设计不捕获每个问题，但仅仅是询问正确类型的问题这一事实就增加了发现问题的机会。<br />
+        <br />
+    </li>
+    <li>
+        在实施期间应用的某些相同的测试技术也适用于分析。测试优先设计也可以由分析人员来执行，但这不是本页的主题。
+    </li>
+</ol>
+<p>
+    三个示例中的第二个是供暖系统的状态表图模型。
+</p>
+<p align="center">
+    <img height="253" alt="HVAC 状态表图" src="./../../../core.base_rup/guidances/concepts/resources/tstfrsdsg-img3.gif" width="567" />
+</p>
+<p class="picturetext">
+    图 3：HVAC 状态表图
+</p>
+<p>
+    一组测试将穿过状态表图中的所有弧。一个测试可以从空闲系统开始，注入“过热”事件，系统在“冷却／运行”状态出现故障，清除故障，注入另一个“过热”事件，然后运行系统，返回“空闲”状态。由于这不能运用所有的弧，因此需要更多的测试。这些类型的测试查找各种实施问题。例如，通过穿过每条弧，检查实施是否遗漏了某条弧。通过使用事件序列（这些事件具有跟随在应成功完成的路径后面的失败路径），检查错误处理代码是否未能清除可能影响以后计算的部分结果。（有关测试状态表图的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/test_ideas_for_statechart_and_flow_diagrams_B881354C.html" guid="3.794638918140148E-305">工作产品指南：关于状态表图和活动图的测试构想</a>。）
+</p>
+<p>
+    最后一个示例使用设计模型的一部分。在债权人和发票之间有某种关联，其中任何给定的债权人可以有多张有待偿还的发票。
+</p>
+<p align="center">
+    <img height="45" alt="债权人和发票类关联图" src="./../../../core.base_rup/guidances/concepts/resources/tstfrsdsg-img4.gif" width="186" />
+</p>
+<p class="picturetext">
+    图 4：债权人和发票类之间的关联
+</p>
+<p>
+    当债权人没有发票、有一张发票和许多张发票时，基于此模型的测试将运用此系统。测试人员也会询问是否存在这样的情况，即一张发票需要与多个债权人关联或发票没有关联的债权人。（可能当前运行将替换为计算机系统的基于纸张的系统的人员使用债权人较少的发票作为跟踪待决工作的方法）。如果是这样，这是在分析中应捕获的另一个问题。
+</p>
+<h3>
+    <a id="WhoDoesTest-FirstDesign" name="WhoDoesTest-FirstDesign">谁进行测试优先设计？</a>
+</h3>
+<p>
+    测试优先设计可由设计作者或其他人来执行。通常由作者来执行。这样做的好处是减少了通信开销。工作产品设计人员和测试设计人员不必对彼此说明情况。而且，单独的测试设计人员将必须花时间很好地了解设计，而最初的设计人员已经了解该设计了。最后，诸如“如果压缩器处于状态
+    X 时出现故障，会发生什么？”之类的许多问题是在软件工作产品设计和测试设计期间会询问的常见问题，因此您最好还是一次性地向同一个人确切咨询这些问题，并且以测试的形式记录下答案。
+</p>
+<p>
+    尽管如此，仍存在多个不利条件。首先的一点是工作产品设计人员在某种程度上意识不到他或她自己的错误。测试设计流程将揭示一部分被忽略的错误，但可能不能与另一个人发现的同样多。问题的数量似乎随不同的人而差别很大，并且经常与设计人员的经验多少相关。
+</p>
+<p>
+    由同一个人进行软件设计和测试设计的另一个不利条件在于没有并行性。
+    虽然将角色分配到不同的人会导致总工作量增大，但这样可能会占用较少的日程时间。如果总是想着结束设计并进入实施阶段，那么花时间测试设计很可能会令人不耐烦。更重要的是，为了继续进行，存在敷衍工作的倾向。
+</p>
+<h3>
+    <a id="CanAllTestDesignBeDoneAtComponentDesignTime" name="CanAllTestDesignBeDoneAtComponentDesignTime">所有的测试设计都可以在组件设计期进行吗？</a>
+</h3>
+<p>
+    不必。原因在于不是所有的决策都是在设计期作出的。在设计中创建的测试将不会很好地测试在实施期间作出的决策。一个经典示例是对数组排序的例程。存在具有不同权衡考虑的多种不同的排序算法。对于大型数组，快速排序通常比插入排序要快，但对于小型数组，前者通常比后者慢。因此，对于具有超过
+    15
+    个元素的数组，可以使用快速排序实施排序算法，否则使用插入排序。从设计工作产品上可能看不到工作的划分。您<i>可以</i>在设计工作产品中表示它，但设计人员可能已经认定不值得为获得作出此类明确决策的好处而费力。由于数组大小在设计中不起作用，因此测试设计可能会由于疏忽而只使用小型数组，这意味着根本没有测试快速排序代码。
+</p>
+<p>
+    作为另一个示例，请考虑时序图的这个片段。它显示 <b>SecurityManager</b> 调用 <b>StableStore</b> 的 <b>log()</b> 方法。然而在本例中，<b>log()</b> 返回了故障，导致
+    <b>SecurityManager</b> 调用 <b>Connection.close()</b>。
+</p>
+<p align="center">
+    <img height="161" alt="安全管理器时序图实例" src="./../../../core.base_rup/guidances/concepts/resources/tstfrsdsg-img5.gif" width="303" />
+</p>
+<p class="picturetext">
+    图 5：SecurityManager 时序图实例
+</p>
+<p>
+    这对实施者是一个很好的提示。只要 <b>log()</b>
+    失败，就必须关闭连接。要回答的测试问题是实施者是否在<i>所有</i>（或仅仅<i>部分</i>）用例中真正做到了这一点，并且正确做到了这一点。要回答此问题，测试设计人员必须查找对 <b>StableStore.log()</b>
+    的所有调用并确保每个调用点都给定了要处理的故障。
+</p>
+<p>
+    运行这样一个测试似乎很奇怪，因为您刚刚查看了调用 <b>StableStore.log()</b> 的所有代码。您难道不能直接检查它是否能正确处理故障吗？
+</p>
+<p>
+    也许检验就足够了。但众所周知，错误处理代码是易出错的，因为它经常隐含地依赖于已违反了存在的错误的假设。一个经典示例是处理分配故障的代码。这里是一个示例：
+</p>
+<blockquote>
+<pre>
+     while (true) { // top level event loop     try { XEvent xe = getEvent(); ...                      // main body of program     } catch (OutOfMemoryError e) { emergencyRestart();     } }
+</pre>
+</blockquote>
+<p>
+    此代码尝试通过清除操作（这样使内存可用）然后继续处理事件来从内存不足错误中恢复。让我们假设那是一个可接受的设计。<b>emergencyRestart</b> 十分小心地不分配内存。问题是 <b>emergencyRestart</b>
+    调用了某个实用程序例程，此例程调用某个其他实用程序例程，该例程又调用某个其他实用程序例程，而最后一个例程又分配了一个新的对象。问题在于没有可用内存了，因此整个程序失败。这些类型的问题很难在检查过程中发现。
+</p>
+<h3>
+    <a id="Test-FirstDesignAndRUPPhases" name="Test-FirstDesignAndRUPPhases">测试优先设计和 RUP 阶段</a>
+</h3>
+<p>
+    直到此刻，我们已隐含假定您已尽早并尽可能多地做了测试设计。即您已获得了能从设计工作产品中得到的所有测试，以后将仅添加基于实施内部的测试。这在精化阶段可能不适合，因为这样完整的测试可能不符合迭代目标。
+</p>
+<p>
+    假设建立体系结构原型是为了向投资者证明产品的可行性。它可以基于一些关键的用例实例。代码应经过测试，以证明它支持这些实例。但如果创建更多的测试，会有任何危害吗？例如，原型忽略重要的错误用例可能是显而易见的。为什么不通过编写将执行错误处理的测试用例，来记录错误处理的需要呢？
+</p>
+<p>
+    但是，如果此原型执行它的工作并揭示出体系结构方法不起作用，该怎么办呢？那么，将放弃此体系结构 －
+    以及用于错误处理的所有那些测试。在那种情况下，设计测试的工作将不产生任何价值。最好等一下，只有设计好的那些测试需要检查此概念验证原型是否真正证实了此概念。
+</p>
+<p>
+    这似乎并不重要，但在工作中却有很大的心理作用。精化阶段针对主要风险。整个项目团队应侧重于那些风险。让人们专注于次要问题则耗费了团队的注意力和精力。
+</p>
+<p>
+    因此，在精化阶段的哪些方面能成功使用测试优先设计呢？它可以在充分探索体系结构风险中扮演重要角色。请考虑：团队将知道某个风险是否已被意识到或已被避免，这将如何使设计流程更清晰并会产生首次构建的更好体系结构。
+</p>
+<p>
+    在构造阶段期间，设计工作产品进入最终的形式。实施所有必需的用例实现和所有类的接口。因为阶段目标是完整性，所以完整的测试优先设计是合适的。以后的事件应该只会使非常少（如有）的测试无效。
+</p>
+<p>
+    先启和移交阶段通常不太侧重于设计活动，对于这些阶段，测试活动是合适的。 当要从事设计活动时，测试优先设计是适用的。例如，它可以与先启阶段中的候选概念验证工作一起使用。对于构造和精化阶段测试，它应符合迭代目标。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

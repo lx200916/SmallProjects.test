@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:fo="http://www.w3.org/1999/XSL/Format" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>RUP for Small Projects.zh_CN</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="true" name="meta_tagged">
+<meta name="rmc" content="7.0.1">
+<link rel="StyleSheet" href="skin/main.css" type="text/css">
+<link rel="StyleSheet" href="skin/treeNodesIcons.css" type="text/css">
+<script type="text/javascript">
+	var djConfig = {
+		//preventBackButtonFix: false,
+     	isDebug: false,
+     	debugAtAllCosts: false
+	};
+</script><script src="dojo/dojo.js" type="text/javascript"></script><script type="text/javascript" language="JavaScript">
+	dojo.require("dojo.event.*");
+	dojo.require("dojo.io.*");
+	//dojo.require("dojo.undo.browser");
+	dojo.require("dojo.widget.Button");
+	dojo.require("dojo.widget.FloatingPane");
+	dojo.require("dojo.widget.LayoutContainer");
+	dojo.require("dojo.widget.ContentPane");
+	dojo.require("dojo.widget.LinkPane");
+	dojo.require("dojo.widget.AccordionContainer");
+	dojo.require("dojo.widget.ColorPalette");
+	dojo.require("dojo.widget.TabContainer");
+	dojo.require("dojo.widget.TreeV3");
+	dojo.require("dojo.widget.TreeNodeV3");
+	dojo.require("dojo.widget.TreeBasicControllerV3");
+	dojo.require("dojo.widget.TreeDocIconExtension");
+	dojo.require("dojo.widget.TreeSelectorV3");
+	dojo.require("dojo.widget.TreeEmphasizeOnSelect");
+	dojo.require("dojo.widget.TreeDeselectOnDblselect");
+	dojo.require("dojo.widget.TreeExpandToNodeOnSelect");
+	dojo.require("dojo.html.*");
+	dojo.hostenv.writeIncludes();
+</script><script src="theme/appResource.js" type="text/javascript"></script><script src="theme/appBrowser.js" type="text/javascript"></script><script src="theme/appNav.js" type="text/javascript"></script><script src="theme/app.js" type="text/javascript"></script><script src="theme/appSettings.js" type="text/javascript"></script><script src="theme/treeNodes.js" type="text/javascript"></script>
+</head>
+<body>
+<div layoutChildPriority="top-bottom" id="mainWindow" dojoType="LayoutContainer">
+<div layoutAlign="top" id="BannerWidget" dojoType="rmc:BannerWidget"></div>
+<div class="contentTopPane" layoutChildPriority="left-right" layoutAlign="top" id="contentTopPane" dojoType="LayoutContainer">
+<div layoutAlign="left" id="appToolbar" dojoType="rmc:ToolbarWidget"></div>
+</div>
+<div layoutAlign="client" orientation="horizontal" dojoType="rmc:SplitContainerEx" id="splitContainer">
+<div sizeShare="10" dojoType="rmc:AccordionContainerEx" id="navigationContainer"></div>
+<div layoutAlign="client" class="dojoContentPane" sizeShare="30" id="contentContainer" dojoType="rmc:IFrameContentPane"></div>
+</div>
+</div>
+<div bgOpacity="0" bgColor="white" class="floatingPane" title="" id="ModalFloatingPane" dojoType="rmc:ModalFloatingPaneEx"></div>
+</body>
+</html>

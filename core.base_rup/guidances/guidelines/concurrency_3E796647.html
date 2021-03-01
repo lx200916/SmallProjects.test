@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 并行</title>
+<meta content="Guideline" name="uma.type">
+<meta content="concurrency" name="uma.name">
+<meta content="并行" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.5676516174458592E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.5676516174458592E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.5676516174458592E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.5676516174458592E-304"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.5676516174458592E-304"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：并行</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南帮助开发人员选择能够满足软件系统内的并行需求的最佳方法。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">描述运行时体系结构</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_concurrency__guidelines_for" name="XE_concurrency__guidelines_for" class="index" key="并行（concurrency）" text="指南"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    设计的成功之道在于选择“最佳”方式来满足一组需求。良好并发系统设计的艺术通常是选择最简单的方法来满足并发需求。设计者应遵循的首要规则之一应是避免重复劳动。已开发出了良好的设计模式和设计代码模式来解决大部分问题。由于并发系统的复杂性，使用已经过严格证明的解决方案并尽可能简化设计才有意义。
+</p>
+<h3>
+    <a id="Concurrency approaches" name="Concurrency approaches">并发方法</a>
+</h3>
+<p>
+    完全在计算机中发生的并发任务称为<b>执行线程</b>。与所有并行活动相似，线程的执行属于时间的范畴，因而也是一个抽象概念。实际捕获执行线程的最好方法是显示它在某个特定时刻的状态。
+</p>
+<p>
+    使用计算机表示并行活动最直接的方法就是让每台计算机专用于一个活动。
+    但是，这通常过于昂贵而且并不总是有益于解决冲突。因此，通常通过某种形式的<b>多任务处理</b>来支持在同一物理处理器上进行多个任务。在此情况中，共享处理器及其关联的资源（例如内存和总线）。（不幸的是，此资源共享可能还将导致新的、在原问题中并不存在的冲突）。
+</p>
+<p>
+    最常见的多任务处理形式是为每个任务提供一个虚拟处理器。该虚拟处理器通常称为<b>进程或任务</b>。通常，每个进程有自己的地址空间，逻辑上与其他虚拟处理器的地址空间区分开。这样就保护了进程，防止进程间由于意外互相覆盖内存而发生冲突。不幸的是，将物理处理器从一个进程切换到另一个进程所需的开销通常是非常高的。此项开销包括
+    CPU 内部大量寄存器组的交换（<b>环境切换</b>），即使使用现代高速处理器，也可能需要数百微秒。
+</p>
+<p>
+    为减少此开销，许多操作系统提供在单个进程中包含多个<b>轻量级线程</b>的功能。进程中的线程共享该进程的地址空间。这减少了环境切换中涉及的开销，但提高了内存冲突的可能性。
+</p>
+<p>
+    对于某些高吞吐量的应用程序，即使是轻量级线程切换的开销也可能过高而无法接受。在这样的情形中，通过利用某些特殊的应用程序特性，通常可以实现更轻量级形式的多任务。
+</p>
+<p>
+    系统的并发需求会对系统体系结构产生显著的影响。将功能从单进程体系结构转成多进程体系结构的决策将对系统结构的许多方面引入重大的更改。可能需要引入附加机制（例如远程过程调用），这些机制可能大量更改系统体系结构。
+</p>
+<p>
+    必须考虑系统可用性需求，以及管理附加进程和线程的附加开销。
+</p>
+<p>
+    对于大多数体系结构决策，更改进程体系结构实际上只是将一组问题转换为另一组问题：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="18%">
+                    <p class="tableheading">
+                        方法
+                    </p>
+                </th>
+                <th scope="col" width="46%">
+                    <p class="tableheading">
+                        优点
+                    </p>
+                </th>
+                <th scope="col" width="46%">
+                    <p class="tableheading">
+                        缺点
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="18%">
+                    单进程，无线程
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            简单
+                        </li>
+                        <li>
+                            快速的进程内消息传递
+                        </li>
+                    </ul>
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            难以平衡工作负载
+                        </li>
+                        <li>
+                            无法扩展到多处理器
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="18%">
+                    单进程，多线程
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            快速的进程内消息
+                        </li>
+                        <li>
+                            无进程间通信的多任务
+                        </li>
+                        <li>
+                            没有“重量级”进程开销的、更好的多任务
+                        </li>
+                    </ul>
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            应用程序必须是“线程安全”的
+                        </li>
+                        <li>
+                            操作系统必须具有有效的线程管理
+                        </li>
+                        <li>
+                            需要考虑共享内存问题
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="18%">
+                    多进程
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            当添加处理器时可以很好地扩展
+                        </li>
+                        <li>
+                            在节点间分发相对简单
+                        </li>
+                    </ul>
+                </td>
+                <td width="46%">
+                    <ul>
+                        <li>
+                            对进程边界敏感：过多使用进程间通信会影响性能
+                        </li>
+                        <li>
+                            交换和环境切换开销大
+                        </li>
+                        <li>
+                            难以设计
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    典型的演进路径是从单进程体系结构开始，再为需要同时发生的各组行为添加进程。在这些范围更广的组中，考虑附加的并发需求，在各进程中添加线程以提高并发性。
+</p>
+<p>
+    初始起点是将许多活动对象分配给单个操作系统任务或线程（使用依用途创建的活动对象调度程序），使用此方法虽然通常能够以单个操作系统任务或线程实现非常轻量级的并发模拟，但将不可能利用多 CPU
+    机器的优势。关键决策是在单独的线程中隔离分块行为，以便分块行为不会成为一个瓶颈。 这将导致有分块行为的活动对象隔离到它们自己的操作系统线程中。
+</p>
+<p class="reactive">
+    在实时系统中，该推理同样适用于封装体 － 每个封装体具有逻辑控制线程，它可能与其他封装体共享操作系统线程、任务或进程，也可能不共享。
+</p>
+<h3>
+    <a id="Issues" name="Issues">问题</a>
+</h3>
+<p>
+    不幸的是，和许多体系结构决策一样，不存在简单的答案；正确的解决方案涉及经仔细权衡的方法。可以使用小型的体系结构原型来考察一组特定选择的影响。在建立进程体系结构的原型时，重点在于将进程数放大至系统理论最大值。请考虑以下问题：
+</p>
+<ul>
+    <li>
+        是否可以将进程数放大到最大值？可以使系统超过最大值多少？是否允许潜在的增长？
+    </li>
+    <li>
+        将某些进程更改为在共享的进程地址空间中运作的轻量级线程，会产生什么影响？
+    </li>
+    <li>
+        增加进程数时，会对响应时间产生什么影响？增加进程间通信（IPC）量时又如何？是否有显著的性能降级？
+    </li>
+    <li>
+        是否可以通过组合或重新组织进程减少 IPC 量？ 这样的更改是否将导致大量难以平衡负载的大型进程？
+    </li>
+    <li>
+        是否可以使用共享内存来减少 IPC？
+    </li>
+    <li>
+        当分配时间资源时，所有进程都应得到“等量时间”吗？是否有可能进行该时间分配？更改调度优先级是否存在潜在缺点？
+    </li>
+</ul>
+<h4>
+    <font size="+0"><b><a id="Inter-Object Communications" name="Inter-Object Communications">对象间通信</a></b></font>
+</h4>
+<p>
+    活动对象可以以同步或异步方式互相通信。同步通信是很有用的，因为它可以通过使用严格控制的序列简化复杂的协作。即，当活动对象正在执行涉及同步调用其他活动对象的“运行至完成”步骤时，可以忽略所有由其他对象启动的并发交互，直到整个序列完成。
+</p>
+<p>
+    虽然这在某些情况中这很有用，但也可能产生问题，因为它有可能使一个更重要的高优先级事件也必须等候（优先级颠倒）。当同步调用的对象可能自身已阻塞，正等待对它自己的同步调用的响应时，此情况还会恶化。这会导致无限的优先级颠倒。在最极端的情况中，如果同步调用链中有循环，则会导致死锁。
+</p>
+<p>
+    异步调用通过启用有限的响应时间来避免此问题。但是，依赖于软件体系结构，异步通信通常导致更复杂的代码，因为活动对象随时都可能必须响应几个异步事件（每个事件都可能必须有与其他活动对象的复杂异步交互序列）。这在实施时可能非常困难并容易出错。&nbsp;
+</p>
+<p>
+    使用具有确定消息传递的异步消息传递技术可以简化应用程序编程任务。即使网络连接或远程应用程序不可用，应用程序仍可继续运作。
+    异步消息传递并没有排除要以同步方式使用它的情况。同步技术将要求在应用程序可用时，就应有连接可用。因为已知有连接存在，所以处理提交处理可能更简单。
+</p>
+<p class="reactive">
+    在 Rational Unified Process 中对实时系统建议的方法中，按照特定<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{6E4F4D6F-2934-432C-9335-5537B795F67F}">协议</a>，通过使用<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_signal_AD16C912.html" guid="{8CA124DA-A80C-45D7-BC65-BA6B4247FF11}">信号</a>异步地进行<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">封装体</a>通信。但是可以通过使用信号对（每个方向一个信号）来实现同步通信。
+</p>
+<h4>
+    <font size="+0"><b><a id="Pragmatics" name="Pragmatics">语用学</a></b></font>
+</h4>
+<p>
+    虽然活动对象的环境切换开销可能非常低，仍会有一些应用程序发现开销无法接受。在需要以高速率处理大量数据的情形中，通常会发生该情况。在这些情况中，可能必须回到使用被动对象和更传统（但风险更高）的并发管理技术（例如信号量）上。
+</p>
+<p>
+    但是这些考虑并不一定意味着必须完全放弃活动对象方法。 即使在如此数据密集的应用程序中， 性能敏感的部分通常也只是整个系统中相对较小的一部分。这表示系统的其余部分仍可以利用活动对象范例。
+</p>
+<p>
+    通常，对于系统设计，性能只是设计标准之一。如果系统很复杂，那么其他诸如可维护性、易于更改和可理解性等的标准同样重要（就算不是更重要）。活动对象方法与低级别的特定于技术的机制相比有一个明显的优点，因为它在允许按照特定于应用程序的术语来表达设计的同时，隐藏了并发和并发管理的很多复杂性。
+</p>
+<h3>
+    <a id="Heuristics" name="Heuristics">试探方法</a>
+</h3>
+<h4>
+    <a id="Focus on interactions" name="Focus on interactions">关注并发组件之间的交互</a>
+</h4>
+<p>
+    无交互的并发组件是一个几乎无关紧要的问题。几乎所有的设计难点都与处理并发任务之间的交互有关，所以必须首先着重理解交互。可提出的一些问题有：
+</p>
+<ul>
+    <li>
+        交互是单向的、双向的还是多向的？
+    </li>
+    <li>
+        是否有客户机／服务器或主从关系？
+    </li>
+    <li>
+        是否需要某种形式的同步？
+    </li>
+</ul>
+<p>
+    一旦理解了交互，则可以考虑实施它的方法。所选的实施应产生最简单的设计，与系统的性能目标相一致。性能需求通常包括整体的吞吐量和在对外部生成的事件的响应中可以接受的等待时间。
+</p>
+<p class="reactive">
+    这些问题对实时系统甚至更加关键，此类系统通常更难以忍受性能改变，例如响应时间“不稳定”或缺少截止时间。
+</p>
+<h4>
+    <a id="Isolate and encapsulate external interfaces." name="Isolate and encapsulate external interfaces.">隔离和封装外部接口</a>
+</h4>
+<p>
+    在应用程序中到处嵌入关于外部接口的特定假设，这不是好的做法，而且让几个控制线程阻塞以等待某事件的方法非常低效。而是应该向一个对象指定检测事件的专门任务。当事件发生时，该对象就可以通知需要知道该事件的所有其他对象。此设计基于众所周知且已经证实的设计模式
+    －“观察者”模式（[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">GAM94</a>]）。为了获得更大的灵活性，可以很容易地将该模式扩展为“发布者－订户模式”，其中发布者对象充当事件检测者和对事件感兴趣的对象（“订户”）之间的中介（[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">BUS96</a>]）。
+</p>
+<h4>
+    <a id="Isolate and encapsulate blocking and polling behavior." name="Isolate and encapsulate blocking and polling behavior.">隔离并封装阻塞以及轮询行为</a>
+</h4>
+<p>
+    系统中的操作可能由发生了外部生成的事件所触发。一个非常重要的外部生成的事件可能是简单的已经过时间，表示为时钟的秒数。其他外部事件来自连接到外部硬件的输入设备，包括用户接口设备、进程传感器和与其他系统的通信链路。对于实时系统绝对如此，此类系统通常与外部世界有很多连接。
+</p>
+<p>
+    为了使软件能检测到事件，必须将它阻塞以等待中断，或定期检查硬件以查看是否有事件发生。在后一种情况中，循环周期应比较短，以避免遗漏短生命期的事件或多个事件，或简单地最小化事件发生和检测之间的等待时间。
+</p>
+<p>
+    与此情况有关的一件有趣的事情是无论某事件如何罕见，某软件必须被阻塞以等待该事件或经常检查该事件。但系统必须处理的许多（如果不是大多数）事件都是很少见的事件；在任何给定的系统中，大多数情况下不会发生任何重大事件。
+</p>
+<p>
+    电梯系统为此情况提供了许多很好的示例。在电梯生命期中的重要事件有呼叫服务、乘客楼层选择、乘客的手阻挡电梯门以及经过一个楼层到下一个楼层。这些事件中的某些事件需要非常及时的响应，但与期望响应时间的时间范围相比，都是非常少见的。
+</p>
+<p>
+    单个事件可能触发许多操作，而各操作可能依赖于各种对象的状态。更进一步，不同的系统配置可能以不同的方式使用相同的事件。例如，当电梯经过一个楼层时，应更新电梯舱中的显示，并且电梯自己必须知道其位置以便知道如何响应新的呼叫和乘客楼层选择。可能在每个楼层都显示电梯位置，也可能不是这样。
+</p>
+<h4>
+    <a id="Prefer reactive behavior to scheduled behavior." name="Prefer reactive behavior to scheduled behavior.">反应型行为优于轮询行为</a>
+</h4>
+<p>
+    轮询代价高昂；它需要系统的某些部分定期停止正在进行的操作以查看是否有事件发生。如果必须快速响应该事件，则系统必须经常检查事件是否已到达，进而限制了它可以完成的其他工作量。
+</p>
+<p>
+    如果分配一个中断给事件，再加上由该中断激活的事件相关代码，则要有效地多。虽然有时因为考虑到使用中断的代价较为“高昂”而避免使用中断，但合理地使用中断仍比重复轮询效率高得多。
+</p>
+<p>
+    当事件随机到达或不经常到达时，应使用中断作为事件通知机制，因为这种情况下大多数轮询工作发现事件并未发生。当事件以定期或可预测的方式到达时，较适合使用轮询，因为大多数轮询工作将发现已发生事件。在这中间，有一个位置无论是轮询行为还是反应行为都没有区别，此时两种方法是等价的，选择何种方法无关紧要。但是在大多数情况中，真实世界中的事件是随机的，应优先使用反应行为。
+</p>
+<h4>
+    <a id="Prefer event notification to data broadcasting" name="Prefer event notification to data broadcasting">事件通知优于数据广播</a>
+</h4>
+<p>
+    广播数据（通常使用信号）代价高昂，并且通常是浪费的 －
+    可能仅有一些对象对该数据感兴趣，但所有（或许多）对象都必须停止以检查它。更好的、资源消耗更少的方法是使用通知以仅通知对已发生某事件感兴趣的那些对象。将广播仅限于那些需要很多对象注意的事件（通常是计时或同步事件）。
+</p>
+<h4>
+    <a id="Make heavy use of light-weight mechanisms and light use of heavy-weight mechanisms." name="Make heavy use of light-weight mechanisms and light use of heavy-weight mechanisms.">主要使用轻量级机制，少用重量级机制</a>
+</h4>
+<p>
+    更具体地：
+</p>
+<ul>
+    <li>
+        在并发不是问题而即时响应是问题的情况下，使用被动对象和同步方法调用。
+    </li>
+    <li>
+        为大多数应用程序级别的并发概念使用活动对象和异步消息。
+    </li>
+    <li>
+        使用操作系统线程来隔离分块元素。可以将活动对象映射到操作系统线程。
+    </li>
+    <li>
+        将操作系统进程用于最大程度的隔离。在需要独立地启动和关闭程序的情况下，或对于可能需要进行分发的子系统，需要单独的进程。
+    </li>
+    <li>
+        为物理分发或原始马力使用单独的 CPU。
+    </li>
+</ul>
+<p>
+    也许开发有效的并发应用程序最重要的准则就是最大程度地使用最轻量级的并发机制。硬件和操作系统软件在支持并发性中都扮演重要角色，但它们都提供了相对重量级的机制，将大量工作留给应用程序设计人员。我们要弥补可用工具和并发应用程序需求之间的巨大差距。
+</p>
+<p>
+    活动对象通过两个关键功能，帮助弥补该差距：
+</p>
+<ul>
+    <li>
+        它们通过封装并发的基本单元（控制线程），统一了设计抽象，可以使用操作系统或 CPU 提供的任何底层机制来实施该单元。
+    </li>
+    <li>
+        当活动对象共享单个操作系统线程时，它们变得非常有效，否则必须直接在应用程序中实施轻量级的并发机制。
+    </li>
+</ul>
+<p>
+    活动对象还为编程语言提供的被动对象提供了一个理想环境。完全从并发对象的基础设计系统，而没有诸如程序和进程之类的过程工件，可以实现更模块化、聚集、可理解的设计。
+</p>
+<h4>
+    <a id="Eschew performance bigotry." name="Eschew performance bigotry.">避免在性能方面的偏执</a>
+</h4>
+<p>
+    在大多数系统中，少于 10% 的代码将使用超过 90% 的 CPU 周期。
+</p>
+<p>
+    许多系统设计者设计时好像每行代码都必须进行优化。其实，应将时间花费在优化最常运行或耗时较长的 10% 代码上。对其他 90% 的代码设计应强调可理解性、可维护性、模块性及易于实施。
+</p>
+<h3>
+    <a id="Choosing Mechanisms" name="Choosing Mechanisms">选择机制</a>
+</h3>
+<p>
+    非功能需求和系统体系结构将影响用于实施远程过程调用的机制的选择。下面提供了各备选方案之间的各种权衡的概述。&nbsp;
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="20%">
+                    机制
+                </th>
+                <th scope="col" width="26%">
+                    使用
+                </th>
+                <th scope="col" width="54%">
+                    注释
+                </th>
+            </tr>
+            <tr>
+                <td width="20%">
+                    消息传递
+                </td>
+                <td width="26%">
+                    异步访问企业服务器
+                </td>
+                <td width="54%">
+                    消息传递中间件通过处理队列、超时和恢复／重新启动条件，可简化应用程序编程任务。还可以以伪同步方式使用消息传递中间件。 通常，消息传递技术可以支持大型消息尺寸。某些 RPC
+                    方法可能限制消息大小，需要附加编程来处理大型消息。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    JDBC/ODBC
+                </td>
+                <td width="26%">
+                    数据库调用
+                </td>
+                <td width="54%">
+                    它们是不依赖于数据库的 Java Servlet 或应用程序接口，对在相同或另一服务器上的数据库进行调用。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    本机接口
+                </td>
+                <td width="26%">
+                    数据库调用
+                </td>
+                <td width="54%">
+                    许多数据库供应商已实施了到他们自己的数据库的本机应用程序编程接口，这些接口以应用程序可移植性为代价提供了比 ODBC 更好的性能优势。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    远程过程调用
+                </td>
+                <td width="26%">
+                    调用远程服务器上的程序
+                </td>
+                <td width="54%">
+                    如果您有一个应用程序构建器为您进行远程过程调用，则您可以不需要 RPC 级别的编程。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    会话式
+                </td>
+                <td width="26%">
+                    在电子商务应用程序中很少使用
+                </td>
+                <td width="54%">
+                    通常是使用诸如 APPC 或套接字之类协议的低级程序到程序通信。
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h3>
+    <a id="Summary" name="Summary">摘要</a>
+</h3>
+<p>
+    许多系统需要并发行为和分发式组件。大多数编程语言对这些问题只给予了很少帮助。我们已经知道，需要良好的抽象来理解应用程序中的并发需求，并理解用于在软件中实施并发的选择。我们还已经知道以下似非而是的事实：虽然并发软件本质上比非并发软件更复杂，它却能够极大地简化系统（这些系统必须处理真实世界中的并发）的设计。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

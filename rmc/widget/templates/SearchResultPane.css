@@ -1,0 +1,26 @@
+
+.searchResultPane {
+	font-family: arial, helvetica, sans-serif, kanji2;
+	font-size: 9pt;
+	overflow: auto;
+}
+
+.searchHit {
+	padding-top: 3px;	
+	padding-bottom: 3px;
+	background-color: #ffffff;
+}
+
+A {
+	color: #3366cc;
+	font-family: arial, helvetica, sans-serif, kanji2;
+	font-size: 10pt;
+	text-decoration: none;
+}
+
+TD {
+	font-family: arial, helvetica, sans-serif, kanji2;
+	font-size: 9pt;
+	font-color: #666666;
+	font-weight: normal;
+}

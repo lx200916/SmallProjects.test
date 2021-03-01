@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务: 分析运行时行为</title>
+<meta content="Task" name="uma.type">
+<meta content="analyze_runtime_behavior" name="uma.name">
+<meta content="分析运行时行为" name="uma.presentationName">
+<meta content="Discipline:rup_implementation_discipline:实施" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="实施者">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "{5131A5BB-5B95-499E-A68B-788A2F0957C3}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_yd3ExNnmEdmO6L4XMImrsA", "{5131A5BB-5B95-499E-A68B-788A2F0957C3}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "{5131A5BB-5B95-499E-A68B-788A2F0957C3}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_yd3ExNnmEdmO6L4XMImrsA", "{5131A5BB-5B95-499E-A68B-788A2F0957C3}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{5131A5BB-5B95-499E-A68B-788A2F0957C3}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：分析运行时行为</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务描述了如何在执行组件以确定其改进空间的过程中分析组件的行为。</td>
+</tr>
+<tr>
+<td>规程：<a href="./../../core.base_rup/disciplines/rup_implementation_discipline_263E22DB.html" guid="_yd3ExNnmEdmO6L4XMImrsA">实施</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_developer_testing__runtime_analysis" name="XE_developer_testing__runtime_analysis"></a> 
+<ul>
+    <li>
+        了解组件在执行过程中的行为。
+    </li>
+    <li>
+        确定反常行为和任何必需的更正操作。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">主执行者:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_implementer_D145E819.html" guid="{75501BAA-0CCE-4852-A7B2-B10CA71C002A}">实施者</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">其他执行者:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_implementation_element_49BB163E.html" guid="{E1E0DDA3-914F-4CC1-9D0A-ED4B8E8BBA89}">实施元素</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_log_50821860.html" guid="{528F34BA-0118-40F3-8D29-DE60EF4183A6}">测试日志</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_test_results_189F0BEF.html" guid="{87374880-B351-4822-8C1E-819ECA9F51D4}">测试结果</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">流程使用情况</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/implementation_8FF0AAD4.html" guid="{F2AD342D-0F3B-4E19-A351-75ECDCB806F5}">实施</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/implement_components_AFD1799D.html" guid="{4DC6F53E-1FE1-44EE-812B-003D3BD1ACEA}">实施组件</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/analyze_runtime_behavior_14736AAC.html" guid="_GJ1iIEofEdqrjq4i3fchvA">分析运行时行为</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading"> 确定必需的执行场景</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DetermineScenario" name="DetermineScenario"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      bordercolor="#808080" cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%"     bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%" colspan="2">
+                    <b>目的：</b>
+                </td>
+                <td width="95%" colspan="2">
+                    确定将激励期望的运行时行为的执行路径
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    如果要从运行时行为的观察和分析中获得对软件行为的期望认识，您就必须考虑应用程序的哪些执行路径将具有值得探索的重要性，而这些路径中哪些又将提供最多的机会来了解软件的运行时行为。
+</p>
+<p>
+    一般情况下，对于探索最有用的场景往往能反映用户一般将使用的全部或部分运行时行为。 因此，只要可能就通过提问方式或以其他方式咨询领域专家（如正在开发的软件的用户代表）来确定场景，这样做会很有用。
+</p>
+<p>
+    用例提供一组有价值的工件，可以从它们确定并探索有用的场景。作为开发人员，最熟悉的用例实现将可能是您应该首先使用的用例实现（如果可用的话）。如果没有用例实现，就请确定任何可用的用例场景 －
+    这些场景对用户将浏览用例中各种事件流的路径提供文字说明。最后，还可以查看用例事件流来提供可以从中确定可能的候选场景的信息。如果向用例参与者代表或其他领域专家咨询，这最后一个方法的成功率可得到进一步提高。
+</p>
+<p>
+    在尝试为运行时分析确定有用的场景时，测试人员是另一个可供咨询的有用资源。 测试人员往往因为其测试工作（这样的工作使他们成为准领域专家）而对领域有一定的见解和经验。在很多情况下，观察软件的运行时行为的激励因素将来自于测试工作本身的结果。
+</p>
+<p>
+    如果该任务受已报告的缺陷推动，那么活动的主要重点将是在受控环境中重现缺陷。根据问题发生时记录的信息，一些测试用例必须确定为一定能使缺陷发生的可能候选原因。您可能需要调整一些测试或撰写一些新的测试，但是必须记住，重现缺陷是一个基本步骤，而且对最难的案例来说，稳定缺陷比修正缺陷要花费更多的时间。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 为运行时观察准备实施组件</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="PrepareComponent" name="PrepareComponent"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      bordercolor="#808080" cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%"     bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%" colspan="2">
+                    <b>目的：</b>
+                </td>
+                <td width="95%" colspan="2">
+                    确保组件处于适当的状态，准备好支持运行时执行
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    为了让组件的运行时执行能得出准确的结果，应该注意满意地准备组件，从而使实施、编译和链接中不会由于错误而附带出现反常结果。
+</p>
+<p>
+    往往有必要使用<i><a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/stub_A0899BD4.html" target="_blank" guid="_yWtT6dnmEdmO6L4XMImrsA">插桩组件</a></i>，以使运行时观察能及时完成，或者使它能够在组件依赖于其他尚未实施的组件的情况下得到实际的执行。
+</p>
+<p>
+    您还必须准备执行组件所必需的所有框架或支持工具。在有些情况下，这可能意味着创建驱动程序或利用代码来支持组件的执行；在其他情况下，这可能意味着检测组件，使外部支持工具可以观察并可能控制组件行为。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 准备执行环境</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="PrepareEnvironment" name="PrepareEnvironment"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>目的：</b>
+            </td>
+            <td colspan="2" width="95%">
+                确保目标环境的必备设置已经令人满意地完成。
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    很重要的一点是要考虑所有在将进行运行时分析的目标环境中必须加以处理的需求和约束。在一些情况下，有必要模仿会最终要求组件运行的一个或多个目标部署环境。在其他情况下，在开发人员机器上执行“观察运行时行为”就足够了。
+</p>
+<p>
+    在任何情况下，使得为运行时观察设置的目标环境能够令人满意都很重要，这样就不会因为包含可能会使后续分析无效的“杂质”而使工作无用。
+</p>
+<p>
+    另一个考虑事项是使用生成环境约束或异常状况的工具（没有这样的工具，这些状况就很难重现）。这样的工具对于分离这些状况下的运行时行为中发生的失败或反常情况是非常宝贵的。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 执行组件并捕获行为观察结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ObserveBehavior" name="ObserveBehavior"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>目的：</b>
+            </td>
+            <td colspan="2" width="95%">
+                观察并捕获组件的运行时行为。
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    准备组件以及将观察组件的环境后，现在您就可以开始通过选择的场景执行组件了。根据使用的方法和工具，这一步骤的执行可能只需少量关注，也可能随着场景的发展而提供（或者甚至要求）持续的关注。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 查看行为观察结果并分离初始发现结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ReviewObservations" name="ReviewObservations"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>目的：</b>
+            </td>
+            <td colspan="2" width="95%">
+                确定组件运行时行为中的失败和反常情况
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    在您正在观察的场景中间或结束时的每一个步骤中，在预期的行为中查找失败或反常情况。请记下所有您认为可能与反常行为相关的观察结果或留有印象。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 分析发现结果来了解根本原因</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AnalyzeFindings" name="AnalyzeFindings"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>目的：</b>
+            </td>
+            <td colspan="2" width="95%">
+                了解任何失败和反常情况的根本原因
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    根据您的发现结果开始调查每个失败情况的底层故障或根本原因。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 确定并传达后续操作</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="CommunicateActions" name="CommunicateActions"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>目的：</b>
+            </td>
+            <td colspan="2" width="95%">
+                建议进一步的调查或更正操作
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    当查看您的所有发现结果后，您可能会有一系列要求进一步调查的想法和念头，并可能还有您提议的具体的更正操作。如果您不自行立即对这些项采取行动，就请以适当的格式记下您的提议，然后将它们传达给您的团队成员，让他们核准或以其他方式执行您的提议。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 评估您的结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      bordercolor="#808080" cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%"     bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%" colspan="2">
+                    <b>目的：</b>
+                </td>
+                <td width="95%" colspan="2">
+                    验证任务是否已恰当地完成并且生成的工作产品是否可接受。
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    既然您已完成了该工作，那么最好验证该工作是否有足够的价值。您应评估您的工作质量是否适当，是否完整得足以让其他团队成员觉得您的工作很有用，并随后将它们用作他们自己工作的输入源。在可能的情况下，请使用 RUP
+    中提供的核对表验证质量和完整性是否都“足够好”。
+</p>
+<p>
+    让那些将在他们的后续任务中使用您的工作作为输入的人员参加复审您的过渡工作。请在您还有时间针对他们的意见采取行动时让他们参与复审。您还应该针对关键输入工作产品评价您的工作，确保您已经充分、准确地提供或考虑了这些工作产品。在这个基础上，再让输入工作产品的作者复审您的工作可能很有用。
+</p>
+<p>
+    请记住，RUP 是一个迭代的交付流程，并且在许多情况下工作产品是随着时间而演进的。
+    所以，没有必要完全形成在近期的后续工作中只部分使用或根本不用的工作产品，并且这样做在很多情况下会对生产效能产生负面影响。这是因为很可能在使用工作产品前，工作产品的使用环境会发生变化并且在创建工作产品时所作的假设也被证明是不正确的，从而导致返工以及随之而来的工时的浪费。
+</p>
+<p>
+    还要避免在展示内容本身价值损害方面耗费太多周期时间。在展示作为项目可交付工作产品很重要而且具有经济价值的项目环境中，您可能希望考虑使用管理资源或初级资源来对工作产品执行工作，以改进其展示效果。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/analyzing_runtime_behavior_using_purifyplus_99687F12.html" guid="{63F53632-61E3-40E9-BA84-3DCE7903F99D}">使用 Rational PurifyPlus 工具分析运行时性能（Windows 和 UNIX）</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/analyzing_runtime_behaviour_41EA9EA.html" guid="{A332EA83-E8A5-4C58-AC64-2D7DEBBF36CE}">使用 Rational XDE Developer 分析运行时行为</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/evaluate_test_execution_result_7F4BCD38.html" guid="{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}">使用 Rational TestManager 和 Rational TestFactory 分析测试故障</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_and_measure_code_based_coverage_32EF4DC6.html" guid="{F0ECC223-C6D1-46A9-802B-E4D86FD1572B}">使用 Rational TestFactory 评估 Rational Robot 测试脚本基于代码的测试覆盖率</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/eval_test_coverage_8F1DEC44.html" guid="{D4C656B2-68B7-4C88-B999-FA80AA417C6C}">使用 Rational TestFactory 评估测试覆盖率</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 关系数据库和面向对象</title>
+<meta content="Concept" name="uma.type">
+<meta content="relational_databases_and_object_orientation" name="uma.name">
+<meta content="关系数据库和面向对象" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "3.2166604011257303E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{87EE3BF5-17CA-4211-BD3D-32F361E58550}", "3.2166604011257303E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "3.2166604011257303E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.2166604011257303E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：关系数据库和面向对象</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此概念概述了对象模型和关系数据模型，并简单描述了持久框架。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">数据库设计</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">数据库设计员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="Concepts: Relational Databases and Object Orientation" name="Concepts: Relational Databases and Object Orientation"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>简介
+</h3>
+<p>
+    本概念文档概述了对象模型和关系数据模型，并简单描述了持久框架。
+</p>
+<h3>
+    <a id="Relational Databases and Object Orientation" name="Relational Databases and Object Orientation"></a>关系数据库和面向对象
+</h3>
+<p>
+    关系数据库和面向对象并不完全兼容。它们代表两种不同的世界视图：在 RDBMS
+    中，所看到的都是数据；在面向对象的系统中，所看到的都是行为。不存在一种观点优于另一种观点的问题：面向对象模型对有复杂行为和特定于状态行为（在这些行为中，数据是次要的）的系统或数据可以自然层次结构浏览访问（例如，材料清单）的系统能够很好工作。RDBMS
+    模型非常适合报表应用程序和系统，其中关系是动态或特殊的。
+</p>
+<p>
+    真正的问题是有许多信息存储在关系数据库中，而如果面向对象的应用程序希望访问该数据，它们需要能够读写 RDBMS。 另外，面向对象的系统通常需要与非面向对象的系统共享数据。因此很自然地，使用 RDBMS 作为共享机制。
+</p>
+<p>
+    当面向对象和关系设计共享某些公共特征时（对象属性概念上与实体列类似），基础不同导致无缝集成成为一项挑战。基础不同指的是数据模型通过列值显示数据，而对象模型通过将数据封装在其公共接口之后来隐藏数据。
+</p>
+<h4>
+    <a id="The Relational Data Model" name="The Relational Data Model">关系数据模型</a>
+</h4>
+<p>
+    关系模型由实体和关系组成。实体可以是一个物理表，或几个表的逻辑投影（也称为视图）。下图说明 LINEITEM、ORDER 和 PRODUCT 表以及它们之间的各种关系。关系模型有以下元素：
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/md_dmdl1.gif" alt="在以下内容中对图进行了详细的说明。" width="440" height="164" />
+</p>
+<p class="picturetext">
+    关系模型
+</p>
+<p>
+    实体有列。使用名称和类型标识每个列。在上图中，LINEITEM 实体有列 LineItem_Id（主键）、Description、Price、Quantity、Product_Id 和 Order_Id（最后两列是将 LINEITEM
+    实体链接到 ORDER 和 PRODUCT 实体的外键）。
+</p>
+<p>
+    实体有记录或行。每行表示唯一的一组信息，该信息通常表示对象的持久数据。&nbsp;
+</p>
+<p>
+    每个实体有一个或更多主键。LineItem_Id 是 LINEITEM 的主键。
+</p>
+<p>
+    对关系的支持特定于供应商。该示例说明逻辑模型及 PRODUCT 和 LINEITEM
+    表之间的关系。在物理模型中，通常使用外键／主键引用来实施关系。如果一个实体与另一个实体相关，则它将包含作为外键的列。外键列包含的数据可将该实体中的特定记录关联到相关实体。
+</p>
+<p>
+    关系具有多重性（也称为基数）。常见的基数有一对一（1:1）、一对多（1:m）、多对一（m:1）和多对多（m:n）。在该示例中，LINEITEM 与 PRODUCT 有 1:1 关系，而 PRODUCT 与 LINEITEM 有 0:m
+    关系。
+</p>
+<h4>
+    <a id="The Object Model" name="The Object Model">对象模型</a>
+</h4>
+<p>
+    除了其他内容，对象模型还包含类（请参阅 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML01" guid="7.755968586980351E-308">UML01</a>]
+    以获取对象模型的完整定义）。类定义一组对象的结构和行为，有时也称为对象<strong>实例</strong>。将结构表示为属性（数据值）和关联（类之间的关系）。下图说明一个简单类图，仅显示了类的属性（数据）。
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/md_dmdl3.gif" alt="在以下内容中对图进行了详细的说明。" width="446" height="364" border="0" />
+</p>
+<p class="picturetext">
+    对象模型（类图）
+</p>
+<p>
+    订单有一个编号（订单号）和与 1 个或更多（1..*）订单商品的关联。每个订单商品都有一个数量（订购数量）。
+</p>
+<p>
+    对象模型支持继承。类可以从另一个类继承数据和行为（例如，SoftwareProduct 和 HardwareProduct 产品从 Product 类继承属性和方法）。
+</p>
+<h3>
+    <a id="Persistence Frameworks" name="Persistence Frameworks">持久框架</a>
+</h3>
+<p>
+    大多数业务应用程序都将关系技术用作物理数据存储。面向对象的应用程序开发者所面临的挑战是充分地分离和封装关系数据库，以便数据模型中的更改不会“中断”对象模型（反过来也一样）。现有的许多解决方案让应用程序直接访问关系数据；挑战在于实现对象模型和数据模型之间的无缝集成。
+</p>
+<p>
+    数据库应用程序编程接口（API）提供标准的样式（例如，Microsoft 的开放数据库连接 API 或 ODBC）并且是专用的（本机绑定至特定数据库）。这些 API
+    提供数据操作语言（DML）传递服务，这些服务允许应用程序访问原始关系数据。在面向对象的应用程序中，应用程序使用这些数据之前，必须对数据进行对象－关系转换。这需要可观的应用程序代码量，来将原始数据库 API
+    结果转换成应用程序对象。对象－关系框架的用途是一般地封装物理数据存储，并提供适当的对象转换服务。
+</p>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/md_rdb5.gif" alt="在以下内容中对图进行了详细的说明。" width="266" height="242" border="0" />
+</p>
+<p class="picturetext">
+    持久框架的用途
+</p>
+<p>
+    在面向对象的应用程序中，应用程序开发者将花费超过 30%
+    的时间来实施关系数据库访问。如果没有正确实施对象－关系接口，则该项投资将丢失。实施对象－关系框架则抓住此投资。在以后的应用程序中可以重用该对象－关系框架，将对象－关系实施成本减少至低于总实施成本的
+    10%。实施任何系统时要考虑的最重要成本是维护。系统在其整个生命周期上总成本的 60% 以上都用于维护。实施较差的对象－关系系统的维护，无论是技术上还是经济上都有严重问题。
+</p>
+<h3>
+    <a id="Essential characteristics of an object-relational framework" name="Essential characteristics of an object-relational framework">对象－关系框架的基本特征</a>
+</h3>
+<ul>
+    <li>
+        <strong>性能</strong>。必须仔细考虑将对象分解为数据以及从数据形成对象。在数据吞吐量很高且非常关键的系统中，未充分设计的访问层通常是系统要害。
+    </li>
+    <li>
+        <strong>最小化设计折衷</strong>。已构建过系统的对象技术人员利用关系数据库的常见模式是调整对象模型以帮助存储到关系系统，并更改关系模型以便于存储对象。虽然通常需要进行小幅调整，但设计良好的访问层应使对象和关系模型设计降级程度最低。
+    </li>
+    <li>
+        <strong>可扩展性</strong>。访问层是一个白匣框架，使应用程序开发者能够在希望将某些功能放入框架中时，扩展该框架。通常，访问层在不扩展的情况下，将支持 65% 到 85%
+        的应用程序数据存储需求。如果没有将访问层设计成可扩展的框架，则完成最后 35% 到 15% 的应用程序数据存储需求将非常困难并且成本很高。
+    </li>
+    <li>
+        <strong>文档</strong>。访问层是一个黑匣组件，也是一个白匣框架。黑匣组件的 API
+        必须清楚定义、仔细记录和易于理解。如上文中提到的，应将访问层设计成易于扩展。可扩展的框架必须彻底地进行记录。计划作为子类的类也必须被标识。必须指定每个相关类的协议的特征（例如，public、private、protected 和
+        final 等）。另外，必须显露并记录很大部分的访问层框架设计以有助于可扩展性。
+    </li>
+    <li>
+        <strong>对常见对象－关系映射的支持</strong>。访问层应在不需要扩展的情况下，提供对某些基本对象－关系映射的支持。在本文档的后面部分中，将进一步讨论这些对象－关系映射。
+    </li>
+    <li>
+        <strong>持久接口</strong>：在面向对象的应用程序中，对象应用程序的业务模型捕捉问题域的语义知识。开发人员应操作对象并与对象交互，而无需过多考虑有关数据存储和检索的详细信息。应向应用程序开发者提供一个良好定义的持久接口（保存、删除和查找）子集。
+    </li>
+</ul>
+<h3>
+    <a id="Common Object-Relational Services" name="Common Object-Relational Services">公共对象－关系服务</a>
+</h3>
+<p>
+    在对象－关系应用程序中显现了一些常见模式。已反复解决过该问题的 IT 专家开始理解和认识到成功的对象－关系应用程序所展示的某些结构和行为。高级 CORBA 服务规范已将这些结构和行为规范化（同样非常适用于基于 COM/DCOM
+    的系统）。<br />
+    <br />
+     要为对象－关系映射考虑的适用且有用的 CORBA 服务规范为：
+</p>
+<ul>
+    <li>
+        <a href="#Persistence">持久性</a>
+    </li>
+    <li>
+        <a href="#Query">查询</a>
+    </li>
+    <li>
+        <a href="#Transactions">事务</a>
+    </li>
+    <li>
+        <a href="#Concurrency">并发</a>
+    </li>
+    <li>
+        <a href="#Relationships">关系</a>
+    </li>
+</ul>
+<p>
+    以下部分将使用这些类别来构造对常见对象－关系服务的讨论。希望读者能够参考相应的 CORBA 规范以获取更详细信息。
+</p>
+<h4>
+    <a id="Persistence" name="Persistence">持久性</a>
+</h4>
+<p>
+    术语持久性用于描述对象如何利用辅助存储介质在离散的会话之间维持它们的状态。持久性向用户提供在一个会话中保存对象并在以后的会话中访问对象的能力。当以后访问它们时，它们的状态（例如属性）将与前一会话中完全一致。在多用户系统中可能情况不是这样，因为其他用户可能会访问和修改那些对象。持久性与此部分中讨论的其他服务互为相关。对关系、并发和其他内容的考虑是有意的（并且与
+    CORBA 的服务分解相一致）。
+</p>
+<p>
+    持久性提供的特定服务示例有：
+</p>
+<ul>
+    <li>
+        <strong>数据源连接管理</strong>：对象－关系应用程序必须启动到物理数据源的连接。关系数据库系统通常要求识别服务器和数据库。连接管理的细节趋向于特定于数据库供应商，而必须以灵活的包容方式相应地设计框架。
+    </li>
+    <li>
+        <strong>对象检索</strong>：从数据库恢复对象时，从数据库检索数据并转换成对象。该过程涉及从数据源检索到的特定于数据库的结构中抽取数据、将数据从数据库类型编组为相应的对象类型和／或类、创建相应对象并设置特定对象属性。
+    </li>
+    <li>
+        <strong>对象存储</strong>：对象存储的过程正好是对象检索的反操作。从对象抽取相应的属性值、使用属性值创建特定于数据库的结构（可能是 SQL 字符串、存储过程或特定远程过程调用），并将该结构提交给数据库。
+    </li>
+    <li>
+        <strong>对象删除</strong>：从系统中删除对象时，也必须从关系数据库中删除它们的关联数据。对象删除需要从对象中提取适当信息，构造删除请求（可能是 SQL
+        字符串、存储过程或特定远程过程调用），并将该请求提交给数据库。注意在某些语言（例如 Smalltalk 和
+        Java）中，不支持显式删除；支持一种称为<strong>垃圾回收</strong>的策略。支持这些语言的持久框架必须提供一种可选方法，以便当应用程序不再引用该数据时，从数据库删除数据。一种常用于数据库的方法是维护其他对象引用该对象的次数，即
+        <strong>引用计数</strong>。当某对象的引用计数降为零时，则没有其他对象引用它，并<strong>可能</strong>可以删除它。<strong>可能可以接受</strong>删除引用计数为零的对象，这是因为即使不再引用该对象，仍有可能查询到它。仍需要一个数据库范围内、有关何时允许删除对象的策略。
+    </li>
+</ul>
+<h4>
+    <a id="Query" name="Query">查询</a>
+</h4>
+<p>
+    如果没有搜索和检索特定对象的机制，持久对象存储几乎没有用处。 查询工具使应用程序能够根据各种条件查询和检索对象。对象－关系映射框架提供的基本查询操作是查找和查找唯一。查找唯一操作将检索特定对象，而查找将根据查询条件返回对象集。
+</p>
+<p>
+    数据存储查询工具变化很大。简单的基于文件的数据存储可能实施固定的、自行制作的查询操作，而关系系统将提供灵活的数据操作语言。
+    对象－关系映射框架扩展关系查询模型以使其以对象为中心，而不是以数据为中心。还实施了传递（Pass-Through）机制以利用关系查询的灵活性和特定于供应商的扩展（例如，存储过程）。
+</p>
+<p>
+    注意在基于数据库的查询机制和对象范例之间有潜在的冲突：数据库查询机制由表中属性（列）的<strong>值</strong>驱动。在对应的对象中，封装的原理阻止我们看到属性值；它们由类的操作进行<strong>封装</strong>。封装的原理是它使应用程序更易于修改；只要不更改类的公共可见操作，可以改变类的内部结构而不用考虑相关类。基于数据库的查询机制依赖于类的内部表示法，有效的
+    <strong>中断</strong>了封装。框架的挑战是阻止查询使应用程序对更改非常敏感。
+</p>
+<h4>
+    <a id="Transactions" name="Transactions">事务</a>
+</h4>
+<p>
+    事务支持使应用程序开发者能够定义基本工作单元。在数据库术语中，这表示系统必须能够将一组更改应用到数据库，或必须确保没有应用任何更改。事务中的操作要么全部成功执行，要么事务整体失败。对象－关系框架至少应提供与关系数据库类似的提交／回滚事务设施。在多用户环境中设计对象－关系框架会显示出许多挑战，应予以仔细考虑。
+</p>
+<p>
+    除了持久框架提供的设施，应用程序还必须理解如何处理错误。当事务失败或异常终止时，系统必须能够将其状态恢复至稳定的先前状态，通常通过从数据库读取先前的状态信息来完成。因此，在持久框架和错误处理框架之间有紧密的交互。
+</p>
+<h4>
+    <a id="Concurrency" name="Concurrency">并行</a>
+</h4>
+<p>
+    多用户面向对象系统必须控制对对象的并发访问。当同时有许多用户访问一个对象时，系统必须提供一种机制确保对持久存储的对象的修改以可预测和受控制的方式进行。对象－关系框架应实施悲观和／或乐观的并发控制。
+</p>
+<ul>
+    <li>
+        <strong>悲观并发控制</strong>要求应用程序开发者在从数据存储检索对象时，指定他们的意图（例如，只读或写锁定等）。如果对象被锁定，则当其他用户访问该对象时可能被阻塞，并等待锁定解除。使用和实施悲观并发时应注意有可能创建死锁情况。
+    </li>
+    <li>
+        <strong>乐观的并发控制</strong>假设不大可能同时访问同一对象。当将修改保存到数据库中时，检测并发冲突。通常，如果对象自检索之后又被另一个用户修改过，则将返回一个错误给应用程序，表明该修改操作失败。应用程序负责检测和处理该错误。这需要框架高速缓存对象的并发值并将它们与数据库中的值相比较。如果几乎没有并发冲突，则乐观的并发成本较低，但如果冲突数相当多，则成本会更高（因为当冲突发生时需要重做工作）。
+    </li>
+</ul>
+<p>
+    所有使用共享数据的应用程序必须使用相同的并发策略；不能在同一共享数据中混合乐观和悲观并发控制，否则可能发生毁坏。最好通过持久框架处理一致并发策略需求。
+</p>
+<h4>
+    <a id="Relationships" name="Relationships">关系</a>
+</h4>
+<p>
+    对象具有与其他对象的关系。订单对象有许多订单商品对象。书对象有许多章节对象。雇员对象只属于一个公司对象。在关系系统中，使用外键／主键引用实施实体之间的关系。在面向对象的系统中，通常通过属性显式地实施关系。如果订单对象有订单商品，则订单将包含名为“订单商品”的属性。订单的订单商品属性将包含许多订单商品对象。<br />
+    <br />
+     对象－关系框架的关系方面与持久性、事务和查询服务互相关联。当存储、检索、处理或查询对象时，必须考虑其相关对象：
+</p>
+<ul>
+    <li>
+        检索对象时，是否也应检索其关联对象？简单地说，是，但当不需要关联对象时，这样做成本很高。一个好的框架应允许混合策略。
+    </li>
+    <li>
+        存储对象时，如果已更改关联对象，是否也应存储这些对象？答案还是依赖于环境。
+    </li>
+</ul>
+<p>
+    虽然单独考虑公共对象－关系服务有概念性的优势，但它们的对象－关系框架实施将是协同相关的。不仅要在各个组织之间，还要在共享相同数据的所有应用程序之间，一致地实施这些服务。框架是完成此任务唯一经济的方法。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

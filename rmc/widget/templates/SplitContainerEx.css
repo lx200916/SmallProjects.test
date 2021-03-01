@@ -1,0 +1,57 @@
+.dojoSplitContainer {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.dojoSplitPane {
+	position: absolute;
+}
+
+.dojoSplitContainerSizerH,
+.dojoSplitContainerSizerV {
+	border: 1px solid;
+	color: #fcfcfc;
+	cursor: move;
+	cursor: w-resize;
+	font-size: 10px;
+	height: 100%;
+	margin: 0px 0px 0px 0px;
+}
+
+.dojoSplitContainerSizerHx,
+.dojoSplitContainerSizerVx {
+	border: 0px solid;
+	color: #cccccc;
+	font-size: 10px;
+	margin: 0px 0px 0px 0px;
+}
+
+.dojoSplitContainerSizerHm,
+.dojoSplitContainerSizerVm {
+	border: 0px solid;
+	cursor: hand;
+	font-size: 10px;
+	height: 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.dojoSplitContainerSizerV {
+	cursor: n-resize;
+}
+
+.dojoSplitContainerVirtualSizerH,
+.dojoSplitContainerVirtualSizerV {
+	background-color: ThreeDShadow;
+	cursor: move;
+	cursor: w-resize;
+	filter: Alpha(Opacity=50);	
+	font-size: 1px;	
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	margin: 0;
+}
+
+.dojoSplitContainerVirtualSizerV {
+	cursor: n-resize;
+}

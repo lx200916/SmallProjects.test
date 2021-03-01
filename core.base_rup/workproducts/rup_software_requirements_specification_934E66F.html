@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工件: 软件需求规范</title>
+<meta content="Artifact" name="uma.type">
+<meta content="rup_software_requirements_specification" name="uma.name">
+<meta content="软件需求规范" name="uma.presentationName">
+<meta content="@Type:@Name:@DisplayName" name="uma.category">
+<meta content="WorkProductType:specification:规范" name="uma.category">
+<meta content="Artifact" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_kus_YN7DEdmsEI4YDGX2ag", "{7264A534-7509-4B4B-AF73-CAECC0178898}", "{BE8165DC-BAF2-4237-B27D-F2A037023364}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{BE8165DC-BAF2-4237-B27D-F2A037023364}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_kus_YN7DEdmsEI4YDGX2ag", "{7264A534-7509-4B4B-AF73-CAECC0178898}", "{BE8165DC-BAF2-4237-B27D-F2A037023364}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{BE8165DC-BAF2-4237-B27D-F2A037023364}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3aJCcN7REdmjRZts2c4ZjQ", "{BE8165DC-BAF2-4237-B27D-F2A037023364}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{BE8165DC-BAF2-4237-B27D-F2A037023364}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工件：软件需求规范</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../core.base_rup/workproducts/resources/ar_srs.jpg"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">该工件获取整个系统或该系统某一部分的软件需求。</td>
+</tr>
+<tr>
+<td>域：<a href="./../../core.base_rup/domains/requirements_58267518.html" guid="_KVkLoN7HEdm8G6yT7-Wdqw">需求</a>
+<br>工作产品类型：<a href="./../../core.base_rup/workproducttypes/specification_435F570D.html" guid="_3aJCcN7REdmjRZts2c4ZjQ">规范</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_software_requirements_specification__artifact_definition" name="XE_software_requirements_specification__artifact_definition"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    软件需求规范（SRS）侧重于收集和组织与您的项目有关的所有需求。以正式的 <a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">IEEE830</a>
+    样式的文档来收集项目软件需求是十分有用的。
+</p>
+<p>
+    由于您发现可使用几种不同的工具收集这些需求，因此意识到可能要在几种不同的工件和工具中收集需求是很重要的。正因于此，我们将针对某个包中的 SRS 收集需求，这个包可能是单个文档或是描述需求的多个工件的集合。<br />
+     （请参阅“更多信息”部分来获取其他指导信息）。
+</p>
+<p>
+    SRS 包控制着项目整个开发阶段的系统发展，如对“远景”文档添加或修改新特性（它们将在 SRS 包中详细说明）。
+</p>
+<p>
+    以下人员使用软件需求规范：
+</p>
+<ul>
+    <li>
+        设计人员在定义类的职责、操作和属性时，以及在使类适应于实施环境时会使用 SRS 包作为参考。
+    </li>
+    <li>
+        实施者在实施类时会将 SRS 包作为输入。
+    </li>
+    <li>
+        项目经理在计划迭代时会将 SRS 包作为输入。
+    </li>
+    <li>
+        测试人员在考虑需要哪些测试时会将 SRS 包作为输入。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">负责人:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_requirement_specifier_A2500152.html" guid="{7264A534-7509-4B4B-AF73-CAECC0178898}">需求指定者</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">修改者:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_requirement_specifier_A2500152.html" guid="{7264A534-7509-4B4B-AF73-CAECC0178898}">需求指定者</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">任务</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">输入至:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/define_test_approach_51A370C3.html" guid="{87F96887-83EF-4F0F-8F79-E98043406B52}">定义测试方法</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/review_requirements_5DF661FE.html" guid="{FEC5ED66-F467-4BD5-AB11-B300E101DB9B}">复审需求</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/capture_common_vocabulary_9BA76DA7.html" guid="{962AC6BA-4ACA-4D7D-B56F-24558A026854}">获取通用词汇表</a>
+</li>
+<li>
+<a href="./../../core.base_rup/tasks/identify_test_ideas_395DAB3B.html" guid="{6FAD9DF9-DE4E-4BA5-9B9B-482A2366D1B9}">确定测试构想</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">输出自:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/tasks/detail_software_requirements_A7F0A215.html" guid="{A1FA1E95-8028-42EB-9B92-0DA77380F3E1}">详细描述软件需求</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">流程使用情况</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html" guid="{EA0C1D32-E39A-4D96-B956-E178DB776A96}">项目管理</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/plan_the_project_DD2EE35.html" guid="{823EF41B-2BD1-464B-84DB-C7BD432636E2}">规划项目</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_E81DBFD3.html" guid="_1W7wMEofEdqrjq4i3fchvA">软件需求规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html" guid="{EA0C1D32-E39A-4D96-B956-E178DB776A96}">项目管理</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/Refine the Project Plan_DC25A642.html" guid="_Dt0jMBsuEdqXHNTdjKtnvA">优化开发计划</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_5762D48D.html" guid="_XrXCsEogEdqrjq4i3fchvA">软件需求规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/requirements_4EE062EE.html" guid="{38A9C609-9A59-4D03-B835-AA84A716E626}">需求</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/analyze_the_problem_67C3076B.html" guid="{554ECC71-6D6C-4ABD-B7CE-357973C63B9F}">分析问题</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_2B1A2BC0.html" guid="_zIE2gUogEdqrjq4i3fchvA">软件需求规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/requirements_4EE062EE.html" guid="{38A9C609-9A59-4D03-B835-AA84A716E626}">需求</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/understand_stakeholder_needs_3FFFF8B6.html" guid="{F9E2B414-29F4-48F9-B263-35570D64314B}">了解项目干系人需要</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_BE906976.html" guid="_tRvh8TndEdqxANP9kNH4WA">软件需求规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/requirements_4EE062EE.html" guid="{38A9C609-9A59-4D03-B835-AA84A716E626}">需求</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/define_the_system_ED861056.html" guid="{20E30ECF-7359-45EC-AA5F-8A7BFA21C472}">定义系统</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_42F9EE8D.html" guid="_3pTysTndEdqxANP9kNH4WA">软件需求规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/requirements_4EE062EE.html" guid="{38A9C609-9A59-4D03-B835-AA84A716E626}">需求</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/refine_the_system_definition_E67B8011.html" guid="{0FEE5795-6090-4D82-9BDB-925E5F0D9985}">优化系统定义</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_EEBF91F2.html" guid="_HVr_UUohEdqrjq4i3fchvA">软件需求规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/requirements_4EE062EE.html" guid="{38A9C609-9A59-4D03-B835-AA84A716E626}">需求</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/manage_changing_requirements_FF6AC18D.html" guid="{28B39D62-9D73-4254-9CB8-26CFA737D45E}">管理不断变化的需求</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_D85F48BF.html" guid="_J3kGM0ohEdqrjq4i3fchvA">软件需求规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">测试</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/improve_test_assets_1C99FFB9.html" guid="{CD77CBDA-CC13-4593-BB81-41AF3FF7A84C}">改善测试资产</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_2E6F64A2.html" guid="_s10jYkoiEdqrjq4i3fchvA">软件需求规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">测试</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/define_evaluation_mission_611C79D9.html" guid="{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5}">定义评估任务</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_28E78962.html" guid="_CWXsTRi2Edq_uI8xTPML6g">软件需求规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/test_7EF99F54.html" guid="{35359DDF-6361-43E5-8B1B-18D204DA8CFF}">测试</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/test_and_evaluate_4D17BD6A.html" guid="{93B7D625-C83A-4EFB-9772-B88F2EB02CE2}">测试和评估</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_1C9B66CC.html" guid="_-1-ypUohEdqrjq4i3fchvA">软件需求规范</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">简述</th><td class="sectionTableCell"><a id="BriefOutline" name="BriefOutline"></a> 
+<p>
+    软件需求规范（SRS）记录系统或系统某一部分的完整软件需求。
+</p>
+<p>
+    一个 SRS 可能有许多不同的安排。有关其他指导信息，请查阅定制部分。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">定制</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">说明选项</th><td class="sectionTableCell"><a id="Tailoring" name="Tailoring"></a> 
+<p>
+    一个 SRS 可能有许多不同的安排。请查看此页面顶部表中的模板和示例部分，以了解项目环境中相关的安排。有关该工件的进一步精化（包括 SRS 组织的其他选项），请参阅 [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">IE830</a>]。
+</p><p/><p>
+    软件需求规范应该提供完整的软件需求定义（功能和非功能的）。但是，特定于用例的需求（功能的和非功能的）应该记录在<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>中，而系统范围的需求（功能的和非功能的）应该记录在<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>中。可以将这些单独的工作产品打包在一起来定义软件需求规范（SRS）。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">核对表</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/software_requirements_specification_D39EF65A.html" guid="9.705252819955612E-305">软件需求规范</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">概念</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/requirements_62E28784.html" guid="4.582668643506599E-305">需求</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/software_requirements_specification_91456CD0.html" guid="5.0594212359881566E-306">软件需求规范</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

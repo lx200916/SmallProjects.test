@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 设计和实施机制</title>
+<meta content="Concept" name="uma.type">
+<meta content="design_and_implementation_mechanisms" name="uma.name">
+<meta content="设计和实施机制" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "6.131233324119695E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "6.131233324119695E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "6.131233324119695E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.131233324119695E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：设计和实施机制</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">设计机制为概念上的分析机制添加具体的细节，但它并不具体到需要特定的技术。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">确定设计机制</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Introduction to Design and Implementation Mechanisms" name="Introduction to Design and Implementation Mechanisms">设计机制与实施机制简介</a>
+</h3>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/design_mechanism_5F46BEF2.html" guid="_yF4Ck9nmEdmO6L4XMImrsA">设计机制</a>是对相应<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/analysis_mechanism_4DAA970A.html" guid="_x6stV9nmEdmO6L4XMImrsA">分析机制</a>的改进（另请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">概念：分析机制</a>）。设计机制为概念分析机制添加具体的详细信息，但止步于需要特定技术 －
+    例如特定供应商的实施（比如面向对象的数据库管理系统）。与分析机制相同，设计机制可以实例化一种或多种模式，在这种情况下为<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/architectural_pattern_E2E8EB79.html" guid="_x7JZRtnmEdmO6L4XMImrsA"><b>体系结构</b></a>或<b><a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/design_pattern_4AEB9B64.html" guid="_yF4CnNnmEdmO6L4XMImrsA">设计模式</a></b><i>。</i>
+</p>
+<p>
+    类似地，<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/implementation_mechanism_59389269.html" guid="_yKfc2dnmEdmO6L4XMImrsA">实施机制</a>是对应设计机制的改进，使用例如特定编程语言和其他的实施技术（例如特定供应商的中间件产品）。实施机制可实例化一个或多个<b><a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/idiom_6D91029A.html" guid="_yKVr0tnmEdmO6L4XMImrsA">代码模式</a></b>或实施模式。
+</p>
+<h3>
+    <a id="XE_design_mechanism__characteristics_of" name="XE_design_mechanism__characteristics_of"></a><a id="Example: Characteristics of Design Mechanisms" name="Example: Characteristics of Design Mechanisms">示例：设计机制的特征</a>
+</h3>
+<p>
+    请考虑分析机制的<b>持久性</b>：
+</p>
+<ul>
+    <li>
+        可能需要在几秒种内存储许多（2000）个小对象（每个 200 字节），但不需要长久存储。
+    </li>
+    <li>
+        可能需要将几个非常大的对象在磁盘上永久存储几个月，从不更新，但适合使用完善的检索方法。
+    </li>
+</ul>
+<p>
+    <a id="inventory" name="inventory"></a>这些对象将需要不同的持久性支持；可确定设计机制对于持久性支持所具有的以下属性：
+</p>
+<ul>
+    <li>
+        <b>内存存储器</b>；特征：最多可到 1 Mb（大小 x 卷）；读、写、更新访问的速度非常快。
+    </li>
+    <li>
+        <b>闪存卡</b>；属性：最多 8 Mb；更新和写速度慢；读速度中等。
+    </li>
+    <li>
+        <b>二进制文件</b>；属性：100 Kb 到 200 Mb；更新慢；读和写速度慢。
+    </li>
+    <li>
+        <b>数据库管理系统（DBMS）</b>；特征：大于 100 Kb（基本上无上限）；更新、读写访问的速度更慢。
+    </li>
+</ul>
+<p>
+    请注意，这些速度“慢”只是与内存存储器相比而言的。显然，在某些环境中，使用高速缓存可明显增加访问次数。
+</p>
+<p>
+    <a id="mapping" name="mapping"></a>
+</p>
+<blockquote>
+    <p align="center">
+        <img height="221" alt="在以下内容中对图进行了详细的说明。" src="./../../../core.base_rup/guidances/concepts/resources/co_dmec1.gif" width="372" />
+    </p>
+</blockquote><br />
+<br />
+<h3>
+    <a id="XE_implementation_mechanism__mapping_from_design_mechanisms_refining" name="XE_implementation_mechanism__mapping_from_design_mechanisms_refining"></a><a id="XE_design_mechanism__mapping_to_implementation_mechanisms_refining" name="XE_design_mechanism__mapping_to_implementation_mechanisms_refining"></a><a id="Refining the Mapping between Design and Implementation Mechanisms" name="Refining the Mapping between Design and Implementation Mechanisms">改进设计机制与实施机制之间的映射</a>
+</h3>
+<p>
+    最初，设计机制和实施机制之间的映射可能不是最佳的，但它将使项目运行、确定尚不可见的风险并触发进一步的调查和评估。当项目继续进行并获得更多知识时，需要改进映射。
+</p>
+<p>
+    以迭代方式改进设计机制与实施机制之间的映射，从而消除冗余路径，进行“自顶而下”和“自底而上”两方面的工作。
+</p>
+<p>
+    <b>自顶而下地工作。</b>“自顶而下”工作时，经改进的新用例实现将通过所需的分析机制对所需的设计机制增加新的需求。这样的新需求可能揭示设计机制的更多属性，从而强制分开这两个机制。期间还必须在系统的复杂度和性能之间达到平衡点：
+</p>
+<ul>
+    <li>
+        不同的设计机制太多会使系统过于复杂。
+    </li>
+    <li>
+        某些实施机制会拓宽它们的属性值的合理范围限制；对于这些实施机制，设计机制太少就会产生性能问题。
+    </li>
+</ul>
+<p>
+    <b>自底而上地工作。</b>当“自底而上”工作时，通过调查可用的实施机制，可能会发现这样的产品：它们能够同时满足若干个设计机制，但却要求您对设计机制进行某种修改或重新划分。您想使用最少的实施机制，但太少也会导致性能问题。
+</p>
+<p>
+    一旦决定使用 DBMS 存储类 A 的对象，您可能会想使用它存储系统中的所有对象。这样做会非常低效或非常麻烦。不是所有需要持久存在的对象都要存储在 DBMS
+    中。一些对象可能持久存在，但可能只有当时运行的那个应用程序频繁访问它，而其他应用程序只是偶而访问它。这时，可能最好的办法是采用混合策略 － 将对象从 DBMS 读进内存然后定期同步。
+</p>
+<p class="example">
+    <b>示例</b>
+</p>
+<p class="example">
+    可以将航班存储在内存中用于快速访问，同时存储在 DBMS 中用于长期保存；但这需要使两者同步的机制。
+</p>
+<p>
+    将多个设计机制与一个客户机类关联作为不同属性之间的平衡点，这并不少见。
+</p>
+<p>
+    因为实施机制经常在成品组件（操作系统和中间件产品）中捆绑出现，所以需要进行某些基于成本、阻抗失配或样式统一的优化。此外，机制经常是相互依赖的，使得将服务清楚分成设计机制很困难。
+</p>
+<p class="example">
+    <b>示例</b>
+</p>
+<blockquote>
+    <ul>
+        <li>
+            <p class="example">
+                通知机制可以将进程间的通信机制作为基础。
+            </p>
+        </li>
+        <li>
+            <p class="example">
+                错误报告机制可以将持久性机制作为基础。
+            </p>
+        </li>
+    </ul>
+</blockquote>
+<p>
+    改进贯穿整个精化阶段，而且始终是在寻求以下两个方面的平衡：
+</p>
+<ul>
+    <li>
+        根据期望的属性，与客户对设计机制的需求的准确“相符”。
+    </li>
+    <li>
+        要获得和集成太多不同实施机制所带来的成本和复杂性。
+    </li>
+</ul>
+<p>
+    总体目标始终是具有简单明确的一组机制，为大型系统提供概念上的完整、简单和精确。
+</p>
+<h3>
+    <a id="XE_implementation_mechanism__mapping_from_design_mechanisms_examples" name="XE_implementation_mechanism__mapping_from_design_mechanisms_examples"></a><a id="XE_design_mechanism__mapping_to_implementation_mechanisms_examples" name="XE_design_mechanism__mapping_to_implementation_mechanisms_examples"></a><a id="Example: Mapping Design Mechanisms to Implementation Mechanisms" name="Example: Mapping Design Mechanisms to Implementation Mechanisms">示例：将设计机制映射到实施机制</a>
+</h3>
+<p>
+    <b>持久性</b>设计机制可映射到实施机制，如下所示：
+</p>
+<p align="center">
+    <img height="216" alt="在以下内容中对图进行了详细的说明。" src="./../../../core.base_rup/guidances/concepts/resources/co_dmec2.gif" width="325" />
+</p>
+<p>
+    分析机制和设计机制之间的可能映射。虚线箭头表示“专门化”，即表示设计机制的特征继承于分析机制，但应予以专门化和改进。
+</p>
+<p>
+    一旦完成了机制的优化，就会存在以下映射：
+</p>
+<blockquote>
+    <p align="center">
+        <img height="110" alt="在以下内容中对图进行了详细的说明。" src="./../../../core.base_rup/guidances/concepts/resources/co_dmec3.gif" width="418" />
+    </p>
+    <p class="picturetext">
+        从机制之间的映射描述的客户机类的设计决定；Flight 类需要两种形式的持久性：由现成的库例程实现的内存存储和用成品 ObjectStorage 产品实施的数据库存储。
+    </p>
+</blockquote>
+<p>
+    该映射必须从两个方向都可以实现，以便在更改实施机制时，易于确定客户机类。
+</p>
+<h3>
+    <a id="XE_design_mechanism__describing" name="XE_design_mechanism__describing"></a><a id="Describing Design Mechanisms" name="Describing Design Mechanisms">描述设计机制</a>
+</h3>
+<p>
+    设计机制及其使用方法的详细信息记录在<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">工作产品：特定于项目的指南</a>中。分析机制与设计机制以及实施机制之间的关系（或映射），还有与这些选择相关联的理由记录在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">工作产品：软件体系结构文档</a>中。
+</p>
+<p>
+    和分析机制相同，可利用协作对设计机制进行建模，设计机制可实例化一种或多种<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/architectural_pattern_E2E8EB79.html" guid="_x7JZRtnmEdmO6L4XMImrsA"><b>体系结构</b></a>或<b><a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/design_pattern_4AEB9B64.html" guid="_yF4CnNnmEdmO6L4XMImrsA">设计模式</a>。</b>
+</p>
+<h4>
+    示例：持久性机制
+</h4>
+<p>
+    此示例使用从 <a href="http://java.sun.com/products/jdbc/index.html" target="_blank">JDBC&trade;（Java 数据库连接）</a>引出的、基于 RDBMS
+    的持久性的模式实例。尽管我们在这里只是展示设计，但 JDBC 为某些类提供实际代码，因此从这里展示的内容到实施机制之间只有一步之遥。
+</p>
+<p>
+    图静态视图：JDBC 显示了协作中的类（严格地说是分类器角色）。
+</p>
+<p align="center">
+    <img height="382" alt="在以下内容中对图进行了详细的说明。" src="./../../../core.base_rup/guidances/concepts/resources/jdbc1.gif" width="571" border="0" />
+</p>
+<p align="center">
+    <b>静态视图：JDBC</b>
+</p>
+<p align="left">
+    以黄色填充的是提供的类，其他类（myDBClass 等）是由设计人员绑定以用于创建机制的。
+</p>
+<p align="left">
+    在 JDBC 中，客户端将使用 <b>DBClass</b> 来读写持久数据。DBClass 负责使用 <b>DriverManager</b> 类访问 JDBC 数据库。一旦打开数据库<b>连接</b>，DBClass 就可创建 SQL
+    语句，这些 SQL 语句将被发送到底层的 RDBMS，并使用 <b>Statement</b> 类执行。Statement 类涉及什么“告诉”数据库。SQL 查询结果在 <b>ResultSet</b> 对象中返回。<span     style="mso-spacerun: yes">&nbsp;</span>
+</p>
+<p align="left">
+    <b>DBClass</b> 类负责使另一个类实例持久。它了解 OO - RDBMS 映射并可实施与 RDBMS 对接的行为。DBClass 将对象序列化，将其写入 RDBMS，然后从 RDBMS
+    中读出对象数据并构建对象。每个持久类都将有相应的 DBClass。&nbsp;
+</p>
+<p align="left">
+    <b>PersistentClassList</b> 用于返回一组持久对象，作为数据库查询（如 DBClass.read()）的结果。
+</p>
+<p align="left">
+    我们现在展示一系列动态视图，来显示该机制实际如何运行。
+</p>
+<p align="center">
+    <img height="146" alt="在以下内容中对图进行了详细的说明。" src="./../../../core.base_rup/guidances/concepts/resources/jdbc2.gif" width="285" border="0" />
+</p>
+<p align="center">
+    <b>JDBC：初始化</b>
+</p>
+<p>
+    在可以访问任何持久类之前，必须进行初始化。
+</p>
+<p>
+    要初始化到数据库的连接，DBClass 必须通过使用 URL、用户和密码调用 DriverManager getConnection() 操作来装入适当的驱动程序。
+</p>
+<p>
+    操作 getConnection() 尝试建立到给定数据库 RUL 的连接。DriverManager 尝试从所注册的 JDBC 驱动程序组中选择适当的驱动程序。
+</p>
+<p>
+    <i>参数：</i>
+</p>
+<p>
+    <b>URL</b>：格式为 jdbc:subprotocol:subname 的数据库 URL。此 URL 用于查找实际数据库服务器，而在此实例中不是与 Web 相关的。
+</p>
+<p>
+    <b>用户</b>：将建立连接的数据库用户
+</p>
+<p>
+    <b>密码</b>：用户密码
+</p>
+<p>
+    <i>返回值</i>：
+</p>
+<p>
+    到 URL 的连接。
+</p>
+<p align="center">
+    <img height="253" alt="在以下内容中对图进行了详细的说明。" src="./../../../core.base_rup/guidances/concepts/resources/jdbc3.gif" width="478" border="0" />
+</p>
+<p align="center">
+    <b>JDBC：创建</b>
+</p>
+<p align="left">
+    为了创建新类，持久性客户端请求 DBClass 创建新类。DBClass 使用缺省值创建 PersistentClass 的新实例。然后，DBClass 使用 Connection 类 createStatement() 操作创建新的
+    Statement。该 Statement 被执行，并且数据被插入到数据库中。
+</p>
+<p align="center">
+    <img height="352" alt="在以下内容中对图进行了详细的说明。" src="./../../../core.base_rup/guidances/concepts/resources/jdbc4.gif" width="627" border="0" />
+</p>
+<p align="center">
+    <b>JDBC：读</b>
+</p>
+<p>
+    为了读持久类，持久性客户端请求 DBClass 执行读操作。DBClass 使用 Connection 类 createStatement() 操作创建新的 Statement。该 Statement 被执行，并且数据在
+    ResultSet 对象中返回。然后，DBClass 创建 PersistentClass 的新实例并用检索出的数据填充它。数据在某个集合对象（PersistentClassList 类的一个实例）中返回。
+</p>
+<p>
+    注意：传递给 executeQuery() 的字符串不必与传入 read() 的字符串完全相同。 DBClass 将构建 SQL 查询，来使用传入 read() 的条件从数据库中检索持久数据。这是因为我们不希望 DBClass
+    的客户需要了解数据库内部才能创建有效查询。该知识封装在 DBClass 中。
+</p>
+<p align="center">
+    <img height="255" alt="在以下内容中对图进行了详细的说明。" src="./../../../core.base_rup/guidances/concepts/resources/jdbc5.gif" width="473" border="0" />
+</p>
+<p align="center">
+    <b>JDBC：更新</b>
+</p>
+<p>
+    为了更新类，持久性客户端请求 DBClass 执行更新操作。DBClass 从给定 PersistentClass 对象检索数据，然后使用 Connection 类 createStatement() 操作创建新的
+    Statement。一旦构建了 Statement，就执行更新，使用来自该类的新数据更新数据库。
+</p>
+<p>
+    请记住：对 PersistentClass 进行“序列化”并将其写入数据库是 DBClass 的工作。这就是为什么在创建 SQL 语句之前，必须从给定 PersistentClass 中检索的原因。
+</p>
+<p>
+    注意：在上述机制中，PersistentClass 必须为所有持久数据提供访问例程，以便 DBClass 可以访问它们。这提供了对某些本应属专用的持久属性的外部访问。这是将持久性知识放在封装数据的类之外所必须付出的代价。
+</p>
+<p align="center">
+    <img height="255" alt="在以下内容中对图进行了详细的说明。" src="./../../../core.base_rup/guidances/concepts/resources/jdbc6.gif" width="473" border="0" />
+</p>
+<p align="center">
+    <b>JDBC：删除</b>
+</p>
+<p align="left">
+    为了删除类，持久性客户端请求 DBClass 删除 PersistentClass。DBClass 使用 Connection 类 createStatement() 操作创建新的 Statement。该 Statement
+    被执行，并且数据被从数据库中除去。
+</p>
+<p align="left">
+    在此设计的实施中，将作出关于 DBClass 到持久类的映射的某些决策，例如每个持久类有一个 DBClass，并将它们分配到适当的包中。这些包将会依赖于所提供的 <i>java.sql</i>（请参阅 <a href="http://java.sun.com/products/jdbc/index.jsp" target="_blank">JDBC<font size="-2"><sup>&trade;</sup></font> API
+    文档</a>）包，其中包含 DriverManager、Connection、Statement 和 ResultSet 支持类。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

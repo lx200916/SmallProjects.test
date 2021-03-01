@@ -1,0 +1,713 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2// EN">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Requirements Management Plan</title>
+<link type="text/css" href="../../../../css/default.css" rel="StyleSheet">
+<script src="../../../../scripts/contentpage.js" type="text/javascript" language="JavaScript"></script><script type="text/javascript" language="JavaScript">
+					backPath = './../../';
+				</script>
+</head>
+
+
+<body>
+<!--msnavigation-->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+  <caption> 
+  <!--msnavigation-->
+  </caption>
+  <tr> 
+    <td VALIGN=TOP> 
+      <div class=Section1> 
+        <div align=right> 
+          <p><font size="5"><b>Collegiate Sports Paging System </b></font></p>
+          <p><b><font size="5">Requirements Management Plan <br>
+            </font></b>&nbsp; <br>
+            &nbsp; </p>
+          <p><span style='font-size:
+14.0pt'>Version 1.0</span>
+        </div>
+        <div class="MsoTitle"><span style='font-size:14.0pt'></span></div>
+        <br>
+        &nbsp; 
+        <p><span style='font-size:12.0pt;font-family:"Times New Roman";'> <br>
+          </span> <br>
+          &nbsp; <br>
+          &nbsp; <br>
+        <center>
+          <p><span style='font-size:18.0pt;
+font-family:Arial'><b>Revision History</b></span> 
+        </center>
+        <p><br>
+        <table BORDER CELLPADDING=0 WIDTH="633" style="width:474.75pt;" >
+          <tr> 
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="col"> <center>
+                <span style='font-size:10.0pt'><b>Date</b></span>
+            </center></th>
+            <th WIDTH="12%" VALIGN=TOP style="width:12.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="col"> <center>
+                <span style='font-size:10.0pt'><b>Version</b></span>
+            </center></th>
+            <th WIDTH="39%" VALIGN=TOP style="width:39.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="col"> <center>
+                <span style='font-size:10.0pt'><b>Description</b></span>
+            </center></th>
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="col"> <center>
+                <span style='font-size:10.0pt'><b>Author</b></span>
+            </center></th>
+          </tr>
+          <tr> 
+            <td VALIGN=TOP WIDTH="24%" style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">July 2, 2000</div>
+            </td>
+            <td VALIGN=TOP WIDTH="12%" style="width:12.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">1.0</div>
+            </td>
+            <td VALIGN=TOP WIDTH="39%" style="width:39.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Initial release</div>
+            </td>
+            <td VALIGN=TOP WIDTH="24%" style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Context Integration</div>
+            </td>
+          </tr>
+        </table>
+        <p><span style='font-size:18.0pt;font-family:Arial;'> <br>
+          </span> 
+        <p class="MsoTitle">Table of Contents <br>
+          &nbsp; <br>
+          &nbsp; 
+        <p class="MsoToc1"><span 
+class=MsoHyperlink><a href="#_Toc488565972">1.<span style='font-size:7.0pt;'></span>Introduction</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565973">1.1<span style='font-size:7.0pt;'></span>Purpose</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565974">1.2<span style='font-size:7.0pt;'></span>Scope</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565975">1.3<span style='font-size:7.0pt;'></span>Definitions, 
+          Acronyms, and Abbreviations</a></span> 
+        <p class="MsoToc2"><span 
+class=MsoHyperlink><a href="#_Toc488565976">1.4<span style='font-size:12.0pt;
+color:windowtext;font-style:normal;text-decoration:none;'></span>References</a></span> 
+        <p class="MsoToc1"><span class=MsoHyperlink><a href="#_Toc488565977">2.<span style='font-size:7.0pt;'></span>Requirements 
+          Management</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565978">2.1<span style='font-size:7.0pt;'></span>Organization, 
+          Responsibilities, and Interfaces</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565979">2.2<span style='font-size:7.0pt;'></span>Tools, 
+          Environment, and Infrastructure</a></span> 
+        <p class="MsoToc1"><span class=MsoHyperlink><a href="#_Toc488565980">3.<span style='font-size:7.0pt;'></span>The 
+          Requirements Management Program</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565981">3.1<span style='font-size:7.0pt;'></span>Requirements 
+          Identification</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565982">3.2<span style='font-size:7.0pt;'></span>Traceability</a></span> 
+        <p class="MsoToc3"><span class=MsoHyperlink><a href="#_Toc488565983">Criteria 
+          for FEAT</a></span> 
+        <p class="MsoToc3"><span class=MsoHyperlink><a href="#_Toc488565985">Criteria 
+          for NEED</a></span> 
+        <p class="MsoToc3"><span class=MsoHyperlink><a href="#_Toc488565986">Criteria 
+          for UC</a></span> 
+        <p class="MsoToc3"><span class=MsoHyperlink><a href="#_Toc488565987">Criteria 
+          for SUPP</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565988">3.3<span style='font-size:7.0pt;'></span>Attributes</a></span> 
+        <p class="MsoToc3"><span class=MsoHyperlink><a href="#_Toc488565989">Attributes 
+          for FEAT</a></span> 
+        <p class="MsoToc3"><span class=MsoHyperlink><a href="#_Toc488565991">Attributes 
+          for NEED</a></span> 
+        <p class="MsoToc3"><span class=MsoHyperlink><a href="#_Toc488565992">Attributes 
+          for UC</a></span> 
+        <p class="MsoToc3"><span class=MsoHyperlink><a href="#_Toc488565993">Attributes 
+          for SUPP</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565994">3.4<span style='font-size:7.0pt;'></span>Reports 
+          and Measures</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565995">3.5<span style='font-size:7.0pt;'></span>Requirements 
+          Change Management</a></span> 
+        <p class="MsoToc2"><span class=MsoHyperlink><a href="#_Toc488565996">3.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          Workflows and Activities</a></span> 
+        <p class="MsoToc1"><span class=MsoHyperlink><a href="#_Toc488565997">4.<span style='font-size:7.0pt;'></span>Milestones</a></span> 
+        <p class="MsoToc1"><span class=MsoHyperlink><a href="#_Toc488565998">5.<span style='font-size:7.0pt;'></span>Training 
+          and Resources</a></span> <br>
+          &nbsp; 
+        <p><span style='font-size:18.0pt;font-family:Arial;'> <br>
+          </span> 
+        <p class="MsoTitle">Requirements Management Plan 
+        <h1> <a NAME="_Toc488565972"></a>1.<a NAME="1.__________________Introduction"></a><span style='font-size:7.0pt;font-family:
+"Times New Roman"'>&nbsp;</span>Introduction</h1>
+        <h2> <a NAME="_Toc488565973"></a>1.1<a NAME="1.1_______________Purpose"></a><span style='font-size:7.0pt;font-family:
+"Times New Roman"'>&nbsp;</span>Purpose</h2>
+        <div class="MsoBodyText"><span style='layout-grid-mode:line'>This document 
+          describes the guidelines used by the Collegiate Sports Paging System 
+          (CSPS) project for establishing the requirements documents, requirement 
+          types, requirements attributes, and traceability in order to manage their 
+          software project requirements. It will also serve as the configuration 
+          document for the <i>Rational RequisitePro</i></span><i><span style='layout-grid-mode:line'></span></i><span style='layout-grid-mode:line'> 
+          requirements management tool.</span></div>
+        <h2> <a NAME="_Toc488565974"></a>1.2<a NAME="1.2_______________Scope"></a><span style='font-size:7.0pt;font-family:
+"Times New Roman"'>&nbsp;</span>Scope</h2>
+        <div class="MsoBodyTextIndent2">This plan pertains to all phases of the 
+          project.</div>
+        <h2> <a NAME="_Toc488565975"></a>1.3<a NAME="1.3_______________Definitions,_Acronyms_"></a><span 
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;</span>Definitions, 
+          Acronyms, and Abbreviations</h2>
+        <div class="MsoBodyTextIndent2">See <a href="ex_gloss1.htm">Glossary</a></div>
+        <h2> <a NAME="1.4_______________References"></a><a NAME="_Toc488565976"></a>1.4<span 
+style='font:7.0pt "Times New Roman"'>&nbsp;</span>References</h2>
+        <div class="MsoBodyTextIndent2" style="margin-left:.75in">CSPS Software 
+          Development Plan</div>
+        <div class="MsoBodyTextIndent2" style="margin-left:.75in">CSPS Development 
+          Case&nbsp;</div>
+        <p class="MsoBodyTextIndent2" style="margin-left:.75in">CSPS Measurement 
+          Plan&nbsp; 
+        <p class="MsoBodyTextIndent2" style="margin-left:.75in">CSPS Configuration 
+          Management Plan 
+        <h1> <a NAME="_Toc488565977"></a>2.<a NAME="2.__________________Software_Configurati"></a><span 
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;</span>Requirements 
+          Management</h1>
+        <h2> <a NAME="_Toc488565978"></a>2.1<a NAME="2.1_______________Organization,_Responsi"></a><span 
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;</span>Organization, 
+          Responsibilities, and Interfaces</h2>
+        <div class="MsoBodyTextIndent2">See the CSPS Software Development Plan.</div>
+        <h2> <a NAME="_Toc488565979"></a>2.2<a NAME="2.2_______________Tools,_Environment_and"></a><span 
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;</span>Tools, Environment, 
+          and Infrastructure</h2>
+        <div class="MsoBodyText"><span 
+style='layout-grid-mode:line'><i>Rational RequisitePro</i></span><i><span 
+style='layout-grid-mode:line'></span></i><span 
+style='layout-grid-mode:line'> will be used to manage requirements.&nbsp; For 
+          other information about the infrastructure and environment, refer to 
+          the CSPS Software Development Plan.</span></div>
+        <h1> <a NAME="_Toc488565980"></a>3.<a NAME="3.__________________The_CM_Program"></a><span style='font-size:7.0pt;font-family:
+"Times New Roman"'>&nbsp;</span>The Requirements Management Program</h1>
+        <h2> <a NAME="_Toc488565981"></a>3.1<a NAME="3.1_______________Configuration_Identifi"></a><span 
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;</span>Requirements 
+          Identification</h2>
+        &nbsp; 
+        <center>
+          <table BORDER CELLPADDING=0 WIDTH="588" style="width:441.0pt;" >
+            <tr> 
+              <th WIDTH="30%" VALIGN=TOP style="width:30.8%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="col"> <div class="MsoNormal"><a NAME="_Toc478535082"></a><a NAME="_Toc478535368"></a><a NAME="_Toc478535865"></a><a NAME="_Toc485601494"></a><b>Artifact
+                    (Document Type)</b></div></th>
+              <th WIDTH="31%" VALIGN=TOP style="width:31.8%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="col"> <div class="MsoNormal"><b>Requirement
+                    Type</b></div></th>
+              <th WIDTH="36%" VALIGN=TOP style="width:36.76%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="col"> <div class="MsoNormal"><b>Description</b></div></th>
+            </tr>
+            <tr> 
+              <td VALIGN=TOP WIDTH="30%" style="width:30.8%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Vision (VIS)</div>
+              </td>
+              <td VALIGN=TOP WIDTH="31%" style="width:31.8%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Stakeholder Need (NEED)</div>
+              </td>
+              <td VALIGN=TOP WIDTH="36%" style="width:36.76%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Key stakeholder or user need</div>
+              </td>
+            </tr>
+            <tr> 
+              <td VALIGN=TOP WIDTH="30%" style="width:30.8%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Vision (VIS)</div>
+              </td>
+              <td VALIGN=TOP WIDTH="31%" style="width:31.8%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Feature (FEAT)</div>
+              </td>
+              <td VALIGN=TOP WIDTH="36%" style="width:36.76%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Conditions or capabilities of this release 
+                  of the system</div>
+              </td>
+            </tr>
+            <tr> 
+              <td VALIGN=TOP WIDTH="30%" style="width:30.8%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Use-Case Model</div>
+              </td>
+              <td VALIGN=TOP WIDTH="31%" style="width:31.8%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Use Case (UC)</div>
+              </td>
+              <td VALIGN=TOP WIDTH="36%" style="width:36.76%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Use cases for this release, documented 
+                  in Rational Rose, with details in Rational RequisitePro.</div>
+              </td>
+            </tr>
+            <tr> 
+              <td VALIGN=TOP WIDTH="30%" style="width:30.8%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Supplementary Specification (SS)</div>
+              </td>
+              <td VALIGN=TOP WIDTH="31%" style="width:31.8%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Supplementary Requirement (SUPP)</div>
+              </td>
+              <td VALIGN=TOP WIDTH="36%" style="width:36.76%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+                <div class="MsoNormal">Non-functional requirements that are not 
+                  captured in the use-case model</div>
+              </td>
+            </tr>
+          </table>
+        </center>
+        <center>
+          <span 
+style='font-weight:normal'>Table 3.1-1 Requirement Artifacts and Types</span> 
+        </center>
+        <h2> <a NAME="_Toc488565982"></a>3.2<span 
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;</span>Traceability</h2>
+        <center>
+          <img SRC="ex_artfcts1.gif" alt="Labeled in Content Below" width=290 height=289 BORDER=0 id="_x0000_i1039"> 
+          <p>Figure -1 - Traceability diagram
+        </center>
+        <h3> <a NAME="_Toc488565983"></a>Criteria for FEAT</h3>
+        <div style="margin-left:33.75pt"><span style='font-size:10.0pt;'>Features 
+          will be traced to use cases.</span></div>
+        <h3> <a NAME="_Toc488565985"></a>Criteria for NEED</h3>
+        <div style="margin-left:33.75pt"><span style='font-size:10.0pt;'>User 
+          needs will be traced to features(FEAT).&nbsp; Any needs not traced to 
+          a FEAT will not be implemented.</span></div>
+        <h3> <a NAME="_Toc488565986"></a>Criteria for UC</h3>
+        <div style="margin-left:33.75pt"><span style='font-size:10.0pt;'>Use-cases 
+          will be traced to test cases.</span></div>
+        <h3> <a NAME="_Toc488565987"></a>Criteria for SUPP</h3>
+        <div style="margin-left:33.75pt"><span style='font-size:10.0pt;'>Supplemental 
+          specifications will be traced to test cases.</span></div>
+        <h2> <a NAME="_Toc488565988"></a>3.3<span 
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;</span>Attributes</h2>
+        <h3> <a NAME="_Toc488565989"></a>Attributes for FEAT</h3>
+        <div class="MsoNormal"><b>Status</b></div>
+        <div style="margin-left:51.0pt">Set after negotiation and review by the 
+          project management team. Tracks progress during definition of the project 
+          baseline.</div>
+        <br>
+        &nbsp; 
+        <table BORDER CELLPADDING=0 WIDTH="585" style="width:438.75pt;margin-left:51.0pt;" >
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Proposed</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Used to describe features that are under 
+                discussion but have not yet been reviewed and accepted by the 
+                "official channel," such as a working group consisting of representatives 
+                from the project team, product management and user or customer 
+                community.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Approved</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Capabilities that are deemed useful and feasible 
+                and have been approved for implementation by the official channel.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Incorporated</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Features incorporated into the product baseline 
+                at a specific point in time.</div>
+            </td>
+          </tr>
+        </table>
+        <p class="MsoNormal"><b>Benefit</b> 
+        <p style="margin-left:51.0pt">Set by Marketing, the product manager or 
+          the business analyst. All requirements are not created equal. Ranking 
+          requirements by their relative benefit to the user opens a dialogue 
+          with customers, analysts and members of the development team. Used in 
+          managing scope and determining development priority. <br>
+          &nbsp; 
+        <table BORDER CELLPADDING=0 WIDTH="585" style="width:438.75pt;margin-left:51.0pt;" >
+          <tr> 
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Critical</div></th>
+            <td VALIGN=TOP WIDTH="76%" style="width:76.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Essential features. Failure to implement 
+                means the system will not meet customer needs. All critical features 
+                must be implemented in the release or the schedule will slip.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Important</div></th>
+            <td VALIGN=TOP WIDTH="76%" style="width:76.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Features important to the effectiveness and 
+                efficiency of the system for most applications. The functionality 
+                cannot be easily provided in some other way. Lack of inclusion 
+                of an important feature may affect customer or user satisfaction, 
+                or even revenue, but release will not be delayed due to lack of 
+                any important feature.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Useful</div></th>
+            <td VALIGN=TOP WIDTH="76%" style="width:76.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Features that are useful in less typical 
+                applications, will be used less frequently, or for which reasonably 
+                efficient workarounds can be achieved. No significant revenue 
+                or customer satisfaction impact can be expected if such an item 
+                is not included in a release.</div>
+            </td>
+          </tr>
+        </table>
+        <p class="MsoNormal"><b>Effort</b> 
+        <p style="margin-left:51.0pt">Set by the development team. Because some 
+          features require more time and resources than others, estimating the 
+          number of team or person-weeks, lines of code required or function points, 
+          for example, is the best way to gauge complexity and set expectations 
+          of what can and cannot be accomplished in a given time frame. Used in 
+          managing scope and determining development priority.&nbsp; 
+        <p class="MsoNormal"><b>Risk</b> 
+        <p style="margin-left:51.0pt">Set by development team based on the probability 
+          the project will experience undesirable events, such as cost overruns, 
+          schedule delays or even cancellation. Most project managers find categorizing 
+          risks as high, medium, and low sufficient, although finer gradations 
+          are possible. Risk can often be assessed indirectly by measuring the 
+          uncertainty (range) of the projects teams schedule estimate.&nbsp; 
+        <p class="MsoNormal"><b>Stability</b> 
+        <p style="margin-left:51.0pt">Set by analyst and development team based 
+          on the probability the feature will change or the team's understanding 
+          of the feature will change. Used to help establish development priorities 
+          and determine those items for which additional elicitation is the appropriate 
+          next action.&nbsp; 
+        <p class="MsoNormal"><b>Target Release</b> 
+        <p style="margin-left:51.0pt">Records the intended product version in 
+          which the feature will first appear. This field can be used to allocate 
+          features from a Vision document into a particular baseline release. 
+          When combined with the status field, your team can propose, record and 
+          discuss various features of the release without committing them to development. 
+          Only features whose Status is set to Incorporated and whose Target Release 
+          is defined will be implemented. When scope management occurs, the Target 
+          Release Version Number can be increased so the item will remain in the 
+          Vision document but will be scheduled for a later release.&nbsp; 
+        <p class="MsoNormal"><b>Assigned To</b> 
+        <p style="margin-left:51.0pt">In many projects, features will be assigned 
+          to "feature teams" responsible for further elicitation, writing the 
+          software requirements and implementation. This simple pull down list 
+          will help everyone on the project team better understand responsibilities.&nbsp; 
+        <p class="MsoNormal"><b>Reason</b> 
+        <p style="margin-left:33.75pt">This text field is used to track the source 
+          of the requested feature. Requirements exist for specific reasons. This 
+          field records an explanation or a reference to an explanation. For example, 
+          the reference might be to a page and line number of a product requirement 
+          specification, or to a minute marker on a video of an important customer 
+          interview. 
+        <h3> <a NAME="_Toc488565991"></a>Attributes for NEED</h3>
+        <div class="MsoNormal"><b>Status</b></div>
+        <div style="margin-left:51.0pt">Set after negotiation and review by the 
+          project management team. Tracks progress during definition of the project 
+          baseline.</div>
+        <br>
+        &nbsp; 
+        <table BORDER CELLPADDING=0 WIDTH="585" style="width:438.75pt;margin-left:51.0pt;" >
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Proposed</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Used to describe needs that are under discussion 
+                but have not yet been reviewed and accepted by the "official channel," 
+                such as a working group consisting of representatives from the 
+                project team, product management and user or customer community.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Approved</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Capabilities that are deemed useful and feasible 
+                and have been approved for implementation by the official channel.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Incorporated</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Needs being met by the product baseline at 
+                a specific point in time.</div>
+            </td>
+          </tr>
+        </table>
+        <p class="MsoNormal"><b>Effort</b> 
+        <p style="margin-left:51.0pt">Set by the development team. Because some 
+          needs require more time and resources than others, estimating the number 
+          of team or person-weeks, lines of code required or function points, 
+          for example, is the best way to gauge complexity and set expectations 
+          of what can and cannot be accomplished in a given time frame. Used in 
+          managing scope and determining development priority.&nbsp; 
+        <p class="MsoNormal"><b>Risk</b> 
+        <p style="margin-left:51.0pt">Set by development team based on the probability 
+          the project will experience undesirable events, such as cost overruns, 
+          schedule delays or even cancellation. Most project managers find categorizing 
+          risks as high, medium, and low sufficient, although finer gradations 
+          are possible. Risk can often be assessed indirectly by measuring the 
+          uncertainty (range) of the projects teams schedule estimate.&nbsp; 
+        <p class="MsoNormal"><b>Stability</b> 
+        <p style="margin-left:51.0pt">Set by analyst and development team based 
+          on the probability the need will change or the team's understanding 
+          of the need will change. Used to help establish development priorities 
+          and determine those items for which additional elicitation is the appropriate 
+          next action.&nbsp; 
+        <p class="MsoNormal"><b>Target Release</b> 
+        <p style="margin-left:51.0pt">Records the intended product version in 
+          which the need will first be met. This field can be used to allocate 
+          features from a Vision document into a particular baseline release. 
+          When combined with the status field, your team can propose, record and 
+          discuss various features of the release without committing them to development. 
+          Only needs whose Status is set to Incorporated and whose Target Release 
+          is defined will be met. When scope management occurs, the Target Release 
+          Version Number can be increased so the item will remain in the Vision 
+          document but will be scheduled for a later release.&nbsp; 
+        <p class="MsoNormal"><b>Reason</b> 
+        <p style="margin-left:33.75pt">This text field is used to track the source 
+          of the need. Requirements exist for specific reasons. This field records 
+          an explanation or a reference to an explanation. For example, the reference 
+          might be to a page and line number of a product requirement specification, 
+          or to a minute marker on a video of an important customer interview. 
+        <h3> <a NAME="_Toc488565992"></a>Attributes for UC</h3>
+        <div class="MsoNormal"><a NAME="_Toc466780292"></a><b>Status</b></div>
+        <div style="margin-left:51.0pt">Set after negotiation and review by the 
+          project management team. Tracks progress during definition of the project 
+          baseline.</div>
+        <br>
+        &nbsp; 
+        <table BORDER CELLPADDING=0 WIDTH="585" style="width:438.75pt;margin-left:51.0pt;" >
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Proposed</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Used to describe use-cases that are under 
+                discussion but have not yet been reviewed and accepted by the 
+                "official channel," such as a working group consisting of representatives 
+                from the project team, product management and user or customer 
+                community.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Approved</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Use-cases that are deemed useful and feasible 
+                and have been approved for implementation by the official channel.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Incorporated</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Use-cases incorporated into the product baseline 
+                at a specific point in time.</div>
+            </td>
+          </tr>
+        </table>
+        <p class="MsoNormal"><b>Benefit</b> 
+        <p style="margin-left:51.0pt">Set by Marketing, the product manager or 
+          the business analyst. All requirements are not created equal. Ranking 
+          use-cases by their relative benefit to the user opens a dialogue 
+          with customers, analysts and members of the development team. Used in 
+          managing scope and determining development priority. <br>
+          &nbsp; 
+        <table BORDER CELLPADDING=0 WIDTH="585" style="width:438.75pt;margin-left:51.0pt;" >
+          <tr> 
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Critical</div></th>
+            <td VALIGN=TOP WIDTH="76%" style="width:76.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Essential use-cases. Failure to implement 
+                means the system will not meet customer needs. All critical use-cases 
+                must be implemented in the release or the schedule will slip.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Important</div></th>
+            <td VALIGN=TOP WIDTH="76%" style="width:76.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Use-cases important to the effectiveness 
+                and efficiency of the system for most applications. The functionality 
+                cannot be easily provided in some other way. Lack of inclusion 
+                of an important feature may affect customer or user satisfaction, 
+                or even revenue, but release will not be delayed due to lack of 
+                any important feature.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Useful</div></th>
+            <td VALIGN=TOP WIDTH="76%" style="width:76.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Use-cases that are useful in less typical 
+                applications, will be used less frequently, or for which reasonably 
+                efficient workarounds can be achieved. No significant revenue 
+                or customer satisfaction impact can be expected if such an item 
+                is not included in a release.</div>
+            </td>
+          </tr>
+        </table>
+        <p class="MsoNormal"><b>Effort</b> 
+        <p style="margin-left:51.0pt">Set by the development team. Because some 
+          use-cases require more time and resources than others, estimating the 
+          number of team or person-weeks, lines of code required or function points, 
+          for example, is the best way to gauge complexity and set expectations 
+          of what can and cannot be accomplished in a given time frame. Used in 
+          managing scope and determining development priority.&nbsp; 
+        <p class="MsoNormal"><b>Risk</b> 
+        <p style="margin-left:51.0pt">Set by development team based on the probability 
+          the project will experience undesirable events, such as cost overruns, 
+          schedule delays or even cancellation. Most project managers find categorizing 
+          risks as high, medium, and low sufficient, although finer gradations 
+          are possible. Risk can often be assessed indirectly by measuring the 
+          uncertainty (range) of the projects teams schedule estimate.&nbsp; 
+        <p class="MsoNormal"><b>Stability</b> 
+        <p style="margin-left:51.0pt">Set by analyst and development team based 
+          on the probability the use-case will change or the team's understanding 
+          of the use-case will change. Used to help establish development priorities 
+          and determine those items for which additional elicitation is the appropriate 
+          next action.&nbsp; 
+        <p class="MsoNormal"><b>Target Release</b> 
+        <p style="margin-left:51.0pt">Records the intended product version in 
+          which the use-case will first appear. This field can be used to allocate 
+          use-cases from a Use Case Survey document into a particular baseline 
+          release. When combined with the status field, your team can propose, 
+          record and discuss various use-cases of the release without committing 
+          them to development. Only use-cases whose Status is set to Incorporated 
+          and whose Target Release is defined will be implemented. When scope 
+          management occurs, the Target Release Version Number can be increased 
+          so the item will remain in the Vision document but will be scheduled 
+          for a later release.&nbsp; 
+        <p class="MsoNormal"><b>Assigned To</b> 
+        <p style="margin-left:51.0pt">In many projects, use-cases will be assigned 
+          to teams responsible for further elicitation, writing the software requirements 
+          and implementation. This simple pull down list will help everyone on 
+          the project team better understand responsibilities.&nbsp; 
+        <p class="MsoNormal"><b>Reason</b> 
+        <p style="margin-left:33.75pt">This text field is used to track the source 
+          of the requested use-case. Requirements exist for specific reasons. 
+          This field records an explanation or a reference to an explanation. 
+          For example, the reference might be to a page and line number of a product 
+          requirement specification, or to a minute marker on a video of an important 
+          customer interview. 
+        <h3> <a NAME="_Toc488565993"></a>Attributes for SUPP</h3>
+        <div class="MsoNormal"><b>Status</b></div>
+        <div style="margin-left:51.0pt">Set after negotiation and review by the 
+          project management team. Tracks progress during definition of the project 
+          baseline.</div>
+        <br>
+        &nbsp; 
+        <table BORDER CELLPADDING=0 WIDTH="585" style="width:438.75pt;margin-left:51.0pt;" >
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Proposed</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Used to describe supplemental specifications 
+                that are under discussion but have not yet been reviewed and accepted 
+                by the "official channel," such as a working group consisting 
+                of representatives from the project team, product management and 
+                user or customer community.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Approved</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Capabilities that are deemed useful and feasible 
+                and have been approved for implementation by the official channel.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="27%" VALIGN=TOP style="width:27.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Incorporated</div></th>
+            <td VALIGN=TOP WIDTH="73%" style="width:73.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Supplemental specifications incorporated 
+                into the product baseline at a specific point in time.</div>
+            </td>
+          </tr>
+        </table>
+        <p class="MsoNormal"><b>Benefit</b> 
+        <p style="margin-left:51.0pt">Set by Marketing, the product manager or 
+          the business analyst. All requirements are not created equal. Ranking 
+          requirements by their relative benefit to the user opens a dialogue 
+          with customers, analysts and members of the development team. Used in 
+          managing scope and determining development priority. <br>
+          &nbsp; 
+        <table BORDER CELLPADDING=0 WIDTH="585" style="width:438.75pt;margin-left:51.0pt;" >
+          <tr> 
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Critical</div></th>
+            <td VALIGN=TOP WIDTH="76%" style="width:76.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Essential specification. Failure to implement 
+                means the system will not meet customer needs. All critical features 
+                must be implemented in the release or the schedule will slip.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Important</div></th>
+            <td VALIGN=TOP WIDTH="76%" style="width:76.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Specifications important to the effectiveness 
+                and efficiency of the system for most applications. The functionality 
+                cannot be easily provided in some other way. Lack of inclusion 
+                of an important specification may affect customer or user satisfaction, 
+                or even revenue, but release will not be delayed due to lack of 
+                any important feature.</div>
+            </td>
+          </tr>
+          <tr> 
+            <th WIDTH="24%" VALIGN=TOP style="width:24.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt" scope="row"> <div class="MsoNormal">Useful</div></th>
+            <td VALIGN=TOP WIDTH="76%" style="width:76.0%;padding:5.25pt 5.25pt 5.25pt 5.25pt"> 
+              <div class="MsoNormal">Specifications that are useful in less typical 
+                applications, will be used less frequently, or for which reasonably 
+                efficient workarounds can be achieved. No significant revenue 
+                or customer satisfaction impact can be expected if such an item 
+                is not included in a release.</div>
+            </td>
+          </tr>
+        </table>
+        <p class="MsoNormal"><b>Effort</b> 
+        <p style="margin-left:51.0pt">Set by the development team. Because some 
+          specifications require more time and resources than others, estimating 
+          the number of team or person-weeks, lines of code required or function 
+          points, for example, is the best way to gauge complexity and set expectations 
+          of what can and cannot be accomplished in a given time frame. Used in 
+          managing scope and determining development priority.&nbsp; 
+        <p class="MsoNormal"><b>Risk</b> 
+        <p style="margin-left:51.0pt">Set by development team based on the probability 
+          the project will experience undesirable events, such as cost overruns, 
+          schedule delays or even cancellation. Most project managers find categorizing 
+          risks as high, medium, and low sufficient, although finer gradations 
+          are possible. Risk can often be assessed indirectly by measuring the 
+          uncertainty (range) of the projects teams schedule estimate.&nbsp; 
+        <p class="MsoNormal"><b>Stability</b> 
+        <p style="margin-left:51.0pt">Set by analyst and development team based 
+          on the probability the specification will change or the team's understanding 
+          of the specification will change. Used to help establish development 
+          priorities and determine those items for which additional elicitation 
+          is the appropriate next action.&nbsp; 
+        <p class="MsoNormal"><b>Target Release</b> 
+        <p style="margin-left:51.0pt">Records the intended product version in 
+          which the specified attribute or feature will first appear. This field 
+          can be used to allocate specifications into a particular baseline release. 
+          When combined with the status field, your team can propose, record and 
+          discuss various specifications of the release without committing them 
+          to development. Only specifications whose Status is set to Incorporated 
+          and whose Target Release is defined will be implemented. When scope 
+          management occurs, the Target Release Version Number can be increased 
+          so the item will remain in the supplemental specification document but 
+          will be scheduled for a later release.&nbsp; 
+        <p class="MsoNormal"><b>Assigned To</b> 
+        <p style="margin-left:.75in">In many projects, specified attributes or 
+          features will be assigned to teams responsible for further elicitation, 
+          writing the software requirements and implementation. This simple pull 
+          down list will help everyone on the project team better understand responsibilities. 
+        <h2> <a NAME="_Toc488565994"></a>3.4<span 
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;</span>Reports and 
+          Measures</h2>
+        <div class="MsoBodyTextIndent2">See the CSPS Measurement Plan.</div>
+        <h2> <a NAME="_Toc488565995"></a>3.5<a NAME="3.2_______________Configuration_and_Chan"></a><span 
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;</span>Requirements 
+          Change Management</h2>
+        <div class="MsoBodyTextIndent2">See the CSPS Configuration Management 
+          Plan.</div>
+        <div class="MsoBodyTextIndent2">The following access groups will be set 
+          up to control access to requirements in Rational RequisitePro.</div>
+        <br>
+        &nbsp; <br>
+        &nbsp; 
+        <p class="bullet1" style="margin-left:.75in;text-indent:-.25in;">- Tool Administrator - has full 
+          access to every part of the tool.&nbsp; Can add and remove people, change 
+          their access rights, etc.&nbsp; 
+        <p class="bullet1" style="margin-left:.75in;text-indent:-.25in;">- Author - can create new requirements&nbsp; 
+        <p class="bullet1" style="margin-left:.75in;text-indent:-.25in;">- Project Manager - sets the 
+          status of requirements&nbsp; 
+        <p class="bullet1" style="margin-left:.75in;text-indent:-.25in;">- Tester_QA - sets the status 
+          of test case requirements. 
+        <h2 style="margin-left:0in;text-indent:0in"> <a NAME="_Toc488565996"></a>3.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          Workflows and Activities</h2>
+        <div class="MsoBodyTextIndent2">See the CSPS Development Case.</div>
+        <h1> <a NAME="_Toc488565997"></a>4.<a NAME="4.__________________Milestones"></a><span style='font-size:7.0pt;font-family:
+"Times New Roman"'>&nbsp;</span>Milestones</h1>
+        <div class="MsoBodyTextIndent2">See the CSPS Software Development Plan.</div>
+        <h1> <a NAME="_Toc488565998"></a>5.<a NAME="5.__________________Training_and_Resourc"></a><span 
+style='font-size:7.0pt;font-family:"Times New Roman"'>&nbsp;</span>Training and 
+          Resources</h1>
+        <div class="MsoBodyTextIndent2">See the CSPS Software Development Plan.</div>
+        <br>
+        &nbsp; <br>
+        &nbsp;</div>
+      <!--msnavigation-->
+    </td>
+  </tr>
+</table>
+<!--msnavigation-->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<caption><!--msnavigation--></caption>
+
+<tr>
+<td>
+<div align=right><font><font size=-2>Rational Unified Process&nbsp;</font></font></div>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

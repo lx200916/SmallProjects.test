@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工作产品描述符: 软件需求规范</title>
+<meta content="WorkProductDescriptor" name="uma.type">
+<meta content="rup_software_requirements_specification" name="uma.name">
+<meta content="软件需求规范" name="uma.presentationName">
+<meta content="WorkProductDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={38A9C609-9A59-4D03-B835-AA84A716E626}&path={38A9C609-9A59-4D03-B835-AA84A716E626},{0FEE5795-6090-4D82-9BDB-925E5F0D9985},_HVr_UUohEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, false, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_HVr_UUohEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工作产品：软件需求规范</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/workdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">该工件获取整个系统或该系统某一部分的软件需求。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_software_requirements_specification__artifact_definition" name="XE_software_requirements_specification__artifact_definition"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    软件需求规范（SRS）侧重于收集和组织与您的项目有关的所有需求。以正式的 <a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">IEEE830</a>
+    样式的文档来收集项目软件需求是十分有用的。
+</p>
+<p>
+    由于您发现可使用几种不同的工具收集这些需求，因此意识到可能要在几种不同的工件和工具中收集需求是很重要的。正因于此，我们将针对某个包中的 SRS 收集需求，这个包可能是单个文档或是描述需求的多个工件的集合。<br />
+     （请参阅“更多信息”部分来获取其他指导信息）。
+</p>
+<p>
+    SRS 包控制着项目整个开发阶段的系统发展，如对“远景”文档添加或修改新特性（它们将在 SRS 包中详细说明）。
+</p>
+<p>
+    以下人员使用软件需求规范：
+</p>
+<ul>
+    <li>
+        设计人员在定义类的职责、操作和属性时，以及在使类适应于实施环境时会使用 SRS 包作为参考。
+    </li>
+    <li>
+        实施者在实施类时会将 SRS 包作为输入。
+    </li>
+    <li>
+        项目经理在计划迭代时会将 SRS 包作为输入。
+    </li>
+    <li>
+        测试人员在考虑需要哪些测试时会将 SRS 包作为输入。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">负责人:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_requirement_specifier_A6142817.html" guid="_CM61URi2Edq_uI8xTPML6g">需求指定者</a>
+</li>
+</ul>
+</td><td colspan="2" class="sectionTableCell"><span class="sectionTableCellHeading">修改者:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_requirement_specifier_A6142817.html" guid="_CM61URi2Edq_uI8xTPML6g">需求指定者</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出自</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/detail_software_requirements_F3D0BFDF.html" guid="_HVl4sEohEdqrjq4i3fchvA">详细描述软件需求</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">简述</th><td class="sectionTableCell"><a id="BriefOutline" name="BriefOutline"></a> 
+<p>
+    软件需求规范（SRS）记录系统或系统某一部分的完整软件需求。
+</p>
+<p>
+    一个 SRS 可能有许多不同的安排。有关其他指导信息，请查阅定制部分。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="Yes" alt="Yes" height="15" width="20" src="./../../images/true.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">定制</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">说明选项</th><td class="sectionTableCell"><a id="Tailoring" name="Tailoring"></a> 
+<p>
+    一个 SRS 可能有许多不同的安排。请查看此页面顶部表中的模板和示例部分，以了解项目环境中相关的安排。有关该工件的进一步精化（包括 SRS 组织的其他选项），请参阅 [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">IE830</a>]。
+</p><p/><p>
+    软件需求规范应该提供完整的软件需求定义（功能和非功能的）。但是，特定于用例的需求（功能的和非功能的）应该记录在<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>中，而系统范围的需求（功能的和非功能的）应该记录在<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>中。可以将这些单独的工作产品打包在一起来定义软件需求规范（SRS）。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">核对表</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/software_requirements_specification_D39EF65A.html" guid="9.705252819955612E-305">软件需求规范</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">概念</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/requirements_62E28784.html" guid="4.582668643506599E-305">需求</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/software_requirements_specification_91456CD0.html" guid="5.0594212359881566E-306">软件需求规范</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

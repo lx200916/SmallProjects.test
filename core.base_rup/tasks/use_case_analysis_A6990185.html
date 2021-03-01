@@ -1,0 +1,830 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务: 用例分析</title>
+<meta content="Task" name="uma.type">
+<meta content="use_case_analysis" name="uma.name">
+<meta content="用例分析" name="uma.presentationName">
+<meta content="Discipline:rup_analysis_design_discipline:分析和设计" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="设计人员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "{28014615-A62F-452D-B821-30C7CAB0EC44}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "{28014615-A62F-452D-B821-30C7CAB0EC44}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "{28014615-A62F-452D-B821-30C7CAB0EC44}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "{28014615-A62F-452D-B821-30C7CAB0EC44}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{28014615-A62F-452D-B821-30C7CAB0EC44}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：用例分析</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务描述了如何从用例开发分析级别用例实现。</td>
+</tr>
+<tr>
+<td>规程：<a href="./../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">分析和设计</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<ul>
+    <li>
+        确定执行用例事件流的类
+    </li>
+    <li>
+        使用分析用例实现，将用例行为分发给这些类
+    </li>
+    <li>
+        确定类的职责、属性和关联
+    </li>
+    <li>
+        记录体系结构机制的使用情况
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">主执行者:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">其他执行者:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_glossary_A5D79A0C.html" guid="{3BF8CC04-9101-47A4-9473-C8205EA588B6}">词汇表</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">分析类</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">分析模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">用例模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">用例实现</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">分析类</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}">分析模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">用例实现</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">流程使用情况</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">分析和设计</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/define_a_candidate_architecture_A3651DA3.html" guid="{71ADFE9A-34A0-41BD-8A17-BEA3210E2BBD}">定义候选体系结构</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/use_case_analysis_97082B12.html" guid="_QZ7ZQEocEdqrjq4i3fchvA">用例分析</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">分析和设计</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/analyze_behavior_59C89065.html" guid="{DAFB461E-9ADB-4849-8285-B7E3E72BDB43}">分析行为</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/use_case_analysis_DAB10D12.html" guid="_fzcg-UocEdqrjq4i3fchvA">用例分析</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading"> 创建分析用例实现</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Create Use-Case Realization" name="Create Use-Case Realization"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                创建用来表达用例行为的建模元素。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    用例形成了大多数早期分析和设计工作的中心焦点。为了实现以需求为中心的任务和以分析／设计为中心的任务之间的转换，<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">工作产品：用例实现</a>充当了桥梁，提供一种将分析与设计模型中的行为回溯到用例模型的方式，并围绕着“用例”概念组织协作。
+</p>
+<p>
+    如果还不存在分析用例实现，则在分析模型中针对<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>创建一个分析用例实现。分析用例实现的名称应该与相关联的用例相同，并且应建立从分析用例实现到其相关联用例的“实现”关系。
+</p>
+<p>
+    有关用例实现的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/use-case_realization_C690D81F.html" guid="1.6790343052744206E-305">技术：用例实现</a>。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 补充用例描述</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Supplement the use-case description" name="Supplement the use-case description"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                记录为了解所要求的系统内部行为而需要的附加信息，为系统客户编写的用例描述中可能缺少这些信息。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    每个用例的描述并非总是足以用来查找分析类和它们的对象。
+    客户一般对关于系统内部所发生情况的信息不感兴趣，所以用例描述可以不考虑这样的信息。在这些情况下，用例描述读起来就像是“黑盒”描述，其中关于系统执行什么操作来响应参与者操作的内部细节不是没有就是描述得很简略。要找到执行用例的对象，就必须具有关于从内部角度看系统执行了什么操作的“白盒”描述。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    在自动柜员机（ATM）的情况下，系统客户可能更愿意说
+</p>
+<div style="margin-left: 2em">
+    <p class="example">
+        “ATM 验证银行客户卡。”
+    </p>
+</div>
+<p class="example">
+    来描述系统的用户认证行为。对客户来说，这可能就足够了，但我们并不真正知道 ATM 内部实际是怎样来验证卡的。
+</p>
+<p class="example">
+    为了对系统的工作方式进行内部描绘，能足够详细地确定对象，我们可能需要附加信息。以 ATM 卡验证活动为例，扩展后的描述可能是这样的：
+</p>
+<div style="margin-left: 2em">
+    <p class="example">
+        “ATM 将客户的帐号和 PIN 发送到 ATM 网络进行验证。如果客户帐号和 PIN 匹配，客户获得授权进行交易，ATM 网络就返回成功消息，否则 ATM 网络返回失败消息。”
+    </p>
+</div>
+<p class="example">
+    这样的详细程度使读者能清楚地了解需要什么信息（帐号和 PIN）以及谁负责认证（ATM 网络，用例模型中的参与者）。根据这些信息，我们可以确定两个可能的对象（“客户”对象，属性为帐号和 PIN；和 ATM 网络接口）以及它们的职责。
+</p>
+<p>
+    检验用例描述，查看系统的内部行为是否得到了明确的定义。 系统的内部行为应该是明确的，这样系统必须做什么就很清楚了。没有必要定义系统内负责执行该行为的元素（对象）－ 只要清楚地定义需要做什么就可以了。
+</p>
+<p>
+    这些详细信息的来源包括帮助定义系统需要做什么的领域专家。在考虑系统的特定行为时，一个很值得问的问题是“系统这样做有什么意义？”。. 如果对系统为执行该行为所做的操作的定义不足以回答该问题，就可能需要寻找更多的信息。
+</p>
+<p>
+    以下备选方法可补充<b>事件流</b>的描述：
+</p>
+<ul>
+    <li>
+        <b>根本不描述</b>。当您认为交互图一目了然，或者当相应用例的<b>事件流</b>提供了足够的描述时，就可能是这种情况。
+    </li>
+    <li>
+        <b>补充现有的事件流描述</b>。向<b>事件流</b>中现有文本对系统应执行的操作不明确的部分添加补充描述。
+    </li>
+    <li>
+        <b>将其描述为完整的文本流</b>，独立于“外部”用例事件流描述。如果系统的内部行为与系统的外部行为几乎没有相似之处，就适合用这种方法。在这种情况下，就需要有完全独立的描述，该描述与分析用例实现关联，而不是与用例关联。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 从用例行为中查找分析类</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Find Classes from Use-Case Behavior" name="Find Classes from Use-Case Behavior"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                确定将能执行用例中所述行为的一组候选模型元素（分析类）。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    在系统从纯粹陈述所要求的行为转换到描述系统如何工作的过程中，第一步就是查找一组候选分析类。在该工作中，分析类用来表示模型元素的角色，这些模型元素提供满足用例指定的功能需求和补充需求指定的非功能需求所必要的行为。因为项目的关注对象转到了设计，所以这些角色转变了一组实现这些用例的设计元素。
+</p>
+<p>
+    用例分析中确定的角色主要表示系统应用程序特定行为和领域特定行为的最高层次行为。边界类和控制类通常转变为应用层设计元素，而实体类则转变成特定于领域的设计元素。较低层的设计元素通常是从这里确定的分析类所使用的分析机制转变而来的。
+</p>
+<p>
+    这里所述的技能通过系统的三个不同透视图来促进候选类的确定。这三个透视图是系统与其参与者之间<b>边界</b>的透视图、系统使用的信息的透视图以及系统的控制逻辑的透视图。相应的类构造型、边界、实体和控制是在“分析”期间为方便而使用的，它们在“设计”期间消失。
+</p>
+<p>
+    类的确定只意味着：它们应得以确定、命名并用几个句子简短地描述。
+</p>
+<p>
+    有关确定分析类的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">技术：分析类</a>。有关分析用例实现的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/use-case_realization_C690D81F.html" guid="1.6790343052744206E-305">技术：用例实现</a>。
+</p>
+<p>
+    如果特定分析机制和／或分析模式已经记录在项目特定指南中，它们就应该用作分析类的另一个“灵感”来源。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 将行为分发给分析类</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Distribute behavior to analysis classes" name="Distribute behavior to analysis classes"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                根据协作的分析类来表示用例行为。确定分析类的职责。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    对每个独立的子流（场景）：
+</p>
+<ul>
+    <li>
+        <b>创建一个或多个交互（通信或序列）图</b>。通常用例的主事件流至少需要一个图，再加上每个备用／异常流至少需要一个图。单独的图通常是具有复杂计时或决策点的子流程所必需的，或者是简化过长的复杂流程（导致无法容纳在一个图中）所必需的。
+    </li>
+    <li>
+        <b>确定分析类</b>（负责所要求的行为），方法是逐步执行场景的事件流，确保用例所要求的所有行为都由分析用例实现来提供。
+    </li>
+    <li>
+        <b>举例说明交互图中分析类之间的交互。</b> 交互图还应显示系统与其参与者之间的交互（交互应该从参与者开始，因为调用用例的总是参与者）。
+    </li>
+    <li>
+        <b>包含代表所使用用例的控制类的类。</b>（对每个扩展用例使用单独的交互图，只显示扩展用例的变异用例。）
+    </li>
+</ul>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/ac_ucan1.gif" alt="通信图示例" border="0" width="613" height="260" />
+</p>
+<p class="picturetext">
+    用例<b>接收寄存项</b>的通信图。
+</p>
+<p>
+    如果特定分析机制和／或分析模式已经记录在项目特定指南中，它们就应该反映在职责分配和所生成的交互图中。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 描述职责</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Describe responsibilities" name="Describe responsibilities"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                描述从用例行为中确定的对象类的职责。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    职责是关于可要求对象提供的内容的陈述。职责演变为设计中的类上的一个（但通常为多个）操作；它们的属性可以描述为：
+</p>
+<ul>
+    <li>
+        对象可执行的操作
+    </li>
+    <li>
+        对象拥有的、可提供给其他对象的知识
+    </li>
+</ul>
+<p>
+    每个分析类都应有几个职责；只具有一个职责的类可能太简单了，而有十几个甚至更多职责的类就可能超出职责的极限，这样的类可能应分成几个类。
+</p>
+<p>
+    所有对象都可以创建，也可以删除，这是不言而喻的；除非对象在创建或删除时执行某一特殊行为，否则不要重申明显的事实。（如果存在某些关系，就不能删除某些对象。）
+</p>
+<h4>
+    查找职责
+</h4>
+<p>
+    职责是从交互图的消息派生而来的。对于每条消息，检验发送消息的目标对象的类。如果职责尚未存在，则创建一个新的职责，该职责提供所请求的行为。
+</p>
+<p>
+    其他职责将从非功能需求派生而来。创建新的职责时，请检查非功能需求，看看是否有适用的相关需求。要么补充职责的描述，要么创建新的职责来反映这一情况。
+</p>
+<h4>
+    记录职责
+</h4>
+<p>
+    职责是用职责的简称（最多几个字）和简短描述（最多几个句子）进行记录的。该描述陈述对象为履行职责所做的事，以及在调用职责后返回的结果。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 描述属性和关联</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Describe attributes and associations" name="Describe attributes and associations"></a><a id="XE_attribute_on_object__describing" name="XE_attribute_on_object__describing"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                定义分析类所依赖的其他类。<br />
+                 定义该类必须了解的其他分析类中的事件。<br />
+                 定义该分析类负责保留的信息。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    为了履行职责，类通常依赖于其他类来提供所需要的行为。众多关联记录类之间的关系，并帮助我们了解类的结合；更好地了解类结合并尽可能减少结合情况，这可帮助我们构建更好、更有弹性的系统。
+</p>
+<p>
+    以下步骤定义类的属性以及类之间的关联：
+</p>
+<ul>
+    <li>
+        <a href="#Define Attributes">定义属性</a>
+    </li>
+    <li>
+        <a href="#Establish associations between analysis classes">建立分析类之间的关联</a>
+    </li>
+    <li>
+        <a href="#Describe event dependencies between analysis classes">描述分析类之间的事件依赖关系</a>
+    </li>
+</ul>
+<h4>
+    <a id="Define Attributes" name="Define Attributes">定义属性</a>
+</h4>
+<p>
+    属性由类用于存储信息。特别地，属性在信息符合以下条件的情况下使用：
+</p>
+<ul>
+    <li>
+        “按照值”被引用；也就是说，重要的只是信息的值，而不是它的位置或对象标识。
+    </li>
+    <li>
+        由所属的对象独自“拥有”；没有其他对象引用该信息。
+    </li>
+    <li>
+        由那些只获取、设置信息或对信息执行简单转换的操作访问；除了提供值外，信息没有“真正”的行为。
+    </li>
+</ul>
+<p>
+    另一方面，如果信息有复杂的行为、由两个或多个对象共享或者“通过引用”在两个或多个对象间传递，该信息就应该建模为单独的类。
+</p>
+<p>
+    属性名称应该是一个名词，清楚地说明属性具有哪些信息。
+</p>
+<p>
+    属性的描述应该描述属性中要存储什么信息；当存储的信息从属性名称来看很明显时，这是可选的。
+</p>
+<p>
+    属性类型是属性的简单数据类型。示例包括<b>字符串</b>、<b>整数</b>、<b>数字</b>。
+</p>
+<h4>
+    <a id="Establish associations between analysis classes" name="Establish associations between analysis classes">建立分析类之间的关联</a>
+</h4>
+<p>
+    首先研究<a href="#Distribute behavior to analysis classes">将行为分发给分析类</a>中生成的交互图中的链接。类之间的链接表示两个类的对象需要彼此交流以执行用例。一旦我们开始设计系统，这些链接就可以用几种方式实现：
+</p>
+<ul>
+    <li>
+        对象可能有“全局”范围，在这种情况下，系统中的任何对象都可以向它发送消息。
+    </li>
+    <li>
+        一个对象可以作为参数传递给第二个对象，此后，它就可以向被传递的对象发送消息。
+    </li>
+    <li>
+        对象可能会与发送消息的目标对象有永久关联。
+    </li>
+    <li>
+        对象可以在操作范围内创建并销毁（即“临时”对象）－ 这些对象被认为对操作而言是“局部”的。
+    </li>
+</ul>
+<p>
+    但是，在类的“生命”的这一早期时刻就开始作出这些决定，这太早了：我们还没有足够的信息来作出经过深思熟虑的决定。因此，我们在分析中创建关联和聚集来表示（并“携带”）必须在两个类的对象之间发送的任何消息。聚集是关联的一种特殊形式，表示对象参与了“整体／部分”关系（请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/association_98710829.html" guid="5.540135518285335E-305">技术：关联</a>和<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/aggregation_A53E33AB.html" guid="1.1538495077622037E-304">技术：聚集</a>））。
+</p>
+<p>
+    我们将在<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">任务：类设计</a>中改进这些关联和聚集。
+</p>
+<p>
+    为每个类绘制一张类图，显示每个类与其他类的关联：
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/aclssdg.gif" alt="类图示例，显示关联和聚集" width="358" height="222" />
+</p>
+<p class="picturetext">
+    部分订单输入系统的分析类图示例
+</p>
+<p>
+    只关注实现用例所需的关联；不要添加您认为“可能”存在的关联，除非它们是必需的（基于交互图）。
+</p>
+<p>
+    给出关联角色的名称和多重性。
+</p>
+<ul>
+    <li>
+        角色名称应是一个名词，说明关联的对象相对于关联对象而扮演的角色。
+    </li>
+    <li>
+        假设多重性为 0..*（零到许多），除非有明确证据表示其他内容。多重性为零，则意味着关联是可选的；确保这是您希望的情况；如果对象可能不存在，使用该关联的操作就必须作相应的调整。
+    </li>
+    <li>
+        可将多重性指定为更窄的范围（如 3..8）。
+    </li>
+    <li>
+        在多重性范围内可以指定概率。因此，如果多重性为 0..*，而在 85% 的情况下它应在 10 到 20
+        之间，则记录下来；该信息在设计期间将相当重要。例如，如果要使用关系数据库来实施持久性存储器，较窄的范围将有助于更好地组织数据库表。
+    </li>
+</ul>
+<p>
+    请撰写一份关联的简述，表明如何使用关联，或者该关联代表什么关系。
+</p>
+<h4>
+    <a id="Describe event dependencies between analysis classes" name="Describe event dependencies between analysis classes">描述分析类之间的事件依赖关系</a>
+</h4>
+<p>
+    对象有时需要知道，事件在某个“目标”对象中何时发生，而“目标”不必知道在事件发生时要求得到通知的所有对象。预订关联是显示这一事件通知依赖关系的简单表示法，它允许我们简洁明了地表示这种依赖关系。
+</p>
+<p>
+    两个对象之间的预订关联表明，当预订的对象发生特定事件时，将会通知预订方对象。预订关联有一个<b>条件</b>，定义使订户得到通知的事件。关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/subscribe-association_1AB75163.html" guid="1.401846671640991E-305">技术：预订关联</a>
+</p>
+<p>
+    <b>预订</b>关联的条件应该根据抽象属性来表示，而不应根据其特定的属性或操作。这样，关联方对象得以保持对所关联实体对象的内容（将会更改）的独立性。
+</p>
+<p>
+    以下情况下需要预订关联：
+</p>
+<ul>
+    <li>
+        如果某一对象受另一对象中发生的事件的影响
+    </li>
+    <li>
+        如果必须创建新对象来处理某个事件，例如在错误发生时，则必须创建一个新窗口来通知用户
+    </li>
+    <li>
+        如果对象需要知道另一个对象何时实例化、何时更改或者何时被销毁
+    </li>
+</ul>
+<p>
+    “预订的”对象通常是实体对象。实体对象通常被动地存储信息，其任何行为一般都与它们的信息存储职责相关。 许多其他对象常常需要知道对象实体何时更改。预订关联使实体对象不必了解所有这些另外的对象 －
+    它们只“表示”对实体对象感兴趣，并会在实体对象更改时收到通知。
+</p>
+<p>
+    现在这一切还只是“分析手法”：在设计中我们必须定义这种通知到底是如何起作用的。我们可能会购买通知框架，或者我们可能必须自行设计并构建一个框架。但此时只要记住，有通知存在就足够了。
+</p>
+<p>
+    关联的方向显示，只有预订方对象知道两个对象之间的关系。预订的描述完全包含在预定对象中。反过来，相关联的实体对象是以常规方式来定义的，没有考虑其他对象也可能对该对象的活动感兴趣。这也意味着，可以对模型添加或删除预订方对象，而不更改所预订的对象。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 协调分析用例实现</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Reconcile the Use-Case Realizations" name="Reconcile the Use-Case Realizations"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                协调单个分析用例实现，并确定一组有一致关系的分析类。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    分析用例实现是因为分析特定用例而制定的。现在需要协调单个分析用例实现。检验为每个分析用例实现定义的<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">分析类</a>和支持的关联。确定并解决不一致情况，并去除任何重复情况。例如，两个不同的分析用例实现可能包含概念上相同的一个分析类，但因为分析类是由不同的<a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>确定的，故使用了不同的名称。&nbsp;<br />
+     注意：如果<a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>很好地定义了初始体系结构，分析用例实现之间的重复情况就会大大减少（请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">任务：体系结构分析</a>）。
+</p>
+<p>
+    协调模型元素时，考虑它们的关系是很重要的。如果两个类被合并起来，或者一个类替换了另一个类，则务必将原始类的关系传递给新的类。
+</p>
+<p>
+    <a class="elementLinkWithUserText" href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>应该参与协调分析用例实现，因为它要求了解业务环境以及对软件体系结构和设计有某种预见性，这样就可以选择最好地代表问题和解决方案领域的分析类。
+</p>
+<p>
+    关于类的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">技术：分析类</a>。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 限定分析机制</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_analysis_mechanisms__qualifying" name="XE_analysis_mechanisms__qualifying"></a><a id="Qualify Analysis Mechanisms" name="Qualify Analysis Mechanisms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                确定分析类使用的分析机制（如果有）。提供关于分析类如何应用分析机制的附加信息。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    在本步骤中，将检验适用于每个确定的分析类的分析机制。
+</p>
+<p>
+    如果分析类使用一个或多个分析机制，现在记录的附加信息将帮助软件设计人员和设计人员确定对体系结构设计机制要求的功能。分析类的实例个数、它们的大小、它们的访问频率以及它们的预测生命期是重要的属性，可帮助设计人员选择适当的机制。
+</p>
+<p>
+    对于分析类使用的每个分析机制，请限定在选择适当的设计和实施机制时所需考虑的相关属性。这些属性将因机制类型而异；给出适当的范围，或者在仍有许多不确定因素时给出范围。不同的体系结构机制将有不同的属性，所以这些信息是纯描述性的，只需在必要时进行结构化，以记录并传达信息。在分析期间，该信息通常是相当不确定的，但是值得记录，因为随着发现更多的信息，就可修改推测的估计值。
+</p>
+<p>
+    类使用的分析机制以及它们的关联属性不必正式记录；在图上附加注释或者扩展类的描述就足以传达信息了。在类的演进过程中，这时的属性信息是相当不确定的，所以重点在于记录预期的值，而不是将机制的定义规范化。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    <b>Flight</b> 类使用的永久性机制的属性可限定为：
+</p>
+<blockquote>
+    <p class="example">
+        <b>粒度</b>：每个 flight 为 2 到 24 千字节
+    </p>
+    <p class="example">
+        <b>容量</b>：最多达 100,000
+    </p>
+    <p class="example">
+        <b>访问频率</b>：
+    </p>
+    <blockquote>
+        <blockquote>
+            <ul>
+                <li>
+                    创建／删除：每小时 100 次
+                </li>
+                <li>
+                    更新：每小时更新 3,000 次
+                </li>
+                <li>
+                    读取：每小时访问 9,000 次
+                </li>
+            </ul>
+        </blockquote>
+    </blockquote>
+</blockquote>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    <b>Mission</b> 类使用的永久性机制的属性可限定为：
+</p>
+<blockquote>
+    <p class="example">
+        <b>粒度</b>：每个 mission 为 2 到 3 兆字节
+    </p>
+    <p class="example">
+        <b>容量</b>：4
+    </p>
+    <p class="example">
+        <b>访问频率</b>：
+    </p>
+</blockquote>
+<blockquote>
+    <blockquote>
+        <blockquote>
+            <ul>
+                <li>
+                    创建／删除：每天 1 次
+                </li>
+                <li>
+                    更新：每天 10 次
+                </li>
+                <li>
+                    读取：每小时 100 次
+                </li>
+            </ul>
+        </blockquote>
+    </blockquote>
+</blockquote></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 建立可跟踪性</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Establish Traceability" name="Establish Traceability"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                保持分析模型与其他模型之间的可跟踪性关系。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    项目的项目特定指南指定了分析模型元素所要求的可跟踪性。
+</p>
+<p>
+    例如，如果存在用户界面的单独模型，那么将该模型中的屏幕或其他用户界面元素跟踪到分析模型中的边界类可能会很有用。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 复审结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Review the Results" name="Review the Results"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                验证分析对象符合在系统中提出的功能需求。<br />
+                 验证分析对象和交互是否是一致的。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    在研讨会结束后开展一次非正式复审，作为<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">任务：用例分析</a>的同步点和结束。
+</p>
+<p>
+    请使用此任务输出的工作产品核对表。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">核对表</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/use-case_realization_444C8317.html" guid="9.828360528787822E-305">用例实现</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/use-case-analysis_workshop_B07C9D03.html" guid="4.6416720607434916E-306">用例分析研讨会</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/use-case_realization_C690D81F.html" guid="1.6790343052744206E-305">用例实现</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html" guid="3.211008403369512E-306">时序图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/communication_diagram_FFFEA1B5.html" guid="4.5194432001390347E-305">通信图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">分析类</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/capture_results_use_case_analysis_7C8B82CF.html" guid="{F33662D0-DB04-4B24-AFC4-EFEFCDD20D42}">使用 Rational Rose 捕获用例分析的结果</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/create_use_case_realization_1212EF9.html" guid="{AAB8D0D6-C666-4F4D-9D26-2AF026558A4C}">使用 Rational Rose 创建用例实现</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/performing_use_case_analysis_12C8207E.html" guid="{D498540C-E196-4936-AAFB-0BC37CF05A40}">使用 Rational XDE Developer 执行用例分析</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_collaboration_diagram_42655C1D.html" guid="{49ACA284-8922-4308-BEA7-2EDE22B77AA2}">使用 Rational Rose 管理协作图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_sequence_diagrams_C11A1E78.html" guid="{70C1E98C-D6AC-4278-8554-1E000AF5A57D}">使用 Rational Rose 管理时序图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_design_model_1D45D75E.html" guid="{BD1DD906-031C-4D8C-8078-87B6869A8C14}">使用 Rational Rose 管理设计模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

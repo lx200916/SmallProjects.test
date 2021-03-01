@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务描述符: 构造测试实施</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="structure_the_test_implementation" name="uma.name">
+<meta content="构造测试实施" name="uma.presentationName">
+<meta content="_9VPYoEohEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="测试设计人员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={35359DDF-6361-43E5-8B1B-18D204DA8CFF}&path={35359DDF-6361-43E5-8B1B-18D204DA8CFF},{93B7D625-C83A-4EFB-9772-B88F2EB02CE2},_9VPYoEohEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_C6jF0EdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_9VPYoEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_dTvnIEdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_9VPYoEohEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_sz1ksZ5IEdq7s5zuJVEAAw", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_9VPYoEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_C6jF0EdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_9VPYoEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_dTvnIEdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_9VPYoEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_zvv6IEdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_9VPYoEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_C6jF0EdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_9VPYoEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_dTvnIEdlEdqVZeSWHJlGyA", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_9VPYoEohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_sz1ksZ5IEdq7s5zuJVEAAw", "_mUqf8EdjEdqVZeSWHJlGyA", "_D1clqUdWEdqMoerwwyqMKQ", "_9VPYoEohEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_9VPYoEohEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：构造测试实施</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务描述了如何定义测试套件实施的整体结构。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    此任务的目的是：
+</p>
+<ul>
+    <li>
+        建立测试套件实施的驻留结构
+    </li>
+    <li>
+        为测试套件实施区域和它们的内容指定职责
+    </li>
+    <li>
+        概述必需的测试套件
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">主要:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_designer_A3072D6F.html" guid="_9Vbl4EohEdqrjq4i3fchvA">测试设计人员</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">其他:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">辅助:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_A1E681F6.html" guid="_CWqAKhi2Edq_uI8xTPML6g">测试策略</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_suite_18C2BDB8.html" guid="_CWqAIhi2Edq_uI8xTPML6g">测试套件</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_suite_18C2BDB8.html" guid="_CWqAIhi2Edq_uI8xTPML6g">测试套件</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_development_infrastructure_31D3520E.html" guid="_CWqAMBi2Edq_uI8xTPML6g">开发基础结构</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">外部:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_suite_18C2BDB8.html" guid="_CWqAIhi2Edq_uI8xTPML6g">测试套件</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> 检查测试方法、目标测试项和评估需要</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineApproachTargetsAndAssmnt" name="ExamineApproachTargetsAndAssmnt"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                理解如何评估测试，以及对需要如何实施特定测试套件以评估目标测试项的暗示。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    以对测试计划的复审开始，确定评估需求，考虑如何能使用规定的测试方法来确定对测试范围和软件质量的评估。考虑任何需要解决的与特定目标测试项相关的特殊需要。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 检查可测性机制和支持元素</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineMechanismsAndElements" name="ExamineMechanismsAndElements"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                理解可用的可测性元素，理解它们支持的机制和提供的好处。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    复审对于在此环境中启用测试有用的机制，并识别实施这些机制的特定可测性元素。这包括复审资源，例如任何由测试团队开发的函数库，以及由开发团队实施的桩模块或装备。
+</p>
+<p>
+    通过以下两种行为的组合达到可测性：开发可测的软件，定义适当地支持测试的测试方法。同样，可测性是测试团队资产开发的一个重要方面，就像它是 软件开发工作的一个重要部分一样。实现可测性（有效地测试软件产品的能力）通常将涉及到以下各项的组合：
+</p>
+<ul>
+    <li>
+        由测试自动化工具提供的可测性启用程序
+    </li>
+    <li>
+        创建作为成分的测试脚本所用的特定技术
+    </li>
+    <li>
+        在测试脚本中分离和封装来自基本测试过程定义的复杂性的函数库，这些库提供控制和修改的中心点。
+    </li>
+</ul>
+<h4>
+    <a id="AnalyzeDistribution" name="AnalyzeDistribution">分析分发需求</a>
+</h4>
+<p>
+    当前测试套件需要进行分发吗？如果是，请利用支持分发的可测性元素。这些元素通常将是特定自动支持工具的特性，这些工具将分发测试套件，远程执行套件并带回测试日志和其他输出，以用于集中式结果确定。
+</p>
+<h4>
+    <a id="AnalyzeConcurrency" name="AnalyzeConcurrency">分析并行性需求</a>
+</h4>
+<p>
+    当前测试套件需要与其他测试套件并行运行吗？如果是，请利用支持并行性的可测性元素。这些元素通常将是特定支持工具的组合，某个实用程序运行这些支持工具以使多个测试套件能在不同的物理机器上并行执行。并行性需要进行仔细的测试数据设计和管理，以确保不会出现意外或计划外的副作用，例如两个并行测试更新同一个数据记录。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 创建初始测试套件结构</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="CreateTestSuiteStructure" name="CreateTestSuiteStructure"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                概述要实施的测试套件。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    枚举一个或多个测试套件，它们（当执行时）将向测试团队提供完整的和有含义的值的结果，使得能随后向项目干系人报告。请尝试在以下两方面之间找到一个平衡：向项目团队提供足够详细的特定信息，但又不至于详细到令人畏惧且难以管理的程度。
+</p>
+<p>
+    如果已存在测试脚本，您可能可以自行组合测试套件及其构成部分，然后将稳定测试套件的工作传递给测试套件实施者来完成。
+</p>
+<p>
+    对于需要新建测试脚本的测试套件，您还应给出一些关于测试脚本（或其他测试套件）的指示 －
+    您相信这些脚本将被此测试套件引用。如果枚举这些脚本并不难，则请枚举它们。否则，您可以只提供一份简要描述，该描述概述主要测试套件的预期内容覆盖范围，并将其留给测试套件实施者，让他们就需要精确地包含哪些测试脚本 制定战术决策。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 调整测试套件结构以反映团队组织和工具约束</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="AdaptStructureToTeam" name="AdaptStructureToTeam"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                优化测试套件结构，以处理团队职责分配。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    可能需要对您已识别的测试套件进一步地细分或重构，以适合团队正在处理的工作分解结构（WBS）。这将有助于减少在测试套件开发期间发生访问权冲突的风险。有时，测试自动化工具可能会就个人如何能处理自动化资产施加约束，因此在必要时请重构测试套件以适合此情况
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 识别测试脚本间的通信机制</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyTestScriptComms" name="IdentifyTestScriptComms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                识别需要在测试脚本之间共享或传递的测试数据和系统状态。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    在大多数情况下，测试套件可以只是以特定的顺序调用测试脚本。在许多情况下这就足以确保正确的系统状态从一个测试脚本传递到下一个测试脚本。
+</p>
+<p>
+    但是，在某些类型的系统中，动态运行时数据会由系统生成，或作为其中发生的事务的结果而产生。例如，在一个订单输入和分派系统中，每次输入一份订单时，系统会生成一个唯一的订单号。要使自动测试脚本能分派订单，前述订单输入测试脚本需要捕获系统生成的唯一订单号，并将其传递给订单分派测试脚本。
+</p>
+<p>
+    在类似的情况中，您将需要考虑适用哪种测试脚本间的通信机制。通常的备用方案包括：传递参数、读写磁盘文件中的值以及使用全局运行时变量。每项策略均有其自己的优点和缺点，使其或多或少适合于某种特定情况。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 定义测试套件元素间的初始依赖关系</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DefineTestSuiteDependencies" name="DefineTestSuiteDependencies"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                识别和记录测试套件元素之间的运行时依赖关系。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    这主要与确定测试脚本（可能还有测试套件）的运行时执行顺序相关联。未建立正确的依赖关系而运行的测试具有失败或者报告反常数据的风险。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 对测试实施体系结构进行可视化建模</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="VisualTestImpModel" name="VisualTestImpModel"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                利用图来记录和解释如何实现实施。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    如果您能访问某个 UML 建模或作图工具，您可能希望创建测试实施模型的图，以描述自动测试软件的关键元素。您还能以类似的方法，用图形表示测试自动化体系结构的关键方面。
+</p>
+<p>
+    另一个方法是将这些图绘制在一个白板上，测试团队很方便看到此白板。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 优化测试套件结构</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="RefineTestSuiteStructure" name="RefineTestSuiteStructure"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                进行必要的调整，以保持测试实施的完整性。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    随着项目的进行，测试套件可能会有所改变：将添加新的测试脚本，且更新、重新排序或删除旧的测试脚本。这些变更在测试套件维护中是很正常的，您应接受它们而不是回避它们。
+</p>
+<p>
+    如果您不积极地维护测试套件，它们将很快发生损坏且只能废弃不用。对于剩余的一些组件，要使测试套件重新可用的工时太多，更容易的方式可能是直接放弃该测试套件，并从头开始创建新的测试套件。请参阅此页标题表中的<b><a href="#Top">更多信息：</a></b>部分，以获取关于维护自动化测试套件的更多指南。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 维持可跟踪性关系</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Traceability" name="Traceability"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                使得能对跟踪的项执行影响分析和评估报告。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    通过使用在测试计划中概述的可跟踪性需求，按照需要更新可跟踪性关系。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 评估和验证结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                验证任务已恰当地完成，生成的工作产品是可以接受的。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    既然您已完成了该工作，那么最好验证该工作是否有足够的价值，而且您并不是简单地消耗大量纸张。您应评估您的工作质量是否适当，是否完整得足以让其他团队成员觉得您的工作很有用，并随后将它们用作他们自己工作的输入源。在可能的情况下，请使用 RUP
+    中提供的核对表验证质量和完整性是否都“足够好”。
+</p>
+<p>
+    让执行下行任务（根据您输入的工作信息）的人员参与复审您的过渡工作。请在您还有时间针对他们的意见采取行动时让他们参与复审。
+    您还应针对主要输入工作产品评估您的工作，以确保您已精确并充分地展示了它们。让输入工作产品的作者以此为基础复审您的工作，这可能很有用。
+</p>
+<p>
+    请记住，RUP
+    是一个迭代式的交付流程，并且在许多情况下工作产品是随着时间而演进的。所以，通常没必要完全形成将在近期的后续工作中只部分使用或根本不用的工作产品，并且这通常对生产力有副作用。这是因为很有可能在使用工作产品前，工作产品周围的情况会发生变化（并且在创建工作产品时作出的假设也会证明是不正确的），从而带来工时的浪费和高成本的重复工作。同时也要避免在展示内容值的危害方面花费过多周折的陷阱。
+    在展示作为项目可交付件有很大的重要性而且有经济价值的项目环境中，您可能希望考虑使用管理资源来执行展示任务。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_多次出现" abbr="多次出现">多次出现</th><td align="left" class="sectionTableCell" headers="property_多次出现"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_事件驱动" abbr="事件驱动">事件驱动</th><td align="left" class="sectionTableCell" headers="property_事件驱动"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_正在进行" abbr="正在进行">正在进行</th><td align="left" class="sectionTableCell" headers="property_正在进行"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可重复" abbr="可重复">可重复</th><td align="left" class="sectionTableCell" headers="property_可重复"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/maintaining_automated_test_suites_C1BF312D.html" guid="2.0721213907815595E-305">维护自动测试套件</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/performance_test_suites_A780E70C.html" guid="{FC006EA3-BFB8-4B16-B23A-753A15126A67}">使用 Rational TestManager 创建性能测试套件</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/performing_test_activities_A002FD4F.html" guid="{D2ECB600-4B4F-4458-B375-54DCF0D91BB3}">使用 Rational TestManager 执行测试活动</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/implementing_test_suite_AE114A0D.html" guid="{803E510B-B96F-481B-92A9-EEF6CF6AAA24}">使用 Rational TestManager 实施自动化测试套件</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/setup_testfactory_C77C34F4.html" guid="{FAC387D8-BA1A-4056-A53B-E1C43571D1DC}">在 Rational TestFactory 中设置测试环境</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

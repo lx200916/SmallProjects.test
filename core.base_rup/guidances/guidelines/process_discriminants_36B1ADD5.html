@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 流程判别式</title>
+<meta content="Guideline" name="uma.type">
+<meta content="process_discriminants" name="uma.name">
+<meta content="流程判别式" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.746702783003723E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.746702783003723E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：流程判别式</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南描述影响项目的流程定制方式的因素。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/tailor_process_for_project_6CFD05E2.html" guid="{1BA9AAA0-DA89-4C14-B45A-CE28A8A10894}">为项目定制开发流程</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Overview" name="Overview">概述</a>
+</h3>
+<p>
+    软件开发流程受以下因素的影响：
+</p>
+<ul>
+    <li>
+        域因素，例如应用程序领域、支持的业务流程、用户群和竞争对手的产品及服务。
+    </li>
+    <li>
+        生命周期因素，例如上市时间、预期的软件寿命期限和计划的未来发行版。
+    </li>
+    <li>
+        技术因素，例如编程语言、开发工具、数据库、组件框架和现有的软件系统。
+    </li>
+    <li>
+        组织因素。
+    </li>
+</ul>
+<p>
+    这些因素的重要性并不是等同的。以下各节描述一些主要因素（最有可能影响开发流程的整体情况的因素），以及您如何在开发组织中实施流程和工具。
+</p>
+<h3>
+    <a id="Business_Context" name="Business_Context"></a><a id="XE_process_discriminants__business_context" name="XE_process_discriminants__business_context" class="index" key="进程判别式（process discriminants）" text="业务环境"></a>
+</h3>
+<p>
+    业务环境描述了开发软件的环境。有不同类型的业务环境影响着如何最佳地定制流程。 业务环境的示例有：
+</p>
+<ul>
+    <li>
+        合同工作，其中开发人员按照给定的客户规范仅对该客户生产软件。
+    </li>
+    <li>
+        投机开发或商业开发，其中开发人员生产软件并支付软件上市成本。
+    </li>
+    <li>
+        内部项目，其中客户和开发人员在同一组织内。
+    </li>
+</ul>
+<p>
+    有许多中间情况；例如，只将软件开发的一部分进行转包的情况、地区分发作为附加因素的情况等等。不同项目干系人的总数是业务环境的良好指示器。
+</p>
+<p>
+    业务环境影响形式的级别、正式程度和流程的严格性。涉及的项目干系人（购买者、客户、转包商、监管机构等）越多，项目将越可能需要在主要的项目里程碑提供正式证据，例如文档、报告和原型。
+</p>
+<h3>
+    <a id="The Size of the Software Development Effort" name="The Size of the Software Development Effort">软件开发工作的规模</a>
+</h3>
+<p>
+    软件开发工作的规模是按某些度量值来定义的，例如代码行（SLOC）、交付的源代码说明或功能点、工月数或仅是成本。
+</p>
+<p>
+    工作的规模将影响形式的级别、正式程度和流程的严格性。项目越大，开发团队越大，而且，无论业务环境如何，各团队和管理人员在需求、接口和进度指示器方面所需要的正式性和可见度也越高。 大型项目中的沟通问题由于地理上分散的团队而进一步加重。
+</p>
+<h3>
+    <a id="Degree_of_Novelty" name="Degree_of_Novelty"></a><a id="XE_process_discriminants__degree_of_novelty" name="XE_process_discriminants__degree_of_novelty">新颖度</a>
+</h3>
+<p>
+    新颖度是基于<b>相对于开发组织的</b>此软件工作之前的工作，尤其是开发属于第二个周期还是在后来的周期。这包括组织的完善性及其流程、资产、当前技能集以及诸如召集和培训团队、获得工具和其他资源之类的问题。
+</p>
+<p>
+    项目的新颖度以完全不同的方式影响流程。新项目（该类第一个）会显著影响动态配置：先启和精化阶段将延长，可能跨好几个迭代。同时将更强调获取和捕获需求、用例建模、体系结构和降低风险。对于作为前一系统的<b>演进周期</b>的项目，变更管理更为重要，并且纳入遗留代码会引起一些技术难题。
+</p>
+<p>
+    新颖性不仅与正在开发的系统相关，还与执行方组织的完善性相关，因为引入新技术或工具会影响流程。尤其，将 Rational Unified
+    Process（RUP）本身引入一个组织就必须分为几个谨慎的步骤来进行。一个组织将把一些惯性带给所采用的新流程，并且采用策略必须考虑从现有做法到新做法的平稳过渡。
+</p>
+<h3>
+    <a id="Type of Application" name="Type of Application">应用程序类型</a>
+</h3>
+<p>
+    有不同类型的应用程序，例如嵌入式实时系统、分发式信息系统、电信系统、计算机辅助软件工程（CASE）工具等。应用程序的类型将影响流程，尤其在域可能对开发强加的特定限制方面，例如安全性、性能、国际化、内存限制等。
+</p>
+<p>
+    如果应用程序很关键，应用程序的类型则会影响流程；例如机场中的航班控制系统。关键的系统一般需要有较高级别的形式，既是为了跟踪需求，也是为了确保产品质量。关键应用程序还要求在测试上使用更多资源。
+</p>
+<p>
+    开发的类型或目标领域会给流程带来如下问题：
+</p>
+<ul>
+    <li>
+        用以支持特定任务的技术和工具；例如，为有限状态机器自动生成代码。
+    </li>
+    <li>
+        认证过程；例如，对于医疗器械。
+    </li>
+    <li>
+        符合标准；例如，对于会计或财政问题以及对于电信设备。
+    </li>
+</ul>
+<h3>
+    <a id="Type of Development" name="Type of Development">开发类型</a>
+</h3>
+<p>
+    有各种开发，例如：
+</p>
+<ul>
+    <li>
+        <b>合同工作</b>，其中您为特定客户开发产品。执行合同工作时，您会有更多项目干系人需要管理和协商。通常会需要更正式的外部工作产品，因为客户或代表想要监视进度并保持信息灵通。确保客户复审的工作产品易于理解。有时，需要有一个里程碑，项目可以在该里程碑处对项目剩余部分报出一个固定价格。在这种情况下，您可能需要添加新里程碑或调整现有的里程碑。在其他情况下，您可能必须按照客户在其他里程碑处和阶段中使用的生命周期模型进行调整。
+    </li>
+    <li>
+        <b>投机开发</b>，其中您为大众市场开发产品。在投机开发中，组织自身的营销（产品）经理充当客户。在投机开发中，通常上市时间比功能更重要，较少需要正式复审。
+    </li>
+    <li>
+        <b>内部开发</b>，其中您开发的产品交付给公司内的另一个部门。 如果您交付给另一个不使用 RUP 的项目，则可能必须按照另一个生命周期模型进行调整。描述工作产品时更具技术性是可以接受的，因为多数工作产品将由同事复审。
+    </li>
+    <li>
+        <b>预先研究</b>，其中您通常不开发产品。 预先研究项目是为了查明是否有可能构建产品。预先研究项目没有像普通项目那样的里程碑。
+    </li>
+</ul>
+<h3>
+    <a id="The Current Development Process" name="The Current Development Process">当前开发流程</a>
+</h3>
+<p>
+    在多数情况下，您将不替换组织中当前实施的软件开发流程，因为在多数情况下您将逐步实施新的开发流程，首先侧重于更为关键和重要的区域。有些当前的软件开发流程甚至可能继续存在一段时间，也可能永远存在下去。
+</p>
+<h3>
+    <a id="Problems and Root Causes" name="Problems and Root Causes">问题和根本原因</a>
+</h3>
+<p>
+    为项目确定的问题和划分的问题优先级会影响流程实施开始时流程中您将重点处理的那些区域。重要的是要注意，如果组织中没有确定的工作方式，发现问题可能是毫无意义的。请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/implementing_a_process_in_a_project_3656F98A.html" guid="2.870714010568015E-306">概念：在项目中实施流程</a>。相反，您可能需要确定这些问题的根本原因。要消除这些问题，您将通过改进流程、引入工具以使流程自动化和培训人员来处理这些根本原因。&nbsp;
+</p>
+<h5>
+    常见问题的示例
+</h5>
+<p>
+    以下是一些常见问题的示例：
+</p>
+<ul>
+    <li>
+        不能管理范围 － 组织例行公事地尝试超出他们最终的实际工作范围。
+    </li>
+    <li>
+        不能捕获需求 － 他们难以指定需求。
+    </li>
+    <li>
+        不能管理变化的需求。
+    </li>
+    <li>
+        不能管理需求 － 需求本身不能形成最终产品。
+    </li>
+    <li>
+        不能估计 － 他们总是对按时交付的能力过于乐观。
+    </li>
+    <li>
+        设计不足 － 他们擅长满足需求，但不擅长设计系统。他们有哪些种类的设计问题？系统是否难于维护和加强？他们是否有性能问题、可用性问题、容量问题等？
+    </li>
+    <li>
+        不能生产优质产品 － 产品有过多缺陷，这可能由于缺乏测试，但通常也与不能捕获和管理需求以及设计不足有关。
+    </li>
+    <li>
+        软件性能不可接受。
+    </li>
+    <li>
+        可用性低。
+    </li>
+    <li>
+        开发人员有冲突 － 缺乏责任控制和配置管理，所以开发人员进行有冲突的变更并徒劳工作。
+    </li>
+    <li>
+        发现问题较晚。&nbsp;
+    </li>
+    <li>
+        从用例到设计的过程中出现困难。
+    </li>
+</ul>
+<h5>
+    根本原因的示例
+</h5>
+<p>
+    问题通常是犯了错误的症状。您需要确定问题的根本原因。以下是一些常见根本原因的示例：
+</p>
+<ul>
+    <li>
+        需求管理不足
+    </li>
+    <li>
+        沟通含糊而不确切
+    </li>
+    <li>
+        体系结构脆弱
+    </li>
+    <li>
+        过于复杂
+    </li>
+    <li>
+        未检测到需求、设计和实施之间的不一致情况
+    </li>
+    <li>
+        测试不足
+    </li>
+    <li>
+        项目状态评估较主观
+    </li>
+    <li>
+        由于瀑布式开发，降低风险工作被延迟
+    </li>
+    <li>
+        变更传播不受控制
+    </li>
+    <li>
+        自动化不足
+    </li>
+    <li>
+        没有用以构建用户界面的系统方式
+    </li>
+    <li>
+        无法从用例形成设计
+    </li>
+</ul>
+<h3>
+    <a id="Organizational Factors" name="Organizational Factors">组织因素</a>
+</h3>
+<p>
+    要在一个组织中实施该流程，这取决于一些组织因素，例如组织变更能力、组织结构、项目组织和管理中的文化、所具备的才能和技能、先前的经验和当前的态度。
+</p>
+<p>
+    组织因素还影响流程的配置方式。例如，如果组织中的人员先前一直在使用某一软件开发流程描述，那么开始使用 RUP 就比较容易。
+    另一方面，如果这些人没有使用过软件开发流程描述，则您可能要决定限制流程描述的范围。您也可以通过额外的努力来使流程描述易于理解和使用，确保它包括（引用）了将提供最大价值的信息。
+</p>
+<p>
+    如果有些区域对许多人来说是新的，则制定尽可能好的指南将使过渡容易一些。例如，如果编程语言对于许多人来说是新的，则您将希望有非常好的编程指南和设计指南来辅助他们的学习。
+</p>
+<h3>
+    <a id="Attitudes" name="Attitudes">态度</a>
+</h3>
+<p>
+    组织员工中针对改用新技术、新流程或新工具的消极态度可能是成功实施流程和工具的最大威胁。对流程过于热情也可能是个问题，因为它会使人们过度关注流程。
+</p>
+<p>
+    要评估人们对新技术、流程和工具的态度，则询问如下问题：
+</p>
+<ul>
+    <li>
+        您认为使用新技术有哪些好处？新技术是否将解决当前的任何问题？您认为使用新技术有哪些问题？
+    </li>
+    <li>
+        您认为使用新流程有哪些好处？新流程是否将解决当前的任何问题？您认为使用新流程有哪些问题？
+    </li>
+    <li>
+        您认为使用新工具有哪些好处？新工具是否将解决当前的任何问题？您认为使用新工具有哪些问题？
+    </li>
+</ul>
+<p>
+    要评估人们的动机，则找出如下问题的答案：
+</p>
+<ul>
+    <li>
+        是否组织中所有人都了解为什么需要更改？
+    </li>
+    <li>
+        是否所有人都了解他们的竞争对手在做什么以及这会如何影响到业务？
+    </li>
+    <li>
+        是否所有人都了解业界的技术变化以及它们会如何影响到业务？&nbsp;&nbsp;
+    </li>
+</ul>
+<p>
+    表示消极态度的可能包括如下说法：
+</p>
+<ul>
+    <li>
+        “流程帮不上忙，反而是绊脚石。”
+    </li>
+    <li>
+        “流程意味着生成大量文档。”
+    </li>
+    <li>
+        “流程太具强迫性了。”
+    </li>
+</ul>
+<p>
+    一些处理消极态度的方式有：
+</p>
+<ul>
+    <li>
+        通过指出当前的问题来激励人们。
+    </li>
+    <li>
+        说明流程不会命令您应该做什么。流程必须首先被视为“帮助系统”，您可在其中寻求指导信息、定义等。
+    </li>
+    <li>
+        说明您仅使用流程的几个小部分。没有人可以主宰整个流程，并且那也不是目的。将流程比作一个装了书籍的书架，您在需要信息时阅读这些书籍。
+    </li>
+    <li>
+        运行一个成功的新产品试制项目，在其中您可以显示新流程和工具确实起作用。新产品试制项目中含有一两个怀疑分子。&nbsp;
+    </li>
+</ul>
+<p>
+    表示过度热情的包括：
+</p>
+<ul>
+    <li>
+        人们完全依赖流程，并认为它将解决他们的所有问题。
+    </li>
+    <li>
+        如果遵循流程，流程将是保证成功的<i>银弹</i>或魔方。
+    </li>
+    <li>
+        项目团队想要花费大量时间和精力来定制这个流程，而没有先评估需要解决的流程相关问题。&nbsp;
+    </li>
+</ul>
+<p>
+    一些处理过度热情的方式有：
+</p>
+<ul>
+    <li>
+        设置期望值。流程会有帮助，但它不会解决问题。解决问题的是人。
+    </li>
+    <li>
+        让人们不要花大量时间定制流程。
+    </li>
+    <li>
+        让人们专注于开发软件产品。
+    </li>
+</ul>
+<h3>
+    <a id="Technical_and_Managerial" name="Technical_and_Managerial"></a><a id="XE_process_discriminants__technical_complexity" name="XE_process_discriminants__technical_complexity">技术与管理复杂性</a>
+</h3>
+<p>
+    <a id="XE_process_discriminants__managerial_complexity" name="XE_process_discriminants__managerial_complexity"></a>不同类型的系统和它们的项目可以按系统的<b>技术复杂性</b>和<b>管理复杂性</b>来分类。
+    下图说明了一个不同系统可如何分类的概念。例如，典型的小业务电子表格应用程序通常技术复杂性较低并易于管理。另一个极端是典型的武器系统项目，通常在技术上很复杂，而且管理起来也很复杂。
+</p>
+<p>
+    通常增加系统规模、项目工期或业务环境也会增加管理复杂性。 在问题域或解决方案空间方面增加新颖度会增加技术复杂性。管理复杂性和技术复杂性之间有一种交互 － 许多大型项目在技术上也很复杂。 这导致：
+</p>
+<ul>
+    <li>
+        管理复杂性增加，导致更为形式化，包括更为正式的复审和里程碑及更多工作产品。
+    </li>
+    <li>
+        技术复杂性增加，导致引入具体的技术、角色和工具以及（因此）更多的任务。
+    </li>
+</ul>
+<p align="center">
+    <img height="390" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/supportingmaterials/resources/complex.gif" width="467" />
+</p>
+<p class="picturetext">
+    系统是按照技术复杂性和管理复杂性来分类的<br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

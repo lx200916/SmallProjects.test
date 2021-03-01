@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 设计类</title>
+<meta content="Guideline" name="uma.type">
+<meta content="design_class" name="uma.name">
+<meta content="设计类" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "2.914882084937444E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "2.914882084937444E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{952A9CE9-D5A3-43AC-980D-0B9298F3872E}", "2.914882084937444E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.914882084937444E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.914882084937444E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：设计类</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">设计类表示将直接映射到代码的设计元素。本指南说明了如何开发设计类。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_class__guidelines_for" name="XE_class__guidelines_for"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">定义</a>
+</h3>
+<p>
+    <a id="XE_class__definition" name="XE_class__definition"></a><b>设计类</b>表示系统实施中的一个或多个类的抽象；它所对应的准确内容取决于实施语言。例如，在诸如 C++
+    的面向对象的语言中，类可以对应于一个普通的类。或在 Ada 中，类可以对应于包的可见部分中定义的已标记类型。
+</p>
+<p>
+    类定义<b>对象</b>，对象然后实现（实施）用例。类是从用例实现对系统中所需对象所作出的需求中以及从任何先前已开发的对象模型中产生的。
+</p>
+<p>
+    类的好坏很大程度上依赖于实施环境。类及其对象的正确大小取决于编程语言，例如，在使用 Ada 时认为是正确的内容可能在使用 Smalltalk 时是错误的。类应映射到实施语言中的特定的特殊现象上，并且应构造类以便映射产生良好的代码。
+</p>
+<p>
+    即使实施语言的特性影响了设计模型，您也必须保持类结构易于理解和修改。设计时就好象已具有了类和封装，即使实施语言不支持这一点也是如此。
+</p>
+<h3>
+    <a id="operations" name="operations">操作</a>
+</h3>
+<p>
+    其他对象访问或影响对象的属性或关系的唯一方法是通过其<b>操作</b>。对象的类定义了对象的操作。通过操作可以执行一个特定的行为，该行为可能影响对象保留的属性和关系并引起执行其他操作。在 C++ 中一个操作对应于一个成员函数，而在 Ada
+    中对应于一个函数或过程。分配给对象的行为依赖于该对象在用例实现中的角色。
+</p>
+<h4>
+    <a id="parameters" name="parameters">参数</a>
+</h4>
+<p>
+    在操作规范中，参数组成<b>形参</b>。每个参数都有一个名称和类型。可以使用实施语言语法和语义来指定各操作以及它们的参数，以便在开始编码时，已在实施语言中指定了它们。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    在<b>回收机器系统</b>中，<b>Receipt Basis</b> 类的对象跟踪客户交来的某种类型的堆积物项的数量。<b>Receipt Basis</b> 对象的行为包括增加返回的对象的数量。操作
+    <b>insertItem</b> 接收对交来项的引用，以实现此目的。
+</p>
+<p class="picturecenter" align="center">
+    <img height="44" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_clas3.gif" width="210" />
+</p>
+<p class="picturetext">
+    指定操作时使用实施语言语法和语义。
+</p>
+<h4>
+    <a id="XE_class__operations_on" name="XE_class__operations_on"></a><b><a id="Class Operations" name="Class Operations">类操作</a></b>
+</h4>
+<p>
+    操作几乎总是表示对象行为。操作还可以表示类的行为，在此情况中它是<b>类操作</b>。可以在 UML 中通过规定操作类型范围对此建模。
+</p>
+<h4>
+    <a id="Operation Visibility" name="Operation Visibility">操作可视性</a>
+</h4>
+<p align="left">
+    可以在操作上实现以下可视性：
+</p>
+<ul>
+    <li>
+        <b>公共</b>：该操作对类自身之外的模型元素都可见。
+    </li>
+    <li>
+        <b>受保护</b>：该操作仅对类自身、其子类或类的<b>友元</b>可见（取决于语言）
+    </li>
+    <li>
+        <b>私有</b>：该操作仅对类自身及类的<b>友元</b>可见
+    </li>
+    <li>
+        <b>实施</b>：该操作仅在类自身中可见。
+    </li>
+</ul>
+<p>
+    应<b>尽量</b><b>少地</b>使用<b>公共</b>可视性，仅在另一个类需要该操作时使用。
+</p>
+<p>
+    <b>受保护</b>可视性应为<b>缺省值</b>；它保护该操作使其不被外部类使用，防止行为的耦合和封装变得松散。
+</p>
+<p>
+    <b>私有</b>可视性应在您希望防止<b>子类</b>继承该操作的情况下使用。这提供了将子类从超类分离的方法，并减少了删除或排除未使用的继承操作的必要。
+</p>
+<p>
+    <b>实施</b>可视性具有<b>最大的限制性</b>；在只有类自身可以使用该操作的情况下使用。它是<b>“私有”可视性的变体</b>，适用于大多数情况。
+</p>
+<h3>
+    <a id="States" name="States">状态</a>
+</h3>
+<p>
+    对象可以根据其所处的状态，对特定消息作出不同的反应；关联状态表图定义了对象的依赖于状态的行为。对于对象可以进入的每个状态，状态表图描述它可以接收的消息、可以执行的操作以及之后该对象所处的状态。关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">技术：状态表图</a>。
+</p>
+<h3>
+    <a id="Interaction Between Objects" name="Interaction Between Objects">协作</a>
+</h3>
+<p>
+    协作是一组动态的对象交互作用，在这些交互中一组对象通过彼此发送<b>消息</b>进行通信。在 Smalltalk 中发送消息非常直截了当；而在 Ada
+    中是作为子程序调用来完成的。消息发送到接收对象，接收对象调用该对象中的操作。消息指明了要执行的操作名称和所需参数。当发送消息时，将为所有<b>参数</b>提供<b>实参</b>（形式<b>参数</b>的值）。
+</p>
+<p>
+    在交互图中描述了用例实现中对象之间的消息传输以及调用操作后对象遵循的控制重点。关于这些图的信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/sequence_diagram_AFA76EBB.html" guid="3.211008403369512E-306">技术：时序图</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/communication_diagram_FFFEA1B5.html" guid="4.5194432001390347E-305">技术：通信图</a>。
+</p>
+<h3>
+    <a id="XE_class_attribute__definition" name="XE_class_attribute__definition" class="index" key="类属性（class attribute）" text="定义"></a><a id="Attributes" name="Attributes"></a><a id="XE_attribute__definition_for" name="XE_attribute__definition_for" class="index" key="属性（attribute）" text="属性定义"></a>
+</h3>
+<p>
+    属性是对象的一个命名的特征。属性名称是一个名词，它描述了与对象相关的该属性的角色。当创建对象时，属性可以有一个初始值。
+</p>
+<p>
+    仅当对属性建模可以使对象更易于理解时，才应这样做。仅当对象的特性是<b>该对象本身</b>的特性时，才应将对象特征建模为属性。否则，应使用到类（该类的对象表示了该属性）的关联或聚集关系来对属性建模。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="picturecenter" align="center">
+    <img height="63" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_clas4.gif" width="162" />
+</p>
+<p class="example">
+    如何对属性建模的示例。家庭的每个成员都有姓名和地址。这里，已标识属性<b>我的姓名</b>和<b>家庭地址</b>，其类型分别为<b>姓名</b>和<b>地址</b>：
+</p>
+<p class="picturecenter" align="center">
+    <img height="45" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_clas5.gif" width="308" />
+</p>
+<p class="example">
+    在该示例中，使用关联而非属性。<b>我的姓名</b>属性可能对家庭中的每个成员都是唯一的。因此将它建模为属性类型为<b>姓名</b>的属性。地址由所有家庭成员共享，所以最好用<b>家庭成员</b>类和<b>地址</b>类之间的关联对它们进行建模。
+</p>
+<p>
+    并不总是很容易立即决定是将某概念建模为单独的对象，还是建模为另一个对象的属性。在对象模型中有不必要的对象将导致不必要的文档和开发开销。因此必须建立某些条件以确定某概念对系统的重要程度。
+</p>
+<ul>
+    <li>
+        <b>可访问性</b>。用于控制对象与属性选择的不是真实生活中概念的重要性，而是在用例期间访问它的必要性。如果经常访问该单元，则将它建模为对象。
+    </li>
+    <li>
+        <b>执行期间的分离</b>。将用例执行期间独立处理的概念建模为对象。
+    </li>
+    <li>
+        <b>与其他概念的联系</b>。将与某些其他概念严格相关且从不单独使用而总是通过对象使用的概念建模为该对象的属性。
+    </li>
+    <li>
+        <b>来自关系的需求</b>。如果由于某个原因，必须从两个方向上关联单元，则重新检查该单元以查看它是否应当是单独的对象。两个对象不能关联一个属性类型的相同实例。
+    </li>
+    <li>
+        <b>发生频率。</b>如果一个单元仅在用例期间存在，则不要将它建模为对象。 而是将它建模为执行所讨论行为的对象的一个属性，或只是在受影响的对象的描述中提到它。
+    </li>
+    <li>
+        <b>复杂性。</b>如果对象由于其属性而变得过于复杂，可以将其中的一些属性抽取到单独的对象中。然而，请适度执行此操作，以防具有过多的对象。另一方面，各单元可以非常直截了当。例如，归类为属性的单元是那些（1）足够简单，从而可以直接受实施语言中的基本类型的支持，例如
+        C++ 中的整数；（2）足够简单，从而可以通过使用实施环境的独立于应用程序的组件来实施，例如 C++ 和 Smalltalk-80 中的<b>字符串</b>。
+    </li>
+</ul>
+<p>
+    对不同的系统，可能以不同的方式对某概念建模。在一个系统中，某个概念可能非常重要，应将它建模为对象。在另一个系统中，它可能只是次要的，应将它建模为对象的属性。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    例如，对于航空公司，将开发一套支持出发地的系统。
+</p>
+<p class="picturecenter" align="center">
+    <img height="75" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_clas6.gif" width="146" />
+</p>
+<p class="picturetext">
+    支持出发地的系统。假设机场的工作人员需要支持出发地的系统。对于每个出发地，您必须定义出发时间、航线和目的地。 可以将此内容建模为类<b>出发地</b>的对象，该类具有属性<b>出发时间</b>、<b>航线</b>和<b>目的地</b>。
+</p>
+<p class="example">
+    但如果是为旅行社开发该系统，则情况可能会有所不同。
+</p>
+<p class="picturecenter" align="center">
+    <img height="65" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_clas7.gif" width="391" />
+</p>
+<p class="picturetext">
+    航班目的地组成它自己的对象<b>目的地</b>。
+</p>
+<p class="example">
+    当然仍需要出发时间、航线和目的地。但还有其他需求，因为旅行社感兴趣的是对特定目的地查找出发地。因此必须为<b>目的地</b>创建一个单独的对象。当然，<b>出发地</b>和<b>目的地</b>的对象必须彼此知道对方，这可以通过这两个类之间的关联来实现。
+</p>
+<p>
+    某些概念的重要性的观点对确定应在类中定义哪些属性也是有效的。如果类<b>汽车</b>的对象是机动车登记系统的一部分，与该类的对象是汽车制造系统的一部分这种情况比较而言，无疑将定义不同的属性。
+</p>
+<p>
+    最后，将什么表示为对象以及将什么表示为属性的规则不是绝对的。
+    理论上，可将任何事物建模为对象，但这是很麻烦的。一个属于经验之谈的简单规则是将对象看成在某些场合以与其他对象无关的方式来使用的某种东西。另外，不需要使用属性对每个对象特性建模，仅对理解对象所需的特性建模即可。不应对过分特定于实施的详细信息建模，最好由实施者处理它们。
+</p>
+<h4>
+    <a id="XE_attribute__class,_definition_for" name="XE_attribute__class,_definition_for"></a><a id="Class_Attributes" name="Class_Attributes"></a>类属性
+</h4>
+<p>
+    一个属性几乎总是表示对象特性。属性还可以表示类特性，在此情况中它是一个<b>类属性</b>。可以在 UML 中通过规定属性类型范围对此建模。
+</p>
+<h4>
+    <a id="XE_external_units__modeling_with_attributes" name="XE_external_units__modeling_with_attributes" class="index" key="外部单元（external units）" text="使用属性进行建模"></a><a id="Modeling_External" name="Modeling_External"></a><a id="XE_attribute__modeling_external_units_with" name="XE_attribute__modeling_external_units_with">使用属性对外部单元建模</a>
+</h4>
+<p>
+    对象可以封装某些无须对象执行任何行为就可更改其值的内容。这些内容可能实际上是外部单元，但并没有被建模为一个参与者。例如，可能已选择系统边界，以便某种形式的传感器设备放置在它们中间。然后可以将传感器封装在对象中，以便它评估的值组成属性。然后该值可以连续地或以一定时间间隔更改，而系统中的任何其他对象不会影响该对象。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    可以将温度计建模为一个对象；该对象具有表示温度的属性，并且作为对环境温度更改的响应更改值。其他对象可能通过对温度计对象执行操作，请求当前温度。
+</p>
+<p class="picturecenter" align="center">
+    <img height="45" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_clas8.gif" width="153" />
+</p>
+<p class="picturetext">
+    <b>温度计</b>对象中属性<b>温度</b>的值自发更改。
+</p>
+<p>
+    仍可以对封装值进行建模，它按照一般属性的方式进行变化，但您需要在对象的类中说明其变化是<b>自发</b>的。
+</p>
+<h4>
+    <a id="Attribute Visibility" name="Attribute Visibility">属性可视性</a>
+</h4>
+<p>
+    属性可视性假设以下值之一：
+</p>
+<ul>
+    <li>
+        <b>公共</b>：在包含该类的包的内外都可以看到该属性。
+    </li>
+    <li>
+        <b>受保护</b>：该属性仅对类自身、其子类或类的<b>友元</b>可见（取决于语言）
+    </li>
+    <li>
+        <b>私有</b>：该属性仅对类自身及类的<b>友元</b>可见
+    </li>
+    <li>
+        <b>实施</b>：该属性仅对类自身可见。
+    </li>
+</ul>
+<p>
+    应<b>尽量少</b>地使用<b>公共</b>可视性，仅在另一个类可以直接访问该属性时使用。定义公共可视性实际上是将属性可视性定义为受保护、私有或实施的快速表示法，具有相关联的公共操作来获取和设置属性值。可以将公共属性可视性可用作对代码生成器的声明：应自动生成这些
+    get/set 操作，在类定义期间可省时。
+</p>
+<p>
+    <b>受保护</b>可视性应作为<b>缺省值</b>；它保护该属性不被外部类使用，这样防止行为的耦合和封装松散。
+</p>
+<p>
+    <b>私有</b>可视性应在为防止<b>子类</b>继承该属性的情况下使用。这提供了将子类从超类分离的方法，并减少了删除或排除未使用的继承属性的必要。
+</p>
+<p>
+    <b>实施</b>可视性<b>最具限制性</b>；在只有类自身可以使用该属性的情况下，使用这种可视性。它是<b>“私有”可视性的变体</b>，适用于大多数情况。
+</p>
+<h3>
+    <a id="Internal Structure" name="Internal Structure">内部结构</a>
+</h3>
+<p>
+    某些类可能表示复杂抽象并具有复杂的结构。在对类进行建模时，设计人员可能希望表示其内部参与元素以及它们的关系，以确保实施者将相应地实施在该类内部发生的协作。
+</p>
+<p>
+    在 UML 2.0 中，类被定义为<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/structured_class_4BB99B12.html" guid="_yW3E4NnmEdmO6L4XMImrsA">结构化类</a>，能够拥有内部结构和端口。然后，可以将类分解为已连接的部件的集合，之后还可以进一步分解这些部件。可以通过强制来自外部的通信通过遵守已声明接口的端口来封装类。
+</p>
+<p>
+    因此，除了使用类图来表示类关系（例如关联、组装和聚集）以及属性之外，设计者可能希望使用组合结构图。该图为设计者提供了一种机制，以显示内部部件的实例是如何在给定类的实例中扮演它们的角色的。
+</p>
+<p>
+    关于本主题的更多信息以及复合结构图的示例，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/structured_class_FF8DB16F.html" guid="1.1994826813129747E-304">概念：结构化类</a>。
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational TestManager 和 Rational TestFactory 分析测试故障</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="evaluate_test_execution_result" name="uma.name">
+<meta content="使用 Rational TestManager 和 Rational TestFactory 分析测试故障" name="uma.presentationName">
+<meta content="Tool:rup_test_factory:Rational TestFactory" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestFactory" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{FBA5098E-2CA8-483D-814D-DE3E876426B1}", "{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{037E5AB9-7DC1-4CDB-8395-A2647F5A7F24}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational TestManager 和 Rational TestFactory 分析测试故障</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational TestManager、Rational Robot 和 Rational TestFactory 分析发现了错误的自动生成测试脚本。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_test_factory_3EDA2115.html" guid="{FBA5098E-2CA8-483D-814D-DE3E876426B1}">Rational TestFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/analyze_runtime_behavior_B2DD7652.html" guid="{5131A5BB-5B95-499E-A68B-788A2F0957C3}">分析运行时行为</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/determine_test_results_630C9EC9.html" guid="{74E51E86-ECAB-4A61-9A88-FD358EE6F2B1}">确定测试结果</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    在运行 98/2000/NT 4.0 时此工具向导可用。
+</p>
+<p>
+    要使用 Rational TestFactory、Rational Robot 和 Rational TestManager 分析自动生成的测试脚本，请执行以下操作中的一项或全部：
+</p>
+<ul>
+    <li>
+        <a href="#Analyze defect script">分析发现了缺陷的测试脚本</a>
+    </li>
+    <li>
+        <a href="#Analyze UAW script">分析发现了意外活动窗口的测试脚本</a>
+    </li>
+</ul>
+<h3>
+    1.&nbsp; <a id="Analyze defect script" name="Analyze defect script">分析发现了缺陷的测试脚本</a>
+</h3>
+<p>
+    正如<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/generate_test_scripts_71EF254E.html" guid="{19F8AE86-E40A-42F5-8B81-673C306F5C35}">工具向导：使用 Rational Test Factory 实施测试脚本的生成</a>中所述，Pilot 是可自动生成测试脚本的一种
+    Rational TestFactory 工具。对于运行期间遇到的每个缺陷，Pilot 都将生成一个“缺陷脚本”，其中包含导致缺陷发生的测试脚本语句。
+</p>
+<p>
+    Pilot 在运行期间找到缺陷时，发现缺陷的测试脚本位于 run 文件夹下单独的“Defects Found”子文件夹中。可使用 Rational TestManager 查看发现了缺陷的测试脚本的运行日志。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;请参阅 Rational TestFactory 联机帮助中的
+    <i>View the log for a script run</i> 主题。
+</p>
+<h3>
+    2.&nbsp; <a id="Analyze UAW script" name="Analyze UAW script">分析发现了意外活动窗口的测试脚本&nbsp;</a>
+</h3>
+<p>
+    在测试脚本生成过程中，Pilot 可能遇到“意外活动窗口”（UAW），该窗口反映应用程序图中的 UI 对象与被测试应用程序（AUT）中的控件之间存在不一致。以下两种情况之一可能导致 Pilot 遇到意外活动窗口：
+</p>
+<ul>
+    <li>
+        AUT 包含一个在应用程序图中没有对应的 UI 对象的窗口。这种情况的一个典型例子是映射过程中未发现的消息窗口。
+    </li>
+    <li>
+        应用程序图中的 UI 对象代表 AUT 中不再包含的一个窗口。
+    </li>
+</ul>
+<p>
+    每当遇到了意外活动窗口时，Pilot 都将生成一个“UAW 脚本”并将其放入 Pilot 的 run 文件夹中。可在 Rational Robot 中回放 UAW 脚本，然后使用 Robot 和 Rational TestManager
+    确定意外活动窗口的原因。在 Rational TestFactory 中解决了问题原因之后，后续 Pilot 运行将不会遇到意外活动窗口。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp; 请参考 Rational TestFactory
+    联机帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Find the cause of an unexpected active window</i>
+    </li>
+    <li>
+        <i>Resolve an unexpected active window</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

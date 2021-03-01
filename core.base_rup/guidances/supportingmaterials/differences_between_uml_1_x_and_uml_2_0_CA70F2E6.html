@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>支持材料: UML 1.x 和 UML 2.0 之间的区别</title>
+<meta content="SupportingMaterial" name="uma.type">
+<meta content="differences_between_uml_1_x_and_uml_2_0" name="uma.name">
+<meta content="UML 1.x 和 UML 2.0 之间的区别" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "1.9677894927771484E-305", "4.792914878943572E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "1.9677894927771484E-305", "4.792914878943572E-306"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "__yoNMDIcEdqDs_9ORT1Rig", "4.792914878943572E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="4.792914878943572E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">UML 1.x 和 UML 2.0 之间的区别</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/supportingmaterial.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本页描述 UML 1.x 和 UML 2.0 之间与 RUP 上下文相关的一些区别</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_UML_2_._0__whats_new" name="XE_UML_2_._0__whats_new" class="index" key="UML 2 . 0" text="新功能"></a> 
+<h2 align="justify">
+    主题
+</h2>
+<ul>
+    <li>
+        <a href="#overview">概述</a>
+    </li>
+    <li>
+        <a href="#activitydiagram">活动图</a>
+    </li>
+    <li>
+        <a href="#communicationdiagram">通信图</a>
+    </li>
+    <li>
+        <a href="#component">组件</a>
+    </li>
+    <li>
+        <a href="#compositestructurediagram">组合结构图</a>
+    </li>
+    <li>
+        <a href="#sequencediagram">时序图</a>
+    </li>
+</ul>
+<h2>
+    <a id="overview" name="overview">概述</a>
+</h2>
+<p align="justify">
+    本页描述 UML 1.x 和 UML 2.0 之间与 RUP 上下文相关的一些区别 其中并不会涉及全部 UML（[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML04" guid="7.755968586980351E-308">UML04</a>]）基础结构和超结构规范，而只会概述相关的 UML 功能。另外，请参阅 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#RUM05" guid="7.755968586980351E-308">RUM05</a>] 和 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#ERI04" guid="7.755968586980351E-308">ERI04</a>] 获得更多信息。
+</p>
+<p align="justify">
+    请注意“UML 1.x”指 UML 1.0 到 UML 1.5 的版本。
+</p>
+<p align="justify">
+    UML 2.0 功能集中图示方面最重大变化在行为图中，特别是活动图和交互图集（请参阅下面的<a href="#activitydiagram">活动图</a>、<a href="#sequencediagram">时序图</a>和<a href="#communicationdiagram">通信图</a>）。
+</p>
+<p align="justify">
+    “组合结构图”和“结构类”也是 UML 2.0 的新功能（请参阅下面的<a href="#compositestructurediagram">组合结构图</a>）。
+</p>
+<h2>
+    <a id="activitydiagram" name="activitydiagram">活动图</a>
+</h2>
+<h3>
+    <strong>简介</strong>
+</h3>
+<p>
+    活动的建模在 UML 2.0 中已经经历了完整的修订。也许可以这么说，（至少对偶然使用）效果和外观可能非常相似，这取决于 UML 1.5（以及更早版本）中建模的形式，根据 UML 1.x 规则构造的模型的严格解释和执行结果可能与 UML
+    2.0 中不同。因此，我们提醒建模人员注意，即使 UML 1.x 活动模型不作更改似乎对 UML 2.0 也可以接受，但它可能无法同样执行 － 特别是在更复杂的模型涉及并行的情况下。有关更多信息，请参考 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML04" guid="7.755968586980351E-308">UML04</a>]。
+</p>
+<p>
+    如 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML04" guid="7.755968586980351E-308">UML04</a>]
+    所定义，<em>活动</em>（将显示在<em>活动图</em>中）是行为的指定，也就是对下级单元（它的每个元素就是<em>动作</em>）的协调排序。我们可能已经把 UML 1.x
+    活动图中的单个可执行步骤称为活动或活动状态，或者正确地称为操作状态：现在，UML 2.0 活动中的这些步骤被称为操作 － 这些操作在活动中不再进一步分解。状态的含义在 UML 2.0 中已经消失，因为活动不再是一种状态机（在 UML
+    1.x 中为状态机）。在 UML 2.0 中，活动由<em>节点</em>组成（操作就是一种节点）；其他的是<em>控制</em>节点和<em>对象</em>节点，在下面有进一步的描述。
+</p>
+<p>
+    <strong>流程语义</strong>
+</p>
+<p>
+    活动现在有类似于 Petri Net
+    的语义，基于<em>标记流程</em>，其中一个节点的执行通过定向的连接（称为流程）影响另一个节点的执行。标记包含对象或控制点，在这些连接的节点间流动。节点可以在其输入标记上指定的条件得到满足时开始执行，完成执行后，它在其输出流程上提供标记，使下游节点可以开始执行。连接节点的流程进一步改进到控制和数据或对象流程中；而且，和您可能期望的一样，控制标记在控制流程间移动，数据或对象标记在对象流程间传送。
+</p>
+<p>
+    这与 UML 1.x 中的情况不同，在 UML 1.x 中，节点是互相之间有转换的状态（或假状态），这限制了流程的建模。
+</p>
+<p>
+    <strong>并行建模</strong>
+</p>
+<p>
+    UML 2.0 的建模功能允许不受限制的并行性：在 UML 1.x 中，整个状态机（活动）执行“运行到完成”步骤，而 UML 2.0
+    功能在处于最完整的形式时允许一个活动的多次调用，该活动将由单个执行进行处理，其中多个标记流在活动的各个节点和流程连接器间移动。这就又给建模人员增加了一个负担：要注意竞争状态和交互。
+    另外，请参阅下面的<strong>语义差别</strong>部分，获得关于对标记流程语义的并行建模带来什么影响的另一个示例。
+</p>
+<h3>
+    <strong>符号表示法</strong>
+</h3>
+<p>
+    <strong>操作和控制节点</strong>
+</p>
+<p>
+    下图说明了许多 UML 2.0 元素，用 UML 2.0 常用的方法表示，并且在左上角有一个矩形框架，而在象限中又有名称。将该图与它下面的 UML 1.x 版本进行比较。它们的外观相似（允许使用不同的方向和颜色约定 －
+    这对语义没有重要影响），并且该模型在 UML 1.x 和 UML 2.0 中的执行结果相同。请注意，控制节点 － 决策、合并、派生、连接、初始和最终 － 看上去和 UML 1.x 中同等的节点相象，控制流程用带箭头的线条显示，这样的线条和
+    UML 1.x 中的转换箭头外观相似。
+</p>
+<p align="center">
+    <img height="404" alt="带有以下不同节点类型的活动图：初始、操作、决策、派生、连接、合并和活动终点。它还显示了控制流程。" src="./../../../core.base_rup/guidances/supportingmaterials/resources/activity20.gif" width="630" />
+</p>
+<p class="picturetext">
+    UML 2.0 示例活动图
+</p>
+<p align="center">
+    <img height="505" alt="此图显示同等的 UML 1.x 版本。" src="./../../../core.base_rup/guidances/supportingmaterials/resources/activity1x.gif" width="474" />
+</p>
+<p class="picturetext">
+    UML 1.x 示例活动图
+</p>
+<p>
+    UML 2.0 有另一个称为<em>流程终点</em>的控制节点（显示在取自 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html#UML04" guid="7.755968586980351E-308">UML04</a>]
+    的下面一个图中），该节点用作“活动终点”节点的替代节点来终止某个流程。它是必需的，因为在 UML 2.0 中，当控制达到“活动终点”节点的任何实例时，整个活动（包括所有流程）会被终止。“流程终点”只是终止它所连接的流程。这在 UML
+    1.5 中不是问题，因为存在着“运行到完成”语义；但因为 UML 2.0 中并行性不受限制，您可能不希望停止所有流程和造成所有标记被破坏。
+</p>
+<p align="center">
+    <img height="123" alt="该图说明“流程终点”控制节点。" src="./../../../core.base_rup/guidances/supportingmaterials/resources/flowfinal.gif" width="314" />
+</p>
+<p class="picturetext">
+    流程终点控制节点
+</p>
+<p>
+    <strong>对象节点</strong>
+</p>
+<p>
+    UML 2.0
+    活动建模还支持对象节点。对象节点是一种活动节点，它表示可能在特定的活动点提供特定分类器的（可能处于特定状态的）实例（例如，作为操作的输出或输入）。对象节点充当容器，特定类型的对象（可能处于特定状态）可能会流入或流出这些容器。已经为 UML
+    2.0 中的对象节点引入了新的表示法（称为 <em>pin</em>）。pin 代表操作的输入或输出，绘制为连接到操作矩形的小矩形，如下所示。
+</p>
+<p align="center">
+    <img height="114" alt="此图显示对象节点的 pin 符号表示法，其中的输出节点由对象流程连接到输入 pin。" src="./../../../core.base_rup/guidances/supportingmaterials/resources/pins.gif" width="262" />
+</p>
+<p class="picturetext" align="center">
+    Pin 表示法
+</p>
+<p>
+    箭头代表对象流程。这些是实线，与 UML 1.x 中用于向对象流状态的转换和从对象流状态的转换的虚线不同。当操作上的输出 pin 与所连接操作上的输入 pin 的名称相同时，输出和输入 pin 可能会被合并以提供一个独立的
+    pin。这又使它看上去与 UML 1.x 中的对象流程类似。
+</p>
+<p align="center">
+    <img height="127" alt="此图显示另一种独立 pin 符号表示法。" src="./../../../core.base_rup/guidances/supportingmaterials/resources/standalonepin.gif" width="267" />
+</p>
+<p class="picturetext" align="center">
+    独立 pin 表示法
+</p>
+<p>
+    <strong>结构化的活动节点</strong>
+</p>
+<p>
+    结构化的活动节点是一个可执行的活动节点，可能拥有到下级活动节点的扩展。 下级节点仅属于一个结构化的活动节点，但是它们可以嵌套。它可能连接了控制流并连接了
+    pin。结构化的活动节点描绘为虚线、圆角的矩形，内含它的节点和流程，而在顶部显示关键字 &lt;&lt;结构化&gt;&gt;。
+</p>
+<p>
+    <strong>活动分区</strong>
+</p>
+<p>
+    <em>活动分区</em>是将活动的节点和流程根据一些共享属性进行分组的方式。在 UML 1.x 中，泳道（被认为是分区）的概念在活动图中用来根据一些标准将操作分组 － 例如，在业务建模中，按执行组织进行分组。UML 2.0
+    将这种分区功能扩展到活动图的多个维度，并提供了附加的符号表示法，这样（举例来说）单个操作就可以用它们所属分区的名称进行标注。下图显示根据 UML 2.0 将出现的多维泳道的示例，其中，操作是根据位置和职责进行分组的。
+</p>
+<p align="center">
+    <img height="328" alt="UML 2.0 风格的活动分区图示，其中有两个维度泳道。" src="./../../../core.base_rup/guidances/supportingmaterials/resources/partitions.gif" width="627" />
+</p>
+<p class="picturetext">
+    使用二维泳道的活动分区示例
+</p>
+<p>
+    <strong>语义差别</strong>
+</p>
+<p>
+    UML 2.0 活动模型的标记流程语义以及不受限的并行性要求建模人员熟悉 UML 1.x，在构造新模型或转换现有模型时小心行事，以确保能得到期望的执行结果。例如，在上面的 processPassenger
+    示例中，登机的乘客可能是经常乘飞机旅行的，在这种情况下，代理人就需要向乘客奖励频繁乘坐公里数，如下面在 UML 1.x 模型片段中所显示的那样。
+</p>
+<p align="center">
+    <img height="256" alt="此图显示带有受保护的并发转换的 UML 1.x 模型片段。" src="./../../../core.base_rup/guidances/supportingmaterials/resources/concurguard1.gif" width="333" />
+</p>
+<p class="picturetext">
+    使用受保护的并发转换
+</p>
+<p>
+    将防护装置放在可选的并发转换上意味着：在 UML 1.x 中，转换永远也不会开始，而行为就如同转换并没有显示在模型中一样；相应地，当另外两个转换完成时，执行在连接后继续。在 UML 2.0
+    中，如果乘客不是频繁乘坐飞机旅行的人，那么就不会有标记达到这个流程上的连接，而且模型会停止，因为连接在其所有流程上都等待标记的出现，它才能继续下去。模型应该构造成如下所示的样子，条件按照与行李处理流程相同的方式处理。只要您能确保没有下游连接依赖于并发流程，就可以把防护装置直接放在并发流程上。
+</p>
+<p align="center">
+    <img height="307" alt="这是上图的 UML 2.0 版本，使用的是决策和合并节点，而不是受保护的并发流程。" src="./../../../core.base_rup/guidances/supportingmaterials/resources/concurguard2.gif" width="333" />
+</p>
+<p class="picturetext">
+    使用决策和合并节点，而不是受保护的并发流程
+</p>
+<h2>
+    <a id="communicationdiagram" name="communicationdiagram">通信图</a>
+</h2>
+<p>
+    UML 1.x 中的协作图在 UML 2.0 中已重命名为<em>通信图</em>。与以前的版本并没有语义上的区别。通信图是基于以前的协作图的，它仍然是一种交互图。
+</p>
+<h3>
+    <strong>符号表示法</strong>
+</h3>
+<p>
+    通信图重点强调生命线之间的交互。它显示为这样的图：图的节点是一些矩形，这些矩形代表结构化的类的各个部分或协作的各个角色。围绕着图的是矩形框架，名称在左上角的象限中，这与以前的 UML 版本相比是符号表示法上的变化。
+</p>
+<ul>
+    <li style="LIST-STYLE-TYPE: none">
+        节点与交互中的生命线相对应。
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        各部分之间的线条代表形成通信路径的连接器。
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        多重性可能显示在连接器上。
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        各部分之间的消息通过带标注的箭头在连接器线条附近显示。
+    </li>
+</ul>通信图用于对代表操作或用例的实施的交互进行建模。 
+<p>
+    通信图的示例：
+</p>
+<p align="center">
+    <img alt="订购系统的通信图示例" src="./../../../core.base_rup/guidances/supportingmaterials/resources/communicdiag.jpg" />
+</p>
+<p class="picturetext">
+    订购系统的通信图示例
+</p>
+<h2>
+    <a id="component" name="component">组件</a>
+</h2>
+<p>
+    在 UML 2.0 中，组件用符号表示为不带两个突出矩形的类符号，如 UML 1.4 中所定义。取而代之的是 &lt;&lt;组件&gt;&gt; 构造型。也可以选择在组件符号右上角仍使用类似于 UML 1.4 图标的组件图标。
+</p>
+<p>
+    UML 2.0 将组件定义为结构化的类，意味着在组件内部结构（部件）中元素之间的协作可以进行建模，来更好地描述它的行为。部件之间通过连接器连接。 端口可以用于通过组件被提供的和被要求的接口，来提高组件的封装级别。有关更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">概念：组件</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/structured_class_FF8DB16F.html" guid="1.1994826813129747E-304">概念：结构化类</a>。
+</p>
+<p>
+    较早版本的 UML 定义了称为<em>子系统</em>的特殊建模元素，该元素是作为具有接口的包来建模的。组件还用于在物理体系结构中构造模型。在 UML 2.0
+    中，组件被广义使用，在模型的所有部件中都用到了。这样，就没有必要再让特别的元素对子系统进行建模了。在 UML 1.x 中用于子系统实现和子系统规范的独立象限在 UML 2.0 中已经成为了应用于组件的独立的构造型（分别为
+    &lt;&lt;realization&gt;&gt; 和 &lt;&lt;specification&gt;&gt;）。另一个新的组件构造型是 &lt;&lt;subsystem&gt;&gt;，指示用来为大型组件建模。
+</p>
+<p>
+    RUP 建议使用组件对子系统建模（有关更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_subsystem_B26FD609.html" guid="1.2314266786534317E-305">指南：设计子系统</a>）。
+</p>
+<h2>
+    <a id="compositestructurediagram" name="compositestructurediagram">组合结构图</a>
+</h2>
+<p>
+    体系结构在其元素之间可以有特定的协作，而在设计时不一定要知道部件和连接器。典型的类图（以及其他静态图）将不足以清楚地代表适用于那些元素的角色、职责、关系和规则。
+</p>
+<p>
+    为了解决这些问题，UML 2.0 已经添加了组合结构图。它可以描绘结构化类（例如组件或类）的内部结构，包括结构化类与系统其余部分的交互点。它显示联合执行包含结构化类的行为的部件配置。
+</p>
+<p>
+    组合结构图用于画出结构化类的内部内容（有关组合结构图的详细信息以及示例，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/structured_class_FF8DB16F.html" guid="1.1994826813129747E-304">概念：结构化类</a>）。
+</p>
+<h2>
+    <a id="sequencediagram" name="sequencediagram">时序图</a>
+</h2>
+<p>
+    UML 2.0 有几个新的时序图功能：
+</p>
+<ul>
+    <li style="LIST-STYLE-TYPE: none">
+        片段对行为如何在时序图中发生提供了更清晰的语义。组合片段封装时序图的各部分，其中可以对独立的流程建模，显示条件如何产生其他的执行路径。<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        交互的发生支持将交互分解成可重复使用的组块。这是在数个其他交互之间共享交互的各个部分的有效方法。<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        在 UML 1.x 中，一个可能的表示循环的方法是使用“注释”中撰写的循环条件。“注释”被附加到当循环条件为真时将执行的一条或一组消息中。在 UML 2.0 中，有表示循环的特定方法。<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        在 UML 2.0 中，时序图可以显示对象如何创建以及如何销毁。<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        “发生的执行”显示对象在某个时间点（接收到消息时）执行的控制焦点。
+    </li>
+</ul>
+<p>
+    有了代表片段、交互发生和循环的新功能，时序图就可以两种形式使用：
+</p>
+<ul>
+    <li style="LIST-STYLE-TYPE: none">
+        实例形式：详细描述一个特定的场景，记录一个可能的交互，没有条件、分支或循环。这种形式用于代表一个用例场景。同一个用例的不同场景在不同的时序图中表示。支持 UML 1.x 语义的建模工具只允许这种形式的表示方法。<br />
+        <br />
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        一般形式：描述场景中所有可能的其他交互，利用新的 UML 2.0 功能，如条件、分支和循环。这种形式可用于在有意义的情况下代表独特时序图中同一用例的数个场景。
+    </li>
+</ul>
+<p>
+    下图显示对不同场景进行建模的时序图的示例。<strong>其他</strong>片段显示两个可能的其他消息排序（取决于条件是否得到满足）：
+</p>
+<p align="center">
+    <img alt="显示分支、循环和条件的时序图" src="./../../../core.base_rup/guidances/supportingmaterials/resources/seqdiag.jpg" />
+</p>
+<p class="picturetext">
+    示例：显示分支、循环和条件的时序图
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

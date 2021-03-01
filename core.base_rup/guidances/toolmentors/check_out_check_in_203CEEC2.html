@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational ClearCase 检出和检入配置项</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="check_out_check_in" name="uma.name">
+<meta content="使用 Rational ClearCase 检出和检入配置项" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{3D4CC908-5E3C-48C5-99F6-D4137834D9A4}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{3D4CC908-5E3C-48C5-99F6-D4137834D9A4}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{3D4CC908-5E3C-48C5-99F6-D4137834D9A4}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{3D4CC908-5E3C-48C5-99F6-D4137834D9A4}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{3D4CC908-5E3C-48C5-99F6-D4137834D9A4}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{3D4CC908-5E3C-48C5-99F6-D4137834D9A4}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{3D4CC908-5E3C-48C5-99F6-D4137834D9A4}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{3D4CC908-5E3C-48C5-99F6-D4137834D9A4}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational ClearCase 检出和检入配置项</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本工具向导描述如何创建新版本的配置项（检出）以及如何使得新版本的配置项在配置管理数据库中持久存在（检入）。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/setup_cm_environment_78ABEDF9.html" guid="{FC91D0C9-759E-4D3D-86D8-22D7B26AA0F6}">建立配置管理（CM）环境</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    本工具向导描述通过基本 ClearCase 模型进行检入和检出的用途，它适用于运行 Microsoft Windows 的情况。
+</p>
+<h4>
+    <a id="ToolSteps" name="ToolSteps">工具步骤</a>
+</h4>
+<p>
+    要使用 ClearCase 检出和检入配置项：
+</p>
+<ol>
+    <li>
+        <a href="#1">检出要更改的文件</a>
+    </li>
+    <li>
+        <a href="#2">作出更改并执行单元测试以验证更改</a>
+    </li>
+    <li>
+        <a href="#3">检入更改</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp;<a id="1" name="1">检出想要更改的文件</a> <a href="#ToolSteps"><img height="20" alt="至“工具步骤”"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<ul>
+    <li>
+        浏览至 ClearCase Explorer。从 Windows 工具栏，单击<b>开始 &gt; 程序 &gt; Rational Software &gt; Rational ClearCase &gt; ClearCase
+        Explorer</b>。
+    </li>
+    <li>
+        在 ClearCase Explorer 中，右键单击要检出的一项或多项，并从 ClearCase 弹出菜单中选择<b>检出</b>。
+    </li>
+    <li>
+        在<b>检出</b>对话框中输入注释，并单击<b>确定</b>。
+    </li>
+</ul>
+<p>
+    &nbsp;<img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;有关检出文件的更多信息，请参阅 ClearCase 手册
+    <i>Developing Software</i> 或 <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> ClearCase
+    联机帮助。
+</p>
+<h3>
+    2.&nbsp;<a id="2" name="2">作出更改并执行单元测试以验证更改</a> <a href="#ToolSteps"><img height="20" alt="至“工具步骤”"     src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    测试您对已检出的文件或目录的私有副本作出的更改。一旦工作已检入，则可以被其他团队成员访问。
+</p>
+<h3>
+    3.&nbsp;<a id="3" name="3">检入更改</a> <a href="#ToolSteps"><img height="20" alt="至“工具步骤”" src="./../../../core.base_rup/resources/top.gif"     width="26" border="0" /></a>
+</h3>
+<ul>
+    <li>
+        浏览至 ClearCase Explorer。&nbsp;
+    </li>
+    <li>
+        在 ClearCase Explorer 中，右键单击要检入的一项或多项，并从 ClearCase 弹出菜单中选择<b>检入</b>。
+    </li>
+    <li>
+        在<b>检入</b>对话框中输入注释，并单击<b>确定</b>。
+    </li>
+</ul>
+<p>
+    &nbsp;<img height="16" alt="手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" />&nbsp;有关检入文件的更多信息，请参阅 ClearCase 手册
+    <i>Developing Software</i> 或&nbsp;<img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;
+    ClearCase 联机帮助。
+</p><br />
+<br />
+<br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

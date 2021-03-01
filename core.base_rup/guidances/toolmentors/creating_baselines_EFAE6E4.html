@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational ClearCase 创建基线</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="creating_baselines" name="uma.name">
+<meta content="使用 Rational ClearCase 创建基线" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{2BF31AC7-E278-4558-B8D2-83C5C646B7E9}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational ClearCase 创建基线</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本工具向导描述如何通过适当的设置基线的做法来确保项目资产已得到保护并可按需要重新创建。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    下图说明管理 UCM 项目的工作流程。此工具向导中讨论了加阴影的区域。
+</p>
+<p>
+    <img height="103" alt="UCM 工作流程图" src="./../../../core.base_rup/guidances/toolmentors/resources/wflow_mkbl.gif" width="463" border="0" />
+</p>
+<p>
+    在 Rational ClearCase UCM 中，基线是一种通常代表组件的稳定配置的对象。基线为组件中的每个元素确定多个活动和一个版本，实际上充当组件的版本。
+</p>
+<p>
+    随着开发人员将工作交付到集成流，项目经理为项目的集成生成新的基线，或生成合并更改的共享工作空间。然后开发人员可以重新定基为新的基线，并始终可以获悉项目中的最新更改。
+</p>
+<p>
+    此工具向导在运行 Microsoft Windows 时适用。
+</p>
+<h4>
+    术语
+</h4>
+<h5>
+    基线类型
+</h5>
+<blockquote>
+    <p>
+        <b><i>递增基线</i></b>是由 ClearCase 创建的基线，创建方法是记录上一个完全基线和自上一个完全基线创建以来更改的那些版本。
+    </p>
+    <p>
+        <b><i>完全基线</i></b>也是由 ClearCase 创建的基线，创建方法是记录组件的根目录下的所有版本。通常，创建递增基线耗时较短。但是，ClearCase 查找完全基线的内容耗时较短。
+    </p>
+</blockquote>
+<h3>
+    <a id="ToolSteps" name="ToolSteps">工具步骤</a>
+</h3>
+<p>
+    可遵循以下这些步骤来创建基线：
+</p>
+<ul>
+    <li>
+        <a href="#LockProjectIntegrationStream">锁定项目的集成流</a>
+    </li>
+    <li>
+        <a href="#StartMakeBaseline">启动“创建基线”对话框</a>
+    </li>
+    <li>
+        <a href="#DescribeTheBaselineInformation">指定基线的描述性信息</a>
+    </li>
+    <li>
+        <a href="#UnlockProjectIntegrationStream">解锁集成流</a>
+    </li>
+</ul>
+<h3>
+    1.&nbsp;<a id="LockProjectIntegrationStream" name="LockProjectIntegrationStream">锁定项目的集成流</a> <a href="#ToolSteps"><img     height="20" alt="至“工具步骤”" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    在集成流被锁定时，无法向其交付新的工作，从而确保了一个可从中创建基线的稳定配置。
+</p>
+<ol>
+    <li>
+        从 Windows 任务栏，选择<b>开始 &gt; 程序 &gt; Rational Software &gt; Rational ClearCase &gt; Project Explorer</b>。
+    </li>
+    <li>
+        从 Project Explorer 中，找到并选择项目的集成流。
+    </li>
+    <li>
+        单击<b>文件 &gt; 属性</b>以显示集成流的属性表。
+    </li>
+    <li>
+        单击<b>锁定</b>选项卡。
+    </li>
+    <li>
+        单击<b>已锁定</b>然后单击<b>确定</b>。&nbsp;&nbsp;
+    </li>
+</ol>
+<h3>
+    2.&nbsp;<a id="StartMakeBaseline" name="StartMakeBaseline">启动“创建基线”对话框</a> <a href="#ToolSteps"><img height="20"     alt="至“工具步骤”" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<ol>
+    <li>
+        从 Project Explorer 中，找到并选择项目的集成流。
+    </li>
+    <li>
+        单击<b>工具 &gt; 创建基线</b>。出现“创建基线”对话框。
+    </li>
+</ol>
+<h3>
+    3.&nbsp;<a id="DescribeTheBaselineInformation" name="DescribeTheBaselineInformation">指定基线的描述性信息</a> <a href="#ToolSteps"><img height="20" alt="至“工具步骤”" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<p>
+    该描述性信息包括基线的名称、要创建的基线的类型、要为它们创建基线的组件、要使用的视图和流信息。
+</p>
+<ol>
+    <li>
+        在<b>基线名称</b>框中输入名称。缺省情况下，ClearCase 通过将日期追加到项目名称来命名基线。
+    </li>
+    <li>
+        选择<b>递增</b>或<b>完全</b>作为要创建的基线的类型。
+    </li>
+    <li>
+        通过指定项目的集成视图（即附加到项目的集成流的视图）之一，来为基线选择视图环境。
+    </li>
+    <li>
+        指定您要为之创建基线的组件。ClearCase 自动将唯一标识追加到每条基线，以帮助区分与各个组件相关联的基线。
+    </li>
+</ol>
+<p>
+    &nbsp;<img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;有关更多信息，请参阅 ClearCase 联机帮助中标题为
+    <i>ClearCase Component Tree Browser</i> 的主题。
+</p>
+<h3>
+    4.&nbsp;<a id="UnlockProjectIntegrationStream" name="UnlockProjectIntegrationStream">解锁集成流</a><a href="#ToolSteps"><img     height="20" alt="至“工具步骤”" src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a>
+</h3>
+<ol>
+    <li>
+        从 Project Explorer 中，找到并选择项目的集成流。
+    </li>
+    <li>
+        单击<b>文件 &gt; 属性</b>以显示集成流的属性表。
+    </li>
+    <li>
+        单击<b>锁定</b>选项卡。
+    </li>
+    <li>
+        单击<b>解锁</b>，然后单击<b>确定</b>。
+    </li>
+</ol>
+<p>
+    &nbsp;<img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;有关更多信息，请参阅以下 ClearCase
+    联机帮助主题：
+</p>
+<ul>
+    <li>
+        &nbsp;<i>About baselines</i>
+    </li>
+    <li>
+        &nbsp;<i>Making a baseline</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

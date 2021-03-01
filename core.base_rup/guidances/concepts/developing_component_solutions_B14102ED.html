@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 制定组件解决方案</title>
+<meta content="Concept" name="uma.type">
+<meta content="developing_component_solutions" name="uma.name">
+<meta content="制定组件解决方案" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "1.8262162566452063E-305", "1.8809435842664573E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "1.8262162566452063E-305", "1.8809435842664573E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "1.8809435842664573E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.8809435842664573E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：制定组件解决方案</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../core.base_rup/guidances/concepts/resources/road_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">基于组件的开发是常规应用程序开发的变体。在本指南中，“组件”用于表示独立开发的和可部署的组件。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h6>
+    <b><font size="2">生命周期范围内的活动：</font></b>
+</h6>
+<ol>
+    <li>
+        <a href="#Introduction">简介</a>
+    </li>
+    <li>
+        <a href="#Inception Phase Activities">先启阶段活动</a>
+    </li>
+    <li>
+        <a href="#Elaboration Phase Activities">精化阶段活动</a>
+    </li>
+    <li>
+        <a href="#Construction Phase Activities">构造阶段活动</a>
+    </li>
+    <li>
+        <a href="#Transition Phase Activities">移交阶段活动</a>
+    </li>
+</ol>
+<table>
+    <tbody>
+        <tr>
+            <td width="284" height="102">
+                <h6>
+                    <b><font size="2">其他主题：</font></b>
+                </h6>
+                <ul>
+                    <li>
+                        <b>概念</b> 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/distribution_patterns_5A01CAF5.html" guid="6.137181182978733E-305">分布模式</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>指南</b> 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/concurrency_3E796647.html" guid="1.5676516174458592E-304">并行</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">数据建模</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/analysis_class_7E97273E.html" guid="2.2738948033145062E-306">使用分析类对功能进行划分</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/interface_18EF69A6.html" guid="3.6682388132488183E-305">接口</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/layering_FCCD1BDA.html" guid="4.458864982057142E-306">分层</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/software_architecture_document_F4C93435.html" guid="2.9494785550310917E-305">软件体系结构</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/unit_test_9A3F053.html" guid="9.315724622037552E-305">单元测试组件</a>
+                            </li>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_subsystem_B26FD609.html" guid="1.2314266786534317E-305">使用设计子系统表示组件</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <b>白皮书</b> 
+                        <ul>
+                            <li>
+                                <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/developing_large-scale_systems_with_the_rational_unified_process_7AA2AF65.html" guid="1.768223108034868E-305">开发基于组件的大规模系统</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h1>
+    <font size="+0"><b><small><a id="Introduction" name="Introduction">简介</a></small></b></font>
+</h1>
+<p class="node">
+    基于组件的开发是常规应用程序开发的变体，其中：
+</p>
+<blockquote>
+    <ul>
+        <li>
+            应用程序是<b>分散的可执行组件汇编而成的</b>，这些组件可能由不同的团队<b>相互之间相对独立地开发和部署</b>。
+        </li>
+        <li>
+            应用程序可通过只升级包含它的某些组件来进行<b>较小幅度地升级</b>。
+        </li>
+        <li>
+            组件可由多个应用程序共享，为<b>复用</b>创造机会，而且还建立<b>项目之间的依赖关系</b>。
+        </li>
+        <li>
+            虽然与“基于组件”关系不大，但基于组件的应用程序往往是<b>分布式的</b>。
+        </li>
+    </ul>
+</blockquote>
+<p class="node">
+    在整个页面中，“组件”用于指代这些独立开发的和可部署的组件。 但在 RUP 中的其他情况下，将在<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/component_A2E2B3B1.html" guid="3.524150980437479E-305">概念：组件</a>中所述的更普遍意义上使用术语“组件”，并在必要时做出限定。
+</p>
+<p class="node">
+    下面讨论 Rational Unified Process（RUP）为处理基于组件的开发难题所做的调整。
+</p>
+<h1>
+    <b><small><a id="Inception Phase Activities" name="Inception Phase Activities"><font     size="+0">先启阶段活动</font></a></small></b>
+</h1>
+<p class="node">
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/inception_D506BCB4.html" guid="_vyZOwCVuEdqSZ9OimJ-AzA">先启阶段</a>的基本工作流程是适用的，并具有以下扩展或变体：
+</p>
+<h4>
+    <b>项目管理</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/conceive_new_project_E9B31C9F.html" guid="{76FD7B68-FC91-488D-BBF1-6FE58DBACB87}">活动：构思新项目</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/develop_business_case_F985B634.html" guid="{F7A5D34A-A8B1-466D-BE41-FFCD41B4430D}">任务：开发业务案例</a>的重点调整为考虑使用组件来改变开发的成本结构。具体的说，开发组件成本降低，但会有更多工作花在确定组件和验证所选组件是否符合其需求上。
+        </p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/evaluate_project_scope_and_risk_C777352.html" guid="{BADBA2C5-144D-482B-9B63-C95DA4DBD3E5}">活动：评估项目范围和风险</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            采用某种组件方法会改变某些风险的性质，也会引入新的风险。特别是：
+        </p>
+        <ul>
+            <li>
+                外部获得的组件增加了风险，因为它们引入了不受项目团队直接控制的关键元素
+            </li>
+            <li>
+                外部获得的组件可缩短开发时间，减少资源风险
+            </li>
+            <li>
+                外部获得的组件如果强加其自身的体系结构限制，则会使系统体系结构变形
+            </li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/plan_the_project_DD2EE35.html" guid="{823EF41B-2BD1-464B-84DB-C7BD432636E2}">活动：计划项目</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            在<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/plan_phases_and_iterations_2AB1A5C9.html" guid="{43005DA9-D75E-464D-8AFC-AB9CACD92626}">任务：计划阶段和迭代</a>中，构造阶段的计划可能会显示项目分成了两条不同但又并行的路线：一条路线开发特定于应用程序和特定于域的组件（在体系结构的较上层中组织
+            － 请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">概念：分层</a>），而另一条路线中特定于非应用程序和非域的组件在较低层中组织。在某些情况下，可重用的组件将由独立管理的开发团队来开发。引入并行路线的决定在很大程度上是人员配备和资源问题，由于希望将可重用组件作为独立于部署了组件的应用程序的资产来管理，故而引起了该问题。
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>需求</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/refine_the_system_definition_E67B8011.html" guid="{0FEE5795-6090-4D82-9BDB-925E5F0D9985}">活动：优化系统定义</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            优化系统需求时，需要获取由所选组件框架强加的约束。组件框架部分地通过限制赋予软件设计人员和设计人员的自由度来提高开发生产力。<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/detail_software_requirements_A7F0A215.html" guid="{A1FA1E95-8028-42EB-9B92-0DA77380F3E1}">任务：详细描述软件需求</a>必须注重于记录这些约束。
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>测试</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/define_evaluation_mission_611C79D9.html" guid="{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5}">活动：定义评估任务</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            应建立一个测试计划来确定项目的整体预期测试，该计划称为“主测试计划”。
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>环境</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/prepare_environment_for_project_5F602A4.html" guid="{37A50EF5-CC73-4E38-B851-997879548110}">活动：准备项目环境</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            收集和准备项目指南时，请参阅<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{1E706674-C1E7-4F8D-BF06-35FFE49C5E42}">任务：准备项目指南</a>来了解详细信息，并考虑指南所施加的特定组件框架和约束。指南应该包括如何使用框架来设计和编写代码。它们还应提供关于如何验证组件框架本身和组件间定义的接口
+            <b>这两者</b>一致性的测试指导信息。
+        </p>
+    </li>
+</ul>
+<h1>
+    <b><small><a id="Elaboration Phase Activities" name="Elaboration Phase Activities"><font     size="+0">精化阶段活动</font></a></small></b>
+</h1>
+<p class="node">
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/elaboration_6A203A50.html" guid="_-kFhcCVuEdqSZ9OimJ-AzA">精化阶段</a>的基本工作流程是适用的，并具有以下扩展或变体：
+</p>
+<h4>
+    <b>需求</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/refine_the_system_definition_E67B8011.html" guid="{0FEE5795-6090-4D82-9BDB-925E5F0D9985}">活动：优化系统定义</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            此外，<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/detail_software_requirements_A7F0A215.html" guid="{A1FA1E95-8028-42EB-9B92-0DA77380F3E1}">任务：详细描述软件需求</a>还注重于技术和非功能需求以及强加给所构建或购买的组件的约束。要考虑的具体非功能需求有大小、性能、内存或磁盘占用量、运行时许可问题以及将影响组件选择或构造的类似约束。
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>分析与设计</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/define_a_candidate_architecture_A3651DA3.html" guid="{71ADFE9A-34A0-41BD-8A17-BEA3210E2BBD}">活动：定义候选体系结构</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">任务：体系结构分析</a>使用组件框架以及技术和非功能需求来定义初始体系结构，包括初始分层方案和一组缺省组件和服务（表示为分析与设计机制）。<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">任务：用例分析</a>注重于根据体系结构上有重要意义的用例来确定体系结构上有重要意义的组件。
+        </p>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/refine_the_architecture_F40FA195.html" guid="{F2160C54-F666-4736-9982-FC7F58F15FAD}">活动：优化体系结构</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/structure_implementation_model_E0E0DEF9.html" guid="{35272424-8A0A-4DDD-BA74-C91B80A8D046}">任务：构造实施模型</a>建立与组件框架结构以及开发团队的结构和职责相符的实施模型。
+        </p>
+        <p class="node">
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_mechanisms_9A197FBC.html" guid="{C7A26BD7-3820-48D9-830F-684C3AF155F9}">任务：确定设计机制</a>将优化初始设计机制，以考虑特定框架服务和组件。
+        </p>
+        <p class="node">
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">任务：确定设计元素</a>将确定体系结构上有重要意义的主要系统组件。应将可能可重用的职责分组在一起，以改进可重用性；特定于应用程序的功能应该与特定于域及独立于应用程序和域的功能分开来。出于设计目的，组件可表示为<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">工作产品：设计子系统</a>。应对这些组件／子系统确定<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">工作产品：接口</a>。
+        </p>
+        <p class="node">
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">任务：合并现有设计元素</a>将确保已确定的组件与在以前迭代中确定的现有组件（来自框架本身或外部源）一致并兼容。
+        </p>
+        <p class="node">
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_runtime_architecture_2F8E190.html" guid="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}">任务：描述运行时体系结构</a>描述了组件框架的基本进程和线程体系结构，而<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/describe_distribution_9BA1477C.html" guid="{6A112808-0A90-427A-BAB9-E14F3FBF72B5}">任务：描述分布</a>描述了将执行组件应用程序的分布式计算环境。
+        </p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/design_components_13B33BFC.html" guid="{9C683674-97C1-4AEE-8DB0-9514AEFF698E}">活动：设计组件</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">任务：子系统设计</a>进一步优化了组件的设计，确定了组件中提供组件真实行为的类。在精化阶段早期可能有一个类，一种“子系统／组件代理”，作为桩模块来模拟用于建立体系结构原型的组件行为。
+            后来，该类的行为就分发到子系统内所包含的类的协作中。 包含的这些类是在<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">任务：类设计</a>中优化的。
+        </p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/design_the_database_2BE59DB0.html" guid="{FB3EB753-A979-4849-B57B-97F39271F82B}">活动：设计数据库</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            在精化阶段中，所注重的是确保持久策略是可伸缩的，并且数据库设计和持久机制将支持系统的全部需求。确定持久类并映射到持久机制上。分析数据密集型用例是为了确保机制将是可伸缩的。结合测试活动，评估并验证持久性机制和数据库设计。
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>实施</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/implement_components_AFD1799D.html" guid="{4DC6F53E-1FE1-44EE-812B-003D3BD1ACEA}">活动：实施组件</a> 
+        <p class="node">
+            <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/implement_component_AE366827.html" guid="{3293F4F7-EFCD-4476-BFF1-81AC3812B512}">任务：实施设计元素</a>必须遵循组件框架施加的约束，如作为<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">工作产品：特定于项目的指南</a>的一部分而提供的“编程准则”中所述。在精化阶段，大多数组件将包含大量“桩模块”代码，因为在这里实施注重的是验证体系结构，而不是生成生产质量代码。
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>测试</b>
+</h4>
+<ul>
+    <li>
+        活动为：<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/define_evaluation_mission_611C79D9.html" guid="{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5}">定义评估任务</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/verify_test_approach_A743008A.html" guid="{7BD514AF-19F9-408F-8279-309BD153C157}">验证测试方法</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/test_and_evaluate_4D17BD6A.html" guid="{93B7D625-C83A-4EFB-9772-B88F2EB02CE2}">测试和评估</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/achieve_acceptable_mission_18DE9944.html" guid="{5DA9C9E9-1538-4433-8B57-B28667D67514}">实现可接受的任务</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/improve_test_assets_1C99FFB9.html" guid="{CD77CBDA-CC13-4593-BB81-41AF3FF7A84C}">改进测试资产</a> 
+        <p class="node">
+            精化阶段中的测试活动注重于验证体系结构。对于基于组件的系统，该注重对象转换为：
+        </p>
+        <ul>
+            <li>
+                使用组件之间的接口，确保组件边界是合适的
+            </li>
+            <li>
+                更加注重性能测试，特别是性能伸缩测试，以确保可维持期望的事务量
+            </li>
+        </ul><br />
+         
+        <p class="node">
+            组件框架中的任何固有假设也需要评估。这些假设通常包括持久性和事务管理机制的可伸缩性和总处理能力，其中机制设计人员所做的隐含假设通常会显著破坏应用程序体系结构（如果它不理解假设）。
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>项目管理</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/plan_for_next_iteration_55840038.html" guid="{8040B743-6467-4067-8C0F-E62C3DE99414}">活动：计划下一次迭代</a> 
+        <p class="node">
+            如果将实施子系统用作“职责的逻辑单元”，则构造工作可分成两条或多条并行“路线”：一条注重于特定于应用程序的功能，另一条或多条注重于普通的可复用组件。当然，这取决于有足够的资源为并行开发工作配备人员。划分开发团队和并行工作的能力完全依赖于体系结构的稳定性，更具体地说，则依赖于组件之间接口的质量和稳定性。精化阶段中的强度工作将支持这种划分。
+        </p>
+    </li>
+</ul>
+<h1>
+    <b><small><a id="Construction Phase Activities" name="Construction Phase Activities"><font     size="+0">构造阶段活动</font></a></small></b>
+</h1>
+<p class="node">
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/construction_102AF1EA.html" guid="_SkuIwCVwEdqSZ9OimJ-AzA">构造阶段</a>的基本工作流程是适用的，并具有以下扩展或变体：
+</p>
+<h4>
+    <b>项目管理</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/plan_for_next_iteration_55840038.html" guid="{8040B743-6467-4067-8C0F-E62C3DE99414}">活动：计划下一次迭代</a> 
+        <p class="node">
+            以前曾描述过第一个构造迭代的计划，因为它是在精化阶段结束时进行的。继续进行迭代计划，划分开发团队和并行工作的能力继续依赖于体系结构的稳定性以及组件之间接口的质量和稳定性。
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>分析与设计</b>
+</h4>
+<ul>
+    <li>
+        <b><a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/refine_the_architecture_F40FA195.html" guid="{F2160C54-F666-4736-9982-FC7F58F15FAD}">活动：优化体系结构</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/design_components_13B33BFC.html" guid="{9C683674-97C1-4AEE-8DB0-9514AEFF698E}">活动：设计组件</a></b> 
+        <p class="node">
+            在构造阶段中，所注重的是分析剩余用例并确定实现这些用例的合适组件和组件协作。现有体系结构得到扩展和完成，并且组件的“内部行为”是完整设计和实施的。
+        </p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/design_the_database_2BE59DB0.html" guid="{FB3EB753-A979-4849-B57B-97F39271F82B}">活动：设计数据库</a> 
+        <p class="node">
+            在构造阶段中，所注重的是完成数据库设计，确保数据库和持久机制都支持所有的持久类。这项工作是与<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/refine_the_architecture_F40FA195.html" guid="{F2160C54-F666-4736-9982-FC7F58F15FAD}">活动：优化体系结构</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/design_components_13B33BFC.html" guid="{9C683674-97C1-4AEE-8DB0-9514AEFF698E}">活动：设计组件</a>中所做的工作同步且迭代执行的。理想的组织是具有集成的组件团队，在持久性问题上保持跨团队协调一致，以确保良好的数据库设计。
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>实施</b>
+</h4>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/implement_components_AFD1799D.html" guid="{4DC6F53E-1FE1-44EE-812B-003D3BD1ACEA}">活动：实施设计元素</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            这里的工作类似于精化阶段中的工作，但其余的详细信息会随着阶段的进展而更加完整。
+        </p>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/integrate_each_subsystem_B9835A47.html" guid="{26723872-54F2-48C0-8384-0F595BD86EAD}">活动：集成每个子系统</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/integrate_the_system_255F6819.html" guid="{1EBA0F67-240A-4402-B830-4DB0FDFEEB9D}">活动：集成系统</a>
+    </li>
+    <li style="LIST-STYLE-TYPE: none">
+        <p class="node">
+            系统是随着阶段的深入而逐渐建立起来的。
+        </p>
+    </li>
+</ul>
+<h4>
+    <b>测试</b>
+</h4>
+<ul>
+    <li>
+        活动为：<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/define_evaluation_mission_611C79D9.html" guid="{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5}">定义评估任务</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/verify_test_approach_A743008A.html" guid="{7BD514AF-19F9-408F-8279-309BD153C157}">验证测试方法</a>, <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/validate_build_stability_72BD9103.html" guid="{0AE0042B-034C-4296-9FA0-D9DCC61FC7B4}">验证工作版本稳定性</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/test_and_evaluate_4D17BD6A.html" guid="{93B7D625-C83A-4EFB-9772-B88F2EB02CE2}">测试和评估</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/achieve_acceptable_mission_18DE9944.html" guid="{5DA9C9E9-1538-4433-8B57-B28667D67514}">实现可接受的任务</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/improve_test_assets_1C99FFB9.html" guid="{CD77CBDA-CC13-4593-BB81-41AF3FF7A84C}">改进测试资产</a>。
+    </li>
+</ul>
+<div style="MARGIN-LEFT: 2em">
+    <p class="node">
+        性能测试仍然重要，但对功能测试的注重程度有所加大。需要处理功能的完整性、现有功能的回归测试以及与预期性能的一致性。
+    </p>
+</div>
+<h1>
+    <b><small><a id="Transition Phase Activities" name="Transition Phase Activities"><font     size="+0">移交阶段活动</font></a></small></b>
+</h1>
+<ul>
+    <li>
+        Web 环境中的<b>产品发行</b>往往是递增式和连续的，而较少注重于传统的介质分发。发行计划必须相应调整。
+    </li>
+    <li>
+        <b>生产支持</b>逐渐成为该阶段的注重对象。
+    </li>
+    <li>
+        执行<b>数据转换活动</b>。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

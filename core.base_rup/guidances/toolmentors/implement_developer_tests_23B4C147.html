@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational Test RealTime 实施开发者测试</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="implement_developer_tests" name="uma.name">
+<meta content="使用 Rational Test RealTime 实施开发者测试" name="uma.presentationName">
+<meta content="Tool:rup_test_realtime:Rational Test RealTime" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational Test RealTime" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}", "{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{FD49B4B3-FA09-4475-A99A-DA8EBBEA220E}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational Test RealTime 实施开发者测试</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述如何使用 Rational Test RealTime 实施测试。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_test_realtime_861C5353.html" guid="{18E6764A-2366-4F59-A5F2-FDF4891EBCE9}">Rational Test RealTime</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">实施开发人员测试</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">实施测试套件</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    Test RealTime 集成了三种测试工具：
+</p>
+<ul>
+    <li>
+        Unit Testing 可自动执行 C 和 Ada 软件组件测试。
+    </li>
+    <li>
+        Object Testing 是一种面向对象的方法，用于 C++ 代码的行为测试。
+    </li>
+    <li>
+        System Testing 是用于测试基于消息的应用程序的强大环境。
+    </li>
+</ul>
+<p>
+    对您的应用程序应选择使用哪种测试工具取决于开发环境和应用程序性质。您需要为每种测试工具开发专用测试脚本。
+</p>
+<p>
+    为应用程序撰写实际测试之前，Test RealTime 将要求您创建测试项目，并将项目链接至被测试的应用程序。
+</p>
+<h4>
+    工具步骤
+</h4>
+<p>
+    要在 Test RealTime 中创建测试脚本，请执行以下操作：
+</p>
+<ol>
+    <li>
+        <a href="#ComponentTestingWizard">运行组件测试向导</a>
+    </li>
+    <li>
+        <a href="#SetupTestData">输入测试数据和期望的结果</a>
+    </li>
+    <li>
+        <a href="#ModifyStubBehavior">修改存根行为</a>
+    </li>
+</ol>
+<h3>
+    1. <a id="ComponentTestingWizard" name="ComponentTestingWizard">运行组件测试向导</a>
+</h3>
+<p>
+    Test RealTime
+    提供了一个组件测试向导，如果执行此向导，将分析指定的源代码并生成一个完全可执行的测试装置。开发人员要确保目标代码按照意图测试，仅需定义存根行为（请参阅第二个“工具步骤”）和输入测试数据与期望的结果（请参阅第三个“工具步骤”）。
+</p>
+<p>
+    注：并非必须使用组件测试向导 － 支持测试所需的全部文件和代码都可以手动生成。但是，此向导可节约大量的工作。不论是使用哪种方法，测试执行和测试报告都是自动的。
+</p>
+<p>
+    可以两种方式访问组件测试向导。每种方法都假定已经打开了一个 Test RealTime 项目
+</p>
+<ul>
+    <li>
+        选择“Test RealTime 起始页”左侧的“活动”链接。选择此链接将显示一个包含开发人员可选择的三个主要活动的列表。要执行组件测试，开发人员现在应选择“组件测试”链接。<br />
+        <br />
+    </li>
+    <li>
+        右键单击 Test RealTime 右侧“项目”窗口的“资产浏览器”中的任何源文件／类／方法／函数／过程。选择弹出菜单中的“测试...”选项将打开组件测试向导。<br />
+    </li>
+</ul>
+<p>
+    组件测试向导这两种启动方法的主要区别是，第一种方法需要用户选择包含要测试的函数／方法／过程的源文件，而第二种方法已经了解要使用哪个源文件，因此将跳过组件测试向导的这些初始步骤。
+</p>
+<p>
+    在任何一种情况下，都将要求开发人员选择测试方式：典型或专家。区别与希望的存根行为有关。提示一下，存根是“为测试目的而包含功能的组件”，也就是，设计为以预定义的方式运行以帮助测试其他系统组件的一个组件。在“典型方式”中，Test
+    RealTime 将自动为所选源文件中显式引用的任何函数／方法／过程生成一个存根模板。“专家方式”使您还可以选择所选源文件中未显式引用的组件。不管哪种方式，这些存根的实际功能都在后面定义 － 请参阅下面的第二个“工具步骤”。
+</p>
+<p>
+    向导执行完毕之后，Test RealTime 将在活动项目内创建一个节点。此节点包含对所选源文件及测试装置创建所需文件的引用。需要修改这些额外的文件以：
+</p>
+<ul>
+    <li>
+        定义存根行为
+    </li>
+    <li>
+        指定用于驱动被测试的函数／方法／过程的数据
+    </li>
+    <li>
+        指定各输入数据集的预期结果
+    </li>
+</ul>
+<p>
+    对于 C、C++ 和 Ada，测试装置、测试存根和测试脚本的语言由 Rational Software 构建，来包容这些语言的特定复杂性。对于 Java，Test RealTime 使用 Java 作为测试脚本语言，并以 JUnit
+    框架（http://www.junit.org）作为其测试装置和测试存根框架。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />有关详细信息，请参阅 <i>Rational Test
+    RealTime User Guide</i> 中的 Graphical User Interface-&gt;Activity Wizards-&gt;Component Testing Wizard 章节。
+</p>
+<h3>
+    2. <a id="SetupTestData" name="SetupTestData">输入测试数据和期望的结果</a>
+</h3>
+<p>
+    可以立即执行组件测试向导生成的测试脚本。但是，除非开发人员指定了用于驱动被测试组件的实际数据以及期望的输出值，否则测试将无甚用处，也不会提供任何参考。
+</p>
+<p>
+    Test RealTime 支持的各种语言都以不同的方式帮助创建测试；已经针对每种语言的专有特征优化了各种方法。C++
+    更为特别，因为这种语言不仅可以生成和执行标准测试，还可以进行可选的合同检查。合同检查充当声明，用于验证诸如前置条件／后置条件及不变量之类的项。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />有关 C 和 Ada 语言的详细信息，请参考 <i>Rational
+    Test RealTime User Guide</i> 中的以下章节：
+</p>
+<ul>
+    <li>
+        Automated Testing-&gt;Component Testing for C and Ada-&gt;C and Ada Test Script-&gt;Overview-&gt;Test Script
+        Structure
+    </li>
+    <li>
+        Automated Testing-&gt;Component Testing for C and Ada-&gt;C and Ada Test Script-&gt;Ada<br />
+         
+        <p>
+            <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />并参考 <i>Rational Test
+            RealTime Reference Guide</i> 中的以下章节
+        </p>
+    </li>
+    <li>
+        Component Testing Scripting Languages-&gt;C Test Script Language-&gt;C Test Script Language
+        Keywords-&gt;ELEMENT...END ELEMENT
+    </li>
+    <li>
+        Component Testing Scripting Languages-&gt;C Test Script Language-&gt;C Test Script Language
+        Keywords-&gt;ENVIRONMENT...END ENVIRONMENT
+    </li>
+    <li>
+        Component Testing Scripting Languages-&gt;Ada Test Script Language-&gt;Ada Test Script Language
+        Keywords-&gt;ELEMENT...END ELEMENT
+    </li>
+    <li>
+        Component Testing Scripting Languages-&gt;Ada Test Script Language-&gt;Ada Test Script Language
+        Keywords-&gt;ENVIRONMENT...END ENVIRONMENT
+    </li>
+</ul>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />有关 C++ 语言的详细信息，请参考 <i>Rational
+    Test RealTime User Guide</i> 中的以下章节：
+</p>
+<ul>
+    <li>
+        Automated Testing-&gt;Component Testing for C++-&gt;C++ Testing Overview<br />
+         
+        <p>
+            <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />并参考 <i>Rational Test
+            RealTime Reference Guide</i> 中的以下章节
+        </p>
+    </li>
+    <li>
+        Component Testing Scripting Languages-&gt;C++ Test Script Language-&gt;C++ Test Driver Scripts
+    </li>
+</ul>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />有关 Java 的详细信息，请参考 <i>Rational Test
+    RealTime User Guide</i> 中的以下章节：
+</p>
+<ul>
+    <li>
+        Automated Testing-&gt;Component Testing for Java-&gt;Java Testing Overview-&gt;About JUnit<br />
+         
+        <p>
+            <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />并参考 <i>Rational Test
+            RealTime Reference Guide</i> 中的以下章节
+        </p>
+    </li>
+    <li>
+        Component Testing Scripting Languages-&gt;Java Test Primitives
+    </li>
+</ul>
+<h3>
+    3. <a id="ModifyStubBehavior" name="ModifyStubBehavior">修改存根行为</a>
+</h3>
+<p>
+    组件设计为以特定方式运行。这些组件无论其详细程度的级别如何，都应以可预定义的一组特定输出对一组给定输入作出响应。“可预定义”的含义是可在测试执行之前指定结果（显式指定或通过算法指定）。
+</p>
+<p>
+    组件通常需要系统内其他组件的协助才能执行其功能。这些其他组件可以如另一个函数那样简单，也可以如系统中其他某处的整个子系统那样复杂。无论哪种方式，开发人员都经常发现自己在组件测试中的工作受到妨碍，原因是其代码依赖的组件尚未存在或至少尚不能以可靠方式工作。存根的作用可对此困难进行补偿。（事实上，可将存根用于通过消除对第三方代码的全部依赖来保证正常运行。）
+</p>
+<p>
+    开发人员负责正确模拟被测试的组件依赖的组件。 正确模拟意味着存根功能必须足够准确，才能确保无论被测试的组件成功还是失败，原因始终都可以追溯到组件本身，而不是追溯到存根生成的错误信息。
+</p>
+<p>
+    Rational Test RealTime 通过受支持的测试脚本语言帮助创建存根。特别是对于有关创建测试存根的信息：
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />有关 C 和 Ada 语言的详细信息，请参考 <i>Rational
+    Test RealTime User Guide</i> 中的以下章节：
+</p>
+<ul>
+    <li>
+        Automated Testing-&gt;Component Testing for C and Ada-&gt;C and Ada Test Script-&gt;Simulations-&gt;Stub Simulation
+        Overview<br />
+         
+        <p>
+            <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />并参考 <i>Rational Test
+            RealTime Reference Guide</i> 中的以下章节
+        </p>
+    </li>
+    <li>
+        Component Testing Scripting Languages-&gt;C Test Script Language-&gt;C Test Script Language Keywords-&gt;STUB
+    </li>
+    <li>
+        Component Testing Scripting Languages-&gt;Ada Test Script Language-&gt;Ada Test Script Language Keywords-&gt;STUB
+    </li>
+</ul>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />有关 C++ 语言的详细信息，请参考 <i>Rational
+    Test RealTime User Guide</i> 中的以下章节：
+</p>
+<ul>
+    <li>
+        Automated Testing-&gt;Component Testing for C++-&gt;C++ Testing Overview-&gt;C++ Test Driver Script<br />
+         
+        <p>
+            <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />并参考 <i>Rational Test
+            RealTime Reference Guide</i> 中的以下章节
+        </p>
+    </li>
+    <li>
+        Component Testing Scripting Languages-&gt;C++ Test Script Language-&gt;C++ Test Script Keywords-&gt;STUB
+    </li>
+</ul>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/book.gif" width="16" border="0" />有关 Java 的详细信息，请参考 <i>Rational Test
+    RealTime User Guide</i> 中的以下章节：
+</p>
+<ul>
+    <li>
+        Automated Testing-&gt;Component Testing for Java-&gt;Java Testing Overview-&gt;Java Stub Harness<br />
+    </li>
+</ul>
+<h3>
+    有关更多信息
+</h3>
+<p>
+    有关如何运行测试活动的详细信息，请参阅标题为<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/execute_developer_tests_A3E7DD57.html" guid="{CA0B65DC-D96A-4CCB-A7A5-8FCE9F24B617}">使用 Rational Test RealTime 执行测试</a>的工具向导。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: RUP 定制</title>
+<meta content="Guideline" name="uma.type">
+<meta content="rup_tailoring" name="uma.name">
+<meta content="RUP 定制" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "_8rV68EdLEdqul7OS-EQhrQ"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_8rV68EdLEdqul7OS-EQhrQ"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：RUP 定制</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南提供了关于为组织或项目定制 RUP 的建议。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    以下指南描述了定制 RUP 时要考虑的一些事项。
+</p>
+<p>
+    关于定制 RUP 整体流程的描述，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/tailoring_rup_F8F0EB23.html" guid="6.991505672198195E-305">概念：RUP 定制</a>。&nbsp;
+</p>
+<p>
+    关于与流程定制有关的常规最佳实践的描述，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/process_tailoring_practices_9DD16395.html" guid="1.433186963661493E-305">指南：流程定制实践</a>。<br />
+</p>
+<h3>
+    定义定制工作的范围
+</h3>
+<p>
+    定义定制工作的范围，就是确定想要更改的内容和进行更改采用的方式。
+</p>
+<p>
+    为了有效地定义范围，熟悉 RUP 是很重要的。关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/supportingmaterials/introduction_to_rup_36B63436.html" guid="_uRs44C8CEdqfj_h52-wqcw">RUP 简介</a>。
+</p>
+<p>
+    流程定制范围和程度取决于一系列因素。这些因素在<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/process_discriminants_36B1ADD5.html" guid="2.746702783003723E-305">指南：流程判别式</a>中作了描述。&nbsp;&nbsp;
+</p>
+<h4>
+    <a id="Variable Elements in Software Engineering Processes" name="Variable Elements in Software Engineering Processes">软件工程流程中的可变元素</a>
+</h4>
+<p>
+    本节描述在 RUP 定制工作中有可能修改、定制、添加或取消的流程组成部分。
+</p>
+<ul>
+    <li>
+        <strong>规程</strong><br />
+         软件项目很少完全跳过其中某个规程，例如分析和设计、实施等等。 在异常情况下，有些规程（例如需求或部署）可能已由其他组织执行。 但是，更可能发生的情况是，规程内或跨规程的特定工作流程将进行修改。
+        &nbsp;&nbsp;<br />
+    </li>
+    <li>
+        <strong>工作产品</strong><br />
+         项目更有可能因它们必须生成、更新和交付的工作产品而相异。在范围的一个极端，想象一个完全无纸化的项目（它以电子方式只维护少量工作产品），该项目使用诸如电子表格、设计工具、编程工具和测试工具之类工具进行支持，且只通过磁盘、CD
+        或万维网以电子方式交付软件和文档。在另一个极端，却存在这样的项目，出于合同、法规或组织的原因，它们必须生成和维护数量多得多的一批打印文档。 在某些情况下，可以省略完整的模型。<br />
+    </li>
+    <li>
+        <strong>任务</strong><br />
+         任务可能至少因为两个原因而各不相同。对于使用工作产品作为输入、又生成或更新工作产品作为输出的任务，它们受这些工作产品的修改的影响；特别是，如果某个工作产品或工作产品中的某个信息元素不再必要，相应的步骤则可能被取消或作重大修改。流程也会对任务进行修改，以引进与特定应用领域或开发专门技术相关的特定技术、方法和工具，例如设计步骤、编程语言、自动代码生成工具、评估技术等等。
+    </li>
+</ul>
+<p>
+    在更详细的层面上，可以修改、添加或取消其他方法元素：
+</p>
+<ul>
+    <li>
+        角色
+    </li>
+    <li>
+        任务中的步骤
+    </li>
+    <li>
+        指南和任务指导信息
+    </li>
+    <li>
+        表示法，例如使用 UML 的子集或使用构造型来解决某些或所有模型的某个特定需要
+    </li>
+    <li>
+        复审的核对表
+    </li>
+    <li>
+        用以使某些任务自动执行的工具支持
+    </li>
+    <li>
+        术语更改，例如改编流程以适应组织环境
+    </li>
+</ul>
+<p>
+    总之，流程工程师必须在定制 RUP 时，制定广泛的决策。RUP 可能必须进行调整，以利用某些确定好的公司实践和标准，例如文档、术语等等。
+</p><br />
+<p>
+    <br align="left" />
+     &nbsp;
+</p>
+<h3>
+    <a id="Difficult Configurations" name="Difficult Configurations">难度定制</a>场景
+</h3>
+<p>
+    某些定制场景难以实施，必须非常仔细地予以考虑。例如：
+</p>
+<ul>
+    <li>
+        流程体系结构的变更<br />
+         为匹配某一现有流程或组织而将任务广泛地重新封装到另一组规程中，这种做法可能导致花费大量工作却收效甚微。通常，更实际的做法就是建立映射以评估 RUP 是否涵盖了所有方面。 请记住，规程不是按顺序执行的阶段 －
+        它们是任务的容器，在每个迭代中周而复始地执行，而且常常在一个迭代中同时执行。<br />
+    </li>
+    <li>
+        术语的变更<br />
+         尽管用一个词替换另一个词可能听起来像是微不足道的字处理行为，但这样的变更必须很仔细地予以考虑。 在软件工程领域，组织常常使用同一个词表示略有差别的含义，或者用不同的词表示同一事物。 在 RUP
+        中进行单独的变更可能导致流程非常难以理解。 一种解决方案是为术语创建“转换表”，在 RUP 术语和组织的术语之间进行转换。
+    </li>
+</ul>
+<p>
+    危险词的例子有系统、阶段、角色、活动、任务、模型和文档。
+</p>
+<p>
+    如果以非英语语言来捕获流程结果，术语问题会更复杂，因为您必须将工作产品、文档、报告以及可能的其他 RUP 部件的描述均翻译成这种非英语语言。
+</p><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

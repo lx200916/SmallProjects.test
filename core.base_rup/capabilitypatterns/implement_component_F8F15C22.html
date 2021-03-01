@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务描述符: 实施设计元素</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="implement_component" name="uma.name">
+<meta content="实施设计元素" name="uma.presentationName">
+<meta content="_FVf7IUofEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="实施者">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={F2AD342D-0F3B-4E19-A351-75ECDCB806F5}&path={F2AD342D-0F3B-4E19-A351-75ECDCB806F5},{4DC6F53E-1FE1-44EE-812B-003D3BD1ACEA},_FVf7IUofEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_XSr4YCFtEdqrX8YVzvtlIg", "_XMg1cCCdEdq3qtLcbHn6PQ", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_J1u8gCGYEdqMcovRzkCQow", "_XMg1cCCdEdq3qtLcbHn6PQ", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_qGM5wJ5IEdq7s5zuJVEAAw", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_rw4S4Z5IEdq7s5zuJVEAAw", "_XMg1cCCdEdq3qtLcbHn6PQ", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_XMg1cCCdEdq3qtLcbHn6PQ", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_XMg1cCCdEdq3qtLcbHn6PQ", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_B3B94EdmEdqVZeSWHJlGyA", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_XMg1cCCdEdq3qtLcbHn6PQ", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_XSr4YCFtEdqrX8YVzvtlIg", "_XMg1cCCdEdq3qtLcbHn6PQ", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_J1u8gCGYEdqMcovRzkCQow", "_XMg1cCCdEdq3qtLcbHn6PQ", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_qGM5wJ5IEdq7s5zuJVEAAw", "_FVf7IUofEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_rw4S4Z5IEdq7s5zuJVEAAw", "_XMg1cCCdEdq3qtLcbHn6PQ", "_FVf7IUofEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_FVf7IUofEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：实施设计元素</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务描述了如何实施部分设计（如类、用例实现或数据库实体）或修正一个或多个缺陷。所得到的通常是新的或修改过的源代码和数据文件，一般称为“实施元素”。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">主要:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementer_F0B4A62.html" guid="_CRsnoRi2Edq_uI8xTPML6g">实施者</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">其他:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">辅助:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_13667D41.html" guid="_CRyuQRi2Edq_uI8xTPML6g">设计模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementation_element_F2E45E16.html" guid="_Ok328b9eEdqBwpaAk4N49g">实施元素</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementation_element_32482278.html" guid="_OzjMIb9eEdqBwpaAk4N49g">实施元素</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_69DB548D.html" guid="_FVsIYkofEdqrjq4i3fchvA">补充规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_70A46067.html" guid="_FVsIYEofEdqrjq4i3fchvA">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_data_model_7B424077.html" guid="_FVsIYUofEdqrjq4i3fchvA">数据模型</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">外部:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementation_element_F2E45E16.html" guid="_Ok328b9eEdqBwpaAk4N49g">实施元素</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementation_element_32482278.html" guid="_OzjMIb9eEdqBwpaAk4N49g">实施元素</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementation_subsystem_44B4A00.html" guid="_Ok328L9eEdqBwpaAk4N49g">实施子系统</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_implementation_subsystem_43AF0E62.html" guid="_OzjMIL9eEdqBwpaAk4N49g">实施子系统</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> 准备实施</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="prepare" name="prepare"></a> 
+<h5>
+    了解任务／问题
+</h5>
+<p>
+    在开始实施任务之前，实施者必须明确范围，如在工作分配和迭代计划中指定的。实施任务可侧重于实现某个特定功能（如实施设计用例实现或修正缺陷），该功能涉及实施几个设计元素，这些元素促成了该功能。实施任务也可以侧重于特定的设计元素，如设计子系统或设计类，将它实施至当前迭代所需的程度。
+</p>
+<h5>
+    配置开发环境
+</h5>
+<p>
+    此项任务的结果是创建或更新一个或多个文件（实施元素）。作为准备实施的一部分，实施者必须确保他或她的开发环境配置正确，以便合适的元素版本是可用的（包括要更新的元素以及编译和单元测试所需的任何其他元素）。实施者必须了解并遵循项目的配置与变更管理过程，这些过程描述了如何控制变更、为变更确定版本，以及如何交付变更用于集成。
+</p>
+<h5>
+    分析现有实施
+</h5>
+<p>
+    在从头开始实施类之前，请考虑是否可重用或改写现有代码。 了解实施在哪些方面适合系统其余部分的体系结构和设计，将有助于实施者确定此类重用机会，同时确保实施适合系统的其余部分。
+</p>
+<h5>
+    递增实施
+</h5>
+<p>
+    建议您以递增方式实施；每天执行几次编译、链接并运行某些回归测试。了解在设计期间并不定义所有的公共操作、属性和关联是很重要的。
+</p>
+<p>
+    当处理缺陷时，请确保已修正了问题（而不是症状）；侧重点应放在修正代码中的根本问题上。一次更改一处；因为修正故障本身是容易出错的任务，增量实施修正是很重要的，这会很容易找到任何新故障出现的位置。
+</p>
+<p>
+    实施者必须了解并遵循任何特定于项目的实施指南，包括特定编程语言的编程指南。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 将设计转换到实施</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="transform" name="transform"></a> 
+<p>
+    可用于将设计转换到实施的技术有多种。下面是一些示例：
+</p>
+<ul>
+    <li>
+        特定于平台的可视模型可用来生成初始代码框架。通过未在设计中指定的附加代码，可以进一步阐述此代码框架。<br />
+    </li>
+    <li>
+        可以将模型进行细化，并用来生成可执行原型。结构图（类和包图）和行为图（例如状态和活动图）都可以用来生成可执行代码。这些原型可以根据需要进一步优化。<br />
+    </li>
+    <li>
+        模型可以细化到完全代表实施的程度。在这种情况下，与其将抽象的设计转换到代码实施，不如采用该设计并直接在模型中添加实施细节。<br />
+    </li>
+    <li>
+        设计可能不同程度地依赖于平台。特定于平台的设计模型或代码可以通过转换来生成，这种转换应用多种规则来映射高级别抽象平台特定元素。 Object Management Group（OMG）model driven
+        architecture（MDA）<a href="http://www.omg.org" target="_blank">（http://www.omg.org</a>）活动的重点即在于此。<br />
+    </li>
+    <li>
+        也可应用标准模式，从相关的设计和实施中生成设计和代码元素。 例如，标准转换模式可以应用于数据库表，创建用以访问数据表的 java 类。另一个示例是，使用 Eclipse Modeling Framework（<a href="http://www.eclipse.org/emf/" target="_blank">http://www.eclipse.org/emf/</a>）模型来生成代码，用以存储模型匹配数据；并生成用户界面实施，用以填充数据。
+    </li>
+</ul>
+<p>
+    然而，在所有情况下，某种设计抽象概念都会手动或通过应用某种自动转换而细化，并成为实施。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 完成实施</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="complete" name="complete"></a>
+<p>
+    如上一步中所述，从设计转换到实施可能会产生不同完成程度的实施结果。它有可能是完整的、可接受的实施。然而，通常需要通过大量的工作才能完成实施，例如：
+</p>
+<ul>
+    <li>
+        调整转换的结果（例如，改进性能或改进用户界面）<br />
+    </li>
+    <li>
+        添加缺少的详细信息，例如：
+        <ul>
+            <li>
+                完成设计中所述的操作 － 选择算法和编写代码。
+            </li>
+            <li>
+                添加其他支持的类、操作和数据结构
+            </li>
+        </ul>
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 评估实施</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="evaluate" name="evaluate"></a>
+<p>
+    在这种情况下您将验证实施是否符合目标。除了测试以外（在其他任务中描述），一些附加检查通常是很有用的：
+</p>
+<ul>
+    <li>
+        在心里通读代码。考虑将您个人在实施中所犯的常见错误记入清单，并查找这些错误。
+    </li>
+    <li>
+        使用工具检查代码错误。例如，静态代码规则检查器，或设置为详细警告级的编译器。
+    </li>
+    <li>
+        使用可将代码可视化表示的工具。代码可视化可以帮助实施者确定模式，如过度连接、循环依赖关系等等。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 提供设计反馈</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="feedback" name="feedback"></a>
+<p>
+    实施和测试设计时，将不可避免地发现那些影响设计的错误。如果设计抽象概念因为将来的维护工作或因为合同或沟通因素而保留下来，则必须更新设计。
+</p>
+<p>
+    具体如何做要依据项目的配置与变更管理流程。通常，如果所需变更很小，并且是同一个人在设计并实施类，则不需要正式的变更请求。此人可以在设计中进行变更。
+</p>
+<p>
+    如果所需的变更有广泛的影响（例如公共业务的变更），则可能有必要提交正式的变更请求。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_多次出现" abbr="多次出现">多次出现</th><td align="left" class="sectionTableCell" headers="property_多次出现"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_事件驱动" abbr="事件驱动">事件驱动</th><td align="left" class="sectionTableCell" headers="property_事件驱动"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_正在进行" abbr="正在进行">正在进行</th><td align="left" class="sectionTableCell" headers="property_正在进行"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可重复" abbr="可重复">可重复</th><td align="left" class="sectionTableCell" headers="property_可重复"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/generating_elements_F992DEA8.html" guid="{EE8B53A9-8501-459E-90CC-990B25068DFA}">使用 Rational Rose 从模型生成元素</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/implementing_design_elements_B582F23B.html" guid="{62FD3F66-1F3E-41CB-8298-05F23CA0C122}">使用 Rational XDE Developer 实施设计元素</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

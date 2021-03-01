@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务: 描述运行时体系结构</title>
+<meta content="Task" name="uma.type">
+<meta content="describe_runtime_architecture" name="uma.name">
+<meta content="描述运行时体系结构" name="uma.presentationName">
+<meta content="Discipline:rup_analysis_design_discipline:分析和设计" name="uma.category">
+<meta name="element_type" content="activity">
+<meta content="description" name="filetype">
+<meta name="role" content="软件设计人员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_IY0NkAISEdqTna4sZVFRow", "_ydt62NnmEdmO6L4XMImrsA", "{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_kC0pcN7GEdm8G6yT7-Wdqw", "_ydt62NnmEdmO6L4XMImrsA", "{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, '', true, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="{4D35C038-A2D0-48B8-9ECD-52717FEAE33A}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：描述运行时体系结构</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/task.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务从活动类及其实例、它们与操作系统线程和流程的关系这几个方面为系统定义流程体系结构。</td>
+</tr>
+<tr>
+<td>规程：<a href="./../../core.base_rup/disciplines/rup_analysis_design_discipline_29760231.html" guid="_ydt62NnmEdmO6L4XMImrsA">分析和设计</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<ul>
+    <li>
+        分析并行需求、
+    </li>
+    <li>
+        确定进程及其生命周期、
+    </li>
+    <li>
+        确定进程间的通信机制并分配进程间的协调资源、
+    </li>
+    <li>
+        在进程间分布模型元素。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">主执行者:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">其他执行者:
+								</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="42%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="2" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">流程使用情况</th><td class="sectionTableCell" colspan="2">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/analysis_design_49725AC4.html" guid="{002674F9-6511-4D15-8623-B761D8C48986}">分析和设计</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/refine_the_architecture_F40FA195.html" guid="{F2160C54-F666-4736-9982-FC7F58F15FAD}">优化体系结构</a>
+									&nbsp;&gt;&nbsp;
+								<a href="./../../core.base_rup/capabilitypatterns/describe_runtime_architecture_276C9B84.html" guid="_cSb4UEocEdqrjq4i3fchvA">描述运行时体系结构</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    活动对象（即，活动类的实例）用于代表系统中的并发执行线程：从理论上来讲，每个活动对象都有其自己的控制线程，而且按照惯例是执行堆栈框架的根。将活动对象映射到实际的操作系统线程或流程可能因响应需求的不同而不同，并且将受环境切换开销考虑事项的影响。例如，与简单调度程序合并的一些活动对象可能会共享单个操作系统线程，从而造成并发运行的现象。但是，如果任何活动对象表现出阻塞行为（例如，通过执行同步输入－输出），那么组中的其他活动对象将无法对在操作系统线程被阻塞时发生的事件作出反应。
+</p>
+<p>
+    另一个极端是，如果处理资源不受额外环境切换开销的负面影响，那么对每个活动对象都给予它自己的操作系统线程应该会带来更高的响应度。
+</p>
+<p class="reactive">
+    在实时系统中，<img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">工作产品：封装体</a>是将并行性建模时建议使用的方法；与活动类类似，每个封装体都有自己理论上的控制线程，但是封装体有其他的封装和合成语义，使复杂的实时问题的建模更具可跟踪性。
+</p>
+<p>
+    此任务从活动类及其实例、它们与操作系统线程和流程的关系这几个方面为系统定义流程体系结构。同样的，对于实时系统，流程体系结构将从封装体以及它们到操作系统进程和线程的关联映射的方面进行定义。
+</p>
+<p>
+    在“精化”阶段早期，该体系结构将是相当初步的，但到了“精化”阶段后期，进程和线程应该有了很好的定义。此任务的结果记录在设计模型中 － 更具体地说，是在流程视图中（请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/process_view_E3DD0B09.html" guid="6.45284088262517E-306">概念：流程视图</a>）。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableSingleCell">
+<div class="stepHeading">分析并行需求</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Define Concurrency Requirements" name="Define Concurrency Requirements"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>目的&nbsp;</b>
+                </td>
+                <td width="95%">
+                    定义系统并行执行要求达到什么程度。该定义将有助于塑造体系结构。&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+     在<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">任务：确定设计元素</a>期间，考虑了主要由问题领域中自然产生的并行需要所决定的并行需求。&nbsp;
+</div>
+<p>
+    这样得到的结果是一组活动类，代表系统中的逻辑控制线程。在实时系统中，这些活动类由<img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">工作产品：封装体</a>表示。
+</p>
+<p>
+    在本步骤中，我们考虑并行需求的其他来源 － 那些由系统的非功能需求强加的并行需求。
+</p>
+<p>
+    并行需求由以下内容驱使：
+</p>
+<ul>
+    <li>
+        <b>系统必须分布的程度。</b>其行为必须在处理器或节点间分布的系统实际上要求一个多流程的体系结构。使用某种“数据库管理系统”或“事务管理器”的系统还必须考虑那些主要子系统引入的流程。
+    </li>
+    <li>
+        <b>关键算法的计算密度。</b>为了提供较好的响应时间，可能有必要将计算密集的活动放置在活动自己的进程或线程中，从而使系统在计算进行时仍能对用户输入作出响应，虽然使用的资源变少了。
+    </li>
+    <li>
+        <b>环境支持的并行执行的程度。</b>如果操作系统或环境不支持线程（轻量级流程），就没有多少必要考虑它们对系统体系结构的影响了。
+    </li>
+    <li>
+        <b>系统中的容错需要。</b>备份处理器要求有备份流程，并导致需要使主要流程和备份流程保持同步。
+    </li>
+    <li>
+        <b>系统中事件的到达模式。</b>
+        在带有外部设备或传感器的系统中，传入事件的到达模式将因传感器而异。有些事件可能是周期性的（即，以固定的时间间隔发生，时间有少量的增加或减少），也可能是非周期性的（即，以不规则的时间间隔发生）。代表生成不同事件模式的设备的活动类通常将被分配到不同的操作系统线程，带有不同的调度算法，以确保不会错过事件或处理截止期限（如果这是系统要求的话）。这种推理同样适用于封装体
+        － 当封装体在实时系统的设计中使用时适用。
+    </li>
+</ul>
+<p>
+    与许多体系结构问题一样，这些需求可能存在轻度的互斥。出现互相冲突的需求（至少一开始时）并不少见。根据需求的重要性对需求排序将有助于解决冲突。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 确定进程和线程</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyProcessesAndThreads" name="IdentifyProcessesAndThreads"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的&nbsp;</b>
+            </td>
+            <td width="95%">
+                定义将在系统中存在的进程和线程。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+     最简单的方法是将所有活动对象分配给公共线程或流程，并使用简单的活动对象调度程序，因为这样能将环境切换的开销降到最低。但是，在某些情况下，可能有必要将活动对象分布到一个或多个线程或流程之间。对大多数实时系统几乎肯定是这种情况，在实时系统中，用于代表逻辑线程的封装体有时必须满足严格的调度要求。
+</div>
+<p>
+    如果与其他活动对象共享操作系统线程的活动对象对某个其他的进程或线程发出了同步调用，而且该调用阻碍了调用对象的共享操作系统线程，那么这将自动暂挂位于调用流程中的所有其他的活动对象。现在就不一定会出现这种情况了：从活动对象的角度看是同步的调用在控制活动对象组的简单调度程序看来可能是不同步处理的
+    － 调度程序暂挂发出调用的活动对象（等待其同步调用的完成），然后调度其他活动对象运行。&nbsp;
+</p>
+<p>
+    当原始的“同步”操作完成时，发出调用的活动对象就可以恢复了。但是，这种方法并非总是可用，因为它对于以下调度程序可能不可行：这样的调度程序被设计为拦截所有同步调用（不管这些调用会不会阻塞）。请注意，使用同一个操作系统进程或线程的活动对象之间的同步调用可能（在一般情况下）会被调度程序用这种方法进行处理
+    － 而且，在发出调用的活动对象看来，在效果上与过程调用相同。
+</p>
+<p>
+    这使我们得出这样的结论：活动对象应该根据它们与阻塞线程的同步调用并发运行的需要来分组为进程或线程。也就是说，活动对象应与另一个使用阻塞线程的同步调用的对象封装到同一个进程或线程中的唯一可能是：它不需要与该对象并发执行，并且可以容忍不在其他对象受阻时执行。在极端的情况下，当响应性很关键的时候，这可能会造成有必要为每个活动对象安排独立的线程或进程。
+</p>
+<p class="reactive">
+    对于实时系统，封装体的基于消息的接口意味着能更简单地想到这样一个调度程序：它能确保（至少对于封装体之间的通信）支持的操作系统线程永远不会受阻，甚至当封装体与另一个封装体同步通信时也一样。
+    但是，封装体还是可能对操作系统直接发出会阻塞线程的请求，例如，请求同步计时等待。如果封装体要共享通用的线程（并使用简单的调度程序来模仿并行），那么对于由封装体调用的较低级别服务就必须建立约定来避免这种行为。
+</p>
+<p>
+    作为一个一般规则，在上述情形中，使用轻量级线程比使用成熟的进程更好，因为这样涉及的开销要少。但是在一些特殊的情况下，我们可能还是希望利用进程的一些特殊特征。既然线程共享同一个地址空间，它们内在地就比进程有更大的风险。如果担心意外覆盖的可能性，那么就最好选择进程。而且，因为进程在大多数操作系统中代表独立的恢复单元，所以根据活动对象彼此独立恢复的需要将它们分配给进程可能会很有用。也就是说，需要恢复为一个单元的所有活动对象都可以一起封装到同一个进程中。
+</p>
+<p>
+    请为系统需要的每一个独立的控制流创建一个进程或线程（轻量级进程）。 线程应该在需要嵌套的控制流的情况下使用（即，如果在进程内的子任务级别上需要独立的控制流）。
+</p>
+<p>
+    例如，独立的控制线程可能需要完成以下操作：
+</p>
+<ul>
+    <li>
+        区别软件不同区域之间的关系
+    </li>
+    <li>
+        利用分布式系统中的一个或多个节点中的多个 CPU
+    </li>
+    <li>
+        通过在控制线程被暂挂时将循环分配给其他活动来提高 CPU 的利用率
+    </li>
+    <li>
+        区分活动的优先顺序
+    </li>
+    <li>
+        支持数个进程和处理器之间的负载共享
+    </li>
+    <li>
+        通过拥有备份进程来实现更高的系统可用性
+    </li>
+    <li>
+        支持 DBMS、“事务管理器”或其他主要子系统。
+    </li>
+</ul>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    在自动柜员机中，必须处理来自三个不同来源的异步事件：系统的用户、ATM 设备（例如当自动取款机出现拥堵时）或者 ATM 网络（当网络发出关闭伪指令时）。要处理这些异步事件，我们可以在 ATM 本身中定义三个独立的执行线程，如下面用 UML
+    的活动类所显示。
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/proc1.gif" alt="ATM 进程和线程图" width="250" height="362" />
+</p>
+<p class="picturetext">
+    ATM 中的进程和线程
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 确定进程的生命周期</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_process__identifying_process_lifecycles" name="XE_process__identifying_process_lifecycles" class="index" key="流程（process）" text="确定通信机制"></a><a id="Identify Process Lifecycles" name="Identify Process Lifecycles"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的&nbsp;</b>
+            </td>
+            <td width="95%">
+                确定进程和线程在何时创建与销毁。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    每个控制进程或线程都必须创建和销毁。但单进程体系结构中，进程在应用程序启动时创建，在应用程序结束时销毁。 在多进程体系结构中，新的进程（或线程）一般从在应用程序启动时由操作系统创建的第一个进程中衍生或派生。这些进程也必须明确地销毁。
+</p>
+<p>
+    必须确定并记录导致进程创建和销毁的事件的顺序（以及创建和删除的机制）。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    在自动柜员机中，会启动一个负责协调整个系统的行为的主要进程。它接着衍生一些下级控制线程来监视系统的各个部分：系统中的设备以及从客户和 ATM 网络发出的事件。这些进程和线程的创建可以用 UML
+    的<b>活动类</b>来显示，而这些活动类的实例的创建可以用时序图来显示，如下所示：
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/proc2.gif" alt="系统启动进程和线程创建图" width="607" height="350" />
+</p>
+<p class="picturetext">
+    系统初始化期间进程和线程的创建
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 确定进程间的通信机制</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_process__identifying_communication_mechanisms" name="XE_process__identifying_communication_mechanisms"></a><a id="Identify Inter-Process Communication Mechanisms" name="Identify Inter-Process Communication Mechanisms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的&nbsp;</b>
+            </td>
+            <td width="95%">
+                确定进程和线程将交流的方法。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    进程间通信（IPC）机制使消息能够在独立进程中执行的对象间发送。
+</p>
+<p>
+    典型的进程间通信机制包括：
+</p>
+<ul>
+    <li>
+        <b>共享内存</b>，带或者不带确保同步的信号。
+    </li>
+    <li>
+        <b>会合</b>，特别在直接由某种语言（如 Ada）支持时
+    </li>
+    <li>
+        <b>信号</b>，用于阻止对共享资源的同时访问
+    </li>
+    <li>
+        <b>消息传递</b>，既有“点到点”的，也有“点到多点”的
+    </li>
+    <li>
+        <b>邮箱</b>
+    </li>
+    <li>
+        <b>RPC</b> － 远程过程调用
+    </li>
+    <li>
+        <b>事件广播</b> － 使用“软件总线”（“消息总线体系结构”）
+    </li>
+</ul>
+<p>
+    IPC 机制的选择将改变系统建模的方式；例如，在“消息总线体系结构”中，对象之间不需要显式关联关系就可以发送消息。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 分配进程间的协调资源</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Allocate Inter-Process Coordination Resources" name="Allocate Inter-Process Coordination Resources"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                分配稀缺资源<br />
+                 预测和管理潜在的性能瓶颈&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    进程间的通信机制一般很稀有。信号、共享内存和邮箱一般大小或数量固定，而且不花大成本就不可能增加。RPC、消息和事件广播越来越多地吸收稀缺的网络带宽。当系统超过资源阈值时，它一般会经历非线性的性能下降：一旦稀缺资源用完了，那么后来对它的请求就可能会有不尽人意的效果。
+</p>
+<p>
+    如果稀缺资源不可用，则可以考虑几个策略：
+</p>
+<ul>
+    <li>
+        通过减少进程的数量来降低对稀缺资源的需要
+    </li>
+    <li>
+        更改稀缺资源的用途（对于一个或多个进程，选择一个不同的、不太稀缺的资源用于 IPC 机制）
+    </li>
+    <li>
+        增加稀缺资源的数量（例如，增加信号的数量）。这可以对相对较小的更改执行，但往往有副作用或者有固定的限制。
+    </li>
+    <li>
+        共享稀缺资源（例如，仅在需要时分配资源，然后在用完后释放）。这样做很昂贵，而且可能只能预防资源危机。
+    </li>
+</ul>
+<p>
+    一旦部署了系统，那么不管选择了什么策略，系统都应该温和地降级（而不是崩溃），而且应该向系统管理员提供足够的反馈，使问题当场得到解决（如果可能的话）。
+</p>
+<p>
+    如果系统要求运行时环境有特殊的配置才能提高关键资源的可用性（通常由重新配置操作系统内核来控制），那么系统安装就需要自动进行特殊配置，或者指示系统管理员这么做，系统才能变得可以操作。例如，系统可能需要重新引导，更改才能生效。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 将进程映射到实施环境</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_process__map_process_onto_implementation_environment" name="XE_process__map_process_onto_implementation_environment"></a><a id="Map Processes onto the Implementation Environment" name="Map Processes onto the Implementation Environment"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                将“控制流”映射到受实施环境支持的概念上。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    概念进程必须映射到操作环境中的特定构造上。在许多环境中都可以选择进程类型，至少通常可以选择进程和线程。选择将根据耦合程度（进程是独立的，而线程在封闭进程的环境中运行）以及系统的性能要求（线程间的进程间通信一般比进程间的进程间通信更快速、更有效）来作出。
+</p>
+<p>
+    在许多系统中，每个进程可能有最大量的线程，或者每个节点有最大量的进程。这些限制可能不是绝对的，但可能是由于稀缺资源的可用性而强加的实际限制。需要考虑的是已经在目标节点上运行的线程和进程，以及进程体系结构中提议的线程和进程。较早的<a href="#Allocate Inter-Process Coordination Resources">分配进程间的协调资源</a>步骤的结果需要在映射完成时考虑，以确保没有引起新的性能问题。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 将设计元素映射到控制线程</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_process__map_design_elements_to" name="XE_process__map_design_elements_to"></a><a id="Map Design Elements To Threads of Control" name="Map Design Elements To Threads of Control"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                确定类和子系统应该在哪些控制线程内执行。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    给定的类或子系统的实例必须至少在<b>一个</b>为类或子系统提供执行环境的控制线程内执行；它们实际上可以在多个不同的进程中执行。
+</p>
+<p>
+    我们同时用两个不同的策略，就可以确定“正确”的并行量，并可以定义“正确”的进程组：
+</p>
+<h4>
+    从内到外
+</h4>
+<ol>
+    <li>
+        从“设计模型”开始，将类和子系统组成两种合作元素的集合：（a）互相紧密合作的元素以及（b）需要在同一个控制线程中执行的元素。 要考虑将元素分为独立的控制线程前将进程间通信引入消息序列中的影响。
+    </li>
+    <li>
+        相反，将根本没有相互作用的类和子系统分开，将它们放在独立的控制线程中。
+    </li>
+    <li>
+        这种群集划分将一直存在，直到进程的数量已经减到了仍能允许分布和使用物理资源的最小数量。
+    </li>
+</ol>
+<h4>
+    从外到内
+</h4>
+<ol>
+    <li>
+        确定系统必须作出响应的外部激励。定义一个独立的控制线程来处理每个激励，定义一个独立的服务器控制线程来提供每个服务。
+    </li>
+    <li>
+        考虑数据完整性和串行化约束，将这个初始控制线程集合减少到可以受执行环境支持的数量。
+    </li>
+</ol>
+<p>
+    这不是会带来最佳进程视图的线性的、确定性的过程；它要求一些迭代达到可接受的妥协。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    下图说明 ATM 中的类如何在系统中的进程和线程间分布。
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/proc3.gif" alt="ATM 类在进程和线程间的分布图" width="574" height="403" />
+</p>
+<p class="picturetext">
+    ATM 的类到进程的映射
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">概念</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/concurrency_EE2E011A.html" guid="3.5787175388799096E-305">并行</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/concurrency_3E796647.html" guid="1.5676516174458592E-304">并行</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/document_process_view_6026C17A.html" guid="{059DD277-2FC8-4977-836A-2EDAF219655F}">使用 Rational Rose 记录“流程”视图</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/describing_run_time_architecture_FCB465D9.html" guid="{C58782ED-003F-4E87-9A50-D01DDBE4A5AF}">使用 Rational XDE Developer 描述运行时体系结构</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

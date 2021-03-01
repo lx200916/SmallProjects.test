@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工作产品描述符: 数据模型</title>
+<meta content="WorkProductDescriptor" name="uma.type">
+<meta content="rup_data_model" name="uma.name">
+<meta content="数据模型" name="uma.presentationName">
+<meta content="WorkProductDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={35359DDF-6361-43E5-8B1B-18D204DA8CFF}&path={35359DDF-6361-43E5-8B1B-18D204DA8CFF},{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5},_CWXsSxi2Edq_uI8xTPML6g';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=null;
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, false, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_CWXsSxi2Edq_uI8xTPML6g"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工作产品：数据模型</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/workdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">该工件描述应用程序所使用的持久数据的逻辑表示和物理表示。如果应用程序将使用关系数据库管理系统（RDBMS），则数据模型还可以包括存储过程、触发器和约束（等等）的模型元素，这些模型元素定义了应用程序组件与 RDBMS 的交互。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="XE_data_model__as_artifact" name="XE_data_model__as_artifact"></a><a id="Top" name="Top"></a><a id="XE_data_model__purpose_of" name="XE_data_model__purpose_of"></a><a id="Purpose" name="Purpose"></a> 
+<p>
+    数据模型用于描述受系统管理的持久信息的逻辑结构和实际结构。数据模型最初可以通过对现有的持久数据存储（数据库）进行反向设计来创建，或者，可以根据<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>中的一组持久<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>来创建。
+</p>
+<p>
+    只要持久存储机制以某一非面向对象技术为基础，就需要数据模型。如果无法从设计模型中的持久类结构自动地和机械地派生出持久数据结构，就特别需要数据模型。 它用于定义持久设计类和持久数据结构之间的映射，并用于定义持久数据结构本身。
+</p>
+<p>
+    下面的属性表描述了数据模型的元素。该表中所包含的模型属性的定义与 Unified Modeling Language（UML）V1.3 规范的数据建模概要信息一致。UML V1.4 的数据建模概要元素尚未定义。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入至</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/identify_test_ideas_574E9706.html" guid="_i2N8IEohEdqrjq4i3fchvA">确定测试构想</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">外部:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="Yes" alt="Yes" height="15" width="20" src="./../../images/true.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">定制</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">说明选项</th><td class="sectionTableCell"><p>
+    UML 说明：包，构造型为 &lt;&lt;model&gt;&gt;。
+</p>
+<p>
+    <strong>数据模型</strong>可能有以下属性<strong>属性</strong>：&nbsp;
+</p>
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody valign="top">
+            <tr>
+                <td width="20%">
+                    <p class="tableheading">
+                        <b>属性名</b>
+                    </p>
+                </td>
+                <td width="40%">
+                    <p class="tableheading">
+                        <b>简要描述</b>
+                    </p>
+                </td>
+                <td width="40%">
+                    <p class="tableheading">
+                        <b>UML 说明</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    简介
+                </td>
+                <td width="40%">
+                    文本描述，作为对模型的简介。
+                </td>
+                <td width="40%">
+                    “短文本”类型的标注值。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    包
+                </td>
+                <td width="40%">
+                    用于组织分组的包。
+                </td>
+                <td width="40%">
+                    通过关联“表示”拥有，或通过聚集“拥有”递归地拥有。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    表
+                </td>
+                <td width="40%">
+                    数据模型中的表，由包所拥有。
+                </td>
+                <td width="40%">
+                    类，构造型为 «Table»。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    关系
+                </td>
+                <td width="40%">
+                    模型中各表之间的简单关联。
+                </td>
+                <td width="40%">
+                    关联，构造型为 «Non-Identifying»
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    稳固关系
+                </td>
+                <td width="40%">
+                    模型中各表之间的组装关系。
+                </td>
+                <td width="40%">
+                    关联，构造型为 «Identifying»
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    依赖关系（视图对表）
+                </td>
+                <td width="40%">
+                    表、视图和其他模型元素之间的依赖关系
+                </td>
+                <td width="40%">
+                    依赖关系，对表和视图之间的依赖关系，构造型为 «Derive»
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    列
+                </td>
+                <td width="40%">
+                    表的数据值。
+                </td>
+                <td width="40%">
+                    属性，构造型为 «Column»。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    域
+                </td>
+                <td width="40%">
+                    用户定义的数据类型。
+                </td>
+                <td width="40%">
+                    类，构造型为 «Domain»。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    视图
+                </td>
+                <td width="40%">
+                    虚拟表，由一个或更多表的列组成。
+                </td>
+                <td width="40%">
+                    类，构造型为 «View»。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    图
+                </td>
+                <td width="40%">
+                    模型中的图，由包所拥有。
+                </td>
+                <td width="40%">
+                    描绘表及其关系的类图，以及描绘模型中的表到表空间组件和数据库组件的实现的组件图。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    索引
+                </td>
+                <td width="40%">
+                    数据访问结构，用于加快沿指定路径的访问。
+                </td>
+                <td width="40%">
+                    操作，构造型为 «Index»。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    触发器
+                </td>
+                <td width="40%">
+                    与表相关联的、事件激活的行为。
+                </td>
+                <td width="40%">
+                    操作，构造型为 «Trigger»。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    检查约束
+                </td>
+                <td width="40%">
+                    关于列或表的验证规则。可以由某一范围内的有效值或计算结果组成。
+                </td>
+                <td width="40%">
+                    操作，构造型为 «Check»。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    唯一性约束
+                </td>
+                <td width="40%">
+                    指定一列或数列中的数据不得重复。
+                </td>
+                <td width="40%">
+                    操作，构造型为 «Unique»。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    存储过程包
+                </td>
+                <td width="40%">
+                    类，用作存储过程操作的“容器”
+                </td>
+                <td width="40%">
+                    类，构造型为 «SP_Container»
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    存储过程&nbsp;
+                </td>
+                <td width="40%">
+                    显式调用的行为，与表或与整个模型相关联。
+                </td>
+                <td width="40%">
+                    操作，构造型为 «SP»。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    模式&nbsp;
+                </td>
+                <td width="40%">
+                    表示数据库整体结构的数据模型元素容器。用于管理表的安全性和所有权。
+                </td>
+                <td width="40%">
+                    包，构造型为 «Schema»。
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    数据库
+                </td>
+                <td width="40%">
+                    代表实际数据库的模型元素
+                </td>
+                <td width="40%">
+                    组件，构造型为 «Database»
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    表空间
+                </td>
+                <td width="40%">
+                    数据库中的实际存储单元
+                </td>
+                <td width="40%">
+                    组件，构造型为 «Tablespace»
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    <a id="Tailoring" name="Tailoring"></a>
+</p>
+<p>
+    对于几乎没有持久数据的项目，或者具有从设计类到持久机制的直接了当转换的项目，可能不需要单独的数据模型。对于为了持久性而利用 RDBMS 的项目，将需要定制数据模型来实现底层数据库的特定语义，这种语义可能因 RDMBS 而稍有变化。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">核对表</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/checklists/data_model_D22985A5.html" guid="2.800761632096845E-305">数据模型</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/data_model_80FB2539.html" guid="3.4196799396281445E-306">数据模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/reverse-engineering_relational_databases_902803B8.html" guid="1.338740134620651E-305">反向设计关系数据库</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/forward-engineering_relational_databases_53C0441E.html" guid="5.250868507423771E-305">正向设计关系数据库</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

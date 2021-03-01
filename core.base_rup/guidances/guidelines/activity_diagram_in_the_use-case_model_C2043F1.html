@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 用例模型中的活动图</title>
+<meta content="Guideline" name="uma.type">
+<meta content="activity_diagram_in_the_use-case_model" name="uma.name">
+<meta content="用例模型中的活动图" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{B1526BC5-E346-42CB-A08A-3C0D7F382407}", "7.230899877161861E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "7.230899877161861E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.230899877161861E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：用例模型中的活动图</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">活动图可表示用例中的流程。该指南描述了如何在此情况下使用活动图。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/detail_a_use_case_D9BECBF4.html" guid="{536BC669-A8FB-426D-88FF-CBEA806A9066}">详细描述用例</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<p>
+    用例的事件流描述为了向参与者提供价值，系统需要完成的工作。它由一系列任务组成，这些任务一起为参与者产生某些结果。事件流由基本流以及一个或若干备选流组成。
+</p>
+<p>
+    使用活动图有助于以图形化的方式描述用例的事件流。这样的图显示：
+</p>
+<ul>
+    <li>
+        <b>活动状态</b>，代表事件流中的任务或步骤的执行情况。
+    </li>
+    <li>
+        <a id="XE_transition_(in_activity_diagrams)__in_business_use-case_model" name="XE_transition_(in_activity_diagrams)__in_business_use-case_model" class="index" key="transition (in activity diagrams)" text="in business use-case model"></a><b>转移</b>，显示活动状态的先后顺序。此类转移有时称为完全转移，因为它与转移不同：它不要求显式触发事件，它由活动状态表示的任务完成来触发。
+    </li>
+    <li>
+        <a id="XE_decision_(in_activity_diagrams)__business_use-case_model" name="XE_decision_(in_activity_diagrams)__business_use-case_model" class="index" key="decision (in activity diagrams)" text="business use-case model"></a><b>决策</b>，为其定义了一组<b>警戒条件</b>。这些警戒条件控制一旦任务完成后所遵循的（一组备选转移中的）某一转移。决策和警戒条件使您能够在用例的事件流中显示
+        <b>可选线程</b>。
+    </li>
+    <li>
+        <b>同步条</b>，可以使用它们显示并行子流。同步条使您能够在用例的事件流中显示<b>并发线程</b>。
+    </li>
+</ul>
+<p align="center">
+    <img height="495" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_act.gif" width="510" />
+</p>
+<p class="picturetext">
+    自动柜员机（ATM）的用例模型中的用例“回撤资金”的简化活动图。
+</p>
+<p>
+    活动图是状态表图的特殊情况，其所有或大部分状态都是活动状态，其中所有或大部分的转移由源状态中的操作完成而触发。<br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

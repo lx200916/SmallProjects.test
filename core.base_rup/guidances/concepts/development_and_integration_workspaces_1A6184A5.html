@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 开发和集成工作空间</title>
+<meta content="Concept" name="uma.type">
+<meta content="development_and_integration_workspaces" name="uma.name">
+<meta content="开发和集成工作空间" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{502B4138-0772-4A4E-A183-C647497AFCB8}", "1.2252946942508563E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{502B4138-0772-4A4E-A183-C647497AFCB8}", "1.2252946942508563E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "1.2252946942508563E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.2252946942508563E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：开发和集成工作空间</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南讨论了供单个实施者使用的开发工作空间，以及供实施者团队专用于集成单个团队成员工作的集成工作空间。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_integrator_284A604C.html" guid="{502B4138-0772-4A4E-A183-C647497AFCB8}">集成人员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<p>
+    通常由一个协同和并行工作的各个实施者组成的团队来实施系统。为使这成为可能，需要以下几个工作空间：
+</p>
+<ul>
+    <li>
+        各个实施者的<a href="#Development_Workspace">开发工作空间</a>
+    </li>
+    <li>
+        <a href="#Integration_Workspace_for_the_Team">团队的子系统集成工作空间</a>
+    </li>
+    <li>
+        系统级别的<a href="#Integration_Workspace_for_Integrators_at_the_System_Level">集成人员的系统集成工作空间</a>
+    </li>
+</ul>
+<h3>
+    <a id="XE_development_area" name="XE_development_area" class="index" key="开发区域（development area）"></a><a id="XE_configuration_management__development_area" name="XE_configuration_management__development_area" class="index" key="配置管理（configuration management）" text="开发区域"></a><a id="Development_Workspace" name="Development_Workspace"></a>开发工作空间
+</h3>
+<p>
+    各个实施者有一个开发工作空间，他们可以在这里实施他们所负责的子系统以及其中包含的元素。为编译、链接、执行和测试子系统中的代码，需要系统的其他部件。通常实施者不需要整个系统以开发他们的子系统。通常有编译、链接和执行开发工作空间中的子系统所需的子系统就足够了。其他那些子系统不需要驻留在任何实施者的专用开发工作空间中（作为物理副本）。它们可以与内部发行的子系统一起驻留在公共存储库中。当实施者编译其他子系统的准确位置时，它在单独的文件（例如，makefile）中定义。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    月度帐户电话子系统（在银行系统中）需要由某个子系统直接或间接导入的子系统以编译、链接和执行其元素。在此情况中，月度帐户电话子系统的实施者将需要十个子系统中的六个。
+</p>
+<p class="picturecenter" align="center">
+    <img height="444" alt="在内容中描述了该图。" src="./../../../core.base_rup/guidances/concepts/resources/co_dvin1.gif" width="611" />
+</p>
+<p class="picturetext">
+    月度帐户电话子系统的实施者的开发工作空间
+</p>
+<h3>
+    <a id="XE_integration_area" name="XE_integration_area" class="index" key="集成区域（integration area）"></a><a id="XE_configuration_management__integration_area" name="XE_configuration_management__integration_area"></a><a id="Integration_Workspace_for_the_Team" name="Integration_Workspace_for_the_Team"></a>团队的集成工作空间
+</h3>
+<p>
+    有时可能有一个由同时开发同一子系统的实施者组成的团队。在此情况中，在可以传播子系统以进行系统集成之前，实施者需要将他们的元素集成到该子系统中。团队集成通常在<b>子系统集成工作空间</b>中完成，该工作空间专门用于各个团队成员的工作的集成。一名团队成员作为集成者，负责集成工作空间及其性能。
+</p>
+<h3>
+    <a id="XE_integration_workspace_integrators" name="XE_integration_workspace_integrators" class="index" key="集成工作空间集成人员（integration workspace integrators）"></a><a id="Integration_Workspace_for_Integrators_at_the_System_Level" name="Integration_Workspace_for_Integrators_at_the_System_Level"></a>系统级别的集成人员的集成工作空间
+</h3>
+<p>
+    系统集成者有一个集成工作空间，在该工作空间中他们可以在某些时候添加一个或多个软件元素或一个或多个子系统，从而创建工作版本，然后对这些工作版本进行集成测试。
+</p>
+<p class="picturecenter" align="center">
+    <img height="171" alt="在内容中描述了该图。" src="./../../../core.base_rup/guidances/concepts/resources/co_dvin2.gif" width="501" />
+</p>
+<p class="picturetext">
+    系统集成者的集成工作空间，每次增加集成时在这里添加子系统
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

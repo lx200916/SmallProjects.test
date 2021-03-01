@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 包含关系</title>
+<meta content="Guideline" name="uma.type">
+<meta content="include-relationship" name="uma.name">
+<meta content="包含关系" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "7.259881398615376E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "7.259881398615376E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "7.259881398615376E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "7.259881398615376E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="7.259881398615376E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：包含关系</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">包含关系将基本用例和包含用例连接起来。本指南说明如何使用此关系。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_use_case_model_93D8F44.html" guid="{F7D9D038-B184-43CC-9353-15BA154F87B5}">构造用例模型</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">用例模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_include-relationship__guidelines_for" name="XE_include-relationship__guidelines_for"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">说明</a>
+</h3>
+<p>
+    包含关系将基本用例和包含用例连接起来。包含用例始终是抽象的。它描述一个行为段，该行为段要插入到执行基本用例的用例实例中。基本用例控制着与包含用例的关系，并可能依靠执行包含用例的结果，但基本用例和包含用例均不能访问对方的属性。
+    包含用例是以这种意义封装起来的，且代表了可在不同的基本用例中重用的行为。
+</p>
+<p>
+    您可以使用包含关系：
+</p>
+<ul>
+    <li>
+        从基本用例中抽出行为，该行为对于理解该用例的主要用途并不是必需的，而只有行为的结果是重要的。
+    </li>
+    <li>
+        抽出两个以上用例中的公共行为。
+    </li>
+</ul>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    在 ATM 系统中，用例“取出现金”、“存入现金”和“转帐”都需要包括如何将客户标识到系统。 该行为可以抽取到一个称为“标识客户”的新包含用例中，而以上三个基本用例均包含此用例。 这些基本用例不依赖于标识方法，因此该方法封装在包含用例中。
+    从基本用例的角度来看，它们并不关心标识方法是读取银行磁卡还是执行视网膜扫描。 它们只依赖于“标识客户”的结果，即客户的身份。 反之亦然，从“标识客户”用例的角度来看，不管基本用例如何使用客户身份，或者在执行包含之前基本用例发生了什么 －
+    标识方法仍是全然一样的。
+</p>
+<p align="center">
+    <img height="150" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/include1.gif" width="289" />
+</p>
+<p class="picturetext">
+    在 ATM 系统中，用例“取出现金”、“存入现金”和“转帐”都包含用例“标识客户”。
+</p>
+<p>
+    一个基本用例可以包含多项。一个包含用例可以包含在多个基本用例中。这并不表示这些基本用例之间有任何关系。 甚至在同一个包含用例和基本用例之间也可以有多个包含关系，前提是包含项插入到基本用例中的不同位置。位置由包含关系定义。
+    所有添加项均可以嵌套，这意味着一个包含用例可以充当另一个包含用例的基本用例。
+</p>
+<p>
+    由于包含用例是抽象的，因此它不需要有与之关联的参与者。 只有在包含用例中的行为明确涉及到与某一参与者的交互的情况下，才需要与参与者的通信关联。
+</p>
+<h3>
+    <a id="Executing the Inclusion" name="Executing the Inclusion">执行包含用例</a>
+</h3>
+<p>
+    包含用例的行为会插入到基本用例中的一个位置。如果遵循某一基本用例描述的某一用例实例到达基本用例中的某个位置，从该位置定义包含关系，该用例实例将转而遵循该包含用例的描述。 一旦执行了包含用例，该用例实例将从它在基本用例中停止的位置重新继续。
+</p>
+<p align="center">
+    <img height="224" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/include2.gif" width="307" />
+</p>
+<p class="picturetext">
+    遵循基本用例（包括其包含用例）描述的用例实例。
+</p>
+<p>
+    包含关系是无条件的：如果用例实例到达某一基本用例（该用例实例是为其定义的）中的位置，则始终执行该用例实例。 如果要表达一个条件，则需要将其作为基本用例的一部分来表达。如果用例实例从未到达定义了包含关系的位置，则不会执行该用例实例。
+</p>
+<p align="center">
+    <img height="224" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/include3.gif" width="307" />
+</p>
+<p class="picturetext">
+    用例实例 #1 到达基本用例中定义了包含关系的位置，执行该包含用例。 用例实例 #2 不到达该位置，因此包含用例不会作为该实例的一部分执行。
+</p>
+<p>
+    包含用例是一个连续的行为段，其中的所有行为均包含在基本用例中的一个位置。 如果您有需要插入到不同位置的几个单独行为段，则应转而考虑扩展关系（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">工作产品指南：扩展关系</a>）或用例泛化关系（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_generalization_B301F53B.html" guid="3.7061366529594173E-305">工作产品指南：用例泛化关系</a>）。
+</p>
+<h3>
+    <a id="Describing the Include-Relationship" name="Describing the Include-Relationship">描述包含关系</a>
+</h3>
+<p>
+    对于包含关系，您应在基本用例的行为序列中定义要插入包含用例的位置。 可通过引用特定的步骤或引用基本用例的事件流内的子流来定义该位置。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    在 ATM 系统中，用例“取出现金”包含用例“标识客户”。从“取出现金”到“标识客户”的包含关系可描述如下：
+</p>
+<p class="example">
+    “标识客户”插入到“取出现金”的事件流中第 1.1 部分“用例开始”和第 1.2 部分“要求金额”之间。
+</p>
+<p>
+    为了清楚起见，您还应在描述基本用例的事件流的文本中提及该包含用例。
+</p>
+<h3>
+    <a id="Example of Use" name="Example of Use">使用示例</a>
+</h3>
+<p>
+    如果用例中有这样一个行为段，您能看到该用例不依赖于执行功能的方式，而是依赖于功能的结果，则您可以简化该用例，方法是将此行为抽取到一个包含用例中。 该包含用例可以包含在多个基本用例中，这意味着允许您在模型的多个用例中重用行为。
+    对于简单电话系统的用例，考虑以下分步概述：
+</p>
+<h4>
+    拨打电话
+</h4>
+<ol>
+    <li>
+        致电者拿起话筒。
+    </li>
+    <li>
+        系统发出拨号音。
+    </li>
+    <li>
+        致电者拨一个数字。
+    </li>
+    <li>
+        系统关闭拨号音。
+    </li>
+    <li>
+        致电者拨出号码的剩余数字。
+    </li>
+    <li>
+        系统分析数字，确定接收方的网络地址。
+    </li>
+    <li>
+        <font color="#0000ff">系统确定致电者和接收方之间是否能建立虚电路。</font>
+    </li>
+    <li>
+        <font color="#0000ff">系统为虚电路分配所有资源，并建立连接。</font>
+    </li>
+    <li>
+        系统使接收方电话发出响铃。
+    </li>
+    <li>
+        等等。
+    </li>
+</ol>
+<h4>
+    <b>启动系统</b>
+</h4>
+<ol>
+    <li>
+        操作员激活系统。
+    </li>
+    <li>
+        系统对所有组件执行诊断测试。
+    </li>
+    <li>
+        系统测试所有相邻系统的连接。对于每个相邻系统，<font color="#0000ff">系统确定了在其自身和相邻系统间是否能建立虚电路。系统为虚电路分配所有资源，并建立连接。</font>
+    </li>
+    <li>
+        系统发出响应，表示准备就绪，可以进行操作。
+    </li>
+    <li>
+        等等。
+    </li>
+</ol>
+<p>
+    以蓝色列出的文本很类似；我们在这两种情况下执行相同的行为，而执行的原因却大相径庭。 可以利用这种相似性，并将共同的行为抽取到新用例中，称为“管理虚电路”。
+</p>
+<p>
+    一旦抽取了共同的行为，用例就变成：
+</p>
+<h4>
+    <b>拨打电话</b>
+</h4>
+<ol>
+    <li>
+        致电者拿起话筒。
+    </li>
+    <li>
+        系统发出拨号音。
+    </li>
+    <li>
+        致电者拨一个数字。
+    </li>
+    <li>
+        系统关闭拨号音。
+    </li>
+    <li>
+        致电者拨出号码的剩余数字。
+    </li>
+    <li>
+        系统分析数字，确定接收方的网络地址。
+    </li>
+    <li>
+        包含“管理虚电路”用例，以在网络内建立连接。
+    </li>
+    <li>
+        系统使接收方电话发出响铃。
+    </li>
+    <li>
+        等等。
+    </li>
+</ol>
+<h4>
+    <b>启动系统</b>
+</h4>
+<ol>
+    <li>
+        操作员激活系统。
+    </li>
+    <li>
+        系统对所有组件执行诊断测试。
+    </li>
+    <li>
+        系统测试所有相邻系统的连接。对于每个相邻系统（环），包含“管理虚电路”以建立与网络的连接。
+    </li>
+    <li>
+        系统发出响应，表示准备就绪，可以进行操作。
+    </li>
+    <li>
+        等等。
+    </li>
+</ol>
+<p>
+    在用例图中，已创建的包含关系将作如下说明：
+</p>
+<p class="picturecenter" align="center">
+    <img height="157" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/include4.gif" width="213" />
+</p>
+<p class="picturetext">
+    用例“拨打电话”和“启动系统”都包含抽象用例“管理虚电路”的行为。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

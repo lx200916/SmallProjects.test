@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务描述符: 体系结构分析</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="architectural_analysis" name="uma.name">
+<meta content="体系结构分析" name="uma.presentationName">
+<meta content="_MTlO8EocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="软件设计人员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{C67C8E56-D9B6-499C-8171-C153FB28F1C3},_MTlO8EocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNR0JHEdq4z9xc-r201w", "_vCtaiEJHEdq4z9xc-r201w", "_sdeCMZ4_Edq7s5zuJVEAAw", "_MTlO8EocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_vyZOwCVuEdqSZ9OimJ-AzA", "_o3nZoSFrEdqrX8YVzvtlIg", "_3-OYICGGEdqMcovRzkCQow", "_MTlO8EocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNR0JHEdq4z9xc-r201w", "_vCtaiEJHEdq4z9xc-r201w", "_sdeCMZ4_Edq7s5zuJVEAAw", "_MTlO8EocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_MTlO8EocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：体系结构分析</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务侧重于定义备选体系结构和限制系统所采用的体系结构技术。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<ul>
+    <li>
+        根据从类似系统或在类似问题域中获得的经验定义系统的候选体系结构。
+    </li>
+    <li>
+        定义系统的体系结构模式、关键机制和建模约定。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">主要:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architect_7BC72353.html" guid="_COQSHxi2Edq_uI8xTPML6g">软件设计人员</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">其他:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">辅助:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_glossary_4722114C.html" guid="_COQSIRi2Edq_uI8xTPML6g">词汇表</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_risk_list_35BB2562.html" guid="_COQSIhi2Edq_uI8xTPML6g">风险列表</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_vision_3C84313C.html" guid="_COQSIBi2Edq_uI8xTPML6g">远景</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_supplementary_specification_D045D58A.html" guid="_COQSKRi2Edq_uI8xTPML6g">补充规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_40590572.html" guid="_COQSIxi2Edq_uI8xTPML6g">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_FA4D0781.html" guid="_COQSJhi2Edq_uI8xTPML6g">设计模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_architectural_proof_of_concept_BB3F36B.html" guid="_COQSJRi2Edq_uI8xTPML6g">体系结构概念验证</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_reference_architecture_116135B.html" guid="_COQSJBi2Edq_uI8xTPML6g">引用体系结构</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_usecase_model_4EAE791.html" guid="_COQSJxi2Edq_uI8xTPML6g">用例模型</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">外部:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_deployment_model_BEDEE9A0.html" guid="_COQSKhi2Edq_uI8xTPML6g">部署模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_analysis_model_5FDDD71A.html" guid="_hVvqkEaBEdqUkdzVfCuHXg">分析模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_40590572.html" guid="_COQSIxi2Edq_uI8xTPML6g">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_FA4D0781.html" guid="_COQSJhi2Edq_uI8xTPML6g">设计模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    <a id="XE_modeling_conventions__defining" name="XE_modeling_conventions__defining" class="index" key="建模约定（modeling conventions）" text="定义"></a>体系结构分析侧重于定义候选体系结构以及限制系统中将使用的体系结构方法。它依赖于收集类似系统或问题域中获得的经验来限制并集中体系结构，使工作不要浪费在体系结构重新发现上。在已经有很好定义的体系结构的系统中，体系结构分析可以省略；体系结构分析主要在开发新的和没有先例的系统时很有用。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> 编写体系结构概述</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Develop Architecture Overview" name="Develop Architecture Overview"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td>
+                通过探索并评估高级别体系结构选项来协助系统预测。&nbsp;<br />
+                 较早地将对目标系统的高级别结构的理解传达给资助者、开发团队和其他项目干系人。
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    体系结构概述在项目生命周期的早期创建，可能早在先启阶段就创建。它反映早期的决策以及对实施远景的有效假设，以及关于物理和逻辑体系结构的决策和系统的非功能要求。
+    它由软件设计人员（通常与项目资助者合作）制作，采用的形式是非正式的、有丰富图片的故事板或形象图。从概念上讲，它说明提议的解决方案的基本性质，传递主要思想并包含主要构造块。体系结构概述的正式程度视具体的项目而定。例如，在较大的、正式度较高的项目中，可能有必要在“软件体系结构”文档的适当部分记录体系结构概述，这样它就可以接受正式复审。
+</p>
+<p>
+    此时，体系结构概述是临时的初审。在可执行体系结构原型已经使体系结构（包括设计、实施和部署问题）有效前，请不要根据体系结构概述图付诸实施。
+</p>
+<p>
+    请考虑根据参考体系结构、其他<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/software_architecture_4269A354.html#Architectural Patterns" guid="3.066252221588648E-305">体系结构模式</a>或其他体系结构资产来创建体系结构。
+</p>
+<p>
+    考虑您是否要优化并维护体系结构概述图以充当交流载体。
+</p>
+<p>
+    许多系统都被限制在现有的硬件和软件环境中进行开发和部署；对于这些系统，软件设计人员将收集关于当前环境的信息。
+</p>
+<p>
+    例如，在电子商务系统开发中，以下信息是相关的：
+</p>
+<ul>
+    <li>
+        现有网络的逻辑和物理设计
+    </li>
+    <li>
+        现有的数据库和数据库设计
+    </li>
+    <li>
+        现有的 Web 环境（服务器、防火墙等等）
+    </li>
+    <li>
+        现有的服务器环境（配置、软件版本、计划的升级）
+    </li>
+    <li>
+        现有的标准（网络、命名、协议等等）
+    </li>
+</ul>
+<p>
+    这样的信息可以用文本的形式记录，也可以记录在<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_deployment_model_57DF1DF5.html" guid="{5981B6BE-2FD1-4984-AA94-2F7428439BA6}">部署模型</a>中。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 调查可用资产</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Survey Available Assets" name="Survey Available Assets"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>目的</b>
+            </td>
+            <td colspan="2" width="95%">
+                确定可能与项目相关的资产。<br />
+                 分析资产与项目要求之间的适合情况和差距。<br />
+                 决定是否将系统的领域基于资产之上。<br />
+                 找到并列出可能可以在项目中重复使用的资产。<br />
+                 执行初步的评估，以确保潜在可获得必要的支持。
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    您需要了解考虑资产的环境的要求以及要求的系统范围和一般功能。在组织资产库和行业资料中搜索，找到资产或类似的项目。有几类资产需要考虑，如（但不限于）行业模型、框架、类和经验。您将需要评估可用的资产是否有助于解决当前项目的关键挑战，以及它们是否与项目的约束兼容。
+</p>
+<p>
+    您将希望分析资产和客户需求之间的适合程度，考虑是不是有可以协商的需求（以使资产可用）。
+</p>
+<p>
+    请确保您确实评估了是否可以修改或扩展资产以满足需求，以及会有怎样的代价（从采用资产的成本、风险和功能的角度）。
+</p>
+<p>
+    最后，您还需要大体上决定是否使用一个或多个资产并记录这一决策的理由。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 定义子系统的高层组织</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_design_subsystem__defining_high-level_organization_of" name="XE_design_subsystem__defining_high-level_organization_of" class="index" key="设计子系统（design subsystem）" text="定义高级别组织"></a><a id="Define the High-Level Organization of Subsystems" name="Define the High-Level Organization of Subsystems"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>目的</b>
+            </td>
+            <td colspan="2">
+                创建“设计模型”的初始结构。
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    当重点为在先启阶段执行体系结构合成时，此任务不包括此步骤。
+</p>
+<p>
+    一般情况下，设计模型是分层组织的 － 常见的<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/software_architecture_4269A354.html#Architectural Patterns" guid="3.066252221588648E-305">体系结构模式</a>，以适合大中型系统。层数不是固定的，但各个情况下都不相同。
+</p>
+<p>
+    在体系结构分析期间，您通常关注两个高级层，即<b>应用</b>和<b>特定于业务</b>层。这就是<i>子系统的高级别组织</i>的意义。其他的较低层次在<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/incorporate_design_elements_D3C582B5.html" guid="{5C647173-4E32-4594-96A9-2548B47722FA}">任务：合并现有的设计元素</a>中考虑。如果您使用的是特定的体系结构模式，子系统围绕着该模式的体系结构模板进行定义。
+</p>
+<p>
+    有关分层的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/layering_FCCD1BDA.html" guid="4.458864982057142E-306">工作产品指南：分层</a>。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 确定关键抽象</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_key_concepts__identifying" name="XE_key_concepts__identifying"></a><a id="Identify Key Concepts" name="Identify Key Concepts"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>目的</b>
+            </td>
+            <td>
+                确定系统必须处理的关键抽象概念（即业务建模任务（如果可用）和需求任务中确定的概念），为分析作准备。
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    当重点为执行体系结构合成时，必须执行这一步骤并达到适当程度，以指导软件设计人员为构造<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_architectural_proof_of_concept_9AF95095.html" guid="{198EA2A5-4FBA-45D5-85BA-53B108728534}">工作产品：体系结构概念验证</a>选择资产，以及支持代表性的使用方案。
+</p>
+<p>
+    业务建模任务（如果可用）和需求任务通常会揭示系统必须能够处理的关键概念；这些概念自我表明为关键的设计抽象。因为已经完成了确定，所以没有必要在<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">任务：用例分析</a>中再重复确定工作。
+</p>
+<p>
+    您可以通过确定初步实体分析类，利用现有的知识，根据系统的一般知识（如“要求”、<b>词汇表</b>，特别是<b>域模型</b>或者<b>业务分析模型</b>（如果您有的话））来代表这些关键抽象。
+</p>
+<p>
+    当您定义关键抽象时，请同时定义实体类之间存在的任何关系。 在一个或数个类图中展示关键抽象，并为每个抽象创建一个简短描述。根据域以及系统的新颖程度，可能已有现存的<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/analysis_pattern_86D515F0.html" guid="_x613Q9nmEdmO6L4XMImrsA"><b>分析模式</b></a>，它记录了系统建模所需的许多关键抽象概念。 使用这样的模式（应该已经在域中成功使用）将大大减轻了确定必须表示的重要概念的智力负担。 [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#FOW97a" guid="7.755968586980351E-308">FOW97a</a>] 展示一些分析模式，这些分析模式可以立即用于业务系统建模，但可能也可以在其他环境中应用。 另一个示例是“Object Management
+    Group”（OMG），它也尝试通过其“领域技术委员会”及其相关的任务工作组的工作为许多领域定义接口和协议。 这一工作不可避免地会引向确定领域中的重要抽象。
+</p>
+<p>
+    此时确定的分析类将可能在项目过程中发生更改和演变。本步骤的目的不是为了确定一组能在设计过程中存留下来的类，而是确定系统必须处理的关键概念。不要在这个初始阶段花太多时间详细描述实体类，因为存在这样的风险：您将确定的类和关系实际上并不是用例所需要的。请记住，您在查看用例时将找到更多的实体类和关系。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 确定定型的交互</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Identify Stereotypical Interactions" name="Identify Stereotypical Interactions"></a>
+<p>
+    仅当在“先启”阶段执行本任务时，才包括该步骤。
+</p>
+<p>
+    本步骤的目的是确定系统中关键抽象之间的、这样的交互：这些交互可以表现系统中的重要种类的活动的特征，或者能够成为它们的代表。这些交互作为“用例实现”被记录。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 编写部署概述</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Develop Deployment Overview" name="Develop Deployment Overview"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <p align="left">
+                    <b>目的</b>
+                </p>
+            </td>
+            <td>
+                为评估实施系统的生存能力提供基础。<br />
+                 获得对系统的地理分发和操作复杂性的了解。<br />
+                 为早期工作和成本估算提供基础。
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    制作关于软件如何部署的高级别概述。例如，确定系统是否需要进行远程访问，或者是否有暗示跨多个节点分发的要求。要考虑的一些信息来源有：
+</p>
+<ul>
+    <li>
+        用户（在位置上），在“用户概要文件”（“远景”中）和用例（“用例模型”中）中定义
+    </li>
+    <li>
+        业务数据的组织（如果可用，则在“业务分析模型”和“设计模型”中）
+    </li>
+    <li>
+        服务级别要求（在“附加规范”中）
+    </li>
+    <li>
+        约束（在“附加规范”中，例如与旧系统对接的要求）
+    </li>
+</ul>
+<p>
+    如果要求不一般的分发系统，那么就可以使用“部署模型”来记录节点之间的关系。这应该包括临时给节点分配组件和数据，以及表明用户如何访问那些要访问数据的组件。节点和连接的详细规范被延迟 －
+    除了它们对于估计或评估生存能力非常重要的场合以外。可以使用现有的资产（如果有合适的资产）。虽然这是项目中制作的第一个部署模型，而且它是快速地、在较高级别制作的，但是它还是可能会确定实际的硬件和软件产品（如果它们是已知的话，或者如果此时作出这些选择决策很重要的话）。
+</p>
+<p>
+    验证部署模型支持执行典型用例的用户（特别是远程用户 － 如果要求的话），而同时能满足非功能要求和约束。 验证节点和连接足够支持不同节点上的组件之间以及组件和它们存储的数据之间的交互。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 确定分析机制</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_analysis_mechanisms__identifying" name="XE_analysis_mechanisms__identifying" class="index" key="分析机制（analysis mechanisms）" text="确定"></a><a id="Identify Analysis Mechanisms" name="Identify Analysis Mechanisms"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td colspan="2" width="5%">
+                <b>目的</b>
+            </td>
+            <td>
+                定义设计人员用来对他们的对象赋予“生命”的分析机制和服务。
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    当重点为在先启阶段执行体系结构合成时，此任务不包括此步骤。
+</p>
+<p>
+    分析机制可用自上而下（演绎法）或者自下而上（进展中发现）的方法来确定。在自上而下模式中，经验让软件设计人员知道领域中存在某些问题，需要有某些种类的解决方案。在分析期间可能会表现为机制的常见体系结构问题的示例有：持久性、事务管理、故障管理、消息传递和推理引擎。所有这些问题的共同方面是每一个都是广泛的系统类的一般功能，而且每一个提供的功能都能与基本的应用程序功能交互或者支持基本的应用程序功能。分析机制支持系统的基本功能要求中要求的功能，而不管它的部署平台或实施语言是什么。分析机制也可以用许多不同的方法进行设计和实施；一般情况下，会有多个设计机制与每个分析机制相对应，而且可能会有多种方法实施每个设计机制。
+</p>
+<p>
+    自下而上的方法用在分析机制最终生成的地方 －
+    当软件设计人员看见（也许一开始很微弱）各种问题的一组解决方案中显露出一个共同的主题时，分析机制得以创建。有必要提供让不同线程中的元素将它们的时间同步的方法，也有必要有分配资源的共同方法。简化分析语言的分析机制从这些模式中显露出来。
+</p>
+<p>
+    确定分析机制意味着您确定存在着一个共同的、可能是暗含的（即系统要求暗示）子问题，并且您将它命名。一开始，名称可能就是现有的名称；例如软件设计人员认识到系统将要求一个持久性机制。最后，该机制将通过<i>类集</i>的协作来实施（请参阅
+    [<a class="elementLinkWithUserText" href="./../../core.base_rup/customcategories/references_56F06DFD.html#BOO98" guid="7.755968586980351E-308">BOO98</a>]），其中一些类不直接提供应用程序功能，它们的存在只是为了支持机制。 这些支持类经常位于分层体系结构的中低层，从而向所有应用程序级别的类提供共同的支持服务。
+</p>
+<p>
+    如果确定的子问题足够普通，那么或许会存在一个<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/pattern_E76690AA.html" guid="_yPtUDNnmEdmO6L4XMImrsA">模式</a>，机制可以从该模式实例化 －
+    通过绑定现有的类并根据模式的要求实施新的类。用这种方式制作的分析机制将是抽象的，并需要在设计和实施中进一步改进。
+</p>
+<p>
+    关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">概念：分析机制</a>。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 复审结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Review the Results" name="Review the Results"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                确保体系结构分析结果的完整性和一致性。
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    如“体系结构分析”作出的结论那样，复审已经确定的体系结构机制、子系统、程序包和类，以确保它们的完整性和一致性。因为“体系结构分析”的结果是初步的，并且相对不太正式，因此复审也应该是不正式的。
+    场景或用例可以用于验证在数个级别作出的体系结构选择 － 从业务透视图向下直到发生的具体交互。
+</p>
+<p>
+    有关评估此任务的结果的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/checklists/software_architecture_document_D261D8F3.html#Architectural Analysis Considerations" guid="7.634303669338443E-306">核对表：软件体系结构文档 － 体系结构分析考虑事项</a>。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_多次出现" abbr="多次出现">多次出现</th><td align="left" class="sectionTableCell" headers="property_多次出现"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_事件驱动" abbr="事件驱动">事件驱动</th><td align="left" class="sectionTableCell" headers="property_事件驱动"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_正在进行" abbr="正在进行">正在进行</th><td align="left" class="sectionTableCell" headers="property_正在进行"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可重复" abbr="可重复">可重复</th><td align="left" class="sectionTableCell" headers="property_可重复"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">概念</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/distribution_patterns_5A01CAF5.html" guid="6.137181182978733E-305">分布模式</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/analysis_mechanisms_36135B43.html" guid="9.76539014099254E-305">分析机制</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/concurrency_EE2E011A.html" guid="3.5787175388799096E-305">并行</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">分层</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/create_use_case_model_survey_3B750D9E.html" guid="{90C8A4CE-2C86-44D2-929F-8C1AB1AB1363}">使用 Rational SoDA 创建用例模型调查</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/performing_architectural_analysis_65CE30FC.html" guid="{08B5477D-97F9-4EEB-AA59-A109128B5CA1}">使用 Rational XDE Developer 执行体系结构分析</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/capture_results_use_case_analysis_7C8B82CF.html" guid="{F33662D0-DB04-4B24-AFC4-EFEFCDD20D42}">使用 Rational Rose 捕获用例分析的结果</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/create_use_case_realization_1212EF9.html" guid="{AAB8D0D6-C666-4F4D-9D26-2AF026558A4C}">使用 Rational Rose 创建用例实现</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/publishing_webbased_models_7604E738.html" guid="{C5291A9E-2269-41F8-AFCD-813E18A031D4}">使用 Web Publisher 发布基于 Web 的 Rational Rose 模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务描述符: 定义测试方法</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="define_test_approach" name="uma.name">
+<meta content="定义测试方法" name="uma.presentationName">
+<meta content="_j7dF4EohEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="测试设计人员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={35359DDF-6361-43E5-8B1B-18D204DA8CFF}&path={35359DDF-6361-43E5-8B1B-18D204DA8CFF},{10C2C34C-BF5E-4825-A7DC-5E106EFAA4C5},_j7dF4EohEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNR0JHEdq4z9xc-r201w", "_vCtaiEJHEdq4z9xc-r201w", "_to6hoZ4_Edq7s5zuJVEAAw", "_j7dF4EohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_vyZOwCVuEdqSZ9OimJ-AzA", "_o3nZoSFrEdqrX8YVzvtlIg", "_6Bt54CGGEdqMcovRzkCQow", "_j7dF4EohEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNR0JHEdq4z9xc-r201w", "_vCtaiEJHEdq4z9xc-r201w", "_to6hoZ4_Edq7s5zuJVEAAw", "_j7dF4EohEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_j7dF4EohEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：定义测试方法</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务描述了如何确定将采用的测试策略和特定技术，并概述了测试自动化体系结构。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test__defining_an_approach" name="XE_test__defining_an_approach"></a> 
+<p>
+    此任务的目的是：
+</p>
+<ul>
+    <li>
+        确定将为实现所需测试而采用的每种特定技术
+    </li>
+    <li>
+        概括每种技术的工作方式，包括它支持的测试类型
+    </li>
+    <li>
+        为测试自动化系统定义一个候选体系结构
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">主要:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_designer_5EF246E4.html" guid="_j7pTIEohEdqrjq4i3fchvA">测试设计人员</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">其他:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">辅助:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_iteration_plan_C56FC43C.html" guid="_CWRlohi2Edq_uI8xTPML6g">迭代计划</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A01A65B.html" guid="_CWRlphi2Edq_uI8xTPML6g">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_vision_9B689245.html" guid="_CWRlpRi2Edq_uI8xTPML6g">远景</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_deployment_model_221E7D88.html" guid="_CWXsTxi2Edq_uI8xTPML6g">部署模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_project_plan_C634D726.html" guid="_fveNoEohEdqrjq4i3fchvA">软件开发计划</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_architecture_document_8A01A65B.html" guid="_CWRlphi2Edq_uI8xTPML6g">软件体系结构文档</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_software_requirements_specification_28E78962.html" guid="_CWXsTRi2Edq_uI8xTPML6g">软件需求规范</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_usecase_model_248C5683.html" guid="_CWRlrRi2Edq_uI8xTPML6g">用例模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_vision_9B689245.html" guid="_CWRlpRi2Edq_uI8xTPML6g">远景</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">外部:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_test_strategy_9FC3C524.html" guid="_CWXsRRi2Edq_uI8xTPML6g">测试策略</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> 检验测试激励因素和测试项</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineMotivatorsTestItems" name="ExamineMotivatorsTestItems"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                考虑任务、测试激励因素和测试项对将要用于测试工作的方法的影响。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    使用评估任务作为环境，检验迭代测试计划并研究已针对即将进行的测试工作确定的测试激励因素。可能有必要对激励因素来源进行进一步调查 － 通常迭代计划提供一种查找附加信息的方式。
+</p>
+<p>
+    对于每个激励因素，考虑需要什么测试方法和相关联的技术来处理每个激励因素。还要检验迭代测试计划并研究测试项。每个目标测试项都应被视为与每个激励因素有关，而方法和技术则相应扩展。如果您找不到关于测试项的大量详细信息或不熟悉测试项，那么与开发人员讨论目标项可能很有帮助，通常是先与软件设计人员或开发团队主管讨论。
+</p>
+<p>
+    着重确定令人满意地处理评估任务和激励因素所需的最少的一组技术。寻求一项技术可用于处理所需测试的多个方面的机会。请注意其他的那些似乎探索起来很有趣的可能技术，但要能够将它们确定为附加技术而不是基本技术。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 检验软件体系结构</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ExamineSoftArchitecture" name="ExamineSoftArchitecture"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                考虑软件体系结构对测试方法的影响。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    研究软件体系结构以理解其要素（机制、主要视图等）。通常，软件体系结构文档提供注重于在考虑测试方法时使用的适度详细信息的优秀信息。为了澄清其信息，或在缺少文档的情况下，与开发人员讨论体系结构很有用，通常是直接与软件设计人员或开发团队的一个主管讨论。
+</p>
+<p>
+    着重确定并讨论主要机制，并较好地了解系统的这些方面。体系结构的每种机制和主要特性都将可能给测试工作带来难题或约束。例如，一个分发式体系结构可能需要将测试团队组织为几个分队，每个分队都针对一个体系结构层。
+</p>
+<p>
+    尽管在测试实施与执行策略中使用新方法通常可克服这些难题，但可能需要让开发团队修改软件来实现测试，如<img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="{CDA7EC1B-2D50-46BE-A3BA-C621EAF22D84}">任务：定义可测性元素</a>所述。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 考虑测试方法的适当宽度和深度</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="ConsiderBreadthDepth" name="ConsiderBreadthDepth"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                考虑测试方法在宽度和深度方面的完整性。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+     考虑现在对测试方法的需求所知的所有详细信息，最好返回并从一个较高的角度考虑该测试方法。测试方法有哪些事情应处理而没有处理？有应予以探究但在所记录的任何信息中都没有出现的问题吗？
+</div>
+<p>
+    基于您的经验，复审测试方法的需求，以针对项目生命周期的这个阶段确定适当的宽度和深度。考虑将有助于展示更完整方法的其他需求。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 确定要复用的现有测试技术</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyExistingTechniques" name="IdentifyExistingTechniques"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                在适用的情况下，复用经过证明的现有测试技术或改编这些技术。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    根据您自己的经验或其他可得到的经验，确定将满足测试方法需求或者经过改编后可满足这些需求的现有技术。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 确定其他技术</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="IdentifyNewTechniques" name="IdentifyNewTechniques"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                确定提供全面而充分的测试方法所需的技术。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    考虑“完整的”测试方法并不怎么有用 － 如果您有无限的时间和资源，总可以尝试其他技术。
+</p>
+<p>
+    但是，测试方法的成熟度和全面性足以允许对感觉到的质量进行有用的评估，这是很重要的。对项目团队来说，这需要一种从多方面充分评估质量风险或以多维方式充分评估质量的方法，以恰当的置信度评估感觉到的质量。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 定义技术</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DefineTechniques" name="DefineTechniques"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                概括每种技术的工作方式，包括它支持的测试目标。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    概括每种技术的工作方式。处理它支持的测试类型、目标和范围、实施方法、测试预测、评估方法以及自动化需要。
+</p>
+<p>
+    在许多情况下，您会将一个项目的技术重用于下一个项目。在这种情况下，您可以仅引用该技术的普通定义或复制现有的定义并在适当情况下进行修订。
+</p>
+<p>
+    <b>对于每种现有的或必需的技术：</b>
+</p>
+<ul>
+    <li>
+        <a href="#DefineObjectives">定义对象和范围</a>、
+    </li>
+    <li>
+        <a href="#DescribeImplementation">描述实施方法</a>、
+    </li>
+    <li>
+        <a href="#IdentifyEvaluationMethod">确定合适的评估方法</a>、
+    </li>
+    <li>
+        <a href="#IdentifyAutomationUse">确定适当使用自动化</a>、
+    </li>
+    <li>
+        <a href="#IdentifyTools">确定适用的工具</a>
+    </li>
+</ul>
+<h4>
+    <a id="DefineObjectives" name="DefineObjectives">定义对象和范围</a> <a href="#DefineTechniques"><img     src="./../../core.base_rup/resources/top.gif" alt="回到页首" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    许多技术将支持多种测试，所以在确定该技术将需要支持哪些测试时要动些脑筋。如果该技术是第一次定义，这将有助于确定所需工作的范围。
+</p>
+<p>
+    在这种技术所代表的底层目标和价值观上要动些脑筋。
+</p>
+<h4>
+    <a id="DescribeImplementation" name="DescribeImplementation">描述实施方法</a> <a href="#DefineTechniques"><img     src="./../../core.base_rup/resources/top.gif" alt="回到页首" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    定义将如何实施该技术。简单地说明“我们在进行系统性能测试”是不够的，您需要认真地思考如何实现该目标。
+</p>
+<p>
+    您希望使用的某些技术可能执行起来不太经济。简短地描述您将如何实施该技术，您将能够对所涉及的后勤和进一步执行该技术的实用性有整体的认识。
+</p>
+<h4>
+    <a id="IdentifyEvaluationMethod" name="IdentifyEvaluationMethod">确定适当的评估方法</a> <a href="#DefineTechniques"><img     src="./../../core.base_rup/resources/top.gif" alt="回到页首" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    确定您将如何观察和评估使用此技术实施每次测试的结果。 动脑思考一下您可进行哪些不同的<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/test_oracle_CB9E18A9.html" target="_blank" guid="_yYNIs9nmEdmO6L4XMImrsA"><i>测试预测</i></a>，只有一个预测吗？还是有别的方法可以确定每次测试的结果？
+</p>
+<h4>
+    <a id="IdentifyAutomationUse" name="IdentifyAutomationUse">确定适当使用自动化</a> <a href="#DefineTechniques"><img     src="./../../core.base_rup/resources/top.gif" alt="回到页首" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    自动化在许多测试技术中可能有着重要的作用。在某些情况下，它可能没那么完善，仅提供对开展手动测试的支持。
+</p>
+<p>
+    在如何最有效地实施、维护和管理涉及该技术的工作方面要动些脑筋。要解放思想 － 提高思考的宽度和深度，考虑尽可能多的可选项。
+</p>
+<h4>
+    <a id="IdentifyTools" name="IdentifyTools">确定适用的工具</a> <a href="#DefineTechniques"><img     src="./../../core.base_rup/resources/top.gif" alt="回到页首" border="0" width="26" height="20" /></a>
+</h4>
+<p>
+    确定要与这种测试技术配合使用的适当工具。使用确定使用自动化的前一步骤中的相同工作。
+</p>
+<p>
+    记住，要考虑大量的工具类别；您的候选工具列表不应只包括测试执行自动化工具。除了使测试执行自动化的工具外，还要考虑将通过减少重复繁重的任务（例如测试数据管理、测试结果分析）而提高测试团队生产力的工具、事件工具以及变更请求报告工具等。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 概括测试自动化体系结构</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="OutlineTestArchitecture" name="OutlineTestArchitecture"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                为测试自动化系统定义一个候选体系结构。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    基于从类似系统或在类似的问题域中获得的经验，开始为测试自动化系统定义候选体系结构。
+</p>
+<p>
+    建议您复审开发软件体系结构的相关信息，以帮助您完成此任务。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 定义测试资产配置管理策略</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="DefineTestAssetCM" name="DefineTestAssetCM"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                考虑测试将对配置管理有何需求。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    就像软件开发项目期间生成的许多其他工作产品一样，测试资产是配置管理和版本控制的候选对象。
+</p>
+<p>
+    特定需求的复杂性的范围为从决定使用启用的基本备份和恢复服务，到完全支持在多个地点针对应用程序的不同版本并行开发自动化测试脚本。
+</p>
+<p>
+    在配置管理的需求方面动些脑筋，并开始概括可能的、实现这些需求的后勤需要。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 调查可重用资产的可用性</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="SurveyReusableAssets" name="SurveyReusableAssets"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                通过复用经证明的现有资产来减少风险和工时。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    有时从头开始构建资产是有意义的，有时则没有意义。在创建新工作产品时尽量在完全“自定义”原则和确立呆板而官僚的管理政策之间寻求很好的平衡。
+</p>
+<p>
+    经常会出现一种方法好于另一种方法的情况，您应该足够灵活地利用两种方法带来的好处。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 获取调查结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="CaptureFindings" name="CaptureFindings"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                记录关于测试方法的重要信息。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    根据许多因素（包括团队规模和组织文化），会有或好或坏的方法来记录您就测试方法所做出的决策。
+</p>
+<p>
+    通常您需要考虑两类受众：管理团队想要阅读此信息以提供批准和知道该方法的后勤关连，测试团队想要使用测试方法作为执行工作的指导。努力查找一种适合这两种需要的适当介质：也许是使用项目内部网 Web 站点。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 评估和验证您的结果</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="EvaluateResults" name="EvaluateResults"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的：</b>
+            </td>
+            <td width="95%">
+                验证任务是否已恰当地完成并且生成的工作产品是否可接受。&nbsp;
+            </td>
+        </tr>
+    </table><br />
+</div>
+<p>
+    既然您已完成了该工作，那么最好验证该工作是否有足够的价值，而且您并不是简单地消耗大量纸张。您应评估您的工作质量是否适当，是否完整得足以让其他团队成员觉得您的工作很有用，并随后将它们用作他们自己工作的输入源。在可能的情况下，请使用 RUP
+    中提供的核对表验证质量和完整性是否都“足够好”。
+</p>
+<p>
+    让执行后续任务（要将您的工作作为输入）的人员参与复审您的过渡工作。请在您还有时间针对他们的意见采取行动时让他们参与复审。
+    您还应针对主要输入工作产品评估您的工作，以确保您已准确并充分地展示了它们。在这个基础上，再让输入工作产品的作者复审您的工作可能很有用。
+</p>
+<p>
+    请记住，RUP
+    是一个迭代的交付流程，并且在许多情况下工作产品是随着时间而演进的。所以，通常没有必要完全形成在近期的后续工作中只部分使用或根本不用的工作产品，并且这通常会对生产效能产生负面影响。这是因为很可能在使用工作产品前，工作产品的使用环境会发生变化（并且已证明在创建工作产品时所作的假设不正确），从而带来工时的浪费和高成本的返工。还要避免在展示内容价值损害方面耗费太多周期时间。
+    在展示作为项目可交付工作产品很重要而且具有经济价值的项目环境中，您可能希望考虑使用管理资源来执行展示任务。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_多次出现" abbr="多次出现">多次出现</th><td align="left" class="sectionTableCell" headers="property_多次出现"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_事件驱动" abbr="事件驱动">事件驱动</th><td align="left" class="sectionTableCell" headers="property_事件驱动"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_正在进行" abbr="正在进行">正在进行</th><td align="left" class="sectionTableCell" headers="property_正在进行"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可重复" abbr="可重复">可重复</th><td align="left" class="sectionTableCell" headers="property_可重复"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/creating_test_plan_1122BD2C.html" guid="{F5040C26-B521-47F9-A014-7E2C1CCEC9F7}">使用 Rational TestManager 创建测试计划</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/performing_test_activities_A002FD4F.html" guid="{D2ECB600-4B4F-4458-B375-54DCF0D91BB3}">使用 Rational TestManager 执行测试活动</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

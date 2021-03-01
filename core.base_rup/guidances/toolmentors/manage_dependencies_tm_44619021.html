@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational RequisitePro 管理依赖关系</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="manage_dependencies_tm" name="uma.name">
+<meta content="使用 Rational RequisitePro 管理依赖关系" name="uma.presentationName">
+<meta content="Tool:rup_requisite_pro:Rational RequisitePro" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational RequisitePro" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{FB197165-FFE2-4683-9EF3-B3D5E9501492}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{FB197165-FFE2-4683-9EF3-B3D5E9501492}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{887DBA0C-5761-494D-862D-5956F1C51BF7}", "{FB197165-FFE2-4683-9EF3-B3D5E9501492}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{FB197165-FFE2-4683-9EF3-B3D5E9501492}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational RequisitePro 管理依赖关系</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述了如何使用 Rational RequisitePro&reg; 来通过需求属性和可跟踪性管理依赖关系。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_requisite_pro_593FD397.html" guid="{887DBA0C-5761-494D-862D-5956F1C51BF7}">Rational RequisitePro</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    RequisitePro 可用于创建结构清晰的<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/requirements_62E28784.html" guid="4.582668643506599E-305">需求</a>并对之进行维护。
+    可以根据用户定义的属性（如功能、优先级、风险和成本）对需求分组。此外，还可以建立层次关系，它以逻辑父－子组来表示需求。 最后，可以在两种需求之间创建可跟踪性关系，用于建立从一种需求到另一种需求的依赖关系。
+</p>
+<h4>
+    工具步骤
+</h4>
+<p>
+    将更详细地描述以下需求管理概念和过程。
+</p>
+<ol>
+    <li>
+        <a href="#Organize Requirements">组织需求</a>
+    </li>
+    <li>
+        <a href="#Create Requirement Hierarchies">创建需求层次结构</a>
+    </li>
+    <li>
+        <a href="#Create Requirement Traceability">创建需求可跟踪性</a>
+    </li>
+    <li>
+        <a href="#Query Requirements">查询需求</a>
+    </li>
+</ol>
+<h3>
+    <b><font size="4">1.&nbsp; <a id="Organize Requirements" name="Organize Requirements">组织需求</a></font></b>
+</h3>
+<p>
+    <b>可以将功能组织表示为需求类型。</b> <img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="5.360970653483052E-305">需求类型</a>只是一类需求，它使团队可以将大量的需求组织为有意义的、更易于管理的组。在项目中建立不同类型的需求有助于团队成员将需求分类并使通信更为清晰。
+</p>
+<p>
+    通常可以将一种类型的需求分解为其他类型。例如，业务规则和远景陈述通常包含高级别需求，团队可从中得出用户需要、功能和产品需求类型。 用例推动可用于定义软件需求的设计需求。测试需求源自软件需求，并分为具体的测试过程。（如果您安装了
+    Rational TestManager&reg;，建议您使用该工具管理测试工作产品。）
+</p>
+<p>
+    当给定项目中存在数百、数千甚至数万的需求时，将需求分类可以使项目更容易管理。使用 RequisitePro，您可以在需求文档中或直接在项目数据库内创建给定类型的需求。每种需求类型都有对该类型为唯一的特定属性。
+</p>
+<p>
+    要创建<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="5.360970653483052E-305">需求类型</a>：
+</p>
+<ol>
+    <li>
+        单击<b>文件 &gt; 打开项目</b>，选择项目，然后选中<b>独占式</b>复选框。（要新建需求类型，必须以独占方式打开项目。）单击<b>确定</b>。
+    </li>
+    <li>
+        在浏览器中，选择项目，然后单击<b>文件 &gt; 属性</b>。将显示“项目属性”对话框。
+    </li>
+    <li>
+        单击<b>需求类型</b>选项卡，然后单击<b>添加</b>。输入需求类型信息（名称、描述、标记前缀、颜色和需求格式的样式）。
+    </li>
+    <li>
+        单击<b>确定</b>。
+    </li>
+</ol>
+<p>
+    要在文档中创建<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/requirements_62E28784.html" guid="4.582668643506599E-305">需求</a>：
+</p>
+<ol>
+    <li>
+        在文档中选中用于定义需求的文本。
+    </li>
+    <li>
+        执行以下操作之一： 
+        <ul>
+            <li>
+                右键单击并选择<b>新建需求</b>。
+            </li>
+            <li>
+                单击 <b>RequisitePro</b> &gt; <b>需求</b> &gt; <b>新建</b>。<br />
+                 将出现“需求属性”对话框。
+            </li>
+        </ul>
+    </li>
+    <li>
+        单击选项卡并输入用于定义需求的相应信息。单击<b>确定</b>。
+    </li>
+</ol>
+<p>
+    要在“属性矩阵” 中创建需求：
+</p>
+<ol>
+    <li>
+        在浏览器中，选择要放入视图的程序包。然后单击<b>文件 &gt;新建 &gt; 视图</b>。此时将显示“视图属性”对话框。
+    </li>
+    <li>
+        输入视图的名称和描述。视图类型为“属性矩阵”。从列表中选择此“属性矩阵”的需求类型。单击<b>确定</b>。将显示“属性矩阵”。
+    </li>
+    <li>
+        单击两次标为<b>&lt;单击此处创建需求&gt;</b>的字段，或者也可以单击字段，然后单击<b>需求 &gt; 新建</b>。将显示<b>名称</b>和<b>文本</b>框。
+    </li>
+    <li>
+        输入新需求的名称和文本。
+    </li>
+    <li>
+        请按 <b>Tab</b> 键在矩阵中移动。根据需要添加属性值。
+    </li>
+    <li>
+        单击视图中的任何地方来保存需求。
+    </li>
+</ol>
+<p>
+    也可以通过选中需求并单击<b>需求 &gt; 属性</b>来打开属性矩阵中的现有需求。将出现“需求属性”对话框。可以在<b>常规</b>选项卡上修改需求的文本。单击<b>属性</b>选项卡并选择属性的相应值。
+</p>
+<h4>
+    有关更多信息
+</h4>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" /></b>请参考 RequisitePro 联机帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Creating and modifying requirement types</i>（索引：requirement types &gt; creating）
+    </li>
+    <li>
+        <i>Creating requirements in a document</i>（索引：requirements &gt; creating）
+    </li>
+    <li>
+        <i>Creating requirements in an Attribute Matrix</i>（索引：requirements &gt; creating）
+    </li>
+</ul>
+<h3>
+    <b><font size="4">2.&nbsp; <a id="Create Requirement Hierarchies" name="Create Requirement Hierarchies">创建需求层次结构</a></font></b>
+</h3>
+<p>
+    <b>您可以通过层次关系来管理依赖关系。</b> 层次需求关系是一种父子关系，反映了需求之间的逻辑分组。这些关联为组织需求提供了有用的工具。
+</p>
+<p>
+    使用层次关系可将一般需求细分为更明确的需求。父需求是级别较高、更一般的需求；子需求是级别较低、更具体的需求。每个子需求只能有一个父需求，但一个需求可以同时有父需求和子需求。
+</p>
+<p>
+    <b>注</b>：不能将层次需求关系与可跟踪性关系混淆。可跟踪性关系通常在不同类型的需求（如软件需求与测试需求）之间建立，而层次关系则在需求可跟踪性树的同一级别上对同一类型的需求进行分组。
+</p>
+<p>
+    要在文档中创建子需求：
+</p>
+<ol>
+    <li>
+        在需求文档中选中用于定义此需求的信息。
+    </li>
+    <li>
+        执行以下操作之一： 
+        <ul>
+            <li>
+                右键单击并选择<b>新建需求</b>。
+            </li>
+            <li>
+                单击 <b>RequisitePro &gt; 需求 &gt; 新建</b>。<br />
+                 将出现“需求属性”对话框。
+            </li>
+        </ul>
+    </li>
+    <li>
+        单击选项卡并输入用于定义需求的相应信息。
+    </li>
+    <li>
+        在<b>层次结构</b>选项卡上，从<b>父级</b>列表中选择父需求。如果列表中未显示此父需求，请选择 &lt;<b>选择父需求...</b>&gt;，然后从“父需求浏览器”对话框中显示的列表选择父需求。
+    </li>
+    <li>
+        单击<b>确定</b>以关闭各对话框。
+    </li>
+</ol>
+<p>
+    要在视图中创建子需求：
+</p>
+<ol>
+    <li>
+        根据要创建的需求的需求类型打开一个属性矩阵。选择要充当新需求的父需求的需求。
+    </li>
+    <li>
+        单击<b>需求</b> &gt; <b>新建子需求</b>。仅当所选需求（将成为子需求的父需求）也位于视图中（即不是位于文档中）时，才可以在视图中创建子需求。
+    </li>
+    <li>
+        输入子需求的描述。
+    </li>
+    <li>
+        请按 <b>Tab</b> 键在矩阵中移动。根据需要添加属性值。
+    </li>
+    <li>
+        单击视图中的任何地方来保存需求。
+    </li>
+</ol>
+<h4>
+    有关更多信息
+</h4>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" /></b>请参考 RequisitePro 联机帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Hierarchical relationships overview</i>（索引：hierarchical requirements &gt; overview）
+    </li>
+    <li>
+        <i>Creating child requirements in a document</i>（索引：hierarchical requirements &gt; creating child requirements）
+    </li>
+    <li>
+        <i>Creating child requirements in a view</i>（索引：hierarchical requirements &gt; creating child requirements）
+    </li>
+    <li>
+        <i>Assigning parent requirements in a view</i>（索引：parent requirements &gt; assigning new parent requirements）
+    </li>
+</ul>
+<h3>
+    <b><font size="4">3.&nbsp; <a id="Create Requirement Traceability" name="Create Requirement Traceability">创建需求可跟踪性</a></font></b>
+</h3>
+<p>
+    <b>可以使用可跟踪性管理依赖关系。</b> 正如需求类型的描述中所示，没有哪个需求的表示是孤立的。将用户需要分解为派生的需求，这一过程指示了高级别的预期与实施和验证所需的后续工作产品之间的关系。实际上是一个跟踪多个，反之亦然。
+</p>
+<p>
+    例如，项目干系人请求与计划满足这些请求的产品功能相关。产品功能可以<i>跟踪到</i>特定功能行为的个别需求。测试用例可<i>跟踪自</i>它们所验证的需求。
+</p>
+<p>
+    要确定更改的影响并对系统符合预期目标有信心，团队成员必须理解、记录和维护这些可跟踪性关系。可跟踪性是用于包容更改和确保完全覆盖的关键工具。建立清晰的需求类型有助于使可跟踪性更容易实施和维护。
+</p>
+<p>
+    要创建需求可跟踪性：
+</p>
+<ol>
+    <li>
+        在浏览器中，选择要放置创建的视图的程序包，然后单击<b>文件 &gt; 新建 &gt; 视图</b>。此时将显示“视图属性”对话框。
+    </li>
+    <li>
+        选择“可跟踪性矩阵”视图类型。为矩阵的行和列分别选择一个需求类型。单击<b>确定</b>。
+    </li>
+    <li>
+        在“可跟踪性矩阵”中，选择与要创建可跟踪性关系的两个需求相交的单元。（使用多项选择操作选择多个单元。）
+    </li>
+    <li>
+        执行以下操作之一： 
+        <ul>
+            <li>
+                单击<b>可跟踪性 &gt; 跟踪到</b>或<b>可跟踪性 &gt; 跟踪自</b>。
+            </li>
+            <li>
+                右键单击单元并选择<b>跟踪到</b>或<b>跟踪自</b>。
+            </li>
+        </ul>
+    </li>
+</ol>
+<h4>
+    有关更多信息
+</h4>
+<p>
+    <b><img height="16" alt="帮助手册图标" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" /></b>请参考 RequisitePro 联机帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Trace to/trace from overview</i>（索引：trace to/trace from relationship &gt; overview）
+    </li>
+    <li>
+        <i>Creating traceability relationships in a view</i>（索引：traceability &gt; creating）
+    </li>
+</ul>
+<p>
+    <b><img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="1.4005695544042474E-306">可疑关系</a>。</b> 如果 RequisitePro
+    检测到已经修改了关系中的某个需求，则需求之间的关系就变为<i>可疑</i>。如果修改了需求的文本，则<i>到</i>／<i>自</i>该需求的所有<i>直接</i>关系均变为可疑。并且，您还可以将属性定义为：如经修改，将导致可跟踪性关系变为可疑。
+</p>
+<h3>
+    <font size="4"><b>4.&nbsp; <a id="Query Requirements" name="Query Requirements">查询需求</a></b></font>
+</h3>
+<p>
+    <b>按属性值或可跟踪性检索和组织需求的查询。</b> RequisitePro
+    查询功能提供了一种方法，可以通过限制一个或多个属性的值，或通过限制可跟踪性并指定过滤需求的显示顺序，在视图中对需求进行过滤和排序。过滤限制显示的信息，而排序则确定信息的显示顺序。例如，在一个属性矩阵中，您可能希望使用过滤器条件仅查看分配给自己的需求；您也可以使用排序条件将需求按优先级从最高到最低排列。
+</p>
+<p>
+    可以通过向需求及其属性应用查询条件来对需求进行过滤和排序。这些条件限制属性的值或可跟踪性关系的条件。可以根据一个属性值创建查询，也可以选择多个属性值来创建更为复杂的查询条件。
+</p>
+<p>
+    RequisitePro 允许您使用用户定义的视图保存和重新运行查询。任何时候，您都可以动态地重新运行查询以更新需求集合，或使用更新的值刷新返回的数据。
+</p>
+<p>
+    要创建查询：
+</p>
+<ol>
+    <li>
+        打开一个“属性矩阵”、“可跟踪性矩阵”或“可跟踪性树”视图。
+    </li>
+    <li>
+        单击<b>视图 &gt; 查询行需求</b>。如果尚未添加任何查询条件，将显示“选择属性”对话框。
+    </li>
+    <li>
+        选择要在查询中使用的属性和属性值，然后单击<b>确定</b>。
+    </li>
+    <li>
+        为列表类型的属性选择一个或多个值。列表类型的属性假定逻辑运算符为 OR。 为条目类型的属性选择运算符并指定值。
+    </li>
+    <li>
+        要创建复合查询（带多个属性），请单击<b>添加</b>并选择其他查询条件。
+    </li>
+    <li>
+        单击<b>确定</b>。
+    </li>
+</ol>
+<p>
+    要保存视图：
+</p>
+<ol>
+    <li>
+        单击<b>文件</b> &gt; <b>将视图另存为</b>。此时将显示“视图属性”对话框。
+    </li>
+    <li>
+        输入视图的名称。
+    </li>
+    <li>
+        选择<b>私有</b>复选框来保存视图，以便只能由创建该视图的用户打开。
+    </li>
+    <li>
+        单击<b>确定</b>。
+    </li>
+</ol>
+<h4>
+    有关更多信息
+</h4>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/guidances/toolmentors/resources/helpbook.gif" width="16" />请参考 RequisitePro 联机帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Creating a view</i>（索引：Views &gt; creating views）
+    </li>
+    <li>
+        <i>Creating and modifying queries</i>（索引：queries &gt; creating）
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

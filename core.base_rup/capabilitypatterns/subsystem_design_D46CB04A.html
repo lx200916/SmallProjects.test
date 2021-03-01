@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>任务描述符: 子系统设计</title>
+<meta content="TaskDescriptor" name="uma.type">
+<meta content="subsystem_design" name="uma.name">
+<meta content="子系统设计" name="uma.presentationName">
+<meta content="_nM9FIUocEdqrjq4i3fchvA" name="uma.guid">
+<meta content="TaskDescriptor" name="element_type">
+<meta content="description" name="filetype">
+<meta name="role" content="设计人员">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc={002674F9-6511-4D15-8623-B761D8C48986}&path={002674F9-6511-4D15-8623-B761D8C48986},{9C683674-97C1-4AEE-8DB0-9514AEFF698E},_nM9FIUocEdqrjq4i3fchvA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_XSr4YCFtEdqrX8YVzvtlIg", "_RP00kCCdEdq3qtLcbHn6PQ", "_nM9FIUocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_J1u8gCGYEdqMcovRzkCQow", "_RP00kCCdEdq3qtLcbHn6PQ", "_nM9FIUocEdqrjq4i3fchvA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_rw4S4Z5IEdq7s5zuJVEAAw", "_RP00kCCdEdq3qtLcbHn6PQ", "_nM9FIUocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_XSr4YCFtEdqrX8YVzvtlIg", "_RP00kCCdEdq3qtLcbHn6PQ", "_nM9FIUocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_J1u8gCGYEdqMcovRzkCQow", "_RP00kCCdEdq3qtLcbHn6PQ", "_nM9FIUocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_vllcADIKEdqGgPtrSpB0vQ", "_RP00kCCdEdq3qtLcbHn6PQ", "_nM9FIUocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_XSr4YCFtEdqrX8YVzvtlIg", "_RP00kCCdEdq3qtLcbHn6PQ", "_nM9FIUocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_J1u8gCGYEdqMcovRzkCQow", "_RP00kCCdEdq3qtLcbHn6PQ", "_nM9FIUocEdqrjq4i3fchvA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_rw4S4Z5IEdq7s5zuJVEAAw", "_RP00kCCdEdq3qtLcbHn6PQ", "_nM9FIUocEdqrjq4i3fchvA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo, defaultQueryStr, true, true, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div id="page-guid" value="_nM9FIUocEdqrjq4i3fchvA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">任务：子系统设计</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/taskdes_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此任务描述了如何记录子系统元素及其行为，以及子系统依赖关系。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">用途</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_design_subsystem__designing" name="XE_design_subsystem__designing"></a> 
+<ul>
+    <li>
+        根据所包含的设计元素和外部子系统／接口之间的协作，定义子系统的接口中指定的行为。
+    </li>
+    <li>
+        记录子系统的内部结构。
+    </li>
+    <li>
+        定义子系统的接口和所包含的类之间的实现。
+    </li>
+    <li>
+        确定对其他子系统的依赖关系
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">角色</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">主要:
+							</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_designer_FCD65796.html" guid="_CQ1sARi2Edq_uI8xTPML6g">设计人员</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">其他:
+							</span></td><td class="sectionTableCell"><span class="sectionTableCellHeading">辅助:
+							</span></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输入</th><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">必需:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_interface_39251209.html" guid="_CQ1sDhi2Edq_uI8xTPML6g">接口</a>
+</li>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_subsystem_4A8BFDF3.html" guid="_CQ1sDRi2Edq_uI8xTPML6g">设计子系统</a>
+</li>
+</ul>
+</td><td width="30%" class="sectionTableCell"><span class="sectionTableCellHeading">可选:
+								</span>
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_7D6F5DFE.html" guid="_CQ7yohi2Edq_uI8xTPML6g">设计模型</a>
+</li>
+</ul>
+</td><td class="sectionTableCell"><span class="sectionTableCellHeading">外部:
+								</span>
+<ul>
+<li>无</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">输出</th><td colspan="3" class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/capabilitypatterns/rup_design_model_7D6F5DFE.html" guid="_CQ7yohi2Edq_uI8xTPML6g">设计模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h4>
+    &nbsp;UML1.x 表示法
+</h4>
+<p>
+    如果使用 UML 1.5 符号表示法，有关<a href="#Describe Subsystem Dependencies">子系统依赖关系</a>的相同注意事项就适用：
+</p>
+<p align="center">
+    <br />
+     <img height="554" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/layerib.gif" width="496" border="0" />
+</p>
+<p class="picturetext">
+    使用直接依赖关系的子系统分层示例
+</p>
+<p class="picturetext">
+    <img height="322" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/layerif.gif" width="496" />
+</p>
+<p class="picturetext">
+    使用接口依赖关系的子系统分层示例
+</p>
+<p>
+    请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/supportingmaterials/differences_between_uml_1_x_and_uml_2_0_CA70F2E6.html" guid="4.792914878943572E-306">UML 1.x 和 UML 2.0 之间的区别</a>以获取更多信息。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">步骤</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td class="sectionTableCell">
+<div class="stepHeading"> 将子系统行为分发给子系统元素</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_design_subsystem__distributing_behavior_on_subsystem_elements" name="XE_design_subsystem__distributing_behavior_on_subsystem_elements"></a><a id="Distribute Subsystem behavior" name="Distribute Subsystem behavior"></a> 
+<div align="left">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <td width="5%">
+                    <b>目的</b>
+                </td>
+                <td width="95%">
+                    指定子系统的内部行为。<br />
+                     确定满足子系统行为需求所需的新<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>或<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">设计子系统</a>。&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+     子系统的外部行为主要由它实现的接口来定义。子系统实现某一接口后，它就承诺要支持该接口定义的每个操作。操作反过来可能会由子系统所包含的设计元素（即，<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>或<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">设计子系统</a>）上的操作来实现；该操作可能要求与其他设计元素协作
+</div>
+<p>
+    子系统内模型元素的协作应该用显示子系统行为如何实现的时序图来记录。子系统在接口上实现的每个操作都应该有一个或多个记录的时序图。该图归该子系统所有，并用于设计子系统的<b>内部</b>行为。
+</p>
+<p>
+    如果子系统的行为高度依赖于状态并代表一个或多个控制线程，那么状态机一般在描述子系统行为时更有用。这种情况下的状态机通常与活动类一起用来表示系统（或者这种情况下的子系统）的控制线程的分解，并在状态表图中有所描述，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">指南：状态表图</a>。<font color="#000000">在实时系统中，<img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">工作产品：封装体</a>的行为还将使用状态机来描述。</font><font     color="#000000">在子系统内可能有独立的执行线程，这由活动类表示。</font>
+</p>
+<p class="reactive">
+    <font color="#000000">在实时系统中，<img alt="" src="./../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../pages_not_installed/pages_not_installed.html" guid="{4423FCE1-FF59-4C8E-A6C4-AA4B13CB3250}">工作产品：封装体</a>将用来包括这些线程。</font>
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    子系统协作执行系统要求的某一行为，这可以用时序图表示：
+</p>
+<p align="center">
+    <img height="298" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/excollab.gif" width="429" />
+</p>
+<p class="picturetext">
+    该图显示子系统的接口如何用于执行场景。特别是对于“网络处理”子系统，我们发现了子系统必须支持的特定接口（在这种情况下是 ICoordinator）和操作。我们还发现“网络处理”子系统依赖于 IBHandler 和 IAHandler
+    接口。
+</p>
+<p class="example">
+    在子系统内部，我们发现了 ICoordinator 接口是如何实现的：
+</p>
+<p align="center">
+    <img height="314" alt="附带文本中描述的图。" src="./../../core.base_rup/tasks/resources/incollab.gif" width="504" />
+</p>
+<p class="picturetext">
+    “协调程序”类充当 ICoordinator 接口的“代理”，处理接口操作并协调接口行为。
+</p>
+<p>
+    该“内部”时序图确切地显示了哪些类提供接口，内部需要发生什么情况才能提供子系统的功能，以及哪些类从子系统向外发送消息。该图阐明了内部设计，这对于内部设计复杂的子系统是必不可少的。它还能使读者很容易了解子系统行为，这样就有希望使其在各环境中可重用。
+</p>
+<p>
+    创建这些“接口实现”图时，可能有必要创建新的类和子系统来执行所要求的行为。流程与“用例分析”中所定义的类似，但我们处理的是接口操作而不是用例。对于每个接口操作，确定在当前子系统中执行该操作所需要的类（或者在所要求的行为很复杂的某些情况下，为包含的子系统）。在现有类／子系统无法提供所要求的行为的情况下，创建新的类／子系统（但先尝试重用）。
+</p>
+<p>
+    创建新的设计元素时，应强制重新考虑子系统内容和边界。要小心避免两个不同子系统中的类实际相同。存在这样的类则意味着子系统边界可能定得不大好。定期重新访问<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/identify_design_elements_E884AB82.html" guid="{97D7343A-6993-4AB7-8F86-4DAC8C9075C8}">任务：确定设计元素</a>，这可重新平衡子系统职责。
+</p>
+<p>
+    有时创建两个单独的子系统内部模型会很有用，一个是以子系统客户端为目标的规范，而另一个是以实施者为目标的实现。规范可以包括“理想”的类和协作，根据理想的类和协作来描述子系统的行为。另一方面，实现则更与实施紧密相符，并可能演变为实施。有关设计子系统规范和实现的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/design_subsystem_B26FD609.html#Subsystem Specification and Realization" guid="1.2314266786534317E-305">工作产品指南：设计子系统、子系统规范和实现</a>。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 记录子系统元素</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="Document Subsystem Elements" name="Document Subsystem Elements"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                记录子系统的内部结构。&nbsp;
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    记录子系统的内部结构，创建一个或多个类图来显示子系统所包含的元素以及它们的相互关联。一个类图应该就足够了，但使用多个类图可降低复杂度并提高可读性。
+</p>
+<p>
+    类图示例如下所示：
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/classdg.gif" alt="附带文本中描述的图。" width="470" height="396" />
+</p>
+<p class="picturetext">
+    订单输入系统的类图示例。
+</p>
+<p>
+    子系统的内部内容是作为组件来建模的，该内容还可以在组件图中的组件矩形内表示。这种表示法还让我们将该子系统的交互点包含到系统的其他部分中，这是通过其接口来实现的。
+</p>
+<p>
+    组件图示例如下所示，该图描绘了“订单”子系统、其内部内容以及其提供的和所要求的接口。
+</p>
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/compdg.jpg" alt="附带文本中描述的图。" />
+</p>
+<p class="picturetext">
+    “订单”子系统的组件图示例
+</p>
+<p>
+    因为组件是<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/termdefinitions/structured_class_4BB99B12.html" guid="_yW3E4NnmEdmO6L4XMImrsA">结构化的类</a>，因此它可以紧密封装起来，方法是强制从外部通过服从所声明接口的端口进行通信，这使得该组件的规范和互连接更为精确。这种表示法使我们能够通过连接器“传导”部件实例，以在组件实施中扮演特定的角色（有关其他信息，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/concepts/structured_class_FF8DB16F.html" guid="1.1994826813129747E-304">概念：结构化类</a>）。
+</p>下面显示的是使用接口和端口的“订单”子系统的组合结构图示例。
+<p align="center">
+    <img src="./../../core.base_rup/tasks/resources/structdg.jpg" alt="附带文本中描述的图。" />
+</p>
+<p class="picturetext">
+    “订单”子系统的组合结构图示例
+</p><br />
+<br />
+ 此外，可能需要通过状态表图来记录子系统可能会呈现的状态，请参阅<a class="elementLinkWithUserText" href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">技术：状态表图</a>。
+<p>
+    子系统本身所包含的类的描述是在<a class="elementLinkWithUserText" href="./../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">任务：类设计</a>中进行处理的。
+</p></td>
+</tr>
+</table>
+</div>
+<div class="stepHeading"> 描述子系统依赖关系</div>
+<div class="stepContent">
+<table cellpadding="0" cellspacing="0" border="0" class="stepTable">
+<tr valign="top">
+<td><a id="XE_design_subsystem__describing_subsystem_dependencies" name="XE_design_subsystem__describing_subsystem_dependencies"></a><a id="Describe Subsystem Dependencies" name="Describe Subsystem Dependencies"></a>
+<div align="left">
+    <table border="1" width="100%" cellspacing="0" cellpadding="4" style="border: 1px solid rgb(128,128,128)"     bordercolorlight="#808080" bordercolordark="#808080">
+        <tr>
+            <td width="5%">
+                <b>目的</b>
+            </td>
+            <td width="95%">
+                记录子系统所依赖的接口。&nbsp;
+            </td>
+        </tr>
+    </table>
+</div>
+<p>
+    当一个子系统所含的元素使用另一子系统所包含元素的某个行为时，封闭的子系统之间就建立了依赖关系。为了提高重用性并降低维护依赖关系，我们希望根据对子系统的特定<a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">接口</a>的依赖关系来表示这一点，而不是根据对子系统本身或者对子系统中所包含元素的依赖关系来表示。
+</p>
+<p>
+    这样做的原因有两方面：
+</p>
+<ul>
+    <li>
+        我们希望模型元素（包括子系统）能互相替换，前提是它们提供相同的行为。我们根据接口来指定所要求的行为，因此一个模型元素对另一个模型元素的任何行为要求都应根据接口来表示。
+    </li>
+    <li>
+        我们希望设计人员完全有自由设计子系统的<b>内部</b>行为，前提是它提供正确的外部行为。如果一个子系统中的模型元素引用另一个子系统中的模型元素，设计人员就不能再随意删除该模型元素，或者将该模型元素的行为重新分配给其他元素。结果，系统就变得更加脆弱。
+    </li>
+</ul>
+<p>
+    创建依赖关系时，请确保子系统所包含的模型元素与其他子系统所包含的模型元素之间没有任何直接依赖关系或关联。还要确保各子系统和各接口之间没有循环的依赖关系；一个子系统不能既实现某一接口而又依赖于该接口。
+</p>
+<p>
+    如下所示，可以直接绘制出子系统之间以及子系统和包之间的依赖关系。 如果这样显示依赖关系，则说明一个子系统（例如“发票管理”）直接依赖于另一个子系统（“支付调度管理”）。
+</p>
+<p align="center">
+    <br />
+     <img src="./../../core.base_rup/tasks/resources/layerib1.jpg" border="0" alt="附带文本中描述的图。" />
+</p>
+<p class="picturetext">
+    使用直接依赖关系的子系统分层示例
+</p>
+<p>
+    当有可能将一个子系统替换为另一个子系统时（它们有相同的接口），依赖关系可以绘制到该子系统实现的一个<b><a class="elementLinkWithUserText" href="./../../core.base_rup/workproducts/rup_interface_9816B54F.html" guid="{C6938487-1DAA-4F6A-B3BC-CB99165F0680}">接口</a></b>，而不是绘制到子系统本身。这就允许使用任何实现相同接口的其他模型元素（子系统或类）。使用接口依赖关系，则允许使用可替代的设计元素来设计灵活的框架。
+</p>
+<p align="center">
+    <br />
+     <img src="./../../core.base_rup/tasks/resources/layerif1.jpg" border="0" alt="附带文本中描述的图。" />
+</p>
+<p class="picturetext">
+    使用接口依赖关系的子系统分层示例
+</p>
+<p class="picturetext">
+    &nbsp;
+</p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">属性</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_多次出现" abbr="多次出现">多次出现</th><td align="left" class="sectionTableCell" headers="property_多次出现"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_事件驱动" abbr="事件驱动">事件驱动</th><td align="left" class="sectionTableCell" headers="property_事件驱动"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_正在进行" abbr="正在进行">正在进行</th><td align="left" class="sectionTableCell" headers="property_正在进行"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可选" abbr="可选">可选</th><td align="left" class="sectionTableCell" headers="property_可选"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_已计划" abbr="已计划">已计划</th><td align="left" class="sectionTableCell" headers="property_已计划"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading" id="property_可重复" abbr="可重复">可重复</th><td align="left" class="sectionTableCell" headers="property_可重复"><img title="" alt="" height="15" width="20" src="./../../images/indent.gif"></td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">更多信息</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">指南</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/guidelines/statechart_diagram_640B5D0B.html" guid="1.4528459404144188E-304">状态表图</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">工具向导</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_design_model_1D45D75E.html" guid="{BD1DD906-031C-4D8C-8078-87B6869A8C14}">使用 Rational Rose 管理设计模型</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/manage_subsystems_CE198D48.html" guid="{6943FA40-808B-4E3E-94FE-D7843FA59E91}">使用 Rational Rose 管理子系统</a>
+</li>
+<li>
+<a href="./../../core.base_rup/guidances/toolmentors/designing_subsystems_7438223D.html" guid="{9DD25EA9-F3A1-4C38-917A-1C759F37F565}">使用 Rational XDE Developer 设计子系统</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+					contentPage.onload();
+					contentPage.processPage.fixDescriptorLinks();
+				</script>
+</html>

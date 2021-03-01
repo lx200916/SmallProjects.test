@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 用户界面（常规）</title>
+<meta content="Guideline" name="uma.type">
+<meta content="user_interface_general" name="uma.name">
+<meta content="用户界面（常规）" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{351D0945-8FD3-458D-B514-E25E3B445264}", "6.780901688276357E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{351D0945-8FD3-458D-B514-E25E3B445264}", "6.780901688276357E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{351D0945-8FD3-458D-B514-E25E3B445264}", "6.780901688276357E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "6.780901688276357E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.780901688276357E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：用户界面（常规）</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南提供了用于开发基于用户界面的窗口的一般规则</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">类设计</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/design_user_interface_DAABE09F.html" guid="{7414C358-6188-4E5C-8C35-F9D4DF3E0123}">设计用户界面</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_navmap_73AF74E2.html" guid="{351D0945-8FD3-458D-B514-E25E3B445264}">导航图</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="XE_window-based_user_interfaces__fundamentals" name="XE_window-based_user_interfaces__fundamentals" class="index" key="基于窗口的用户界面（window-based user interfaces）" text="基本原则"></a><a id="Window Fundamentals: Setting the Context" name="Window Fundamentals: Setting the Context"></a>窗口基本原则：设置和环境
+</h3>
+<p>
+    本节为基于窗口的用户界面的剖析提供了概述。本概述对于理解这些指南的其余部分是必要的。
+</p>
+<p>
+    基于窗口的用户界面分为若干窗口。窗口可以在窗口中移动、彼此堆叠和图标化。一个系统通常有一个主窗口，和若干辅助窗口。主窗口处理与用户的主要交互，并通常包含任意数目的对象。辅助窗口用来支持与主窗口的交互，方法是提供关于主窗口的对象的详细信息与对这些对象的操作。
+</p>
+<h4>
+    主窗口
+</h4>
+<p>
+    主窗口经常包含与用户交互的任意数目个对象。用户通常与系统交互的方式是，首先选择一个或若干对象（例如，通过单击它们），然后选择一项对所有选定对象执行的操作（例如，使用菜单）。常见的操作有<b>剪切</b>、<b>复制</b>、<b>粘贴</b>、
+    <b>删除</b>和<b>查看属性</b>。
+</p>
+<p>
+    主窗口通常包含一个菜单栏，用户可以从中选择操作。用户也可以通过弹出菜单（右键单击对象本身）和直接操纵（单击并拖动对象）选择操作。由于对象的总数可能不适合主窗口，用户常常可以使用滚动条在对象之间滚动，或调整窗口大小。此外，主窗口常常可以分成多个窗格（定义窗口的子区域），用户也可以调整窗格的大小。
+</p>
+<h4>
+    组合
+</h4>
+<p>
+    用户界面中的组合对象是在视觉上由其他对象组合而成的对象。例如，<b>段落</b>是<b>字符</b>的组合，<b>复杂绘图对象</b>是多个<b>简单绘图对象</b>的组合。
+</p>
+<h4>
+    辅助窗口
+</h4>
+<p>
+    辅助窗口用来支持主窗口，方法是提供关于主窗口对象的详细信息（例如属性）和对这些对象的操作。在主窗口中一般仅显示这些对象的几个属性。一个对象的属性可以通过打开一个显示该对象所有属性的属性窗口（是一个辅助窗口）来查看。用户常常可以通过诸如切换按钮、单选按钮、标尺、组合框和文本字段之类的控件来更改这些属性。
+</p>
+<p>
+    请注意在主窗口和辅助窗口之间有一条细线（有时非常不自然），它们可以显示相同级别的复杂性。不过，主窗口和辅助窗口之间的两个主要区别却是：
+</p>
+<ul>
+    <li>
+        主窗口通常被视为对应用程序更重要，因为它们需要提供广泛的可用性。因此，开发工作倾向于更专注于主窗口。
+    </li>
+    <li>
+        辅助窗口经常通过在主窗口中导航而显示，反之不然。
+    </li>
+</ul>
+<p>
+    除了属性窗口，还有其他类型的辅助窗口，例如对话框、消息框、调色板和弹出窗口。
+</p>
+<p>
+    许多应用程序是基于文件的。用户可以对一个文件对象使用<b>打开</b>操作（例如，双击文件夹中的一个文件）而启动这些应用程序。它们的主窗口显示该文件中存储的对象。
+    对文件的常见操作有<b>保存</b>、<b>另存为</b>、<b>打开</b>和<b>新建</b>，通常可以通过主窗口中的文件菜单来选择它们。主窗口通常也可以显示多个文件（也称为“多文档界面”或 MDI），从而允许用户在不同文件之间切换。
+</p>
+<h3>
+    <a id="XE_visual_dimensions__introduction_to" name="XE_visual_dimensions__introduction_to" class="index" key="可视元素（visual dimensions）" text="颜色"></a><a id="Visual Dimensions" name="Visual Dimensions">可视元素</a>
+</h3>
+<p>
+    可以使用的主窗口的关键是当可视化包含的对象及其属性时使用可视元素。显示比标识所需的属性更多的属性的优点是：
+</p>
+<ul>
+    <li>
+        用户避免窗口导航开销，因为您减少了（当用户需要看到在主窗口中显示的一个属性时）必须显示的窗口数。
+    </li>
+    <li>
+        用户可以同时看到（不同对象的）不同方面，这通常对于比较和开始识别模式很有用。正确地使用可视元素可以鼓励用户对他们的工作产生一种全新的熟悉感觉。
+    </li>
+</ul>
+<p>
+    可视元素有：
+</p>
+<ul>
+    <li>
+        <a href="#Position">位置</a>
+    </li>
+    <li>
+        <a href="#Size">大小</a>
+    </li>
+    <li>
+        <a href="#Shape">形状</a>
+    </li>
+    <li>
+        <a href="#Color">颜色</a>
+    </li>
+</ul>
+<p>
+    这些元素在下面显示。但是，当设计对象的可视化时，要注意可用的屏幕面积。尝试使开发屏幕面积时的开销尽可能小，并考虑使用若干可视元素是否值得额外耗用屏幕面积。可能向用户提供一个名称列表更好，因为该用户实际需要的是看到尽可能多的对象。
+</p>
+<p>
+    请注意使用这些可视元素（或扩展它们）以能够唯一标识对象很重要。下面还包含了一个关于此主题的讨论（请参阅下面的“<a href="#Identification">标识</a>”这一部分）。
+</p>
+<p>
+    还要注意，可视元素可以与时间元素结合使用，例如，可通过移动对象（它们的位置随时间变化而更改），或者通过更改对象的形状或颜色（它们的状态随时间变化而更改）来实现；下面的“<a href="#Shape">形状</a>”这一部分讨论了上述第二种情况。
+</p>
+<h4>
+    <a id="XE_visual_dimensions__position" name="XE_visual_dimensions__position"></a><a id="Position" name="Position"></a>位置
+</h4>
+<p>
+    位置可以表现的最直接方面是现实世界的位置。示例有：
+</p>
+<ul>
+    <li>
+        地理信息系统（GIS），显示一个地图，其中您可以在与对象在现实世界中相同的经纬度上表现对象。
+    </li>
+    <li>
+        计算机辅助设计（CAD）程序，完全按照它们现实世界的坐标表现对象及其环境。
+    </li>
+    <li>
+        所见即所得（WYSIWYG）编辑器，在窗口中显示对象（字符）的位置与在纸张打印输出中将显示它们的位置完全相同。
+    </li>
+</ul>
+<p>
+    有时，比较适合显示现实世界大小（例如，CAD 程序和 WYSIWYG 编辑器），有时不适合；例如，当对象的大小比对象之间的距离小得多的时候。
+</p>
+<p>
+    例如，想像一下我们有一个航班订票系统，用户必须在其中输入目的地。对于此，一个可能的表示法是显示一个包含不同机场的地图（其中一个机场是一个对象）。很自然，由于机场的现实世界大小是不相干的（以及太小看不见），所有机场都显示为具有相同大小的图标。
+</p>
+<p>
+    此示例还说明了可以使用现实世界的位置，即使它们不相干，只要它们帮助用户标识这些对象。在该示例中，用户不需要知道机场的位置。但是，如果用户熟悉地理，在地图上找到目的地比在列表中要容易一些。
+</p>
+<p>
+    您也可以使用位置代表“虚拟的”现实世界位置。例如，想像一个家庭购物系统，其中用户可以从不同的商店买东西。对于此，一个可能的表示法是显示一个放置了不同商店的（虚拟）商场的示意图（其中一家商店是一个对象）。此示意图与这些商店的现实位置无关 －
+    它只利用用户的空间记忆：记住坐标位置比记住列表或层次结构中的项要容易一些。
+</p>
+<p>
+    位置的另一种替代用法是显示对象之间的关联：所有具有相同垂直位置的对象以一种方式关联，所有具有相同水平位置的对象以另一种方式关联。电子表格是其中一个示例。
+</p>
+<p>
+    一个类似的替代用法是使一个轴代表某个属性的值范围。例如，在一个旅行订票系统中，预订的航班（其中一个航班是一个对象）可以沿着一个水平时间轴显示，表现它们在时间方面的关联、它们将持续多长时间以及用户将在每个目的地停留的时间长度。它们都是用户不必知道的事情，但是如果能以不醒目的方式表现它们，则看起来更容易一些。
+</p>
+<p>
+    如果您不想要通过显示整个值范围使用这么多屏幕面积，您可以收缩对象之间的距离。在旅行订票示例中，这可能意味着在水平方向排列的所有预订的航班之间没有间距，而是第一个航班在左边，第二个航班紧靠在第一个航班的右面，依此类推。用户将看不到他们在每个目的地将停留的时间长度，但是他们可以看到这些航班将持续多长时间。
+</p>
+<h4>
+    <a id="XE_visual_dimensions__size" name="XE_visual_dimensions__size"></a><a id="Size" name="Size"></a>大小
+</h4>
+<p>
+    在许多情况下，“大小”在某些方面必须表示与位置相同的内容。例如，在一个 CAD 系统中，大小必须自然表示现实世界的范围。但是，有时我们可以随意选择大小应表示什么，例如地图上支持目的地选择的机场。
+</p>
+<p>
+    在这些情况下，大小应表示最直观感觉为该对象现实世界大小的东西。对于文件，对象大小应表示占用的磁盘空间量。对于银行帐户，对象大小应表示余额。对于多数大小，对数刻度好于比例刻度，因为比例刻度一般耗用太大屏幕面积。
+</p>
+<p>
+    大小实际上非常直观，以至于即使是在不相干的情况下，您也可以考虑显示它。毕竟，在现实世界中，不同的东西（对象）由于其不同的大小而占用我们视觉领域的不同比例。并且这并不突兀；它只帮助我们区分这些东西。类似地，在用户界面中使用不同的大小将通常帮助用户区别不同的对象。
+</p>
+<p>
+    大小应通常用于表现仅一个属性，尽管可以使水平范围表现一个属性，而垂直范围表现另一个属性（这相当不直观，并可能使用户感到迷惑）。
+</p>
+<p>
+    水平范围或垂直范围应与该大小要说明的属性成（对数）比例，另一个范围应固定（或例如，取决于名称的长度）。如果水平和垂直范围都与相同属性成比例，这几乎不会增加任何价值：它看起来很突兀，并只会耗用更多的屏幕面积。
+</p>
+<h4>
+    <a id="XE_visual_dimensions__shape" name="XE_visual_dimensions__shape"></a><a id="Shape" name="Shape"></a>形状
+</h4>
+<p>
+    形状通常在图形用户界面中由图标表示；形状最好用于表示类型，因为映射外观的不同比映射类型的不同更直观。在现实世界中，同一类型事物的不同对象通常看起来相似，而不同类型的对象看起来不同。例如，椅子的不同对象看起来相似（它们都有四条腿、一个座位和一个靠背），而汽车与椅子看起来非常不同。
+</p>
+<p>
+    那么，不同对象属于不同类型的标准是什么呢？ 不同的类当然应视为不同类型。同时，一些属性是“类型式的”。这些属性必须有一组有限的可能值，并且它们的值通常确定了该对象可用来做什么（就操作和其他属性的可能值而言）。这与现实世界中相同 －
+    椅子和汽车之间最重要的区别是如何使用它们：椅子用来休息，汽车用来运输。
+</p>
+<p>
+    但是，当您分析什么应视为不同类型时，请记住最重要的事情是：用户最可能将哪个属性视为类型。
+</p>
+<p>
+    如果你没有多个类或任何“类型式”的属性，您可以使用图标来表示其他某些有限值属性的不同值，但前提是该属性是用户最关心的。
+</p>
+<p>
+    图标也通常用于显示对象的不同状态（除了显示类型）。当您选择对象时，它通常以两种方式之一显示：颜色更改为黑色，或它在周围显示一个矩形。另一个可能的状态是您打开了该对象的属性窗口。通常，您还有可以显示的其他特定于应用程序的状态，例如一封电子邮件是否已读。只确保表示状态并不能使用户感知类型更困难，反之亦然。
+</p>
+<h4>
+    <a id="XE_visual_dimensions__color" name="XE_visual_dimensions__color"></a><a id="Color" name="Color"></a>颜色
+</h4>
+<p>
+    颜色可以基于视觉分为三个组件。它们是：色调（即，红、蓝、棕等）、饱和度和暗度。但是，您不应使用不同的组件代表不同的属性，因为这将使用户难于感知。
+</p>
+<p>
+    色调应用于表示具有有限组可能值的类型或属性。但是，最好对其使用图标，因为图标可以设计为使用户理解它代表什么值，而颜色内容和（多数类型的）值之间没有此类直观映射。如果找不到任何直观图标，则可以使用色调替代图标。如果您有许多类型图标，则一种替代方案是使用色调将类型图标分类（使具有类似含义的一些图标是红色，具有另一种含义的一些是蓝色的，等等）。
+</p>
+<p>
+    饱和度可用于表示具有值范围的属性，但这将导致很丑并且突兀的用户界面 － 使用不同的饱和度使人眼花缭乱，使用高饱和度非常突兀。
+</p>
+<p>
+    暗度是最适用的颜色组件。它可以用于表示具有值范围的属性，并且它不那么突兀，也可以用于比较重要但不是最重要的属性。要使暗度不突兀，您不应使用从无暗度（白色）到全暗度（黑色），而仅是从低暗度（浅灰色）到高暗度（深灰色）。对于用户创建多数对象的许多系统，按照年龄表现对象非常有用；例如自上次更改后的时间量。这有助于用户确定他们想要处理的对象（通常是“自上次更改后的时间”最短的对象）。那么，如果您没有真正需要向用户表现的值范围属性，请考虑表现年龄。
+</p>
+<p>
+    通常，颜色用于使图标更具美感，它也帮助用户快速区别图标。如果您提供多色图标，则您可能不应将颜色用于其他目的。
+</p>
+<p>
+    由于一些人是色盲，并且由于并不是所有屏幕都支持颜色，您不应使用颜色作为显示一些重要信息的唯一方法。另一方面，很好计划并不突兀地使用颜色使用户界面更具美感。
+</p>
+<h4>
+    <a id="XE_visual_dimensions__further_aspects,_identification" name="XE_visual_dimensions__further_aspects,_identification"></a><a id="Identification" name="Identification"></a>标识
+</h4>
+<p>
+    用户必须能够唯一标识每个对象。有时，其他可视元素足以标识，但多数情况下它们是不够的。在图标内或靠近图标显示名称是支持标识的最常见技术。名称的优点是使用非常小的屏幕面积可以显示大量截然不同的名称。
+</p>
+<p>
+    最佳情况是，可以从一个属性值（一般是文本的）生成名称。备选方法是使用户在创建对象时指定名称，但是这会耗费一些时间并从而降低可用性。
+</p>
+<p>
+    有时，您可以设置图标的形状，使名称可以包含在图标中。这节省了屏幕面积，并更清楚地表明图标和名称之间的关系。但是，这会产生以下问题：
+</p>
+<ul>
+    <li>
+        该图标的中间必须是空的（留作显示名称之用）。
+    </li>
+    <li>
+        名称具有可变长度，这意味着图标的水平距离必须依赖于名称的长度，否则一些名称必须被截断。
+    </li>
+    <li>
+        该图标的宽度必须比其高度大得多，因为所有合理长度的文本都比其宽度长。
+    </li>
+</ul>
+<p>
+    结果，您通常必须在图标的下面或右面显示名称，这具有耗用较少屏幕面积的优点，但是也有对象（图标 +
+    名称）甚至比其高度宽的缺点。如果您根本没有足够的空间显示名称（这是可能的，因为您通常可能标识一个图标而不为其命名），您可以通过当光标在图标上时显示的弹出窗口显示该名称。
+</p>
+<p>
+    如果您可以在字体和属性值之间找到一个直观的映射，则可以使用名称的字体显示选项有限的属性；例如，您可以使用粗体或斜体区别该对象，或强调重要性。但是，在多数情况下不适于使用字体，因为它非常突兀并不怎么直观。
+</p>
+<p>
+    如果您显示名称（或，为此显示允许该用户更改的任何其他文本），您应支持在主窗口中直接编辑该名称。备选方法是用户请求重命名操作然后输入新的名称，或打开属性窗口并在该窗口中编辑名称。在主窗口中直接编辑名称不仅更快，而且还支持“立见立改”原则。
+</p>
+<h3>
+    <a id="XE_user-interface_guidelines__select" name="XE_user-interface_guidelines__select" class="index" key="用户界面指南（user-interface guidelines）" text="用户控制的继承"></a><a id="XE_user-interface_guidelines__find" name="XE_user-interface_guidelines__find"></a><a id="XE_power_find_and_select__user-interface_guidelines" name="XE_power_find_and_select__user-interface_guidelines" class="index" key="高级查找和选择（power find and select）" text="用户界面指南"></a><a id="Power Find and Select" name="Power Find and Select"></a>高级查找和选择
+</h3>
+<p>
+    如果应更改或操作的这组对象被编辑为使用户可以表达标识它们的选择条件，则主窗口的搜索工具可以通过始终选择所有条件匹配而解决该问题。
+</p>
+<p>
+    有两种可能的管理搜索的方式：
+</p>
+<ul>
+    <li>
+        在主窗口中选择搜索条件适用的所有对象。如果您不能保证所有找到的对象都同时在主窗口中显示（因为它们可能距离太远），您也可以在搜索窗口中显示一个命中列表。搜索之后，用户或者指定其他搜索条件，或者对选定的对象执行操作。此方法的优点是，它使用户可以对符合搜索条件的所有对象进行某种操作。
+    </li>
+    <li>
+        您在搜索窗口中提供一个<b>搜索</b>按钮，选择符合搜索条件的下一个对象，并滚动主窗口的内容使此对象可见。搜索之后，用户可以对选定的对象执行操作，然后继续按顺序在符合搜索条件的对象中搜索。此方法的优点是用户可以看到环境中的每个找到的对象（在主窗口中，而不是在独立的命中列表中）。
+    </li>
+</ul>
+<p>
+    在许多情况下，您会希望结合使用这两种搜索方式，例如，可在顺序搜索窗口中提供<b>全选</b>按钮，或者在并行搜索窗口中提供<b>查看下一个</b>按钮。
+</p>
+<h3>
+    <a id="XE_user-interface_guidelines__sorting" name="XE_user-interface_guidelines__sorting"></a><a id="XE_sorting__user-interface_guidelines" name="XE_sorting__user-interface_guidelines" class="index" key="排序（sorting）" text="用户界面指南"></a><a id="Sorting" name="Sorting"></a>排序
+</h3>
+<p>
+    排序的一个示例可以是，系统以汉语拼音顺序按名称或根据某个属性的值垂直排列所有对象。然后，用户通过滚动浏览这些对象。这是关于实施和用户操作可能的浏览支持中最简单的情形。当用户始终知道所需要的对象的名称（或我们用以排序的属性）时，排序效果最好。应以这种方式实施的系统的示例是电话簿。主窗口应经常有更改排序顺序和／或标准的操作。
+</p>
+<h3>
+    <a id="XE_user-interface_guidelines__user-controlled_inheritance" name="XE_user-interface_guidelines__user-controlled_inheritance"></a><a id="XE_user-controlled_inheritance__user-interface_guidelines" name="XE_user-controlled_inheritance__user-interface_guidelines" class="index" key="用户控制的继承（user-controlled inheritance）" text="用户界面指南"></a><a id="User-Controlled Inheritance" name="User-Controlled Inheritance"></a>用户控制的继承
+</h3>
+<p>
+    WYSIWYG 编辑器是用户控制的继承的一个示例，您可以在其中定义每个段落属于何种“样式”，然后定义应该怎样安排该样式（即，属于该样式的每个字符）。
+</p>
+<p>
+    与搜索工具相比，用户控制的继承的缺点是，它仅支持为多个对象更改属性（可能还有关联），而不支持操作的执行。同时，用户必须明确定义和维护这些组（即，可用的样式），从而用户控制的继承增加了开销。它也是一个更复杂的概念。
+</p>
+<p>
+    但是，如果不能指定对象的搜索条件，或如果用户需要对属性值做出相关更改（例如加二），则提供用户控制的继承可能是一种解决方案。
+</p>
+<p>
+    要使用户控制的继承有用，类的性质必须使对象可以分类为其中多数属性值相同的组（对用户具有某种逻辑意义）。
+</p>
+<p>
+    与搜索工具相比，用户控制的继承的优点是它支持覆盖；例如，只有在属性值未在对象中明确定义的情况下更改属性值。同时，用户控制的继承可以使用户做出更通用（从而更强大）的属性值定义；例如，继承来自此样式的字体，但将其放大两个像素。用户控制的继承在组中没有易于指定的搜索条件时尤其有用。
+</p>
+<p>
+    您将支持用户控制的继承的类可以继承自身，或者您可以创建一个目的是被继承的新类。使类继承自身更强大一点，因为同一对象既可以用于从中继承，也可以执行原来预想该对象执行的操作，例如是发票、是帐户等。这可以减少用户（和系统）需要管理的类。另一方面，创建用于被继承的新类具有容易理解的优点，因为继承与类的普通操作明确分开。创建新类在多数情况下是最佳解决方案，尤其是在用户对计算机和面向对象的模型没有太多经验的情况下。您创建的新类应更适宜继承自身以支持多级继承。
+</p>
+<p>
+    对于多数系统，用户常常必须更改特定对象的继承组，因为用户事先不完全知道这些继承组应如何构造。请为此提供一个操作。
+</p>
+<p>
+    如果您决定在系统中支持用户控制的继承，请分析需要继承哪些事物（属性、关联、类），然后仅支持这些事物的继承。这将导致通用性降低，但它是一种（对用户和开发人员而言）更容易地管理功能的方式。为应在您的新类中继承的事物建模。然后，许多属性将在继承类和被继承类中建模。请记住用户控制的继承意在为用户（而不是您）节省时间。如果类继承自身，这意味着一切都是可以继承的。
+</p>
+<p>
+    确定用户是否真的需要创建被继承类的新对象，或者系统是否可以一次为全部提供足够数目的对象。禁止用户创建新对象将大大地降低继承的灵活性，而另一方面，这将使其更易于操作。
+</p>
+<p>
+    还要确定是否在继承对象中对数字属性的更改应解释为与被继承值相对还是固定的。例如说，一个对象继承了字体大小 12，用户将其更改为 14。通过相对解释，系统将记住该对象的字体大小为被继承值
+    +2；即，如果被继承对象的字体大小更改了字体大小，则继承对象也将更改字体大小。如果您支持相对解释，应该在该被继承对象的属性上注明（因为这是当您想要检查继承时要查看之处）。给用户提供相对解释是很重要的（例如，“字体大小：12+2=14”就比简单的“字体大小：14”更好）。您可以使用场景探索以发现有利于相对解释或固定解释的情况。您可能必须同时支持两者。
+</p>
+<p>
+    由于用户控制的继承只是用于中间用户和高级用户，您必须将其设计为它将不能干涉常规使用（例如，当用户不使用继承时）；否则，将会使新手用户感到害怕。
+</p>
+<p>
+    请记住您构造的用户控制的继承意在使用户的生活更容易；它不一定要通用或要单纯，但它必须可用。
+</p>
+<h3>
+    <a id="XE_user-interface_guidelines__browsing_hierarchies" name="XE_user-interface_guidelines__browsing_hierarchies"></a><a id="Browsing Hierarchies" name="Browsing Hierarchies"></a><a id="XE_browsing_hierarchies__user-interface_guidelines" name="XE_browsing_hierarchies__user-interface_guidelines" class="index" key="浏览层次结构（browsing hierarchies）" text="用户界面指南"></a>
+</h3>
+<p>
+    浏览层次结构允许用户（或可能系统）将对象分为主窗口或组合体，它们按层级组织。浏览层次结构确保用户仅必须搜索一个（或几个）类别。这减少了在给定的时间点必须显示的对象数。一个缺点是用户（通常）必须管理该分类。此技术的一个示例是文件浏览器：具有目录或文件夹的原因是帮助用户查找文件。
+</p>
+<h3>
+    <a id="XE_window_management__user-interface_guidelines" name="XE_window_management__user-interface_guidelines" class="index" key="窗口管理（window management）" text="用户界面指南"></a><a id="XE_user-interface_guidelines__window_management" name="XE_user-interface_guidelines__window_management"></a><a id="Window Management" name="Window Management"></a>窗口管理
+</h3>
+<p>
+    窗口大小和位置通常完全受用户控制。但是，您可以通过使系统影响窗口的大小和位置来减少窗口开销。
+</p>
+<p>
+    主窗口越大，可以显示的对象越多，但也将耗用更多屏幕面积。主窗口通常应显示尽可能多的对象，但不耗用不必要的屏幕面积。
+</p>
+<ul>
+    <li>
+        使每个主窗口足够大以可以显示所有对象，但是不大于屏幕。使每个主窗口足够大以可以显示整个对象，但避免不显示任何有用对象的区域，如桌面发布程序中的页边空白。即使您有空间显示这些空区域，它们也会遮掩其他应用程序。
+    </li>
+    <li>
+        请记住用户在不同会话之间会调整大小。如果对象数增加，则增加窗口大小使所有对象可见（除非已经是全屏幕高度，或者如果用户已选择了小于缺省值的大小）。如果对象数减少，则减小窗口大小（除非用户已选择大于缺省值的大小）。此规则确保您遵循用户调整大小操作的目的。
+    </li>
+</ul>
+<p>
+    对主窗口大小可能的进一步限制是，您是否经常需要将该应用程序与其他应用程序并行使用。如果是，则您可以将窗口的缺省大小最大化至半屏（与全屏相对）。
+</p>
+<p>
+    设置主窗口的缺省位置，使其尽可能少地遮掩其他应用程序。如果您必须遮掩一些窗口，则选择最长时间未用的那些，并尝试至少保留一点窗口可见，使用户可以容易地激活它们。
+</p>
+<p>
+    应用上述规则的一个缺点是将剥夺用户的一些控制权（将不询问系统而调整窗口大小，并且不记住用户在两个会话之间的重新定位）。因此，如果您应用这些规则，您应允许用户关闭它们（使用控件）。
+</p>
+<p>
+    对于辅助窗口，它们的大小和位置应不遮掩调用它们的窗口，并可能使它们不遮掩其他辅助窗口。如果它们必须遮掩调用它们的窗口，则尝试确保它们不遮掩选定的对象。遮掩重要事物（例如选定的对象）是辅助窗口的常见可用性缺陷。
+</p>
+<p>
+    对于非主要主窗口的主窗口，您也应应用上一段的调整大小规则。
+</p>
+<p>
+    但是，应将对话框放置到掩盖活动窗口的位置。由于它们通常是临时的并很小，用户通常不需要在对话框打开时看到活动窗口。将对话框放置在活动窗口上确保了用户应答它们，并减少了必要的鼠标移动，因为光标通常已经在活动窗口上。
+</p>
+<p>
+    对于属性窗口，属性数确定大小。如果大小太大（大约屏幕的 1/4），您应使用更多选项卡。
+</p>
+<h3>
+    <a id="XE_user-interface_guidelines__session_information" name="XE_user-interface_guidelines__session_information"></a><a id="XE_session_information__user-interface_guidelines" name="XE_session_information__user-interface_guidelines" class="index" key="会话信息（session information）" text="用户界面指南"></a><a id="Session Information" name="Session Information"></a>会话信息
+</h3>
+<p>
+    在会话之间，所有应用程序配置都应该保存（而用户不必指定保存）。窗口的大小和位置、选择哪个视图以及滚动条的位置也应保存。当用户重新启动一个应用程序时，它应看起来和上次退出时完全一样。这样做的动机是通常启动会话时用户做的第一件事是回到他们退出上一个会话的地方。
+</p>
+<h3>
+    <a id="XE_user-interface_guidelines__online_help" name="XE_user-interface_guidelines__online_help"></a><a id="XE_online_help__user-interface_guidelines" name="XE_online_help__user-interface_guidelines" class="index" key="联机帮助（online help）" text="用户界面指南"></a><a id="Online Help" name="Online Help"></a>联机帮助
+</h3>
+<p>
+    联机帮助是系统的非常重要的一部分。很好设计的帮助系统甚至应能够代替多数系统的用户手册。多数项目在构造和生成手册上花费了大量的精力，而一个广为人知的事实是，多数用户从不使用它们。您应考虑将这些精力投入到好的帮助系统，而非用户手册。
+</p>
+<p>
+    您应考虑以下多个可能的帮助工具：
+</p>
+<ul>
+    <li>
+        <b>主题帮助</b>是最重要的帮助工具。它使用户输入主题或浏览现有的主题并提供关于这些主题的帮助。关键是提供具有大量同义词的大型帮助索引。 请记住：用户需要帮助时可能不知道正确的术语。
+    </li>
+    <li>
+        <b>对象帮助</b>是上下文相关的帮助。它显示说明用户界面的特定部件（对象）的文本。用户请求上下文相关的帮助，然后选择用户界面中需要帮助的部件。如果要使这种类型的帮助可用，则应对用户界面的每个部件支持它。
+        另一种替代方法是在弹出窗口中提供隐式的帮助 — 一种上下文相关的帮助的浓缩形式，当用户的光标逗留几秒时，系统在光标的附近显示该帮助。在弹出窗口中使用隐式帮助具有不干涉用户界面的正常操作的优点。
+    </li>
+    <li>
+        <b>消息区域</b>是系统主动显示关于用户操作的“注释”的区域（通常在主窗口中）。如果提供了它，它应该是可选的。
+    </li>
+    <li>
+        <b>向导</b>是一种常用技术，当用户要求关于进行某操作的帮助时，您应考虑提供它。向导使用一种“手把手”的技术指导用户完成（不琐碎的）任务。它结合操作（按钮）显示描述性文本，这些操作（按钮）使用户执行文本中描述的任务的一部分。或者，向导将询问问题，并基于用户的响应，自动执行该任务。向导对于重要的和很少使用的任务而言很适用。
+    </li>
+</ul>
+<p>
+    对上下文相关帮助和向导的需要可能要在使用测试期间确定。如果，在使用测试期间，用户不了解用户界面的不同部分是什么，则这表明需要上下文相关的帮助。如果他们执行某个任务时有困难，则表明需要向导。
+</p>
+<p>
+    许多帮助系统存在的问题是，它们要么是针对新手而编写（花费大量的文本来解释很浅显的内容），要么是针对专家而编写（参考一些手册，而这些手册却预期用户知道的几乎和编写应用程序的编程人员一样多）。对于大多数系统而言，大多数用户都是“正在提高的中等水平的用户”。为他们编写帮助文本。
+</p>
+<h3>
+    <a id="XE_user-interface_guidelines__undo" name="XE_user-interface_guidelines__undo"></a><a id="XE_undo__user-interface_guidelines" name="XE_undo__user-interface_guidelines" class="index" key="撤消（undo）" text="用户界面指南"></a><a id="Undo" name="Undo"></a>撤消
+</h3>
+<p>
+    撤消是一种非常有用的特性，尽管一般它难于实现（实施）。它使用户可以更快地学习，因为他们将不必害怕毁坏东西。它还降低了丢失信息的风险。避免丢失信息的一种替代解决方案是需要用户确认可能产生信息丢失的所有操作。但是这通常是一种不好的解决方案，因为它增加了大量的交互开销，并且用户很快就学会无意识地确认，从而使这个解决方案显得不充分。
+</p>
+<p>
+    一个大胆的选择是也提供重做（可能是多级撤消和重做）。但是，第一个撤消级别可以实现多数增加的可用性。
+</p>
+<h3>
+    <a id="XE_user-interface_guidelines__macro_agent" name="XE_user-interface_guidelines__macro_agent"></a><a id="XE_macro_agent__user-interface_guidelines" name="XE_macro_agent__user-interface_guidelines" class="index" key="宏代理（macro agent）" text="用户界面指南"></a><a id="Macro Agent" name="Macro Agent"></a>宏代理
+</h3>
+<p>
+    如果您提供宏，则采用持续监视用户操作的代理，查找重复的交互序列非常有用。当发现一个重复的交互序列时，代理会立即为其创建一个宏（在请求用户允许之后）。假如用户已经对两段文本使用了“下划线”，而且用户这两次都在使用“下划线”之后立即将文本颜色更改为蓝色。则该代理应询问用户是否想要一个宏，这个宏的作用就是对选定的文本段使用“下划线”并执行“将颜色设置为蓝色”操作。如果是这样，则该代理应创建这样一个宏和一个执行该宏的按钮（或菜单项）。
+</p>
+<p>
+    如果用户在记录期间选择了一个对象，这通常应解释为“变化量”指定，即相对于先前的选择所选择的对象（如“选择下一个”、“选择第一个子项”等）。
+</p>
+<p>
+    您是否应将对象属性的更改解释为变化量指定（例如，将属性值从 12 更改为 14 解释为增加 2，而不是设置为 14）是不明显的。
+    将其解释为变化量指定通常更强大，因为将多个对象的属性更改为固定值通常可以通过选择多个对象然后打开它们的属性窗口（其中您可以一次性为所有对象设置属性（为 14））而实现。
+</p>
+<h3>
+    <a id="XE_user-interface_guidelines__dynamic_highlighting" name="XE_user-interface_guidelines__dynamic_highlighting"></a><a id="XE_dynamic_highlighting__user-interface_guidelines_for" name="XE_dynamic_highlighting__user-interface_guidelines_for" class="index" key="动态突出显示（dynamic highlighting）" text="用户界面指南"></a><a id="Dynamic Highlighting" name="Dynamic Highlighting"></a>动态突出显示
+</h3>
+<p>
+    通常，类之间的关联是双向的，这意味着在实际用户界面中，该关联在两个对象上都显示。如果一个用户专注于对象 <b>A</b>，可以看到 <b>A</b> 与对象 <b>B</b> 关联，则反过来通常也是用户感兴趣的（即，当专注于对象
+    <b>B</b> 时，用户可以看到 <b>B</b> 与 <b>A</b> 关联）。该关联通常在对象的属性窗口中显示，按名称确定所关联的对象。
+</p>
+<p>
+    一般，在主窗口中可视化对象之间的关联需谨慎处理。用箭头或线条来表示关联通常会使窗口看起来像是杂乱而且突兀的“蛇穴”。显示关联的较好方法是当光标放在某个关联对象上时，突出显示所有相关联的对象。一个示例是在文档编辑器中脚注与字符相关联时，当光标在所关联的字符上方时，这些脚注被突出显示。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

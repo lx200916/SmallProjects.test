@@ -1,0 +1,898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>示例: Collegiate Sports Paging System</title>
+<meta content="Example" name="uma.type">
+<meta content="collegiate_sports_paging_system" name="uma.name">
+<meta content="Collegiate Sports Paging System" name="uma.presentationName">
+<meta name="element_type" content="example">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_Yf9CkDIdEdqDs_9ORT1Rig", "9.574917633082439E-306"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="9.574917633082439E-306"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">示例：Collegiate Sports Paging System</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/example.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">The example is attached below.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">主要描述</th><td class="sectionTableCell"><p>
+    <a id="XE_e-business__example_project" name="XE_e-business__example_project"></a><a id="XE_example__e-business_development_project" name="XE_example__e-business_development_project"></a>The example
+    artifacts presented here are based on a fictional project to develop a system to page subscribers when specified
+    collegiate sporting events take place.
+</p>
+<p>
+    Additional examples of artifacts may be posted in the future in the <a href="http://www.ibm.com/developerworks/rational/rupcenter">RUP section of the developerWorks&reg;: Rational&reg; Web site.</a>
+</p>
+<p>
+    <a id="Sets" name="Sets"><b>Information Sets</b></a>
+</p>
+<ul>
+    <li>
+        <b><a href="#Environment Set">Environment Set</a></b>
+    </li>
+    <li>
+        <a href="#Management Set"><b>Project Management Set</b></a>
+    </li>
+    <li>
+        <a href="#Requirements Set"><b>Requirements Set</b></a>
+    </li>
+    <li>
+        <a href="#Design Set"><b>Analysis & Design Set</b></a>
+    </li>
+    <li>
+        <a href="#Implementation Set"><b>Implementation Set</b></a>
+    </li>
+    <li>
+        <a href="#Test Set"><b>Test Set</b></a>
+    </li>
+    <li>
+        <b><a href="#Deployment Set">Deployment Set</a></b>
+    </li>
+</ul>
+<p align="center">
+    <b>To see examples for each phase:&nbsp;<br />
+     (</b><b>I</b> = Inception, <b>E</b> = Elaboration, <b>C</b> = Construction, <b>T</b> = Transition)<br />
+     <b><font size="3"><i>Click below on</i></font></b> : <img height="19" alt="Preliminary Artifact"     src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" /> Preliminary Artifact, or&nbsp; <img height="19" alt="Baselined Artifact"     src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" /> Baselined Artifact.<br />
+     For the artifact description, click below on: <img height="22" alt="Artifact Description" src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif"     width="25" border="0" />,<img height="16" alt="Artifact Description" src="./../../../core.informal_resources/guidances/examples/resources/ar_anamd.gif" width="16"     border="0" />, or <img height="16" alt="Artifact Description" src="./../../../core.informal_resources/guidances/examples/resources/ar_desmd.gif" width="16" border="0" />
+</p>
+<div align="center">
+    <center>
+        <table         style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none"         height="469" cellspacing="0" cellpadding="0" width="75%" summary="layout table" border="0">
+            <tbody>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>I</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>E</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>C</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>T</b> 
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="28">
+                    </td>
+                    <td valign="bottom" align="left" width="79%" height="28">
+                        <b><font size="4"><a id="Environment Set" name="Environment Set"></a>Environment Set</font></b> <a href="#Sets"><img height="20" alt="Return to the Information Sets list."                         src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_development_case_-_inception_phase_3121E97F.html" guid="1.2849327955598506E-304"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="28">
+                        <img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{F071C3D3-7054-457F-8A81-EFA6678CCDE1}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="28">
+                        <b>Development Case</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>I</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>E</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>C</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>T</b> 
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="28">
+                    </td>
+                    <td valign="bottom" align="left" width="79%" height="28">
+                        <b><font size="4"><a id="Management Set" name="Management Set"></a>Project Management
+                        Set</font></b> <a href="#Sets"><img height="20" alt="Return to the Information Sets list."                         src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_risk_list_-_inception_phase_594B8FD4.html" guid="1.7051467147277706E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_risk_list_-_elaboration_phase_C98A7D03.html" guid="1.333654086379861E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_risk_list_-_construction_phase_97AEF55.html" guid="2.2141943521042314E-306"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="28">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_risk_list_B87674CA.html" guid="{32D7C484-2FAF-4442-8DA0-6D474B91A9DD}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="28">
+                        <b>Risk List</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_software_development_plan_-_elaboration_phase_C1F42D29.html" guid="1.5128942924654615E-306"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="28">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_project_plan_D89CA030.html" guid="{D77D6716-B167-4643-A4B6-6F76C7769A80}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="28">
+                        <b>Software Development Plan</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_iteration_plan_-_inception_phase_CA930979.html" guid="3.970450686494062E-307"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_iteration_plan_-_elaboration_phase_9268ECD7.html" guid="1.0137863641147096E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_iteration_plan_-_construction_phase_EA25AF7E.html" guid="2.1233626683077394E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_iteration_plan_-_transition_phase_79C70451.html" guid="1.2945845262089655E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="28">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_iteration_plan_623AFF7F.html" guid="{97269E0F-CDF3-448D-A732-DF39D099BDDD}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="28">
+                        <b>Iteration Plan</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_iteration_assessment_-_elaboration_phase_71998C2B.html" guid="7.717200873988634E-306"><img height="19" alt="Baselined Artifact"                         src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="28">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_iteration_assessment_D08C6F7.html" guid="{06114AF1-4D98-46B5-AE8B-DDEDFFE9B42B}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="28">
+                        <b>Iteration Assessment</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_status_assessment_-_construction_phase_D045E3DD.html" guid="6.284646287142444E-306"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="28">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_status_assessment_A990B5EF.html" guid="{F6D674A6-D71A-4D36-A195-4C888C1D0E70}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="28">
+                        <b>Status Assessment</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>I</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>E</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>C</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>T</b> 
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="bottom" align="left" width="79%" height="29">
+                        <b><font size="4"><a id="Requirements Set" name="Requirements Set"></a>Requirements Set</font></b>
+                        <a href="#Sets"><img height="20" alt="Return to the Information Sets list."                         src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="center" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_requirements_management_plan_-_inception_phase_C1283688.html" guid="1.5747054610045012E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                        <img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{53CFF11F-D0DB-4C92-B4D8-90D46B0EE3DF}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Requirements Management Plan</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_vision_-_inception_phase_F8A5D818.html" guid="1.2539590909628613E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_vision_2D6D6F1.html" guid="{417F089F-6636-451A-A8AB-AB4EAC7AC4F1}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Vision</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_use_case_model_survey_-_inception_phase_E0154AF3.html" guid="2.865677667501811E-306"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Use Case Model Survey</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Use Cases</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_appstry1.htm" target="_blank"><img height="19"                             alt="Preliminary Artifact" src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_appstry2.htm" target="_blank"><img height="19"                             alt="Baselined Artifact" src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        - Approve Story
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_edprf1.htm" target="_blank"><img height="19"                             alt="Preliminary Artifact" src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_edprf2.htm" target="_blank"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        - Edit Profile
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_pfee1.htm" target="_blank"><img height="19" alt="Preliminary Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_pfee2.htm" target="_blank"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        - Pay Fee with Credit Card
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_prtadrpt1.htm" target="_blank"><img height="19"                             alt="Preliminary Artifact" src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_prtadrpt2.htm" target="_blank"><img height="19"                             alt="Baselined Artifact" src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        - Print Advertiser Reports
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_pstadcnt1.htm" target="_blank"><img height="19"                             alt="Preliminary Artifact" src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_pstadcnt2.htm" target="_blank"><img height="19"                             alt="Baselined Artifact" src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        - Post Advertising Content
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_prvfdbk1.htm" target="_blank"><img height="19"                             alt="Preliminary Artifact" src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_prvfdbk2.htm" target="_blank"><img height="19"                             alt="Baselined Artifact" src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        - Provide Feedback
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_rdcntnt1.htm" target="_blank"><img height="19"                             alt="Preliminary Artifact" src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_rdcntnt2.htm" target="_blank"><img height="19"                             alt="Baselined Artifact" src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        - Read Content on Web site
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_sndcntnt1.htm" target="_blank"><img height="19"                             alt="Preliminary Artifact" src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_sndcntnt2.htm" target="_blank"><img height="19"                             alt="Baselined Artifact" src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        - Send Content
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_sndpg1.htm" target="_blank"><img height="19"                             alt="Preliminary Artifact" src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_sndpg2.htm" target="_blank"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        - Send Page
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_subsc1.htm" target="_blank"><img height="19"                             alt="Preliminary Artifact" src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a href="./../../../core.informal_resources/guidances/examples/resources/ex_uc_subsc2.htm" target="_blank"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        - Subscribe
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_glossary_-_inception_phase_6B989521.html" guid="3.110685671169872E-307"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_glossary_-_elaboration_phase_39A64BC0.html" guid="1.261666961794972E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_glossary_A5D79A0C.html" guid="{3BF8CC04-9101-47A4-9473-C8205EA588B6}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Glossary</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_supplementary_specification_-_inception_phase_C6A07288.html" guid="1.7588359378709495E-305"><img height="19" alt="Preliminary Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/draft.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_supplementary_specification_-_elaboration_phase_B6008067.html" guid="9.655564617854337E-306"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="center" align="middle" width="6%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Supplementary Specifications</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="right">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_creative_design_brief_-_inception_phase_CCF826E0.html" guid="2.378087492409832E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Creative Design Brief</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="right">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_design_comps_-_inception_phase_552DF77F.html" guid="2.3075412126614355E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Design Comparatives</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="right">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_navigation_map_-_inception_phase_444B617E.html" guid="1.8512006592368983E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Navigation Map</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>I</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>E</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>C</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>T</b> 
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="bottom" align="left" width="79%" height="29">
+                        <b><font size="4"><a id="Design Set" name="Design Set"></a>Analysis & Design Set</font></b> <a href="#Sets"><img height="20" alt="Return to the Information Sets list."                         src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_software_architecture_document_-_elaboration_phase_66B745FA.html" guid="1.8186460940456451E-305"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_software_architecture_document_C367485C.html" guid="{6F49641A-ED10-47B5-9E5D-3F90A6BF3006}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Software Architecture Document</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_rose_model_FD17FE6B.html" guid="1.9326841150612072E-306"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Rational Rose Model</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_model_76C3B70C.html" guid="{98EA224C-36F6-46E6-AB36-2999382B58B3}"><img height="16" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_anamd.gif" width="16" border="0" /></a> Analysis Model
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}"><img height="16" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_desmd.gif" width="16" border="0" /></a> Design Model
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>I</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>E</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>C</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>T</b> 
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="bottom" align="left" width="79%" height="29">
+                        <b><font size="4"><a id="Implementation Set" name="Implementation Set"></a>Implementation
+                        Set</font></b> <a href="#Sets"><img height="20" alt="Return to the Information Sets list."                         src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_integration_build_plan_-_elaboration_phase_3A7281B1.html" guid="4.481942047527182E-306"><img height="19" alt="Baselined Artifact"                         src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_integration_build_plan_31CE4B79.html" guid="{FA56B557-857D-4122-8E60-7A4A84418EB1}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Integration Build Plan</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="bottom" align="left" width="79%" height="29">
+                        <b><font size="4"><a id="Test Set" name="Test Set"></a>Test Set</font></b><a href="#Sets"><img                         height="20" alt="Return to the Information Sets list." src="./../../../core.base_rup/resources/top.gif"                         width="26" border="0" /></a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_test_plan_-_elaboration_phase_9A177CD9.html" guid="2.39635192345822E-306"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                        <img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{B95CA9FA-A00E-4C6C-AA16-133297812CC0}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Test Plan</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_test_evaluation_summary_-_elaboration_phase_B97E9583.html" guid="3.048180815950963E-306"><img height="19" alt="Baselined Artifact"                         src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_test_evaluation_summary_D9B4016B.html" guid="{C6AAA2A6-C5AD-42DA-BCBC-9B1349D7B6CF}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Test Evaluation Summary</b> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>I</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>E</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>C</b> 
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="28">
+                        <b>T</b> 
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                    </td>
+                    <td valign="bottom" align="left" width="80%" height="29">
+                        <b><font size="4"><a id="Deployment Set" name="Deployment Set"></a>Deployment Set</font></b> <a href="#Sets"><img height="20" alt="Return to the Information Sets list."                         src="./../../../core.base_rup/resources/top.gif" width="26" border="0" /></a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                    </td>
+                    <td valign="top" align="middle" width="5%" height="29">
+                        <p align="center">
+                            <a class="elementLinkWithUserText" href="./../../../core.informal_resources/guidances/examples/csps_release_notes_-_transition_phase_76AF2B6C.html" guid="2.720162946871132E-306"><img height="19" alt="Baselined Artifact"                             src="./../../../core.informal_resources/guidances/examples/resources/baseline.gif" width="20" border="0" /></a>
+                        </p>
+                    </td>
+                    <td valign="top" align="middle" width="6%" height="29">
+                        <img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{1CF06B21-7D33-4255-8023-F6CE900FAD3A}"><img height="20" alt="Artifact Description"                         src="./../../../core.informal_resources/guidances/examples/resources/ar_wlmod.gif" width="22" border="0" /></a> 
+                    </td>
+                    <td valign="top" align="left" width="79%" height="29">
+                        <b>Release Notes</b> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</div></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

@@ -1,0 +1,1664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 测试用例</title>
+<meta content="Guideline" name="uma.type">
+<meta content="test_case" name="uma.name">
+<meta content="测试用例" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.3981505661923931E-304"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.3981505661923931E-304"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：测试用例</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南说明如何确定和设计测试软件。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_developer_test_66FE6BEE.html" guid="{862F3EC5-70C3-4D9C-BF0E-EF93AE1BF936}">实施开发人员测试</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_test_case__guidelines_for" name="XE_test_case__guidelines_for" class="index" key="测试用例（test case）" text="指南"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">说明</a>
+</h3>
+<p>
+    可明确指定项目干系人期望，这对项目团队能够确保项目干系人的软件满意度有着极大的影响。不管有没有一套满意的需求规范，测试用例都是有助于反映项目干系人期望并使这些期望得到验证的一种工件。
+</p>
+<p>
+    当可获得一组有用的需求时，测试团队需要计划能适当验证这些需求的测试。注意，可有差别地针对需求验证软件，这取决于需求类型。例如，测试人员可使用自动化测试技术来执行软件以验证其功能和性能需求，同时，可能需要使用手动测试技术来验证配置需求，例如主机系统的关闭。
+</p>
+<p>
+    由于您可能无法（或不负责）验证所有需求，着重于当前工作范围中最适合或最关键的需求是很重要的。您选定验证的需求将是验证需求的成本、风险和必要性之间的平衡，且通常将受当前迭代范围的限制。
+</p>
+<p>
+    虽然需求是获得测试的重要来源，但信息来源并不仅仅是它们。 事实上，在许多情况下，它们并不足以提供制定测试的完整基础。应将测试用例视为以诸如风险、约束、技术、变更请求（缺陷）、故障等之类的信息来源为基础。<br />
+     关于如何提出获得测试的构想的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html" guid="6.149711039531016E-305">概念：测试构想</a>。
+</p>
+<p>
+    确定测试用例是有用的，这有几个理由。
+</p>
+<ul>
+    <li>
+        测试用例可用作设计和实施实际测试的基础。花时间考虑测试用例有助于更好地了解设计和实施需求，并可能可以节省花在设计和实施任务上的时间。
+    </li>
+    <li>
+        某些测试特别复杂或特别详细。在开始测试实施之前提前进行周密考虑，有利于这种性质的测试，而且测试用例和测试设计工件是研究这些注意事项的好工具。
+    </li>
+    <li>
+        通常认为测试的“深度”是与测试数目成比例的。通常，如果能根据确定的测试用例的数量来推断可能的测试“深度”，就会提高测试流程本身的可信度。
+    </li>
+    <li>
+        测试工作完整性的一个度量标准是以监视某组激励元素的覆盖范围为基础的。覆盖范围报告可基于一些度量标准，如确定的测试用例数目、实施的和／或针对每个测试用例执行的测试数目、或是针对每个测试用例所投入的工作量。
+    </li>
+    <li>
+        测试工作的规模和复杂性在某种程度上是与测试用例的数目成比例的。随着测试用例的细分，就可更细致地推断测试工作。
+    </li>
+    <li>
+        测试设计和开发的种类以及所需的资源部分地受测试用例的数目和复杂性的支配。
+    </li>
+</ul>
+<p>
+    但就测试用例而言，存在一些值得考虑的事项：
+</p>
+<ul>
+    <li>
+        不是每个测试都复杂到足以证明创建需要复审和维护的测试用例工件的开销：测试非常简单，以致于简短的文本描述就足以传达需求。事实上，大多数测试用例可能都属于这一类。花时间记录大量的简单测试用例，可能导致花在更重要的测试任务上的时间减少。
+    </li>
+    <li>
+        您对测试的某些初始观点随后被证实在某个方面是有缺陷的。这意味着您最初基于这些观点而确定的某些测试用例将被放弃。这一事实意味着详细记录测试用例所花的任何工作都可能在随后被放弃，而任何基于测试用例报告覆盖范围的工作也需要考虑到该情况。就这一点而言，以更高级注意事项（而不是测试用例）作为测试覆盖报告的基础，并将测试用例看作必需使用的内部测试团队工件，这可能是更好的做法。
+    </li>
+</ul>
+<p>
+    测试用例通常是根据测试类型或相关测试的需求进行分类或归类的，分类结果也将相应变化。确定测试用例的一种试探方法首先是从以下方面开始：
+</p>
+<ul>
+    <li>
+        证明已实现需求（正测试用例）
+    </li>
+    <li>
+        证明<b>仅</b>在所需的条件下才实现需求，这被称为负测试。 该测试用例反映了不可接受的、异常的或意外的条件或数据，软件可能在相当程度上受它们的约束。
+    </li>
+</ul><!-- !RPV COMMAND! name="VariantContent" tag="rup_req_usecases" class="process_component"!RPV COMMAND! -->
+<h3>
+    <a id="DerivingTestCasesFromUseCases" name="DerivingTestCasesFromUseCases">由用例得出测试用例</a>
+</h3>
+<p>
+    功能测试的测试用例是由测试目标的用例得出的（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">工作产品：用例</a>）。应针对每个用例场景制定测试用例。确定用例场景的方法是，描述用例中经历基本流程和备用流程（在用例中开始和结束）的路线。
+</p>
+<p>
+    在下图中，（举例）用例中反映基本流程和备用流程的每条不同路线都用箭头表示。基本流程由直线表示，黑线是穿越用例的最简单路线。每个备用流程都从基本流程开始，然后根据具体情况来执行备用流程。备用流程可能再次加入基本流程（备用流程 1 和
+    3），可能源于另一备用流程（备用流程 2），或可能在不再次加入某一流程的情况下终止用例（备用流程 2 和 4）。
+</p>
+<p align="center">
+    <img height="347" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/tstcs_1.gif" width="400" border="0" />
+</p>
+<p class="picturetext" align="center">
+    用例的事件流样本
+</p>
+<p align="left">
+    根据穿越上图中用例的每条可能的路线，可确定不同的用例场景。从基本流程开始，然后将基本流程与备用流程组合起来，可确定以下用例场景：
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 1
+                </th>
+                <td width="18%">
+                    基本流程
+                </td>
+                <td width="23%">
+                    &nbsp;
+                </td>
+                <td width="23%">
+                    &nbsp;
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 2
+                </th>
+                <td width="18%">
+                    基本流程
+                </td>
+                <td width="23%">
+                    备用流程 1
+                </td>
+                <td width="23%">
+                    &nbsp;
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 3
+                </th>
+                <td width="18%">
+                    基本流程
+                </td>
+                <td width="23%">
+                    备用流程 1
+                </td>
+                <td width="23%">
+                    备用流程 2
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 4
+                </th>
+                <td width="18%">
+                    基本流程
+                </td>
+                <td width="23%">
+                    备用流程 3
+                </td>
+                <td width="23%">
+                    &nbsp;
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 5
+                </th>
+                <td width="18%">
+                    基本流程
+                </td>
+                <td width="23%">
+                    备用流程 3
+                </td>
+                <td width="23%">
+                    备用流程 1
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 6
+                </th>
+                <td width="18%">
+                    基本流程
+                </td>
+                <td width="23%">
+                    备用流程 3
+                </td>
+                <td width="23%">
+                    备用流程 1
+                </td>
+                <td width="22%">
+                    备用流程 2
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 7
+                </th>
+                <td width="18%">
+                    基本流程
+                </td>
+                <td width="23%">
+                    备用流程 4
+                </td>
+                <td width="23%">
+                    &nbsp;
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 8
+                </th>
+                <td width="18%">
+                    基本流程
+                </td>
+                <td width="23%">
+                    备用流程 3
+                </td>
+                <td width="23%">
+                    备用流程 4
+                </td>
+                <td width="22%">
+                    &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    <b>注意</b>：为了简单起见，场景 5、6 和 8 仅描述了备用流程 3 所指示的一个执行循环。
+</p>
+<p>
+    通过确定将导致执行特定用例场景的特定情况，得出每个场景的测试用例。
+</p>
+<p>
+    例如，假设图中所描述的用例说明了关于备用流程 3 的以下事项：
+</p>
+<blockquote>
+    “如果在上述步骤 2‘输入提款金额’中输入的金额大于当前帐户余额，则发生该事件流。系统显示一条警告消息，然后重新进入基本流程中的上述步骤 2‘输入提款金额’，在此，银行客户可输入新的提款金额。”
+</blockquote>
+<p>
+    有了这些信息，您就可开始确定执行备用流程 3 所需的测试用例：
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="14%">
+                    测试用例标识
+                </th>
+                <th scope="col" width="23%">
+                    场景
+                </th>
+                <th scope="col" width="33%">
+                    条件
+                </th>
+                <th scope="col" width="30%">
+                    期望的结果
+                </th>
+            </tr>
+            <tr>
+                <td width="14%">
+                    TC x
+                </td>
+                <td width="23%">
+                    场景 4
+                </td>
+                <td width="33%">
+                    步骤 2 － 提款金额 &gt; 帐户余额
+                </td>
+                <td width="30%">
+                    重新进入基本流程中的步骤 2
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    TC y
+                </td>
+                <td width="23%">
+                    场景 4
+                </td>
+                <td width="33%">
+                    步骤 2 － 提款金额 &lt; 帐户余额
+                </td>
+                <td width="30%">
+                    不执行备用流程 3，采用基本流程
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    TC z
+                </td>
+                <td width="23%">
+                    场景 4
+                </td>
+                <td width="33%">
+                    步骤 2 － 提款金额 = 帐户余额
+                </td>
+                <td width="30%">
+                    不执行备用流程 3，采用基本流程
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    <b>注意</b>：由于未提供附加信息，所以上面所示的测试用例极为简单。测试用例很少有这么简单。
+</p>
+<p>
+    下面提供由用例得出测试用例的更真实示例：
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p align="center">
+    <img height="226" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/tstcs002.gif" width="354" />
+</p>
+<p class="picturetext">
+    ATM 机器中的参与者和用例。
+</p>
+<p>
+    下表包含上图中“提取现金”用例的基本流程和某些备用流程：
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="row" width="17%">
+                    基本流程
+                </th>
+                <td width="83%">
+                    该用例是从 ATM 的备用状态开始的。 
+                    <ol>
+                        <li>
+                            开始提款 － 客户将银行卡插入 ATM 机的读卡器。<br />
+                        </li>
+                        <li>
+                            验证银行卡 － ATM 从银行卡上的磁条读取帐户代码并检查是否为可接受的银行卡。<br />
+                        </li>
+                        <li>
+                            输入 PIN － ATM 向客户询问 PIN 代码（四位数字）<br />
+                        </li>
+                        <li>
+                            验证帐户代码和 PIN － 验证帐户代码和 PIN，以确定帐户是否有效且输入的 PIN 是否为该帐户的正确 PIN。对该流程而言，帐户为有效帐户且 PIN 为与该帐户相关的正确
+                            PIN。<br />
+                        </li>
+                        <li>
+                            ATM 选项 － ATM 显示该 ATM 机上提供的各种备选项。在该流程中，银行客户始终选择“提取现金”。<br />
+                        </li>
+                        <li>
+                            输入金额 － ATM 将提示提取金额。对该流程而言，客户选择的是预设金额（10 美元、20 美元、50 美元或 100 美元）。<br />
+                        </li>
+                        <li>
+                            授权 － ATM
+                            通过银行系统启动验证流程，将卡号、PIN、金额和帐户信息作为一个交易发送。对该流程而言，银行系统处于在线状态且通过授权做出响应，从而成功地完成现金提取并相应地更新帐户余额。<br />
+                        </li>
+                        <li>
+                            出钞 － 钱被送出。<br />
+                        </li>
+                        <li>
+                            退卡 － 退出银行卡。<br />
+                        </li>
+                        <li>
+                            凭单 － 打印并送出凭单。ATM 还相应地更新内部日志。&nbsp;
+                        </li>
+                    </ol>
+                    <p>
+                        用例在 ATM 处于备用状态时结束。<br />
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    备用流程 1 － 不是有效卡
+                </th>
+                <td width="83%">
+                    在基本流程步骤 2 －“验证银行卡”中，如果该卡无效，则弹出卡及一条相应的消息。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    备用流程 2 － ATM 中没有现金
+                </th>
+                <td width="83%">
+                    在基本流程步骤 5 －“ATM 选项”中，如果 ATM 中没有现金，则“提取现金”选项不可用。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    备用流程 3 － ATM 中现金不足
+                </th>
+                <td width="83%">
+                    在基本流程步骤 6 －“输入金额”中，如果 ATM 中的现金小于所需的金额，将显示一条相应的消息并重新进入基本流程步骤 6 －“输入金额”。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    备用流程 4 － PIN 不正确
+                </th>
+                <td width="83%">
+                    在基本流程步骤 4 －“验证帐户和 PIN”中，客户有三次机会输入正确的 PIN。&nbsp;&nbsp;<br />
+                    <br />
+                     如果输入的 PIN 不正确，ATM 则显示相应的消息；如果还有剩余的输入机会，该流程将重新进入基本流程的步骤 3 －“输入 PIN”。&nbsp;<br />
+                    <br />
+                     如果最后一次输入的 PIN 不正确，该卡将被扣留，ATM 回到备用状态，且该用例终止。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    备用流程 5 － 帐户不存在
+                </th>
+                <td width="83%">
+                    在基本流程步骤 4 －“验证帐户和 PIN”中，如果银行系统返回一个代码，表示找不到该帐户或该帐户不允许提款，ATM 则显示相应的消息并重新进入基本流程步骤 9 －“退卡”。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    备用流程 6 － 帐户中现金不足
+                </th>
+                <td width="83%">
+                    在基本流程步骤 7 － “授权”中，银行系统返回一个代码，表示帐户余额小于在基本流程步骤 6 －“输入金额”中输入的金额，ATM 则显示相应的消息并重新进入基本流程步骤 6 －“输入金额”。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    备用流程 7 － 已达到日提款最大金额
+                </th>
+                <td width="83%">
+                    在基本流程步骤 6 －“授权”中，银行系统返回一个代码，表示包括该请求提款额在内，客户已超出或即将超出 24 小时内允许的最大金额，ATM 显示相应的消息并重新进入基本流程步骤 6 －“输入金额”。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    备用流程 x － 日志错误
+                </th>
+                <td width="83%">
+                    如果在基本流程步骤 10 －“凭单”中无法更新日志，ATM 就会进入“安全模式”，在该模式下将暂停所有功能。 将向银行系统发送相应的警报，表示 ATM 已暂停操作。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    备用流程 y － 退出
+                </th>
+                <td width="83%">
+                    客户可随时决定终止交易（退出）。将停止交易，且卡被弹出。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="17%">
+                    备用流程 z －“倾斜”
+                </th>
+                <td width="83%">
+                    ATM 包含众多监视不同功能的传感器，例如电源、对各道门施加的压力以及行动检测器。无论何时激活传感器，都会向警局发送警报信号，且 ATM
+                    进入“安全模式”，在该模式下所有功能都会暂停，直到采取了适当的重启／重新初始化措施为止。
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="example">
+        <br />
+         在第一个迭代中，根据迭代计划，我们需要验证“提取现金”用例已正确实施。整个用例还未完全实施，仅实施了以下流程：
+    </p>
+    <blockquote>
+        <ul>
+            <li>
+                基本流程 － 提取预设的金额（10 美元、20 美元、50 美元或 100 美元）
+            </li>
+            <li>
+                备用流程 2 － ATM 中没有现金
+            </li>
+            <li>
+                备用流程 3 － ATM 中现金不足
+            </li>
+            <li>
+                备用流程 4 － PIN 不正确
+            </li>
+            <li>
+                备用流程 5 － 帐户不存在／帐户类型不正确
+            </li>
+            <li>
+                备用流程 6 － 帐户中现金不足
+            </li>
+        </ul>
+    </blockquote>
+</div>
+<p>
+    可由该用例得出以下场景：
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 1 － 成功提取现金
+                </th>
+                <td width="15%">
+                    基本流程
+                </td>
+                <td width="15%">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 2 － ATM 中没有现金
+                </th>
+                <td width="15%">
+                    基本流程
+                </td>
+                <td width="15%">
+                    备用流程 2
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 3 － ATM 中现金不足
+                </th>
+                <td width="15%">
+                    基本流程
+                </td>
+                <td width="15%">
+                    备用流程 3
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 4 － PIN 不正确（还有输入机会）
+                </th>
+                <td width="15%">
+                    基本流程
+                </td>
+                <td width="15%">
+                    备用流程 4
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 5 － PIN 不正确（没有输入机会）
+                </th>
+                <td width="15%">
+                    基本流程
+                </td>
+                <td width="15%">
+                    备用流程 4
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 6 － 帐户不存在／帐户类型不正确
+                </th>
+                <td width="15%">
+                    基本流程
+                </td>
+                <td width="15%">
+                    备用流程 5
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="14%">
+                    场景 7 － 帐户余额不足
+                </th>
+                <td width="15%">
+                    基本流程
+                </td>
+                <td width="15%">
+                    备用流程 6
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    <b>注意</b>：为简单起见，备用流程 3 和 6（场景 3 和 7）中的循环以及循环的组合没有包括在上表中。
+</p>
+<p>
+    对于这七个场景中的每个场景，都需要确定测试用例。可使用矩阵或决策表来确定和管理测试用例。下面显示了常见的格式，其中每一行都代表一个单独的测试用例，这些列则确定测试用例信息。在该示例中，对于每个测试用例，都有一个测试用例标识、条件（或描述）、参与测试用例的所有数据元素（作为输入或已存在于数据库中）以及期望的结果。
+</p>
+<p>
+    要开始定制矩阵，首先确定执行用例场景所需的数据元素。 然后，至少为每个场景确定包含适当条件以执行场景的测试用例。
+    例如，在下面的矩阵中，V（有效）用于表示该条件必须有效，才能执行基本流程；I（无效）用于表示将调用所期望的备用流程的条件。在下表中，“n/a”表示该条件对测试用例不适用。
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="6%">
+                    测试用例标识号
+                </th>
+                <th scope="col" align="middle" width="17%">
+                    场景／条件
+                </th>
+                <th scope="col" align="middle" width="6%">
+                    PIN
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    帐号
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    输入的金额 
+                    <p>
+                        （选择的金额）
+                    </p>
+                </th>
+                <th scope="col" align="middle" width="12%">
+                    帐户中的金额
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    ATM 中的金额
+                </th>
+                <th scope="col" align="middle" width="16%">
+                    期望的结果
+                </th>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW1.
+                </td>
+                <td width="17%">
+                    场景 1 － 成功提取现金
+                </td>
+                <td align="middle" width="6%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td width="16%">
+                    成功提取现金。
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW2.
+                </td>
+                <td width="17%">
+                    场景 2 － ATM 中没有现金
+                </td>
+                <td align="middle" width="6%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%" bgcolor="#c0c0c0">
+                    I
+                </td>
+                <td width="16%">
+                    提取现金选项不可用，用例结束
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW3.
+                </td>
+                <td width="17%">
+                    场景 3 － ATM 中现金不足
+                </td>
+                <td align="middle" width="6%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%" bgcolor="#c0c0c0">
+                    I
+                </td>
+                <td width="16%">
+                    警告消息，回到基本流程步骤 6 －“输入金额”
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW4.
+                </td>
+                <td width="17%">
+                    场景 4 － PIN 不正确（还有多次输入机会）
+                </td>
+                <td align="middle" width="6%" bgcolor="#c0c0c0">
+                    I&nbsp;
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td width="16%">
+                    警告消息，回到基本流程步骤 4 －“输入金额”
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW5.
+                </td>
+                <td width="17%">
+                    场景 4 － PIN 不正确（还有一次输入机会）
+                </td>
+                <td align="middle" width="6%" bgcolor="#c0c0c0">
+                    I&nbsp;
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td width="16%">
+                    警告消息，回到基本流程步骤 4 －“输入金额”
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW6.
+                </td>
+                <td width="17%">
+                    场景 4 － PIN 不正确（没有输入机会）
+                </td>
+                <td align="middle" width="6%" bgcolor="#c0c0c0">
+                    I&nbsp;
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td align="middle" width="11%">
+                    V
+                </td>
+                <td width="16%">
+                    警告消息，卡被扣留，用例结束
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    在上面的矩阵中，有六个测试用例执行四个场景。对基本流程而言，上述的测试用例 CW1 被称为正测试用例。它执行用例中的基本流程路线，没有任何偏差。基本流程的综合测试必须包括负测试用例，以确保仅在条件正确的情况下采用基本流程。测试用例 CW2
+    至 CW6 代表了这些负测试用例（有阴影的单元格表示执行备用流程所需的条件）。虽然 CW2 至 CW6 对基本流程而言是负测试用例，但它们对备用流程 2 至 4 而言是正测试用例，每个备用流程（CW1 － 基本流程）至少有一个负测试用例。
+</p>
+<p>
+    场景 4 是一个示例，其中每个场景仅含有一个正测试用例和一个负测试用例是不够的。要全面测试场景 4 －“PIN 不正确”，至少需要三个正测试用例（来调用场景 4）：
+</p>
+<ul>
+    <li>
+        输入了错误的 PIN 且还有输入机会，该备用流程重新进入基本流程步骤 3 －“输入 PIN”。
+    </li>
+    <li>
+        输入了错误的 PIN 且没有输入机会，该备用流程则扣留卡并终止用例。
+    </li>
+    <li>
+        在第三次输入（最后一次输入机会）时输入了正确的 PIN。该备用流程重新进入基本流程步骤 5 －“输入金额”。&nbsp;
+    </li>
+</ul>
+<p>
+    注意，在上面的矩阵中，没有对条件（数据）输入实际值。这样创建测试用例矩阵的优点在于，很容易知道正在测试的条件。由于您仅需查看 V 和 I
+    的情况（在此由阴影单元格区分），因此确定是否已确定足够的测试用例也很容易。从上表中可以看出，有许多条件并没有阴影单元格，因此某些场景缺少测试用例，例如场景 6 －“帐户不存在或帐户类型错误”和场景 7 －“帐户余额不足”。
+</p>
+<p>
+    一旦确定了足够的测试用例，则应复审并验证这些用例以确保准确性和适用性，并删除重复、相同或多余的测试用例。关于更多详细信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/test-ideas_list_A6CEF011.html" guid="6.149711039531016E-305">概念：测试构想列表</a>。关于其他详细信息，另请参阅<a href="#DefiningTestDataForTestCases">定义测试用例的测试数据</a>一节。
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="6%">
+                    测试用例标识号
+                </th>
+                <th scope="col" align="middle" width="17%">
+                    场景／条件
+                </th>
+                <th scope="col" align="middle" width="6%">
+                    PIN
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    帐号
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    输入的金额 
+                    <p>
+                        （选择的金额）
+                    </p>
+                </th>
+                <th scope="col" align="middle" width="12%">
+                    帐户中的金额
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    ATM 中的金额
+                </th>
+                <th scope="col" align="middle" width="16%">
+                    期望的结果
+                </th>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW1.
+                </td>
+                <td width="17%">
+                    场景 1 － 成功提取现金
+                </td>
+                <td align="middle" width="6%">
+                    4987
+                </td>
+                <td align="middle" width="11%">
+                    809 至 498
+                </td>
+                <td align="middle" width="11%">
+                    50.00
+                </td>
+                <td align="middle" width="12%">
+                    500.00
+                </td>
+                <td align="middle" width="11%">
+                    2,000
+                </td>
+                <td width="16%">
+                    成功提取现金。帐户余额已更新为 450.00
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW2.
+                </td>
+                <td width="17%">
+                    场景 2 － ATM 中没有现金
+                </td>
+                <td align="middle" width="6%">
+                    4987
+                </td>
+                <td align="middle" width="11%">
+                    809 至 498
+                </td>
+                <td align="middle" width="11%">
+                    100.00
+                </td>
+                <td align="middle" width="12%">
+                    500.00
+                </td>
+                <td align="middle" width="11%">
+                    0.00
+                </td>
+                <td width="16%">
+                    提取现金选项不可用，用例结束
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW3.
+                </td>
+                <td width="17%">
+                    场景 3 － ATM 中现金不足
+                </td>
+                <td align="middle" width="6%">
+                    4987
+                </td>
+                <td align="middle" width="11%">
+                    809 至 498
+                </td>
+                <td align="middle" width="11%">
+                    100.00
+                </td>
+                <td align="middle" width="12%">
+                    500.00
+                </td>
+                <td align="middle" width="11%">
+                    70.00
+                </td>
+                <td width="16%">
+                    警告消息，回到基本流程步骤 6 －“输入金额”
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW4.
+                </td>
+                <td width="17%">
+                    场景 4 － PIN 不正确（还有多次输入机会）
+                </td>
+                <td align="middle" width="6%">
+                    49<u>78</u>&nbsp;
+                </td>
+                <td align="middle" width="11%">
+                    809 至 498
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="12%">
+                    500.00
+                </td>
+                <td align="middle" width="11%">
+                    2,000
+                </td>
+                <td width="16%">
+                    警告消息，回到基本流程步骤 4 －“输入金额”
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW5.
+                </td>
+                <td width="17%">
+                    场景 4 － PIN 不正确（还有一次输入机会）
+                </td>
+                <td align="middle" width="6%">
+                    49<u>78</u>
+                </td>
+                <td align="middle" width="11%">
+                    809 至 498
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="12%">
+                    500.00
+                </td>
+                <td align="middle" width="11%">
+                    2,000
+                </td>
+                <td width="16%">
+                    警告消息，回到基本流程步骤 4 －“输入金额”
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    CW6.
+                </td>
+                <td width="17%">
+                    场景 4 － PIN 不正确（没有输入机会）
+                </td>
+                <td align="middle" width="6%">
+                    49<u>78</u>&nbsp;
+                </td>
+                <td align="middle" width="11%">
+                    809 至 498
+                </td>
+                <td align="middle" width="11%">
+                    n/a
+                </td>
+                <td align="middle" width="12%">
+                    500.00
+                </td>
+                <td align="middle" width="11%">
+                    2,000
+                </td>
+                <td width="16%">
+                    警告消息，卡被扣留，用例结束
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    上述测试用例仅仅是验证该迭代的提取现金用例所需的一些测试用例。 所需的其他测试用例包括：
+</p>
+<ul>
+    <li>
+        场景 6 － 帐户不存在或帐户类型不正确：找不到帐户或帐户不可用
+    </li>
+    <li>
+        场景 6 － 帐户不存在或帐户类型不正确：帐户不允许提款
+    </li>
+    <li>
+        场景 7 － 帐户余额不足：请求的金额大于帐户余额。
+    </li>
+</ul>
+<p>
+    在以后的迭代中，当实施其他流程时，以下方面将需要测试用例：
+</p>
+<ul>
+    <li>
+        卡无效（报告卡遗失或被盗，非可接受的银行卡、卡的数据条损坏等）
+    </li>
+    <li>
+        无法读卡（读卡器被卡住、脱机或出现故障）
+    </li>
+    <li>
+        帐户已结清、被冻结或不可用
+    </li>
+    <li>
+        ATM 中的金额不足以或无法支付所请求的金额（与 CW3 不同，CW3 中某种面额的钞票用尽，但不是全部）
+    </li>
+    <li>
+        无法联系银行系统进行核准
+    </li>
+    <li>
+        银行网络脱机或交易过程中发生电源故障
+    </li>
+</ul>
+<p>
+    确定功能测试用例时，请确保以下因素：
+</p>
+<ul>
+    <li>
+        已经为每个用例场景确定了足够的正测试用例和负测试用例
+    </li>
+    <li>
+        测试用例处理的是由用例实施的任何业务规则，确保业务规则的边界条件／值之内、之外以及在该条件／值处均存在测试用例。
+    </li>
+    <li>
+        测试用例处理的是任何事件或行为的先后顺序，例如设计模型的时序图中确定的事件或操作、用户接口对象状态或条件。
+    </li>
+    <li>
+        测试用例处理的是为用例定义的任何特殊需求，例如最小／最大绩效，有时还将结合用例执行过程中的最小／最大负载或数据量。
+    </li>
+</ul>
+<p>
+    关于其他指导信息，请参阅<a href="#DefiningTestDataForTestCases">『定义测试用例的测试数据』</a>这一节。
+</p><!-- !RPV COMMAND! -->
+<h3>
+    <a id="DerivingTestCasesFromSupplementarySpecifications" name="DerivingTestCasesFromSupplementarySpecifications">由补充规范得出测试用例</a>
+</h3>
+<p>
+    并非测试目标的所有需求都将在功能需求工件（例如，用例规范）中得到反映。非功能需求（例如绩效、安全与访问以及配置需求）指定了测试目标的附加行为或特征，这些需求经常是单独记录的，以区别于功能需求。补充规范是获得针对这些附加需求的测试用例的主要来源之一。
+</p>
+<p>
+    下面描述了用于获得这些附加测试用例的指南：
+</p>
+<ul>
+    <li>
+        <a href="#DerivingTestCasesForPerformanceTests">得出针对性能测试的测试用例</a>
+    </li>
+    <li>
+        <a href="#DerivingTestCasesForSecurityAccessTests">得出针对安全／访问测试的测试用例</a>
+    </li>
+    <li>
+        <a href="#DerivingTestCasesForConfigurationTests">得出针对配置测试的测试用例</a>
+    </li>
+    <li>
+        <a href="#DerivingTestCasesForInstallationTests">得出针对安装测试的测试用例</a>
+    </li>
+    <li>
+        <a href="#DerivingTestCasesForOtherNon-functionalTests">得出针对其他非功能测试的测试用例</a>
+    </li>
+</ul>
+<h4>
+    <a id="DerivingTestCasesForPerformanceTests" name="DerivingTestCasesForPerformanceTests">得出针对性能测试的测试用例</a>
+</h4>
+<p>
+    性能测试用例的主要输入是包含非功能需求的补充规范（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">工作产品：补充规范</a>）。获得针对性能测试的测试用例时，使用以下指南：
+</p>
+<ul>
+    <li>
+        确保为补充规范（该规范规定了性能标准）中的每个语句至少确定一个测试用例。性能标准通常由每次交易时间、交易／用户的数目或百分点来表示。
+    </li>
+    <li>
+        确保为每个关键用例至少确定一个测试用例。关键用例是在上述语句和／或工作负载分析文档中确定的那些用例，必须使用性能度量标准对它们进行评估（请参阅<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{008164B1-3AC3-47E8-9F93-EE4C36B58A97}">工作产品：工作负载分析文档</a>）。
+    </li>
+</ul>
+<p>
+    和功能测试的测试用例一样，通常每个使用场景或需求将有多个测试用例。一般将定义多个测试用例 － 例如，一个小于性能阈值（平均交易速率），另一个等于该阈值（高交易速率），第三个测试用例大于该阈值（最高交易速率）。
+</p>
+<p>
+    除了上述性能标准外，还要确保您确定了影响响应时间的特定条件，包括：
+</p>
+<ul>
+    <li>
+        数据库大小 － 存在多少条记录？
+    </li>
+    <li>
+        工作负载 － 交易模式： 
+        <ul>
+            <li>
+                同时进行的用户操作的类型、数目和频率，
+            </li>
+            <li>
+                同时执行的交易的类型、数目、频率和持续时间
+            </li>
+        </ul>
+    </li>
+    <li>
+        环境特征（硬件、NetWare 和软件配置）
+    </li>
+</ul>
+<p>
+    常见的做法是在表格矩阵中记录针对性能测试的测试用例（做法和用于功能测试的那些用例相似）。
+</p>
+<p>
+    关于其他详细信息，请参阅<a href="#DefiningTestDataForTestCases">『定义测试用例的测试数据』</a>这一节。
+</p>
+<p>
+    以下是不同类型的性能测试的一些示例：
+</p>
+<p>
+    对于负载测试：
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="1%">
+                    测试用例标识号
+                </th>
+                <th scope="col" align="middle" width="9%">
+                    工作负载
+                </th>
+                <th scope="col" align="middle" width="24%">
+                    条件
+                </th>
+                <th scope="col" align="middle" width="24%">
+                    期望的结果
+                </th>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    PCW1.
+                </td>
+                <td width="9%">
+                    <p align="center">
+                        1
+                    </p>
+                    <p align="center">
+                        （单个 ATM）
+                    </p>
+                </td>
+                <td align="middle" width="24%">
+                    <p align="left">
+                        完成提款交易
+                    </p>
+                </td>
+                <td width="24%">
+                    在 20 秒内（不依赖于参与者的时间）完成交易
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    PCW2.
+                </td>
+                <td width="9%">
+                    <p align="center">
+                        2
+                    </p>
+                    <p align="center">
+                        （1,000 台 ATM 同时交易）
+                    </p>
+                </td>
+                <td align="middle" width="24%">
+                    <p align="left">
+                        完成提款交易
+                    </p>
+                </td>
+                <td width="24%">
+                    在 30 秒内（不依赖于参与者的时间）完成交易
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    PCW3.
+                </td>
+                <td width="9%">
+                    <p align="center">
+                        3
+                    </p>
+                    <p align="center">
+                        （10,000 台 ATM 同时交易）
+                    </p>
+                </td>
+                <td align="middle" width="24%">
+                    <p align="left">
+                        完成提款交易
+                    </p>
+                </td>
+                <td width="24%">
+                    在 50 秒内（不依赖于参与者的时间）完成交易
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    对于压力测试：
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="1%">
+                    测试用例标识号
+                </th>
+                <th scope="col" align="middle" width="14%">
+                    工作负载
+                </th>
+                <th scope="col" align="middle" width="19%">
+                    条件
+                </th>
+                <th scope="col" align="middle" width="24%">
+                    期望的结果
+                </th>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    SCW1.
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        2
+                    </p>
+                    <p align="center">
+                        （1,000 台 ATM 同时交易）
+                    </p>
+                </td>
+                <td align="middle" width="19%">
+                    <p align="left">
+                        数据库锁定 － 2 台 ATM 请求同一帐户
+                    </p>
+                </td>
+                <td width="24%">
+                    将 ATM 请求排队
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    SCW2.
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        2
+                    </p>
+                    <p align="center">
+                        （1,000 台 ATM 同时交易）
+                    </p>
+                </td>
+                <td align="middle" width="19%">
+                    <p align="left">
+                        银行系统通信不可用
+                    </p>
+                </td>
+                <td width="24%">
+                    交易进入排队等待或超时
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="1%">
+                    SCW3.
+                </td>
+                <td width="14%">
+                    <p align="center">
+                        2
+                    </p>
+                    <p align="center">
+                        （1,000 台 ATM 同时交易）
+                    </p>
+                </td>
+                <td align="middle" width="19%">
+                    <p align="left">
+                        银行通信系统在交易过程中终止
+                    </p>
+                </td>
+                <td width="24%">
+                    显示警告消息
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h4>
+    <a id="DerivingTestCasesForSecurityAccessTests" name="DerivingTestCasesForSecurityAccessTests">得出针对安全／访问测试的测试用例</a>
+</h4>
+<p>
+    参与者和用例描述了系统外部用户和系统执行的操作之间的交互，这种交互将为特定参与者产生值。复杂系统包含多个参与者，且制定测试用例以确保仅指定的参与者可执行用例，这是至关重要的。如果在基于参与者类型的用例实际事件流中存在差别，则尤其如此。
+</p>
+<p>
+    例如，在 ATM 用例中，如果参与者“银行客户”的卡和帐户有的属于拥有这个 ATM 机的银行，有的是竞争银行的银行卡（和帐户），或是试图使用该 ATM 不支持的银行卡，则将对该参与者“银行客户”执行不同的用例事件流。
+</p>
+<p>
+    请遵循上面列出的针对功能测试用例的相同指南。
+</p>
+<p>
+    关于其他指导信息，请参阅<a href="#DefiningTestDataForTestCases">『定义测试用例的测试数据』</a>这一节。
+</p>
+<p>
+    用于安全与访问的测试用例示例：
+</p>
+<div>
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="100%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" align="middle" width="6%">
+                    测试用例标识号
+                </th>
+                <th scope="col" align="middle" width="11%">
+                    条件
+                </th>
+                <th scope="col" align="middle" width="12%">
+                    卡 
+                    <p>
+                        <font size="-2">（V 表示有效卡）</font>
+                    </p>
+                </th>
+                <th scope="col" align="middle" width="12%">
+                    读卡器 
+                    <p>
+                        <font size="-2">（V 表示读卡器正常工作）</font>
+                    </p>
+                </th>
+                <th scope="col" align="middle" width="12%">
+                    银行网络
+                </th>
+                <th scope="col" align="middle" width="16%">
+                    期望的结果
+                </th>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    ACW1.
+                </td>
+                <td width="11%">
+                    银行网络内
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td width="16%">
+                    所有用例均可用
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    ACW2.
+                </td>
+                <td width="11%">
+                    银行网络外
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    I
+                </td>
+                <td width="16%">
+                    仅现金提取用例可用
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    ACW3.
+                </td>
+                <td width="11%">
+                    无法读卡
+                </td>
+                <td align="middle" width="12%">
+                    I
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td width="16%">
+                    警告消息，卡被弹出
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    ACW4.
+                </td>
+                <td width="11%">
+                    报告卡被盗
+                </td>
+                <td align="middle" width="12%">
+                    I
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td width="16%">
+                    警告消息，卡被扣留
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="6%">
+                    ACW5.
+                </td>
+                <td width="11%">
+                    卡已过期
+                </td>
+                <td align="middle" width="12%">
+                    I
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td align="middle" width="12%">
+                    V
+                </td>
+                <td width="16%">
+                    警告消息，卡被扣留
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h4>
+    <a id="DerivingTestCasesForConfigurationTests" name="DerivingTestCasesForConfigurationTests">得出针对配置测试的测试用例</a>
+</h4>
+<p>
+    在典型的分发式系统中，可允许存在许多受支持的硬件和软件的组合。 应执行测试，以验证不同配置（例如不同的操作系统、浏览器或 CPU
+    速度）中可接受的测试目标功能或执行。此外，测试还需要覆盖组件的组合，以发现不同组件的交互所产生的缺陷，（举例）确保由一个应用程序安装的 DLL 版本与另一应用程序所期望的相同 DLL 版本不冲突。
+</p>
+<p>
+    要获得针对配置测试的测试用例，请使用以下指南：
+</p>
+<ul>
+    <li>
+        确保为每个关键配置至少确定一个测试用例。要实现这一点，则确定测试目标环境所需的硬件和软件配置并排定配置的优先级，确保首先测试最常见的配置，包括： 
+        <ul>
+            <li>
+                打印机支持
+            </li>
+            <li>
+                网络连接 － 局域网和广域网
+            </li>
+            <li>
+                服务器配置 － 服务器驱动程序、服务器硬件
+            </li>
+            <li>
+                安装在桌面和／或服务器上的其他软件
+            </li>
+            <li>
+                所有已安装软件的软件版本
+            </li>
+        </ul>
+    </li>
+    <li>
+        确保每个可能有问题的配置至少有一个测试用例。这些问题可能包括： 
+        <ul>
+            <li>
+                硬件性能最差。
+            </li>
+            <li>
+                有兼容性问题历史记录的与其他程序一同驻留内存的软件。
+            </li>
+            <li>
+                客户端通过可能最慢的 LAN/WAN 连接访问服务器。
+            </li>
+            <li>
+                资源不足（CPU 速度慢、最小内存或最低分辨率、磁盘空间等）
+            </li>
+        </ul>
+    </li>
+</ul>
+<h4>
+    <a id="DerivingTestCasesForInstallationTests" name="DerivingTestCasesForInstallationTests">得出针对安装测试的测试用例</a>
+</h4>
+<p>
+    安装测试需要验证是否可在所有可能的安装场景下安装测试目标。安装场景可能包括初次安装测试目标、安装更新的版本或测试目标的工作版本（安装到包含较旧版本的机器上）。安装测试还应确保，当遇到异常情况（例如磁盘空间不足）时，测试目标允许执行操作。
+</p>
+<p>
+    测试用例应覆盖软件的安装场景，包括：
+</p>
+<ul>
+    <li>
+        分发介质，例如，软盘、CD-ROM 或文件服务器。
+    </li>
+    <li>
+        全新安装。
+    </li>
+    <li>
+        完全安装。
+    </li>
+    <li>
+        自定义安装。
+    </li>
+    <li>
+        升级安装。
+    </li>
+</ul>
+<p>
+    客户机－服务器软件的安装程序有一组专门的测试用例。和基于主机的系统不同，服务器和客户端的安装程序通常是分开的。因此，安装测试执行测试目标的所有组件的安装（包括客户端、中间层和服务器），这是非常重要的。
+</p>
+<h4>
+    <a id="DerivingTestCasesForOtherNon-functionalTests" name="DerivingTestCasesForOtherNon-functionalTests">得出针对其他非功能测试的测试用例</a>
+</h4>
+<p>
+    理想情况下，应查找所有必要的输入信息来获得“用例模型”、“设计模型”和“补充规范”工件中的测试用例。但是，此时通常需要补充所找到的信息。
+</p>
+<p>
+    示例如下：
+</p>
+<ul>
+    <li>
+        操作测试的测试用例（以验证该软件在“长时间”的故障间隔期间内使用是否起作用）。
+    </li>
+    <li>
+        调查性能瓶颈、系统功能或使测试目标发生错误的测试用例。
+    </li>
+</ul>
+<p>
+    在多数情况下，可通过创建测试用例（由先前确定的用例得出的测试用例）的变体或聚集体来查找这些测试用例。
+</p>
+<h3>
+    <a id="DerivingTestCasesForAcceptanceTests" name="DerivingTestCasesForAcceptanceTests">得出针对产品验收测试的测试用例</a>
+</h3>
+<p>
+    产品验收测试是部署软件之前的最终测试操作。验收测试的目的在于，验证软件是否已准备就绪并且用户可用来执行软件的那些固有功能和任务。产品验收测试通常不仅仅涉及到执行软件以做好准备，还涉及到交付给客户的所有工作产品，例如培训、文档记录和打包。&nbsp;
+</p>
+<p>
+    按上述章节中所述的方式得出软件工作产品的测试用例。根据产品验收测试的等级和正式程度，测试用例既可与上面已确定的用例相同或相似（正式），也可与其中的一部分相同或相似（非正式）。应在实施和执行产品测试之前就测试用例和产品验收标准达成一致，而与测试用例的深度无关。
+</p>
+<p>
+    对于非软件工作产品的评估会根据被评估的工作产品的不同而大大不同。关于评估内容和方式的信息，请参阅每个特定的非软件工作产品的指南和核对表。
+</p>
+<h3>
+    <a id="BuildVerificationTestCasesForRegressionTests" name="BuildVerificationTestCasesForRegressionTests">构建针对回归测试的验证测试用例</a><a id="XE_test_case__prioritizing_based_on_risk" name="XE_test_case__prioritizing_based_on_risk"></a><a id="XE_prioritizing__test_cases" name="XE_prioritizing__test_cases" class="index" key="划分优先级（prioritizing）" text="测试用例"></a>
+</h3>
+<p>
+    回归测试将比较同一测试目标的两个工作版本或版本，并将其差别确定为潜在的缺陷。因此，假设某一新版本应像较早版本那样运行，并确保未因为这些变更而引入缺陷。
+</p>
+<p>
+    理论上，您希望一个迭代中的所有测试用例都将用作以后迭代中的测试用例。应使用以下指南来确定、设计并实施测试用例，这些测试用例在使维护最小化的同时使回归测试值和重用的价值最大化：
+</p>
+<ul>
+    <li>
+        确保测试用例仅确定关键数据元素（创建／支持被测试的条件所需的元素）
+    </li>
+    <li>
+        确保每个测试用例描述或代表独特的一组输入信息或导致测试目标发生独特行为的一系列事件
+    </li>
+    <li>
+        删除多余或等同的测试用例
+    </li>
+    <li>
+        将具有相同测试目标初始状态和测试数据状态的测试用例组合起来
+    </li>
+</ul>
+<h3>
+    <a id="DefiningTestDataForTestCases" name="DefiningTestDataForTestCases">定义测试用例的测试数据</a><a id="XE_test_case__defining_test_data_for" name="XE_test_case__defining_test_data_for"></a>
+</h3>
+<p>
+    一旦讨论了测试用例且取得一致／认同，则可更详细地确定实际数据值（例如，在测试用例实施矩阵中）并创建测试数据工件。
+</p>
+<p>
+    关于定义和维护测试数据的其他信息，请参阅<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="1.0508352805829607E-304">指南：测试数据</a>。
+</p><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

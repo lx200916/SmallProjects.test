@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 运行时观察和分析</title>
+<meta content="Concept" name="uma.type">
+<meta content="runtime_observation_analysis" name="uma.name">
+<meta content="运行时观察和分析" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "6.56167289202945E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{75501BAA-0CCE-4852-A7B2-B10CA71C002A}", "6.56167289202945E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "6.56167289202945E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="6.56167289202945E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：运行时观察和分析</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南讨论了运行时观察和分析。也就是说在运行时执行期间观察软件并分析捕获到的观察结果，通过软件组件跟踪路径，然后聚集搜集到的跟踪信息，从而通过统计推理规则理解全局系统行为。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_implementer_D145E819.html" guid="{75501BAA-0CCE-4852-A7B2-B10CA71C002A}">实施者</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_runtime_observation_amp;_analysis__concept" name="XE_runtime_observation_&_analysis__concept" class="index" key="运行时观察和分析（runtime observation & analysis）" text="概念"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    观察并随后分析软件组件的运行时行为是成功调试软件中的一项重要实践。理解软件的运行时行为涉及两个关键实践：
+</p>
+<ul>
+    <li>
+        在运行时执行期间观察软件。
+    </li>
+    <li>
+        分析捕获到的观察。
+    </li>
+</ul>
+<p>
+    运行时观察和分析技术自身不依赖于测试，目前可以观察和分析运行时行为而不需要预定义的测试输入或使用测试技术来模拟应用程序行为。但是，可以将测试与运行时观察技术及工具成功组合：例如，可以在测试执行期间执行自动化运行时观察的工具，提高对组件在响应测试时发生的运行时行为的可视性。
+</p>
+<h3>
+    <a id="RuntimeObservation" name="RuntimeObservation">观察运行时行为</a>
+</h3>
+<p>
+    仔细观察软件运行时执行期间发生的所有行为虽然重要，但通常存在对特别监视很有用的重要观察点。这些重要观察点通常是：
+</p>
+<ul>
+    <li>
+        决策点，在该点软件逻辑路径将要或刚产生分支。
+    </li>
+    <li>
+        完成点，在该点完成重要逻辑路径，通常会导致软件环境中的状态更改。
+    </li>
+    <li>
+        两个单独应用程序组件之间的接口点。
+    </li>
+    <li>
+        软件及其执行环境之间的接口点，包括所有到硬件组件的接口。
+    </li>
+</ul>
+<p>
+    这些观察点可能还与控制点相一致，在控制点适合改变应用程序状态或通过逻辑路径的控制流。这些关注点通常称为控制和观察点（PCO）。
+</p>
+<p>
+    运行时观察不将静态观察法（例如复审静态软件源代码或复审在可视模型中捕获到的软件构建块之间的关系等）作为主要方法。
+    它需要可执行软件组件，并提供通过其他调试技术无法得到的有价值信息，这些信息是关于在测试环境中或最终部署环境中，已开发的组件在运行时的行为。然后可以将从运行时行为捕获到的观察与静态元素相联系，以提供更多认识。
+</p>
+<h3>
+    <a id="RuntimeAnalysis" name="RuntimeAnalysis">分析运行时观察</a>
+</h3>
+<p>
+    软件运行时分析只是理解软件组件行为的实践，方法是通过分析组件运行时执行期间收集的数据。实施者开发组件期间，运行时观察和分析是实施者进行的调试活动的一个方面。
+</p>
+<h3>
+    <a id="AutomatedToolSupport" name="AutomatedToolSupport">自动工具支持</a>
+</h3>
+<p>
+    由于从运行时行为可以捕捉到的低级别信息的可能数量、生成信息的速度以及随后理解的潜在大量信息的难度，自动化工具支持是使该实践切实可行的关键因素。可以采取各种方法自己提供工具支持，并且已有大量商业上可用的工具，可节约您自己创建工具所需的时间、工作量和成本。
+</p>
+<p>
+    请参阅 <a class="elementLinkWithUserText" href="./../../../core.base_rup/tools/rup_purifyplus_CABB5CD4.html" guid="{F86573D5-C2E6-4E4F-9B29-23CC99B2BB8D}">PurifyPlus</a> 以获取关于运行时观察和分析工具的更多信息。<br />
+    <br />
+</p><br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

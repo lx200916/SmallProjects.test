@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 设计中的导入依赖关系</title>
+<meta content="Guideline" name="uma.type">
+<meta content="import_dependency_in_design" name="uma.name">
+<meta content="设计中的导入依赖关系" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "5.099920218485599E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "5.099920218485599E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "5.099920218485599E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "5.099920218485599E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="5.099920218485599E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：设计中的导入依赖关系</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">导入依赖关系是包之间的关系。本指南介绍此关系。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_import-dependency_in_design__guidelines_for" name="XE_import-dependency_in_design__guidelines_for" class="index" key="设计中的导入依赖关系（import-dependency in design）" text="指南"></a><a id="XE_design_package__organizing_using_import-dependency" name="XE_design_package__organizing_using_import-dependency"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">说明</a>
+</h3>
+<p>
+    处理包之间的导入依赖关系是构建对象模型的一个重要方面。如果某个包的任何类有可以追溯到另一个包中的类的关系，则该包依赖于另一个包。要表示这样的依赖关系，可使用从某个包到它依赖的包的导入依赖关系。
+</p>
+<p class="picturecenter" align="center">
+    <img height="284" alt="显示组件和操作员、警报和打印机、客户和存款项之间关系的图" src="./../../../core.base_rup/guidances/guidelines/resources/md_andi2.gif" width="385" />
+</p>
+<p class="picturetext">
+    使用导入依赖关系来表达包之间的依赖关系。
+</p>
+<h3>
+    <a id="XE_layering__organizing_design_packages_using_import_dependency" name="XE_layering__organizing_design_packages_using_import_dependency"></a><a id="XE_import-dependency_in_design__organizing_packages_with" name="XE_import-dependency_in_design__organizing_packages_with"></a><a id="Use" name="Use">使用</a>
+</h3>
+<p>
+    使用以下方法发展导入依赖关系：
+</p>
+<ul>
+    <li>
+        开始处理对象模型之前，制定依赖关系的概述作为工作指南。
+    </li>
+    <li>
+        完成模型后，使用它来显示实际存在的依赖关系。这需要更新对象模型中的导入依赖关系。
+    </li>
+    <li>
+        如果以前将模型分成包，则使用导入依赖关系来显示允许存在依赖关系的地方。
+    </li>
+    <li>
+        包之间的依赖方式影响系统对变更的容忍度。如果满足以下条件，将更易于更改对象模型：
+    </li>
+    <li>
+        从每个包的外部引用最少数量的所包含的类。如果引用很多类，则该包将有过多的不同职责，应将其分成两个。
+    </li>
+    <li>
+        使每个包依赖于较少的其他包。
+    </li>
+    <li>
+        独立测试每个包。这表示应能够通过模拟某个包所依赖的包，来测试该包。不应要求其他包完全实现或几乎完全实施。如果可以独立测试包，则每个包的系统开发和维护将更容易。
+    </li>
+    <li>
+        将对象模型的常规部分放到单独的包中，其他包依赖于该包。如果有这样的包，请严格注意发行版的处理，因为对该包的更改会影响到系统的几个部分。
+    </li>
+</ul>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    假设您发现“回收机器”中的类<b>客户面板</b>和<b>操作员面板</b>的某些公共部分。将这些公共服务指定到一个新的类<b>面板</b>，并将其放在一个新的包<b>面板集合</b>中。然后另两个类可以引用该类以使用公共服务。
+    因为这些类属于两个单独的包，所以这两个包将依赖于新包。这样消除冗余表示只需要在一个地方就可以完成对公共功能的更改。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

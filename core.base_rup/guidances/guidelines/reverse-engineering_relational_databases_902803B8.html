@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 反向设计关系数据库</title>
+<meta content="Guideline" name="uma.type">
+<meta content="reverse-engineering_relational_databases" name="uma.name">
+<meta content="反向设计关系数据库" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "1.338740134620651E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "1.338740134620651E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9DCF1723-1A21-4F48-BEDE-DBC543489682}", "1.338740134620651E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.338740134620651E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.338740134620651E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：反向设计关系数据库</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南描述了反向设计数据库并将生成的数据模型表映射到设计模型中的设计类所涉及的步骤。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_relational_databases__reverse_engineering" name="XE_relational_databases__reverse_engineering" class="index" key="关系数据库（relational databases）" text="反向设计"></a><a id="XE_design_model__reverse-engineering_relational_databases" name="XE_design_model__reverse-engineering_relational_databases"></a><a id="XE_data_model__reverse-engineering_relational_databases" name="XE_data_model__reverse-engineering_relational_databases"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    本指南描述了反向设计数据库并将生成的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>表映射到<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>中的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">设计类</a>所涉及的步骤。此流程可以由<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_database_designer_524DC34F.html" guid="{87EE3BF5-17CA-4211-BD3D-32F361E58550}">数据库设计员</a>用以将修改的开发植入数据库中（作为演进开发周期的一部分）。
+    数据库设计人员将需要在项目的整个开发生命周期内管理反向设计流程。在许多情况下，反向设计流程是在项目生命周期早期执行的，然后数据设计的更改受到递增地管理，而不需要随后对数据库执行反向设计。
+</p>
+<p>
+    反向设计数据库和将生成的数据模型元素转换为设计模型元素的流程的主要步骤如下：
+</p>
+<ul>
+    <li>
+        创建一个实际数据模型，所包含的表代表数据库中永久数据的实际布局。可以使用随关系数据库管理系统（RDBMS）提供的工具或通过最时新的可视建模工具自动执行此步骤。
+    </li>
+    <li>
+        将实际数据模型中的表转换为设计模型中的设计类。此步骤可以通过先使用自动化工具进行初始转换、然后进行手动调整来执行。
+    </li>
+    <li>
+        定义设计模型中多类之间的关联。
+    </li>
+    <li>
+        基于对相应数据模型元素执行的操作，定义设计模型中类的相应操作。
+    </li>
+    <li>
+        将设计模型中的类按需要分组为子系统和包。
+    </li>
+</ul>
+<h3>
+    <a id="Reverse Engineering RDBMS Database or DDL script to Generate a Data Model" name="Reverse Engineering RDBMS Database or DDL script to Generate a Data Model">反向设计 RDBMS 数据库或 DDL 脚本以生成数据模型</a>
+</h3>
+<p>
+    数据库或“数据定义语言”（DDL）脚本反向设计流程通常生成一组模型元素（表、视图、存储过程等）。根据数据库的复杂性，数据库设计人员可能需要将反向设计的模型元素划分为包含逻辑相关的表组的几个主题区域包。
+</p>
+<h3>
+    <a id="Transforming Data Model to Design Model" name="Transforming Data Model to Design Model">将数据模型转换为设计模型</a>
+</h3>
+<p>
+    可以按以下过程从数据模型中的模型元素生成设计类。 将数据库的结构复制到类模型中，这是比较简单的。下面列出的流程描述了将数据模型元素转换为设计模型元素的算法。
+</p>
+<p>
+    下表显示了设计模型元素和数据模型元素之间常规映射的摘要。
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <p class="Text">
+                        <b>数据模型元素</b>&nbsp;
+                    </p>
+                </th>
+                <th scope="col" width="50%">
+                    <p class="Text">
+                        <b>相应的设计模型元素</b>&nbsp;
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    表&nbsp;
+                </td>
+                <td width="50%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_class_B33BD5E5.html" guid="{952A9CE9-D5A3-43AC-980D-0B9298F3872E}">类</a>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    列&nbsp;
+                </td>
+                <td width="50%">
+                    属性&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        未标识关系&nbsp;
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/association_98710829.html" guid="5.540135518285335E-305">关联</a>&nbsp;
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        交叉表
+                    </p>&nbsp;
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        关联类
+                    </p>
+                    <p class="Text">
+                        多对多关联
+                    </p>
+                    <p class="Text">
+                        限定关联&nbsp;
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        标识关系&nbsp;
+                    </p>
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/aggregation_A53E33AB.html" guid="1.1538495077622037E-304">聚集</a>&nbsp;
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    <p class="Text">
+                        基数&nbsp;
+                    </p>&nbsp;
+                </td>
+                <td width="50%">
+                    <p class="Text">
+                        多重性&nbsp;
+                    </p>&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    使用列举的子句检查约束&nbsp;
+                </td>
+                <td width="50%">
+                    &lt;&lt;ENUM&gt;&gt; 类&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    模式&nbsp;
+                </td>
+                <td width="50%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_package_8376BC8E.html" guid="{80CC5437-F481-487B-A69B-957D9D236D8D}">包</a>&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    数据模型中有一些在设计模型中没有直接相关关系的模型元素。这些元素包括表空间和数据库本身，它们对数据库的实际存储特征建模并由组件表示。另一项是数据库视图，它们是“虚拟”表，并且在设计模型中没有任何意义。最后，对表的主键和数据库触发函数的索引（用于优化数据库的操作）仅在数据库和数据模型环境中才有意义。
+</p>
+<h4>
+    <a id="Transform a Table to a Class" name="Transform a Table to a Class">将表转换为类</a>
+</h4>
+<p>
+    对于要转换的每个表，创建一个类来代表该表。对于每一列，使用适当的数据类型创建该类的一个属性。尝试尽可能使将属性的数据类型与相关联的列的数据类型相匹配。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    请考虑下图中显示的、具有以下结构的数据库表 <b>Customer</b>：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="40%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th headers="col" width="55%">
+                    <u><b>列名称</b></u>
+                </th>
+                <th headers="col" width="45%">
+                    <u><b>数据类型</b></u>
+                </th>
+            </tr>
+            <tr>
+                <td width="55%">
+                    Customer_ID
+                </td>
+                <td width="45%">
+                    Number
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    Name
+                </td>
+                <td width="45%">
+                    Varchar
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    Street
+                </td>
+                <td width="45%">
+                    Varchar
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    City
+                </td>
+                <td width="45%">
+                    Varchar
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    State/Province
+                </td>
+                <td width="45%">
+                    Char(2)
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    Zip/Postal Code
+                </td>
+                <td width="45%">
+                    Varchar
+                </td>
+            </tr>
+            <tr>
+                <td width="55%">
+                    Country
+                </td>
+                <td width="45%">
+                    Varchar
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    表 <b>Customer</b> 的表定义
+</p>
+<p class="example">
+    现在，我们创建一个类 <b>Customer</b>，在下图中显示了其结构：
+</p>
+<p class="example" align="center">
+    <img height="154" alt="Customer 类定义" src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo1.gif" width="147" />
+</p>
+<p class="picturetext">
+    初始 <b>Customer</b> 类
+</p>
+<p class="example">
+    在这个初始 <b>Customer</b> 类中，<b>Customer</b> 表中的每一列都有一个属性。 因为可以查询源表中的所有列，每个属性都具有<b>公共</b>可视性。
+</p>
+<p class="example">
+    请注意，属性左侧列出的“+”图标表示该属性是“公共”的；缺省情况下，从 RDBMS 表派生的所有属性都应是公共的，因为 RDBMS 一般允许对所有列进行无限制的查询。
+</p>
+<h3>
+    <a id="Identify Embedded or Implicit Classes" name="Identify Embedded or Implicit Classes">确定是嵌入式类还是隐含类</a>
+</h3>
+<p>
+    从直接的表－类映射中生成的类通常将包含可以分为单独类的属性，尤其是在属性出现在多个转换类中的情况下。这些“重复的属性”可能是因为性能而对表反向规范化所生成的、或者可能是因为数据模型过度简化而生成的。在这些情况下，将相应的类分为两个或更多类，以代表这些表的规范化视图。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    定义上述 <b>Customer</b> 类之后，我们可以定义一个包含所有地址信息的 <b>Address</b> 类（假设我们的系统中还有其他对象带有地址信息），则将得到以下类：
+</p>
+<p class="example" align="center">
+    <img height="150" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo2.gif" width="433" />
+</p>
+<p class="picturetext">
+    经修订的 <b>Customer</b> 类以及抽取出的 <b>Address</b> 类
+</p>
+<p class="example">
+    因为客户的地址可以视为客户的<b>一部分</b>，这两个类之间所画的关联是<b>聚集关系</b>。
+</p>
+<h3>
+    <a id="Handle Foreign-Key Relationships" name="Handle Foreign-Key Relationships">处理外键关系</a>
+</h3>
+<p>
+    对于表中的每个外键关系，在相关联的类之间创建一个关联，从类中除去映射到外键列的属性。如果该外键列初始情况下表示为一个属性，则从类中除去它。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    假设 <b>Order</b> 表的结构如下所示：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="35%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="50%">
+                    <u><b>列名称&nbsp;</b></u>
+                </th>
+                <th scope="col" width="50%">
+                    <u><b>数据类型&nbsp;</b></u>
+                </th>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Number&nbsp;
+                </td>
+                <td width="50%">
+                    Number&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Customer_ID&nbsp;
+                </td>
+                <td width="50%">
+                    Varchar&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    表 <b>Order</b> 的结构
+</p>
+<p class="example">
+    在上面列出的 <b>Order</b> 表中，<b>Customer_ID</b> 列是一个<b>外键引用</b>；此列包含与 Order 相关联的 Customer 的主键值。我们将在设计模型中表示这一情况，如下所示：
+</p>
+<p class="example" align="center">
+    <img height="209" alt="下文中所描述的 UML 图。" src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo3.gif" width="156" />
+</p>
+<p class="picturetext">
+    在设计模型中表现外键关系
+</p>
+<p class="example">
+    外键表示为类 <b>Order</b> 和 <b>Item</b> 之间的关联。
+</p>
+<h3>
+    <a id="Handle Many-to-Many Relationships" name="Handle Many-to-Many Relationships">处理多对多关系</a>
+</h3>
+<p>
+    RDBMS 数据模型使用<b>连接表</b>或<b>关联表</b>来表现多对多关系。 这些表使多对多关系可以使用一个中间表来表示，该表包含可连接在一起的两个不同表的主键。
+    需要连接表的原因是因为一个外键引用仅可包含对单个外键值的引用；当一个单行可能与另一表中的许多其他行相关时，就需要一个连接表来与它们相关联。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    考虑 <b>Product</b> 的情况，Product 可由多个 <b>Supplier</b> 中的任一个提供，并且任一 <b>Supplier</b> 都可提供任意数量的 <b>Product</b>。<b>Product</b>
+    和 <b>Supplier</b> 表的结构定义如下：
+</p>
+<div align="center">
+    <table cellspacing="0" cellpadding="0" width="85%" border="0">
+        <tbody>
+            <tr>
+                <td valign="top" align="middle">
+                    <table                     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"                      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="300" bordercolorlight="#808080"                     border="1">
+                        <caption>
+                            Product 表
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col" width="50%">
+                                    <u><b>列名称</b></u>
+                                </th>
+                                <th scope="col" width="50%">
+                                    <u><b>数据类型</b></u>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Product_ID
+                                </td>
+                                <td width="20%">
+                                    Number
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Name
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Description
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Price
+                                </td>
+                                <td width="20%">
+                                    Number
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td valign="top" align="middle">
+                    <table                     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"                      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="300" bordercolorlight="#808080"                     border="1">
+                        <caption>
+                            Supplier 表
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col" width="50%">
+                                    <u><b>列名称</b></u>
+                                </th>
+                                <th scope="col" width="50%">
+                                    <u><b>数据类型</b></u>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Supplier_ID
+                                </td>
+                                <td width="20%">
+                                    Number
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Name
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Street
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    City
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    State/Province
+                                </td>
+                                <td width="20%">
+                                    Char(2)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Zip/Postal Code
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Country
+                                </td>
+                                <td width="20%">
+                                    Varchar
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    Product 和 Supplier 表定义
+</p>
+<p class="example" align="left">
+    为了将这两个表链接在一起以找出特定供应商提供的产品，我们需要一个 <b>Product-Supplier</b> 表，其定义如下表中所示。
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="45%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th id="col1" align="middle" width="100%" colspan="2">
+                    <b>Product-Supplier 表</b>
+                </th>
+            </tr>
+            <tr>
+                <td headers="col1" width="60%">
+                    <u><b>列名称&nbsp;</b></u>
+                </td>
+                <td headers="col1" width="40%">
+                    <u><b>数据类型&nbsp;</b></u>
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="60%">
+                    Product_ID&nbsp;
+                </td>
+                <td headers="col1" width="40%">
+                    Number&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td headers="col1" width="60%">
+                    Supplier_ID&nbsp;
+                </td>
+                <td headers="col1" width="40%">
+                    Number&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p class="picturetext">
+    Product-Supplier 表定义
+</p>
+<p class="example">
+    该<b>连接表</b>包含产品和供应商的主键，并将它们链接在一起。该表中的一行将表示一个特定供应商提供一项特定产品。所具有的 Supplier_ID 列与特定供应商标识匹配的所有行将提供该供应商提供的所有产品的列表。
+</p>
+<p class="example">
+    在设计模型中，这种中间表是多余的，因为一个对象模型就可以直接表现多对多关联。<b>Supplier</b> 和 <b>Product</b> 类及其关系在下图中显示，还有 <b>Address</b> 类，后者是按照先前的讨论从
+    <b>Supplier</b> 中抽取的。
+</p>
+<p class="example" align="center">
+    <img height="301" alt="标题中描述的 UML 图。" src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo4.gif" width="409" />
+</p>
+<p class="picturetext">
+    Product 和 Supplier 类表现
+</p>
+<h3>
+    <a id="Introduce Generalization" name="Introduce Generalization">引入泛化关系</a>
+</h3>
+<p>
+    通常，您将会发现具有某种类似结构的表。在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_data_model_65B46980.html" guid="{9DCF1723-1A21-4F48-BEDE-DBC543489682}">数据模型</a>中，没有泛化关系的概念，所以无法表现出两个以上的表具有某种共同的结构。有时，共同结构是为提高性能而进行的反向规范化所产生的，上述的“隐含”
+    <b>Address</b>
+    表（我们将它抽取到一个单独的类中）就属于这种情况。在其他情况下，多个表共享更基础的特征，我们可以将这些特征抽取到一个具有两个以上子类的泛化父类中。要发现泛化的机会，则在几个表（这些表与其说不同，不如说相似）中查找重复的列。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    考虑以下的表 <b>SoftwareProduct</b> 和 <b>HardwareProduct</b>，如下所示：
+</p>
+<div align="center">
+    <table cellspacing="0" cellpadding="0" width="85%" border="0">
+        <tbody>
+            <tr>
+                <td align="middle">
+                    <table                     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"                      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="300" bordercolorlight="#808080"                     border="1">
+                        <caption>
+                            Software Product 表
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col" width="20%">
+                                    <u><b>列名称&nbsp;</b></u>
+                                </th>
+                                <th scope="col" width="20%">
+                                    <u><b>数据类型&nbsp;</b></u>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Product_ID&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Number&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Name&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Varchar&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Description&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Varchar&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Price&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Number&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Version&nbsp;
+                                </td>
+                                <td width="20%">
+                                    Number&nbsp;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td align="middle">
+                    <table                     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"                      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="300" bordercolorlight="#808080"                     border="1">
+                        <caption>
+                            Hardware Product 表
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col" width="20%">
+                                    <u><b>列名称&nbsp;</b></u>
+                                </th>
+                                <th scope="col" width="20%">
+                                    <u><b>数据类型&nbsp;</b></u>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Product_ID&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Number&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Name&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Varchar&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Description&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Varchar&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <font color="#0000ff">Price&nbsp;</font>
+                                </td>
+                                <td width="20%">
+                                    <font color="#0000ff">Number&nbsp;</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    Version&nbsp;
+                                </td>
+                                <td width="20%">
+                                    Number&nbsp;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <br />
+    </p>
+</div>
+<p class="picturetext">
+    SoftwareProduct 和 HardwareProduct 表
+</p>
+<p class="example">
+    请注意，以蓝色突出显示的列是完全相同的；这两个表所共享的定义大体相同，仅略有差别。我们可以抽取一个共同的 <b>Product</b> 类并将 <b>SoftwareProduct</b> 和 <b>HardwareProduct</b>
+    作为 <b>Product</b> 的子类来表示这种关系，如下图所示：
+</p>
+<p class="example" align="center">
+    <img height="231" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo5.gif" width="320" />
+</p>
+<p class="picturetext">
+    SoftwareProduct 和 HardwareProduct 类，显示泛化为 Product 类
+</p>
+<p class="example">
+    在下图中，所有类定义放在一起，显示了一个订单输入系统的合并类图（仅限于主要类）。
+</p>
+<p class="example" align="center">
+    <img height="588" alt="附带文本中描述的复杂 UML 图。" src="./../../../core.base_rup/guidances/guidelines/resources/rdb-oo6.gif" width="643" />
+</p>
+<p class="picturetext">
+    订单输入系统的合并类图
+</p>
+<h3>
+    <a id="Replicating RDBMS Behavior in the Design Model" name="Replicating RDBMS Behavior in the Design Model">在设计模型中复制
+    RDBMS 行为</a>
+</h3>
+<p>
+    复制行为更困难，因为通常关系数据库不是面向对象的，并且似乎与对象模型中对类的操作没有任何相似之处。以下步骤可能有助于重新构建上述类的行为：
+</p>
+<ol>
+    <li>
+        <b>创建操作以获取和设置每个属性。</b> 需要通过一种方法来设置、变更及查询对象属性的值。由于访问对象属性的唯一方式是通过类提供的操作，故必须对类定义此类操作。
+        创建设置属性值的操作时，务必合并可能对相关联的列起作用的任何验证约束。如果没有确认约束，您可以选择只表现如下事实：这些属性可以通过将属性标志为具有“公共”可视性来进行<b>获取</b>和<b>设置</b>，如上述几个图中所示（使用属性名称左侧的图标）。
+    </li>
+    <li>
+        <b>为在相关联的表上操作的每个存储过程创建对该类的操作。</b>存储过程是在 DBMS
+        自身内部执行的可执行子例程。这种逻辑需要转换到设计模型中。如果一个存储过程只对一个类起作用，则使用与该存储过程相同的参数和返回类型创建对该类的一个操作。记录该操作中存储过程的行为，确保在<b>方法</b>描述中注明该操作是由存储过程实施的。
+    </li>
+    <li>
+        <b>创建操作以管理类之间的关联。</b> 如果两个类之间存在关联，则必须有创建、管理和除去关联的方法。对象之间的关联通过对象引用来管理，所以为了在 <b>Order</b> 和 <b>LineItem</b>
+        之间创建关联（即，将 <b>LineItem</b> 添加到 <b>Order</b> 中），将调用对 <b>Order</b> 的操作，将 <b>LineItem</b> 作为实参传递（例如
+        <b>Order.add(aLineItem)</b>）。另外，还必须有删除和更新关联的方法（即 <b>Order.remove(aLineItem)</b> 和
+        <b>Order.change(aLineItem,aNewLineItem)</b>）。
+    </li>
+    <li>
+        <b>处理对象删除操作。</b>
+        如果目标语言支持显式删除，就要通过将行为添加到类的析构函数中来实施引用完整性检查。在数据库中有引用完整性约束的情况下（例如<b>级联删除</b>），则需要在相应的类中复制该行为。例如，该数据库可能定义如下约束，即只要删除一个
+        <b>Order</b>，所有相关联的 <b>LineItems</b>
+        均应被删除。如果目标语言支持垃圾回收，则创建如下机制，即当将相关联的对象作为垃圾回收时，可以从表中除去多行。请注意，这做起来比听起来难（听起来也很困难），因为您将需要实施一种机制，确保没有任何数据库客户机对要作为垃圾回收的对象有任何引用；依靠执行环境／虚拟机的垃圾回收能力是不够的，因为这毕竟只是一个客户对现实的了解。
+    </li>
+    <li>
+        <b>处理查询所暗示的行为。</b> 检查访问表的 Select 语句，以查看信息的检索和处理方式。对于 Select 语句直接返回的每一个列，将相关联属性的 <b>public</b> 特征均设置为
+        <b>true</b>；所有其他属性均应为 <b>private</b>。对于 Select 语句中每个计算的列，创建对相关联的类的操作，以计算和返回该值。考虑 Select 语句时，还要包括“视图”定义中嵌入的 Select
+        语句。
+    </li>
+</ol>
+<h3>
+    <a id="Organize Elements in the Design Model" name="Organize Elements in the Design Model">在设计模型中组织元素</a>
+</h3>
+<p>
+    在设计模型中，根据表－类转换而创建的设计类应，（在需要时）基于应用程序的整体体系结构结构，组织为相应的<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_package_8376BC8E.html" guid="{80CC5437-F481-487B-A69B-957D9D236D8D}">设计包</a>和／或<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">设计子系统</a>。关于应用程序体系结构的概述信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/layering_59FD1CD4.html" guid="3.801315327549898E-305">概念：分层</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/software_architecture_4269A354.html" guid="3.066252221588648E-305">概念：软件体系结构</a>。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

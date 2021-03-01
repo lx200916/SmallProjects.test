@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 设计包</title>
+<meta content="Guideline" name="uma.type">
+<meta content="design_package" name="uma.name">
+<meta content="设计包" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "3.3691722315666536E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{DB21F5EF-810B-4994-B120-79FA8774FA9D}", "3.3691722315666536E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_n7ZcgN7REdmjRZts2c4ZjQ", "{80CC5437-F481-487B-A69B-957D9D236D8D}", "3.3691722315666536E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.3691722315666536E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.3691722315666536E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：设计包</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">设计包是用来对设计模型进行分区的构造。本指南说明如何确定和指定设计包。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_package_8376BC8E.html" guid="{80CC5437-F481-487B-A69B-957D9D236D8D}">设计包</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_designer_BA8DE74E.html" guid="{DB21F5EF-810B-4994-B120-79FA8774FA9D}">设计人员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_design_package__guidelines_for" name="XE_design_package__guidelines_for"></a> 
+<h3>
+    <a id="Introduction" name="Introduction">简介</a>
+</h3>
+<p>
+    <a id="XE_design_subsystem__packages_vs._subsystems" name="XE_design_subsystem__packages_vs._subsystems"></a><a id="XE_design_package__subsystems_vs._packages" name="XE_design_package__subsystems_vs._packages"></a>可以将设计模型构造成较小的单元，以使其更易于理解。通过将设计模型元素分组成包和子系统，然后显示这些组如何互相关联，可以更容易理解模型的整体结构。注意，
+    <b><a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/termdefinitions/design_subsystem_AB08ECC8.html" guid="_yGBMgNnmEdmO6L4XMImrsA">设计子系统</a></b>建模为一个实现一个或多个接口的组件；关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_design_subsystem_1A8D169B.html" guid="{A3C60B25-9780-4BFA-81AF-C1AD40D8A833}">工作产品：设计子系统</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/design_subsystem_B26FD609.html" guid="1.2314266786534317E-305">工作产品指南：设计子系统</a>。另一方面，设计包只是用于分组。
+</p>
+<h3>
+    <a id="XE_visibility__of_content_in_package" name="XE_visibility__of_content_in_package" class="index" key="可视性（visibility）" text="包中内容的可视性"></a><a id="XE_design_package__describing_how_packages_depend_on_each_other" name="XE_design_package__describing_how_packages_depend_on_each_other"></a><a id="Package Content Visibility" name="Package Content Visibility">包内容可视性</a>
+</h3>
+<p>
+    包中包含的类可以是公共或私有的。所有其他类都可以和<a id="XE_public_class__in_package" name="XE_public_class__in_package" class="index" key="公共类（public class）" text="包中的公共类"></a><b>公共类</b>相关联。<a id="XE_private_class__in_package" name="XE_private_class__in_package" class="index" key="私有类（private class）" text="包中的私有类"></a><b>私有类</b>只可以和包中包含的类相关联。
+</p>
+<p>
+    包接口由包的公共类组成。包接口（公共类）隔离其他包并实施与其他包的依赖关系。使用此方法可以简化并行开发，因为可以在早期建立接口，而开发者只需要知道其他包的接口中的更改。
+</p>
+<h3>
+    <a id="XE_design_package__package_partitioning_criteria" name="XE_design_package__package_partitioning_criteria"></a><a id="Package-Partitioning Criteria" name="Package-Partitioning Criteria">包分区条件</a>
+</h3>
+<p>
+    会因为许多原因而将设计模型分区：
+</p>
+<ul>
+    <li>
+        当系统完成时，可以使用包和子系统作为命令、配置或交付单元。
+    </li>
+    <li>
+        由于资源分配以及不同开发团队的能力不同，可能要求在处于不同位置的不同组之间划分项目。 子系统和良好定义的接口一起，提供了以受控、协调方式在不同团队之间划分工作的一种方法，使设计和实施能够并行进行。
+    </li>
+    <li>
+        可以使用子系统以反映用户类型的方法构造设计模型。许多更改需求都源自用户；子系统确保特定用户类型的更改只会影响对应于该用户类型的系统部件。
+    </li>
+    <li>
+        在某些应用程序中，某些信息应只能由少数人访问。子系统使您能够在需要隐私的区域保护隐私。
+    </li>
+    <li>
+        如果正在构建支持系统，则可以使用子系统和包使其获得与要支持的系统结构类似的结构。以此方法，可以同步两个系统的维护。
+    </li>
+    <li>
+        <a id="XE_existing_product__representing_with_packages" name="XE_existing_product__representing_with_packages" class="index" key="现有产品（existing product）" text="使用包表示"></a>子系统用于表示系统使用的现有产品和服务（例如，COTS 产品和库），如下面几节中所说明。
+    </li>
+</ul>
+<h4>
+    <a id="XE_boundary_class__packaging" name="XE_boundary_class__packaging"></a><a id="Packaging Boundary Classes" name="Packaging Boundary Classes">封装边界类</a>
+</h4>
+<p>
+    当将边界类分发到包时，可以应用两种不同的策略，选择哪一个策略取决于是否会在将来大幅更改系统接口。
+</p>
+<ul>
+    <li>
+        如果有可能会替换系统接口，或进行大量更改，则应将该接口与设计模型的其余部分分离。更改用户接口时，只影响这些包。此类重大更改的示例是从面向命令行的接口切换至面向窗口的接口。
+    </li>
+</ul>
+<p class="picturecenter" align="center">
+    <img src="./../../../core.base_rup/guidances/guidelines/resources/md_desp2.gif" width="234" height="148" alt="附带文本中描述的图。" />
+</p>
+<p class="picturetext">
+    如果主要目标是简化重大接口更改，则应将边界类放置在一个（或几个）单独的包中。
+</p>
+<ul>
+    <li>
+        如果没有打算进行重大接口更改，则应当将对系统服务的更改（而非对接口的更改）作为指导原则。然后应将边界类和与其功能相关的实体类和控制类放在一起。这样，就能够容易地看到在更改某实体类或控制类的情况下将影响哪些边界类。
+    </li>
+</ul>
+<p class="picturecenter" align="center">
+    <img src="./../../../core.base_rup/guidances/guidelines/resources/md_desp3.gif" width="257" height="71" alt="附带文本中描述的图。" />
+</p>
+<p class="picturetext">
+    为简化对系统服务的更改，将边界类和与其功能相关的类封装在一起。
+</p>
+<p>
+    对于在功能上与任何实体类或控制类都不相关的必需边界类，应将它们和属于同一接口的边界类放置在单独的包中。
+</p>
+<p>
+    如果某边界类与可选服务相关，则应将它与共同协作提供服务的类分组到单独的子系统中。该子系统应映射到一个可选组件，在定购可选功能时提供该组件。
+</p>
+<h4>
+    <a id="XE_design_package__functionally_related_classes?_finding_packages_for" name="XE_design_package__functionally_related_classes?_finding_packages_for"></a><a id="Packaging Functionally Related Classes" name="Packaging Functionally Related Classes">封装功能相关的类</a>
+</h4>
+<p>
+    应为功能相关的每组类确定一个包。当判断两个类是否功能相关时，可以应用几个实践条件。按重要性递减顺序，这些条件是：
+</p>
+<ul>
+    <li>
+        如果一个类的行为和／或结构中的更改使另一个类中也有必要更改，则这两个类在功能上相关。
+    </li>
+</ul>
+<blockquote>
+    <p class="exampleheading">
+        示例
+    </p>
+    <p class="example">
+        如果将新的属性添加到实体类<b>订单</b>，则很可能有必要更新控制类<b>订单管理员</b>。因此，它们属于相同的包<b>订单</b>处理。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        可以通过以一个类（例如，实体类）开始并检查从系统中删除它会有什么影响，来判断这个类是否与另一个类在功能上相关。所有由于删除某个类而变得多余的类都与被删除的类有某些联系。多余性表示只有被删除的类才使用该类，或该类自身依赖于被删除的类。
+    </li>
+</ul>
+<blockquote>
+    <p class="exampleheading">
+        示例
+    </p>
+    <p class="example">
+        在<b>仓库处理系统</b>中有一个包<b>订单处理</b>，包含两个控制类<b>订单管理员</b>和<b>订单登记员</b>。这两个控制类都对有关仓库中订单处理的服务建模。实体类<b>订单</b>存储所有订单属性和关系，该类仅用于订单处理。如果除去了该实体类，则不再需要
+        <b>订单管理员</b>或<b>订单登记员</b>，因为仅当<b>订单</b>存在时它们才有用。因此，实体类<b>订单</b>应与这两个控制类包含在同一个包中。
+    </p>
+</blockquote>
+<p class="picturecenter" align="center">
+    <img src="./../../../core.base_rup/guidances/guidelines/resources/md_desp4.gif" width="393" height="163" alt="附带文本中描述的图。" />
+</p>
+<blockquote>
+    <p class="picturetext" align="center">
+        <b>订单管理员</b>和<b>订单登记员</b>与<b>订单</b>同属一个包，因为如果从系统中除去<b>订单</b>，则这两个类将变得多余。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        如果两个对象使用大量消息交互或有其他方式的复杂的相互通信，则它们可以是功能相关的。
+    </li>
+</ul>
+<blockquote>
+    <p class="example">
+        <b>示例</b>
+    </p>
+    <p class="example">
+        控制类<b>任务执行者</b>将许多消息发送至<b>传输者接口</b>，并从<b>传输者接口</b>接收很多消息。这是应将它们包含在同一个包<b>任务处理</b>中的另一原因。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        如果边界类的功能是显示特定实体类，则边界类可与该特定实体类功能相关。
+    </li>
+</ul>
+<blockquote>
+    <p class="example">
+        <b>示例</b>
+    </p>
+    <p class="example">
+        <b>仓库处理系统</b>中的边界类<b>托板形式</b>，用于向用户显示实体类<b>托板</b>的实例。每个<b>托板</b>使用屏幕上的标识号来表示。如果更改了有关某个<b>托板</b>的信息（例如，还为该<b>托板</b>指定了名称），则可能还必须更改边界类。因此
+        <b>托板形式</b>应与<b>托板</b>包含在同一个包中。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        如果两个类与同一参与者交互或受到同一参与者中的更改的影响，则这两个类可以是功能相关的。如果两个类不涉及相同参与者，则它们不应在相同的包中。当然可以由于更重要的原因而忽略最后一个规则。
+    </li>
+</ul>
+<blockquote>
+    <p class="example">
+        <b>示例</b>
+    </p>
+    <p class="example">
+        在<b>仓库处理系统</b>中有一个包<b>任务处理</b>，该包除了其他内容，还包含控制类<b>任务执行者</b>。这是参与者<b>传输者</b>（可以在仓库中传输托盘的物理传输者）中涉及的仅有的一个包。该参与者通过边界类<b>传输者接口</b>与控制类
+        <b>任务执行者</b>交互。因此应在<b>任务处理</b>包中包含该边界类。
+    </p>
+    <p class="example" align="center">
+        <img src="./../../../core.base_rup/guidances/guidelines/resources/md_desp5.gif" width="470" height="163" alt="附带文本中描述的图。" />
+    </p>
+    <p class="picturetext">
+        <b>传输者接口</b>和<b>任务执行者</b>属于相同的包，因为它们都受<b>传输者</b>参与者的更改的影响。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        如果两个类之间有关系（关联、聚集等），则这两个类可以是功能相关的。当然，不能盲目地遵循该条件，但当没有其他条件适用时，可以使用它。
+    </li>
+    <li>
+        某个类可以与创建该类实例的类功能相关。
+    </li>
+</ul>
+<p>
+    以下两个条件可以用于确定何时<b>不</b>应将两个类放到相同的包中：
+</p>
+<ul>
+    <li>
+        与不同参与者相关的两个类不应放到相同的包中。
+    </li>
+    <li>
+        不应将可选类和强制类放到相同的包中。
+    </li>
+</ul>
+<h3>
+    <a id="Evaluating Package Cohesion" name="Evaluating Package Cohesion">评估包聚集</a>
+</h3>
+<p>
+    首先，包中的所有元素必须有相同的可选性：没有在强制包中的可选模型元素。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    强制实体类<b>物品类型</b>除了其他内容，还有名为<b>重新进货阈值</b>的属性。但重新进货功能在系统中是可选的。因此，应将<b>物品</b>分成两个实体类：可选类与必需类，它们是相关的。
+</p>
+<p>
+    认为是强制类型的包不应依赖于任何认为是可选类型的包。
+</p>
+<p>
+    作为一项规则，两个不同的参与者不能使用单个包。此规则的原因是更改一个参与者的行为不应影响到其他参与者。但该规则有例外情况，例如对于组成可选服务的包。无论有多少参与者在使用该类型的包，都不应对该类型的包进行划分。因此，可以拆分任何由几个参与者使用的包或类，除非包是可选的。
+</p>
+<p>
+    同一包中的所有类必须是功能相关的。如果遵循了『从功能相关的类查找包』一节中的条件，则一个包中的类之间将是功能相关的。但是，特定类可能自身就包含“过多”不属于该类的行为或关系。应将该类部分删除，以使之成为一个全新的类或可能属于另一个包的其他类。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    一个包中的控制类 <b>A</b> 的行为不应过分依赖于另一个包中的类 <b>B</b>。要隔离特定于 <b>B</b> 的行为，必须将控制类 <b>A</b> 分成两个控制类 <b>A'</b> 和 <b>A"</b>。将特定于
+    <b>B</b> 的行为放在一个新的控制类 <b>A"</b> 中，该类在与 <b>B</b> 相同的包中。新类 <b>A"</b> 与原对象 <b>A'</b> 也有关系（例如泛化关系）。
+</p>
+<p class="example" align="center">
+    <img src="./../../../core.base_rup/guidances/guidelines/resources/md_desp6.gif" width="316" height="206" alt="附带文本中描述的图。" />
+</p>
+<p class="picturetext">
+    要隔离特定于 <b>B</b> 的行为，应将缺少相同性质的控制类 <b>A</b> 分成两个控制类 <b>A'</b> 和 <b>A''</b>。
+</p>
+<h3>
+    <a id="Describing Packages Dependendencies" name="Describing Packages Dependendencies">描述包</a>依赖关系
+</h3>
+<p>
+    如果一个包中的类与不同包中的类有关联，则这些包互相依赖。应使用包之间的依赖关系对包依赖关系建模。 依赖关系帮助我们评估更改结果：许多包所依赖的包比没有包依赖的包更难以更改。
+</p>
+<p>
+    因为将在包指定期间发现与此类似的一些依赖关系，因此必须在工作时更改这些关系。依赖关系的描述可包含关于哪些类关系引起了依赖关系的信息。因为这引入了难以维护的信息，因此仅当信息是相关的并且是值时才应完成它。
+</p>
+<p class="exampleheading">
+    示例
+</p>
+<p class="example">
+    在<b>仓库处理系统</b>中，从包<b>订单处理</b>到包<b>商品处理</b>存在依赖关系。之所以发生此关联，是因为<b>订单处理</b>中的实体类<b>订单</b>与另一个包中的实体类<b>商品类型</b>有关联。
+</p>
+<p class="example" align="center">
+    <img src="./../../../core.base_rup/guidances/guidelines/resources/md_desp7.gif" width="264" height="256" alt="附带文本中描述的图。" />
+</p>
+<p class="picturetext">
+    包<b>订单处理</b>依赖于<b>商品处理</b>，因为在这两个包中的两个类之间存在关联。
+</p>
+<h3>
+    <a id="Evaluating Package Coupling" name="Evaluating Package Coupling">评估包耦合</a>
+</h3>
+<p>
+    包耦合有好处和坏处：好处是因为耦合代表重用，坏处是因为耦合代表使系统难于更改和演化的依赖关系。可遵循一些常规原理：
+</p>
+<ul>
+    <li>
+        不应交叉耦合（即交叉依赖）包：例如，两个包不应互相依赖。
+    </li>
+</ul>
+<blockquote>
+    <p align="center">
+        <img src="./../../../core.base_rup/guidances/guidelines/resources/md_dpkg1.gif" width="300" height="109" alt="附带文本中描述的图。" />
+    </p>
+    <p class="picturetext">
+        在这些情况中，需要将包重新组织以除去交叉依赖关系。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        下层中的包不应依赖于上层中的包。包应仅依赖于同一层和次下层中的包。
+    </li>
+</ul>
+<blockquote>
+    <p align="center">
+        <img src="./../../../core.base_rup/guidances/guidelines/resources/md_dpkg2.gif" width="200" height="239" alt="附带文本中描述的图。" />
+    </p>
+    <p class="picturetext">
+        在这些情况中，需要将功能重新分区。一种解决方案是按照接口声明依赖关系，并组织下层中的接口。
+    </p>
+</blockquote>
+<ul>
+    <li>
+        通常情况下，除非依赖行为在所有层之间是公共的，否则依赖关系不得跳层，另一可选方法是简单地在各层上传递操作调用。
+    </li>
+    <li>
+        包不应依赖于子系统，仅应依赖于其他包或接口。
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

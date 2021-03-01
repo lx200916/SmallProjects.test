@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational XDE Developer 正向设计数据库</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="forward_engineering_db" name="uma.name">
+<meta content="使用 Rational XDE Developer 正向设计数据库" name="uma.presentationName">
+<meta content="Tool:rup_xde:Rational XDE Developer" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational XDE Developer" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{F55D370E-F820-4646-A0B8-C2242A07A83F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{F55D370E-F820-4646-A0B8-C2242A07A83F}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{F55D370E-F820-4646-A0B8-C2242A07A83F}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{303A82D2-E3AB-4501-8563-0D4D43782AF9}", "{F55D370E-F820-4646-A0B8-C2242A07A83F}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{F55D370E-F820-4646-A0B8-C2242A07A83F}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational XDE Developer 正向设计数据库</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述在 Rational XDE Developer 软件工具中如何使用正向设计，通过现有 Rational XDE 数据模型生成数据库模式或 DDL 脚本文件。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_xde_D81FFA70.html" guid="{303A82D2-E3AB-4501-8563-0D4D43782AF9}">Rational XDE Developer</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/database_design_8552DD3.html" guid="{2E74A414-49F5-4F27-BFCB-AA2DAC675F58}">数据库设计</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    概述
+</h3>
+<p>
+    在本工具向导中执行以下步骤：
+</p>
+<ul>
+    <li>
+        <a href="#Set Model Properties">设置模型属性</a>
+    </li>
+    <li>
+        <a href="#Forward Engineer Database">将数据模型正向设计为数据库</a>
+    </li>
+    <li>
+        <a href="#MoreInfo">管理对模型和数据库的更改</a>
+    </li>
+</ul>
+<h3>
+    <a id="Set Model Properties" name="Set Model Properties">设置模型属性</a>
+</h3>
+<p>
+    要启用数据模型的正向设计来创建数据库或数据定义语言（DDL）文件，必须设置两种类型的模型属性。这些属性为：
+</p>
+<ul>
+    <li>
+        缺省数据库目标数据库管理系统（DBMS）（请参阅<img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Setting the Default Database
+        Target</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_set_default_db_target"); -->）
+    </li>
+    <li>
+        缺省数据库指定（请参阅 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Setting the Default Database Assignment</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_set_default_db_assign"); -->）
+    </li>
+</ul>
+<p>
+    Rational XDE 支持对 ANSI SQL 92 标准和 Rational XDE 联机帮助主题 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" />
+    <i>Databases Supported in Rational XDE</i> 中列出的数据库管理系统（DBMS）进行正向设计 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_r_db_support"); -->。
+</p>
+<p>
+    参考：<img alt="helpbook icon" src="./../../../core.base_rup/resources/helpbook.gif" /><i>设置数据建模选项</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_mdl_data_pref"); -->。
+</p>
+<h3>
+    <a id="Forward Engineer Database" name="Forward Engineer Database">将数据模型正向设计为数据库</a>&nbsp;
+</h3>
+<p>
+    Rational XDE 可用于将数据模型正向设计为新的数据库模式或新的 DDL 文件。您可以正向设计单独的表或整个数据模型。参考：<img alt="帮助手册图标"     src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Database and DDL Generation</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fe_overview"); -->可以使用 Rational XDE
+    提供的数据建模<b>正向设计向导</b>启动正向设计流程。（请参阅 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Generating Databases or
+    DDLs</i> <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_t_fe_db_ddl"); -->。）&nbsp;
+</p>
+<p>
+    无论您决定仅生成 DDL 还是执行 DDL 以创建数据库，Rational XDE 都将自动在您在向导中所指定的目录中创建一个 DDL 文件。Rational XDE
+    在正向设计流程中包含的元素取决于您在<b>正向设计向导</b>中选择的选项。所有元素或 DDL 脚本都是根据指定的 DBMS 生成的。请参阅以下 Rational XDE 联机帮助主题，获取有关受支持的不同类型的 DBMS 的详细信息：
+</p>
+<ul>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>DB2 Database and DDL Generation</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fe_db2_db"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Oracle Database and DDL Generation</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fe_oracle_db"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>SQL Server Database and DDL Generation</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fe_sqlsrv_db"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Sybase Database and DDL Generation</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_fe_sybase_db"); -->
+    </li>
+</ul>
+<p>
+    如果正向设计一个 ANSI SQL 92 数据模型，Rational XDE 将生成一个与 DBMS 无关的 DDL。可使用您所选的数据库工具执行该 DDL。
+</p>
+<p>
+    要执行数据库的正向设计，Rational XDE 必须建立到相应 DBMS 的连接。请参阅 <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /><i>Connecting to
+    Database Management Systems</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_connect_dbms"); -->以了解更多关于建立数据库连接的信息。
+    请参阅以下 Rational XDE 联机帮助主题，获取有关为特定 DBMS 类型建立连接的信息：
+</p>
+<ul>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Oracle Database Connections</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_oracle_db_connect"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>SQL Server Database Connections</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_sqlsrv_db_connect"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Sybase Database Connections</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_sybase_db_connect"); -->
+    </li>
+    <li>
+        <img alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" /> <i>DB2 Database Connections</i> 
+        <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_c_db2_db_connect"); -->
+    </li>
+</ul>
+<h3>
+    <a id="MoreInfo" name="MoreInfo">管理对模型和数据库的更改</a>
+</h3>
+<p>
+    创建了数据库或 DDL 之后，必须控制和管理对数据模型与生成的数据库的更改。Rational XDE 提供了一种比较和同步功能，用以帮助数据库设计员管理变更。 参考：<img alt="帮助手册图标"     src="./../../../core.base_rup/resources/helpbook.gif" /> <i>Comparing and Synchronizing in Data Modeling</i> 
+    <!--  Temporarily removed Javascript - ReferenceHelpTopic(topicTitle,"dm","dm_o_gen_dm_cmpsync"); -->、<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/toolmentors/managing_db_ACA9AB6E.html" guid="{3B09E5BE-4AC8-4206-B9D8-4F85D36B9C75}">工具向导：在 Rational XDE 中管理数据库</a>。
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><table width="100%" border="0">
+    <tbody>
+        <tr>
+            <td valign="center" align="left">
+                <a href="http://www.appliedis.com" target="_blank"><img alt="Applied Information Sciences 图标"                 src="./../../../core.base_rup/guidances/supportingmaterials/resources/appliedis.gif" border="0" /></a>
+            </td>
+            <td valign="center" align="left" width="86%">
+                <font face="Arial"><small><small>此内容的全部或部分由 <a href="http://www.appliedis.com" target="_blank">Applied
+                Information Sciences</a> 开发。</small></small></font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

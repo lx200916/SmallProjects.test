@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 分层</title>
+<meta content="Concept" name="uma.type">
+<meta content="layering" name="uma.name">
+<meta content="分层" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "3.801315327549898E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "3.801315327549898E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "3.801315327549898E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.801315327549898E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：分层</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">分层代表有序的一组功能，特定于应用程序的功能位于上层，跨应用程序领域的功能位于中层，而特定于部署环境的功能位于下层。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/architectural_analysis_2B9BE03.html" guid="{8CB48402-D4C5-4E17-BB33-507315CB1BBF}">体系结构分析</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<p>
+    分层代表有序的一组功能，特定于应用程序的功能位于上层，跨应用程序领域的功能位于中层，而特定于部署环境的功能位于下层。
+</p>
+<p>
+    层的数量和组成依赖于问题域和解决方案空间的复杂程度：
+</p>
+<ul>
+    <li>
+        通常只有一个特定于应用程序的层。
+    </li>
+    <li>
+        已构建过先前的系统的领域或以互操作的较小系统依次组成过大型系统的领域，都强烈需要在设计团队之间共享信息。结果，特定于业务的层可能部分存在，并为了清晰性而被构建为几个层次。
+    </li>
+    <li>
+        有中间件产品良好支持、并且其中复杂系统软件扮演较重要角色的解决方案空间将有良好开发的底层，并可能有几个中间件和系统软件层。
+    </li>
+</ul>
+<p>
+    应将子系统组织到在体系结构上层有特定于应用程序的子系统的层中、在体系结构底层有特定于硬件和操作系统的子系统的层中以及占据中层有一般用途服务的层中。
+</p>
+<p>
+    以下是具有四层的样本体系结构：
+</p>
+<ul>
+    <li>
+        顶层，即<b>应用层</b>，包含特定于应用程序的服务。
+    </li>
+    <li>
+        第二层，即<b>特定于业务的层</b>，包含特定于业务的组件，这些组件在几个应用程序中使用。
+    </li>
+    <li>
+        <b>中间件层</b>包含诸如 GUI 构建器、到数据库管理系统的接口和独立于平台的操作系统服务之类的组件，以及诸如电子表格和图编辑器之类的 OLE 组件。
+    </li>
+    <li>
+        底层，即<b>系统软件层</b>，包含诸如操作系统、数据库和到特定硬件的接口之类的组件。
+    </li>
+</ul>
+<p align="center">
+    <img src="./../../../core.base_rup/guidances/concepts/resources/md_dsub.gif" alt="附带内容中描述的图。" width="547" height="283" />
+</p>
+<p class="picturetext">
+    分层结构通常从最常规的功能层开始，并向更特定的功能层发展。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

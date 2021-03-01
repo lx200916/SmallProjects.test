@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational ClearCase 比较基线</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="comparing_baselines" name="uma.name">
+<meta content="使用 Rational ClearCase 比较基线" name="uma.presentationName">
+<meta content="Tool:rup_clearcase:Rational ClearCase" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational ClearCase" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_qS-iwAIOEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_LWLSQDIEEdqwaNnSEheSAg", "_85i-sDIFEdqwaNnSEheSAg", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_XxCC0AIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_U5tiUAISEdqTna4sZVFRow", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{B2D1373B-A826-4169-A38A-B53B2122DC7C}", "{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{8707215B-CA9D-4C5D-B08C-AECB4DF1DBA5}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational ClearCase 比较基线</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本工具向导描述如何使用 Rational ClearCase 组件树形浏览器比较 UCM 组件的两条基线。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_clearcase_9665C.html" guid="{B2D1373B-A826-4169-A38A-B53B2122DC7C}">Rational ClearCase</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><h3>
+    <b>概述</b>
+</h3>
+<p>
+    在 ClearCase 中，UCM 基线通常代表组件的稳定配置。基线为一个或多个组件中可见的每个元素确定多个活动和一个版本。ClearCase 组件树形浏览器是一个 GUI，它显示组件基线的历史记录。 您可以用它来比较两条基线的内容。
+</p>
+<p>
+    此工具向导在运行 Microsoft Windows 时适用。
+</p>
+<h3>
+    工具步骤
+</h3>
+<p>
+    要比较 UCM 项目中的两条基线：
+</p>
+<div align="left">
+    <ol>
+        <li>
+            <a href="#StartClearCaseExplorer">启动 ClearCase Explorer</a>
+        </li>
+        <li>
+            <a href="#OpenTheTreeBrowserForSpecifiedComponent">打开指定组件的组件树形浏览器</a>
+        </li>
+        <li>
+            <a href="#SelectBaselineAndComparisonParameters">选择基线并选择比较参数</a>
+        </li>
+    </ol>
+    <p>
+        进一步的信息请参阅 ClearCase 手册 <i>Managing Software Projects</i>。
+    </p>
+</div>
+<h3>
+    1.&nbsp;<a id="StartClearCaseExplorer" name="StartClearCaseExplorer">启动 ClearCase Explorer</a>
+</h3>
+<p>
+    要找到想要查看其基线历史记录的组件，请执行此步骤：
+</p>
+<ul>
+    <li>
+        从 Windows 工具栏，单击<b>开始 &gt; 程序 &gt; Rational Software &gt; Rational ClearCase &gt; ClearCase Explorer</b>。
+    </li>
+</ul>
+<h3 align="left">
+    2.&nbsp;<a id="OpenTheTreeBrowserForSpecifiedComponent" name="OpenTheTreeBrowserForSpecifiedComponent">打开指定组件的组件树形浏览器</a>
+</h3>
+<ul>
+    <li>
+        从组件的弹出菜单中单击<b>浏览基线</b>，以启动 ClearCase 组件树形浏览器。
+    </li>
+    <li>
+        单击项目的组件文件夹，以显示组件列表。
+    </li>
+    <li>
+        右键单击组件以显示弹出菜单。
+    </li>
+    <li>
+        单击<b>浏览基线</b>以启动组件树形浏览器。
+    </li>
+</ul>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" /> 请参阅 ClearCase 联机帮助中标题为 <i>ClearCase
+    Component Tree Browser</i> 的主题。
+</p>
+<h3>
+    3. <a id="SelectBaselineAndComparisonParameters" name="SelectBaselineAndComparisonParameters">选择基线并选择比较参数</a>
+</h3>
+<ul>
+    <li>
+        选择一个显示的基线，作为比较的基础。
+    </li>
+    <li>
+        从<b>工具</b>菜单中，选择一个<b>比较...</b>菜单项。会提示您提供第二条要用在比较中的基线。
+    </li>
+    <li>
+        您可以查看在活动方面或在版本方面的差别。单击要选择的相应选项卡。
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

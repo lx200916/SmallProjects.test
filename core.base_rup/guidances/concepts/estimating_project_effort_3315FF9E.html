@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 估算项目工时</title>
+<meta content="Concept" name="uma.type">
+<meta content="estimating_project_effort" name="uma.name">
+<meta content="估算项目工时" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_qIh6UABuEdqrKcHWz1HoWw", "{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}", "2.0746098019135414E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qIh6UABuEdqrKcHWz1HoWw", "{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}", "2.0746098019135414E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "2.0746098019135414E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.0746098019135414E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：估算项目工时</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南描述了如何使用基于用例的估计技术和 Wideband Delphi 估计技术来估算项目工时。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/roles/rup_project_manager_363CE680.html" guid="{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}">项目经理</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_estimating_effort__concept_of" name="XE_estimating_effort__concept_of" class="index" key="估算工时（estimating effort）" text="概念"></a> 
+<h3>
+    <a id="Introduction" name="Introduction"></a>简介
+</h3>
+<p>
+    软件开发项目中最常见的要求之一就是预先准确地确定项目的总成本。如果成本和进度安排超出了行业标准，则这种要求是可以理解的。但是，大量失败的项目清楚地证明，软件开发实践的当前状态并不属于预测科学的范围。
+</p>
+<p>
+    这就是说，尝试对项目成本作出某些估计，然后在项目取得进展时根据实际调查结果对这些估计进行调整，仍然是很有用的。以下是在估计软件项目成本时您可能认为有用的一些技术。
+</p>
+<h3>
+    <a id="UseCasePoints" name="UseCasePoints">用例点</a>
+</h3>
+<p>
+    此技术源自 Objective Systems SF AB 的工作成果，最先是在 1993 年由 Gustav Karner 在他的论文中提出来的，该论文的标题为 <i>Resource Estimation for Objectory
+    Projects</i>。此技术支持通过将用例模型的元素作为估计的基础，来估计开发软件系统所需的资源。然后，从此方法派生出来的用例点（UCP）可用于确定等同的功能点（FP）数。功能点（FP）是用于估计的一种常见技术，它是由
+    Albrecht A. J.（1979）在 <i>Measuring application development productivity</i> 中提出来的。
+</p>
+<p>
+    关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/whitepapers/the_estimation_of_effort_based_on_use_cases_9C41D15B.html" guid="1.9405904686693683E-305">白皮书：根据用例估计工时</a>。
+</p>
+<h3>
+    <a id="WidebandDelphi" name="WidebandDelphi">Wideband Delphi</a>
+</h3>
+<p>
+    此技术于 1948 年源自 Rand Corporation，最初称为 Delphi 估计方法。这种基本技术的使用方法是：召集一小组专家以匿名方式根据问题描述产生各自的估计，然后通过迭代最终对一组估计达成共识。
+</p>
+<p>
+    在 20 世纪 70 年代初期，Barry Boehm 和他在 Rand 公司的同事扩展了此基本方法，以使更多的估计团队参与交互，从而产生了 Wideband Delphi 方法；请参阅 <i>Software Engineering
+    Economics</i> [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" target="ory_doc" guid="7.755968586980351E-308">BOE81</a>]。The Process Group（位于德克萨斯州达拉斯市的一家咨询公司）的 Mary Sakry 和 Neil
+    Potter 后来创建了一个可重复的过程，用于对软件项目进行 Wideband Delphi 估计。本指南说明了该过程。
+</p>
+<p>
+    关于更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/estimating_effort_using_the_wide-band_delphi_technique_CAC30635.html" guid="8.245547473531647E-305">技术：使用 Wideband Delphi 技术估计工时</a>。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

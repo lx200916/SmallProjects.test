@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 迭代计划</title>
+<meta content="Guideline" name="uma.type">
+<meta content="iteration_plan" name="uma.name">
+<meta content="迭代计划" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_4U33kAILEdq-_NKqZM1EhA", "_U8LVkAIUEdqEutyfYo0quQ", "_C49xgP_UEdmVCcs_BRqacA", "{97269E0F-CDF3-448D-A732-DF39D099BDDD}", "2.6565226367468887E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_C49xgP_UEdmVCcs_BRqacA", "{97269E0F-CDF3-448D-A732-DF39D099BDDD}", "2.6565226367468887E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_3SWfwN7OEdmjRZts2c4ZjQ", "{97269E0F-CDF3-448D-A732-DF39D099BDDD}", "2.6565226367468887E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "2.6565226367468887E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.6565226367468887E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：迭代计划</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">迭代是现代软件开发的推动力。本指南提出针对迭代规划策略的建议。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_iteration_plan_623AFF7F.html" guid="{97269E0F-CDF3-448D-A732-DF39D099BDDD}">迭代计划</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_Iteration_Plan_document__guidelines_for" name="XE_Iteration_Plan_document__guidelines_for"></a> 
+<h3>
+    <a id="XE_inception_phase__iteration_patterns" name="XE_inception_phase__iteration_patterns" class="index" key="先启阶段（inception phase）" text="迭代模式"></a><a id="XE_construction_iteration__iteration_patterns" name="XE_construction_iteration__iteration_patterns"></a><a id="Iteration Patterns" name="Iteration Patterns">迭代模式</a>
+</h3>
+<h4>
+    <a id="XE_iteration_patterns__inception_iterations" name="XE_iteration_patterns__inception_iterations" class="index" key="迭代模式（iteration patterns）" text="移交阶段迭代"></a><a id="Inception Iterations" name="Inception Iterations">先启迭代</a>
+</h4>
+<p>
+    在先启中，最大的风险通常是业务风险或技术风险。早期最主要的业务风险通常是确保项目资金筹集。因此，概念证明原型通常是先启阶段的结果。概念证明原型演示主要功能或一些基本技术。
+</p>
+<p>
+    新产品的第一个迭代通常最困难。除了生成软件外，第一个迭代还必须实现许多新的方面：例如，使流程到位、建立团队、了解新域、熟悉新工具等。在预期您可以充实体系结构的多少或者您可以实现的可用功能度时要保守一点。如果目标太高，您会遇到以下风险，即延迟第一个迭代的完成、减少迭代的总数并从而降低迭代方法的益处。第一个迭代应专注于使体系结构正确。因此，您必须在早期迭代的计划流程中涉及软件体系结构。
+</p>
+<h4>
+    <a id="XE_iteration_patterns__elaboration_iterations" name="XE_iteration_patterns__elaboration_iterations"></a><a id="XE_elaboration_iteration__iteration_patterns" name="XE_elaboration_iteration__iteration_patterns"></a><a id="Elaboration Iterations" name="Elaboration Iterations">精化迭代</a>
+</h4>
+<p>
+    在精化中，迭代专注于定义稳定的体系结构，专注于设计和实施系统的基本行为和通过一系列体系结构原型探索技术体系结构问题。 “在体系结构方面重要的”场景是以定义方式使用系统体系结构的子流程。
+</p>
+<h4>
+    <a id="XE_transition_iteration__iteration_patterns" name="XE_transition_iteration__iteration_patterns"></a><a id="XE_iteration_patterns__transition_iterations" name="XE_iteration_patterns__transition_iterations"></a><a id="XE_iteration_patterns__construction_iterations" name="XE_iteration_patterns__construction_iterations"></a><a id="Construction and Transition Iterations" name="Construction and Transition Iterations">构造与移交阶段迭代</a>
+</h4>
+<p>
+    在精化结束时并在构造和移交期间，变更请求（也称为“软件变更指令”或 SCO）开始驱动迭代流程。SCO 的生成有以下原因：
+</p>
+<ul>
+    <li>
+        扩展请求
+    </li>
+    <li>
+        范围超出单个包或类的变更请求。
+    </li>
+    <li>
+        迭代范围和目标的变更。
+    </li>
+    <li>
+        需求的变更，或者建议需求基线更改，或者使已接受的变更适应需求基线。
+    </li>
+</ul>
+<p>
+    对照现有的项目计划、迭代计划和现有的风险列表，权衡这些 SC0。SCO 可能会导致重新评估需求的优先级，或可能驱动重新划分风险的优先级。但是，必须谨慎管理 SCO，以尽可能少地失去对项目的控制。
+</p>
+<p>
+    在构造和移交期间，重点是充实体系结构和实施所有剩余的需求。
+</p>
+<h3>
+    <a id="XE_iteration__strategies" name="XE_iteration__strategies"></a><a id="Iteration Strategies" name="Iteration Strategies">迭代策略</a>
+</h3>
+<p>
+    与瀑布模型不同（其中一次考虑整个系统），我们在每个迭代中仅考虑系统功能的一部分。在每个迭代期间，会分析、设计和实施整个系统的一部分。应选择哪部分以及钻研多深对于减少随后迭代中的风险非常重要。有两个基本策略：宽而浅和窄而深。
+</p>
+<h4>
+    <a id="Wide and Shallow" name="Wide and Shallow">宽而浅</a>
+</h4>
+<p>
+    在宽而浅策略中，分析整个问题域，但仅考虑表面的详细信息。定义所有用例，多数都很详细地充实，以获取对当前问题的清晰理解。
+    还广泛地定义了体系结构，定义了体系结构组件提供的关键机制和服务；定义了子系统的接口，但它们内部的详细信息仅在必须管理重大风险或不确定性时才详细说明。在构造之前实施很少，迭代的大部分都发生在构造中。
+</p>
+<p>
+    宽而浅策略适用于以下时候：
+</p>
+<ul>
+    <li>
+        团队在问题域或技术领域（包括方法或流程）经验不足。
+    </li>
+    <li>
+        合理的体系结构对于将来的能力是一个关键的需求，并且该体系结构没有前例。
+    </li>
+</ul>
+<p>
+    但是，该策略具有一些潜在的缺陷：
+</p>
+<ul>
+    <li>
+        团队会陷于<b>分析瘫痪</b>（不合逻辑的想法：除非设计完美，否则不能实施任何内容）。
+    </li>
+    <li>
+        通常需要较早出结果以建立信心和可信度；项目团队不产生任何可执行工件的时间越长，它们对这样做的能力越没有信心。
+    </li>
+    <li>
+        没有暴露体系结构的足够技术详细信息和困难以了解真实的技术风险。
+    </li>
+</ul>
+<h4>
+    <a id="Narrow and Deep" name="Narrow and Deep">窄而深</a>
+</h4>
+<p>
+    在窄而深策略中，彻底分析问题域的<i>一片</i>。定义并非常详细地充实了与此窄片相关的用例，以获取对当前问题的清晰理解。定义了支持期望行为所需的体系结构，并设计和实施了该系统。 随后的迭代专注于分析、设计和实施其他垂直片。
+</p>
+<p>
+    窄而深策略适用于以下时候：
+</p>
+<ul>
+    <li>
+        需要演示较早的成果以克服主要风险，取得支持或证明可行性。
+    </li>
+    <li>
+        需求持续地发展，使在开始详细设计和实施工作之前完全定义所有需求很困难。
+    </li>
+    <li>
+        截止期限是<b>强制</b>的，使及早开始开发对于成功交付很重要。
+    </li>
+    <li>
+        高度重用是可能的，支持较大程度的递增交付。
+    </li>
+</ul>
+<p>
+    该策略并不是没有缺点：
+</p>
+<ul>
+    <li>
+        对每个迭代使用此策略倾向于开发出垂直集成但水平不兼容的软件。这有时称为<b>烟囱</b>综合症，它使系统难于集成。
+    </li>
+    <li>
+        它不能很好地适合在全新的问题域或基于没有前例的体系结构开发系统，因为必须对系统功能的大部分采样以实现平衡的体系结构。
+    </li>
+</ul>
+<h4>
+    <a id="Lessons Learned from Experience" name="Lessons Learned from Experience">从经验中得到的教训</a>
+</h4>
+<p>
+    一般来说，较早的迭代更多的是宽而浅的风格，而较晚的迭代（其中已经开发了稳定的体系结构）倾向于遵循窄而深策略。
+</p>
+<p>
+    第一个迭代通常是最困难的，因为它需要整个开发环境和项目团队的大部分到位。工具集成和团队建立问题增加了第一个迭代的复杂性。 专注于体系结构问题可以有助于保持焦点和防止团队过早地纠缠于详细信息。
+</p>
+<h4>
+    <a id="Hybrid Strategies" name="Hybrid Strategies">混合策略</a>
+</h4>
+<ul>
+    <li>
+        窄而深策略在以下情况下用于先启 
+        <p>
+            采用新技术对项目的基础可行性非常必要。许多电子商务项目需要将新技术探索到一个比传统做法大得多的深度。概念证明原型仍视为“抛弃型”，并仅探索项目概念的可行性。
+        </p>
+    </li>
+    <li>
+        宽而浅策略在以下情况下用于先启 
+        <p>
+            采用该策略以获取对系统范围的理解，并对系统功能的宽度采样，以确保该体系结构能够交付所需的能力。
+        </p>
+    </li>
+    <li>
+        宽而浅策略在以下情况下用于精化 
+        <p>
+            此方法可以有助于开发合理的体系结构，使用选择性的窄而深焦点处理具体的技术风险。在建立了合理体系结构的构造中，焦点可能返回窄而深，其中功能以一系列集成的增量开发和交付。
+        </p>
+    </li>
+    <li>
+        窄而深策略在以下情况下用于构造 
+        <p>
+            构造迭代始终是窄而深，团队并行工作以开发和交付所需的功能。&nbsp;
+        </p>
+    </li>
+</ul>
+<h4>
+    <a id="Special Considerations for New Teams" name="Special Considerations for New Teams">新团队的特别注意事项</a>
+</h4>
+<p>
+    新团队通常开始总是对他们可以实现的内容过于乐观。为了反对这种过于乐观，并避免在实际结果低于乐观预期时可能出现的士气问题，请在第一个迭代中可以实现的功能量方面适度一点。尝试在建立成就感和项目动力的同时建立经验。
+</p>
+<p>
+    如果开发环境和／或方法对于团队是新的，请将第一个迭代的功能降至最低。专注于集成和调整环境并熟悉工具，然后调整随后迭代中的功能内容。
+</p>
+<h3>
+    <a id="XE_rework__as_part_of_iterations" name="XE_rework__as_part_of_iterations" class="index" key="返工（rework）" text="作为迭代的组成部分"></a><a id="Expected Rework" name="Expected Rework">预期的返工</a>
+</h3>
+<p>
+    从某个方面来说，返工是好事。迭代开发的一个主要好处正是允许错误和试验，但是需要尽早出现以使得可以采取纠正措施。但是技术人员特别倾向于在一个迭代和下一个之间获得“金牌”或重做工作直到完美。
+</p>
+<p>
+    在每个迭代结束的迭代评估期间，团队应决定当前发行版的哪个部分应该返工。预期返工将以相对于整个系统的以下百分比在各个阶段中分配：
+</p>
+<ul>
+    <li>
+        先启，40%-100% － 这是您可以开发抛弃型、探索性原型的地方。
+    </li>
+    <li>
+        精化，25%-60% 在较早的迭代中；在较晚的迭代中或对于一个演进周期少于 25%。
+    </li>
+    <li>
+        构造，在体系结构基线之后，每个迭代不超过 10%，总的不超过 25%。
+    </li>
+    <li>
+        移交，少于 5%。
+    </li>
+</ul>
+<p>
+    返工是不可避免的。当没有人看到需要返工时，您应有所怀疑。这可能由于：
+</p>
+<ul>
+    <li>
+        压力过大的进度安排。
+    </li>
+    <li>
+        缺少真实测试或评估。
+    </li>
+    <li>
+        缺少激励或焦点。
+    </li>
+    <li>
+        对返工的消极看法，认为返工不好、浪费资源或者承认无能或失败。
+    </li>
+</ul>
+<p>
+    过多返工值得警惕。这可能由于“要拿金牌”或需求变更的程度不可接受。必须执行一个业务案例来评估某些返工的必要性。
+</p>
+<p>
+    请注意我们<i>不</i>在“返工”类别中包含从以前的迭代范围中排除的工作（由于迭代管理的限定时间方法）。项目经理必须将这种从范围中排除的工作包含在要定义下一个迭代的内容的功能池中。很明显，此类工作通常将有高优先级。项目经理还应发现和仔细考虑以前的迭代中未能实现其计划目标的原因。例如，尽管我们不建议随意添加员工以急于满足进度安排，但长期
+    <i>缺人</i>运行项目（同时反复地为每个迭代制定雄心勃勃的计划）也不明智。这通常会导致团队士气低下并使客户愤怒。必须找到正确的平衡，诸如 COCOMO II 的评估模型（请参阅 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">BOE00</a>]）有助于此。对于每个迭代，项目都构建成果（生产力和质量）的历史记录。在计划下一个迭代中，对于项目经理来说一个强大的指示器是在上一个迭代中实现的成果。
+</p>
+<h3>
+    <a id="Level of Planning" name="Level of Planning">计划的级别</a>
+</h3>
+<p>
+    当草拟迭代计划完成时，团队领导（可能和项目经理一起）可以将其改进为任务级别的工作计划。包含的 Microsoft&reg; Project
+    模板（在任务级别）显示了这如何发生。但请注意这些工作计划是从迭代计划中推导出的，它们不是分别生成的独立工作产品。如果项目经理要保持控制，可以汇总工作计划以向项目经理报告迭代计划的状态，这一点很重要。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

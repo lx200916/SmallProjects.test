@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>工具向导: 使用 Rational TestManager 创建性能测试套件</title>
+<meta content="ToolMentor" name="uma.type">
+<meta content="performance_test_suites" name="uma.name">
+<meta content="使用 Rational TestManager 创建性能测试套件" name="uma.presentationName">
+<meta content="Tool:rup_test_manager_tool:Rational TestManager" name="uma.category">
+<meta name="element_type" content="tool_mentor">
+<meta content="Rational TestManager" name="tool">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_mp7z0DIDEdqwaNnSEheSAg", "_9U7IkDIEEdqwaNnSEheSAg", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{FC006EA3-BFB8-4B16-B23A-753A15126A67}"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_AUv4MAIMEdq-_NKqZM1EhA", "_5ZuQsAIUEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{FC006EA3-BFB8-4B16-B23A-753A15126A67}"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_F1OgYAIbEdqEutyfYo0quQ", "{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}", "{FC006EA3-BFB8-4B16-B23A-753A15126A67}"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="{FC006EA3-BFB8-4B16-B23A-753A15126A67}"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">工具向导：使用 Rational TestManager 创建性能测试套件</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/toolmentor.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此工具向导描述了如何使用 Rational TestManager 创建性能测试套件。</td>
+</tr>
+<tr>
+<td>工具：<a href="./../../../core.base_rup/tools/rup_test_manager_tool_2C79A4DC.html" guid="{A6000C96-0EC5-41D8-9B9A-5480DFEB77D6}">Rational TestManager</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_the_test_implementation_AAB73625.html" guid="{ED9DF0C0-744A-443A-AEBA-604382E05A5F}">构造测试实施</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/implement_test_suite_94F58DEC.html" guid="{1C759E0D-B364-4095-A7CF-CD9E39301689}">实施测试套件</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    概述
+</h3>
+<p>
+    套件显示您在性能测试时模拟的用户数量和工作负载的分层表示。 它显示以下项：用户组、每组执行的脚本、分配给每组的虚拟测试员的数量或百分比等。
+</p>
+<p>
+    此工具向导应用于 Microsoft&reg; Windows 98/2000/NT 4.0 平台。
+</p>
+<h4>
+    工具步骤
+</h4>
+<p>
+    要使用 TestManager 设计自动性能测试套件，请执行以下步骤：
+</p>
+<ol type="1">
+    <li>
+        <a href="#Create a suite">创建套件</a>
+    </li>
+    <li>
+        <a href="#Insert user groups into a suite">将用户组插入套件</a>
+    </li>
+    <li>
+        <a href="#Insert test scripts into a suite">将测试脚本插入套件</a>
+    </li>
+</ol>
+<h3>
+    1.&nbsp; <a id="Create a suite" name="Create a suite">创建套件</a>
+</h3>
+<p>
+    套件使您能够运行测试脚本，更重要的是，模拟访问多用户应用程序的实际用户的操作。套件可以像一个虚拟测试员执行一个测试脚本的一样简单，也可以像成千上万的虚拟测试员执行大量测试脚本的一样复杂。
+</p>
+<p>
+    您可以通过以下一种方法创建性能套件：
+</p>
+<ul>
+    <li>
+        使用性能测试套件向导
+    </li>
+    <li>
+        基于现有机器人会话
+    </li>
+    <li>
+        使用空白的性能测试套件
+    </li>
+</ul>
+<p>
+    此向导使用一个空白的性能测试套件进行描述：
+</p>
+<p>
+    要创建此套件：
+</p>
+<ol type="1">
+    <li>
+        单击<b>文件 &gt; 新建套件</b>。
+    </li>
+    <li>
+        单击<b>空白性能测试套件</b>。
+    </li>
+</ol>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;请参考 TestManager 联机帮助中的 <i>Creating
+    a New Suite</i> 主题。
+</p>
+<h3>
+    2.&nbsp; <a id="Insert user groups into a suite" name="Insert user groups into a suite">将用户组插入套件</a>
+</h3>
+<p>
+    用户组是所有性能测试套件的基本构建块。用户组是执行同一组活动的虚拟测试员的集合。所有性能测试套件必须包含一个或多个固定或可伸缩的用户组。
+</p>
+<p>
+    通常，可伸缩的用户组比固定的用户组更灵活。使用可伸缩的用户组时，单个性能测试套件可以在每次运行测试时模拟不同数量的用户。如果您的套件包含固定的用户组，并且您需要模拟不同数量的虚拟测试员运行测试，则必须在测试运行时修改套件中每个用户组中的虚拟测试员数量。
+</p>
+<p>
+    要将用户组插入打开的套件：
+</p>
+<ol type="1">
+    <li>
+        单击<b>套件 &gt; 插入 &gt; 用户组</b>。
+    </li>
+    <li>
+        在<b>固定</b>或<b>可伸缩</b>用户组之间进行选择。
+    </li>
+    <li>
+        设置用户的数量（对于固定用户组）或百分比（对于可伸缩用户组）。如果可伸缩用户组的百分比小于 100%，则必须添加另一个用户组（所有用户组的百分比总和必须为 100）。
+    </li>
+</ol>
+<h3>
+    3.&nbsp; <a id="Insert test scripts into a suite" name="Insert test scripts into a suite">将测试脚本插入套件</a>
+</h3>
+<p>
+    从打开的套件中，执行以下步骤：
+</p>
+<ol>
+    <li>
+        选择将要运行测试脚本的用户组。
+    </li>
+    <li>
+        单击<b>套件 &gt; 插入 &gt; 测试脚本</b>。
+    </li>
+    <li>
+        当“运行测试脚本的属性”对话框出现时，可以设置以下属性：
+    </li>
+</ol>
+<blockquote>
+    <ul>
+        <li>
+            <p>
+                <b>测试脚本源</b> － 选择您要插入的脚本的类型（GUI、VU、VB、Java）。
+            </p>
+        </li>
+        <li>
+            <p>
+                <b>查询</b> － 指定您要插入到套件中的脚本的特征。如果测试数据存储器中驻留着大量测试脚本，请构建查询以只显示符合某些条件（由某个人创建，特定日期之后已修改等）的脚本。
+            </p>
+        </li>
+        <li>
+            <p>
+                <b>前置条件</b> － 选择此属性可指定成功完成测试脚本是执行该套件序列其余部分的前置条件。这表示，必须成功完成该测试脚本才能运行套件序列中的下级项。
+            </p>
+        </li>
+        <li>
+            <p>
+                <b>迭代</b> － 指定选定脚本的重复频率。
+            </p>
+        </li>
+        <li>
+            <p>
+                <b>调度方法</b> － 指定在启动脚本前的延迟（如果有的话），或者指定触发脚本执行的其他事件。
+            </p>
+        </li>
+    </ul>
+</blockquote>
+<ol start="4">
+    <li>
+        在设置了您需要的属性后，选择<b>要插入的测试名称</b>，并单击<b>确定</b>。
+    </li>
+</ol>
+<p>
+    <b>注意</b>：不能在用户组中混用 GUI 测试脚本和 VU 测试脚本。不过，您可以混用其他测试脚本类型。
+</p>
+<p>
+    <img height="16" alt="帮助手册图标" src="./../../../core.base_rup/resources/helpbook.gif" width="16" />&nbsp;&nbsp;请参考 TestManager 联机帮助中的以下主题：
+</p>
+<ul>
+    <li>
+        <i>Defining Test Scripts</i>
+    </li>
+    <li>
+        <i>Running Properties of the Test Script</i>
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

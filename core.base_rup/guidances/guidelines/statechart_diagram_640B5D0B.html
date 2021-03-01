@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 状态表图</title>
+<meta content="Guideline" name="uma.type">
+<meta content="statechart_diagram" name="uma.name">
+<meta content="状态表图" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.4528459404144188E-304"]}, {view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_zRigkAILEdq-_NKqZM1EhA", "_QV4x0AISEdqTna4sZVFRow", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.4528459404144188E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_f6_YwN7DEdmsEI4YDGX2ag", "_qwxC8N7YEdmjRZts2c4ZjQ", "{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}", "1.4528459404144188E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_kjFBYN7HEdm8G6yT7-Wdqw", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.4528459404144188E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}", "1.4528459404144188E-304"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "1.4528459404144188E-304"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="1.4528459404144188E-304"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：状态表图</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">状态表图是用来对模型元素的动态行为进行建模的状态机规范的正式图形符号表示法。本指南提供了这种符号表示法，并演示了如何有效地使用这种方法。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/use_case_design_92D13EEE.html" guid="{76E2B93D-051C-4B8C-BEA1-B40A40CBD986}">用例设计</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/subsystem_design_5D1BCC0C.html" guid="{CAA385CA-2BA2-40F2-8FE3-E21089D02119}">子系统设计</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/roles/rup_software_architect_DB0BF177.html" guid="{4AC346F0-E6FC-4D2C-8410-2EDF8DDDC91D}">软件设计人员</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">类设计</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_design_model_2830034D.html" guid="{8CDAEAD4-5E84-4F50-87FD-3240ED047DE7}">设计模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_state_machine__guidelines_for" name="XE_state_machine__guidelines_for" class="index" key="状态机（state machine）" text="指南"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">说明</a>
+</h3>
+<p>
+    状态机用于对模型元素的动态行为进行建模，更具体地说，就是对系统行为中受事件驱动的方面进行建模（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/events_and_signals_734567DC.html" guid="1.800598287887014E-305">概念：事件与信号</a>）。状态机特别用于定义状态相关的行为，或根据模型元素的状态而变化的行为。如果模型元素的行为不随元素状态而变化，模型元素则不需要状态机来描述其行为（这些元素通常为被动类，主要负责管理数据）。特别地，状态机必须用来对使用调用事件和信号事件来实施操作（和类的状态机中的转移一样）的活动类的行为进行建模。
+</p>
+<p>
+    状态机由转移所链接的几种状态组成。状态是对象执行某项任务或等待某个事件时的情况。转移是两个状态之间的一种关系，它由某个事件触发，执行某些操作或评估，并产生特定的最终状态。状态机的元素在图 1 中有所描述。
+</p>
+<p align="center">
+    <img height="278" alt="显示状态机符号表示法的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_state1.gif" width="511" />
+</p>
+<p class="picturetext" align="center">
+    图 1. 状态机符号表示法。
+</p>
+<p>
+    一个简单的编辑器可被视为有限的状态机，其状态为<b>空</b>、<b>等待命令</b>和<b>等待文本</b>。事件<b>装入文件</b>、<b>插入文本</b>、<b>插入字符</b>和<b>保存并退出</b>导致了状态机中的转移。下面的图
+    2 中描述了编辑器的状态机。
+</p>
+<p class="picturecenter" align="center">
+    <img height="263" alt="图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_stad2.gif" width="437" />
+</p>
+<p class="picturetext" align="center">
+    图 2. 简单编辑器的状态机。
+</p>
+<h3>
+    <a id="States" name="States">状态</a>
+</h3>
+<p align="left">
+    状态是对象执行某项任务或等待某个事件时的情况。对象可能在有限的一段时间内保持某一状态。状态有几种属性：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="65%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="row" width="40%">
+                    名称
+                </th>
+                <td width="60%">
+                    区别不同状态的文本字符串；状态也可能是匿名的，就是说状态没有名称。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    进入／退出操作
+                </th>
+                <td width="60%">
+                    进入和退出状态时执行的操作。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    内部转移
+                </th>
+                <td width="60%">
+                    在不引起状态更改的情况下处理的转移。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    子状态
+                </th>
+                <td width="60%">
+                    状态的嵌套结构，涉及到多个不相交的（依次活动的）或并发的（同时活动的）子状态。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    延迟的事件
+                </th>
+                <td width="60%">
+                    在该状态中未处理，而在另一状态中被延迟并排队由对象处理的一系列事件。
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    如图 1 中所描述的，存在两个可能为某一对象的状态机定义的特别状态。初始状态表示状态机或子状态的缺省起始位置。初始状态描绘为实心黑圆圈。最终状态表示状态机执行的完成，或封闭状态已完成。最终状态表示为一个实心黑色圆圈外套一个空心圆圈。
+    初始状态和最终状态实际上是虚假的状态。除名称之外，两者都不含正常状态的常见部分。从初始状态转移到最终状态，这可能会全面补充各种特性，包括警戒条件和操作，但可能不含触发事件。
+</p>
+<h3>
+    <a id="Transitions" name="Transitions">转移</a>
+</h3>
+<ul>
+    <li>
+        <a href="#Event Triggers">事件触发器</a>
+    </li>
+    <li>
+        <a href="#Guard Conditions">警戒条件</a>
+    </li>
+    <li>
+        <a href="#Actions">操作</a>
+    </li>
+    <li>
+        <a href="#Entry and Exit Actions">进入和退出操作</a>
+    </li>
+    <li>
+        <a href="#Internal Transitions">内部转移</a>
+    </li>
+    <li>
+        <a href="#Deferred Events">延迟的事件</a>
+    </li>
+</ul>
+<p>
+    转移是两个状态之间的一种关系，表示处于第一个状态的对象将执行一定的操作，并在发生指定的事件且满足指定的条件时进入第二个状态。当发生这样的状态变化时，即认为转移“击发”。在转移击发之前，一直认为对象处于“源”状态；击发后，认为转移处于“目标”状态。转移有几种属性：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="row" width="40%">
+                    源状态
+                </th>
+                <td width="60%">
+                    受转移影响的状态；如果某个对象处于源状态，则当对象接收到转移的触发事件时和在满足警戒条件（如果有）的情况下，传出转移可能击发。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    <b>事件触发器</b>
+                </th>
+                <td width="60%">
+                    在由源状态的对象收到后，使转移符合击发条件的事件（假定满足其警戒条件）。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    <b>警戒条件</b>
+                </th>
+                <td width="60%">
+                    在收到事件触发后触发转移时进行求值的一种布尔表达式；如果表达式的值为 True，则转移符合击发条件；如果表达式的值为 False，则转移不击发。如果同一事件无法触发其他转移，则丢失该事件。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    操作
+                </th>
+                <td width="60%">
+                    一种可执行的元计算（atomic computation），可能直接根据拥有状态机的对象进行，并间接根据该对象可见的其他对象进行。
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" width="40%">
+                    目标状态
+                </th>
+                <td width="60%">
+                    转移完成后的活动状态。
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    一个转移可能有多个源，这种情况下它代表多个并发状态的连接；以及多个目标，这种情况下它代表多个并发状态的交叉。
+</p>
+<h4>
+    <a id="Event Triggers" name="Event Triggers">事件触发器</a>
+</h4>
+<p>
+    在状态机的环境中，事件是可触发状态转移的激励事件。
+    事件可能包括信号事件、调用事件、时间流逝或状态更改。信号或调用事件所带参数的参数值可能可用于转移，这包括警戒条件和操作的表达式。还可能存在无触发的转移，这表示为不含事件触发的转移。这些转移也被称为完成转移，它们在源状态完成其任务后将被隐式触发。
+</p>
+<h4>
+    <a id="Guard Conditions" name="Guard Conditions">警戒条件</a>
+</h4>
+<p>
+    警戒条件是在转移的触发事件发生后进行求值的。只要警戒条件不重叠，就可能使用相同的事件触发，从同一源状态进行多个转移。 警戒条件仅在事件发生时为转移进行一次求值。布尔表达式可能引用对象的状态。
+</p>
+<h4>
+    <a id="Actions" name="Actions">操作</a>
+</h4>
+<p>
+    操作是可执行的元计算，就是说它不能因为某一事件而中断，所以将一直运行到完成为止。它与任务相反，因为任务可能被其他事件中断。
+    操作可能包括操作调用（调用状态机的所有者以及其他可见的对象），另一对象的创建或破坏，或是向另一对象发送信号。在发送信号的情况下，信号名称的前缀是关键字“send”。
+</p>
+<h4>
+    <a id="Entry and Exit Actions" name="Entry and Exit Actions">进入和退出操作</a>
+</h4>
+<p>
+    进入和退出操作允许在每次进入或退出状态时分别快速执行相同的操作。
+    进入和退出操作支持干净利落地完成上述操作，而不必对每个传入和传出转移执行显式操作。进入和退出操作可能不含实参或警戒条件。模型元素状态机的顶级进入操作可能具有某些参数，它们代表创建元素时机器收到的实参。
+</p>
+<h4>
+    <a id="Internal Transitions" name="Internal Transitions">内部转移</a>
+</h4>
+<p>
+    内部转移允许在保持状态不变的情况下处理事件，从而避免触发进入或退出操作。内部转移可能含有带参数和警戒条件的事件，本质上代表了中断处理器。
+</p>
+<h4>
+    <a id="Deferred Events" name="Deferred Events">延迟的事件</a>
+</h4>
+<p>
+    某些事件的处理工作一直推迟到这些事件不延迟时所处的状态成为活动状态，这些事件即为延迟的事件。 该状态变为活动状态后，将触发事件的发生，并可能导致进行转移，就象事件刚发生过一样。
+    延迟事件的实施需要将事件组成内部队列。如果某个事件已发生但被列为延迟，则将该事件列入队中。一旦该对象进入不延迟这些事件处理的某一状态，事件就立即离开该队列。
+</p>
+<h3>
+    <a id="Substates" name="Substates">子状态</a>
+</h3>
+<p>
+    简单状态是指不含子结构的状态。含有子状态（嵌套状态）的状态被称为组合状态。可嵌套任意层的子状态。一个嵌套状态机可能至少有一个初始状态和一个最终状态。子状态通过显示仅在特定环境（封闭状态）内可能存在的某些状态，用以简化复杂的平面状态机。
+</p>
+<p align="center">
+    <img height="279" alt="显示子状态的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_state2.gif" width="449" />
+</p>
+<p class="picturetext" align="center">
+    图 3. 子状态。
+</p>
+<p>
+    转移可从封闭组合状态之外的某个源起，以组合状态或某个子状态为目标。如果目标为组合状态，嵌套状态机则必须包含初始状态，进入组合状态和快速执行进入操作（如果有）后控制权传递到该状态。如果目标为嵌套状态，则在快速执行组合状态的进入操作（如果有）及随后嵌套状态的进入操作（如果有）之后，控制权传递到嵌套状态。
+</p>
+<p>
+    通向某一组合状态的转移可能将该组合状态或某一子状态作为它的源。在任一情况下，控制权都首先离开嵌套状态（并快速执行退出操作，如果有），然后离开组合状态（并快速执行退出操作，如果有）。源状态为复合状态的转移基本上会中断嵌套状态机的任务。
+</p>
+<h3>
+    <a id="History States" name="History States">历史状态</a>
+</h3>
+<p>
+    除非另有指定，否则当转移进入组合状态时，将在初始状态再一次启动嵌套状态机的操作（除非转移直接以子状态为目标）。历史状态允许状态机再次进入它离开组合状态之前的最后一个活动的子状态。图 3 中展示了历史状态用途的一个示例。
+</p>
+<p align="center">
+    <img height="211" alt="显示历史状态的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_state3.gif" width="412" />
+</p>
+<p class="picturetext" align="center">
+    图 4. 历史状态。
+</p>
+<h3>
+    <a id="Common Modeling Techniques" name="Common Modeling Techniques">常用的建模技术</a>
+</h3>
+<p>
+    状态机最常用于为对象在整个生存期内的行为建模。当对象具有状态相关行为时，就特别需要状态机。可能具有状态机的对象包括：类、子系统、用例和接口（以声明实现该接口的对象必须满足的状态）。在使用实时系统的情况下，状态机还用于封装体和协议（以声明实现该协议的对象必须满足的状态）。
+</p>
+<p>
+    并非所有对象都需要状态机。如果对象的行为较简单，可简单地存储或检索数据，那么对象的行为处于恒定状态，状态机也没什么用处。
+</p>
+<p>
+    为对象的生存期进行建模涉及三个事项：指定对象可响应的事件、对这些事件的响应以及过往行为对当前行为的影响。对象生存期的建模还涉及：决定对象对事件做出有意义响应的顺序，在对象创建时开始建模，并一直继续到对象破坏为止。
+</p>
+<p>
+    要为对象的生存期建模：
+</p>
+<ul>
+    <li>
+        设置状态机的环境（一个类、一个用例还是整个系统）。 
+        <ul>
+            <li>
+                如果环境为类或用例，则收集相邻的类，包括父类、相关联的类或相依赖的类。这些相邻的类是操作的候选目标和警戒条件中所包括的候选目标。
+            </li>
+            <li>
+                如果环境为整个系统，则仅着重于系统的某一行为，然后考虑在该方面所涉及的对象的生命期。整个系统的生命期过长，关注整个系统的生命期是没有意义的。
+            </li>
+        </ul>
+    </li>
+    <li>
+        确定对象的初始状态和最终状态。如果初始状态和最终状态存在前置条件或后置条件，则还定义这些条件。
+    </li>
+    <li>
+        确定对象所响应的事件。可在对象的接口中找到这些事件。在使用实时系统的情况下，可在对象的协议中找到这些事件。
+    </li>
+    <li>
+        从初始状态开始，直到最终状态，安排对象可能处在的顶级状态。将这些状态与由适当事件触发的转移连接起来。继续添加这些转移。
+    </li>
+    <li>
+        确定任何进入或退出操作。
+    </li>
+    <li>
+        使用子状态扩展或简化状态机。
+    </li>
+    <li>
+        检查状态机中的所有事件触发转移与对象实现的接口所期望的事件相匹配。类似地，检查对象接口所期望的所有事件是由状态机处理的。在实时系统的情况下，为封装体协议进行对等检查。最后，确定要在哪些地方明确地忽略事件（如延迟的事件）。
+    </li>
+    <li>
+        检查状态机中的所有操作都受封闭对象的关系、方法和操作的支持。
+    </li>
+    <li>
+        在状态机中进行跟踪，并与期望的序列事件及其响应进行比较。搜索无法达到的状态或机器滞留的状态。
+    </li>
+    <li>
+        如果重新调整或重构状态机，则检查以确保语义未更改。
+    </li>
+</ul>
+<h3>
+    <a id="Hints and Tips" name="Hints and Tips">提示与技巧</a>
+</h3>
+<ul>
+    <li>
+        当给定选择时，则使用状态机的可视语义，而不是编写详细的转移代码。例如，不要针对几个信号触发一个转移，然后使用详细代码来根据信号有差别地管理控制流程。请使用由单独信号触发的单独转移。避免转移代码中包含隐藏附加行为的条件逻辑。
+    </li>
+    <li>
+        根据您要等待的对象或在状态期间发生的情况来命名状态。记住：状态并不是一个“时间点”，它是一个时间段，状态机在该时间段内等待某种情况的发生。例如，“waitingForEnd”这一名称比“end”更好；“timingSomeActivity”比“timeout”更好。不要将状态命名的像操作一样。
+    </li>
+    <li>
+        对状态机中所有的状态和转移进行唯一命名，这将使源级调试更为容易。
+    </li>
+    <li>
+        小心使用状态变量（用于控制行为的属性），不要使用它们来代替创建新状态。如果状态较少且少有或根本没有状态相关行为，或如果少有或根本没有行为可能与包含状态机的对象同时发生或独立于包含状态机的对象，则可使用状态变量。如果存在可能同时发生的、复杂的状态相关行为，或如果必须处理的事件可能源于包含状态机的对象之外，则考虑使用两个以上活动对象的协作（可能定义为组装）。在实时系统中，应使用包含子封装体的封装体对复杂的、同时发生的、状态相关行为建模。
+    </li>
+    <li>
+        如果单个图中有 5 ± 2 个以上的状态，则请考虑使用子状态。可应用常识来判断：某一绝对规则的模式中存在十个状态可能是正常情况，但两个状态之间存在四十个转移的情况显然需要重新考虑。确保状态机是可理解的。
+    </li>
+    <li>
+        对因为触发事件的事情和／或转移期间发生的事情而引起的转移命名。选择有助于理解的名称。
+    </li>
+    <li>
+        当您看见一个选择点时，应考虑是否可以将作出该选择的职责委托给另一个组件，以便将其作为一组不同的信号提供给对象遵照执行（例如，代替对消息-&gt;数据 &gt; x
+        的选择），并考虑是否可以让发送方或另一中间参与者来作出决定，然后通过在信号名称中明确显示该决定的方式发送信号（例如，使用名为 isFull 和 isEmpty 的信号，而不是以值命名信号并检查消息数据）。
+    </li>
+    <li>
+        为在选择顶点处回答的问题命名，使用描述性词语，例如“isThereStillLife”或“isItTimeToComplain”。
+    </li>
+    <li>
+        在任一给定对象内，尝试使选择顶点名称保持不重复（与保持转移名称不重复的理由相同）。
+    </li>
+    <li>
+        转移中有过长的代码片段吗？应使用功能来代替吗？还是捕捉普通代码片段作为功能？转移应像高级伪码那样理解，并应遵循像 C++ 功能那样或者更为严格的长度规则。例如，如果转移的代码超过 25 行，则被认为过长。
+    </li>
+    <li>
+        应根据功能的执行内容为功能命名。
+    </li>
+    <li>
+        要特别注意进入和退出操作：做更改特别容易，也特别容易忘记更改进入和退出操作。
+    </li>
+    <li>
+        退出操作可用于提供安全特性，例如，“heaterOn”状态的退出操作会关闭加热器，在这种情况下操作用于强制实施某一声明。
+    </li>
+    <li>
+        子状态一般应包含两个或更多状态，除非状态机为抽象状态机并将由封闭元素的子类进行优化。
+    </li>
+    <li>
+        应使用选择点，代替操作或转移中的条件逻辑。选择点是显而易见的，而代码中的条件逻辑是隐藏的，且容易被忽视。
+    </li>
+    <li>
+        避免警戒条件 
+        <ul>
+            <li>
+                如果事件触发了几个转移，就无法控制首先对哪个警戒条件求值。这导致结果可能无法预测。
+            </li>
+            <li>
+                可能有多个警戒条件为“true”，但只能遵循一个转移。可能无法预测所选的路径。
+            </li>
+            <li>
+                警戒条件是不可见的，很难“看见”它们是否存在。
+            </li>
+        </ul>
+    </li>
+    <li>
+        避免类似流程图这样的状态机。 
+        <ul>
+            <li>
+                这可能表示尝试对某个实际不存在的抽象对象进行建模，例如： 
+                <ul>
+                    <li>
+                        使用一个活动类来对最适合于被动类或数据类的行为进行建模
+                    </li>
+                    <li>
+                        使用紧密结合的数据类和活动类对数据类（即，数据类用于传递类型信息，而活动类包含大多数应与数据类相关联的数据）进行建模。
+                    </li>
+                </ul>
+            </li>
+            <li>
+                可通过以下症状来识别这种错误使用状态机的情况： 
+                <ul>
+                    <li>
+                        消息发送到“自身”，主要是为了重用代码
+                    </li>
+                    <li>
+                        状态很少，却有多个选择点
+                    </li>
+                    <li>
+                        状态机在某些情况下无循环。这样的状态机在流程控制应用程序中或当尝试控制事件序列时是有效的；在分析过程中出现这样的状态机通常代表状态机已退化为流程图。
+                    </li>
+                </ul>
+            </li>
+            <li>
+                确定问题时： 
+                <ul>
+                    <li>
+                        考虑将活动类分割成具有更明确职责的较小单元。
+                    </li>
+                    <li>
+                        将更多的行为移到与问题活动类相关联的数据类中。
+                    </li>
+                    <li>
+                        将更多的行为移到活动类功能中。
+                    </li>
+                    <li>
+                        生成更有意义的信号，而不是依赖数据。
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<h3>
+    <a id="Designing Abstract State Machines" name="Designing Abstract State Machines">使用抽象状态机进行设计</a>
+</h3>
+<p>
+    抽象状态机是一种在实际使用之前需要添加更多详细信息的状态机。抽象状态机可用于定义一般的、可重用的行为，这种行为在后续模型元素中得到进一步优化。
+</p>
+<p align="center">
+    <img height="201" alt="图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_cpsl2.gif" width="167" />
+</p>
+<p class="picturetext" align="center">
+    图 5. 抽象状态机。
+</p>
+<p>
+    请考虑图 5 中的抽象状态机。图 5 中的简单状态机代表了事件驱动的系统中许多不同元素类型的最抽象的行为（自动“控制”）。
+    尽管它们共享这种高级形式，但不同元素类型在“运行”状态可能具有差别甚大的详细行为，这取决于它们的用途。因此，该状态机最有可能在某个抽象类中定义，该抽象类充当不同的专门活动类的根类
+</p>
+<p>
+    因此，我们可使用继承来定义该抽象状态机的这两种不同的改进。图 6 中显示了这两种改进，R1 和 R2。为了清楚起见，我们使用灰色笔绘制了继承自父类的元素。
+</p>
+<p align="center">
+    <img height="204" alt="图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_cpsl3.gif" width="391" />
+</p>
+<p class="picturetext" align="center">
+    图 6. 图 5 中状态机的两种改进。
+</p>
+<p>
+    这两种改进形式的明显差异在于它们分解“运行”状态的方式和它们扩展初始“启动”转移的方式。当然，一旦知道了改进，就只能做出这些选择，因此在抽象类中就无法通过单个端到端转移来做出选择。
+</p>
+<h3>
+    <a id="Chain States" name="Chain States">链式状态</a>
+</h3>
+<p>
+    对于上述的改进类型而言，能够“继续”输入转移和输出转移是基本的能力。似乎入口点和最终状态结合延续转移就足以提供这些语义。不幸的是，当有多个不同的转移需要扩展时，这就不够了。
+</p>
+<p>
+    抽象行为模式所需要的是将两个或更多在单个运行－完成步骤范围内执行的转移段链接起来的一种方式。这意味着进入层次结构状态的转移会分割为在状态边界有效终止的进入部分和在该状态内延续的扩展部分。类似地，始于分层嵌套状态的传出转移会分割为在封闭状态边界终止的部分和从状态边界延续到目标状态的部分。可在
+    UML 中通过引入<b>链状态</b>概念来实现该效果。这是通过 UML
+    状态的造型概念（&lt;&lt;chainState&gt;&gt;）进行建模的。该状态的唯一用途是将更多的自动（无触发器）转移“链接”到输入转移上。链式状态没有内部结构：没有进入操作，没有内部活动，没有退出操作。也没有由事件触发的转移。它可能含有任意数目的输入转移。还可能含有不带触发事件的传出转移；当某一输入转移激活该状态时，该转移就自动击发。该状态用于将输入转移与单独的输出转移链接起来。在（若干）输入转移和链接的输出转移之间，一个状态连接了包含状态内的其他状态，而另一状态连接了包含状态之外的其他状态。引入链状态是为了将包含状态的内部规范与其外部环境分开来；这是封装的问题。
+</p>
+<p>
+    实际上，链式状态代表的是一种“串通”状态，它用于将某个转移链接到一个特定的继续转移。如果未定义延续转移，则转移终止于链状态，而封闭状态的某种转移最终必须击发才能向前移动。
+</p>
+<p>
+    图 7
+    中的状态机示例段说明了链状态及其符号表示。在状态机图中，使用处于适当层次结构状态的小白圈来表示链状态（该表示法与初始状态和最终状态相似）。圆圈为链状态的典型造型图标，为方便起见，通常将其绘制在边界附近。（事实上，要使用不同的表示法，则将其绘制在封闭状态的边界上。）
+</p>
+<p align="center">
+    <img height="152" alt="附带文本中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/md_cpsl4.gif" width="391" />
+</p>
+<p class="picturetext" align="center">
+    图 7. 链状态和链接的转移。
+</p>
+<p>
+    该示例中的链接的转移由三个链接的转移段 e1/a11-/a12-/a13 组成。收到信号 e1 后，将采取 e1/a11 转移，执行其操作，然后达到链状态 c1。 此后，将采用 c1 和 c2 之间的延续转移，最终，由于 c2
+    也是链状态，故从 c2 转移到 S21。如果这些路径中的状态均含有退出和进入操作，执行操作的实际顺序将如下：
+</p>
+<ul>
+    <li>
+        S11 的退出操作
+    </li>
+    <li>
+        所有操作
+    </li>
+    <li>
+        S1 的退出操作
+    </li>
+    <li>
+        操作 a12
+    </li>
+    <li>
+        S2 的进入操作
+    </li>
+    <li>
+        操作 a13
+    </li>
+    <li>
+        S21 的进入操作
+    </li>
+</ul>
+<p>
+    所有这些操作均在单个运行－完成步骤范围内执行。
+</p>
+<p>
+    这应与直接转移 e2/a2 的操作执行语义进行比较，执行顺序为：
+</p>
+<ul>
+    <li>
+        S11 的退出操作
+    </li>
+    <li>
+        S1 的退出操作
+    </li>
+    <li>
+        操作 a2
+    </li>
+    <li>
+        状态 S2 的进入操作
+    </li>
+    <li>
+        状态 S21 的进入操作
+    </li>
+</ul><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

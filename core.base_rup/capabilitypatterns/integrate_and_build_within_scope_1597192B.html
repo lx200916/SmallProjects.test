@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>活动: 集成并验证工作版本</title>
+<meta content="Activity" name="uma.type">
+<meta content="integrate_and_build_within_scope" name="uma.name">
+<meta content="集成并验证工作版本" name="uma.presentationName">
+<meta name="element_type" content="workflow_detail">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ActivityTreeTable.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ProcessElementPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript" src="./../../scripts/processElementData.js"></script><script language="JavaScript" type="text/javascript">
+					var defaultQueryStr = '?proc=_b3LNYUdjEdqVZeSWHJlGyA&path=_b3LNYUdjEdqVZeSWHJlGyA,_lGvUQEdjEdqVZeSWHJlGyA';
+					var backPath = './../../';
+					var imgPath = './../../images/';
+					var nodeInfo=[{view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_C6jF0EdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_dTvnIEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA"]}, {view: "view:_e_O28N7KEdm8G6yT7-Wdqw", path: ["_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_sz1ksZ5IEdq7s5zuJVEAAw", "_lGvUQEdjEdqVZeSWHJlGyA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_-kFhcCVuEdqSZ9OimJ-AzA", "_pV4NgSFsEdqrX8YVzvtlIg", "_C6jF0EdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_SkuIwCVwEdqSZ9OimJ-AzA", "_gM9X0CGFEdqMcovRzkCQow", "_dTvnIEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_PEpmMCVuEdqSZ9OimJ-AzA", "_cn2akCVwEdqSZ9OimJ-AzA", "_zUDkgSGFEdqMcovRzkCQow", "_zvv6IEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vChNQkJHEdq4z9xc-r201w", "_vChNREJHEdq4z9xc-r201w", "_C6jF0EdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtajUJHEdq4z9xc-r201w", "_vCtai0JHEdq4z9xc-r201w", "_dTvnIEdlEdqVZeSWHJlGyA", "_lGvUQEdjEdqVZeSWHJlGyA"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_e_O28N7KEdm8G6yT7-Wdqw", "_vCtak0JHEdq4z9xc-r201w", "_vCtaj0JHEdq4z9xc-r201w", "_vCtakkJHEdq4z9xc-r201w", "_sz1ksZ5IEdq7s5zuJVEAAw", "_lGvUQEdjEdqVZeSWHJlGyA"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  defaultQueryStr, false, true, true);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top">
+<div autoWrap="true">
+<div id="page-guid" value="_lGvUQEdjEdqVZeSWHJlGyA"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">活动：集成并验证工作版本</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../images/process.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">此模式涵盖集成、构建和验证子系统或整个系统的工作版本所需的活动。</td>
+</tr>
+<tr>
+<td valign="top">扩展：<a href="./../../core.base_rup/capabilitypatterns/integrate_and_validate_build_4D919B76.html" guid="_OG_3gUdiEdqVZeSWHJlGyA">集成并验证工作版本</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="middle">
+<td class="tab" width="10"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td><td class="tab" nowrap><a id="TAB_Description" class="tab" href="./../../core.base_rup/capabilitypatterns/integrate_and_build_within_scope_1597192B.html_desc.html">描述</a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_a.gif"></td><td class="activeTab" nowrap><span style="white-space:nowrap;">工作分解结构</span></td><td width="1"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-a_i.gif"></td><td class="tab" nowrap><a id="TAB_TBS" class="tab" href="./../../core.base_rup/capabilitypatterns/integrate_and_build_within_scope_1597192B.html_tbs.html"><span style="white-space:nowrap;">团队分配</span></a></td><td width="21"><img title="" alt="" align="absmiddle" height="17" width="21" src="./../../images/tab_middle-i_i.gif"></td><td class="tab" nowrap><a id="TAB_WPBS" class="tab" href="./../../core.base_rup/capabilitypatterns/integrate_and_build_within_scope_1597192B.html_wpbs.html"><span style="white-space:nowrap;">工作产品使用</span></a></td><td width="21"><img title="" alt="" height="17" width="21" src="./../../images/tab_end-i.gif"></td><td width="50%"><img title="" alt="" height="17" width="10" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td colspan="2"><img title="" alt="" height="2" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space_middle.gif"></td><td class="activeTab"><img title="" alt="" height="2" width="10" src="./../../images/shim.gif"></td><td><img title="" alt="" height="2" width="21" src="./../../images/tab_space.gif"></td><td colspan="5"><img title="" alt="" height="2" src="./../../images/shim.gif"></td>
+</tr>
+<tr>
+<td class="activeTab" colspan="10"><img title="" alt="" height="5" src="./../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="sectionHeading">工作流</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr>
+<td align="left" colspan="2" class="sectionTableSingleCell">
+<p></p>
+<img diagramType="Activity" border="0" id="diagram_Activity" src="./../../core.base_rup/capabilitypatterns/resources/integrate_and_build_within_scope_1597192B_Activity.jpeg" alt="活动图：集成并验证工作版本" title="活动图：集成并验证工作版本" usemap="#Activity_integrate_and_build_within_scope"><map name="Activity_integrate_and_build_within_scope">
+<area href="./../../core.base_rup/capabilitypatterns/integrate_each_subsystem_34DF846B.html" relpath=",_3B7j8EdiEdqVZeSWHJlGyA" alt="集成每个子系统" title="集成每个子系统" coords="70, 149, 196, 202" shape="rect" guid="_3B7j8EdiEdqVZeSWHJlGyA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/integrate_the_system_CB02447.html" relpath=",_3ldHwEdiEdqVZeSWHJlGyA" alt="集成系统" title="集成系统" coords="238, 205, 337, 258" shape="rect" guid="_3ldHwEdiEdqVZeSWHJlGyA"></area>
+<area href="./../../core.base_rup/capabilitypatterns/validate_build_stability_DEB0F413.html" relpath=",_6oxHwEdiEdqVZeSWHJlGyA" alt="验证工作版本的稳定性" title="验证工作版本的稳定性" coords="235, 295, 340, 362" shape="rect" guid="_6oxHwEdiEdqVZeSWHJlGyA"></area>
+</map>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">工作分解</div>
+<div class="sectionContent">
+<div id="treeContent"></div>
+<script language="JavaScript">
+contentPage.processPage.treeTable.data = {
+title: "工作分解", summary: "工作分解", 
+columns: [
+["presentation_name", "分解元素"],
+["steps", "步骤"],
+["id", "索引"],
+["predecessors", "先行作业"],
+["model_info", "模型信息"],
+["type", "类型"],
+["is_planned", "已计划"],
+["is_repeatable", "可重复"],
+["has_multiple_occurrences", "多次出现"],
+["is_ongoing", "正在进行"],
+["is_event_driven", "事件驱动"],
+["is_optional", "可选"],
+["teams", "团队"]],
+rows: [
+{id: "63864c76", parentId: "", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "4", prefix: "", name: "integrate_each_subsystem", title: "集成每个子系统", url: "./../../core.base_rup/capabilitypatterns/integrate_each_subsystem_34DF846B.html", 
+	predecessors: "", info: "扩展“integrate_each_subsystem, core.base_rup/implementation”", type: "活动", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+
+{id: "98fb6938", parentId: "63864c76", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_Ku1-YEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "5", prefix: "", name: "implement_developer_test", title: "实施开发人员测试", url: "./../../core.base_rup/capabilitypatterns/implement_developer_test_616ACA87.html", 
+	predecessors: "", info: "", type: "任务", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true]},
+
+{id: "77cb9e56", parentId: "98fb6938", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_Ku1-YEofEdqrjq4i3fchvA,_CR-7gRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementer", title: "实施者", url: "./../../core.base_rup/capabilitypatterns/rup_implementer_64A09AF9.html", 
+	predecessors: "", info: "主执行者", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "2395d7ba", parentId: "98fb6938", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_Ku1-YEofEdqrjq4i3fchvA,_CR404xi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_element", title: "实施元素", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_element_EA8BB344.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "c5b50790", parentId: "98fb6938", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_Ku1-YEofEdqrjq4i3fchvA,_Ku1-YUofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_design_model", title: "设计模型", url: "./../../core.base_rup/capabilitypatterns/rup_design_model_6C08AA97.html", 
+	predecessors: "", info: "可选输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "1d560682", parentId: "98fb6938", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_Ku1-YEofEdqrjq4i3fchvA,_CR-7hhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_developer_test", title: "开发人员测试", url: "./../../core.base_rup/capabilitypatterns/rup_developer_test_17CB912E.html", 
+	predecessors: "", info: "输出", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "f804f5b4", parentId: "63864c76", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_LsJ7MEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "6", prefix: "", name: "perform_developer_test", title: "执行开发人员测试", url: "./../../core.base_rup/capabilitypatterns/perform_developer_test_3F5DC181.html", 
+	predecessors: "", info: "", type: "任务", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true]},
+
+{id: "b26e2280", parentId: "f804f5b4", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_LsJ7MEofEdqrjq4i3fchvA,_CR-7gRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementer", title: "实施者", url: "./../../core.base_rup/capabilitypatterns/rup_implementer_64A09AF9.html", 
+	predecessors: "", info: "主执行者", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "33561220", parentId: "f804f5b4", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_LsJ7MEofEdqrjq4i3fchvA,_CR-7hhi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_developer_test", title: "开发人员测试", url: "./../../core.base_rup/capabilitypatterns/rup_developer_test_17CB912E.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "7e1a4cbc", parentId: "f804f5b4", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_LsJ7MEofEdqrjq4i3fchvA,_CR404xi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_element", title: "实施元素", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_element_EA8BB344.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "3ed22218", parentId: "f804f5b4", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_LsJ7MEofEdqrjq4i3fchvA,_LsQB0EofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_log", title: "测试日志", url: "./../../core.base_rup/capabilitypatterns/rup_test_log_269633E2.html", 
+	predecessors: "", info: "输出", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "de9cc870", parentId: "63864c76", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_MpqsUEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "7", prefix: "", name: "integrate_subsystem", title: "集成子系统", url: "./../../core.base_rup/capabilitypatterns/integrate_subsystem_423E3E4A.html", 
+	predecessors: "", info: "", type: "任务", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+
+{id: "410832bc", parentId: "de9cc870", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_MpqsUEofEdqrjq4i3fchvA,_MpqsUUofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_integrator", title: "集成人员", url: "./../../core.base_rup/capabilitypatterns/rup_integrator_4CDC1E5A.html", 
+	predecessors: "", info: "主执行者", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "ebd1a9ce", parentId: "de9cc870", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_MpqsUEofEdqrjq4i3fchvA,_Mpwy8EofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_integration_build_plan", title: "集成构建计划", url: "./../../core.base_rup/capabilitypatterns/rup_integration_build_plan_3D80F187.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "4b06427c", parentId: "de9cc870", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_MpqsUEofEdqrjq4i3fchvA,_CR404xi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_element", title: "实施元素", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_element_EA8BB344.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "6a0c48ea", parentId: "de9cc870", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_MpqsUEofEdqrjq4i3fchvA,_CR405Bi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_subsystem", title: "实施子系统", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_subsystem_AB48C12D.html", 
+	predecessors: "", info: "可选输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "8fded198", parentId: "de9cc870", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_MpqsUEofEdqrjq4i3fchvA,_Mpwy8UofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_build", title: "工作版本", url: "./../../core.base_rup/capabilitypatterns/rup_build_481ED197.html", 
+	predecessors: "", info: "输出", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "b45e7d70", parentId: "de9cc870", relPath: ",_3B7j8EdiEdqVZeSWHJlGyA,_MpqsUEofEdqrjq4i3fchvA,_CR405Bi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_subsystem", title: "实施子系统", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_subsystem_AB48C12D.html", 
+	predecessors: "", info: "输出", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "7ba284e2", parentId: "", relPath: ",_3ldHwEdiEdqVZeSWHJlGyA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "8", prefix: "", name: "integrate_the_system", title: "集成系统", url: "./../../core.base_rup/capabilitypatterns/integrate_the_system_CB02447.html", 
+	predecessors: "", info: "扩展“integrate_the_system, core.base_rup/implementation”", type: "活动", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+
+{id: "18c0e4da", parentId: "7ba284e2", relPath: ",_3ldHwEdiEdqVZeSWHJlGyA,_NnEvwUofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "9", prefix: "", name: "integrate_system", title: "集成系统", url: "./../../core.base_rup/capabilitypatterns/integrate_system_6EBE4304.html", 
+	predecessors: "", info: "", type: "任务", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true]},
+
+{id: "7e9f014e", parentId: "18c0e4da", relPath: ",_3ldHwEdiEdqVZeSWHJlGyA,_NnEvwUofEdqrjq4i3fchvA,_NnEvwkofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_integrator", title: "集成人员", url: "./../../core.base_rup/capabilitypatterns/rup_integrator_5D57571A.html", 
+	predecessors: "", info: "主执行者", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "79cad1f6", parentId: "18c0e4da", relPath: ",_3ldHwEdiEdqVZeSWHJlGyA,_NnEvwUofEdqrjq4i3fchvA,_NnK2YEofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_integration_build_plan", title: "集成构建计划", url: "./../../core.base_rup/capabilitypatterns/rup_integration_build_plan_2790F248.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "63198b8", parentId: "18c0e4da", relPath: ",_3ldHwEdiEdqVZeSWHJlGyA,_NnEvwUofEdqrjq4i3fchvA,_CR-7jBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_implementation_subsystem", title: "实施子系统", url: "./../../core.base_rup/capabilitypatterns/rup_implementation_subsystem_A7B86146.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "4a5bfb64", parentId: "18c0e4da", relPath: ",_3ldHwEdiEdqVZeSWHJlGyA,_NnEvwUofEdqrjq4i3fchvA,_NnK2YUofEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_build", title: "工作版本", url: "./../../core.base_rup/capabilitypatterns/rup_build_322ED258.html", 
+	predecessors: "", info: "输出", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "d9e85818", parentId: "", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA", isSuppressed: "", indentSize: 0, hasChildren:true, 
+	index: "10", prefix: "", name: "validate_build_stability", title: "验证工作版本的稳定性", url: "./../../core.base_rup/capabilitypatterns/validate_build_stability_DEB0F413.html", 
+	predecessors: "8", info: "扩展“validate_build_stability, core.base_rup/test”", type: "活动", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "extends",
+	steps: []},
+
+{id: "dd9ad4a0", parentId: "d9e85818", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_shqGsEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "11", prefix: "", name: "execute_test_suite", title: "执行测试套件", url: "./../../core.base_rup/capabilitypatterns/execute_test_suite_38D6CCD4.html", 
+	predecessors: "", info: "", type: "任务", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+
+{id: "e8b5f73a", parentId: "dd9ad4a0", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_shqGsEohEdqrjq4i3fchvA,_CSvwgRi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_tester", title: "测试员", url: "./../../core.base_rup/capabilitypatterns/rup_tester_E8F821D1.html", 
+	predecessors: "", info: "主执行者", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "99f7e35c", parentId: "dd9ad4a0", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_shqGsEohEdqrjq4i3fchvA,_shwNUEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_suite", title: "测试套件", url: "./../../core.base_rup/capabilitypatterns/rup_test_suite_3D31FFB3.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "fdace402", parentId: "dd9ad4a0", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_shqGsEohEdqrjq4i3fchvA,_ryALY0ohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_build", title: "工作版本", url: "./../../core.base_rup/capabilitypatterns/rup_build_89B4E980.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "36e81776", parentId: "dd9ad4a0", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_shqGsEohEdqrjq4i3fchvA,_shwNU0ohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_iteration_plan", title: "迭代计划", url: "./../../core.base_rup/capabilitypatterns/rup_iteration_plan_9F42C99E.html", 
+	predecessors: "", info: "可选输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "f5bb59b8", parentId: "dd9ad4a0", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_shqGsEohEdqrjq4i3fchvA,_ryALYkohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_development_infrastructure", title: "开发基础结构", url: "./../../core.base_rup/capabilitypatterns/rup_development_infrastructure_20DB13BB.html", 
+	predecessors: "", info: "可选输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "980d0696", parentId: "dd9ad4a0", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_shqGsEohEdqrjq4i3fchvA,_shwNVEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_log", title: "测试日志", url: "./../../core.base_rup/capabilitypatterns/rup_test_log_1C3E1D2.html", 
+	predecessors: "", info: "输出", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "44cf0f1a", parentId: "d9e85818", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_vqUgwEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "12", prefix: "", name: "determine_test_results", title: "确定测试结果", url: "./../../core.base_rup/capabilitypatterns/determine_test_results_AFA8EC72.html", 
+	predecessors: "", info: "", type: "任务", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true]},
+
+{id: "96b23490", parentId: "44cf0f1a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_vqUgwEohEdqrjq4i3fchvA,_CTae4Ri2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_analyst", title: "测试分析人员", url: "./../../core.base_rup/capabilitypatterns/rup_test_analyst_563F95C8.html", 
+	predecessors: "", info: "主执行者", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "4bbfce16", parentId: "44cf0f1a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_vqUgwEohEdqrjq4i3fchvA,_CSvwhBi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_strategy", title: "测试策略", url: "./../../core.base_rup/capabilitypatterns/rup_test_strategy_A2EC23E0.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "72c95ba8", parentId: "44cf0f1a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_vqUgwEohEdqrjq4i3fchvA,_CSvwgxi2Edq_uI8xTPML6g", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_ideas_list", title: "测试构想列表", url: "./../../core.base_rup/capabilitypatterns/rup_test_ideas_list_E22F15F7.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "62b28484", parentId: "44cf0f1a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_vqUgwEohEdqrjq4i3fchvA,_shwNVEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_log", title: "测试日志", url: "./../../core.base_rup/capabilitypatterns/rup_test_log_1C3E1D2.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "7dc946b0", parentId: "44cf0f1a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_vqUgwEohEdqrjq4i3fchvA,_vqguAUohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_results", title: "测试结果 ", url: "./../../core.base_rup/capabilitypatterns/rup_test_results_CC338534.html", 
+	predecessors: "", info: "输出", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "91809904", parentId: "44cf0f1a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_vqUgwEohEdqrjq4i3fchvA,_vqguAEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_evaluation_summary", title: "测试评估摘要", url: "./../../core.base_rup/capabilitypatterns/rup_test_evaluation_summary_C195A524.html", 
+	predecessors: "", info: "输出", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "434abc3a", parentId: "d9e85818", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_wwmzYEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 1, hasChildren:true, 
+	index: "13", prefix: "", name: "assess_advocate_quality", title: "评估并提倡质量", url: "./../../core.base_rup/capabilitypatterns/assess_advocate_quality_737D42B0.html", 
+	predecessors: "", info: "", type: "任务", 
+	repeatable: "false", multiOccurences: "false", optional: "false", planned: "false",  ongoing: "false", eventDriven: "false", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: [true,true,true,true,true,true,true,true,true,true]},
+
+{id: "271c1f8e", parentId: "434abc3a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_wwmzYEohEdqrjq4i3fchvA,_L1Uw8EhAEdqAs8TVPqW_sw", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_manager", title: "测试管理员", url: "./../../core.base_rup/capabilitypatterns/rup_test_manager_6B835BAF.html", 
+	predecessors: "", info: "主执行者", type: "角色", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "5c8c8850", parentId: "434abc3a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_wwmzYEohEdqrjq4i3fchvA,_vqguAEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_evaluation_summary", title: "测试评估摘要", url: "./../../core.base_rup/capabilitypatterns/rup_test_evaluation_summary_C195A524.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "dd987aa0", parentId: "434abc3a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_wwmzYEohEdqrjq4i3fchvA,_shwNU0ohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_iteration_plan", title: "迭代计划", url: "./../../core.base_rup/capabilitypatterns/rup_iteration_plan_9F42C99E.html", 
+	predecessors: "", info: "必需输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "47151f98", parentId: "434abc3a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_wwmzYEohEdqrjq4i3fchvA,_vqguAUohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_results", title: "测试结果 ", url: "./../../core.base_rup/capabilitypatterns/rup_test_results_CC338534.html", 
+	predecessors: "", info: "可选输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "c9ea45fe", parentId: "434abc3a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_wwmzYEohEdqrjq4i3fchvA,_ww5HQEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_risk_list", title: "风险列表", url: "./../../core.base_rup/capabilitypatterns/rup_risk_list_7840353E.html", 
+	predecessors: "", info: "可选输入", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+{id: "a83a0eb8", parentId: "434abc3a", relPath: ",_6oxHwEdiEdqVZeSWHJlGyA,_wwmzYEohEdqrjq4i3fchvA,_vqguAEohEdqrjq4i3fchvA", isSuppressed: "", indentSize: 2, hasChildren:false, 
+	index: "", prefix: "", name: "rup_test_evaluation_summary", title: "测试评估摘要", url: "./../../core.base_rup/capabilitypatterns/rup_test_evaluation_summary_C195A524.html", 
+	predecessors: "", info: "输出", type: "工作产品", 
+	repeatable: "", multiOccurences: "false", optional: "false", planned: "true",  ongoing: "", eventDriven: "", 
+	team: "", entryState: "", exitState: "", deliverable: "", variabilityType: "",
+	steps: []},
+
+]};
+				</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script type="text/javascript" language="JavaScript">
+				contentPage.onload();
+			</script>
+</html>

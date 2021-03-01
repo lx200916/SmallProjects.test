@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: Unified Method Architecture（UMA）主要功能</title>
+<meta content="Concept" name="uma.type">
+<meta content="introduction_to_uma" name="uma.name">
+<meta content="Unified Method Architecture（UMA）主要功能" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "_uDU1oASEEdq61bDkWg1SXw", "_94_eoO8LEdmKSqa_gSYthg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "_uDU1oASEEdq61bDkWg1SXw", "_94_eoO8LEdmKSqa_gSYthg"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "_94_eoO8LEdmKSqa_gSYthg"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="_94_eoO8LEdmKSqa_gSYthg"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：Unified Method Architecture（UMA）主要功能</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/concept.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">Unified Method Architecture（UMA）是一个流程工程元模型，它定义用于表示由方法内容和流程组成的方法的模式和术语。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><p>
+    开发 Unified Method Architecture（UMA）元模型的目的是统一不同方法和流程工程语言（例如，为软件流程工程对 UML 的 SPEM 扩展、用于 RUP v2003 的语言、Unified Process、IBM
+    Global Services Method 以及 IBM Rational Summit
+    Ascendant）。同样地，它提供来自所有这些源模型的概念和功能并以一致的方式统一这些概念和功能，但是它仍然允许通过每个这些源方法的特定特征来表示每个这些源方法。此概念使您能够大致了解 UMA 功能。
+</p>
+<h4>
+    方法内容和流程的分离
+</h4>
+<p>
+    UMA 清楚地将方法内容定义和它在流程中的应用分离开。这是通过分别定义以下对象来实现的：
+</p>
+<ul>
+    <li>
+        以常规内容描述的形式定义可复用的核心方法内容，例如角色、任务、工作产品和指导信息
+    </li>
+    <li>
+        以引用方法内容的流程描述的形式定义上下文中特定于项目类型的方法内容应用
+    </li>
+</ul>
+<p>
+    方法内容分步骤地说明如何实现特定开发目标而不管这些步骤在开发生命周期中处于什么位置。流程采用这些方法内容元素，并以可为特定项目类型定制的顺序来组织这些方法内容元素。例如，从头开始开发应用程序的软件开发项目执行开发步骤，这些步骤与扩展现有软件系统的项目类似。但是，虽然这两个项目执行的步骤类似，但是执行的时间点和强调的内容将不同，并且步骤可能还会有个体的变化。
+</p>
+<h4>
+    内容复用
+</h4>
+<p>
+    UMA 允许每个流程从公共方法内容池引用公共方法内容。由于这些引用，方法内容中的更改将自动反映在所有使用该方法内容的流程中。但是，UMA
+    仍然允许覆盖流程中某些与方法相关的内容，并允许为每个进程元素定义单个特定于流程的关系（例如，向任务补充添加输入工作产品、重命名角色或除去不应从某任务执行的步骤）。
+</p>
+<h4>
+    流程系列
+</h4>
+<p>
+    UMA 的目标是不仅可支持一个特定开发流程的说明或支持若干不相关流程的维护，还可为流程工程师提供工具集，来一致并有效地管理相关流程的整个系列。UMA
+    通过定义能力模式和交付流程的概念以及这些流程类型之间的特定复用关系来实现此目标。这些概念允许流程工程师维护各种系列的一致交付流程（可以是特定于项目类型的交付流程以及从相同基本方法内容和能力模式变化而来的交付流程）。
+    结果是通过动态复用相同方法内容和模式构建不同特定流程，但对这些流程应用不同的详细和缩放级别；例如，流程根据开发项目的规模大小发生变化。
+</p>
+<h4>
+    多个生命周期
+</h4>
+<p>
+    常规方法体系结构必须支持不同的变化，甚至支持流程定义的生命周期模型组合。这些包括瀑布式、迭代、递增和演进等。UMA
+    元模型设计为支持多种方法。它提供丰富的概念和定制属性来指定流程元素的时间语义（例如，阶段、迭代、依赖关系、正在进行或事件驱动的工作等）。
+</p>
+<h4>
+    灵活的扩展性和插件机制
+</h4>
+<p>
+    UMA 的方法插件能够以独特的方式定制方法内容和流程而无需直接修改原始内容。它们而是只描述了与原始内容相对的差异（称为添加和替换的补充）。此插件概念使用户能够轻松地升级到较新版本的方法内容而不会丢失他们的定制。
+</p>
+<h4>
+    多流程“视图”
+</h4>
+<p>
+    UMA 根据流程来定义多个一致维护的视图。 这些视图允许流程工程师根据他们的个人偏好来进行流程编写。 流程工程师可选择在着重以下任何方面的前提下定义流程：
+</p>
+<ul>
+    <li>
+        工作分解 － 这是以工作为中心的视图，它定义与特定高级别活动关联的任务
+    </li>
+    <li>
+        工作产品使用 － 这是基于结果的视图，它定义位于流程中各个点的特定可交付件和工件的状态
+    </li>
+    <li>
+        团队分配 － 这是基于职责的视图，它定义所需的角色和角色的工作产品职责
+    </li>
+</ul>
+<p>
+    UMA 提供所有这些视图之间的一致性，因为这些视图都基于一个集成的对象结构。 一个视图中的更改将立即反映在其他视图中。
+</p>
+<h4>
+    可复用的流程模式
+</h4>
+<p>
+    UMA 的能力模式是可复用的构建块，可用来创建新的开发流程。通过以下两个方式可灵活地选择和应用能力模式：
+</p>
+<ul>
+    <li>
+        可通过完善的复制和修改操作应用模式，这允许流程工程师在模式应用期间单个地定制模式的内容以满足他的需要。
+    </li>
+    <li>
+        可通过动态绑定来应用模式。此独特的复用流程知识新方式允许将经常再现的活动包含在模式中，然后这些模式可在流程中反复应用。 当修改或更新模式时，所有更改将自动反映在应用了该模式的所有流程中。
+    </li>
+</ul></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2005&nbsp;All Rights Reserved
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

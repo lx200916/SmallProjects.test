@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>概念: 可用性设计</title>
+<meta content="Concept" name="uma.type">
+<meta content="usability_engineering" name="uma.name">
+<meta content="可用性设计" name="uma.presentationName">
+<meta name="element_type" content="concept">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:3.2329841703462285E-305", path: ["3.2329841703462285E-305", "1.8262162566452063E-305", "2.354668950481405E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "3.2329841703462285E-305", "1.8262162566452063E-305", "2.354668950481405E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_vzRNgDIcEdqDs_9ORT1Rig", "2.354668950481405E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="2.354668950481405E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">概念：可用性设计</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../core.base_rup/guidances/concepts/resources/road_lg_dgm32.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">本指南讨论了可用性设计。可用性设计（也称为“以用户为中心的设计”）的全部内容就是构建更好的系统，这是通过更好地了解最终用户并让用户参与需求、用户界面设计和测试工作来实现的。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a><a id="XE_usability_engineering__walkthrough_concept_for" name="XE_usability_engineering__walkthrough_concept_for" class="index" key="可用性设计（usability engineering）" text="预评估概念"></a>
+
+<h5>
+    <b>概念：</b>
+</h5>
+<ul>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/user-centered_design_3BE14873.html" guid="9.505306299650132E-305">以用户为中心的设计</a>
+    </li>
+    <li>
+        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/usability_testing_EA14CC80.html" guid="2.3731649174885136E-305">可用性测试</a>
+    </li>
+</ul><br />
+<h1>
+    <a id="Introduction" name="Introduction">简介</a>
+</h1>
+<p>
+    可用性设计（也称为“以用户为中心的设计”）的全部内容就是构建更好的系统，这是通过更好地了解用户并让用户参与需求、用户界面设计和测试工作来实现的。基本概念在<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/user-centered_design_3BE14873.html" guid="9.505306299650132E-305">概念：以用户为中心的设计</a>中有所描述，用户应先理解基本概念，然后理解此概念。此概念页面说明了 Rational Unified
+    Process（RUP）目前如何处理可用性设计技术。
+</p>
+<h1>
+    <a id="roles" name="roles">角色</a>
+</h1>
+<p>
+    RUP 有许多角色在负责可用性问题。<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_system_analyst_C3C9C9AC.html" guid="{F1F206DF-3AA0-4AC0-92EF-8E4A01B6C5B5}">系统分析员</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_requirement_specifier_A2500152.html" guid="{7264A534-7509-4B4B-AF73-CAECC0178898}">需求指定者</a>必须能熟练收集和分析关于用户、用户任务、环境的信息，并且能够熟练地在需求中记录这些信息。此材料由<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_technical_reviewer_81F699C8.html" guid="{0319C70C-35C9-4190-94F0-E7E5E9216CA0}">需求复审员</a>进行复审。<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_tester_8ADFF3FA.html" guid="{A719CEAE-35FB-42F6-A076-F501B83E5B85}">测试人员</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_test_analyst_4637F9F0.html" guid="{8728060F-9DAD-42AD-B0B6-668C9AEA531D}">测试分析人员</a>角色主要负责可用性测试。 <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_user_interface_designer_5C1ECFC9.html" guid="{0F994CCE-2B28-414A-9D31-DA23C13B95D4}">用户界面设计员</a>负责用户界面的设计和“可视成形”。<a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_implementer_D145E819.html" guid="{75501BAA-0CCE-4852-A7B2-B10CA71C002A}">实施者</a>选择和／或开发用户界面组件来构造可正常使用的用户界面。
+</p>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/roles/rup_project_manager_363CE680.html" guid="{EE97A8CD-66CA-4A9B-9871-E3B94CCED528}">项目经理</a>也具有关键角色。他／她使用户能参与开发流程，并确保开发组织配备的人员具备构建可用系统所需的技能。其他角色，如<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{9659DFD7-2A22-45D4-B2CE-EF99788E9497}">部署管理员</a>、<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{BC76E16E-C63B-4195-9BEF-4BCFF01EED76}">课程开发人员</a>和<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{DB243660-A480-47E5-B082-F3F8222B7A18}">技术文档编写者</a>也负责确保已部署的系统是可用的。
+</p>
+<h1>
+    <a id="disciplines" name="disciplines">规程</a>
+</h1>
+<p>
+    以下各节根据对可用性而言最重要的活动和工件来描述 RUP 规程。
+</p>
+<h2>
+    <a id="requirements" name="requirements">需求</a>
+</h2>
+<p>
+    从可用性的角度来看，需求规程注重于：
+</p>
+<ul>
+    <li>
+        了解用户及其需要
+    </li>
+    <li>
+        确定对用户最有益的用例。
+    </li>
+</ul>
+<p>
+    具体活动和工件如下。
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th width="15%">
+                    活动
+                </th>
+                <th width="15%">
+                    工件
+                </th>
+                <th width="70%">
+                    可用性相关内容
+                </th>
+            </tr>
+            <tr>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/elicit_stakeholder_requests_97BE5D6E.html" guid="{EAEF65F0-E9CA-45B2-A875-47E66B3FDBC6}">引发项目干系人请求</a>
+                </td>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_stakeholder_requests_A89D2BF9.html" guid="{75F38765-E25B-4459-907E-77F429652C0F}">项目干系人请求</a>
+                </td>
+                <td width="70%">
+                    <p>
+                        此活动包括会见用户、问卷调查和召开研讨会，以更好地了解用户和用户环境。这包括以下内容：
+                    </p>
+                    <ul>
+                        <li>
+                            <img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="1.0514775527417595E-305">评估研讨会</a>
+                        </li>
+                        <li>
+                            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/requirements_workshop_EEF2B469.html" guid="4.234130639739827E-305">需求研讨会</a>
+                        </li>
+                        <li>
+                            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/interviews_8E4192DD.html" guid="1.4493688086564513E-305">访谈</a>
+                        </li>
+                        <li>
+                            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/brainstorming_and_idea_reduction_73112962.html" guid="1.2379282201043798E-305">集体讨论和想法精简</a>
+                        </li>
+                        <li>
+                            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/storyboarding_AD2F0C54.html" guid="8.377275022793495E-305">演示图板</a>
+                        </li>
+                        <li>
+                            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/role_playing_18BB3ABF.html" guid="2.582376960557169E-305">角色扮演</a>
+                        </li>
+                        <li>
+                            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/review_existing_requirements_BB763922.html" guid="3.5793465383769964E-306">复审现有需求</a>
+                        </li>
+                    </ul>
+                    <p>
+                        工件：项目干系人请求的模板记录详细的用户概要信息，包括教育背景、计算机背景、经验、现有环境、期望和目标等等。它也从用户角度记录问题和优先级的描述。 项目干系人请求是用以编写<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_vision_2D6D6F1.html" guid="{417F089F-6636-451A-A8AB-AB4EAC7AC4F1}">远景</a>的原始资料。
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/develop_vision_D9584F04.html" guid="{7069CFB7-77C3-4B44-B8A2-9CCA752BDDDA}">制定远景</a>
+                </td>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_vision_2D6D6F1.html" guid="{417F089F-6636-451A-A8AB-AB4EAC7AC4F1}">远景</a>
+                </td>
+                <td width="70%">
+                    <p>
+                        远景模板的用户环境部分描述用户的工作环境，即 ISO 所称的环境上下文 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">ISO
+                        13407</a>]。
+                    </p>
+                    <p>
+                        远景模板的用户概要信息部分描述用户的专门技术、技术背景、职责、成功条件和可交付件等。这是 ISO 所称的用户上下文 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">ISO
+                        13407</a>] 。
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/find_actors_and_use_cases_1ACB35F0.html" guid="{3CD5FA7E-160C-4A39-9DEB-C6D162D8AECD}">查找参与者和用例</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/structure_use_case_model_93D8F44.html" guid="{F7D9D038-B184-43CC-9353-15BA154F87B5}">构造用例模型</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/detail_a_use_case_D9BECBF4.html" guid="{536BC669-A8FB-426D-88FF-CBEA806A9066}">详细描述用例</a>
+                </td>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">用例模型</a>
+                </td>
+                <td width="70%">
+                    <p>
+                        用例模型描述用户（参与人员）所执行的任务（用例）。它使用<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/actor-generalization_2AFC6BE3.html" guid="2.144844789747145E-305">泛化</a>关系获取参与者之间的相似性和关系。参与者通过这种关系与用例相关，这类似于 Constantine 的“角色模型”[<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">CON99</a>]。用例得以构造，并通过<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/communicate-association_21DF0DFB.html" guid="4.1665593852713E-305">通信关联</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/include-relationship_5AE2718.html" guid="7.259881398615376E-305">包含</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_generalization_B301F53B.html" guid="3.7061366529594173E-305">泛化</a>和<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/extend-relationship_EF38D814.html" guid="3.679940320411645E-305">扩展</a>关系相互相关，以及与参与者相关。
+                    </p>
+                    <p>
+                        研讨会是让用户参与的极佳方式。请参阅：<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case_workshop_8ED2F80B.html" guid="8.18300315488657E-305">用例研讨会</a>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">
+                    &nbsp;
+                </td>
+                <td width="15%">
+                    <blockquote>
+                        <p>
+                            <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_actor_1F9CE9.html" guid="{0EEBBA43-F5C6-4594-9F06-65D99F7556DF}">参与者</a>
+                        </p>
+                    </blockquote>
+                </td>
+                <td width="70%">
+                    <p>
+                        参与人员的特征是作为参与者的属性来捕获的。这些特征包括：
+                    </p>
+                    <ul>
+                        <li>
+                            参与者的职责范围。
+                        </li>
+                        <li>
+                            参与者使用系统时所处的实际环境。
+                        </li>
+                        <li>
+                            此参与者所表示的用户的数量。
+                        </li>
+                        <li>
+                            参与者使用系统的频率。
+                        </li>
+                        <li>
+                            参与者的领域知识水平。
+                        </li>
+                        <li>
+                            参与者的一般计算机经验水平。
+                        </li>
+                        <li>
+                            参与者的一般特征，如专业技术（教育）水平、社会关系（语言）和年龄。
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">
+                    &nbsp;
+                </td>
+                <td width="15%">
+                    <blockquote>
+                        <p>
+                            <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>
+                        </p>
+                    </blockquote>
+                </td>
+                <td width="70%">
+                    这些可包括 Constantine [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">CON99</a>] 中所述的基本用例（有关基本用例的讨论，请参阅（<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/user-centered_design_3BE14873.html" guid="9.505306299650132E-305">概念：以用户为中心的设计</a>&nbsp;）。给定用例的特定可用性需求可作为“特殊需求”记录在用例规范中。
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/detail_software_requirements_A7F0A215.html" guid="{A1FA1E95-8028-42EB-9B92-0DA77380F3E1}">详细描述软件需求</a>
+                </td>
+                <td width="15%">
+                    <p>
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>
+                    </p>
+                </td>
+                <td width="70%">
+                    补充规范记录用例中未指定的需求。这包括可能与可用性密切相关的可用性和性能需求。在此记录适用于多个用例的一般可用性需求，以及适用的法规和可用性标准（有关可用性法规和标准的详细信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/user-centered_design_3BE14873.html" guid="9.505306299650132E-305">概念：以用户为中心的设计</a>）。
+                </td>
+            </tr>
+            <tr>
+                <td width="14%">
+                    <img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{7F42C4D6-584F-4B19-9B0B-FDE86BD85FBB}">管理依赖关系</a>
+                </td>
+                <td width="6%">
+                    <img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{D0E2E7A1-4179-470E-AA18-419D5FEA275D}">需求属性</a>
+                </td>
+                <td width="75%">
+                    由于“发现”了用例和可用性需求，故应注意它们的重要性或好处。 这需要与用户和其他项目干系人进行协商。其他属性（如用例执行频率）也可记录在此工件中。
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="15%" height="37">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/review_requirements_5DF661FE.html" guid="{FEC5ED66-F467-4BD5-AB11-B300E101DB9B}">复审需求</a>
+                </td>
+                <td valign="top" width="15%" height="37">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_change_request_F2E6419.html" guid="{694A7BC8-3D20-4172-BC56-6C7BD4590BA5}">变更请求</a>
+                </td>
+                <td valign="top" width="70%" height="37">
+                    以用户为中心的开发工作使尽可能多的用户参与所有需求复审。
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="15%" height="81">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/capture_common_vocabulary_9BA76DA7.html" guid="{962AC6BA-4ACA-4D7D-B56F-24558A026854}">获取通用词汇表</a>
+                </td>
+                <td valign="top" width="15%" height="81">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_glossary_A5D79A0C.html" guid="{3BF8CC04-9101-47A4-9473-C8205EA588B6}">词汇表</a>
+                </td>
+                <td valign="top" width="70%" height="81">
+                    获取特定于用户领域的常用词汇表术语，促进用户与开发团队其余成员之间的交流和理解。
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p>
+    除了上述需求活动外，其他的一些技术可能也有用。
+</p>
+<div style="MARGIN-LEFT: 2em">
+    <ul>
+        <li>
+            绘制亲和关系图 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">HOL96</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">BEY98</a>]
+            是一种技术，其中所收集的关于用户及其任务的每一信息片段都放在便笺上。用户和分析人员协同将相关记录收集到概念组或“亲和关系”中。这项活动有助于促进对问题、其相对重要性及其关系的共同理解。
+        </li>
+        <li>
+            卡片分类 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">CON99</a>] 是一项类似的活动，其中索引卡上的信息是分为几个组的。卡片还可按重要性、频率等分类。
+        </li>
+        <li>
+            分层任务建模 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">MAY99</a>、<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">CON99</a>]
+            分析由用户当前执行的任务，并将它们组织到某一层次结构中。该层次结构应反映用户目前是如何理解其任务的组织的。
+        </li>
+    </ul>
+</div>
+<h2>
+    <a id="analysis_and_design" name="analysis_and_design">分析与设计</a>
+</h2>
+<p>
+    此规程中的许多其他活动均注重用户界面的成形和设计。它们是：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="15%">
+                    <div align="center">
+                        <b>活动</b>
+                    </div>
+                </th>
+                <th scope="col" width="15%">
+                    <p align="center">
+                        <b>工件</b>
+                    </p>
+                </th>
+                <th scope="col" width="70%">
+                    <p align="center">
+                        <b>可用性相关内容</b>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/design_user_interface_DAABE09F.html" guid="{7414C358-6188-4E5C-8C35-F9D4DF3E0123}">设计用户界面</a><br />
+                </td>
+                <td width="15%">
+                    <p>
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_storyboard_33EEA89E.html" guid="{77F6A9E0-5650-40BA-BC60-3C53235CDEF5}">故事板</a>
+                    </p>
+                    <p>
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_navmap_73AF74E2.html" guid="{351D0945-8FD3-458D-B514-E25E3B445264}">导航图</a>
+                    </p>
+                </td>
+                <td width="70%">
+                    <p>
+                        此项活动创建通常所称的概念设计 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">FER01</a>]。这是用户界面自身的初始抽象，获取呈现给用户的主窗口和导航路径。这项活动注重于推动用户界面设计的用例。
+                    </p>
+                    <p>
+                        导航图（请参阅 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">CON99</a>]）概述了交互空间（屏幕、窗口和对话框）之间的导航路径。
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/prototype_user_interface_C495CB55.html" guid="{76F14467-3F63-4B22-B672-6EA69D0E6C46}">制作用户界面原型</a>
+                </td>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_user_interface_prototype_7237E5AA.html" guid="{3DF10D00-8C80-4429-92B8-C6A221F0F90C}">用户界面原型</a>
+                </td>
+                <td width="70%">
+                    <p>
+                        可以制作三种基本原型：
+                    </p>
+                    <p>
+                        绘图（在纸上）<br />
+                         位图（绘图工具）<br />
+                         可执行原型（交互式）<br />
+                         在大多数项目中，应按上面列出的顺序使用所有三种原型。
+                    </p>
+                    <p>
+                        创建用户界面原型主要是为了能够在实际设计和开发工作开始之前展示和测试系统的功能性和可用性。这样，可以确保您正在构建正确的系统，以免在开发上花过多时间和资源。
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<p>
+    作为设计用户界面的一部分，以下技术可能也是有用的：
+</p>
+<div style="MARGIN-LEFT: 2em">
+    <ul>
+        <li>
+            之前描述的卡片分类 [<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/references_56F06DFD.html" guid="7.755968586980351E-308">CON99</a>] 对于设计用户界面也是有用的。每个菜单项或内容项均由一张卡片表示，然后用户将卡片组织到各逻辑分组中。
+        </li>
+    </ul>
+</div>
+<p>
+    除了上述活动外，以下分析与设计活动是对用户界面设计的补充：
+</p>
+<div align="center">
+    <table     style="BORDER-RIGHT: rgb(128,128,128) 1px solid; BORDER-TOP: rgb(128,128,128) 1px solid; BORDER-LEFT: rgb(128,128,128) 1px solid; BORDER-BOTTOM: rgb(128,128,128) 1px solid"      cellspacing="0" bordercolordark="#808080" cellpadding="4" width="85%" bordercolorlight="#808080" border="1">
+        <tbody>
+            <tr>
+                <th scope="col" width="15%">
+                    <div align="center">
+                        <b>活动</b>
+                    </div>
+                </th>
+                <th scope="col" width="15%">
+                    <p align="center">
+                        <b>工件</b>
+                    </p>
+                </th>
+                <th scope="col" width="70%">
+                    <p align="center">
+                        <b>可用性相关内容</b>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/use_case_analysis_A6990185.html" guid="{28014615-A62F-452D-B821-30C7CAB0EC44}">用例分析</a>
+                </td>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_analysis_class_DAF7CE03.html" guid="{1E20603F-A5B8-42D5-BDBC-69DCE9C0FCDB}">分析类</a>、<br />
+                     <a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_use_case_realization_E4F713BD.html" guid="{87EB094F-095B-4981-ACC3-319B3B298641}">用例实现</a>
+                </td>
+                <td width="70%">
+                    <p>
+                        另请参阅以下内容：
+                    </p>
+                    <ul>
+                        <li>
+                            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use-case-analysis_workshop_B07C9D03.html" guid="4.6416720607434916E-306">指南：用例分析研讨会</a>
+                        </li>
+                        <li>
+                            <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/representing_graphical_user-interfaces_364834.html" guid="1.9267995424810726E-305">概念：表示图形用户界面</a><br />
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">
+                    <a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/class_design_98F20FF9.html" guid="{27AE0601-2E95-4A6A-8EB3-0A4BA8E5626B}">类设计</a><br />
+                </td>
+                <td width="15%">
+                    <br />
+                </td>
+                <td width="70%">
+                    <p>
+                        这项活动使用了设计用户界面和制作其原型的结果，并设计类。不同于原型，这不是一次性概念的用户界面工作，而是旨在表示所提供系统的设计。
+                    </p>
+                    <p>
+                        另请参阅以下指南：<br />
+                    </p>
+                    <p>
+                        <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/building_web_applications_with_the_uml_922EDDA8.html" guid="4.559124609104376E-305">指南：用 UML 构建 Web 应用程序</a>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table><br />
+</div>
+<h2>
+    <a id="implementation" name="implementation">实施</a>
+</h2>
+<p>
+    用户界面的实施遵循一般的实施工作流程。请注意，用户界面的实施通常是作为设计活动的一部分来进行的。
+</p>
+<h2>
+    <a id="test" name="test">测试</a>
+</h2>
+<p>
+    只要有用户界面的模式或可执行原型，就应立即启动<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/usability_testing_EA14CC80.html" guid="2.3731649174885136E-305">可用性测试</a>，包括与可用性有关的<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="8.027577129450698E-306">性能测试</a>。测试应包括验证可用性和记录在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>中，或作为“特殊需求” 记录在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>中的性能需求。
+</p>
+<h2>
+    <a id="deployment" name="deployment">部署</a>
+</h2>
+<p>
+    用户应着重参与<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{293A215D-E3D2-47D9-9A2E-89431862EFDA}">活动：Beta 测试产品</a>及<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="_tASIQDK7EdqseP6pgOfC6g">活动：管理验收测试</a>期间最终的<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/usability_testing_EA14CC80.html" guid="2.3731649174885136E-305">可用性测试</a>。
+</p>
+<p>
+    <img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{3124AE63-F6A4-48E9-A517-E484845B9F09}">活动：制定支持材料</a>包括制定培训材料和系统支持材料，以确保用户可顺利使用所交付的软件产品。
+</p>
+<h2>
+    <a id="deployment" name="deployment">项目管理</a>
+</h2>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/project_management_FC6669AF.html" guid="{EA0C1D32-E39A-4D96-B956-E178DB776A96}">项目管理</a>是一门艺术，它平衡各种竞争的目标、管理风险、并克服约束而成功提供符合客户（帐单支付者）和用户需要的产品。从可用性设计的角度来看，最关键的活动是<a class="elementLinkWithUserText" href="./../../../core.base_rup/tasks/define_project_organization_and_staffing_490679CB.html" guid="{8158A0C5-E4B3-4B9F-9DD6-0A32EB233B87}">任务：定义项目组织和人员配备</a>。这项活动定义了组织结构、外部界面以及角色和职责。这包括定义用户将在多大程度上参与开发流程，以及确定开发人员是否应具备可用性设计方法的经验。
+</p>
+<h2>
+    <a id="deployment" name="deployment">环境</a>
+</h2>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/capabilitypatterns/environment_88B1B954.html" guid="{659D51DD-DF1F-465E-9F3A-2FC6F9BC7C34}">环境规程</a>包括项目或组织将要遵循的开发流程的定义。<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{F6999E01-701F-4D48-9E83-A063CB35912B}">任务：制定开发案例</a>（<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{F071C3D3-7054-457F-8A81-EFA6678CCDE1}">工作产品：开发案例</a>）定义将要应用的可用性设计技术，以及将如何定制各种 RUP 工件和活动来包容这些技术。
+</p>
+<p>
+    另一项重要活动是<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{1E706674-C1E7-4F8D-BF06-35FFE49C5E42}">任务：制定特定于项目的指南</a>， 该任务创建的<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">工作产品：项目指南</a>包含了用户界面指南。这些指南有助于确保用户界面的一致性，这会对可用性大有帮助。它们还包括要遵循的可用性原则，如关于快捷方式、“撤消”功能、可识别出口和无模式交互等的指南。
+</p>
+<h1>
+    <a id="phases" name="phases">迭代开发和阶段</a>
+</h1>
+<p>
+    RUP 的软件生命周期在时间上分为四个连续的阶段，每个阶段以一个主要里程碑结束；每个阶段基本上是两个主要里程碑之间的时间段。在每个阶段结束时需要执行评估（<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E611CCFD-E4C5-408E-9B0E-46B2A3D01290}">任务：生命周期里程碑复审</a>），以确定是否已达到阶段的目标。如果评估令人满意，则允许项目进入下一个阶段。
+</p>
+<p>
+    每个阶段中都可能有若干个迭代。迭代是完整的开发循环，生成的是可执行产品的发行版（内部或外部），这是开发中的最终产品的一部分，会通过一次次的迭代逐渐发展为最终系统。可用性由此迭代方法大为受益。它可使用户提供关于可用性的早期反馈，并避免朝着完全不符合用户需要的道路走得太远。
+</p>
+<p>
+    用户应参与每一次迭代，以进一步优化需求、评估设计概念以及测试／评估概念证明原型和发展中系统的可用性。
+</p>
+<p>
+    以下各节描述可用性相关阶段的完成条件和每个阶段的主要活动。
+</p>
+<h2>
+    <a id="Inception" name="Inception">先启</a>
+</h2>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/inception_D506BCB4.html" guid="_vyZOwCVuEdqSZ9OimJ-AzA">先启阶段</a>的两个关键目标是<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/inception_D506BCB4.html" guid="_vyZOwCVuEdqSZ9OimJ-AzA">先启</a>：
+</p>
+<ul>
+    <li>
+        确立项目的软件范围和边界条件，包括操作远景、验收条件以及产品中计划和不计划包含的内容。
+    </li>
+    <li>
+        区别对待系统关键用例和将推动主要设计权衡因素的主要操作场景。
+    </li>
+</ul>
+<p>
+    从可用性设计角度来看，这意味着强调与需求和业务建模（若已执行）相关的活动：
+</p>
+<ul>
+    <li>
+        了解用户及其需要
+    </li>
+    <li>
+        确定对用户最有益的用例。
+    </li>
+</ul>
+<p>
+    在<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/inception_D506BCB4.html" guid="_vyZOwCVuEdqSZ9OimJ-AzA">先启阶段</a>，常常还探索某种概念性设计和制作“概念证明”原型。当主要项目风险与用户界面和可用性问题相关时，尤其如此。只要有用户界面的模式或可执行原型，就应立即启动<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/usability_testing_EA14CC80.html" guid="2.3731649174885136E-305">可用性测试</a>，包括与可用性有关的<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="8.027577129450698E-306">性能测试</a>。
+</p>
+<h2>
+    <a id="Elaboration" name="Elaboration">精化</a>
+</h2>
+<p>
+    因为 RUP 是迭代流程，在先启阶段创建的工件由用户反复访问和复审，以控制范围和确保发展中系统符合用户需要。
+</p>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/elaboration_6A203A50.html" guid="_-kFhcCVuEdqSZ9OimJ-AzA">精化</a>中，注重的是<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/software_architecture_4269A354.html" guid="3.066252221588648E-305">软件体系结构</a> －
+    包括用户界面的体系结构。定义概念性用户界面，并实施用户界面设计的关键和／或风险元素。与软件体系结构相关的活动通常适用于用户界面 － 有必须评估的现成产品、重用注意事项以及机制和模式的选择等等。
+</p>
+<p>
+    此阶段强调用户界面设计活动，以及分析与设计规程中的支持活动。也涉及到实施和测试，因为完成精化则需要构造可评估的运行系统。
+</p>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/usability_testing_EA14CC80.html" guid="2.3731649174885136E-305">可用性测试</a>和可用性相关的<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="8.027577129450698E-306">性能测试</a>应注重在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_supplementary_specification_F5ACAA22.html" guid="{B16C2941-791C-44E6-B353-354109B5C9DE}">补充规范</a>中记录的或作为“特殊需求” 记录在<a class="elementLinkWithUserText" href="./../../../core.base_rup/workproducts/rup_usecase_A5D30E62.html" guid="{B1526BC5-E346-42CB-A08A-3C0D7F382407}">用例</a>中的任何风险需求。
+</p>
+<h2>
+    <a id="Construction" name="Construction">构造</a>
+</h2>
+<p>
+    在<a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/construction_102AF1EA.html" guid="_SkuIwCVwEdqSZ9OimJ-AzA">构造</a>阶段，注重的是实施更多用例。这包括对用户界面的补充，同时保持用户界面的概念性模型和在<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{E5501201-7EE6-4243-AE91-73880FF76FC1}">特定于项目的指南</a>中记录的用户界面指南正确。<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/concepts/usability_testing_EA14CC80.html" guid="2.3731649174885136E-305">可用性测试</a>在添加新功能时仍非常重要。
+</p>
+<p>
+    每个迭代中所放置功能的选择是以针对用户的价值为基础的。
+</p>
+<h2>
+    <a id="Transition" name="Transition">移交</a>
+</h2>
+<p>
+    <a class="elementLinkWithUserText" href="./../../../core.base_rup/customcategories/transition_1018F224.html" guid="_cn2akCVwEdqSZ9OimJ-AzA">移交阶段</a>的注重点开始转向<img alt="" src="./../../../images/no_rup.gif">&#160;<a class="elementLinkWithUserText" href="./../../../pages_not_installed/pages_not_installed.html" guid="{1A85DC2F-36E6-4D1C-ACF0-6658CE7108A0}">部署</a>规程。在以用户为中心的开发工作中，不应等到移交阶段才让用户参与。不过，继续让用户参与主要是为了提供反馈。当在整个开发过程中让用户参与时，正式的
+    beta 测试和验收测试常常会明显减到最少或不存在。相反，详细的用户反馈和核准意见会出现在整个开发工作中。
+</p>
+<p>
+    培训材料和系统支持材料的制定是在移交阶段完成的，但这项工作应尽可能在较早阶段开始，以得到用户反馈。
+</p>
+<p>
+    在移交阶段，存在可由用户使用的工作系统。在移交阶段至少计划几个迭代，这样就可以更正初始发行版中的问题并容纳关键用户反馈，这是个好主意。<br />
+</p></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>

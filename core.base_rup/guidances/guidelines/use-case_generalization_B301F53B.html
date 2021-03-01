@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="zh" xml:lang="zh">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>指南: 用例泛化关系</title>
+<meta content="Guideline" name="uma.type">
+<meta content="use-case_generalization" name="uma.name">
+<meta content="用例泛化关系" name="uma.presentationName">
+<meta name="element_type" content="other">
+<meta content="description" name="filetype">
+<meta name="role" content="">
+<link type="text/css" href="./../../../css/default.css" rel="StyleSheet">
+<script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageResource.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageSubSection.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/ContentPageToolbar.js"></script><script language="JavaScript" type="text/javascript" src="./../../../scripts/contentPage.js"></script><script language="JavaScript" type="text/javascript">
+					var backPath = './../../../';
+					var imgPath = './../../../images/';
+					var nodeInfo=[{view: "view:_LVCagP5WEdmAzesbYywanQ", path: ["_LVCagP5WEdmAzesbYywanQ", "_gpYSoAILEdq-_NKqZM1EhA", "_N13eYAINEdq-_NKqZM1EhA", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "3.7061366529594173E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_EOvXUN7HEdm8G6yT7-Wdqw", "_KVkLoN7HEdm8G6yT7-Wdqw", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "3.7061366529594173E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_Jvt1cAIaEdqEutyfYo0quQ", "_jijhYAIaEdqEutyfYo0quQ", "_mTMIkN7REdmjRZts2c4ZjQ", "{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}", "3.7061366529594173E-305"]}, {view: "view:_FCx1oN7CEdmsEI4YDGX2ag", path: ["_FCx1oN7CEdmsEI4YDGX2ag", "_jD8dUAIbEdqEutyfYo0quQ", "_2ClPcDIcEdqDs_9ORT1Rig", "3.7061366529594173E-305"]}];
+					contentPage.preload(imgPath, backPath, nodeInfo,  '', false, false, false);
+				</script>
+</head>
+<body>
+<div id="breadcrumbs"></div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td valign="top"><a name="Top"></a>
+<div id="page-guid" value="3.7061366529594173E-305"></div>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td nowrap="true" class="pageTitle">指南：用例泛化关系</td><td width="100%">
+<div id="contentPageToolbar" align="right"></div>
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr>
+<td class="pageTitleSeparator"><img height="1" title="" alt="" src="./../../../images/shim.gif"></td>
+</tr>
+</table>
+<div class="overview">
+<table cellpadding="0" cellspacing="0" border="0" width="97%">
+<tr>
+<td width="50"><img title="" alt="" src="./../../../images/guidance.gif"></td><td>
+<table cellpadding="0" cellspacing="0" border="0" class="overviewTable">
+<tr>
+<td valign="top">当发现有两个或多个用例在行为、结构和用途方面有共同点时，则使用泛化关系。本指南说明如何使用此关系。</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">关系</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<th scope="row" class="sectionTableHeading">相关元素</th><td class="sectionTableCell">
+<ul>
+<li>
+<a href="./../../../core.base_rup/tasks/structure_use_case_model_93D8F44.html" guid="{F7D9D038-B184-43CC-9353-15BA154F87B5}">构造用例模型</a>
+</li>
+<li>
+<a href="./../../../core.base_rup/workproducts/rup_usecase_model_EF15E534.html" guid="{9C66F2EC-EDEB-4369-9AFB-04B9E7CBCB8E}">用例模型</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="sectionHeading">主要描述</div>
+<div class="sectionContent">
+<table cellpadding="0" cellspacing="0" border="0" class="sectionTable">
+<tr valign="top">
+<td class="sectionTableSingleCell"><a id="Top" name="Top"></a> 
+<h3>
+    <a id="Explanation" name="Explanation">说明</a>
+</h3>
+<p>
+    父用例可以专门化化形成一个或多个子用例，这些子用例代表了父用例比较特殊的形式。
+    虽然多数情况下父用例是抽象的，但无论父用例或子用例都不一定是抽象的。子用例继承父用例的所有结构、行为和关系。同一个父用例的子用例是该父用例的所有专门情况。这就是适用于用例的泛化关系（关于应用于类的泛化关系概念的更多信息，请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/generalization_94751549.html" guid="1.839540980397304E-305">指南：泛化关系</a>）。
+</p>
+<p>
+    当发现有两个或多个用例在行为、结构和用途方面有共同点时，则使用泛化关系。 在这种情况下，可以在新的、通常抽象的用例中描述共享部分，然后该用例将专门化为子用例。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p align="center">
+    <img height="301" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/ucgen1.gif" width="259" />
+</p>
+<p class="picturetext">
+    用例“电话订单”和“因特网订单”是抽象用例“下订单”的具体情况。
+</p>
+<p class="example">
+    在订单管理系统中，用例“电话订单”和“因特网订单”在结构和行为方面有许多共同点。 通用用例“下订单”是在定义结构和通用行为的情况下定义的。抽象用例“下订单”本身不必完整，但它提供了可由子用例完成的通用行为框架。
+</p>
+<p>
+    父用例并不总是抽象的。
+</p>
+<p class="exampleheading">
+    示例：
+</p>
+<p class="example">
+    请考虑前述示例中的订单管理系统。说明：我们希望添加“订单注册职员”参与者，该参与者可以代表客户将订单输入系统。该参与者将发起通用的“下订单”用例，该用例现在必须具有所描述的完整事件流。子用例可以向父用例提供的结构添加行为，也可以修改父用例中的行为。
+</p>
+<p align="center">
+    <img height="306" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/ucgen2.gif" width="325" />
+</p>
+<p class="picturetext">
+    参与者“订单注册职员”可以使通用用例“下订单”实例化。用例“下订单”也可专门化为用例“电话订单”或“因特网订单”。
+</p>
+<p>
+    子用例依赖于父用例的结构（请参阅<a class="elementLinkWithUserText" href="./../../../core.base_rup/guidances/guidelines/use_case_CC89870D.html" guid="4.1983217662266927E-305">指南：用例</a>中关于事件流结构的讨论）。子用例可以通过将行为分段插入继承而来的行为中或通过声明子用例的包含关系和扩展关系，向父用例添加附加的行为。子用例可以修改从父用例处继承而来的行为分段（尽管修改时要小心，以保留父用例的意图）。子用例保留父用例的结构。这意味着描述为父用例事件流的步骤或子流的所有行为分段仍必须存在，但这些行为分段的内容可由子用例修改。
+</p>
+<p>
+    如果父用例是抽象用例，则它可能具有不完整的行为分段。这样，子用例就必须完成那些行为分段并使它们对参与者有意义。
+</p>
+<p>
+    如果父用例是抽象用例，则不需要与参与者有关系。
+</p>
+<p>
+    如果两个子用例对同一个父用例（或基本用例）专门化，且专门化是相互独立的，则表示这两个子用例是在单独的用例实例中执行的。这不像扩展关系或包含关系，在这两种关系中多个补充子用例显式或隐式地修改一个执行同一基本用例的用例实例。
+</p>
+<p>
+    用例泛化关系和包含关系都可用于模型中用例之间的行为重用。区别在于，对于用例泛化关系，子用例的执行取决于父用例（重用部分）的结构和行为，而在包含关系中，基本用例的执行只取决于包含用例（重用部分）所执行的功能的结果。另一区别在于，在泛化关系中，子用例的用途和结构是相似的，而在包含关系中，重用同一个包含用例的基本用例可能有完全不同的用途，但需要执行相同的功能。
+</p>
+<h3>
+    <a id="Executing the Use-Case-Generalization" name="Executing the Use-Case-Generalization">执行用例泛化关系</a>
+</h3>
+<p>
+    执行子用例的用例实例将遵循父用例的事件流，同时插入其他行为或修改在子用例事件流中定义的行为。
+</p>
+<p align="center">
+    <img height="240" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/ucgen3.gif" width="273" />
+</p>
+<p class="picturetext">
+    用例实例遵循父用例，按子用例中所述的那样插入或修改行为。
+</p>
+<h3>
+    <a id="Describing the Use-Case Generalization" name="Describing the Use-Case Generalization">描述用例泛化关系</a>
+</h3>
+<p>
+    在通常情况下，不描述泛化关系本身。相反，在子用例的事件流中，您将指定如何将新的步骤插入继承而来的行为中以及如何修改继承而来的行为。
+</p>
+<p>
+    如果子用例是要专门化多个父用例（多重继承），则必须在子用例规范中显式声明父用例的行为顺序是如何在子用例中交错的。
+</p>
+<h3>
+    <a id="Example of Use" name="Example of Use">使用示例</a>
+</h3>
+<p>
+    对于简单电话系统的用例，考虑以下分步概述：
+</p>
+<h4>
+    发出本地呼叫
+</h4>
+<ol>
+    <li>
+        <font color="#008080">致电者拿起话筒。</font>
+    </li>
+    <li>
+        <font color="#008080">系统发出拨号音。</font>
+    </li>
+    <li>
+        <font color="#008080">致电者拨一个数字。</font>
+    </li>
+    <li>
+        <font color="#008080">系统关闭拨号音。</font>
+    </li>
+    <li>
+        <font color="#008080">致电者拨出号码的剩余数字。</font>
+    </li>
+    <li>
+        <font color="#008080">系统分析号码。</font>
+    </li>
+    <li>
+        系统查找对应方。
+    </li>
+    <li>
+        系统连接双方。
+    </li>
+    <li>
+        <font color="#008080">双方断开连接。</font>
+    </li>
+</ol>
+<h4>
+    <b>发出长途呼叫</b>
+</h4>
+<ol>
+    <li>
+        <font color="#008080">致电者拿起话筒。</font>
+    </li>
+    <li>
+        <font color="#008080">系统发出拨号音。</font>
+    </li>
+    <li>
+        <font color="#008080">致电者拨一个数字。</font>
+    </li>
+    <li>
+        <font color="#008080">系统关闭拨号音。</font>
+    </li>
+    <li>
+        <font color="#008080">致电者拨出号码的剩余数字。</font>
+    </li>
+    <li>
+        <font color="#008080">系统分析号码。</font>
+    </li>
+    <li>
+        系统将号码发往其他系统。
+    </li>
+    <li>
+        系统连线。
+    </li>
+    <li>
+        <font color="#008080">双方断开连接。</font>
+    </li>
+</ol>
+<p>
+    两个用例中的<font color="#008080">蓝色</font>文本十分相似。如果两个用例如此相似，则应考虑将它们合并为一个用例，其中备用子流显示本地呼叫与长途呼叫之间的区别。
+</p>
+<p>
+    但如果两者之间的区别相当重要，并且有一个值在用例模型中明确显示本地呼叫与长途呼叫之间的关系，则可以将共同的行为提取到一个新的、更通用的用例“发出呼叫”中。
+</p>
+<p>
+    在用例图中，已创建的泛化关系将作如下说明：
+</p>
+<p class="picturecenter" align="center">
+    <img height="155" alt="在图表说明中描述的图。" src="./../../../core.base_rup/guidances/guidelines/resources/ucgen4.gif" width="260" />
+</p>
+<p class="picturetext">
+    用例“发出本地呼叫”和“发出长途呼叫”是从抽象用例“发出呼叫”继承而来的。
+</p><br />
+<br /></td>
+</tr>
+</table>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" class="copyright">
+<tr>
+<td class="copyright"><p>
+    &copy; &nbsp;Copyright IBM Corp.&nbsp;1987, 2006. &nbsp;All Rights Reserved.
+</p></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<script language="JavaScript" type="text/javascript">
+				contentPage.onload();
+			</script>
+</html>
